@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Server.Mobiles;
 using Server.Targeting;
 using Server.Spells.SkillMasteries;
 
@@ -15,32 +14,15 @@ namespace Server.Spells.Necromancy
             Reagent.DaemonBlood);
         private static readonly Hashtable m_OathTable = new Hashtable();
         private static readonly Hashtable m_Table = new Hashtable();
+
         public BloodOathSpell(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(1.75);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 20.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 13;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(1.75);
+        public override double RequiredSkill => 20.0;
+        public override int RequiredMana => 13;
         public static bool RemoveCurse(Mobile m)
         {
             ExpireTimer t = (ExpireTimer)m_Table[m];

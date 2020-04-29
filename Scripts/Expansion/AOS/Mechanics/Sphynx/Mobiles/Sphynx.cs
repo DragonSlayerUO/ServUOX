@@ -1,5 +1,3 @@
-using System;
-using Server;
 using System.Collections.Generic;
 using Server.Network;
 using Server.ContextMenus;
@@ -72,13 +70,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         public class AskAboutFutureEntry : ContextMenuEntry

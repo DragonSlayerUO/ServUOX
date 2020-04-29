@@ -316,18 +316,21 @@ namespace Server.Mobiles
             InitBody();
             InitOutfit();
 
-            Container pack;
-            //these packs MUST exist, or the client will crash when the packets are sent
-            pack = new Backpack();
-            pack.Layer = Layer.ShopBuy;
-            pack.Movable = false;
-            pack.Visible = false;
+            Container pack; // these packs MUST exist, or the client will crash when the packets are sent
+            pack = new Backpack
+            {
+                Layer = Layer.ShopBuy,
+                Movable = false,
+                Visible = false
+            };
             AddItem(pack);
 
-            pack = new Backpack();
-            pack.Layer = Layer.ShopResale;
-            pack.Movable = false;
-            pack.Visible = false;
+            pack = new Backpack
+            {
+                Layer = Layer.ShopResale,
+                Movable = false,
+                Visible = false
+            };
             AddItem(pack);
 
             BribeMultiplier = Utility.Random(10);
@@ -351,7 +354,6 @@ namespace Server.Mobiles
         public override void OnAfterDelete()
         {
             base.OnAfterDelete();
-
             AllVendors.Remove(this);
         }
 
@@ -363,16 +365,15 @@ namespace Server.Mobiles
         {
             get
             {
-                Container pack = FindItemOnLayer(Layer.ShopBuy) as Container;
-
-                if (pack == null)
+                if (!(FindItemOnLayer(Layer.ShopBuy) is Container pack))
                 {
-                    pack = new Backpack();
-                    pack.Layer = Layer.ShopBuy;
-                    pack.Visible = false;
+                    pack = new Backpack
+                    {
+                        Layer = Layer.ShopBuy,
+                        Visible = false
+                    };
                     AddItem(pack);
                 }
-
                 return pack;
             }
         }
@@ -388,9 +389,7 @@ namespace Server.Mobiles
 
             for (int i = 0; i < m_ArmorBuyInfo.Count; ++i)
             {
-                GenericBuyInfo buy = m_ArmorBuyInfo[i] as GenericBuyInfo;
-
-                if (buy != null)
+                if (m_ArmorBuyInfo[i] is GenericBuyInfo buy)
                 {
                     buy.DeleteDisplayEntity();
                 }
@@ -815,8 +814,7 @@ namespace Server.Mobiles
                 }
             }
 
-            if (!Siege.SiegeShard)
-                PackGold(100, 200);
+            if (!Siege.SiegeShard) PackGold(50, 100);
         }
 
         #region SA

@@ -19,27 +19,9 @@ namespace Server.Spells.Necromancy
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(2.25);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 65.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 29;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(2.25);
+        public override double RequiredSkill => 65.0;
+        public override int RequiredMana => 29;
 
         public static bool UnderEffects(Mobile m)
         {
@@ -64,14 +46,14 @@ namespace Server.Spells.Necromancy
 
         public override void OnCast()
         {
-            this.Caster.Target = new InternalTarget(this);
+            Caster.Target = new InternalTarget(this);
         }
 
         public void Target(Mobile m)
         {
-            if (this.CheckHSequence(m))
+            if (CheckHSequence(m))
             {
-                SpellHelper.Turn(this.Caster, m);
+                SpellHelper.Turn(Caster, m);
 
                 ApplyEffects(m);
                 ConduitSpell.CheckAffected(Caster, m, ApplyEffects);
@@ -105,7 +87,7 @@ namespace Server.Spells.Necromancy
             m.FixedParticles(0x36CB, 1, 9, 9911, 67, 5, EffectLayer.Head);
             m.FixedParticles(0x374A, 1, 17, 9502, 1108, 4, (EffectLayer)255);
 
-            if (Server.Spells.Mysticism.StoneFormSpell.CheckImmunity(m))
+            if (Mysticism.StoneFormSpell.CheckImmunity(m))
             {
                 Caster.SendLocalizedMessage(1095250); // Your target resists strangle.
             }
@@ -122,7 +104,7 @@ namespace Server.Spells.Necromancy
                     spiritlevel = 4;
                 int d_MinDamage = (int)(4.0 * strength);
                 int d_MaxDamage = (int)(((spiritlevel + 1) * 3) * strength);
-                string args = String.Format("{0}\t{1}", d_MinDamage, d_MaxDamage);
+                string args = string.Format("{0}\t{1}", d_MinDamage, d_MaxDamage);
 
                 int i_Count = (int)spiritlevel;
                 int i_MaxCount = i_Count;
@@ -256,18 +238,18 @@ namespace Server.Spells.Necromancy
             public InternalTarget(StrangleSpell owner)
                 : base(Core.ML ? 10 : 12, false, TargetFlags.Harmful)
             {
-                this.m_Owner = owner;
+                m_Owner = owner;
             }
 
             protected override void OnTarget(Mobile from, object o)
             {
                 if (o is Mobile)
-                    this.m_Owner.Target((Mobile)o);
+                    m_Owner.Target((Mobile)o);
             }
 
             protected override void OnTargetFinish(Mobile from)
             {
-                this.m_Owner.FinishSequence();
+                m_Owner.FinishSequence();
             }
         }
     }

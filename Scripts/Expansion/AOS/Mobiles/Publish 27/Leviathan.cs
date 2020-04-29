@@ -157,8 +157,8 @@ namespace Server.Mobiles
             }
         }
 
-        public override double TreasureMapChance { get { return 0.25; } }
-        public override int TreasureMapLevel { get { return 5; } }
+        public override double TreasureMapChance => 0.25;
+        public override int TreasureMapLevel => 5;
 
         public override void OnActionCombat()
         {
@@ -211,13 +211,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             m_NextWaterBall = DateTime.UtcNow;
         }

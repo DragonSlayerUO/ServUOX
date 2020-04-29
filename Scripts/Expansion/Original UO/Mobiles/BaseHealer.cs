@@ -51,10 +51,6 @@ namespace Server.Mobiles
 
             Fame = 1000;
             Karma = 10000;
-
-            PackItem(new Bandage(Utility.RandomMinMax(5, 10)));
-            PackItem(new HealPotion());
-            PackItem(new CurePotion());
         }
 
         public BaseHealer(Serial serial)

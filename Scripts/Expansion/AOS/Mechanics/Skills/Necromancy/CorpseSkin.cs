@@ -21,27 +21,10 @@ namespace Server.Spells.Necromancy
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(1.75);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 20.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 11;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(1.75);
+        public override double RequiredSkill => 20.0;
+        public override int RequiredMana => 11;
+
         public static bool RemoveCurse(Mobile m)
         {
             if (m_Table.ContainsKey(m))
@@ -148,16 +131,15 @@ namespace Server.Spells.Necromancy
         {
             private readonly Mobile m_Mobile;
             private readonly ResistanceMod[] m_Mods;
-            private readonly int m_Malus;
 
-            public int Malus { get { return m_Malus; } }
+            public int Malus { get; }
 
             public ExpireTimer(Mobile m, ResistanceMod[] mods, int malus, TimeSpan delay)
                 : base(delay)
             {
                 m_Mobile = m;
                 m_Mods = mods;
-                m_Malus = malus;
+                Malus = malus;
             }
 
             public void DoExpire(bool message = true)

@@ -1,4 +1,3 @@
-using System;
 using Server.Mobiles;
 using Server.Regions;
 
@@ -8,10 +7,10 @@ namespace Server.Engines.Doom
     {
         private readonly LeverPuzzleController Controller;
         public LampRoomRegion(LeverPuzzleController controller)
-            : base(null, Map.Malas, Region.Find(LeverPuzzleController.lr_Enter, Map.Malas), LeverPuzzleController.lr_Rect)
+            : base(null, Map.Malas, Find(LeverPuzzleController.lr_Enter, Map.Malas), LeverPuzzleController.lr_Rect)
         {
-            this.Controller = controller;
-            this.Register();
+            Controller = controller;
+            Register();
         }
 
         public static void Initialize()
@@ -38,11 +37,11 @@ namespace Server.Engines.Doom
             if (m.IsStaff())
                 return;
 
-            if (this.Controller.Successful != null)
+            if (Controller.Successful != null)
             {
                 if (m is PlayerMobile)
                 {
-                    if (m == this.Controller.Successful)
+                    if (m == Controller.Successful)
                     {
                         return;
                     }
@@ -50,7 +49,7 @@ namespace Server.Engines.Doom
                 else if (m is BaseCreature)
                 {
                     BaseCreature bc = (BaseCreature)m;
-                    if ((bc.Controlled && bc.ControlMaster == this.Controller.Successful) || bc.Summoned)
+                    if ((bc.Controlled && bc.ControlMaster == Controller.Successful) || bc.Summoned)
                     {
                         return;
                     }
@@ -62,8 +61,8 @@ namespace Server.Engines.Doom
 
         public override void OnExit(Mobile m)
         {
-            if (m != null && m == this.Controller.Successful)
-                this.Controller.RemoveSuccessful();
+            if (m != null && m == Controller.Successful)
+                Controller.RemoveSuccessful();
         }
 
         public override void OnDeath(Mobile m)
@@ -77,7 +76,7 @@ namespace Server.Engines.Doom
 
         public override bool OnSkillUse(Mobile m, int Skill) /* just in case */
         {
-            if ((this.Controller.Successful == null) || (m.IsStaff() && m != this.Controller.Successful))
+            if ((Controller.Successful == null) || (m.IsStaff() && m != Controller.Successful))
             {
                 return false;
             }
@@ -90,10 +89,10 @@ namespace Server.Engines.Doom
         public Mobile m_Occupant;
         private readonly LeverPuzzleController Controller;
         public LeverPuzzleRegion(LeverPuzzleController controller, int[] loc)
-            : base(null, Map.Malas, Region.Find(LeverPuzzleController.lr_Enter, Map.Malas), new Rectangle2D(loc[0],loc[1],1,1))
+            : base(null, Map.Malas, Find(LeverPuzzleController.lr_Enter, Map.Malas), new Rectangle2D(loc[0],loc[1],1,1))
         {
-            this.Controller = controller;
-            this.Register();
+            Controller = controller;
+            Register();
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -101,21 +100,21 @@ namespace Server.Engines.Doom
         {
             get
             {
-                if (this.m_Occupant != null && this.m_Occupant.Alive)
-                    return this.m_Occupant;
+                if (m_Occupant != null && m_Occupant.Alive)
+                    return m_Occupant;
                 return null;
             }
         }
         public override void OnEnter(Mobile m)
         {
-            if (m != null && this.m_Occupant == null && m is PlayerMobile && m.Alive)
-                this.m_Occupant = m;
+            if (m != null && m_Occupant == null && m is PlayerMobile && m.Alive)
+                m_Occupant = m;
         }
 
         public override void OnExit(Mobile m)
         {
-            if (m != null && m == this.m_Occupant)
-                this.m_Occupant = null;
+            if (m != null && m == m_Occupant)
+                m_Occupant = null;
         }
     }
 }

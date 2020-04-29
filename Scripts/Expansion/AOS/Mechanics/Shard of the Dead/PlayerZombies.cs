@@ -177,7 +177,7 @@ namespace Server.Engines.Events
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -294,7 +294,7 @@ namespace Server.Engines.Events
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
             m_DeadPlayer = (PlayerMobile)reader.ReadMobile();
         }
     }

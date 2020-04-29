@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 using Server.Mobiles;
 
@@ -16,23 +15,18 @@ namespace Server.Engines.Quests.Ambitious
         }
 
         public abstract bool RedSolen { get; }
-        public override bool DisallowAllMoves
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool DisallowAllMoves => false;
+
         public override void InitBody()
         {
-            this.Name = "an ambitious solen queen";
+            Name = "an ambitious solen queen";
 
-            this.Body = 0x30F;
+            Body = 0x30F;
 
-            if (!this.RedSolen)
-                this.Hue = 0x453;
+            if (!RedSolen)
+                Hue = 0x453;
 
-            this.SpeechHue = 0;
+            SpeechHue = 0;
         }
 
         public override int GetIdleSound()
@@ -42,11 +36,11 @@ namespace Server.Engines.Quests.Ambitious
 
         public override void OnTalk(PlayerMobile player, bool contextMenu)
         {
-            this.Direction = this.GetDirectionTo(player);
+            Direction = GetDirectionTo(player);
 
             AmbitiousQueenQuest qs = player.Quest as AmbitiousQueenQuest;
 
-            if (qs != null && qs.RedSolen == this.RedSolen)
+            if (qs != null && qs.RedSolen == RedSolen)
             {
                 if (qs.IsObjectiveInProgress(typeof(KillQueensObjective)))
                 {
@@ -94,7 +88,7 @@ namespace Server.Engines.Quests.Ambitious
             }
             else
             {
-                QuestSystem newQuest = new AmbitiousQueenQuest(player, this.RedSolen);
+                QuestSystem newQuest = new AmbitiousQueenQuest(player, RedSolen);
 
                 if (player.Quest == null && QuestSystem.CanOfferQuest(player, typeof(AmbitiousQueenQuest)))
                 {
@@ -109,15 +103,13 @@ namespace Server.Engines.Quests.Ambitious
 
         public override bool OnDragDrop(Mobile from, Item dropped)
         {
-            this.Direction = this.GetDirectionTo(from);
+            Direction = GetDirectionTo(from);
 
-            PlayerMobile player = from as PlayerMobile;
-
-            if (player != null)
+            if (from is PlayerMobile player)
             {
                 AmbitiousQueenQuest qs = player.Quest as AmbitiousQueenQuest;
 
-                if (qs != null && qs.RedSolen == this.RedSolen)
+                if (qs != null && qs.RedSolen == RedSolen)
                 {
                     QuestObjective obj = qs.FindObjective(typeof(GatherFungiObjective));
 
@@ -145,7 +137,7 @@ namespace Server.Engines.Quests.Ambitious
                             }
                             else
                             {
-                                this.SayTo(player, 1054072); // Our arrangement was for 50 of the zoogi fungus. Please return to me when you have that amount.
+                                SayTo(player, 1054072); // Our arrangement was for 50 of the zoogi fungus. Please return to me when you have that amount.
                                 return false;
                             }
                         }
@@ -159,15 +151,13 @@ namespace Server.Engines.Quests.Ambitious
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadEncodedInt();
+            _ = reader.ReadEncodedInt();
         }
     }
 
@@ -183,25 +173,17 @@ namespace Server.Engines.Quests.Ambitious
         {
         }
 
-        public override bool RedSolen
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool RedSolen => true;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadEncodedInt();
+            _ = reader.ReadEncodedInt();
         }
     }
 
@@ -217,25 +199,17 @@ namespace Server.Engines.Quests.Ambitious
         {
         }
 
-        public override bool RedSolen
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool RedSolen => false;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadEncodedInt();
+            _ = reader.ReadEncodedInt();
         }
     }
 }

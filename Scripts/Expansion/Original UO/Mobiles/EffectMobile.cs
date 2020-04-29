@@ -6,7 +6,7 @@ namespace Server.Mobiles
     public class EffectMobile : Mobile
     {
         public static readonly TimeSpan DefaultDuration = TimeSpan.FromSeconds(1.0);
-        private static readonly List<EffectMobile> m_Free = new List<EffectMobile>();// List of available EffectMobiles
+        private static readonly List<EffectMobile> m_Free = new List<EffectMobile>();
 
         public EffectMobile(Serial serial)
             : base(serial)
@@ -77,7 +77,6 @@ namespace Server.Mobiles
             protected override void OnTick()
             {
                 m_Mobile.Internalize();
-
                 m_Free.Add(m_Mobile);
             }
         }

@@ -22,7 +22,7 @@ namespace Server.Engines.Events
 
         public static void Bleeding(Mobile m_From)
         {
-            if (TrickOrTreat.CheckMobile(m_From))
+            if (CheckMobile(m_From))
             {
                 if (m_From.Location != Point3D.Zero)
                 {
@@ -50,7 +50,7 @@ namespace Server.Engines.Events
             {
                 target.SolidHueOverride = Utility.RandomMinMax(2501, 2644);
 
-                Timer.DelayCall<Mobile>(TimeSpan.FromSeconds(10), new TimerStateCallback<Mobile>(RemoveHueMod), target);
+                Timer.DelayCall(TimeSpan.FromSeconds(10), new TimerStateCallback<Mobile>(RemoveHueMod), target);
             }
         }
 
@@ -116,7 +116,7 @@ namespace Server.Engines.Events
 
         public static void DeleteTwin(Mobile m_Twin)
         {
-            if (TrickOrTreat.CheckMobile(m_Twin))
+            if (CheckMobile(m_Twin))
             {
                 m_Twin.Delete();
             }
@@ -222,15 +222,15 @@ namespace Server.Engines.Events
 
                                 if (m_Action == 0)
                                 {
-                                    Timer.DelayCall<Mobile>(OneSecond, OneSecond, 10, new TimerStateCallback<Mobile>(Bleeding), from);
+                                    Timer.DelayCall(OneSecond, OneSecond, 10, new TimerStateCallback<Mobile>(Bleeding), from);
                                 }
                                 else if (m_Action == 1)
                                 {
-                                    Timer.DelayCall<Mobile>(TimeSpan.FromSeconds(2), new TimerStateCallback<Mobile>(SolidHueMobile), from);
+                                    Timer.DelayCall(TimeSpan.FromSeconds(2), new TimerStateCallback<Mobile>(SolidHueMobile), from);
                                 }
                                 else
                                 {
-                                    Timer.DelayCall<Mobile>(TimeSpan.FromSeconds(2), new TimerStateCallback<Mobile>(MakeTwin), from);
+                                    Timer.DelayCall(TimeSpan.FromSeconds(2), new TimerStateCallback<Mobile>(MakeTwin), from);
                                 }
                             }
                         }
@@ -286,12 +286,12 @@ namespace Server.Engines.Events
         {
             if (TrickOrTreat.CheckMobile(from))
             {
-                this.Body = from.Body;
+                Body = from.Body;
 
-                this.m_From = from;
-                this.Name = String.Format("{0}\'s Naughty Twin", from.Name);
+                m_From = from;
+                Name = string.Format("{0}\'s Naughty Twin", from.Name);
 
-                Timer.DelayCall<Mobile>(TrickOrTreat.OneSecond, Utility.RandomBool() ? new TimerStateCallback<Mobile>(StealCandy) : new TimerStateCallback<Mobile>(ToGate), this.m_From);
+                Timer.DelayCall(TrickOrTreat.OneSecond, Utility.RandomBool() ? new TimerStateCallback<Mobile>(StealCandy) : new TimerStateCallback<Mobile>(ToGate), m_From);
             }
         }
 
@@ -346,9 +346,9 @@ namespace Server.Engines.Events
 
         public static Point3D RandomMoongate(Mobile target)
         {
-            Map map = target.Map;
+            _ = target.Map;
 
-            switch( target.Map.MapID )
+            switch ( target.Map.MapID )
             {
                 case 2:
                     return Ilshenar_Locations[Utility.Random(Ilshenar_Locations.Length)];
@@ -365,22 +365,22 @@ namespace Server.Engines.Events
 
         public override void OnThink()
         {
-            if (this.m_From == null || this.m_From.Deleted)
+            if (m_From == null || m_From.Deleted)
             {
-                this.Delete();
+                Delete();
             }
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

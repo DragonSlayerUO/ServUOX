@@ -1,6 +1,3 @@
-using System;
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("a darknight creeper corpse")]
@@ -51,81 +48,31 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool CanFlee { get { return false; } }
+        public override bool CanFlee => false;
+        public override bool IgnoreYoungProtection => Core.ML;
+        public override bool BardImmunity => !Core.SE;
+        public override bool Unprovokable => Core.SE;
+        public override bool AreaPeaceImmunity => Core.SE;
+        public override bool BleedImmunity => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override Poison HitPoison => Poison.Lethal;
+        public override int TreasureMapLevel => 1;
 
-        public override bool IgnoreYoungProtection
-        {
-            get
-            {
-                return Core.ML;
-            }
-        }
-        public override bool BardImmunity
-        {
-            get
-            {
-                return !Core.SE;
-            }
-        }
-        public override bool Unprovokable
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
-        public override bool AreaPeaceImmunity
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
-        public override bool BleedImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override Poison HitPoison
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 1;
-            }
-        }
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 2);
-        }
-
-       
+        }       
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

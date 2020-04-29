@@ -17,7 +17,9 @@ namespace Server.Engines.Events
             new Rectangle2D(835, 2344, 16, 16),
             new Rectangle2D(816, 2344, 16, 24)
         };
+
         private static Timer m_Timer;
+
         public static void Initialize()
         {
             DateTime now = DateTime.UtcNow;

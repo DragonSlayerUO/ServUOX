@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a bone demon corpse")]
@@ -49,41 +47,12 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BardImmunity
-        {
-            get
-            {
-                return !Core.SE;
-            }
-        }
-        public override bool Unprovokable
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
-        public override bool AreaPeaceImmunity
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override bool BardImmunity => !Core.SE;
+        public override bool Unprovokable => Core.SE;
+        public override bool AreaPeaceImmunity => Core.SE;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override int TreasureMapLevel => 1;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich, 8);
@@ -92,13 +61,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

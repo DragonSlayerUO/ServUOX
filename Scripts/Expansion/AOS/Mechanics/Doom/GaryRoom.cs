@@ -70,16 +70,10 @@ namespace Server.Engines.Doom
             typeof(SkeletalDragon), typeof(VampireBat), typeof(WailingBanshee), typeof(WandererOfTheVoid)
         };
 
-        public TimeSpan RollDelay
-        {
-            get
-            {
-                return TimeSpan.FromMinutes(Utility.RandomMinMax(12, 15));
-            }
-        }
+        public TimeSpan RollDelay => TimeSpan.FromMinutes(Utility.RandomMinMax(12, 15));
 
         public GaryRegion()
-            : base("Gary Region", Map.Malas, Region.Find(_GaryLoc, Map.Malas), _Bounds)
+            : base("Gary Region", Map.Malas, Find(_GaryLoc, Map.Malas), _Bounds)
         {
             Register();
             CheckStuff();
@@ -104,7 +98,7 @@ namespace Server.Engines.Doom
 
         public void OnTick()
         {
-            if (NextRoll < DateTime.UtcNow /*&& (Spawn == null || !Spawn.Alive)*/ && this.GetEnumeratedMobiles().OfType<PlayerMobile>().Where(p => p.Alive).Count() > 0)
+            if (NextRoll < DateTime.UtcNow /*&& (Spawn == null || !Spawn.Alive)*/ && GetEnumeratedMobiles().OfType<PlayerMobile>().Where(p => p.Alive).Count() > 0)
             {
                 DoRoll();
                 NextRoll = DateTime.UtcNow + RollDelay;
@@ -139,7 +133,7 @@ namespace Server.Engines.Doom
                     }
                     else
                     {
-                        foreach (var m in this.GetEnumeratedMobiles().OfType<PlayerMobile>())
+                        foreach (var m in GetEnumeratedMobiles().OfType<PlayerMobile>())
                         {
                             m.SendMessage("- {0} -", (roll + 1).ToString());
                         }
@@ -155,7 +149,7 @@ namespace Server.Engines.Doom
                     else
                     {
                         Spawn = Activator.CreateInstance(_MonsterList[roll]) as BaseCreature;
-                        Server.Engines.XmlSpawner2.XmlAttach.AttachTo(Spawn, new Server.Engines.XmlSpawner2.XmlData("Notoriety", "red"));
+                        Server.Engines.XmlSpawner2.XmlAttach.AttachTo(Spawn, new XmlSpawner2.XmlData("Notoriety", "red"));
 
                         if (Spawn is Dragon)
                         {
@@ -261,19 +255,18 @@ namespace Server.Engines.Doom
         public override void OnEnter(Mobile m)
         {
             var g = GetGary();
-
             g.SayTo(m, 1080098); // Ah... visitors!
         }
 
-        public override bool CheckTravel(Mobile traveller, Point3D p, Server.Spells.TravelCheckType type)
+        public override bool CheckTravel(Mobile traveller, Point3D p, Spells.TravelCheckType type)
         {
             switch (type)
             {
-                case Server.Spells.TravelCheckType.Mark:
-                case Server.Spells.TravelCheckType.RecallTo:
-                case Server.Spells.TravelCheckType.RecallFrom:
-                case Server.Spells.TravelCheckType.GateTo:
-                case Server.Spells.TravelCheckType.GateFrom:
+                case Spells.TravelCheckType.Mark:
+                case Spells.TravelCheckType.RecallTo:
+                case Spells.TravelCheckType.RecallFrom:
+                case Spells.TravelCheckType.GateTo:
+                case Spells.TravelCheckType.GateFrom:
                     return false;
             }
 
@@ -317,7 +310,7 @@ namespace Server.Engines.Doom
         {
             if (Dice == null || Dice.Deleted)
             {
-                Sapphired20 dice = this.GetEnumeratedItems().OfType<Sapphired20>().FirstOrDefault(i => !i.Deleted);
+                Sapphired20 dice = GetEnumeratedItems().OfType<Sapphired20>().FirstOrDefault(i => !i.Deleted);
 
                 if (dice != null)
                 {
@@ -346,7 +339,7 @@ namespace Server.Engines.Doom
             {
                 if(Statues[i] == null || Statues[i].Deleted)
                 {
-                    DisplayStatue s = this.GetEnumeratedItems().OfType<DisplayStatue>().FirstOrDefault(st => Array.IndexOf(Statues, st) == -1);
+                    DisplayStatue s = GetEnumeratedItems().OfType<DisplayStatue>().FirstOrDefault(st => Array.IndexOf(Statues, st) == -1);
 
                     if(s == null)
                     {
@@ -492,7 +485,7 @@ namespace Server.Engines.Doom
 
     public class Sapphired20 : Item
     {
-        public override int LabelNumber { get { return 1080096; } } // Star Sapphire d20
+        public override int LabelNumber => 1080096;  // Star Sapphire d20
 
         [Constructable]
         public Sapphired20()
@@ -502,7 +495,7 @@ namespace Server.Engines.Doom
 
         public override void OnDoubleClick(Mobile m)
         {
-            if (this.GetRegion().IsPartOf<GaryRegion>())
+            if (GetRegion().IsPartOf<GaryRegion>())
             {
                 m.SendLocalizedMessage(1080097); // You're blasted back in a blaze of light! This d20 is not yours to roll...
 
@@ -516,7 +509,7 @@ namespace Server.Engines.Doom
 
         public void Roll(int roll)
         {
-            PublicOverheadMessage(Server.Network.MessageType.Regular, 0x3B2, false, String.Format("- {0} -", (roll + 1).ToString()));
+            PublicOverheadMessage(MessageType.Regular, 0x3B2, false, String.Format("- {0} -", (roll + 1).ToString()));
         }
 
         public Sapphired20(Serial serial)
@@ -533,7 +526,7 @@ namespace Server.Engines.Doom
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -544,7 +537,7 @@ namespace Server.Engines.Doom
         [CommandProperty(AccessLevel.GameMaster)]
         public MonsterStatuetteInfo Info
         {
-            get { return _Info; }
+            get => _Info;
             set
             {
                 _Info = value;
@@ -573,7 +566,6 @@ namespace Server.Engines.Doom
         public DisplayStatue()
         {
             AssignRandom();
-
             Hue = 2958;
         }
 
@@ -604,7 +596,7 @@ namespace Server.Engines.Doom
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             AssignRandom();
         }
@@ -615,11 +607,11 @@ namespace Server.Engines.Doom
         private int _Index;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Index 
-        { 
-            get { return _Index; } 
-            set 
-            { 
+        public int Index
+        {
+            get => _Index;
+            set
+            {
                 _Index = value;
 
                 if (_Index < 0)
@@ -630,7 +622,7 @@ namespace Server.Engines.Doom
             }
         }
 
-        public override int LabelNumber { get { return 1080085; } } // The Rulebook
+        public override int LabelNumber => 1080085;  // The Rulebook
 
         [Constructable]
         public UOBoard() : base(0xFAA)
@@ -670,7 +662,6 @@ namespace Server.Engines.Doom
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
-
             list.Add(1062703); // Spectator Vision
         }
 
@@ -688,7 +679,7 @@ namespace Server.Engines.Doom
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -697,7 +688,7 @@ namespace Server.Engines.Doom
         [CommandProperty(AccessLevel.GameMaster)]
         public GaryRegion RegionProps
         {
-            get { return this.Region as GaryRegion; }
+            get => Region as GaryRegion;
             set { }
         }
 

@@ -55,6 +55,10 @@
     <Compile Include="Expansion\AOS\Items\Equipment\Clothing\Publish 18\FurBoots.cs" />
     <Compile Include="Expansion\AOS\Items\Publish 27\FabledFishingNet.cs" />
     <Compile Include="Expansion\AOS\Mechanics\Special Moves\WeaponAbility.cs" />
+    <Compile Include="Expansion\AOS\Mechanics\Sphynx\Generate.cs" />
+    <Compile Include="Expansion\AOS\Mechanics\Sphynx\Items\AncientWall.cs" />
+    <Compile Include="Expansion\AOS\Mechanics\Sphynx\Mobiles\Sphynx.cs" />
+    <Compile Include="Expansion\AOS\Mechanics\Sphynx\SphynxFortune.cs" />
     <Compile Include="Expansion\AOS\Mobiles\FeralTreefellow.cs" />
     <Compile Include="Expansion\AOS\Mobiles\Treefellow.cs" />
     <Compile Include="Expansion\AOS\Mobiles\TreefellowGuardian.cs" />
@@ -67,6 +71,35 @@
     <Compile Include="Expansion\HS\Publish 68.3 Items\13th Anniversary Gifts\WhiteGrandfatherClock.cs" />
     <Compile Include="Expansion\HS\Publish 68.3 Items\13th Anniversary Gifts\SmallGrandfatherClock.cs" />
     <Compile Include="Expansion\HS\Gothic Theme Pack\GargoyleStatues.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\BaseQuest.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Items\DynamicTeleporter.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Items\HornOfRetreat.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Items\QuestItem.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Mobiles\BaseQuester.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\QuestCallbackEntry.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\QuestConversation.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\QuestItemInfo.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\QuestObjective.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\QuestRestartInfo.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\QuestSerializer.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\QuestSystem.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Regions\CancelQuestRegion.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Regions\QuestCompleteObjectiveRegion.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Regions\QuestNoEntryRegion.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quest\Regions\QuestOfferRegion.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\PlagueOfDespair\ChaosDragoon.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\PlagueOfDespair\ChaosDragoonElite.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\BlackSolenInfiltratorQueen.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\BlackSolenInfiltratorWarrior.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\BlackSolenQueen.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\BlackSolenWarrior.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\BlackSolenWorker.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenInfiltratorQueen.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenInfiltratorWarrior.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenQueen.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenWarrior.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenWorker.cs" />
+    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\SolenHelper.cs" />
     <Compile Include="Expansion\ML\Items\Furinture\MLChairs.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\HotCocoaMug.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\PulledPorkSandwich.cs" />
@@ -2429,7 +2462,6 @@
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\Beetle.cs" />
     <Compile Include="Expansion\UOTD\Mobiles\Betrayer.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\Animals\Birds.cs" />
-    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\BlackSolen.cs" />
     <Compile Include="Expansion\SA\Mobiles\Grubber.cs" />
     <Compile Include="Expansion\SA\TerMur\Lifestealer.cs" />
     <Compile Include="Mobiles\Hunters Guide\D\DragonWolf.cs" />
@@ -2458,8 +2490,6 @@
     <Compile Include="Mobiles\Hunters Guide\C\Centaur.cs" />
     <Compile Include="Expansion\ML\Mobiles\Changeling.cs" />
     <Compile Include="Mobiles\Hunters Guide\C\ChaosDaemon.cs" />
-    <Compile Include="Mobiles\Hunters Guide\C\ChaosDragoon.cs" />
-    <Compile Include="Mobiles\Hunters Guide\C\ChaosDragoonElite.cs" />
     <Compile Include="Mobiles\Hunters Guide\C\ChickenLizard.cs" />
     <Compile Include="Mobiles\Hunters Guide\C\ClanCA.cs" />
     <Compile Include="Mobiles\Hunters Guide\C\ClanCT.cs" />
@@ -2671,7 +2701,6 @@
     <Compile Include="Expansion\Original UO\Mobiles\Monsters\Ratmen.cs" />
     <Compile Include="Expansion\AOS\Mobiles\Ravager.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\Monsters\Reaper.cs" />
-    <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolen.cs" />
     <Compile Include="Expansion\HS\Mobiles\RenegadeChangeling.cs" />
     <Compile Include="Expansion\ML\Mobiles\Labyrinth\Reptalon.cs" />
     <Compile Include="Expansion\AOS\Mobiles\RestlessSoul.cs" />
@@ -3048,9 +3077,9 @@
     <Compile Include="Expansion\SA\TerMur\Vasanord.cs" />
     <Compile Include="Expansion\XSORTINGX\Multis\HouseTeleporterTile.cs" />
     <Compile Include="Mobiles\Quests\ALittleSomething.cs" />
-    <Compile Include="Mobiles\Quests\AmbitiousSolenQueen\AmbitiousQueenQuest.cs" />
-    <Compile Include="Mobiles\Quests\AmbitiousSolenQueen\Conversations.cs" />
-    <Compile Include="Mobiles\Quests\AmbitiousSolenQueen\Objectives.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\AmbitiousQueenQuest.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\Conversations.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\Objectives.cs" />
     <Compile Include="Mobiles\Quests\Bard Mastery Quests\SirBerran.cs" />
     <Compile Include="Mobiles\Quests\Bard Mastery Quests\SirFelean.cs" />
     <Compile Include="Mobiles\Quests\Bard Mastery Quests\SirHareus.cs" />
@@ -3226,10 +3255,10 @@
     <Compile Include="Mobiles\Quests\Discipline.cs" />
     <Compile Include="Mobiles\NPCs\Tallinin.cs" />
     <Compile Include="Mobiles\NPCs\Tiana.cs" />
-    <Compile Include="Mobiles\Quests\SolenMatriarch\Conversations.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quests\SolenMatriarch\Conversations.cs" />
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\SolenMatriarch.cs" />
-    <Compile Include="Mobiles\Quests\SolenMatriarch\Objectives.cs" />
-    <Compile Include="Mobiles\Quests\SolenMatriarch\SolenMatriarchQuest.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quests\SolenMatriarch\Objectives.cs" />
+    <Compile Include="Expansion\LBR\Mechanics\Quests\SolenMatriarch\SolenMatriarchQuest.cs" />
     <Compile Include="Mobiles\Quests\StudyOfTheSolenHive\Conversations.cs" />
     <Compile Include="Mobiles\NPCs\Naturalist.cs" />
     <Compile Include="Mobiles\Quests\StudyOfTheSolenHive\NestArea.cs" />
@@ -9789,10 +9818,6 @@
     <Compile Include="Expansion\Original UO\Mechanics\Skills\Harvest\HarvestSystem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\AOS\Mobiles\Sphynx\AncientWall.cs" />
-    <Compile Include="Expansion\AOS\Mobiles\Sphynx\Generate.cs" />
-    <Compile Include="Expansion\AOS\Mobiles\Sphynx\Sphynx.cs" />
-    <Compile Include="Expansion\AOS\Mobiles\Sphynx\SphynxFortune.cs" />
     <Compile Include="Expansion\SA\Mechanics\MiniChampionSystem\MiniChampionSpawn.cs" />
     <Compile Include="Expansion\SA\Mechanics\MiniChampionSystem\MiniChampSpawnInfo.cs" />
     <Compile Include="Expansion\SA\Mechanics\MiniChampionSystem\MiniChampType.cs" />
@@ -10715,58 +10740,10 @@
     </Compile>
     <Compile Include="Expansion\AOS\Mechanics\Shard of the Dead\PlayerZombies.cs" />
     <Compile Include="Expansion\AOS\Mechanics\Shard of the Dead\PumpkinPatch.cs" />
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Mobiles\BaseQuester.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Items\DynamicTeleporter.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Expansion\LBR\Items\EnchantedSextant.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Items\HornOfRetreat.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Items\QuestItem.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\QuestCallbackEntry.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\QuestConversation.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\QuestItemInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\QuestObjective.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\QuestRestartInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\QuestSerializer.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\QuestSystem.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Regions\CancelQuestRegion.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Regions\QuestCompleteObjectiveRegion.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Regions\QuestNoEntryRegion.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Expansion\LBR\Mechanics\Quests\Regions\QuestOfferRegion.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Expansion\ML\MondainsLegacyQuests\BaseEscort.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Mobiles\Quests\BaseQuest.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\MondainsLegacyQuests\BaseQuestItem.cs">

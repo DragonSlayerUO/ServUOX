@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a shadow knight corpse")]
     public class ShadowKnight : BaseCreature
     {
-        public override bool CanStealth { get { return true; } }
+        public override bool CanStealth => true;
 
         private Timer m_SoundTimer;
         private bool m_HasTeleportedAway;
@@ -74,59 +74,15 @@ namespace Server.Mobiles
 			base.OnDamagedBySpell(from);
 		}
 
-        public override bool IgnoreYoungProtection
-        {
-            get
-            {
-                return Core.ML;
-            }
-        }
-
-        public override bool CanFlee { get { return false; } }
-        public override TribeType Tribe { get { return TribeType.Undead; } }
-
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
-        public override bool BardImmunity
-        {
-            get
-            {
-                return !Core.SE;
-            }
-        }
-        public override bool Unprovokable
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
-        public override bool AreaPeaceImmunity
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override bool IgnoreYoungProtection => Core.ML;
+        public override bool CanFlee => false;
+        public override TribeType Tribe => TribeType.Undead;
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
+        public override bool BardImmunity => !Core.SE;
+        public override bool Unprovokable => Core.SE;
+        public override bool AreaPeaceImmunity => Core.SE;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override int TreasureMapLevel => 1;
 
         public override void GenerateLoot()
         {
@@ -229,13 +185,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -90,7 +90,7 @@ namespace Server.Mobiles
 
             Utility.AssignRandomHair(this);
 
-            PackGold(200, 250);
+            // PackGold(50, 100);
         }
 
         public virtual bool SayDestinationTo(Mobile m)

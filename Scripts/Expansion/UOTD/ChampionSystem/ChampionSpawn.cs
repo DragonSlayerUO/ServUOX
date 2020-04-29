@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Server.Gumps;
 using Server.Items;
 using Server.Mobiles;
@@ -16,41 +15,27 @@ namespace Server.Engines.CannedEvil
         public static readonly int MaxStrayDistance = 250;
 
         private bool m_Active;
-        private bool m_RandomizeType;
         private ChampionSpawnType m_Type;
-        private List<Mobile> m_Creatures;
         private List<Item> m_RedSkulls;
         private List<Item> m_WhiteSkulls;
         private ChampionPlatform m_Platform;
         private ChampionAltar m_Altar;
         private int m_Kills;
-        private Mobile m_Champion;
 
         //private int m_SpawnRange;
         private Rectangle2D m_SpawnArea;
         private ChampionSpawnRegion m_Region;
 
         private TimeSpan m_ExpireDelay;
-        private DateTime m_ExpireTime;
-
         private TimeSpan m_RestartDelay;
-        private DateTime m_RestartTime;
-
         private Timer m_Timer, m_RestartTimer;
 
         private IdolOfTheChampion m_Idol;
-
-        private bool m_HasBeenAdvanced;
-        private bool m_ConfinedRoaming;
-
         private Dictionary<Mobile, int> m_DamageEntries;
 
-        public List<Mobile> Creatures
-        {
-            get { return m_Creatures; }
-        }
+        public List<Mobile> Creatures { get; private set; }
 
-		[CommandProperty(AccessLevel.GameMaster)]
+        [CommandProperty(AccessLevel.GameMaster)]
 		public string GroupName { get; set; }
 
 		[CommandProperty(AccessLevel.GameMaster)]
@@ -68,31 +53,11 @@ namespace Server.Engines.CannedEvil
 		[CommandProperty(AccessLevel.GameMaster)]
 		public string SpawnName { get; set; }
 
-		[CommandProperty(AccessLevel.GameMaster)]
-        public bool ConfinedRoaming
-        {
-            get
-            {
-                return m_ConfinedRoaming;
-            }
-            set
-            {
-                m_ConfinedRoaming = value;
-            }
-        }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool ConfinedRoaming { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool HasBeenAdvanced
-        {
-            get
-            {
-                return m_HasBeenAdvanced;
-            }
-            set
-            {
-                m_HasBeenAdvanced = value;
-            }
-        }
+        public bool HasBeenAdvanced { get; set; }
 
         [Constructable]
         public ChampionSpawn()
@@ -101,7 +66,7 @@ namespace Server.Engines.CannedEvil
             Movable = false;
             Visible = false;
 
-            m_Creatures = new List<Mobile>();
+            Creatures = new List<Mobile>();
             m_RedSkulls = new List<Item>();
             m_WhiteSkulls = new List<Item>();
 
@@ -113,7 +78,7 @@ namespace Server.Engines.CannedEvil
             m_RestartDelay = TimeSpan.FromMinutes(10.0);
 
             m_DamageEntries = new Dictionary<Mobile, int>();
-			m_RandomizeType = false;
+			RandomizeType = false;
 
             SpawnRadius = 35;
             SpawnMod = 1;
@@ -141,25 +106,12 @@ namespace Server.Engines.CannedEvil
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool RandomizeType
-        {
-            get
-            {
-                return m_RandomizeType;
-            }
-            set
-            {
-                m_RandomizeType = value;
-            }
-        }
+        public bool RandomizeType { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Kills
         {
-            get
-            {
-                return m_Kills;
-            }
+            get => m_Kills;
             set
             {
                 m_Kills = value;
@@ -170,10 +122,7 @@ namespace Server.Engines.CannedEvil
         [CommandProperty(AccessLevel.GameMaster)]
         public Rectangle2D SpawnArea
         {
-            get
-            {
-                return m_SpawnArea;
-            }
+            get => m_SpawnArea;
             set
             {
                 m_SpawnArea = value;
@@ -185,58 +134,27 @@ namespace Server.Engines.CannedEvil
         [CommandProperty(AccessLevel.GameMaster)]
         public TimeSpan RestartDelay
         {
-            get
-            {
-                return m_RestartDelay;
-            }
-            set
-            {
-                m_RestartDelay = value;
-            }
+            get => m_RestartDelay;
+            set => m_RestartDelay = value;
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime RestartTime
-        {
-            get
-            {
-                return m_RestartTime;
-            }
-        }
+        public DateTime RestartTime { get; private set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public TimeSpan ExpireDelay
         {
-            get
-            {
-                return m_ExpireDelay;
-            }
-            set
-            {
-                m_ExpireDelay = value;
-            }
+            get => m_ExpireDelay;
+            set => m_ExpireDelay = value;
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime ExpireTime
-        {
-            get
-            {
-                return m_ExpireTime;
-            }
-            set
-            {
-                m_ExpireTime = value;
-            }
-        }
+        public DateTime ExpireTime { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public ChampionSpawnType Type
         {
-            get
-            {
-                return m_Type;
-            }
+            get => m_Type;
             set
             {
                 m_Type = value;
@@ -247,10 +165,7 @@ namespace Server.Engines.CannedEvil
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Active
         {
-            get
-            {
-                return m_Active;
-            }
+            get => m_Active;
             set
             {
                 if (value)
@@ -259,31 +174,18 @@ namespace Server.Engines.CannedEvil
                     Stop();
 
                 PrimevalLichPuzzle.Update(this);
-				
+
                 InvalidateProperties();
             }
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile Champion
-        {
-            get
-            {
-                return m_Champion;
-            }
-            set
-            {
-                m_Champion = value;
-            }
-        }
+        public Mobile Champion { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Level
         {
-            get
-            {
-                return m_RedSkulls.Count;
-            }
+            get => m_RedSkulls.Count;
             set
             {
                 for (int i = m_RedSkulls.Count - 1; i >= value; --i)
@@ -342,7 +244,7 @@ namespace Server.Engines.CannedEvil
 
         public bool IsChampionSpawn(Mobile m)
         {
-            return m_Creatures.Contains(m);
+            return Creatures.Contains(m);
         }
 
         public void SetWhiteSkullCount(int val)
@@ -375,7 +277,7 @@ namespace Server.Engines.CannedEvil
                 return;
 
             m_Active = true;
-            m_HasBeenAdvanced = false;
+            HasBeenAdvanced = false;
 
             if (m_Timer != null)
                 m_Timer.Stop();
@@ -422,15 +324,15 @@ namespace Server.Engines.CannedEvil
                 return;
 
             m_Active = false;
-            m_HasBeenAdvanced = false;
+            HasBeenAdvanced = false;
 
             // We must despawn all the creatures.
-            if (m_Creatures != null)
+            if (Creatures != null)
             {
-                for (int i = 0; i < m_Creatures.Count; ++i)
-                    m_Creatures[i].Delete();
+                for (int i = 0; i < Creatures.Count; ++i)
+                    Creatures[i].Delete();
 
-                m_Creatures.Clear();
+                Creatures.Clear();
             }
 
             if (m_Timer != null)
@@ -457,7 +359,7 @@ namespace Server.Engines.CannedEvil
             if (m_RestartTimer != null)
                 m_RestartTimer.Stop();
 
-            m_RestartTime = DateTime.UtcNow + ts;
+            RestartTime = DateTime.UtcNow + ts;
 
             m_RestartTimer = new RestartTimer(this, ts);
             m_RestartTimer.Start();
@@ -482,7 +384,7 @@ namespace Server.Engines.CannedEvil
                 }
             }
 
-            m_HasBeenAdvanced = false;
+            HasBeenAdvanced = false;
 
             Start();
         }
@@ -575,14 +477,14 @@ namespace Server.Engines.CannedEvil
 
 			int currentRank = Rank;
 
-            if (m_Champion != null)
+            if (Champion != null)
             {
-                if (m_Champion.Deleted)
+                if (Champion.Deleted)
                 {
-                    RegisterDamageTo(m_Champion);
+                    RegisterDamageTo(Champion);
 
-                    if (m_Champion is BaseChampion)
-                        AwardArtifact(((BaseChampion)m_Champion).GetArtifact());
+                    if (Champion is BaseChampion)
+                        AwardArtifact(((BaseChampion)Champion).GetArtifact());
 
                     m_DamageEntries.Clear();
 
@@ -596,24 +498,24 @@ namespace Server.Engines.CannedEvil
                         }
                     }
 
-                    m_Champion = null;
+                    Champion = null;
                     Stop();
 
 					if(AutoRestart)
 						BeginRestart(m_RestartDelay);
                 }
-                else if (m_Champion.Alive && m_Champion.GetDistanceToSqrt(this) > MaxStrayDistance)
+                else if (Champion.Alive && Champion.GetDistanceToSqrt(this) > MaxStrayDistance)
                 {
-                    m_Champion.MoveToWorld(new Point3D(X, Y, Z - 15), Map);
+                    Champion.MoveToWorld(new Point3D(X, Y, Z - 15), Map);
                 }
             }
             else
             {
                 int kills = m_Kills;
 
-                for (int i = 0; i < m_Creatures.Count; ++i)
+                for (int i = 0; i < Creatures.Count; ++i)
                 {
-                    Mobile m = m_Creatures[i];
+                    Mobile m = Creatures[i];
 
                     if (m.Deleted)
                     {
@@ -621,7 +523,7 @@ namespace Server.Engines.CannedEvil
                         {
                             ((Corpse)m.Corpse).BeginDecay(TimeSpan.FromMinutes(1));
                         }
-                        m_Creatures.RemoveAt(i);
+                        Creatures.RemoveAt(i);
                         --i;
 
 						int rankOfMob = GetRankFor(m);
@@ -709,7 +611,7 @@ namespace Server.Engines.CannedEvil
                 else if (p > 0)
                     SetWhiteSkullCount(p / 20);
 
-                if (DateTime.UtcNow >= m_ExpireTime)
+                if (DateTime.UtcNow >= ExpireTime)
                     Expire();
 
                 Respawn();
@@ -738,7 +640,7 @@ namespace Server.Engines.CannedEvil
 
         public void AdvanceLevel()
         {
-            m_ExpireTime = DateTime.UtcNow + m_ExpireDelay;
+            ExpireTime = DateTime.UtcNow + m_ExpireDelay;
 
             if (Level < 16)
             {
@@ -769,34 +671,34 @@ namespace Server.Engines.CannedEvil
 
             try
             {
-                m_Champion = Activator.CreateInstance(ChampionSpawnInfo.GetInfo(m_Type).Champion) as Mobile;
+                Champion = Activator.CreateInstance(ChampionSpawnInfo.GetInfo(m_Type).Champion) as Mobile;
             }
             catch
             {
             }
 
-            if (m_Champion != null)
+            if (Champion != null)
             {
                 Point3D p = new Point3D(X, Y, Z - 15);
 
-                m_Champion.MoveToWorld(p, Map);
-                ((BaseCreature)m_Champion).Home = p;
+                Champion.MoveToWorld(p, Map);
+                ((BaseCreature)Champion).Home = p;
 
-                if (m_Champion is BaseChampion)
+                if (Champion is BaseChampion)
                 {
-                    ((BaseChampion)m_Champion).OnChampPopped(this);
+                    ((BaseChampion)Champion).OnChampPopped(this);
                 }
             }
         }
 
         public void Respawn()
         {
-            if (!m_Active || Deleted || m_Champion != null)
+            if (!m_Active || Deleted || Champion != null)
                 return;
 
 			int currentLevel = Level;
 			int currentRank = Rank;
-			int maxSpawn = (int)((double)MaxKills * 0.5d * SpawnMod);
+			int maxSpawn = (int)(MaxKills * 0.5d * SpawnMod);
 			if (currentLevel >= 16)
 				maxSpawn = Math.Min(maxSpawn, MaxKills - m_Kills);
 			if (maxSpawn < 3)
@@ -807,7 +709,7 @@ namespace Server.Engines.CannedEvil
 				new Point2D(X + spawnRadius, Y + spawnRadius));
 
 			int mobCount = 0;
-			foreach(Mobile m in m_Creatures)
+			foreach(Mobile m in Creatures)
 			{
 				if (GetRankFor(m) == currentRank)
 					++mobCount;
@@ -825,7 +727,7 @@ namespace Server.Engines.CannedEvil
                 // Allow creatures to turn into Paragons at Ilshenar champions.
                 m.OnBeforeSpawn(loc, Map);
 
-                m_Creatures.Add(m);
+                Creatures.Add(m);
                 m.MoveToWorld(loc, Map);
 				++mobCount;
 
@@ -835,7 +737,7 @@ namespace Server.Engines.CannedEvil
                     bc.Tamable = false;
                     bc.IsChampionSpawn = true;
 
-                    if (!m_ConfinedRoaming)
+                    if (!ConfinedRoaming)
                     {
                         bc.Home = Location;
 						bc.RangeHome = spawnRadius;
@@ -898,13 +800,7 @@ namespace Server.Engines.CannedEvil
             return Location;
         }
 
-        public int Rank
-        {
-			get
-			{
-				return ChampionSystem.RankForLevel(Level);
-			}
-        }
+        public int Rank => ChampionSystem.RankForLevel(Level);
 
         public int GetRankFor(Mobile m)
         {
@@ -966,7 +862,7 @@ namespace Server.Engines.CannedEvil
                 SetWhiteSkullCount(0);
             }
 
-            m_ExpireTime = DateTime.UtcNow + m_ExpireDelay;
+            ExpireTime = DateTime.UtcNow + m_ExpireDelay;
         }
 
         public Point3D GetRedSkullLocation(int index)
@@ -1137,21 +1033,21 @@ namespace Server.Engines.CannedEvil
 
             RemoveSkulls();
 
-            if (m_Creatures != null)
+            if (Creatures != null)
             {
-                for (int i = 0; i < m_Creatures.Count; ++i)
+                for (int i = 0; i < Creatures.Count; ++i)
                 {
-                    Mobile mob = m_Creatures[i];
+                    Mobile mob = Creatures[i];
 
                     if (!mob.Player)
                         mob.Delete();
                 }
 
-                m_Creatures.Clear();
+                Creatures.Clear();
             }
 
-            if (m_Champion != null && !m_Champion.Player)
-                m_Champion.Delete();
+            if (Champion != null && !Champion.Player)
+                Champion.Delete();
 
             Stop();
 
@@ -1274,32 +1170,32 @@ namespace Server.Engines.CannedEvil
                 writer.Write(kvp.Value);
             }
 
-            writer.Write(m_ConfinedRoaming);
+            writer.Write(ConfinedRoaming);
             writer.WriteItem<IdolOfTheChampion>(m_Idol);
-            writer.Write(m_HasBeenAdvanced);
+            writer.Write(HasBeenAdvanced);
             writer.Write(m_SpawnArea);
 
-            writer.Write(m_RandomizeType);
+            writer.Write(RandomizeType);
 
             // writer.Write( m_SpawnRange );
             writer.Write(m_Kills);
 
             writer.Write((bool)m_Active);
             writer.Write((int)m_Type);
-            writer.Write(m_Creatures, true);
+            writer.Write(Creatures, true);
             writer.Write(m_RedSkulls, true);
             writer.Write(m_WhiteSkulls, true);
             writer.WriteItem<ChampionPlatform>(m_Platform);
             writer.WriteItem<ChampionAltar>(m_Altar);
             writer.Write(m_ExpireDelay);
-            writer.WriteDeltaTime(m_ExpireTime);
-            writer.Write(m_Champion);
+            writer.WriteDeltaTime(ExpireTime);
+            writer.Write(Champion);
             writer.Write(m_RestartDelay);
 
             writer.Write(m_RestartTimer != null);
 
             if (m_RestartTimer != null)
-                writer.WriteDeltaTime(m_RestartTime);
+                writer.WriteDeltaTime(RestartTime);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1345,9 +1241,9 @@ namespace Server.Engines.CannedEvil
                     }
                 case 4:
                     {
-                        m_ConfinedRoaming = reader.ReadBool();
+                        ConfinedRoaming = reader.ReadBool();
                         m_Idol = reader.ReadItem<IdolOfTheChampion>();
-                        m_HasBeenAdvanced = reader.ReadBool();
+                        HasBeenAdvanced = reader.ReadBool();
 
                         goto case 3;
                     }
@@ -1359,7 +1255,7 @@ namespace Server.Engines.CannedEvil
                     }
                 case 2:
                     {
-                        m_RandomizeType = reader.ReadBool();
+                        RandomizeType = reader.ReadBool();
 
                         goto case 1;
                     }
@@ -1383,20 +1279,20 @@ namespace Server.Engines.CannedEvil
 
                         bool active = reader.ReadBool();
                         m_Type = (ChampionSpawnType)reader.ReadInt();
-                        m_Creatures = reader.ReadStrongMobileList();
+                        Creatures = reader.ReadStrongMobileList();
                         m_RedSkulls = reader.ReadStrongItemList();
                         m_WhiteSkulls = reader.ReadStrongItemList();
                         m_Platform = reader.ReadItem<ChampionPlatform>();
                         m_Altar = reader.ReadItem<ChampionAltar>();
                         m_ExpireDelay = reader.ReadTimeSpan();
-                        m_ExpireTime = reader.ReadDeltaTime();
-                        m_Champion = reader.ReadMobile();
+                        ExpireTime = reader.ReadDeltaTime();
+                        Champion = reader.ReadMobile();
                         m_RestartDelay = reader.ReadTimeSpan();
 
                         if (reader.ReadBool())
                         {
-                            m_RestartTime = reader.ReadDeltaTime();
-                            BeginRestart(m_RestartTime - DateTime.UtcNow);
+                            RestartTime = reader.ReadDeltaTime();
+                            BeginRestart(RestartTime - DateTime.UtcNow);
                         }
 
                         if (version < 4)
@@ -1414,7 +1310,7 @@ namespace Server.Engines.CannedEvil
                     }
             }
 
-            foreach (BaseCreature bc in m_Creatures.OfType<BaseCreature>())
+            foreach (BaseCreature bc in Creatures.OfType<BaseCreature>())
             {
                 bc.IsChampionSpawn = true;
             }
@@ -1534,28 +1430,14 @@ namespace Server.Engines.CannedEvil
             EventSink.Login += OnLogin;
         }
 
-        public override bool YoungProtected
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool YoungProtected => false;
 
-        private readonly ChampionSpawn m_Spawn;
-
-        public ChampionSpawn ChampionSpawn
-        {
-            get
-            {
-                return m_Spawn;
-            }
-        }
+        public ChampionSpawn ChampionSpawn { get; }
 
         public ChampionSpawnRegion(ChampionSpawn spawn)
-            : base(null, spawn.Map, Region.Find(spawn.Location, spawn.Map), spawn.SpawnArea)
+            : base(null, spawn.Map, Find(spawn.Location, spawn.Map), spawn.SpawnArea)
         {
-            m_Spawn = spawn;
+            ChampionSpawn = spawn;
         }
 
         public override bool AllowHousing(Mobile from, Point3D p)
@@ -1566,7 +1448,7 @@ namespace Server.Engines.CannedEvil
         public override void AlterLightLevel(Mobile m, ref int global, ref int personal)
         {
             base.AlterLightLevel(m, ref global, ref personal);
-            global = Math.Max(global, 1 + m_Spawn.Level);	//This is a guesstimate.  TODO: Verify & get exact values // OSI testing: at 2 red skulls, light = 0x3 ; 1 red = 0x3.; 3 = 8; 9 = 0xD 8 = 0xD 12 = 0x12 10 = 0xD
+            global = Math.Max(global, 1 + ChampionSpawn.Level);	//This is a guesstimate.  TODO: Verify & get exact values // OSI testing: at 2 red skulls, light = 0x3 ; 1 red = 0x3.; 3 = 8; 9 = 0xD 8 = 0xD 12 = 0x12 10 = 0xD
         }
 
         public override bool OnMoveInto(Mobile m, Direction d, Point3D newLocation, Point3D oldLocation)
@@ -1640,28 +1522,14 @@ namespace Server.Engines.CannedEvil
 
     public class IdolOfTheChampion : Item
     {
-        private ChampionSpawn m_Spawn;
+        public ChampionSpawn Spawn { get; private set; }
 
-        public ChampionSpawn Spawn
-        {
-            get
-            {
-                return m_Spawn;
-            }
-        }
-
-        public override string DefaultName
-        {
-            get
-            {
-                return "Idol of the Champion";
-            }
-        }
+        public override string DefaultName => "Idol of the Champion";
 
         public IdolOfTheChampion(ChampionSpawn spawn)
             : base(0x1F18)
         {
-            m_Spawn = spawn;
+            Spawn = spawn;
             Movable = false;
         }
 
@@ -1669,8 +1537,8 @@ namespace Server.Engines.CannedEvil
         {
             base.OnAfterDelete();
 
-            if (m_Spawn != null)
-                m_Spawn.Delete();
+            if (Spawn != null)
+                Spawn.Delete();
         }
 
         public IdolOfTheChampion(Serial serial)
@@ -1681,25 +1549,23 @@ namespace Server.Engines.CannedEvil
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
+            writer.Write(0);
 
-            writer.Write((int)0); // version
-
-            writer.Write(m_Spawn);
+            writer.Write(Spawn);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
 
             switch ( version )
             {
                 case 0:
                     {
-                        m_Spawn = reader.ReadItem() as ChampionSpawn;
+                        Spawn = reader.ReadItem() as ChampionSpawn;
 
-                        if (m_Spawn == null)
+                        if (Spawn == null)
                             Delete();
 
                         break;

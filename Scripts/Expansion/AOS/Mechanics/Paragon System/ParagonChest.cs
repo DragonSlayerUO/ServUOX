@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     [Flipable]
@@ -69,7 +67,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
             m_Name = Utility.Intern(reader.ReadString());
         }
 
@@ -157,26 +155,17 @@ namespace Server.Items
 
                 if (item != null && Core.HS && RandomItemGenerator.Enabled)
                 {
-                    int min, max;
-                    TreasureMapChest.GetRandomItemStat(out min, out max);
-
+                    TreasureMapChest.GetRandomItemStat(out int min, out int max);
                     RunicReforging.GenerateRandomItem(item, 0, min, max);
-
                     DropItem(item);
                     continue;
                 }
 
-                if (item is BaseWeapon)
+                if (item is BaseWeapon weapon)
                 {
-                    BaseWeapon weapon = (BaseWeapon)item;
-
                     if (Core.AOS)
                     {
-                        int attributeCount;
-                        int min, max;
-
-                        GetRandomAOSStats(out attributeCount, out min, out max);
-
+                        GetRandomAOSStats(out int attributeCount, out int min, out int max);
                         BaseRunicTool.ApplyAttributesTo(weapon, attributeCount, min, max);
                     }
                     else
@@ -188,17 +177,11 @@ namespace Server.Items
 
                     DropItem(item);
                 }
-                else if (item is BaseArmor)
+                else if (item is BaseArmor armor)
                 {
-                    BaseArmor armor = (BaseArmor)item;
-
                     if (Core.AOS)
                     {
-                        int attributeCount;
-                        int min, max;
-
-                        GetRandomAOSStats(out attributeCount, out min, out max);
-
+                        GetRandomAOSStats(out int attributeCount, out int min, out int max);
                         BaseRunicTool.ApplyAttributesTo(armor, attributeCount, min, max);
                     }
                     else
@@ -209,31 +192,19 @@ namespace Server.Items
 
                     DropItem(item);
                 }
-                else if (item is BaseHat)
+                else if (item is BaseHat hat)
                 {
-                    BaseHat hat = (BaseHat)item;
-
                     if (Core.AOS)
                     {
-                        int attributeCount;
-                        int min, max;
-
-                        GetRandomAOSStats(out attributeCount, out min, out max);
-
+                        GetRandomAOSStats(out int attributeCount, out int min, out int max);
                         BaseRunicTool.ApplyAttributesTo(hat, attributeCount, min, max);
                     }
-
                     DropItem(item);
                 }
                 else if (item is BaseJewel)
                 {
-                    int attributeCount;
-                    int min, max;
-
-                    GetRandomAOSStats(out attributeCount, out min, out max);
-
+                    GetRandomAOSStats(out int attributeCount, out int min, out int max);
                     BaseRunicTool.ApplyAttributesTo((BaseJewel)item, attributeCount, min, max);
-
                     DropItem(item);
                 }
             }
