@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Server;
-using Server.Misc;
 using Server.Engines.Craft;
 using Server.Spells;
 using Server.SkillHandlers;
@@ -51,7 +48,7 @@ namespace Server.Items
 
     public static class TreasureMapInfo
     {
-        public static bool NewSystem { get { return Core.EJ; } }
+        public static bool NewSystem => Core.EJ;
 
         /// <summary>
         /// This is called from BaseCreature. Instead of editing EVERY creature that drops a map, we'll simply convert it here.

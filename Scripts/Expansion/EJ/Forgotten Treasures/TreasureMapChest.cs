@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Server.ContextMenus;
 using Server.Engines.PartySystem;
 using Server.Gumps;
@@ -12,8 +11,7 @@ namespace Server.Items
 {
     public class TreasureMapChest : LockableContainer
     {
-        public static Type[] Artifacts { get { return m_Artifacts; } }
-        private static readonly Type[] m_Artifacts = new Type[]
+        public static Type[] Artifacts { get; } = new Type[]
         {
             typeof(CandelabraOfSouls), typeof(GoldBricks), typeof(PhillipsWoodenSteed),
             typeof(ArcticDeathDealer), typeof(BlazeOfDeath), typeof(BurglarsBandana),
@@ -26,39 +24,34 @@ namespace Server.Items
             typeof(AdmiralsHeartyRum)
         };
 
-        public static Type[] ArtifactsLevelFiveToSeven { get { return m_LevelFiveToSeven; } }
-        private static Type[] m_LevelFiveToSeven = new Type[]
+        public static Type[] ArtifactsLevelFiveToSeven { get; } = new Type[]
         {
             typeof(ForgedPardon), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding), typeof(SurgeShield)
         };
 
-        public static Type[] ArtifactsLevelSeven { get { return m_LevelSevenOnly; } }
-        private static Type[] m_LevelSevenOnly = new Type[]
+        public static Type[] ArtifactsLevelSeven { get; } = new Type[]
         {
             typeof(CoffinPiece), typeof(MasterSkeletonKey)
         };
 
-        public static Type[] SOSArtifacts { get { return m_SOSArtifacts; } }
-        private static Type[] m_SOSArtifacts = new Type[]
+        public static Type[] SOSArtifacts { get; } = new Type[]
         {
             typeof(AntiqueWeddingDress),
             typeof(KelpWovenLeggings),
             typeof(RunedDriftwoodBow),
             typeof(ValkyrieArmor)
         };
-        public static Type[] SOSDecor { get { return m_SOSDecor; } }
-        private static Type[] m_SOSDecor = new Type[]
+
+        public static Type[] SOSDecor { get; } = new Type[]
         {
             typeof(GrapeVine),
             typeof(LargeFishingNet)
         };
 
-        public static Type[] ImbuingIngreds {  get { return m_ImbuingIngreds; } }
-        private static Type[] m_ImbuingIngreds =
-        {
-            typeof(AbyssalCloth),   typeof(EssencePrecision), typeof(EssenceAchievement), typeof(EssenceBalance),
-            typeof(EssenceControl), typeof(EssenceDiligence), typeof(EssenceDirection),   typeof(EssenceFeeling),
-            typeof(EssenceOrder),   typeof(EssencePassion),   typeof(EssencePersistence), typeof(EssenceSingularity)
+        public static Type[] ImbuingIngreds { get; } = {
+            typeof(AbyssalCloth), typeof(EssencePrecision), typeof(EssenceAchievement), typeof(EssenceBalance),
+            typeof(EssenceControl), typeof(EssenceDiligence), typeof(EssenceDirection), typeof(EssenceFeeling),
+            typeof(EssenceOrder), typeof(EssencePassion), typeof(EssencePersistence), typeof(EssenceSingularity)
         };
 
         private List<Item> m_Lifted = new List<Item>();
@@ -91,7 +84,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber { get { return 3000541; } }
+        public override int LabelNumber => 3000541;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Level { get; set; }
@@ -122,7 +115,7 @@ namespace Server.Items
 
         public ChestQuality ChestQuality
         {
-            get { return _Quality; }
+            get => _Quality;
             set
             {
                 if (_Quality != value)
@@ -141,13 +134,7 @@ namespace Server.Items
 
         public bool FailedLockpick { get; set; }
 
-        public override bool IsDecoContainer
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool IsDecoContainer => false;
 
         public static void Fill(Mobile from, LockableContainer cont, int level, bool isSos)
         {
@@ -393,7 +380,7 @@ namespace Server.Items
             #region Imbuing Ingreds
             if (level > 1)
             {
-                Item item = Loot.Construct(m_ImbuingIngreds[Utility.Random(m_ImbuingIngreds.Length)]);
+                Item item = Loot.Construct(ImbuingIngreds[Utility.Random(ImbuingIngreds.Length)]);
 
                 item.Amount = level;
                 cont.DropItem(item);
@@ -406,9 +393,9 @@ namespace Server.Items
             if (isSos)
             {
                 if (0.004 * level > Utility.RandomDouble())
-                    arty = Loot.Construct(m_SOSArtifacts);
+                    arty = Loot.Construct(SOSArtifacts);
                 if (0.006 * level > Utility.RandomDouble())
-                    special = Loot.Construct(m_SOSDecor);
+                    special = Loot.Construct(SOSDecor);
                 else if (0.009 * level > Utility.RandomDouble())
                     special = new TreasureMap(Utility.RandomMinMax(level, Math.Min(7, level + 1)), cont.Map);
 
@@ -418,27 +405,27 @@ namespace Server.Items
                 if (level >= 7)
                 {
                     if (0.025 > Utility.RandomDouble())
-                        special = Loot.Construct(m_LevelSevenOnly);
+                        special = Loot.Construct(ArtifactsLevelSeven);
                     else if (0.10 > Utility.RandomDouble())
-                        special = Loot.Construct(m_LevelFiveToSeven);
+                        special = Loot.Construct(ArtifactsLevelFiveToSeven);
                     else if (0.25 > Utility.RandomDouble())
                         special = GetRandomSpecial(level, cont.Map);
 
-                    arty = Loot.Construct(m_Artifacts);
+                    arty = Loot.Construct(Artifacts);
                 }
                 else if (level >= 6)
                 {
                     if (0.025 > Utility.RandomDouble())
-                        special = Loot.Construct(m_LevelFiveToSeven);
+                        special = Loot.Construct(ArtifactsLevelFiveToSeven);
                     else if (0.20 > Utility.RandomDouble())
                         special = GetRandomSpecial(level, cont.Map);
 
-                    arty = Loot.Construct(m_Artifacts);
+                    arty = Loot.Construct(Artifacts);
                 }
                 else if (level >= 5)
                 {
                     if (0.005 > Utility.RandomDouble())
-                        special = Loot.Construct(m_LevelFiveToSeven);
+                        special = Loot.Construct(ArtifactsLevelFiveToSeven);
                     else if (0.15 > Utility.RandomDouble())
                         special = GetRandomSpecial(level, cont.Map);
                 }
@@ -522,7 +509,7 @@ namespace Server.Items
 
         public static Item GetRandomRecipe()
         {
-            List<Server.Engines.Craft.Recipe> recipes = new List<Server.Engines.Craft.Recipe>(Server.Engines.Craft.Recipe.Recipes.Values);
+            List<Engines.Craft.Recipe> recipes = new List<Engines.Craft.Recipe>(Engines.Craft.Recipe.Recipes.Values);
 
             return new RecipeScroll(recipes[Utility.Random(recipes.Count)]);
         }
@@ -631,7 +618,7 @@ namespace Server.Items
 
                 for (int i = 0; i < spawn.Skills.Length; i++)
                 {
-                    Skill skill = (Skill)spawn.Skills[i];
+                    Skill skill = spawn.Skills[i];
 
                     if (skill.Base > 0.0)
                         skill.Base *= Paragon.SkillsBuff;
@@ -655,8 +642,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write((int)4); // version
+            writer.Write(4); 
 
             writer.Write(FailedLockpick);
             writer.Write((int)_Quality);
@@ -667,11 +653,11 @@ namespace Server.Items
             writer.Write(TreasureMap);
 
             writer.Write(Guardians, true);
-            writer.Write((bool)Temporary);
+            writer.Write(Temporary);
 
             writer.Write(Owner);
 
-            writer.Write((int)Level);
+            writer.Write(Level);
             writer.WriteDeltaTime(DeleteTime);
             writer.Write(m_Lifted, true);
         }
@@ -679,7 +665,6 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
 
             switch (version)

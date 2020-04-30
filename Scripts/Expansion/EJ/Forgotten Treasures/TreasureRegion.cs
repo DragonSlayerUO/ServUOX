@@ -8,18 +8,16 @@ namespace Server
     {
         private const int Range = 5;// No house may be placed within 5 tiles of the treasure
         public TreasureRegion(int x, int y, Map map)
-            : base(null, map, Region.DefaultPriority, new Rectangle2D(x - Range, y - Range, 1 + (Range * 2), 1 + (Range * 2)))
+            : base(null, map, DefaultPriority, new Rectangle2D(x - Range, y - Range, 1 + (Range * 2), 1 + (Range * 2)))
         {
-            this.GoLocation = new Point3D(x, y, map.GetAverageZ(x, y));
+            GoLocation = new Point3D(x, y, map.GetAverageZ(x, y));
 
-            this.Register();
+            Register();
         }
 
         public static void Initialize()
         {
             string filePath = Path.Combine(Core.BaseDirectory, "Data/treasure.cfg");
-            int i = 0, x = 0, y = 0;
-
             if (File.Exists(filePath))
             {
                 using (StreamReader ip = new StreamReader(filePath))
@@ -28,14 +26,15 @@ namespace Server
 
                     while ((line = ip.ReadLine()) != null)
                     {
+                        int i = 0;
                         i++;
 
                         try
                         {
                             string[] split = line.Split(' ');
 
-                            x = Convert.ToInt32(split[0]);
-                            y = Convert.ToInt32(split[1]);
+                            int x = Convert.ToInt32(split[0]);
+                            int y = Convert.ToInt32(split[1]);
 
                             try
                             {

@@ -1,9 +1,6 @@
-#region References
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-
 using Server.ContextMenus;
 using Server.Engines.CannedEvil;
 using Server.Engines.Harvest;
@@ -13,13 +10,12 @@ using Server.Network;
 using Server.Regions;
 using Server.Targeting;
 using Server.Spells;
-#endregion
 
 namespace Server.Items
 {
     public class TreasureMap : MapItem
     {
-        public static bool NewSystem { get { return false; } }
+        public static bool NewSystem => false;
 
         public static bool NewChestLocations = Config.Get("TreasureMaps.Enabled", true);
         public static double LootChance = Config.Get("TreasureMaps.LootChance", .01);
@@ -31,7 +27,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public TreasureLevel TreasureLevel
         {
-            get { return (TreasureLevel)m_Level; }
+            get => (TreasureLevel)m_Level;
             set
             {
                 if ((int)value != Level)
@@ -44,12 +40,12 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public TreasurePackage Package
         {
-            get { return _Package; }
+            get => _Package;
             set { _Package = value; InvalidateProperties(); }
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TreasureFacet TreasureFacet { get { return TreasureMapInfo.GetFacet(ChestLocation, Facet); } }
+        public TreasureFacet TreasureFacet => TreasureMapInfo.GetFacet(ChestLocation, Facet);
 
         protected void AssignRandomPackage()
         {
@@ -254,11 +250,10 @@ namespace Server.Items
         };
         #endregion
 
-        private static Point2D[] m_Locations;
         private static Point2D[] m_HavenLocations;
 
-        public static Point2D[] Locations { get { return m_Locations; } }
-        public static Point2D[] HavenLocations { get { return m_Locations; } }
+        public static Point2D[] Locations { get; private set; }
+        public static Point2D[] HavenLocations => Locations;
 
         private int m_Level;
         private bool m_Completed;
@@ -268,7 +263,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int Level
         {
-            get { return m_Level; }
+            get => m_Level;
             set
             {
                 m_Level = Math.Min(value, TreasureMapInfo.NewSystem ? 4 : 7);
@@ -280,7 +275,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Completed
         {
-            get { return m_Completed; }
+            get => m_Completed;
             set
             {
                 m_Completed = value;
@@ -291,7 +286,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile CompletedBy
         {
-            get { return m_CompletedBy; }
+            get => m_CompletedBy;
             set
             {
                 m_CompletedBy = value;
@@ -302,7 +297,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile Decoder
         {
-            get { return m_Decoder; }
+            get => m_Decoder;
             set
             {
                 m_Decoder = value;
@@ -387,9 +382,8 @@ namespace Server.Items
 
             Width = 300;
             Height = 300;
-            int width, height;
 
-            GetWidthAndHeight(map, out width, out height);
+            GetWidthAndHeight(map, out int width, out int height);
 
             int x1 = ChestLocation.X - Utility.RandomMinMax(width / 4, (width / 4) * 3);
             int y1 = ChestLocation.Y - Utility.RandomMinMax(height / 4, (height / 4) * 3);
@@ -400,10 +394,8 @@ namespace Server.Items
             if (y1 < 0)
                 y1 = 0;
 
-            int x2;
-            int y2;
 
-            AdjustMap(map, out x2, out y2, x1, y1, width, height, eodon);
+            AdjustMap(map, out int x2, out int y2, x1, y1, width, height, eodon);
 
             x1 = x2 - width;
             y1 = y2 - height;
@@ -504,7 +496,7 @@ namespace Server.Items
                 }
             }
 
-            var n = (ld.Name ?? String.Empty).ToLower();
+            var n = (ld.Name ?? string.Empty).ToLower();
                 
             if (n != "dirt" && n != "grass" && n != "jungle" && n != "forest" && n != "snow")
             {
@@ -521,7 +513,7 @@ namespace Server.Items
                     return false;
                 }
 
-                n = (td.Name ?? String.Empty).ToLower();
+                n = (td.Name ?? string.Empty).ToLower();
                 
                 if (n != "dirt" && n != "grass" && n != "jungle" && n != "forest" && n != "snow")
                 {
@@ -551,7 +543,7 @@ namespace Server.Items
                 width = 600;
                 height = 600;
             }
-            if (map == Map.TerMur)
+            else if (map == Map.TerMur)
             {
                 width = 200;
                 height = 200;
@@ -670,14 +662,14 @@ namespace Server.Items
 
         public static Point2D GetRandomClassicLocation()
         {
-            if (m_Locations == null)
+            if (Locations == null)
             {
                 LoadLocations();
             }
 
-            if (m_Locations.Length > 0)
+            if (Locations.Length > 0)
             {
-                return m_Locations[Utility.Random(m_Locations.Length)];
+                return Locations[Utility.Random(Locations.Length)];
             }
 
             return Point2D.Zero;
@@ -731,7 +723,7 @@ namespace Server.Items
             {
                 BaseCreature bc;
                 var list = GetSpawnList(spawns, level);
-
+                 
                 try
                 {
                     bc = (BaseCreature)Activator.CreateInstance(list[Utility.Random(list.Length)]);
@@ -741,23 +733,24 @@ namespace Server.Items
                     return null;
                 }
 
-                bc.Home = p;
-                bc.RangeHome = 5;
-
-                if (guardian)
+                if (bc != null)
                 {
-                    bc.Title = "(Guardian)";
+                    bc.Home = p;
+                    bc.RangeHome = 5;
 
-                    if (!TreasureMapInfo.NewSystem && level == 0)
+                    if (guardian)
                     {
-                        bc.Name = "a chest guardian";
-                        bc.Hue = 0x835;
+                        bc.Title = "(Guardian)";
+
+                        if (!TreasureMapInfo.NewSystem && level == 0)
+                        {
+                            bc.Name = "a chest guardian";
+                            bc.Hue = 0x835;
+                        }
                     }
                 }
-
                 return bc;
             }
-
             return null;
         }
 
@@ -1083,7 +1076,7 @@ namespace Server.Items
                         1048030,
                         "",
                         AffixType.Append,
-                        String.Format(" completed by {0}", m_CompletedBy == null ? "someone" : m_CompletedBy.Name),
+                        string.Format(" completed by {0}", m_CompletedBy == null ? "someone" : m_CompletedBy.Name),
                         ""));
             }
             else if (m_Decoder != null)
@@ -1101,11 +1094,11 @@ namespace Server.Items
             {
                 if (m_Level == 6)
                 {
-                    LabelTo(from, 1041522, String.Format("#{0}\t \t#{1}", 1063452, Facet == Map.Felucca ? 1041502 : 1041503));
+                    LabelTo(from, 1041522, string.Format("#{0}\t \t#{1}", 1063452, Facet == Map.Felucca ? 1041502 : 1041503));
                 }
                 else
                 {
-                    LabelTo(from, 1041522, String.Format("#{0}\t \t#{1}", 1041510 + m_Level, Facet == Map.Felucca ? 1041502 : 1041503));
+                    LabelTo(from, 1041522, string.Format("#{0}\t \t#{1}", 1041510 + m_Level, Facet == Map.Felucca ? 1041502 : 1041503));
                 }
             }
         }
@@ -1228,7 +1221,7 @@ namespace Server.Items
                 }
             }
 
-            m_Locations = list.ToArray();
+            Locations = list.ToArray();
             m_HavenLocations = havenList.ToArray();
         }
 
@@ -1603,12 +1596,11 @@ namespace Server.Items
                     {
                         var guardian = TreasureMapInfo.NewSystem ? Utility.RandomDouble() >= 0.3 : true;
 
-                        BaseCreature bc = Spawn(m_TreasureMap.Level, m_Chest.Location, m_Chest.Map, null, guardian);
-
-                        bc.Hue = 2725;
+                        BaseCreature bc = Spawn(m_TreasureMap.Level, m_Chest.Location, m_Chest.Map, null, guardian);                        
 
                         if (bc != null && guardian)
                         {
+                            bc.Hue = 2725;
                             m_Chest.Guardians.Add(bc);
                         }
                     }
@@ -1770,15 +1762,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.WriteEncodedInt(0); // version
+            writer.WriteEncodedInt(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadEncodedInt();
+            _ = reader.ReadEncodedInt();
 
             Delete();
         }

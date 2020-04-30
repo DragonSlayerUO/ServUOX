@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using Server.ContextMenus;
-using Server.Engines.VeteranRewards;
 using Server.Gumps;
-using Server.Mobiles;
-using Server.Network;
 
 namespace Server.Items
 { 
@@ -45,26 +39,18 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        { 
-            get
-            { 
-                return new SkullTiledFloorAddonDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new SkullTiledFloorAddonDeed();
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -82,15 +68,9 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber { get { return 1159020; } } // Skull Tiled Floor
+        public override int LabelNumber => 1159020;  // Skull Tiled Floor
 
-        public override BaseAddon Addon
-        { 
-            get
-            {
-                return new SkullTiledFloorAddon(m_East);
-            }
-        }
+        public override BaseAddon Addon => new SkullTiledFloorAddon(m_East);
 
         public override void OnDoubleClick(Mobile from)
         {
@@ -106,15 +86,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.WriteEncodedInt(0); // version
+            writer.WriteEncodedInt(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadEncodedInt();
+            _ = reader.ReadEncodedInt();
         }
 
         public void GetOptions(RewardOptionList list)
