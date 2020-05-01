@@ -369,31 +369,31 @@
     </Compile>
     <Compile Include="Expansion\T2A\Mechanics\SiegePerilous\HeroEvil\Evil\Mobiles\Deprecated\DarkSteed.cs" />
     <Compile Include="Expansion\UOR\Mechanics\Khaldun\Mobiles\AncientLich.cs" />
-    <Compile Include="Deprecated\CreateWorld.cs">
+    <Compile Include="Mechanics\Deprecated\CreateWorld.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\Decorate.cs">
+    <Compile Include="Mechanics\Deprecated\Decorate.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\DecorateDelete.cs">
+    <Compile Include="Mechanics\Deprecated\DecorateDelete.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\DecorateMag.cs">
+    <Compile Include="Mechanics\Deprecated\DecorateMag.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\DecorateSA.cs">
+    <Compile Include="Mechanics\Deprecated\DecorateSA.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\Commands\Docs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\DoorGenDelete.cs">
+    <Compile Include="Mechanics\Deprecated\DoorGenDelete.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\Commands\Dupe.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\ExportWSC.cs">
+    <Compile Include="Mechanics\Deprecated\ExportWSC.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\Commands\GenBounds.cs">
@@ -484,10 +484,10 @@
     <Compile Include="Administration\Commands\Generic\Implementors\SingleCommandImplementor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\GenTeleporter.cs">
+    <Compile Include="Mechanics\Deprecated\GenTeleporter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\GMbody.cs">
+    <Compile Include="Mechanics\Deprecated\GMbody.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\Commands\Handlers.cs">
@@ -508,10 +508,10 @@
     <Compile Include="Administration\Commands\ShardTime.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\SHTelGenDelete.cs">
+    <Compile Include="Mechanics\Deprecated\SHTelGenDelete.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\SignGenDelete.cs">
+    <Compile Include="Mechanics\Deprecated\SignGenDelete.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\Commands\SignParser.cs">
@@ -529,7 +529,7 @@
     <Compile Include="Administration\Commands\TimeStamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\UnloadMaps.cs">
+    <Compile Include="Mechanics\Deprecated\UnloadMaps.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\Commands\VisibilityList.cs">
@@ -557,8 +557,8 @@
     <Compile Include="Mechanics\Context Menus\TeachEntry.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\GamblingStone.cs" />
-    <Compile Include="Deprecated\GMStone.cs" />
+    <Compile Include="Mechanics\Deprecated\GamblingStone.cs" />
+    <Compile Include="Mechanics\Deprecated\GMStone.cs" />
     <Compile Include="Mechanics\Gumps\AddCustomizableMessageGump.cs" />
     <Compile Include="Mechanics\Gumps\AddDoorGump.cs">
       <SubType>Code</SubType>
@@ -874,8 +874,8 @@
     <Compile Include="Expansion\EJ\XxUnsortedxX\CommissionPlayerVendorDeed.cs" />
     <Compile Include="Expansion\HS\Consumables\FearEssence.cs" />
     <Compile Include="Expansion\HS\Consumables\ShatterPotion.cs" />
-    <Compile Include="Customs\BoxOfCrystalItems.cs" />
-    <Compile Include="Customs\BoxOfShadowItems.cs" />
+    <Compile Include="Customs\Items\BoxOfCrystalItems.cs" />
+    <Compile Include="Customs\Items\BoxOfShadowItems.cs" />
     <Compile Include="Expansion\ML\Items\9th Anniversary Gifts\Shadow Furniture Set\ShadowAltar.cs" />
     <Compile Include="Expansion\ML\Items\9th Anniversary Gifts\Shadow Furniture Set\ShadowPillar.cs" />
     <Compile Include="Expansion\ML\Items\9th Anniversary Gifts\Shadow Furniture Set\SpikeColumn.cs" />
@@ -929,7 +929,7 @@
     <Compile Include="Holidays\Holiday Items\ValentineChocolate.cs" />
     <Compile Include="Holidays\Holiday Items\HeartShapedBox.cs" />
     <Compile Include="Expansion\ML\Items\9th Anniversary Gifts\Shadow Furniture Set\ObsidianPillar.cs" />
-    <Compile Include="Customs\GypsyWagonLamp.cs" />
+    <Compile Include="Customs\Items\GypsyWagonLamp.cs" />
     <Compile Include="Holidays\Holiday Items\PumpkinCarvingKit.cs" />
     <Compile Include="Holidays\Holiday Items\HolidayWallArt.cs" />
     <Compile Include="Expansion\SA\Items\12th Anniversary Gifts\UltimaBanner.cs" />
@@ -998,7 +998,7 @@
     <Compile Include="Expansion\HS\XxUnsortedxX\RoastingPigOnASpit.cs" />
     <Compile Include="Expansion\EJ\XxUnsortedxX\SheepStatue.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\Harpsichord.cs" />
-    <Compile Include="Customs\VendorMallAddon.cs" />
+    <Compile Include="Customs\Items\VendorMallAddon.cs" />
     <Compile Include="Expansion\SA\Items\Furniture\WeatheredBronzeFairySculpture.cs" />
     <Compile Include="Expansion\SA\Items\Furniture\WeatheredBronzeArcherSculpture.cs" />
     <Compile Include="Expansion\SA\Items\Furniture\WeatheredBronzeManOnABench.cs" />
@@ -1047,7 +1047,7 @@
     <Compile Include="Expansion\ML\Items\Addons\FancyLoveseatEast.cs" />
     <Compile Include="Expansion\ML\Items\Addons\FancyCouchSouth.cs" />
     <Compile Include="Expansion\ML\Items\Addons\FancyLoveseatSouth.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Items\GeoffreyCampAddon.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Items\GeoffreyCampAddon.cs" />
     <Compile Include="Expansion\Original UO\Items\Addons\HitchingPost.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\GardenShed.cs" />
     <Compile Include="Expansion\ML\Items\Addons\FancyWoodenShelfEast.cs" />
@@ -1093,7 +1093,7 @@
     <Compile Include="Expansion\Original UO\Items\Corpses\RightLeg.cs" />
     <Compile Include="Expansion\Original UO\Items\Corpses\Torso.cs" />
     <Compile Include="Holidays\Holiday Items\ValentinesDayTableSet.cs" />
-    <Compile Include="Customs\CustomizableWallSign.cs" />
+    <Compile Include="Customs\Items\CustomizableWallSign.cs" />
     <Compile Include="Holidays\Holiday Items\SpikeHead.cs" />
     <Compile Include="Holidays\Holiday Items\SpikedEggNog.cs" />
     <Compile Include="Holidays\Holiday Items\JadeSkull.cs" />
@@ -1125,31 +1125,31 @@
     <Compile Include="Holidays\Holiday Mobiles\Halloween\TheButcher.cs" />
     <Compile Include="Expansion\SA\Items\World\Triton.cs" />
     <Compile Include="Expansion\EJ\Eowmu.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Gardener.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\BaseProperty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Gumps.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Mannequin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\AbsorptionAttributeProperty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\AosArmorAttributeProperty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\AosAttributeProperty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\ExtendedWeaponAttribute.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\NegativeAttributeProperty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\OtherProperty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\ResistProperty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\SkillBonusAttribute.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\SlayerAttribute.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mannequin\Property\WeaponAttributeProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gardener.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\BaseProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Gumps.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Mannequin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\AbsorptionAttributeProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\AosArmorAttributeProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\AosAttributeProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\ExtendedWeaponAttribute.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\NegativeAttributeProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\OtherProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\ResistProperty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\SkillBonusAttribute.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\SlayerAttribute.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\WeaponAttributeProperty.cs" />
     <Compile Include="Expansion\HS\Galleons\GalleonItem.cs" />
     <Compile Include="Expansion\EJ\Forsaken Foes\Mobile\MiningCooperativeMerchant.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\CommissionPlayerVendor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CommissionPlayerVendor.cs" />
     <Compile Include="Expansion\XSORTINGX\Multis\ContestHouses.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\The Ritual\Items.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\The Ritual\Mobiles.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\The Ritual\Puzzle.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\The Ritual\Quests.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TieredQuests\PercolemTieredQuests.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TieredQuests\ThepemTieredQuests.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TieredQuests\ZosilemTieredQuests.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\The Ritual\Items.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\The Ritual\Mobiles.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\The Ritual\Puzzle.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\The Ritual\Quests.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TieredQuests\PercolemTieredQuests.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TieredQuests\ThepemTieredQuests.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TieredQuests\ZosilemTieredQuests.cs" />
     <Compile Include="Expansion\EJ\Forsaken Foes\22nd Anniversary\Anniversary22GiftToken.cs" />
     <Compile Include="Expansion\EJ\Forsaken Foes\22nd Anniversary\Items\CopperPortraits.cs" />
     <Compile Include="Expansion\EJ\Forsaken Foes\22nd Anniversary\Items\CopperShipRelief.cs" />
@@ -1307,16 +1307,16 @@
     <Compile Include="Holidays\Holiday Items\WrappedCandy.cs" />
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Containers\BaseTrash.cs" />
     <Compile Include="Expansion\SA\Items\Containers\MeagerImbuingBag.cs" />
-    <Compile Include="Customs\ScrollBox2.cs" />
+    <Compile Include="Customs\Items\ScrollBox2.cs" />
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Containers\CleanupTrashBarrel.cs" />
-    <Compile Include="Duped Items\AcidWall.cs" />
-    <Compile Include="Duped Items\AcidWall1.cs" />
+    <Compile Include="Expansion\XSORTINGX\Duped Items\AcidWall.cs" />
+    <Compile Include="Expansion\XSORTINGX\Duped Items\AcidWall1.cs" />
     <Compile Include="Holidays\Holiday Items\BasePaintedMask.cs" />
     <Compile Include="Expansion\Original UO\Items\Decorations\Furinture\ChairInAGhostCostume.cs" />
     <Compile Include="Holidays\Holiday Items\ClownMask.cs" />
-    <Compile Include="Customs\ColoredSmallWebs.cs" />
+    <Compile Include="Customs\Items\ColoredSmallWebs.cs" />
     <Compile Include="Holidays\Holiday Items\DaemonMask.cs" />
-    <Compile Include="Customs\DragonLamp.cs" />
+    <Compile Include="Customs\Items\DragonLamp.cs" />
     <Compile Include="Holidays\Holiday Items\EvilJesterMask.cs" />
     <Compile Include="Holidays\Holiday Items\ExcellentIronMaiden.cs" />
     <Compile Include="Holidays\Holiday Items\GrimWarning.cs" />
@@ -1327,8 +1327,8 @@
     <Compile Include="Holidays\Holiday Items\PumpkinScarecrow.cs" />
     <Compile Include="Expansion\Original UO\Items\Decorations\RuinedTapestry.cs" />
     <Compile Include="Holidays\Holiday Items\SkullsOnPike.cs" />
-    <Compile Include="Customs\StainedGlassLamp.cs" />
-    <Compile Include="Customs\TallDoubleLamp.cs" />
+    <Compile Include="Customs\Items\StainedGlassLamp.cs" />
+    <Compile Include="Customs\Items\TallDoubleLamp.cs" />
     <Compile Include="Expansion\Original UO\Items\Equipment\Armor and Shields\BaseArmor.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -1666,7 +1666,7 @@
     <Compile Include="Expansion\T2A\Items\Consumables\BankCheck.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\BaseTreasureChestMod.cs">
+    <Compile Include="Customs\Items\BaseTreasureChestMod.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Items\Teleporters\BedlamTeleporters.cs">
@@ -1756,7 +1756,7 @@
     <Compile Include="Expansion\SA\Items\Resource\CrushedGlass.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\CrystalBall.cs">
+    <Compile Include="Customs\Items\CrystalBall.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Resource\CrystallineBlackrock.cs">
@@ -2151,7 +2151,7 @@
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Containers\TrashChest.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\TreasureChestMod.cs">
+    <Compile Include="Customs\Items\TreasureChestMod.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Resource\TribalBerry.cs">
@@ -2196,16 +2196,16 @@
     <Compile Include="Expansion\SE\Items\Decorative\WindChimes.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\GMEthereal.cs">
+    <Compile Include="Customs\Items\GMEthereal.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\GMHidingStone.cs">
+    <Compile Include="Customs\Items\GMHidingStone.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\StaffOrb.cs">
+    <Compile Include="Customs\Items\StaffOrb.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\StaffRing.cs">
+    <Compile Include="Customs\Items\StaffRing.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Carpentry Craftables\AbbatoirAddon.cs">
@@ -2330,7 +2330,7 @@
     <Compile Include="Expansion\Original UO\Items\Addons\GrayBrickFireplaceSouthAddon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\JackOLantern.cs">
+    <Compile Include="Customs\Items\JackOLantern.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Carpentry Craftables\LargeBedEastAddon.cs">
@@ -2398,7 +2398,7 @@
     <Compile Include="Expansion\UOTD\ChampionSystem\Silvani.cs" />
     <Compile Include="Expansion\SA\Mobiles\Publish 66.2 Ophidian Bane Wars\BaneDragon.cs" />
     <Compile Include="Holidays\Holiday Mobiles\PumpkinHead.cs" />
-    <Compile Include="Customs\Wanderer.cs" />
+    <Compile Include="Customs\Mobiles\Wanderer.cs" />
     <Compile Include="Expansion\UOR\Mechanics\Factions\Mobiles\Mounts\BaseWarHorse.cs" />
     <Compile Include="Expansion\UOR\Mechanics\Factions\Mobiles\Mounts\CoMWarHorse.cs" />
     <Compile Include="Expansion\UOR\Mechanics\Factions\Mobiles\Mounts\MinaxWarHorse.cs" />
@@ -2630,7 +2630,7 @@
     <Compile Include="Expansion\SE\Mobiles\Hiryu.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\Animals\Horses.cs" />
     <Compile Include="Expansion\ML\Mobiles\Hydra.cs" />
-    <Compile Include="Customs\Icehound.cs" />
+    <Compile Include="Customs\Items\Icehound.cs" />
     <Compile Include="Expansion\AOS\Mobiles\Doom Bosses\Impaler.cs" />
     <Compile Include="Expansion\SE\Mobiles\InjuredWolf.cs" />
     <Compile Include="Expansion\ML\Mobiles\BlightedGrove\InsaneDryad.cs" />
@@ -2689,20 +2689,20 @@
     <Compile Include="Expansion\XSORTINGX\Mobiles\SabertoothedTiger.cs" />
     <Compile Include="Expansion\TOL\Mobiles\WildTiger.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\BaseTurnInMobile.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Brae.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Emilio.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Evan.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Kodar.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Lenley.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Paladin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Percolem.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\QuartermasterFlint.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Regina.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\ShrineHealer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Thalia.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Tobin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Vrulkax.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\WanderingShaman.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Brae.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Emilio.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Evan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Kodar.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Lenley.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Paladin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Percolem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\QuartermasterFlint.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Regina.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\ShrineHealer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Thalia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tobin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Vrulkax.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\WanderingShaman.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\PlayerMobile.cs" />
     <Compile Include="Expansion\T2A\Mobiles\PredatorHellCat.cs" />
     <Compile Include="Expansion\ML\Mobiles\PrismOfLight\Protector.cs" />
@@ -2766,7 +2766,7 @@
     <Compile Include="Expansion\UOTD\Mobiles\ThirdDawnParrot.cs" />
     <Compile Include="Expansion\ML\Mobiles\TigersClawMaster.cs" />
     <Compile Include="Expansion\ML\Mobiles\Labyrinth\Tormented Minotaur.cs" />
-    <Compile Include="Customs\ToxicElemental.cs" />
+    <Compile Include="Customs\Items\ToxicElemental.cs" />
     <Compile Include="Expansion\SA\TerMur\ToxicSlith.cs" />
     <Compile Include="Expansion\SA\TerMur\TrapdoorSpider.cs" />
     <Compile Include="Expansion\ML\Mobiles\PaintedCaves\Troglodyte.cs" />
@@ -2795,44 +2795,44 @@
     <Compile Include="Expansion\SE\Mobiles\YomotsuWarrior.cs" />
     <Compile Include="Expansion\SE\Mobiles\YoungNinja.cs" />
     <Compile Include="Expansion\SE\Mobiles\YoungRonin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Abbein.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Acob.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Abbein.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Acob.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Actor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aelorn.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aeluva.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aernya.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ahie.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AlbertaGiacco.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aelorn.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aeluva.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aernya.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ahie.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AlbertaGiacco.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Alchemist.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AldenArmstrong.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Alefian.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Alejaha.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AlelleTheAborist.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Alethanian.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AluniolTheHealer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AldenArmstrong.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Alefian.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Alejaha.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AlelleTheAborist.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Alethanian.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AluniolTheHealer.cs" />
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\AmbitiousSolenQueen.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Amelia.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aminia.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AndreasVesalius.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aneen.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aniel.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Amelia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aminia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AndreasVesalius.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aneen.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aniel.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\AnimalTrainer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Anolly.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ansikart.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Arabella.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\ArcherGuard.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Anolly.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ansikart.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Arabella.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\ArcherGuard.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Architect.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Arielle.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AriellesBauble.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Arielle.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AriellesBauble.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Armorer.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Artist.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Athialon.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AttendantFortuneTeller.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AttendantGuide.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AttendantHerald.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AttendantLuckyDealer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aulan.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Avicenna.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Athialon.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AttendantFortuneTeller.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AttendantGuide.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AttendantHerald.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AttendantLuckyDealer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aulan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Avicenna.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Baker.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Banker.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Bard.cs" />
@@ -2845,228 +2845,228 @@
     <Compile Include="Expansion\Original UO\Mobiles\BaseHire.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\BaseShieldGuard.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\BaseVendor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Beekeeper.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Belulah.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Beekeeper.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Belulah.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Blacksmith.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\BlacksmithGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Bolaevin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Bonnie.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Bolaevin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Bonnie.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Bowyer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Braen.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Bravehorn.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\BrideGroom.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Brinnae.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Broolol.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Braen.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Bravehorn.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\BrideGroom.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Brinnae.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Broolol.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Butcher.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Caelas.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Cailla.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Calendor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Caelas.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Cailla.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Calendor.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Carpenter.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\ChaosGuard.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Chiyo.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Churchill.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ciala.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Cillitha.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Clehin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Cloorne.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Chiyo.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Churchill.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ciala.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Cillitha.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Clehin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Cloorne.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Cobbler.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Cohenn.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Cohenn.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Cook.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Corey.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\CrateForSledge.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\CustomHairstylist.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Daelas.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Darius.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\DenthesJournal.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Dimethro.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Drithen.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Egwexem.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\ElwoodMcCarrin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Emerillo.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Emino.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Enigma.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Enrico.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\EnshroudedFigure.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\EscortableMage.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Escortables.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Corey.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CrateForSledge.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CustomHairstylist.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Daelas.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Darius.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\DenthesJournal.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Dimethro.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Drithen.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Egwexem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\ElwoodMcCarrin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Emerillo.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Emino.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Enigma.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Enrico.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\EnshroudedFigure.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\EscortableMage.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Escortables.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\EvilHealer.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\EvilWanderingHealer.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Farmer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\FarmerNash.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Filbert.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\FarmerNash.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Filbert.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\FisherGuildmaster.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Fisherman.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Frazer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\FrightenedDryad.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Frazer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\FrightenedDryad.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Furtrader.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GabrielPiete.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Garamon.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GargishNoble.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GargishRefugee.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GargishWanderingHealer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GargishWarrior.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GeorgeHephaestus.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Glassblower.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Gnosos.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GolemCrafter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Gorrow.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GrandpaCharley.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Gustar.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Gypsy.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GypsyAnimalTrainer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GypsyBanker.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\GypsyMaiden.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HairStylist.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Hamato.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Haochi.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HaochisGuardsman.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HarborMaster.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GabrielPiete.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Garamon.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GargishNoble.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GargishRefugee.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GargishWanderingHealer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GargishWarrior.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GeorgeHephaestus.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Glassblower.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gnosos.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GolemCrafter.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gorrow.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GrandpaCharley.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gustar.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gypsy.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GypsyAnimalTrainer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GypsyBanker.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\GypsyMaiden.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HairStylist.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Hamato.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Haochi.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HaochisGuardsman.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HarborMaster.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Healer.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\HealerGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Henchman.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Henchman.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Herbalist.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HiddenFigure.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireBard.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireBardArcher.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireBeggar.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireFighter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireMage.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HirePaladin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HirePeasant.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireRanger.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireRangerArcher.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireSailor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HireThief.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\HolyMage.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Horus.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Huntsman.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Impresario.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HiddenFigure.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireBard.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireBardArcher.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireBeggar.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireFighter.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireMage.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HirePaladin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HirePeasant.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireRanger.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireRangerArcher.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireSailor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HireThief.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\HolyMage.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Horus.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Huntsman.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Impresario.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\InnKeeper.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ioseph.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\IronWorker.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jacob.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jamal.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\JedahEntille.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jelrice.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ioseph.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\IronWorker.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jacob.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jamal.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\JedahEntille.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jelrice.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Jeweler.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jillian.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jockles.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jothan.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Joy.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jun.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jusae.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Kaelynna.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\KeeperOfChivalry.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Kia.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Landy.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jillian.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jockles.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jothan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Joy.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jun.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jusae.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Kaelynna.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\KeeperOfChivalry.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Kia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Landy.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\LeatherWorker.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Lefty.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Lissbet.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Lohn.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Maabus.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Lefty.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Lissbet.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Lohn.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Maabus.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Mage.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\MageGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mallew.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mallew.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Mapmaker.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mardoth.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Margo.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Maul.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mardoth.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Margo.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Maul.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Merchant.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\MerchantGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Messenger.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mielan.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Miller.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Messenger.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mielan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Miller.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Miner.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\MinerGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Minter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mithneral.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Monk.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Morganna.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mulcivikh.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mystic.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Naxatillor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Necromancer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Nedrick.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Neil.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Nillaen.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ninja.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Minter.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mithneral.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Monk.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Morganna.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mulcivikh.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mystic.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Naxatillor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Necromancer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Nedrick.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Neil.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Nillaen.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ninja.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Noble.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Nythalia.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Odell.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Olaeni.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Olla.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\OrderGuard.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Patricus.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Nythalia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Odell.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Olaeni.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Olla.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\OrderGuard.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Patricus.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Peasant.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\PersonalAttendant.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\PlayerBarkeeper.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\PersonalAttendant.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\PlayerBarkeeper.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\PlayerVendor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\PricedHealer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\PricedHealer.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Provisioner.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Rancher.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Rancher.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Ranger.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\RangerGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\RealEstateBroker.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Rebinil.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Recaro.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Relnia.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\RentedVendor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Robyn.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ryal.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ryuichi.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Salaenih.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Sam.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Samurai.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Saril.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\SarsmeaSmythe.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\RealEstateBroker.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Rebinil.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Recaro.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Relnia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\RentedVendor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Robyn.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ryal.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ryuichi.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Salaenih.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sam.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Samurai.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Saril.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\SarsmeaSmythe.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Scribe.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Sculptor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sculptor.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\SeekerOfAdventure.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Shipwright.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Siarra.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Sledge.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Sleen.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\SosariaSap.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\StoneCrafter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Strongroot.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Synaeva.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Taellia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Siarra.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sledge.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sleen.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\SosariaSap.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\StoneCrafter.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Strongroot.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Synaeva.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Taellia.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Tailor.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\TailorGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Talbart.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Tamm.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Talbart.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tamm.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Tanner.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\TavernKeeper.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Thallary.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Thallary.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Thief.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\ThiefGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Tholef.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Tillanil.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tholef.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tillanil.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Tinker.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\TinkerGuildmaster.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\TomasONeerlan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\TinkerGuildmaster.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\TomasONeerlan.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\TownCrier.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\TylAriadne.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Tyleelor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Unoelil.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Vagabond.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\VarietyDealer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Veterinarian.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Vicaie.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Vilo.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Waelian.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\TylAriadne.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tyleelor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Unoelil.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Vagabond.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\VarietyDealer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Veterinarian.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Vicaie.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Vilo.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Waelian.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Waiter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Walker.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Walker.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\WanderingHealer.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\WarriorGuard.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\WarriorGuard.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\WarriorGuildmaster.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Weaponsmith.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\NPCs\Weaver.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Xanthe.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Yellienir.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Yorus.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Zoel.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Zorda.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Xanthe.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Yellienir.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Yorus.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Zoel.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Zorda.cs" />
     <Compile Include="Expansion\SA\Mechanics\Skills\Mysticism\Mobiles\AnimatedWeapon.cs" />
     <Compile Include="Mechanics\AI\BaseFamiliar.cs" />
     <Compile Include="Expansion\Original UO\Mobiles\Summoned\BladeSpirits.cs" />
@@ -3092,93 +3092,93 @@
     <Compile Include="Expansion\SA\TerMur\UsagralemBallem.cs" />
     <Compile Include="Expansion\SA\TerMur\Vasanord.cs" />
     <Compile Include="Expansion\XSORTINGX\Multis\HouseTeleporterTile.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\ALittleSomething.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\ALittleSomething.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\AmbitiousQueenQuest.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\Conversations.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Bard Mastery Quests\SirBerran.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Bard Mastery Quests\SirFelean.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Bard Mastery Quests\SirHareus.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Bedlam.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\BlightedGrove.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\CloakOfHumilityQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\CollectionsObjective.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Gumps\GiveItemQuestGump.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Gumps\QuestInfoGump.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Items\ForTheLifeOfBritanniaSash.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Items\GoldShield.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Items\HumilityShrinePersistence.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Items\QuestItems.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Items\ShepherdsCrookOfHumility.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Items\SpecialPrintingOfVirtue.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Dierdre.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Gareth.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\HumilityQuestMobile.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Jason.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Kevin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Maribel.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Nelson.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Sean.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\CloakOfHumility\Mobiles\Walton.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\DarkTides\Conversations.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\DarkTides\DarkTidesQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\DarkTides\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\DiscoveringAnimalTraining\DiscoveringAnimalTraining.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\ElfHeritage.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\EminosUndertaking\Conversations.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\EminosUndertaking\EminosUndertakingQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\EminosUndertaking\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Hawkwind\Hawkwind.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Hawkwind\Objective.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Hawkwind\TimeForLegendsQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Generate.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Items\QuestItems.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Items\Rewards.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Items\Teleporter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Mobiles\Creatures.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Mobiles\Questers.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\MyrmidexThreat\Quests.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\Creatures.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\DragonTurtleNest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\Items.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\MyrmidexSpawner.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\Questers.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\Quests.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\TigerCubEnclosure.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Eodon\Valley of One Quest\Volcano.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\HaochisTrials\Conversations.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\HaochisTrials\HaochisTrialsQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\HaochisTrials\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\HumanHeritage.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\ClockworkCreature.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\Items\ClockworkMechanism.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\Items\CompletedClockworkAssembly.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\MadScientistQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\Items\MechanicalLifeManual.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\Sutek.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\SutekIngredient.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\MasteringtheSoulforge.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Ortlem.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\PeptaQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\RatmenSanctuaryQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Sacred Quest\QuestOfSingularity.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Sacred Quest\ShrineOfSingularity.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Spellweaving.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\SummonFey.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\SummonFiend.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TheAncientWorld.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aurvidlem.cs" />
-    <Compile Include="Customs\ScrollBox.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\KnowledgeoftheSoulforge.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Beninort.cs" />
-    <Compile Include="Customs\ScrollBox3.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\SecretsoftheSoulforge.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Barreraak.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Bard Mastery Quests\SirBerran.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Bard Mastery Quests\SirFelean.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Bard Mastery Quests\SirHareus.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Bedlam.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\BlightedGrove.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\CloakOfHumilityQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\CollectionsObjective.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Gumps\GiveItemQuestGump.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Gumps\QuestInfoGump.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Items\ForTheLifeOfBritanniaSash.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Items\GoldShield.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Items\HumilityShrinePersistence.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Items\QuestItems.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Items\ShepherdsCrookOfHumility.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Items\SpecialPrintingOfVirtue.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Dierdre.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Gareth.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\HumilityQuestMobile.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Jason.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Kevin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Maribel.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Nelson.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Sean.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\CloakOfHumility\Mobiles\Walton.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\DarkTides\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\DarkTides\DarkTidesQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\DarkTides\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\DiscoveringAnimalTraining\DiscoveringAnimalTraining.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\ElfHeritage.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\EminosUndertaking\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\EminosUndertaking\EminosUndertakingQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\EminosUndertaking\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Hawkwind\Hawkwind.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Hawkwind\Objective.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Hawkwind\TimeForLegendsQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Generate.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Items\QuestItems.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Items\Rewards.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Items\Teleporter.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Mobiles\Creatures.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Mobiles\Questers.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Quests.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\Creatures.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\DragonTurtleNest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\Items.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\MyrmidexSpawner.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\Questers.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\Quests.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\TigerCubEnclosure.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\Valley of One Quest\Volcano.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\HaochisTrials\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\HaochisTrials\HaochisTrialsQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\HaochisTrials\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\HumanHeritage.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\ClockworkCreature.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\Items\ClockworkMechanism.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\Items\CompletedClockworkAssembly.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\MadScientistQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\Items\MechanicalLifeManual.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\Sutek.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\SutekIngredient.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\MasteringtheSoulforge.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Ortlem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\PeptaQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\RatmenSanctuaryQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Sacred Quest\QuestOfSingularity.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Sacred Quest\ShrineOfSingularity.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Spellweaving.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\SummonFey.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\SummonFiend.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TheAncientWorld.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aurvidlem.cs" />
+    <Compile Include="Customs\Items\ScrollBox.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\KnowledgeoftheSoulforge.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Beninort.cs" />
+    <Compile Include="Customs\Items\ScrollBox3.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\SecretsoftheSoulforge.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Barreraak.cs" />
     <Compile Include="Expansion\SA\Items\Jewelry\BarreraakRing.cs" />
     <Compile Include="Expansion\ML\Items\Quest\RedHerring.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\DoughtyWarriorsQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\DoughtyWarriorsQuest.cs" />
     <Compile Include="Expansion\SA\Items\Clothing\SashOfMight.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\GatheringOfEvidence.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\GatheringOfEvidence.cs" />
     <Compile Include="Expansion\SA\Items\Armor\ResonantShieldOfVengeance.cs" />
     <Compile Include="Expansion\ML\Items\Quest\Void Crystals.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\WindOfCorruption.cs" />
@@ -3187,43 +3187,43 @@
     <Compile Include="Expansion\SA\StygianAbyssDungeon\Mobiles\VoidManesfistation.cs" />
     <Compile Include="Expansion\HS\Consumables\BaseExplodingTarPotion.cs" />
     <Compile Include="Expansion\HS\Consumables\ExplodingTarPotion.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Gretchen.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gretchen.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BagOfJewels.cs" />
     <Compile Include="Expansion\ML\Items\Quest\DeBoorShield.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\GobletOfCelebration.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\HonorOfDeBoorsQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\HonorOfDeBoorsQuest.cs" />
     <Compile Include="Expansion\SA\Items\Books\BookOfCircles.cs" />
     <Compile Include="Expansion\SA\Mobiles\GargoyleGuardian.cs" />
     <Compile Include="Expansion\SA\Items\Books\ShrineMantra.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Agralem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Agralem.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\AbyssReaver.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aliabeth.cs" />
-    <Compile Include="Customs\AverageImbuingBag.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aliabeth.cs" />
+    <Compile Include="Customs\Items\AverageImbuingBag.cs" />
     <Compile Include="Expansion\SA\Items\Containers\ValuableImbuingBag.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Axem.cs" />
-    <Compile Include="Customs\BulgingMuseumBag.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Axem.cs" />
+    <Compile Include="Customs\Items\BulgingMuseumBag.cs" />
     <Compile Include="Expansion\ML\Items\Containers\DustyMuseumBag.cs" />
     <Compile Include="Expansion\SA\Items\Containers\MeagerMuseumBag.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Dugan.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\EndingtheThreat.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Dugan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\EndingtheThreat.cs" />
     <Compile Include="Expansion\ML\Items\Quest\ArielHavenWritofMembership.cs" />
     <Compile Include="Expansion\SA\Items\Armor\CandlewoodTorch.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Missing.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\ATangledWeb.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\BadCompany.cs" />
-    <Compile Include="Customs\JaacarBox.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Jaacar.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Missing.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\ATangledWeb.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\BadCompany.cs" />
+    <Compile Include="Customs\Items\JaacarBox.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jaacar.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BritannianWool.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Laifem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Laifem.cs" />
     <Compile Include="Expansion\ML\Items\Quest\LaifemItems.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\EscortToDugan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\EscortToDugan.cs" />
     <Compile Include="Expansion\SA\Items\Talismans\TalismanofGoblinSlaying.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Neville.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Neville.cs" />
     <Compile Include="Expansion\ML\Items\Containers\RewardBackpack.cs" />
     <Compile Include="Expansion\SA\Items\Containers\EssenceBox.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Sliem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sliem.cs" />
     <Compile Include="Expansion\HS\The Awakening\ActIII\Generate.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\UnusualGoods.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\UnusualGoods.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BouraSkin.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofAgapiteConversion.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofGoldConversion.cs" />
@@ -3234,121 +3234,121 @@
     <Compile Include="Expansion\ML\Items\Quest\PileofInspectedDullCopperIngots.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PileofInspectedGoldIngots.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PileofInspectedShadowIronIngots.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Thepem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Thepem.cs" />
     <Compile Include="Expansion\SA\Items\Books\GargishDocuments.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\JourneyToTheAthenaeumIsleQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\JourneyToTheAthenaeumIsleQuest.cs" />
     <Compile Include="Expansion\SA\TerMur\Athenaeum Isle\MinionOfScelestus.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Zhah.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Zhah.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofValoriteConversion.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofVeriteConversion.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\InfusedAlchemistsGem.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\InfusedGlassStave.cs" />
     <Compile Include="Expansion\ML\Items\Quest\InspectedKegofGreaterPoison.cs" />
     <Compile Include="Expansion\ML\Items\Quest\InspectedKegofTotalRefreshment.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\PileofInspectedValoriteIngots.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\PileofInspectedVeriteIngots.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\PileofInspectedValoriteIngots.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\PileofInspectedVeriteIngots.cs" />
     <Compile Include="Expansion\AOS\Mechanics\Quests\Items\TreefellowWood.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\UndeadGargoyleMedallions.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\UndeadGargoyleMedallions.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\VialofArmorEssence.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Zosilem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Zosilem.cs" />
     <Compile Include="Expansion\ML\Items\Quest\MudPuppy.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Xenrr.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Xenrr.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\XenrrFishingPole.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\BatteredBucket.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Beotham.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Danoel.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Canir.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Rollarn.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Gemkeepers.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Onallan.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Marauders.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Dallid.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\MougGurrMustDie.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Oolua.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\BatteredBucket.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Beotham.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Danoel.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Canir.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Rollarn.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Gemkeepers.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Onallan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Marauders.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Dallid.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\MougGurrMustDie.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Oolua.cs" />
     <Compile Include="Expansion\ML\Items\Quest\SeveredElfEars.cs" />
     <Compile Include="Expansion\ML\Items\Quest\SeveredHumanEars.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Koole.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Discipline.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Tallinin.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Tiana.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Koole.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Discipline.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tallinin.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tiana.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\SolenMatriarch\Conversations.cs" />
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\SolenMatriarch.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\SolenMatriarch\Objectives.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\SolenMatriarch\SolenMatriarchQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\StudyOfTheSolenHive\Conversations.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Naturalist.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\StudyOfTheSolenHive\NestArea.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\StudyOfTheSolenHive\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\StudyOfTheSolenHive\StudyOfSolenQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Mad Scientist\Items\SuteksDirtyGear.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\StudyOfTheSolenHive\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Naturalist.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\StudyOfTheSolenHive\NestArea.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\StudyOfTheSolenHive\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\StudyOfTheSolenHive\StudyOfSolenQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Mad Scientist\Items\SuteksDirtyGear.cs" />
     <Compile Include="Expansion\ML\Items\Quest\ModifiedClockworkAssembly.cs" />
     <Compile Include="Expansion\ML\Items\Quest\SecretWallTeleporters.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Vollem.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TerribleHatchlings\Conversations.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\AnsellaGryen.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TerribleHatchlings\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TerribleHatchlings\TerribleHatchlingsQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TheSummoning\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Vollem.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TerribleHatchlings\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AnsellaGryen.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TerribleHatchlings\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TerribleHatchlings\TerribleHatchlingsQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TheSummoning\Conversations.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BellOfTheDead.cs" />
     <Compile Include="Expansion\ML\Items\Quest\ChylothShroud.cs" />
     <Compile Include="Expansion\ML\Items\Quest\ChylothStaff.cs" />
     <Compile Include="Expansion\ML\Items\Quest\GoldenSkull.cs" />
     <Compile Include="Expansion\ML\Items\Quest\GrandGrimoire.cs" />
     <Compile Include="Expansion\ML\Items\Quest\SummoningAltar.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Chyloth.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Victoria.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TheSummoning\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\TheSummoning\TheSummoningQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Chyloth.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Victoria.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TheSummoning\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\TheSummoning\TheSummoningQuest.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BasinOfCrystalClearWater.cs" />
     <Compile Include="Expansion\ML\Items\Quest\MirrorOfPurification.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Aurelia.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Szandor.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\AemaethQuests.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Andric.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Asandos.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Clairesse.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aurelia.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Szandor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\AemaethQuests.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Andric.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Asandos.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Clairesse.cs" />
     <Compile Include="Expansion\ML\Items\Quest\AlchemistsBandage.cs" />
     <Compile Include="Expansion\ML\Items\Quest\AndrosGratitude.cs" />
     <Compile Include="Expansion\ML\Items\Quest\DreadSpiderSilk.cs" />
     <Compile Include="Expansion\ML\Items\Quest\SpiritBottle.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Andros.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Ben.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Frederic.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Leon.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\GhostOfCovetous.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Fabrizio.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Andros.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ben.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Frederic.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Leon.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\GhostOfCovetous.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Fabrizio.cs" />
     <Compile Include="Expansion\ML\Items\Quest\FriendOfTheLibraryToken.cs" />
     <Compile Include="Expansion\ML\Items\Quest\LibraryApplication.cs" />
     <Compile Include="Expansion\ML\Items\Quest\NotarizedApplication.cs" />
     <Compile Include="Expansion\ML\Items\Quest\OfficialSealingWax.cs" />
     <Compile Include="Expansion\ML\Items\Quest\SealingWaxOrder.cs" />
     <Compile Include="Expansion\ML\Items\Quest\SpeckledPoisonSac.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Petrus.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Verity.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\FriendsOfTheLibrary.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Gervis.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Hargrove.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Petrus.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Verity.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\FriendsOfTheLibrary.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gervis.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Hargrove.cs" />
     <Compile Include="Expansion\ML\Items\Quest\ReginasLetter.cs" />
     <Compile Include="Expansion\SA\Items\Jewelry\ReginasRing.cs" />
     <Compile Include="Expansion\ML\Items\Quest\TransparentHeart.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\HonestBeggar.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Kashiel.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Lowel.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Lucius.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Lyle.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Mugg.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Natalie.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Nibbet.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Norton.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Sadrah.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Sarakki.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\HonestBeggar.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Kashiel.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Lowel.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Lucius.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Lyle.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mugg.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Natalie.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Nibbet.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Norton.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sadrah.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sarakki.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\Bleach.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BridesLetter.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PortraitOfTheBride.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PrismaticAmber.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PrismaticCrystal.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\UnfadingMemories.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\UzeraanTurmoil\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\UnfadingMemories.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\UzeraanTurmoil\Conversations.cs" />
     <Compile Include="Expansion\SA\Underworld\HavenCannon.cs" />
     <Compile Include="Expansion\ML\Items\Quest\DaemonBloodChest.cs" />
     <Compile Include="Expansion\ML\Items\Quest\QuestDaemonBlood.cs" />
@@ -3358,28 +3358,28 @@
     <Compile Include="Expansion\ML\Items\Quest\SchmendrickScrollOfPower.cs" />
     <Compile Include="Expansion\ML\Items\Quest\UzeraanTurmoilHorn.cs" />
     <Compile Include="Expansion\XSORTINGX\UzeraanTurmoilTeleporter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Dryad.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\MansionGuard.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\MilitiaCanoneer.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Dryad.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\MansionGuard.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\MilitiaCanoneer.cs" />
     <Compile Include="Expansion\ML\Mobiles\MilitiaFighter.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Schmendrick.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Uzeraan.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\UzeraanTurmoil\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\UzeraanTurmoil\UzeraanTurmoilQuest.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\WitchApprentice\Conversations.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\WitchApprentice\Ingredient.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Schmendrick.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Uzeraan.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\UzeraanTurmoil\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\UzeraanTurmoil\UzeraanTurmoilQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\Conversations.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\Ingredient.cs" />
     <Compile Include="Expansion\ML\Items\Quest\Cauldron.cs" />
     <Compile Include="Expansion\ML\Items\Quest\HagApprenticeCorpse.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\WitchApprentice\HagCauldron.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\WitchApprentice\HagStew.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\HagCauldron.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\HagStew.cs" />
     <Compile Include="Expansion\HS\XxUnsortedxX\HangoverCure.cs" />
     <Compile Include="Expansion\ML\Items\Quest\MagicFlute.cs" />
     <Compile Include="Expansion\ML\Items\Quest\MoonfireBrew.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Blackheart.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Grizelda.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\Zeefzorpul.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\WitchApprentice\Objectives.cs" />
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\WitchApprentice\WitchApprenticeQuest.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Blackheart.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Grizelda.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Zeefzorpul.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\Objectives.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\WitchApprenticeQuest.cs" />
     <Compile Include="Expansion\TOL\18th Anniversary\18th AnniversaryBag.cs" />
     <Compile Include="Expansion\TOL\18th Anniversary\AnniversaryCard.cs" />
     <Compile Include="Expansion\TOL\18th Anniversary\AnniversaryPlate.cs" />
@@ -3819,7 +3819,7 @@
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Carpentry Craftables\PickpocketDips.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\PyramidAddon.cs">
+    <Compile Include="Customs\Items\PyramidAddon.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\XSORTINGX\RejuvinationAnkhs.cs">
@@ -3831,7 +3831,7 @@
     <Compile Include="Expansion\Original UO\Items\Addons\SandstoneFireplaceSouthAddon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\SandstoneFountainAddon.cs">
+    <Compile Include="Customs\Items\SandstoneFountainAddon.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Items\World\SerpentPillarAddon.cs">
@@ -3843,7 +3843,7 @@
     <Compile Include="Expansion\LBR\Items\SHTeleporter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\SkullPileAddon.cs">
+    <Compile Include="Customs\Items\SkullPileAddon.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Carpentry Craftables\SmallBedEastAddon.cs">
@@ -5152,7 +5152,7 @@
     <Compile Include="Expansion\SE\Items\Decorative\BaseSliding.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\DesCityWall.cs">
+    <Compile Include="Customs\Items\DesCityWall.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\World\SAShadowWall1.cs">
@@ -5320,7 +5320,7 @@
     <Compile Include="Expansion\Original UO\Items\Provision\Food and Drink\CookableFood.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\UtilityItem Delete me I think.cs">
+    <Compile Include="Mechanics\Deprecated\UtilityItem Delete me I think.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Food and Drinks\EnchantedApple.cs">
@@ -5820,7 +5820,7 @@
     <Compile Include="Expansion\ML\Items\Equipment\Armor\ArmsOfArmstrong.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\BagOfSmokeBombs.cs">
+    <Compile Include="Customs\Items\BagOfSmokeBombs.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Jewelry\BraceletOfResilience.cs">
@@ -5952,13 +5952,13 @@
     <Compile Include="Expansion\SA\Items\Resource\WoodPulp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\BagOfAllReagents.cs">
+    <Compile Include="Customs\Items\BagOfAllReagents.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\BagOfNecroReagents.cs">
+    <Compile Include="Customs\Items\BagOfNecroReagents.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\BagOfReagents.cs">
+    <Compile Include="Customs\Items\BagOfReagents.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Reagents\BatWing.cs">
@@ -6708,10 +6708,10 @@
     <Compile Include="Holidays\Holiday Items\BlackDyeTub.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\BlazeDyeTub.cs">
+    <Compile Include="Customs\Items\BlazeDyeTub.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\CustomHuePicker.cs">
+    <Compile Include="Customs\Items\CustomHuePicker.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Items\Craft and Component\Tools\DyeTub.cs">
@@ -6948,7 +6948,7 @@
     <Compile Include="Expansion\UOR\XxUnsortedxX\AncientSmithyHammer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\ColoredAnvil.cs">
+    <Compile Include="Customs\Items\ColoredAnvil.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\TOL\XxUnsortedxX\GlovesOfMining.cs">
@@ -8256,7 +8256,7 @@
     <Compile Include="Expansion\Original UO\Items\Equipment\Weapons\PoleArms\Mace.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\MagicWand.cs">
+    <Compile Include="Customs\Items\MagicWand.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Items\Equipment\Weapons\PoleArms\Maul.cs">
@@ -8773,7 +8773,7 @@
     <Compile Include="Mechanics\DispellableAttribute.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\DoorGenerator.cs">
+    <Compile Include="Mechanics\Deprecated\DoorGenerator.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\Email.cs">
@@ -8887,7 +8887,7 @@
     <Compile Include="Administration\ServerList.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Deprecated\ShardPoller.cs">
+    <Compile Include="Mechanics\Deprecated\ShardPoller.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Mechanics\ShrinkTable.cs">
@@ -9090,19 +9090,19 @@
     <Compile Include="Expansion\XSORTINGX\Multis\PreviewHouse.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Collector\CollectorQuest.cs">
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Collector\CollectorQuest.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Collector\Conversations.cs">
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Collector\Conversations.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Collector\Objectives.cs">
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Collector\Objectives.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Escortables.cs">
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Escortables.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\QUests\Quests\Vernix.cs">
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\Vernix.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Administration\World\Regions\BaseRegion.cs">
@@ -9441,7 +9441,7 @@
     <Compile Include="Expansion\HS\DespiseRevamped\DespiseGoodCreatures.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\QUests\NPCs\MysteriousWisp.cs">
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\MysteriousWisp.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\AOS\Mechanics\Doom\GauntletSpawner.cs">
@@ -10747,10 +10747,10 @@
     <Compile Include="Expansion\UOR\XxUnsortedxX\CraftsmanSatchel.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\RewardBag.cs">
+    <Compile Include="Customs\Items\RewardBag.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\RewardBox.cs">
+    <Compile Include="Customs\Items\RewardBox.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Mechanics\MondainsLegacyQuests\MondainQuester.cs">
@@ -11631,7 +11631,7 @@
     <Compile Include="Administration\World\TestCenter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\ResGate.cs">
+    <Compile Include="Customs\Items\ResGate.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\Original UO\Mechanics\Skills\Magery\Base\DisturbType.cs">

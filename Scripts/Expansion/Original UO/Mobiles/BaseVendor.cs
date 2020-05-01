@@ -559,7 +559,7 @@ namespace Server.Mobiles
             if (map != Map.TerMur || Server.Spells.SpellHelper.IsEodon(map, Location))
                 return false;
 
-            if (Body != 0x29A || Body != 0x29B)
+            if (Body != 0x29A && Body != 0x29B)
                 TurnToGargRace();
 
             return true;
