@@ -44,7 +44,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)1);
+            writer.Write(1);
             // version 1
             writer.Write(m_Condition);
             // version 0

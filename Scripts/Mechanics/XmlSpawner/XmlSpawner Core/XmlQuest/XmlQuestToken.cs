@@ -132,13 +132,13 @@ namespace Server.Items
                         if (cid > 0x3FFF)
                             cid = 0x9D7;
 
-                        m_Stream.Write((int)child.Serial);
-                        m_Stream.Write((ushort)cid);
+                        m_Stream.Write(child.Serial);
+                        m_Stream.Write(cid);
                         m_Stream.Write((byte)0); // signed, itemID offset
                         m_Stream.Write((ushort)child.Amount);
                         m_Stream.Write((short)loc.X);
                         m_Stream.Write((short)loc.Y);
-                        m_Stream.Write((int)beheld.Serial);
+                        m_Stream.Write(beheld.Serial);
                         m_Stream.Write((ushort)child.Hue);
 
                         ++written;
@@ -162,7 +162,7 @@ namespace Server.Items
                 List<Item> items = this.Items;
 
                 for (int i = 0; i < items.Count; ++i)
-                    to.Send(((Item)items[i]).OPLPacket);
+                    to.Send(items[i].OPLPacket);
             }
         }
 
@@ -181,7 +181,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -264,15 +264,15 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)14); // version
+            writer.Write(14); // version
             // version 14
             if (m_Journal == null || m_Journal.Count == 0)
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
             else
             {
-                writer.Write((int)m_Journal.Count);
+                writer.Write(m_Journal.Count);
                 foreach (XmlQuest.JournalEntry e in m_Journal)
                 {
                     writer.Write(e.EntryID);
@@ -291,7 +291,7 @@ namespace Server.Items
             if (m_RewardAttachment != null)
                 writer.Write(m_RewardAttachment.Serial.Value);
             else
-                writer.Write((int)0);
+                writer.Write(0);
             // version 8
             writer.Write(m_ReturnContainer);
             // version 7

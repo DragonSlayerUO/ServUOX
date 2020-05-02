@@ -659,7 +659,7 @@ namespace Server.Mobiles
 
             double total = _InitAverage.Sum(d => d);
 
-            if (total / (double)_InitAverage.Count <= AverageThreshold)
+            if (total / _InitAverage.Count <= AverageThreshold)
             {
                 ControlSlotsMin = Math.Max(1, ControlSlotsMin - 1);
             }
@@ -1572,7 +1572,7 @@ namespace Server.Mobiles
 
             if (SubdueBeforeTame && !Controlled)
             {
-                if ((oldHits > ((double)HitsMax / 10)) && ((double)Hits <= ((double)HitsMax / 10)))
+                if ((oldHits > ((double)HitsMax / 10)) && (Hits <= ((double)HitsMax / 10)))
                 {
                     PublicOverheadMessage(MessageType.Regular, 0x3B2, false, "* The creature has been beaten into subjugation! *");
                 }

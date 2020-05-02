@@ -38,7 +38,7 @@ namespace Server.Factions
             base.Serialize(writer);
 
             // Version 0 removes faction items, ie monoliths, stones, etc
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             List<Faction> factions = Faction.Factions;
 

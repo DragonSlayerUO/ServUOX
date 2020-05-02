@@ -157,12 +157,12 @@ namespace Server.Engines.VeteranRewards
             foreach (DaviesLockerEntry entry in m_Entries)
             {
                 if (entry is SOSEntry)
-                    writer.Write((int)0);
+                    writer.Write(0);
                 else if (entry is TreasureMapEntry)
-                    writer.Write((int)1);
+                    writer.Write(1);
                 else
                 {
-                    writer.Write((int)2);
+                    writer.Write(2);
                     continue;
                 }
 
@@ -326,12 +326,12 @@ namespace Server.Engines.VeteranRewards
             foreach (DaviesLockerEntry entry in m_Entries)
             {
                 if (entry is SOSEntry)
-                    writer.Write((int)0);
+                    writer.Write(0);
                 else if (entry is TreasureMapEntry)
-                    writer.Write((int)1);
+                    writer.Write(1);
                 else
                 {
-                    writer.Write((int)2);
+                    writer.Write(2);
                     continue;
                 }
 
@@ -397,7 +397,7 @@ namespace Server.Engines.VeteranRewards
 
         public virtual void Serialize(GenericWriter writer)
         {
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(QuestItem);
 
@@ -445,7 +445,7 @@ namespace Server.Engines.VeteranRewards
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(IsAncient);
             writer.Write(MessageIndex);
@@ -499,7 +499,7 @@ namespace Server.Engines.VeteranRewards
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write((int)Package);
 
@@ -542,7 +542,7 @@ namespace Server.Engines.VeteranRewards
             AddHtmlLocalized(470, 35, 120, 20, 1153558, Blue, false, false); // <DIV ALIGN="CENTER">Status</DIV>
 
             int perPage = 10;
-            int totalPages = (int)Math.Ceiling((double)m_List.Count / 10.0);
+            int totalPages = (int)Math.Ceiling(m_List.Count / 10.0);
 
             if (totalPages < 1) totalPages = 1;
 
@@ -739,7 +739,7 @@ namespace Server.Engines.VeteranRewards
 
                 map.Facet = entry.Map;
                 map.Level = entry.Level;
-                map.Package = (TreasurePackage)entry.Package;
+                map.Package = entry.Package;
                 map.ChestLocation = new Point2D(entry.Location.X, entry.Location.Y);
             }
 

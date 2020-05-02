@@ -1541,29 +1541,29 @@ namespace Server.Engines.XmlSpawner2
             // Populate the npc data
             if (AttachedTo is Item)
             {
-                dr["Name"] = (string)((Item)AttachedTo).Name;
+                dr["Name"] = ((Item)AttachedTo).Name;
             }
             else
                 if (AttachedTo is Mobile)
             {
-                dr["Name"] = (string)((Mobile)AttachedTo).Name;
+                dr["Name"] = ((Mobile)AttachedTo).Name;
             }
 
-            dr["Running"] = (bool)this.Running;
-            dr["ProximityRange"] = (int)this.m_ProximityRange;
-            dr["ResetRange"] = (int)this.m_ResetRange;
-            dr["TriggerOnCarried"] = (string)this.TriggerOnCarried;
-            dr["NoTriggerOnCarried"] = (string)this.NoTriggerOnCarried;
-            dr["AllowGhost"] = (bool)this.m_AllowGhostTriggering;
-            dr["SpeechPace"] = (int)this.SpeechPace;
-            dr["ResetTime"] = (double)this.ResetTime.TotalMinutes;
-            dr["ConfigFile"] = (string)this.ConfigFile;
+            dr["Running"] = Running;
+            dr["ProximityRange"] = m_ProximityRange;
+            dr["ResetRange"] = m_ResetRange;
+            dr["TriggerOnCarried"] = TriggerOnCarried;
+            dr["NoTriggerOnCarried"] = NoTriggerOnCarried;
+            dr["AllowGhost"] = m_AllowGhostTriggering;
+            dr["SpeechPace"] = SpeechPace;
+            dr["ResetTime"] = ResetTime.TotalMinutes;
+            dr["ConfigFile"] = ConfigFile;
             int entrycount = 0;
             if (SpeechEntries != null)
             {
                 entrycount = SpeechEntries.Count;
             }
-            dr["SpeechEntries"] = (int)entrycount;
+            dr["SpeechEntries"] = entrycount;
 
             // Add the row the the table
             ds.Tables[NPCPointName].Rows.Add(dr);
@@ -1576,21 +1576,21 @@ namespace Server.Engines.XmlSpawner2
                 dr = ds.Tables[SpeechPointName].NewRow();
 
                 // Populate the speech entry data
-                dr["EntryNumber"] = (int)s.EntryNumber;
-                dr["ID"] = (int)s.ID;
-                dr["Text"] = (string)s.Text;
-                dr["Keywords"] = (string)s.Keywords;
-                dr["Action"] = (string)s.Action;
-                dr["Condition"] = (string)s.Condition;
-                dr["DependsOn"] = (string)s.DependsOn;
-                dr["Pause"] = (int)s.Pause;
-                dr["PrePause"] = (int)s.PrePause;
-                dr["LockConversation"] = (bool)s.LockConversation;
-                dr["IgnoreCarried"] = (bool)s.IgnoreCarried;
-                dr["AllowNPCTrigger"] = (bool)s.AllowNPCTrigger;
-                dr["SpeechStyle"] = (MessageType)s.SpeechStyle;
-                dr["SpeechHue"] = (int)s.SpeechHue;
-                dr["Gump"] = (string)s.Gump;
+                dr["EntryNumber"] = s.EntryNumber;
+                dr["ID"] = s.ID;
+                dr["Text"] = s.Text;
+                dr["Keywords"] = s.Keywords;
+                dr["Action"] = s.Action;
+                dr["Condition"] = s.Condition;
+                dr["DependsOn"] = s.DependsOn;
+                dr["Pause"] = s.Pause;
+                dr["PrePause"] = s.PrePause;
+                dr["LockConversation"] = s.LockConversation;
+                dr["IgnoreCarried"] = s.IgnoreCarried;
+                dr["AllowNPCTrigger"] = s.AllowNPCTrigger;
+                dr["SpeechStyle"] = s.SpeechStyle;
+                dr["SpeechHue"] = s.SpeechHue;
+                dr["Gump"] = s.Gump;
 
                 // Add the row the the table
                 ds.Tables[SpeechPointName].Rows.Add(dr);
@@ -1846,13 +1846,13 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)9); // version
+            writer.Write(9); // version
             // Version 9 added the ResetRange property
             writer.Write(m_ResetRange);
             // Version 8 added the IgnoreCarried property
             if (m_SpeechEntries != null)
             {
-                writer.Write((int)m_SpeechEntries.Count);
+                writer.Write(m_SpeechEntries.Count);
                 foreach (SpeechEntry s in m_SpeechEntries)
                 {
                     writer.Write(s.IgnoreCarried);
@@ -1860,7 +1860,7 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
 
             // Version 7
@@ -1869,7 +1869,7 @@ namespace Server.Engines.XmlSpawner2
             // write out the additional speech entry fields
             if (m_SpeechEntries != null)
             {
-                writer.Write((int)m_SpeechEntries.Count);
+                writer.Write(m_SpeechEntries.Count);
                 foreach (SpeechEntry s in m_SpeechEntries)
                 {
                     writer.Write(s.SpeechHue);
@@ -1877,13 +1877,13 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
             // Version 5
             // write out the additional speech entry fields
             if (m_SpeechEntries != null)
             {
-                writer.Write((int)m_SpeechEntries.Count);
+                writer.Write(m_SpeechEntries.Count);
                 foreach (SpeechEntry s in m_SpeechEntries)
                 {
                     writer.Write(s.Gump);
@@ -1891,13 +1891,13 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
             // Version 4
             // write out the additional speech entry fields
             if (m_SpeechEntries != null)
             {
-                writer.Write((int)m_SpeechEntries.Count);
+                writer.Write(m_SpeechEntries.Count);
                 foreach (SpeechEntry s in m_SpeechEntries)
                 {
                     writer.Write(s.Condition);
@@ -1905,7 +1905,7 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
             // Version 3
             writer.Write(TriggerOnCarried);
@@ -1915,7 +1915,7 @@ namespace Server.Engines.XmlSpawner2
             // write out the additional speech entry fields
             if (m_SpeechEntries != null)
             {
-                writer.Write((int)m_SpeechEntries.Count);
+                writer.Write(m_SpeechEntries.Count);
                 foreach (SpeechEntry s in m_SpeechEntries)
                 {
                     writer.Write(s.PrePause);
@@ -1926,7 +1926,7 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
 
             // Version 1
@@ -1943,7 +1943,7 @@ namespace Server.Engines.XmlSpawner2
             // write out the speech entries
             if (m_SpeechEntries != null)
             {
-                writer.Write((int)m_SpeechEntries.Count);
+                writer.Write(m_SpeechEntries.Count);
                 foreach (SpeechEntry s in m_SpeechEntries)
                 {
                     writer.Write(s.EntryNumber);
@@ -1957,7 +1957,7 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
             writer.Write(m_CurrentEntryNumber);
             // check to see if the timer is running

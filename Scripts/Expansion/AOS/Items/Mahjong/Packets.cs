@@ -10,7 +10,7 @@ namespace Server.Engines.Mahjong
         {
             this.EnsureCapacity(9);
 
-            this.m_Stream.Write((int)game.Serial);
+            this.m_Stream.Write(game.Serial);
             this.m_Stream.Write((byte)0);
             this.m_Stream.Write((byte)0x19);
         }
@@ -25,7 +25,7 @@ namespace Server.Engines.Mahjong
 
             this.EnsureCapacity(11 + 45 * players.Seats);
 
-            this.m_Stream.Write((int)game.Serial);
+            this.m_Stream.Write(game.Serial);
             this.m_Stream.Write((byte)0);
             this.m_Stream.Write((byte)0x2);
 
@@ -39,14 +39,14 @@ namespace Server.Engines.Mahjong
 
                 if (mobile != null)
                 {
-                    this.m_Stream.Write((int)mobile.Serial);
+                    this.m_Stream.Write(mobile.Serial);
                     this.m_Stream.Write(players.DealerPosition == i ? (byte)0x1 : (byte)0x2);
                     this.m_Stream.Write((byte)i);
 
                     if (game.ShowScores || mobile == to)
-                        this.m_Stream.Write((int)players.GetScore(i));
+                        this.m_Stream.Write(players.GetScore(i));
                     else
-                        this.m_Stream.Write((int)0);
+                        this.m_Stream.Write(0);
 
                     this.m_Stream.Write((short)0);
                     this.m_Stream.Write((byte)0);
@@ -60,11 +60,11 @@ namespace Server.Engines.Mahjong
                 }
                 else if (game.ShowScores)
                 {
-                    this.m_Stream.Write((int)0);
+                    this.m_Stream.Write(0);
                     this.m_Stream.Write((byte)0x2);
                     this.m_Stream.Write((byte)i);
 
-                    this.m_Stream.Write((int)players.GetScore(i));
+                    this.m_Stream.Write(players.GetScore(i));
 
                     this.m_Stream.Write((short)0);
                     this.m_Stream.Write((byte)0);
@@ -93,7 +93,7 @@ namespace Server.Engines.Mahjong
         {
             this.EnsureCapacity(13);
 
-            this.m_Stream.Write((int)game.Serial);
+            this.m_Stream.Write(game.Serial);
             this.m_Stream.Write((byte)0);
             this.m_Stream.Write((byte)0x5);
 
@@ -125,7 +125,7 @@ namespace Server.Engines.Mahjong
 
             this.EnsureCapacity(11 + 9 * tiles.Length);
 
-            this.m_Stream.Write((int)game.Serial);
+            this.m_Stream.Write(game.Serial);
             this.m_Stream.Write((byte)0);
             this.m_Stream.Write((byte)0x4);
 
@@ -169,7 +169,7 @@ namespace Server.Engines.Mahjong
 
             this.EnsureCapacity(18);
 
-            this.m_Stream.Write((int)tile.Game.Serial);
+            this.m_Stream.Write(tile.Game.Serial);
             this.m_Stream.Write((byte)0);
             this.m_Stream.Write((byte)0x3);
 
@@ -205,7 +205,7 @@ namespace Server.Engines.Mahjong
         {
             this.EnsureCapacity(9);
 
-            this.m_Stream.Write((int)game.Serial);
+            this.m_Stream.Write(game.Serial);
             this.m_Stream.Write((byte)0);
             this.m_Stream.Write((byte)0x1A);
         }

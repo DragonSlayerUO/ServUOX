@@ -1806,9 +1806,9 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.WriteEncodedInt((int)0);
+            writer.WriteEncodedInt(0);
 
-            writer.Write((Mobile)Vendor);
+            writer.Write(Vendor);
         }
 
         public override void Deserialize(GenericReader reader)

@@ -186,7 +186,7 @@ namespace Server.Mobiles
             if (corpse.Owner.Body.IsHuman)
                 corpse.TurnToBones(); // Not bones yet, and we are a human body therefore we turn to bones.
 
-            IncreaseHits((int)Math.Ceiling((double)corpse.Owner.HitsMax * 0.75));
+            IncreaseHits((int)Math.Ceiling(corpse.Owner.HitsMax * 0.75));
             TotalDevoured++;
 
             PublicOverheadMessage(MessageType.Emote, 0x3B2, 1053033); // * The plague beast absorbs the fleshy remains of the corpse *

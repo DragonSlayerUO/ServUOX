@@ -288,7 +288,7 @@ namespace Server.Multis
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write(m_Owner);
             writer.Write(m_OrgOwner);

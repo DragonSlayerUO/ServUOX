@@ -35,7 +35,7 @@ namespace Server.Factions
         {
             base.InitOutfit();
 
-            this.AddItem(Utility.RandomBool() ? (Item)new QuarterStaff() : (Item)new ShepherdsCrook());
+            this.AddItem(Utility.RandomBool() ? new QuarterStaff() : (Item)new ShepherdsCrook());
         }
 
         public override void VendorBuy(Mobile from)
@@ -66,7 +66,7 @@ namespace Server.Factions
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

@@ -819,7 +819,7 @@ namespace Server.Items
             writer.WriteEncodedInt(3); // version
 
             //version 3
-            writer.Write((string)m_LastUserName);
+            writer.Write(m_LastUserName);
 
             //version 2
             writer.Write((int)m_Level);
@@ -827,11 +827,11 @@ namespace Server.Items
             writer.Write(m_ActiveItemID);
             writer.Write(m_InactiveItemID);
 
-            writer.Write((string)m_Account);
-            writer.Write((DateTime)m_NextUse); //TODO: delete it in a harmless way
+            writer.Write(m_Account);
+            writer.Write(m_NextUse); //TODO: delete it in a harmless way
 
             writer.WriteEncodedInt((int)m_Skill);
-            writer.Write((double)m_SkillValue);
+            writer.Write(m_SkillValue);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1054,7 +1054,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1112,9 +1112,9 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
-            writer.Write((bool)m_IsRewardItem);
+            writer.Write(m_IsRewardItem);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1158,7 +1158,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

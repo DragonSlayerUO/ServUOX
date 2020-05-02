@@ -676,16 +676,16 @@ namespace Server.Multis
 
         public override void Serialize(GenericWriter writer)
         {
-            writer.Write((int)5); // version
+            writer.Write(5); // version
 
             writer.Write(Signpost);
-            writer.Write((int)SignpostGraphic);
+            writer.Write(SignpostGraphic);
 
             writer.Write((int)Type);
 
             writer.Write(SignHanger);
 
-            writer.Write((int)LastRevision);
+            writer.Write(LastRevision);
             writer.Write(Fixtures, true);
 
             CurrentState.Serialize(writer);
@@ -1874,25 +1874,25 @@ namespace Server.Multis
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             Components.Serialize(writer);
 
-            writer.Write((int)Fixtures.Length);
+            writer.Write(Fixtures.Length);
 
             for (int i = 0; i < Fixtures.Length; ++i)
             {
                 MultiTileEntry ent = Fixtures[i];
 
-                writer.Write((ushort)ent.m_ItemID);
-                writer.Write((short)ent.m_OffsetX);
-                writer.Write((short)ent.m_OffsetY);
-                writer.Write((short)ent.m_OffsetZ);
+                writer.Write(ent.m_ItemID);
+                writer.Write(ent.m_OffsetX);
+                writer.Write(ent.m_OffsetY);
+                writer.Write(ent.m_OffsetZ);
 
                 writer.Write((ulong)ent.m_Flags);
             }
 
-            writer.Write((int)Revision);
+            writer.Write(Revision);
         }
 
         public void OnRevised()

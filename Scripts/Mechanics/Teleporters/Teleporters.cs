@@ -173,7 +173,7 @@ namespace Server
                                     teleport.SourceEffect = Utility.ToInt32(array2[12]);
                                     teleport.DestEffect = Utility.ToInt32(array2[13]);
                                     teleport.SoundID = Utility.ToInt32(array[14]);
-                                    teleport.Delay = TimeSpan.FromSeconds((double)Convert.ToInt32(array[15]));
+                                    teleport.Delay = TimeSpan.FromSeconds(Convert.ToInt32(array[15]));
                                     if (array2[16] == "true")
                                     {
                                         teleport.Oneway = true;

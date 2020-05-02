@@ -239,7 +239,7 @@ namespace Server.Engines.Points
 
         public virtual void Serialize(GenericWriter writer)
         {
-            writer.Write((int)2);
+            writer.Write(2);
 
             writer.Write(PlayerTable.Count);
 
@@ -297,7 +297,7 @@ namespace Server.Engines.Points
                 FilePath,
                 writer =>
                 {
-                    writer.Write((int)2);
+                    writer.Write(2);
 
                     writer.Write(Systems.Count);
                     Systems.ForEach(s =>

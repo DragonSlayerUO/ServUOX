@@ -109,7 +109,7 @@ namespace Server.Multis
         {
             var mcl = MultiData.GetComponents(ItemID);
 
-            foreach (var mte in mcl.List.Where(e => (TileFlag)e.m_Flags == TileFlag.None || (TileFlag)e.m_Flags == TileFlag.Generic))
+            foreach (var mte in mcl.List.Where(e => e.m_Flags == TileFlag.None || e.m_Flags == TileFlag.Generic))
             {
                 var itemID = mte.m_ItemID;
                 var x = mte.m_OffsetX;
@@ -897,7 +897,7 @@ namespace Server.Multis
 
         public override DryDockResult CheckDryDock(Mobile from, Mobile dockmaster)
         {
-            if (this is BaseGalleon && ((BaseGalleon)this).GalleonHold.Items.Count > 0)
+            if (this is BaseGalleon && (this).GalleonHold.Items.Count > 0)
                 return DryDockResult.Hold;
 
             Container pack = from.Backpack;
@@ -949,7 +949,7 @@ namespace Server.Multis
 
             var mcl = MultiData.GetComponents(ItemID);
 
-            foreach (var mte in mcl.List.Where(e => (TileFlag)e.m_Flags == TileFlag.None))
+            foreach (var mte in mcl.List.Where(e => e.m_Flags == TileFlag.None))
             {
                 foreach (var fixture in Fixtures.Where(f => f.X - X == mte.m_OffsetX && f.Y - Y == mte.m_OffsetY && f.Z - Z == mte.m_OffsetZ))
                 {
@@ -1398,7 +1398,7 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)6);
+            writer.Write(6);
 
             writer.WriteItemList(Fixtures, true);
 
@@ -1783,7 +1783,7 @@ namespace Server.Multis
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write((int)PartyAccess);
             writer.Write((int)DefaultPublicAccess);

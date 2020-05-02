@@ -50,7 +50,7 @@ namespace Server.Engines.XmlSpawner2
 
             XmlQuestLeaders.QuestLBSSerialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

@@ -179,7 +179,7 @@ namespace Server.Engines.Mahjong
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write((int)this.m_Level);
 

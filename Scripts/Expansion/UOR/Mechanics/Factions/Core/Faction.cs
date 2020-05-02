@@ -816,7 +816,7 @@ namespace Server.Factions
 
                 for (int j = 0; j < factionItemList.Count; ++j)
                 {
-                    FactionItem fi = (FactionItem)factionItemList[j];
+                    FactionItem fi = factionItemList[j];
 
                     if (fi.Expiration == DateTime.MinValue)
                         fi.Item.Delete();
@@ -944,7 +944,7 @@ namespace Server.Factions
             if (obj is Mobile)
             {
                 Mobile mob = (Mobile)obj;
-                PlayerState pl = PlayerState.Find((Mobile)mob);
+                PlayerState pl = PlayerState.Find(mob);
 
                 if (pl != null)
                 {
@@ -1375,7 +1375,7 @@ namespace Server.Factions
         {
             int idx = Factions.IndexOf(fact);
 
-            writer.WriteEncodedInt((int)(idx + 1));
+            writer.WriteEncodedInt(idx + 1);
         }
 
         public static List<Faction> Factions => Reflector.Factions;

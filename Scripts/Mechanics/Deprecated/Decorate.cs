@@ -116,7 +116,7 @@ namespace Server.Commands
 
             for (int j = 0; j < m_List.Count; ++j)
             {
-                DecorationList list = (DecorationList)m_List[j];
+                DecorationList list = m_List[j];
 
                 if (list.ID == id)
                     return list.Constructed;

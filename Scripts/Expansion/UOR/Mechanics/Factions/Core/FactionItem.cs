@@ -144,12 +144,12 @@ namespace Server.Factions
 
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)1);
+            writer.WriteEncodedInt(1);
 
             writer.Write(m_MinRank);
 
-            writer.Write((Item)m_Item);
-            writer.Write((DateTime)m_Expiration);
+            writer.Write(m_Item);
+            writer.Write(m_Expiration);
         }
     }
 }

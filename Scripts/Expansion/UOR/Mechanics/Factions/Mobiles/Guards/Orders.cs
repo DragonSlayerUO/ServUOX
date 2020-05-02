@@ -57,7 +57,7 @@ namespace Server.Factions.AI
         }
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
             Faction.WriteReference(writer, this.m_Faction);
             writer.WriteEncodedInt((int)this.m_Type);
@@ -155,11 +155,11 @@ namespace Server.Factions.AI
 
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)1); // version
+            writer.WriteEncodedInt(1); // version
 
-            writer.Write((Mobile)this.m_Follow);
+            writer.Write(m_Follow);
 
-            writer.WriteEncodedInt((int)this.m_Reactions.Count);
+            writer.WriteEncodedInt(m_Reactions.Count);
 
             for (int i = 0; i < this.m_Reactions.Count; ++i)
                 this.m_Reactions[i].Serialize(writer);

@@ -272,14 +272,14 @@ namespace Server.Mobiles
 
 
             // add the page buttons
-            for (int i = 0; i < (int)(MaxEntries / MaxEntriesPerPage); i++)
+            for (int i = 0; i < MaxEntries / MaxEntriesPerPage; i++)
             {
                 //AddButton( 38+i*30, 365, 2206, 2206, 0, GumpButtonType.Page, 1+i );
                 AddButton(418 + i * 25, 450, 0x8B1 + i, 0x8B1 + i, 0, GumpButtonType.Page, 1 + i);
             }
 
             // add the advance pageblock buttons
-            AddButton(415 + 25 * (int)(MaxEntries / MaxEntriesPerPage), 450, 0x15E1, 0x15E5, 201, GumpButtonType.Reply, 0); // block forward
+            AddButton(415 + 25 * (MaxEntries / MaxEntriesPerPage), 450, 0x15E1, 0x15E5, 201, GumpButtonType.Reply, 0); // block forward
             AddButton(395, 450, 0x15E3, 0x15E7, 202, GumpButtonType.Reply, 0); // block backward
 
             // add the displayfrom entry
@@ -306,7 +306,7 @@ namespace Server.Mobiles
             {
                 int index = i + DisplayFrom;
                 if (m_SearchList == null || index >= m_SearchList.Count) break;
-                int page = (int)(i / MaxEntriesPerPage);
+                int page = i / MaxEntriesPerPage;
                 if (i % MaxEntriesPerPage == 0)
                 {
                     AddPage(page + 1);
@@ -328,7 +328,7 @@ namespace Server.Mobiles
 
                 int texthue = 0;
 
-                object o = (object)m_SearchList[index];
+                object o = m_SearchList[index];
 
                 if (o is XmlAttachment)
                 {

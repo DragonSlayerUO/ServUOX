@@ -118,12 +118,12 @@ namespace Server.Factions
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             Town.WriteReference(writer, this.m_Town);
             Faction.WriteReference(writer, this.m_Faction);
 
-            writer.Write((Item)this.m_Sigil);
+            writer.Write(m_Sigil);
         }
 
         public override void Deserialize(GenericReader reader)

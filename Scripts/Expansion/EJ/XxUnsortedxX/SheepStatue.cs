@@ -189,8 +189,8 @@ namespace Server.Items
 
             TryGiveResourceCount();
 
-            writer.Write((bool)m_IsRewardItem);
-            writer.Write((int)m_ResourceCount);
+            writer.Write(m_IsRewardItem);
+            writer.Write(m_ResourceCount);
 
             writer.Write(NextResourceCount);
         }
@@ -300,8 +300,8 @@ namespace Server.Items
 
             writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)m_IsRewardItem);
-            writer.Write((int)m_ResourceCount);
+            writer.Write(m_IsRewardItem);
+            writer.Write(m_ResourceCount);
         }
 
         public override void Deserialize(GenericReader reader)

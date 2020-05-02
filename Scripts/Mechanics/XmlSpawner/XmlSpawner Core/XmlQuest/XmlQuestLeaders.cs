@@ -441,15 +441,15 @@ namespace Server.Engines.XmlSpawner2
         public static void QuestLBSSerialize(GenericWriter writer)
         {
             // version
-            writer.Write((int)0);
+            writer.Write(0);
 
             // version 0
             if (m_QuestLeaderboardTimer != null && m_QuestLeaderboardTimer.Running)
             {
-                writer.Write((bool)true);
+                writer.Write(true);
             }
             else
-                writer.Write((bool)false);
+                writer.Write(false);
             writer.Write(m_QuestLeaderboardSaveInterval);
             writer.Write(m_QuestLeaderboardSaveRanks);
             writer.Write(m_QuestLeaderboardFile);

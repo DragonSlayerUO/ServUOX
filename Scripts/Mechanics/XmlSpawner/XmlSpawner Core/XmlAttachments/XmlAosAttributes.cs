@@ -323,7 +323,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
         }
 
@@ -674,7 +674,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
         }
 
@@ -773,7 +773,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
         }
 
@@ -884,7 +884,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
         }
 
@@ -927,13 +927,13 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
-            writer.Write((uint)this.m_Names);
-            writer.WriteEncodedInt((int)this.m_Values.Length);
+            writer.Write(m_Names);
+            writer.WriteEncodedInt(m_Values.Length);
 
             for (int i = 0; i < this.m_Values.Length; ++i)
-                writer.WriteEncodedInt((int)this.m_Values[i]);
+                writer.WriteEncodedInt(this.m_Values[i]);
         }
 
         public override void Deserialize(GenericReader reader)

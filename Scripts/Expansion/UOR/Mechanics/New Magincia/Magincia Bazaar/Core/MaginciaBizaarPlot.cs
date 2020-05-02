@@ -344,7 +344,7 @@ namespace Server.Engines.NewMagincia
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
 
             m_Definition.Serialize(writer);
 
@@ -356,11 +356,11 @@ namespace Server.Engines.NewMagincia
 
             if (m_Auction != null)
             {
-                writer.Write((bool)true);
+                writer.Write(true);
                 m_Auction.Serialize(writer);
             }
             else
-                writer.Write((bool)false);
+                writer.Write(false);
         }
 
         public MaginciaBazaarPlot(GenericReader reader)
@@ -431,7 +431,7 @@ namespace Server.Engines.NewMagincia
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(m_ID);
             writer.Write(m_Location);

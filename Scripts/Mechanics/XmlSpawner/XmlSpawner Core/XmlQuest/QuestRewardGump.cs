@@ -60,7 +60,7 @@ namespace Server.Gumps
             // put the page buttons in the lower right corner
             if (Rewards != null && Rewards.Count > 0)
             {
-                AddLabel(width - 165, height - 35, 0, String.Format("Page: {0}/{1}", viewpage + 1, (int)(Rewards.Count / maxItemsPerPage) + 1));
+                AddLabel(width - 165, height - 35, 0, String.Format("Page: {0}/{1}", viewpage + 1, Rewards.Count / maxItemsPerPage + 1));
 
                 // page up and down buttons
                 AddButton(width - 55, height - 35, 0x15E0, 0x15E4, 13, GumpButtonType.Reply, 0);
@@ -77,7 +77,7 @@ namespace Server.Gumps
                 int y = 50;
                 for (int i = 0; i < Rewards.Count; i++)
                 {
-                    if ((int)(i / maxItemsPerPage) != viewpage) continue;
+                    if (i / maxItemsPerPage != viewpage) continue;
 
                     XmlQuestPointsRewards r = Rewards[i];
                     if (r == null) continue;
@@ -128,9 +128,9 @@ namespace Server.Gumps
                         nitems = Rewards.Count;
 
                     int page = viewpage + 1;
-                    if (page > (int)(nitems / maxItemsPerPage))
+                    if (page > nitems / maxItemsPerPage)
                     {
-                        page = (int)(nitems / maxItemsPerPage);
+                        page = nitems / maxItemsPerPage;
                     }
                     state.Mobile.SendGump(new QuestRewardGump(state.Mobile, page));
                     break;

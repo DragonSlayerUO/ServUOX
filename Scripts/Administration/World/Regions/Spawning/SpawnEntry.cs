@@ -181,7 +181,7 @@ namespace Server.Regions
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)m_SpawnedObjects.Count);
+            writer.Write(m_SpawnedObjects.Count);
 
             for (int i = 0; i < m_SpawnedObjects.Count; i++)
             {
@@ -192,12 +192,12 @@ namespace Server.Regions
                 writer.Write(serial);
             }
 
-            writer.Write((bool)m_Running);
+            writer.Write(m_Running);
 
             if (m_SpawnTimer != null)
             {
                 writer.Write(true);
-                writer.WriteDeltaTime((DateTime)m_NextSpawn);
+                writer.WriteDeltaTime(m_NextSpawn);
             }
             else
             {

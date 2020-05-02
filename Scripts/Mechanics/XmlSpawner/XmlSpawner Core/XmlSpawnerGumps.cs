@@ -311,7 +311,7 @@ namespace Server.Mobiles
             string str = null;
             if (index < m_Spawner.SpawnObjects.Length)
             {
-                str = (string)m_Spawner.SpawnObjects[index].TypeName;
+                str = m_Spawner.SpawnObjects[index].TypeName;
             }
             // main text entry area
             AddTextEntry(35, 30, 200, 251, 0, 0, str);
@@ -614,7 +614,7 @@ namespace Server.Mobiles
             // add the status string
             AddTextEntry(38, 384, 235, 33, 33, 900, m_Spawner.status_str);
             // add the page buttons
-            for (int i = 0; i < (int)(MaxSpawnEntries / MaxEntriesPerPage); i++)
+            for (int i = 0; i < MaxSpawnEntries / MaxEntriesPerPage; i++)
             {
                 //AddButton( 38+i*30, 365, 2206, 2206, 0, GumpButtonType.Page, 1+i );
                 AddButton(38 + i * 25, 365, 0x8B1 + i, 0x8B1 + i, 4000 + i, GumpButtonType.Reply, 0);
@@ -642,7 +642,7 @@ namespace Server.Mobiles
 
             for (int i = 0; i < MaxSpawnEntries; i++)
             {
-                if (page != (int)(i / MaxEntriesPerPage)) continue;
+                if (page != i / MaxEntriesPerPage) continue;
 
                 string str = String.Empty;
                 int texthue = 0;
@@ -715,7 +715,7 @@ namespace Server.Mobiles
                 {
                     if (!hasreplacement)
                     {
-                        str = (string)m_Spawner.SpawnObjects[i].TypeName;
+                        str = m_Spawner.SpawnObjects[i].TypeName;
                     }
 
                     int count = m_Spawner.SpawnObjects[i].SpawnedObjects.Count;
@@ -1123,7 +1123,7 @@ namespace Server.Mobiles
 
             for (int i = 0; i < m_Spawner.SpawnObjects.Length; i++)
             {
-                if (page != (int)(i / MaxEntriesPerPage)) continue;
+                if (page != i / MaxEntriesPerPage) continue;
 
                 // check the max count entry
                 TextRelay temcnt = info.GetTextEntry(500 + i);
@@ -1516,7 +1516,7 @@ namespace Server.Mobiles
                         }
                         else
                                         // page buttons
-                                        if (info.ButtonID >= 4000 && info.ButtonID < 4001 + (int)(MaxSpawnEntries / MaxEntriesPerPage))
+                                        if (info.ButtonID >= 4000 && info.ButtonID < 4001 + MaxSpawnEntries / MaxEntriesPerPage)
                         {
                             // which page
                             this.page = info.ButtonID - 4000;

@@ -103,7 +103,7 @@ namespace Server.Engines.VoidPool
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(Controller);
 
@@ -153,7 +153,7 @@ namespace Server.Engines.VoidPool
                 FilePath,
                 writer =>
                 {
-                    writer.Write((int)1);
+                    writer.Write(1);
 
                     writer.Write(Stats.Count);
                     foreach (var stats in Stats)

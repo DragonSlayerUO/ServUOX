@@ -66,7 +66,7 @@ namespace Server.Factions
 
                 for (int i = page * 10; i >= 0 && i < candidate.Voters.Count && i < (page + 1) * 10; ++i, ++idx)
                 {
-                    Voter voter = (Voter)candidate.Voters[i];
+                    Voter voter = candidate.Voters[i];
 
                     this.AddButton(13, 138 + (idx * 20), 4002, 4004, 4 + i, GumpButtonType.Reply, 0);
 

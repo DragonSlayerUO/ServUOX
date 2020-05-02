@@ -87,7 +87,7 @@ namespace Server.Engines.Quests.Ninja
 
             writer.WriteEncodedInt(0); // version
 
-            writer.Write((int)this.m_Message);
+            writer.Write(m_Message);
         }
 
         public override void Deserialize(GenericReader reader)

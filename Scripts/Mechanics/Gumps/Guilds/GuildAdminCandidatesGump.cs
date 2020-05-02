@@ -47,7 +47,7 @@ namespace Server.Gumps
 
                             if (index >= 0 && index < this.m_List.Count)
                             {
-                                Mobile m = (Mobile)this.m_List[index];
+                                Mobile m = this.m_List[index];
 
                                 if (m != null && !m.Deleted)
                                 {
@@ -102,7 +102,7 @@ namespace Server.Gumps
 
                             if (index >= 0 && index < this.m_List.Count)
                             {
-                                Mobile m = (Mobile)this.m_List[index];
+                                Mobile m = this.m_List[index];
 
                                 if (m != null && !m.Deleted)
                                 {

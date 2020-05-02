@@ -41,7 +41,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)2); // version
+            writer.Write(2); // version
                                   // Version 2 has no serialized variables
 
             // Version 0
@@ -155,7 +155,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             // Version 1
             writer.Write(this.m_TextColor);

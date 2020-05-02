@@ -1114,7 +1114,7 @@ namespace Server.Items
             if (option == ReforgingOption.None)
                 return perclow;
 
-            return perclow + (int)((double)(perchi - perclow) * ((double)(GetPrerequisiteIndex(option) * 5.0) / 100.0));
+            return perclow + (int)((perchi - perclow) * (GetPrerequisiteIndex(option) * 5.0 / 100.0));
         }
 
         private static Dictionary<Type, CraftSystem> m_AllowableTable = new Dictionary<Type, CraftSystem>();
@@ -1534,7 +1534,7 @@ namespace Server.Items
                 int[] range = item is BaseRanged && SecondaryInfo != null ? SecondaryInfo[resIndex] : Info[resIndex];
 
                 var max = range[preIndex];
-                var min = Math.Max(ItemPropertyInfo.GetMinIntensity(item, id), (int)((double)range[0] * .75));
+                var min = Math.Max(ItemPropertyInfo.GetMinIntensity(item, id), (int)(range[0] * .75));
                 int value;
 
                 if (Utility.RandomBool())
@@ -1975,7 +1975,7 @@ namespace Server.Items
                     }
                     else
                     {
-                        int maxmods = Math.Max(5, Math.Min(RandomItemGenerator.MaxProps - 1, (int)Math.Ceiling((double)budget / (double)Utility.RandomMinMax(100, 140))));
+                        int maxmods = Math.Max(5, Math.Min(RandomItemGenerator.MaxProps - 1, (int)Math.Ceiling(budget / (double)Utility.RandomMinMax(100, 140))));
                         int minmods = Math.Max(4, maxmods - 4);
 
                         mods = Math.Max(minmods, GetProperties(maxmods));
@@ -2271,7 +2271,7 @@ namespace Server.Items
 
             int random = GetRandomName(table);
 
-            while ((int)suffix != 0 && random == (int)suffix)
+            while (suffix != 0 && random == (int)suffix)
                 random = GetRandomName(table);
 
             return (ReforgedPrefix)random;
@@ -2299,7 +2299,7 @@ namespace Server.Items
 
             int random = GetRandomName(table);
 
-            while ((int)prefix != 0 && random == (int)prefix)
+            while (prefix != 0 && random == (int)prefix)
                 random = GetRandomName(table);
 
             return (ReforgedSuffix)random;

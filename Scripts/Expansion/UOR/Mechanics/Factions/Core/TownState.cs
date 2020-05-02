@@ -179,20 +179,20 @@ namespace Server.Factions
         }
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)3); // version
+            writer.WriteEncodedInt(3); // version
 
-            writer.Write((DateTime)this.m_LastIncome);
+            writer.Write(m_LastIncome);
 
-            writer.WriteEncodedInt((int)this.m_Tax);
-            writer.Write((DateTime)this.m_LastTaxChange);
+            writer.WriteEncodedInt(m_Tax);
+            writer.Write(m_LastTaxChange);
 
-            writer.WriteEncodedInt((int)this.m_Silver);
+            writer.WriteEncodedInt(m_Silver);
 
             Town.WriteReference(writer, this.m_Town);
             Faction.WriteReference(writer, this.m_Owner);
 
-            writer.Write((Mobile)this.m_Sheriff);
-            writer.Write((Mobile)this.m_Finance);
+            writer.Write(m_Sheriff);
+            writer.Write(m_Finance);
         }
     }
 }

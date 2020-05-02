@@ -174,11 +174,11 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.WriteEncodedInt((int)1); // version
+            writer.WriteEncodedInt(1); // version
 
-            writer.WriteEncodedInt((int)m_Recharges);
+            writer.WriteEncodedInt(m_Recharges);
 
-            writer.WriteEncodedInt((int)m_Charges);
+            writer.WriteEncodedInt(m_Charges);
             writer.WriteEncodedInt((int)m_BagOfSendingHue);
         }
 

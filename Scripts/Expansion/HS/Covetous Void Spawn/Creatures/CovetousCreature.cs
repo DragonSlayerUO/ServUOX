@@ -38,9 +38,9 @@ namespace Server.Mobiles
         public virtual int MinDamStart => 5;
         public virtual int MaxDamStart => 15;
 
-        public virtual int HitsStart => StrStart + (int)((double)StrStart * ((double)StatRatio / 100.0));
-        public virtual int StamStart => DexStart + (int)((double)DexStart * ((double)StatRatio / 100.0));
-        public virtual int ManaStart => IntStart + (int)((double)IntStart * ((double)StatRatio / 100.0));
+        public virtual int HitsStart => StrStart + (int)(StrStart * (StatRatio / 100.0));
+        public virtual int StamStart => DexStart + (int)(DexStart * (StatRatio / 100.0));
+        public virtual int ManaStart => IntStart + (int)(IntStart * (StatRatio / 100.0));
 
         public virtual bool RaiseDamage => true;
         public virtual double RaiseDamageFactor => 0.33;

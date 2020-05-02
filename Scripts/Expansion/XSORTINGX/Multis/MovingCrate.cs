@@ -185,7 +185,7 @@ namespace Server.Multis
 
             writer.WriteEncodedInt(1);
 
-            writer.Write((Item)this.m_House);
+            writer.Write(m_House);
         }
 
         public override void Deserialize(GenericReader reader)

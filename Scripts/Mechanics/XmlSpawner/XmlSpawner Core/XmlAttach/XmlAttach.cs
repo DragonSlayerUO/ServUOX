@@ -228,7 +228,7 @@ namespace Server.Engines.XmlSpawner2
 
                     for (int j = 0; j < nargs; j++)
                     {
-                        args[j] = (string)e.Arguments[j + 1];
+                        args[j] = e.Arguments[j + 1];
                     }
 
                     Type attachtype = SpawnerType.GetType(e.Arguments[0]);
@@ -412,7 +412,7 @@ namespace Server.Engines.XmlSpawner2
                     for (int i = 0; i < keyarray.Length; i++)
                     {
                         // write the key
-                        writer.Write((int)keyarray[i]);
+                        writer.Write(keyarray[i]);
 
                         XmlAttachment a = valuearray[i];
 
@@ -428,7 +428,7 @@ namespace Server.Engines.XmlSpawner2
                 }
                 else
                 {
-                    writer.Write((int)0);
+                    writer.Write(0);
                 }
 
                 writer.Close();
@@ -470,7 +470,7 @@ namespace Server.Engines.XmlSpawner2
                 else
                 {
                     // no mobile attachments
-                    imawriter.Write((int)0);
+                    imawriter.Write(0);
                 }
 
                 // item attachments
@@ -509,7 +509,7 @@ namespace Server.Engines.XmlSpawner2
                 else
                 {
                     // no item attachments
-                    imawriter.Write((int)0);
+                    imawriter.Write(0);
                 }
 
                 imawriter.Close();
@@ -1353,7 +1353,7 @@ namespace Server.Engines.XmlSpawner2
 
                         for (int j = 0; j < nargs; j++)
                         {
-                            args[j] = (string)m_e.Arguments[j + 1];
+                            args[j] = m_e.Arguments[j + 1];
                         }
 
 
@@ -1851,12 +1851,12 @@ namespace Server.Engines.XmlSpawner2
 
         public static List<XmlAttachment> FindAttachments(Item o, Type type, string name)
         {
-            return FindAttachments(ItemAttachments, (Item)o, type, name, false);
+            return FindAttachments(ItemAttachments, o, type, name, false);
         }
 
         public static List<XmlAttachment> FindAttachments(Mobile o, Type type, string name)
         {
-            return FindAttachments(MobileAttachments, (Mobile)o, type, name, false);
+            return FindAttachments(MobileAttachments, o, type, name, false);
         }
 
         public static List<XmlAttachment> FindAttachments(Item o, bool original)

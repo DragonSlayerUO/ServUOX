@@ -100,7 +100,7 @@ namespace Server.Engines.XmlSpawner2
                 // is the defender the correct type?
                 if (defender.GetType() == m_EnemyType || defender.GetType().IsSubclassOf(m_EnemyType))
                 {
-                    defender.Damage((int)(damageGiven * PercentIncrease / 100), attacker);
+                    defender.Damage(damageGiven * PercentIncrease / 100, attacker);
                 }
             }
         }
@@ -124,7 +124,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
             writer.Write(m_PercentIncrease);
             writer.Write(m_Chance);

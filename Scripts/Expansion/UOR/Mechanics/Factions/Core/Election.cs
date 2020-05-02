@@ -149,11 +149,11 @@ namespace Server.Factions
 
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
             Faction.WriteReference(writer, m_Faction);
 
-            writer.Write((DateTime)m_LastStateTime);
+            writer.Write(m_LastStateTime);
             writer.WriteEncodedInt((int)m_State);
 
             writer.WriteEncodedInt(m_Candidates.Count);
@@ -481,11 +481,11 @@ namespace Server.Factions
 
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0);
+            writer.WriteEncodedInt(0);
 
-            writer.Write((Mobile)m_From);
-            writer.Write((IPAddress)m_Address);
-            writer.Write((DateTime)m_Time);
+            writer.Write(m_From);
+            writer.Write(m_Address);
+            writer.Write(m_Time);
         }
     }
 
@@ -544,7 +544,7 @@ namespace Server.Factions
         {
             for (int i = 0; i < m_Voters.Count; ++i)
             {
-                Voter voter = (Voter)m_Voters[i];
+                Voter voter = m_Voters[i];
 
                 if ((int)voter.AcquireFields()[3] < 90)
                     m_Voters.RemoveAt(i--);
@@ -553,14 +553,14 @@ namespace Server.Factions
 
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)1); // version
+            writer.WriteEncodedInt(1); // version
 
-            writer.Write((Mobile)m_Mobile);
+            writer.Write(m_Mobile);
 
-            writer.WriteEncodedInt((int)m_Voters.Count);
+            writer.WriteEncodedInt(m_Voters.Count);
 
             for (int i = 0; i < m_Voters.Count; ++i)
-                ((Voter)m_Voters[i]).Serialize(writer);
+                m_Voters[i].Serialize(writer);
         }
     }
 }

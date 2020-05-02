@@ -39,7 +39,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
             writer.Write(m_DataValue);
             writer.Write(m_Virtue);
@@ -65,7 +65,7 @@ namespace Server.Engines.XmlSpawner2
             {
                 // for players just add it immediately
                 // lookup the virtue type
-                VirtueName g = (VirtueName)0;
+                VirtueName g = 0;
                 bool valid = true;
                 bool gainedPath = false;
                 try
@@ -111,7 +111,7 @@ namespace Server.Engines.XmlSpawner2
 
             if (killer == null) return;
 
-            VirtueName g = (VirtueName)0;
+            VirtueName g = 0;
             bool valid = true;
             bool gainedPath = false;
             try

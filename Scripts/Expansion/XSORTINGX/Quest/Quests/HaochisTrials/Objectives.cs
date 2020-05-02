@@ -87,7 +87,7 @@ namespace Server.Engines.Quests.Samurai
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
             writer.WriteEncodedInt(this.m_CursedSoulsKilled);
             writer.WriteEncodedInt(this.m_YoungRoninKilled);
@@ -123,9 +123,9 @@ namespace Server.Engines.Quests.Samurai
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_CursedSoul);
+            writer.Write(m_CursedSoul);
         }
     }
 
@@ -185,9 +185,9 @@ namespace Server.Engines.Quests.Samurai
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_Dragon);
+            writer.Write(m_Dragon);
         }
     }
 
@@ -313,9 +313,9 @@ namespace Server.Engines.Quests.Samurai
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_KilledCat);
+            writer.Write(m_KilledCat);
         }
     }
 
@@ -354,9 +354,9 @@ namespace Server.Engines.Quests.Samurai
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_StolenTreasure);
+            writer.Write(m_StolenTreasure);
         }
     }
 

@@ -131,7 +131,7 @@ namespace Server.Items
             {
                 Timer.DelayCall(TimeSpan.FromMilliseconds(i * 50), o =>
                     {
-                        Server.Misc.Geometry.Circle2D(this.Location, this.Map, (int)o, (pnt, map) =>
+                        Server.Misc.Geometry.Circle2D(this.Location, this.Map, o, (pnt, map) =>
                         {
                             Effects.SendLocationEffect(pnt, map, 0x3709, 30, 20, 0, 2);
                         });
@@ -157,7 +157,7 @@ namespace Server.Items
                 {
                     Timer.DelayCall(TimeSpan.FromMilliseconds(i * 50), o =>
                     {
-                        Server.Misc.Geometry.Circle2D(this.Location, this.Map, (int)o, (pnt, map) =>
+                        Server.Misc.Geometry.Circle2D(this.Location, this.Map, o, (pnt, map) =>
                         {
                             Effects.SendLocationEffect(pnt, map, Utility.RandomBool() ? 14000 : 14013, 14, 20, 2018, 0);
                         });

@@ -100,17 +100,17 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)7); // version
+            writer.Write(7); // version
                                   // version 7
             writer.Write(m_RewardAction);
             // version 6
             if (m_Journal == null || m_Journal.Count == 0)
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
             else
             {
-                writer.Write((int)m_Journal.Count);
+                writer.Write(m_Journal.Count);
                 foreach (XmlQuest.JournalEntry e in m_Journal)
                 {
                     writer.Write(e.EntryID);
@@ -129,7 +129,7 @@ namespace Server.Items
             if (m_RewardAttachment != null)
                 writer.Write(m_RewardAttachment.Serial.Value);
             else
-                writer.Write((int)0);
+                writer.Write(0);
             // version 0
             writer.Write(m_ReturnContainer);
             writer.Write(m_RewardItem);
@@ -386,7 +386,7 @@ namespace Server.Items
                 List<Item> items = this.Items;
 
                 for (int i = 0; i < items.Count; ++i)
-                    to.Send(((Item)items[i]).OPLPacket);
+                    to.Send(items[i].OPLPacket);
             }
             // move the reward item out of container to protect it from use
             HideRewards();

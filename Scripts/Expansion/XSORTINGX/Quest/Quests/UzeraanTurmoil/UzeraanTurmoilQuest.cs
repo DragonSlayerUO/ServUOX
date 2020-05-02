@@ -210,9 +210,9 @@ namespace Server.Engines.Quests.Haven
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_HasLeftTheMansion);
+            writer.Write(m_HasLeftTheMansion);
         }
     }
 }

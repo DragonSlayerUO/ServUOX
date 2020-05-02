@@ -72,7 +72,7 @@ namespace Server.Items
         public bool Empty => !CanLight && Items.Count == 0;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public double Durability => ((double)m_Hits / (double)MaxHits) * 100.0;
+        public double Durability => (m_Hits / (double)MaxHits) * 100.0;
 
         public override bool ForceShowProperties => true;
         public override int DefaultGumpID => 0x9CE7;
@@ -566,7 +566,7 @@ namespace Server.Items
                 if (currentRange % latDist == 0)
                     lateralOffset++;
 
-                TimeSpan delay = TimeSpan.FromSeconds((double)currentRange / 10.0);
+                TimeSpan delay = TimeSpan.FromSeconds(currentRange / 10.0);
 
                 switch (AmmoType)
                 {
@@ -986,7 +986,7 @@ namespace Server.Items
 
             double ingotsNeeded = 36 * (int)DamageState;
 
-            ingotsNeeded -= ((double)from.Skills[SkillName.Blacksmith].Value / 200.0) * ingotsNeeded;
+            ingotsNeeded -= (from.Skills[SkillName.Blacksmith].Value / 200.0) * ingotsNeeded;
 
             double min = ingotsNeeded / 10;
             double ingots1 = pack.GetAmount(typeof(IronIngot));
@@ -1444,7 +1444,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1471,7 +1471,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1500,7 +1500,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

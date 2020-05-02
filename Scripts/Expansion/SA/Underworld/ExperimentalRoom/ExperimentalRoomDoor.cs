@@ -72,7 +72,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // ver
+            writer.Write(0); // ver
             writer.Write((int)m_Room);
         }
 
@@ -143,7 +143,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // ver
+            writer.Write(0); // ver
             writer.Write((int)m_Room);
         }
 

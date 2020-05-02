@@ -192,7 +192,7 @@ namespace Server.Mobiles
                             // Try to add the hireling as a follower
                             if (AddHire(from) == true)
                             {
-                                this.SayTo(from, 1043258, string.Format("{0}", (int)item.Amount / m_Pay), 0x3B2);//"I thank thee for paying me. I will work for thee for ~1_NUMBER~ days.", (int)item.Amount / m_Pay );
+                                this.SayTo(from, 1043258, string.Format("{0}", item.Amount / m_Pay), 0x3B2);//"I thank thee for paying me. I will work for thee for ~1_NUMBER~ days.", (int)item.Amount / m_Pay );
                                 m_HoldGold += item.Amount;
                                 m_PayTimer = new PayTimer(this);
                                 m_PayTimer.Start();

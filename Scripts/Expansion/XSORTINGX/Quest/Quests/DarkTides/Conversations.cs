@@ -390,9 +390,9 @@ namespace Server.Engines.Quests.Necro
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_FromMardoth);
+            writer.Write(m_FromMardoth);
         }
     }
 

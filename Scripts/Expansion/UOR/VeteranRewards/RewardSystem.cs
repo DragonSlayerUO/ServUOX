@@ -656,7 +656,7 @@ namespace Server.Engines.VeteranRewards
             {
                 if (SkillCapRewards)
                 {
-                    int newLevel = SkillCap + (int)((float)level * SkillCapBonusIncrement);
+                    int newLevel = SkillCap + (int)(level * SkillCapBonusIncrement);
                     if (newLevel > SkillCap + SkillCapBonus)
                     {
                         newLevel = SkillCap + SkillCapBonus;

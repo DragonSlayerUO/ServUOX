@@ -330,11 +330,11 @@ namespace Server.Engines.Quests.Necro
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.WriteEncodedInt((int)this.m_SkitteringHoppersKilled);
-            writer.Write((bool)this.m_HealConversationShown);
-            writer.Write((bool)this.m_SkitteringHoppersDisposed);
+            writer.WriteEncodedInt(m_SkitteringHoppersKilled);
+            writer.Write(m_HealConversationShown);
+            writer.Write(m_SkitteringHoppersDisposed);
         }
     }
 
@@ -476,9 +476,9 @@ namespace Server.Engines.Quests.Necro
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_Victory);
+            writer.Write(m_Victory);
         }
     }
 

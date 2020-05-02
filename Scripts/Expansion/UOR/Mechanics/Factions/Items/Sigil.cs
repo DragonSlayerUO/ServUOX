@@ -427,13 +427,13 @@ namespace Server.Factions
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             Town.WriteReference(writer, this.m_Town);
             Faction.WriteReference(writer, this.m_Corrupted);
             Faction.WriteReference(writer, this.m_Corrupting);
 
-            writer.Write((Item)this.m_LastMonolith);
+            writer.Write(m_LastMonolith);
 
             writer.Write(this.m_LastStolen);
             writer.Write(this.m_GraceStart);

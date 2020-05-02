@@ -282,7 +282,7 @@ namespace Server.Engines.NewMagincia
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(m_AuctionEnd);
 
@@ -337,7 +337,7 @@ namespace Server.Engines.NewMagincia
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
             writer.Write(m_Bidder);
             writer.Write(m_Amount);
             writer.Write((int)m_BidType);

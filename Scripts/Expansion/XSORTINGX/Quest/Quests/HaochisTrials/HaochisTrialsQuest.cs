@@ -128,7 +128,7 @@ namespace Server.Engines.Quests.Samurai
         {
             writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_SentRadarConversion);
+            writer.Write(m_SentRadarConversion);
         }
     }
 }

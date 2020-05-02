@@ -109,7 +109,7 @@ namespace Server.Engines.SeasonalEvents
         public int TotalTradesComplete { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Wave => (int)Math.Max(1, (int)Math.Min(6, (double)TotalTradesComplete / 4.1));
+        public int Wave => Math.Max(1, (int)Math.Min(6, TotalTradesComplete / 4.1));
 
         public Dictionary<PlayerMobile, int> CompleteTable { get; set; } = new Dictionary<PlayerMobile, int>();
 
@@ -167,7 +167,7 @@ namespace Server.Engines.SeasonalEvents
             }
             else
             {
-                var wave = (int)Math.Max(1, (int)Math.Min(6, (double)TotalTradesComplete / 4.1)); // TODO: Is this right?
+                var wave = Math.Max(1, (int)Math.Min(6, TotalTradesComplete / 4.1)); // TODO: Is this right?
 
                 if (wave == 6)
                 {

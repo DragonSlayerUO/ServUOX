@@ -509,18 +509,18 @@ namespace Server.Multis
         {
             base.Serialize(writer);
 
-            writer.Write((int)5);
+            writer.Write(5);
 
             writer.Write(m_Hits);
             writer.Write((int)m_DamageTaken);
 
             if (BoatCourse != null)
             {
-                writer.Write((int)1);
+                writer.Write(1);
                 BoatCourse.Serialize(writer);
             }
             else
-                writer.Write((int)0);
+                writer.Write(0);
 
             writer.Write(BoatItem);
 
@@ -528,8 +528,8 @@ namespace Server.Multis
             writer.Write(DoesDecay);
 
             // version 3
-            writer.Write((Item)MapItem);
-            writer.Write((int)NextNavPoint);
+            writer.Write(MapItem);
+            writer.Write(NextNavPoint);
 
             writer.Write((int)m_Facing);
 
@@ -1305,15 +1305,15 @@ namespace Server.Multis
                 if (secure != null) cloth += secure.GetAmount(type);
             }
 
-            double durability = ((double)Hits / (double)MaxHits) * 100;
+            double durability = (Hits / (double)MaxHits) * 100;
 
             //Now, how much do they need for 100% repair
             double woodNeeded = WoodPer * (100.0 - durability);
             double clothNeeded = ClothPer * (100.0 - durability);
 
             //Apply skill bonus
-            woodNeeded -= ((double)from.Skills[SkillName.Carpentry].Value / 200.0) * woodNeeded;
-            clothNeeded -= ((double)from.Skills[SkillName.Tailoring].Value / 200.0) * clothNeeded;
+            woodNeeded -= (from.Skills[SkillName.Carpentry].Value / 200.0) * woodNeeded;
+            clothNeeded -= (from.Skills[SkillName.Tailoring].Value / 200.0) * clothNeeded;
 
             //get 10% of needed repairs
             double minWood = woodNeeded / 10;
@@ -2145,7 +2145,7 @@ namespace Server.Multis
                 item.ItemID > TileData.MaxItemValue ||
                 !item.Visible ||
                 item is Corpse ||
-                IsComponentItem((IEntity)item) ||
+                IsComponentItem(item) ||
                 item is EffectItem;
         }
 
@@ -2599,7 +2599,7 @@ namespace Server.Multis
             if (Hold != null)
                 Hold.Location = new Point3D(X + (xOffset * HoldDistance), Y + (yOffset * HoldDistance), Hold.Z);
 
-            int count = (int)(m_Facing - old) & 0x7;
+            int count = m_Facing - old & 0x7;
             count /= 2;
 
             foreach (IEntity e in toMove.Where(e => e != null))
@@ -3094,7 +3094,7 @@ namespace Server.Multis
             {
                 EnsureCapacity(18);
 
-                m_Stream.Write((int)boat.Serial);
+                m_Stream.Write(boat.Serial);
                 m_Stream.Write((byte)speed);
                 m_Stream.Write((byte)d);
                 m_Stream.Write((byte)boat.Facing);
@@ -3109,7 +3109,7 @@ namespace Server.Multis
 
                 foreach (var ent in boat.GetEntitiesOnBoard().Where(e => e != boat))
                 {
-                    m_Stream.Write((int)ent.Serial);
+                    m_Stream.Write(ent.Serial);
                     m_Stream.Write((short)(ent.X + xOffset));
                     m_Stream.Write((short)(ent.Y + yOffset));
                     m_Stream.Write((short)ent.Z);
@@ -3407,7 +3407,7 @@ namespace Server.Multis
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
             writer.Write(GivenMap);
 
             writer.Write(m_Waypoints.Count);

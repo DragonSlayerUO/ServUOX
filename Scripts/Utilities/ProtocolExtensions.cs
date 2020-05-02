@@ -106,7 +106,7 @@ namespace Server.Misc
         {
             for (int i = 0; i < party.Members.Count; ++i)
             {
-                PartyMemberInfo pmi = (PartyMemberInfo)party.Members[i];
+                PartyMemberInfo pmi = party.Members[i];
 
                 if (pmi == null || pmi.Mobile == from)
                     continue;
@@ -122,7 +122,7 @@ namespace Server.Misc
                 m_Stream.Write((byte)(mob.Map == null ? 0 : mob.Map.MapID));
             }
 
-            m_Stream.Write((int)0);
+            m_Stream.Write(0);
         }
     }
 

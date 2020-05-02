@@ -26,7 +26,7 @@ namespace Server.Gumps
 
                     if (index >= 0 && index < this.m_List.Count)
                     {
-                        Guild g = (Guild)this.m_List[index];
+                        Guild g = this.m_List[index];
 
                         if (g != null)
                         {

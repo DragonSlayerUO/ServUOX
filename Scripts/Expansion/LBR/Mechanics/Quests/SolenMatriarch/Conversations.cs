@@ -53,9 +53,9 @@ namespace Server.Engines.Quests.Matriarch
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_Friend);
+            writer.Write(m_Friend);
         }
     }
 
@@ -206,9 +206,9 @@ namespace Server.Engines.Quests.Matriarch
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_Friend);
+            writer.Write(m_Friend);
         }
     }
 

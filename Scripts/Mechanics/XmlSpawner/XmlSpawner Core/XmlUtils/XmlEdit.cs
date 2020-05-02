@@ -307,7 +307,7 @@ namespace Server.Engines.XmlSpawner2
             {
                 int index = i + DisplayFrom;
                 if (m_SearchList == null || index >= m_SearchList.Count) break;
-                int page = (int)(i / MaxEntriesPerPage);
+                int page = i / MaxEntriesPerPage;
                 if (i % MaxEntriesPerPage == 0)
                 {
                     AddPage(page + 1);
@@ -576,13 +576,13 @@ namespace Server.Engines.XmlSpawner2
             AddLabel(283, y, 0x384, "Delete");
 
             // add the page buttons
-            for (int i = 0; i < (int)(MaxEntries / MaxEntriesPerPage); i++)
+            for (int i = 0; i < MaxEntries / MaxEntriesPerPage; i++)
             {
                 AddButton(513 + i * 25, y, 0x8B1 + i, 0x8B1 + i, 0, GumpButtonType.Page, 1 + i);
             }
 
             // add the advance pageblock buttons
-            AddButton(510 + 25 * (int)(MaxEntries / MaxEntriesPerPage), y, 0x15E1, 0x15E5, 201, GumpButtonType.Reply, 0); // block forward
+            AddButton(510 + 25 * (MaxEntries / MaxEntriesPerPage), y, 0x15E1, 0x15E5, 201, GumpButtonType.Reply, 0); // block forward
             AddButton(490, y, 0x15E3, 0x15E7, 202, GumpButtonType.Reply, 0); // block backward
 
             // add the displayfrom entry

@@ -395,7 +395,7 @@ namespace Server.Factions
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             Faction.WriteReference(writer, this.m_Faction);
             Town.WriteReference(writer, this.m_Town);
@@ -514,9 +514,9 @@ namespace Server.Factions
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((Mobile)this.m_Rider);
+            writer.Write(m_Rider);
         }
 
         public override void Deserialize(GenericReader reader)

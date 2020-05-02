@@ -122,10 +122,10 @@ namespace Server.Engines.Quests.Necro
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((Mobile)this.m_Necromancer);
-            writer.Write((bool)this.m_ToDelete);
+            writer.Write(m_Necromancer);
+            writer.Write(m_ToDelete);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -226,7 +226,7 @@ namespace Server.Engines.Quests.Necro
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

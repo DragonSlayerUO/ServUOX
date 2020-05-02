@@ -75,7 +75,7 @@ namespace Server.Engines.XmlSpawner2
             public virtual void Serialize(GenericWriter writer)
             {
 
-                writer.Write((int)0); // version
+                writer.Write(0); // version
 
                 writer.Write(Quester);
                 writer.Write(Name);
@@ -296,7 +296,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
             writer.Write(m_Points);
             writer.Write(m_Credits);
@@ -308,7 +308,7 @@ namespace Server.Engines.XmlSpawner2
             // save the quest history
             if (QuestList != null)
             {
-                writer.Write((int)QuestList.Count);
+                writer.Write(QuestList.Count);
 
                 foreach (QuestEntry e in QuestList)
                 {
@@ -317,7 +317,7 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                writer.Write((int)0);
+                writer.Write(0);
             }
 
             // need this in order to rebuild the rankings on deser

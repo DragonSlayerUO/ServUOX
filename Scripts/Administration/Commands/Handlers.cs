@@ -307,7 +307,7 @@ namespace Server.Commands
                             Spawner spawner = (Spawner)item;
 
                             for (int i = 0; !hasBankerSpawner && i < spawner.SpawnObjects.Count; ++i)
-                                hasBankerSpawner = Insensitive.Equals((string)spawner.SpawnObjects[i].SpawnName, "banker");
+                                hasBankerSpawner = Insensitive.Equals(spawner.SpawnObjects[i].SpawnName, "banker");
 
                             if (hasBankerSpawner)
                                 break;

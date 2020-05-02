@@ -323,17 +323,17 @@ namespace Server.Factions
 
         public void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)1); // version
+            writer.WriteEncodedInt(1); // version
 
             writer.Write(m_IsActive);
             writer.Write(m_LastHonorTime);
 
-            writer.Write((Mobile)m_Mobile);
+            writer.Write(m_Mobile);
 
-            writer.WriteEncodedInt((int)m_KillPoints);
+            writer.WriteEncodedInt(m_KillPoints);
             writer.WriteEncodedInt((int)m_MerchantTitle);
 
-            writer.Write((DateTime)m_Leaving);
+            writer.Write(m_Leaving);
         }
 
         public int CompareTo(object obj)

@@ -63,7 +63,7 @@ namespace Server.Factions
 
                             for (int i = 0; i < guild.Members.Count; ++i)
                             {
-                                Mobile mob = (Mobile)guild.Members[i];
+                                Mobile mob = guild.Members[i];
                                 PlayerState pl = PlayerState.Find(mob);
 
                                 if (pl != null)

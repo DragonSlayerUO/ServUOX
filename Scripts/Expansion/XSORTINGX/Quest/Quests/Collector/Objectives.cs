@@ -228,7 +228,7 @@ namespace Server.Engines.Quests.Collector
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
             writer.WriteEncodedInt((int)this.m_Theater);
         }
@@ -355,7 +355,7 @@ namespace Server.Engines.Quests.Collector
                 }
             }
 
-            image = (ImageType)0;
+            image = 0;
             return CaptureResponse.Invalid;
         }
 
@@ -401,14 +401,14 @@ namespace Server.Engines.Quests.Collector
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.WriteEncodedInt((int)this.m_Images.Length);
+            writer.WriteEncodedInt(m_Images.Length);
 
             for (int i = 0; i < this.m_Images.Length; i++)
             {
                 writer.WriteEncodedInt((int)this.m_Images[i]);
-                writer.Write((bool)this.m_Done[i]);
+                writer.Write(this.m_Done[i]);
             }
         }
     }

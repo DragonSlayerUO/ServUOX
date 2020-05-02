@@ -96,9 +96,9 @@ namespace Server.Engines.Quests.Ninja
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_TaughtHowToUseSkills);
+            writer.Write(m_TaughtHowToUseSkills);
         }
     }
 
@@ -235,9 +235,9 @@ namespace Server.Engines.Quests.Ninja
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_StolenTreasure);
+            writer.Write(m_StolenTreasure);
         }
     }
 

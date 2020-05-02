@@ -367,7 +367,7 @@ namespace Server.Engines.Distillation
                     }
                     else
                     {
-                        toConsume = (int)((double)toConsume * percentage);
+                        toConsume = (int)(toConsume * percentage);
 
                         if (GetAmount(from, type, m_Def.Liquor) < toConsume)
                             return false;
@@ -401,7 +401,7 @@ namespace Server.Engines.Distillation
                     }
                     else if (type == typeof(Pitcher))
                     {
-                        toConsume = (int)((double)toConsume * percentage);
+                        toConsume = (int)(toConsume * percentage);
                         BeverageType bType = m_Def.Liquor == Liquor.Brandy ? BeverageType.Wine : BeverageType.Water;
 
                         Item[] items = pack.FindItemsByType(type);
@@ -422,7 +422,7 @@ namespace Server.Engines.Distillation
                     }
                     else if (type == typeof(PewterBowlOfCorn))
                     {
-                        toConsume = (int)((double)toConsume * percentage);
+                        toConsume = (int)(toConsume * percentage);
 
                         int totalPewter = pack.GetAmount(type);
                         int totalWooden = pack.GetAmount(typeof(WoodenBowlOfCorn));
@@ -438,7 +438,7 @@ namespace Server.Engines.Distillation
                     }
                     else
                     {
-                        toConsume = (int)((double)toConsume * percentage);
+                        toConsume = (int)(toConsume * percentage);
                         pack.ConsumeTotal(type, toConsume);
                     }
                 }

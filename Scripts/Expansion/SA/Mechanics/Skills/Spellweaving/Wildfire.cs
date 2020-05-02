@@ -167,7 +167,7 @@ namespace Server.Spells.Spellweaving
                     if (m is PlayerMobile && sdiBonus > .15)
                         sdiBonus = .15;
 
-                    int damage = m_Damage + (int)((double)m_Damage * sdiBonus);
+                    int damage = m_Damage + (int)(m_Damage * sdiBonus);
 
                     if (count > 1)
                         damage /= Math.Min(3, count);
@@ -205,7 +205,7 @@ namespace Server.Spells.Spellweaving
             {
                 base.Serialize(writer);
 
-                writer.Write((int)0); // version
+                writer.Write(0); // version
             }
 
             public override void Deserialize(GenericReader reader)

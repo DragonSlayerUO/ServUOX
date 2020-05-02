@@ -127,7 +127,7 @@ namespace Server.Items
             base.Serialize(writer);
 
             // version
-            writer.Write((int)0);
+            writer.Write(0);
             // version 0
             writer.Write((int)m_StaffLevel);
             writer.Write(m_HomeLoc);

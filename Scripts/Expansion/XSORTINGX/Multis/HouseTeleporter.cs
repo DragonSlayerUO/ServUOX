@@ -117,11 +117,11 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write((int)m_Level);
 
-            writer.Write((Item)m_Target);
+            writer.Write(m_Target);
         }
 
         public override void Deserialize(GenericReader reader)

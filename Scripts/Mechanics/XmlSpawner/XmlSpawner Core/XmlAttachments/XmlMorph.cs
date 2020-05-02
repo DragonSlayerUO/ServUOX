@@ -65,7 +65,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)1);
+            writer.Write(1);
             // version 1
             writer.Write(proximityrange);
             // version 0
@@ -100,7 +100,7 @@ namespace Server.Engines.XmlSpawner2
                     m_MorphID = reader.ReadInt();
                     m_Duration = reader.ReadTimeSpan();
                     ActivationWord = reader.ReadString();
-                    TimeSpan remaining = (TimeSpan)reader.ReadTimeSpan();
+                    TimeSpan remaining = reader.ReadTimeSpan();
 
                     if (remaining > TimeSpan.Zero)
                         DoTimer(remaining);

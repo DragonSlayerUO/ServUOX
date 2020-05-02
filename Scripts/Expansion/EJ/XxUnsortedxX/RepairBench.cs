@@ -226,11 +226,11 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write((int)Level);
 
-            writer.Write((bool)IsRewardItem);
+            writer.Write(IsRewardItem);
 
             writer.Write(Tools == null ? 0 : Tools.Count);
 
@@ -240,7 +240,7 @@ namespace Server.Items
                 {
                     writer.Write((int)x.Skill);
                     writer.Write((int)x.SkillValue);
-                    writer.Write((int)x.Charges);
+                    writer.Write(x.Charges);
                 });
             }
         }
@@ -365,9 +365,9 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
-            writer.Write((bool)m_IsRewardItem);
+            writer.Write(m_IsRewardItem);
 
             writer.Write(Tools == null ? 0 : Tools.Count);
 
@@ -377,7 +377,7 @@ namespace Server.Items
                 {
                     writer.Write((int)x.Skill);
                     writer.Write((int)x.SkillValue);
-                    writer.Write((int)x.Charges);
+                    writer.Write(x.Charges);
                 });
             }
         }

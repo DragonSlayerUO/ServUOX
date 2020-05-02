@@ -110,7 +110,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)1);
+            writer.Write(1);
             // version 1
             writer.Write(this.m_PropertyListString);
             writer.Write(this.m_FailMsg);

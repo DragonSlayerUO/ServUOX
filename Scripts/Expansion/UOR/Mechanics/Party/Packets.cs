@@ -13,7 +13,7 @@ namespace Server.Engines.PartySystem
             this.m_Stream.Write((short)0x0006);
             this.m_Stream.Write((byte)0x02);
             this.m_Stream.Write((byte)0);
-            this.m_Stream.Write((int)m.Serial);
+            this.m_Stream.Write(m.Serial);
         }
     }
 
@@ -29,7 +29,7 @@ namespace Server.Engines.PartySystem
             this.m_Stream.Write((byte)p.Count);
 
             for (int i = 0; i < p.Count; ++i)
-                this.m_Stream.Write((int)p[i].Mobile.Serial);
+                this.m_Stream.Write(p[i].Mobile.Serial);
         }
     }
 
@@ -44,10 +44,10 @@ namespace Server.Engines.PartySystem
             this.m_Stream.Write((byte)0x02);
             this.m_Stream.Write((byte)p.Count);
 
-            this.m_Stream.Write((int)removed.Serial);
+            this.m_Stream.Write(removed.Serial);
 
             for (int i = 0; i < p.Count; ++i)
-                this.m_Stream.Write((int)p[i].Mobile.Serial);
+                this.m_Stream.Write(p[i].Mobile.Serial);
         }
     }
 
@@ -63,7 +63,7 @@ namespace Server.Engines.PartySystem
 
             this.m_Stream.Write((short)0x0006);
             this.m_Stream.Write((byte)(toAll ? 0x04 : 0x03));
-            this.m_Stream.Write((int)from.Serial);
+            this.m_Stream.Write(from.Serial);
             this.m_Stream.WriteBigUniNull(text);
         }
     }
@@ -77,7 +77,7 @@ namespace Server.Engines.PartySystem
 
             this.m_Stream.Write((short)0x0006);
             this.m_Stream.Write((byte)0x07);
-            this.m_Stream.Write((int)leader.Serial);
+            this.m_Stream.Write(leader.Serial);
         }
     }
 }

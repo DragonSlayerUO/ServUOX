@@ -87,10 +87,10 @@ namespace Server.Engines.Quests.Necro
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((Mobile)this.m_Maabus);
-            writer.Write((Point3D)this.m_SpawnLocation);
+            writer.Write(m_Maabus);
+            writer.Write(m_SpawnLocation);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -154,10 +154,10 @@ namespace Server.Engines.Quests.Necro
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((int)this.m_FullItemID);
-            writer.Write((int)this.m_EmptyItemID);
+            writer.Write(m_FullItemID);
+            writer.Write(m_EmptyItemID);
         }
 
         public override void Deserialize(GenericReader reader)

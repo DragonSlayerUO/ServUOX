@@ -373,7 +373,7 @@ namespace Server
             bool hasArgs = (args != null);
 
             EnsureCapacity((hasArgs ? (48 + args.ToString().Length * 2) : 44));
-            m_Stream.Write((int)mob.Serial);
+            m_Stream.Write(mob.Serial);
 
             m_Stream.Write((short)iconID);	//ID
             m_Stream.Write((short)0x1);	//Type 0 for removal. 1 for add 2 for Data
@@ -391,8 +391,8 @@ namespace Server
             m_Stream.Write((short)length.TotalSeconds);	//Time in seconds
 
             m_Stream.Fill(3);
-            m_Stream.Write((int)titleCliloc);
-            m_Stream.Write((int)secondaryCliloc);
+            m_Stream.Write(titleCliloc);
+            m_Stream.Write(secondaryCliloc);
 
             if (!hasArgs)
             {
@@ -425,7 +425,7 @@ namespace Server
             : base(0xDF)
         {
             EnsureCapacity(13);
-            m_Stream.Write((int)mob.Serial);
+            m_Stream.Write(mob.Serial);
 
             m_Stream.Write((short)iconID);	//ID
             m_Stream.Write((short)0x0);	//Type 0 for removal. 1 for add 2 for Data

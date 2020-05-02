@@ -208,7 +208,7 @@ namespace Server.Misc
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write(this.m_Title);
             writer.Write(this.m_Duration);
@@ -422,7 +422,7 @@ namespace Server.Misc
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write(this.m_Title);
 

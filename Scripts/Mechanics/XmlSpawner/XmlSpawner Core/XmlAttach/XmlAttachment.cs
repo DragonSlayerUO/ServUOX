@@ -450,23 +450,23 @@ namespace Server.Engines.XmlSpawner2
 
         public virtual void Serialize(GenericWriter writer)
         {
-            writer.Write((int)2);
+            writer.Write(2);
             // version 2
             writer.Write(m_AttachedBy);
             // version 1
             if (OwnedBy is Item)
             {
-                writer.Write((int)0);
+                writer.Write(0);
                 writer.Write((Item)OwnedBy);
             }
             else
                 if (OwnedBy is Mobile)
             {
-                writer.Write((int)1);
+                writer.Write(1);
                 writer.Write((Mobile)OwnedBy);
             }
             else
-                writer.Write((int)-1);
+                writer.Write(-1);
 
             // version 0
             writer.Write(Name);
@@ -509,9 +509,9 @@ namespace Server.Engines.XmlSpawner2
                     goto case 0;
                 case 0:
                     // version 0
-                    Name = (string)reader.ReadString();
+                    Name = reader.ReadString();
                     m_Expiration = reader.ReadTimeSpan();
-                    TimeSpan remaining = (TimeSpan)reader.ReadTimeSpan();
+                    TimeSpan remaining = reader.ReadTimeSpan();
 
                     if (remaining > TimeSpan.Zero)
                         DoTimer(remaining);

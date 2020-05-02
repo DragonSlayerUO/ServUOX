@@ -83,7 +83,7 @@ namespace Server.Factions
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             Faction.WriteReference(writer, this.m_Faction);
         }

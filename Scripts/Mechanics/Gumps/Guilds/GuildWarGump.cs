@@ -69,7 +69,7 @@ namespace Server.Gumps
             {
                 for (int i = 0; i < declared.Count; ++i)
                 {
-                    Guild g = (Guild)declared[i];
+                    Guild g = declared[i];
 
                     this.AddHtml(20, 65 + (i * 20), 300, 20, g.Name, false, false);
                 }

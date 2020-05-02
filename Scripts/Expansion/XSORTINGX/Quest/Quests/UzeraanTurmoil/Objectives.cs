@@ -231,7 +231,7 @@ namespace Server.Engines.Quests.Haven
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
             writer.WriteEncodedInt((int)this.m_Step);
         }
@@ -408,9 +408,9 @@ namespace Server.Engines.Quests.Haven
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_Ambushed);
+            writer.Write(m_Ambushed);
         }
     }
 
@@ -515,9 +515,9 @@ namespace Server.Engines.Quests.Haven
             if (this.m_CorpseWithBone != null && this.m_CorpseWithBone.Deleted)
                 this.m_CorpseWithBone = null;
 
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((Item)this.m_CorpseWithBone);
+            writer.Write(m_CorpseWithBone);
         }
     }
 

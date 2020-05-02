@@ -11,7 +11,7 @@ namespace Server.Items
 
         public BaseRewardScroll(Serial serial) : base(serial) { }
 
-        public override void Serialize(GenericWriter writer) { base.Serialize(writer); writer.Write((int)0); }
+        public override void Serialize(GenericWriter writer) { base.Serialize(writer); writer.Write(0); }
 
         public override void Deserialize(GenericReader reader) { base.Deserialize(reader); int version = reader.ReadInt(); }
     }
@@ -47,7 +47,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version 
+            writer.Write(0); // version 
         }
 
         public override void Deserialize(GenericReader reader)
@@ -72,7 +72,7 @@ namespace Server.Items
 
         public RewardScroll(Serial serial) : base(serial) { }
 
-        public override void Serialize(GenericWriter writer) { base.Serialize(writer); writer.Write((int)0); }
+        public override void Serialize(GenericWriter writer) { base.Serialize(writer); writer.Write(0); }
 
         public override void Deserialize(GenericReader reader) { base.Deserialize(reader); int version = reader.ReadInt(); }
     }

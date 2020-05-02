@@ -191,9 +191,9 @@ namespace Server.Items
 
         public virtual void Serialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.WriteEncodedInt((int)m_Cylinders.Length);
+            writer.WriteEncodedInt(m_Cylinders.Length);
             for (int i = 0; i < m_Cylinders.Length; i++)
             {
                 writer.Write((int)m_Cylinders[i]);
@@ -223,7 +223,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
             writer.WriteDeltaTime(m_When);
         }
@@ -417,17 +417,17 @@ namespace Server.Items
 
             base.Serialize(writer);
 
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
             m_Solution.Serialize(writer);
 
-            writer.WriteEncodedInt((int)m_Hints.Length);
+            writer.WriteEncodedInt(m_Hints.Length);
             for (int i = 0; i < m_Hints.Length; i++)
             {
                 writer.Write((int)m_Hints[i]);
             }
 
-            writer.WriteEncodedInt((int)m_Guesses.Count);
+            writer.WriteEncodedInt(m_Guesses.Count);
             foreach (KeyValuePair<Mobile, PuzzleChestSolutionAndTime> kvp in m_Guesses)
             {
                 writer.Write(kvp.Key);
@@ -867,7 +867,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -896,7 +896,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

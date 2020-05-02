@@ -105,9 +105,9 @@ namespace Server.Engines.Despise
         public virtual int DexMax => 150;
         public virtual int IntMax => 450;
 
-        public virtual int HitsStart => StrStart + (int)((double)StrStart * ((double)StatRatio / 100.0));
-        public virtual int StamStart => DexStart + (int)((double)DexStart * ((double)StatRatio / 100.0));
-        public virtual int ManaStart => IntStart + (int)((double)IntStart * ((double)StatRatio / 100.0));
+        public virtual int HitsStart => StrStart + (int)(StrStart * (StatRatio / 100.0));
+        public virtual int StamStart => DexStart + (int)(DexStart * (StatRatio / 100.0));
+        public virtual int ManaStart => IntStart + (int)(IntStart * (StatRatio / 100.0));
 
         public virtual int MaxHits => 1000;
         public virtual int MaxStam => 1000;
@@ -409,7 +409,7 @@ namespace Server.Engines.Despise
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
             writer.Write(m_Orb);
             writer.Write(m_Power);
             writer.Write(m_MaxPower);

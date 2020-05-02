@@ -29,7 +29,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)3);
+            writer.Write(3);
         }
 
         public override void Deserialize(GenericReader reader)

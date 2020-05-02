@@ -39,12 +39,12 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((int)Lines.Length);
+            writer.Write(Lines.Length);
 
             for (int i = 0; i < Lines.Length; i++)
-                writer.Write((string)Lines[i]);
+                writer.Write(Lines[i]);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -154,7 +154,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

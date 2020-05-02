@@ -106,7 +106,7 @@ namespace Server.Engines.XmlSpawner2
         {
             base.Serialize(writer);
 
-            writer.Write((int)3);
+            writer.Write(3);
             // version 3
             writer.Write(m_MaxTargetRange);
             // version 2

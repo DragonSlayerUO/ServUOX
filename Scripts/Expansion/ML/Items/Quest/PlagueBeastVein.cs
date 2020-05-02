@@ -48,7 +48,7 @@ namespace Server.Items
 
             writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_Cut);
+            writer.Write(m_Cut);
         }
 
         public override void Deserialize(GenericReader reader)

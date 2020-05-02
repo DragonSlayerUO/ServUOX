@@ -400,7 +400,7 @@ namespace Server.Gumps
                         if (v > 800)
                             offset = 3;
                         else if (v > 300)
-                            offset = (int)(v / 300);
+                            offset = v / 300;
 
                         if (offset <= 0)
                             continue;
@@ -614,7 +614,7 @@ namespace Server.Gumps
                         if (title == 1154017)
                             continue;
 
-                        AddHtmlLocalized(260, 70 + (index * 22), 245, 16, (int)title, 0xFFFF, false, false);
+                        AddHtmlLocalized(260, 70 + (index * 22), 245, 16, title, 0xFFFF, false, false);
 
                         AddCallbackButton(225, 70 + (index * 22), 4005, 4007, i + 2550, GumpButtonType.Reply, 0, b =>
                         {
@@ -1031,7 +1031,7 @@ namespace Server.Gumps
                 if (v > 800)
                     offset = 3;
                 else if (v > 300)
-                    offset = (int)(v / 300);
+                    offset = v / 300;
 
                 if (offset > 0)
                 {

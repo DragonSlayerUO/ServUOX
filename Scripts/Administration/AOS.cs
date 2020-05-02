@@ -1311,7 +1311,7 @@ namespace Server
 
             if (HitLeechHits > 0)
             {
-                double postcap = (double)HitLeechHits / (double)ItemPropertyInfo.GetMaxIntensity(wep, AosWeaponAttribute.HitLeechHits);
+                double postcap = HitLeechHits / (double)ItemPropertyInfo.GetMaxIntensity(wep, AosWeaponAttribute.HitLeechHits);
                 if (postcap < 1.0) postcap = 1.0;
 
                 int newhits = (int)((wep.MlSpeed * 2500 / (100 + weaponSpeed)) * postcap);
@@ -1325,7 +1325,7 @@ namespace Server
 
             if (HitLeechMana > 0)
             {
-                double postcap = (double)HitLeechMana / (double)ItemPropertyInfo.GetMaxIntensity(wep, AosWeaponAttribute.HitLeechMana);
+                double postcap = HitLeechMana / (double)ItemPropertyInfo.GetMaxIntensity(wep, AosWeaponAttribute.HitLeechMana);
                 if (postcap < 1.0) postcap = 1.0;
 
                 int newmana = (int)((wep.MlSpeed * 2500 / (100 + weaponSpeed)) * postcap);

@@ -232,7 +232,7 @@ namespace Server.Factions
         {
             int idx = Towns.IndexOf(town);
 
-            writer.WriteEncodedInt((int)(idx + 1));
+            writer.WriteEncodedInt(idx + 1);
         }
 
         public static Town ReadReference(GenericReader reader)

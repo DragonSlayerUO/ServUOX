@@ -772,7 +772,7 @@ namespace Server.Mobiles
 
             public void Serialize(GenericWriter writer)
             {
-                writer.Write((int)1); // version
+                writer.Write(1); // version
                                       // Version 1
                 writer.Write((int)Flags);
                 // Version 0
@@ -3503,7 +3503,7 @@ namespace Server.Mobiles
 
                                     for (int i = 0; i < packlist.Count; ++i)
                                     {
-                                        Item item = (Item)packlist[i];
+                                        Item item = packlist[i];
 
                                         //  check the layer
                                         // if it matches then unequip it
@@ -5562,7 +5562,7 @@ namespace Server.Mobiles
 
                 for (int i = 0; i < packlist.Count; ++i)
                 {
-                    Item item = (Item)packlist[i];
+                    Item item = packlist[i];
 
                     if (item != null && !item.Deleted)
                     {
@@ -5595,7 +5595,7 @@ namespace Server.Mobiles
 
                 for (int i = 0; i < packlist.Count; ++i)
                 {
-                    Item item = (Item)packlist[i];
+                    Item item = packlist[i];
 
                     // dont search bank boxes
                     if (item is BankBox && !searchbank) continue;
@@ -5655,7 +5655,7 @@ namespace Server.Mobiles
 
                 for (int i = 0; i < packlist.Count; ++i)
                 {
-                    Item item = (Item)packlist[i];
+                    Item item = packlist[i];
 
                     if (item != null && !item.Deleted)
                     {
@@ -5698,7 +5698,7 @@ namespace Server.Mobiles
 
                 for (int i = 0; i < packlist.Count; ++i)
                 {
-                    Item item = (Item)packlist[i];
+                    Item item = packlist[i];
 
                     if (item != null && !item.Deleted)
                     {

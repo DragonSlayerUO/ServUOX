@@ -732,9 +732,9 @@ namespace Server.Engines.Quests.Haven
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_FromUzeraan);
+            writer.Write(m_FromUzeraan);
         }
     }
 
@@ -796,9 +796,9 @@ namespace Server.Engines.Quests.Haven
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)this.m_FromUzeraan);
+            writer.Write(m_FromUzeraan);
         }
     }
 
