@@ -92,7 +92,7 @@ namespace Server.Spells.Bushido
                 {
                     return false;
                 }
-				
+
                 if (weap != null)
                 {
                     if (defender.Skills[weap.Skill].Base < 50)
@@ -105,7 +105,7 @@ namespace Server.Spells.Bushido
                     return false;
                 }
             }
-			
+
             if (IsEvading(defender) && BaseWeapon.CheckParry(defender))
             {
                 defender.Emote("*evades*"); // Yes.  Eew.  Blame OSI.

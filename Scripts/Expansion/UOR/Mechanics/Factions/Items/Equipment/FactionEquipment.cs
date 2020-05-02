@@ -242,7 +242,7 @@ namespace Server.Factions
 
         public override void OnGiveReward(PlayerMobile to, Item item, IComunityCollection collection, int hue)
         {
-            if(this.Faction != null)
+            if (this.Faction != null)
             {
                 FactionEquipment.CheckProperties(item);
                 FactionItem.Imbue(item, Faction, false, -1, MinRank);

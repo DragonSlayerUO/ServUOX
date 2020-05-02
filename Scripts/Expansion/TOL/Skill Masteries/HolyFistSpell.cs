@@ -136,7 +136,7 @@ namespace Server.Spells.SkillMasteries
             if (AosAttributes.GetValue(Caster, AosAttribute.LowerRegCost) > Utility.Random(100))
                 requiredTithing = 0;
 
-            if(requiredTithing > 0 && Caster is PlayerMobile)
+            if (requiredTithing > 0 && Caster is PlayerMobile)
                 Caster.TithingPoints -= requiredTithing;
 
             return base.CheckSequence();

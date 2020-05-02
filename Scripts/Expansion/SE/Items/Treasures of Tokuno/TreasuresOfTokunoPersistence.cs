@@ -59,13 +59,13 @@ namespace Server.Misc
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {
                         TreasuresOfTokuno.RewardEra = (TreasuresOfTokunoEra)reader.ReadEncodedInt();
                         TreasuresOfTokuno.DropEra = (TreasuresOfTokunoEra)reader.ReadEncodedInt();
-					
+
                         break;
                     }
             }

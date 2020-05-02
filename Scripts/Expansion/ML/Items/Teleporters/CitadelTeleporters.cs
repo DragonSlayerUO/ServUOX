@@ -5,7 +5,7 @@ using Server.Mobiles;
 namespace Server.Items
 {
     public class CitadelTele : Item
-    { 
+    {
         [Constructable]
         public CitadelTele()
             : base(0xE3F)
@@ -17,7 +17,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override void OnDoubleClick(Mobile from)
         {
             if (from.NetState == null || !from.NetState.SupportsExpansion(Expansion.ML))
@@ -30,11 +30,11 @@ namespace Server.Items
                 from.SendLocalizedMessage(1042753, "The Citadel"); // ~1_SOMETHING~ has been temporarily disabled.
                 return;
             }
-		
+
             if (from is PlayerMobile)
             {
                 PlayerMobile player = (PlayerMobile)from;
-				
+
                 if (QuestHelper.GetQuest(player, typeof(BlackOrderBadgesQuest)) != null || QuestHelper.GetQuest(player, typeof(EvidenceQuest)) != null)
                 {
                     BaseCreature.TeleportPets(player, new Point3D(107, 1883, 0), Map.Malas);
@@ -50,14 +50,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

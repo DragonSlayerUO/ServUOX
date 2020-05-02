@@ -13,7 +13,7 @@ namespace Server.Items
 
         public override int LabelNumber { get { return 1094938; } } // Mana Draught
 
-        [Constructable] 
+        [Constructable]
         public ManaDraught()
             : base(0xFFB)
         {
@@ -64,7 +64,7 @@ namespace Server.Items
             }
             else
             {
-                by.SendLocalizedMessage(1079263, ((int)((DaughtUsageList[by] + Cooldown)-DateTime.Now).TotalSeconds).ToString());
+                by.SendLocalizedMessage(1079263, ((int)((DaughtUsageList[by] + Cooldown) - DateTime.Now).TotalSeconds).ToString());
             }
         }
 
@@ -90,7 +90,7 @@ namespace Server.Items
             {
                 DaughtUsageList[pm] = DateTime.Now;
             }
-            
+
             pm.SendLocalizedMessage(1095128);//The sour draught instantly restores some of your mana!
         }
 

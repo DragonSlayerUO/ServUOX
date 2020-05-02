@@ -333,7 +333,7 @@ namespace Server.Gumps
 
                 AddHtmlLocalized(45, 240, 350, 30, 1011252, false, false); // Declare this building to be private.
                 AddButton(20, 240, 2714, 2715, 17, GumpButtonType.Reply, 0);
-			
+
                 // Change the sign type
                 AddPage(4);
 
@@ -389,7 +389,7 @@ namespace Server.Gumps
             if (sign == null || from.Map != sign.Map || !from.InRange(sign.GetWorldLocation(), 18))
                 return;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Rename sign
                     {

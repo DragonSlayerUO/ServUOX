@@ -6,18 +6,18 @@ using Server.Items;
 
 namespace Server.Engines.Points
 {
-	public class PointExchanceStone : Item
-	{
-		public override int LabelNumber { get { return 1158449; } } // Cleanup Point Exchange
+    public class PointExchanceStone : Item
+    {
+        public override int LabelNumber { get { return 1158449; } } // Cleanup Point Exchange
         public override bool ForceShowProperties => true;
 
-		[Constructable]
-		public PointExchanceStone()
+        [Constructable]
+        public PointExchanceStone()
             : base(0xEDD)
-		{
-			Hue = 1037;
+        {
+            Hue = 1037;
             Movable = false;
-		}
+        }
 
         public override void OnDoubleClick(Mobile m)
         {
@@ -90,22 +90,22 @@ namespace Server.Engines.Points
         }
 
         public PointExchanceStone(Serial serial)
-			: base( serial )
-		{
-		}
+            : base(serial)
+        {
+        }
 
-		public override void Serialize( GenericWriter writer )
-		{
-			base.Serialize( writer );
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
 
-			writer.Write( (int) 0 );
-		}
+            writer.Write((int)0);
+        }
 
-		public override void Deserialize( GenericReader reader )
-		{
-			base.Deserialize( reader );
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
 
-			int version = reader.ReadInt();
-		}
-	}
+            int version = reader.ReadInt();
+        }
+    }
 }

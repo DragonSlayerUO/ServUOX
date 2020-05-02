@@ -27,7 +27,7 @@ namespace Server.Items
 
         [Constructable]
         public PetBrandingIron(int charges)
-            : base(0x9E87, charges) 
+            : base(0x9E87, charges)
         {
         }
 

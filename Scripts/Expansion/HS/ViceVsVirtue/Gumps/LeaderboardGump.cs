@@ -89,7 +89,7 @@ namespace Server.Engines.VvV
             {
                 VvVPlayerEntry entry = list[i];
 
-                if(entry.Player == null)
+                if (entry.Player == null)
                     continue;
 
                 Guild g = entry.Player.Guild as Guild;

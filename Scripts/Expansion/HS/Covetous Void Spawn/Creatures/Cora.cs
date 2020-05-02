@@ -3,10 +3,10 @@ using System;
 using Server.Items;
 using Server.Engines.VoidPool;
 
- namespace Server.Mobiles
- {
-	public class CoraTheSorceress : BaseCreature, IElementalCreature, IAuraCreature
-	{
+namespace Server.Mobiles
+{
+    public class CoraTheSorceress : BaseCreature, IElementalCreature, IAuraCreature
+    {
         public ElementType ElementType { get { return ElementType.Chaos; } }
 
         public DateTime NextManaDrain { get; set; }
@@ -139,7 +139,7 @@ using Server.Engines.VoidPool;
                     break;
                 case Direction.West:
                     x = this.X - range;
-                    y = this.Y + Utility.RandomMinMax(-offset, offset); 
+                    y = this.Y + Utility.RandomMinMax(-offset, offset);
                     break;
                 case Direction.South:
                     x = this.X + Utility.RandomMinMax(-offset, offset);
@@ -147,7 +147,7 @@ using Server.Engines.VoidPool;
                     break;
                 case Direction.East:
                     x = this.X + range;
-                    y = this.Y + Utility.RandomMinMax(-offset, offset); 
+                    y = this.Y + Utility.RandomMinMax(-offset, offset);
                     break;
             }
 
@@ -303,7 +303,7 @@ using Server.Engines.VoidPool;
             base.OnDeath(c);
 
             if (0.30 > Utility.RandomDouble())
-            {            
+            {
                 Mobile m = DemonKnight.FindRandomPlayer(this);
 
                 if (m != null)
@@ -358,19 +358,19 @@ using Server.Engines.VoidPool;
 
         public CoraTheSorceress(Serial serial)
             : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
-		}
-	}
- }
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+}

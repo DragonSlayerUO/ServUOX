@@ -59,7 +59,7 @@ namespace Server.Spells.Mysticism
                             x >= effectArea.X + effectArea.Width - 1 && y >= effectArea.Y + effectArea.Height - 1 ||
                             y >= effectArea.Y + effectArea.Height - 1 && x == effectArea.X ||
                             y == effectArea.Y && x >= effectArea.X + effectArea.Width - 1)
-                                continue;
+                            continue;
 
                         IPoint3D pnt = new Point3D(x, y, p.Z);
                         SpellHelper.GetSurfaceTop(ref pnt);

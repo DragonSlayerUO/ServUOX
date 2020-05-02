@@ -5,7 +5,7 @@ using Server.Network;
 namespace Server.Items
 {
     public enum AnniversaryType
-    {        
+    {
         ShadowItems,
         CrystalItems
     }
@@ -31,7 +31,7 @@ namespace Server.Items
                 return cliloc;
             }
         }
-        
+
         [CommandProperty(AccessLevel.GameMaster)]
         public AnniversaryType Type { get; set; }
 

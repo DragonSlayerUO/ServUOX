@@ -147,7 +147,7 @@ namespace Server.Engines.Events
         {
             this.Name = string.Format("{0}'s bones", name);
 
-            switch( Utility.Random(10) )
+            switch (Utility.Random(10))
             {
                 case 0:
                     Hue = 0xa09;
@@ -240,7 +240,7 @@ namespace Server.Engines.Events
 
         public override void GenerateLoot()
         {
-            switch( Utility.Random(10) )
+            switch (Utility.Random(10))
             {
                 case 0:
                     PackItem(new LeftArm());

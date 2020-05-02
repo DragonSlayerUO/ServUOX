@@ -4,7 +4,7 @@ using Server.Mobiles;
 namespace Server.Multis
 {
     public class ElfBrigandCamp : BrigandCamp
-    { 
+    {
         [Constructable]
         public ElfBrigandCamp()
             : base()

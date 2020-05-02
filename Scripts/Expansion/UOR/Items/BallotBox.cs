@@ -248,7 +248,7 @@ namespace Server.Items
 
                 bool isOwner = this.m_Box.IsOwner(from);
 
-                switch ( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     case 1: // change topic
                         {

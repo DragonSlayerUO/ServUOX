@@ -39,7 +39,7 @@ namespace Server.Misc
 
         protected override void OnTick()
         {
-            FoodDecay();			
+            FoodDecay();
         }
     }
 }

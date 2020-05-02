@@ -3,7 +3,7 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    [CorpseName("Devourer of Souls [Renowned] corpse")]  
+    [CorpseName("Devourer of Souls [Renowned] corpse")]
     public class DevourerRenowned : BaseRenowned
     {
         [Constructable]

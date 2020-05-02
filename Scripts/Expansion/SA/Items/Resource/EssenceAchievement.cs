@@ -16,7 +16,7 @@ namespace Server.Items
         {
             Stackable = true;
             Amount = amount;
-			Hue = 1724;
+            Hue = 1724;
         }
 
         public EssenceAchievement(Serial serial)
@@ -31,7 +31,7 @@ namespace Server.Items
                 return 1113325;
             }
         }// essence of achievement
-		TextDefinition ICommodity.Description
+        TextDefinition ICommodity.Description
         {
             get
             {

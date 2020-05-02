@@ -385,7 +385,7 @@ namespace Server.Engines.Quests
         {
             foreach (Item item in m_QuestItems)
             {
-                if(item != null && !item.Deleted)
+                if (item != null && !item.Deleted)
                     item.Delete();
             }
 
@@ -445,7 +445,7 @@ namespace Server.Engines.Quests
 
             writer.Write(m_Infos.Count);
 
-            foreach(KeyValuePair<int, HumilityQuestMobileInfo> kvp in m_Infos)
+            foreach (KeyValuePair<int, HumilityQuestMobileInfo> kvp in m_Infos)
             {
                 writer.Write(kvp.Key);
                 kvp.Value.Serialize(writer);

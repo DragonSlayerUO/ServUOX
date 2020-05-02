@@ -248,7 +248,7 @@ namespace Server.Engines.ExploringTheDeep
             sp.Respawn();
 
             #endregion
-             
+
             #region Custeau Perron House
             door = new CusteauPerronHouseDoor();
             WeakEntityCollection.Add(EntityName, door);

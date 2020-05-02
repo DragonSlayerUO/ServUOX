@@ -56,7 +56,7 @@ namespace Server.Items
             WeakEntityCollection.Add(name, altar);
 
             ProfessionalBountyBoard board;
-            
+
             board = new ProfessionalBountyBoard();
             board.MoveToWorld(new Point3D(4544, 2298, -1), Map.Trammel);
             WeakEntityCollection.Add(name, board);

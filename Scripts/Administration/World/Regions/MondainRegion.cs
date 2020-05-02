@@ -11,7 +11,7 @@ namespace Server.Regions
     {
         public MondainRegion(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
-        { 
+        {
         }
 
         public override bool OnBeginSpellCast(Mobile m, ISpell s)
@@ -29,7 +29,7 @@ namespace Server.Regions
                     return false;
                 }
             }
-			
+
             return base.OnBeginSpellCast(m, s);
         }
     }

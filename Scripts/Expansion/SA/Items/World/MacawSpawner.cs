@@ -29,7 +29,7 @@ namespace Server.Items
             Addon.Foil = this;
         }
 
-        public override bool VerifyMove( Mobile from )
+        public override bool VerifyMove(Mobile from)
         {
             if (this.Visible && this.Map != null && this.Map != Map.Internal && Utility.RandomBool())
             {

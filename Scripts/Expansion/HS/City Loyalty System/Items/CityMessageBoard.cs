@@ -10,7 +10,7 @@ using Server.ContextMenus;
 namespace Server.Items
 {
     public class CityMessageBoard : BasePlayerBB
-	{
+    {
         public City City { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -163,22 +163,22 @@ namespace Server.Items
             : base(serial)
         {
         }
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
 
             writer.Write((int)City);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
 
             City = (City)reader.ReadInt();
             CitySystem.Board = this;
-		}
-	}
+        }
+    }
 }

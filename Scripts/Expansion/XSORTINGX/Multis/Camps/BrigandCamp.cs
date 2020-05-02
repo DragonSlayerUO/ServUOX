@@ -3,7 +3,7 @@ using Server.Items;
 using Server.Mobiles;
 
 namespace Server.Multis
-{ 
+{
     public class BrigandCamp : BaseCamp
     {
         [Constructable]
@@ -29,8 +29,8 @@ namespace Server.Multis
 
             AddItem(new Static(0x10ee), 0, 0, 0);
             AddItem(new Static(0xfac), 0, 7, 0);
-			
-            switch ( Utility.Random(3) )
+
+            switch (Utility.Random(3))
             {
                 case 0:
                     {
@@ -51,13 +51,13 @@ namespace Server.Multis
             }
 
             AddCampChests();
-			
-            for (int i = 0; i < 4; i ++)
-            { 
+
+            for (int i = 0; i < 4; i++)
+            {
                 AddMobile(Brigands, Utility.RandomMinMax(-7, 7), Utility.RandomMinMax(-7, 7), 0);
             }
-			
-            switch ( Utility.Random(2) )
+
+            switch (Utility.Random(2))
             {
                 case 0:
                     Prisoner = new Noble();
@@ -69,7 +69,7 @@ namespace Server.Multis
 
             Prisoner.IsPrisoner = true;
             Prisoner.CantWalk = true;
-			
+
             Prisoner.YellHue = Utility.RandomList(0x57, 0x67, 0x77, 0x87, 0x117);
             AddMobile(Prisoner, Utility.RandomMinMax(-2, 2), Utility.RandomMinMax(-2, 2), 0);
         }
@@ -81,7 +81,7 @@ namespace Server.Multis
             {
                 int number;
 
-                switch ( Utility.Random(8) )
+                switch (Utility.Random(8))
                 {
                     case 0:
                         number = 502261;
@@ -116,7 +116,7 @@ namespace Server.Multis
         {
             if (item != null)
                 item.Movable = false;
-				
+
             base.AddItem(item, xOffset, yOffset, zOffset);
         }
 
@@ -131,7 +131,7 @@ namespace Server.Multis
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1: break;
                 case 0:

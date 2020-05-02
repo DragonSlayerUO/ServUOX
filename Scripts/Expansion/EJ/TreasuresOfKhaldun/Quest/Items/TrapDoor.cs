@@ -43,7 +43,7 @@ namespace Server.Engines.Khaldun
 
                 if (!current && _HasBeenExamined)
                 {
-                    HideTimer = Timer.DelayCall(TimeSpan.FromMinutes(20), () => Hide() );
+                    HideTimer = Timer.DelayCall(TimeSpan.FromMinutes(20), () => Hide());
                 }
             }
         }

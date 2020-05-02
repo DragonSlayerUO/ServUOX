@@ -5,8 +5,8 @@ namespace Server.Engines.Quests.Ninja
 {
     public class NoteForZoel : QuestItem
     {
-		public override int LabelNumber { get { return 1063186; } }// A Note for Zoel
-		
+        public override int LabelNumber { get { return 1063186; } }// A Note for Zoel
+
         [Constructable]
         public NoteForZoel()
             : base(0x14EF)

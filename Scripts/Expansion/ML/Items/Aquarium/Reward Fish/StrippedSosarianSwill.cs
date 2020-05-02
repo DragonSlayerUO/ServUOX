@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class StrippedSosarianSwill : BaseFish
-    { 
+    {
         [Constructable]
         public StrippedSosarianSwill()
             : base(0x3B0A)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public StrippedSosarianSwill(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

@@ -180,7 +180,7 @@ namespace Server.Items
                     case 6:
                         cont.RequiredSkill = 80;
                         break;
-					case 7:
+                    case 7:
                         cont.RequiredSkill = 80;
                         break;
                 }
@@ -195,7 +195,7 @@ namespace Server.Items
                 #region Scrolls
                 if (isSos)
                 {
-                    switch(level)
+                    switch (level)
                     {
                         default: count = 20; break;
                         case 0:
@@ -221,15 +221,15 @@ namespace Server.Items
                     {
                         case 1:
                             count = isSos ? Utility.RandomMinMax(2, 6) : 32;
-							propsScale = 0.5625;
+                            propsScale = 0.5625;
                             break;
                         case 2:
                             count = isSos ? Utility.RandomMinMax(10, 15) : 40;
-							propsScale = 0.6875;
+                            propsScale = 0.6875;
                             break;
                         case 3:
                             count = isSos ? Utility.RandomMinMax(15, 20) : 48;
-							propsScale = 0.875;
+                            propsScale = 0.875;
                             break;
                         case 4:
                             count = isSos ? Utility.RandomMinMax(15, 20) : 56;
@@ -503,8 +503,8 @@ namespace Server.Items
                 min = 100; max = 600;
             }
 
-			min = (int)(min * scale);
-			max = (int)(max * scale);
+            min = (int)(min * scale);
+            max = (int)(max * scale);
         }
 
         public static Item GetRandomRecipe()
@@ -642,7 +642,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(4); 
+            writer.Write(4);
 
             writer.Write(FailedLockpick);
             writer.Write((int)_Quality);

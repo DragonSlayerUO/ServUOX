@@ -10,7 +10,7 @@ namespace Server.Mobiles
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "an putrid undead guardian";
-            Body = 722; 
+            Body = 722;
 
             SetStr(79);
             SetDex(63);
@@ -32,7 +32,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 45.4);
             SetSkill(SkillName.Wrestling, 50.7);
 
-            Fame = 3000; 
+            Fame = 3000;
             Karma = -3000;
 
             PackNecroReg(10, 15); /// Stratics didn't specify

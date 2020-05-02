@@ -123,7 +123,7 @@ namespace Server.Spells.SkillMasteries
         {
             if (PartyList != null)
             {
-                foreach(var m in PartyList)
+                foreach (var m in PartyList)
                 {
                     RemovePartyEffects(m);
                 }
@@ -177,7 +177,7 @@ namespace Server.Spells.SkillMasteries
                     {
                         return weapon.DefMaxRange / 2;
                     }
-                       
+
                 }
             }
 

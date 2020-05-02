@@ -4,7 +4,7 @@ using Server.Misc;
 
 namespace Server.Mobiles
 {
-    [CorpseName("Gray Goblin Mage [Renowned] corpse")] 
+    [CorpseName("Gray Goblin Mage [Renowned] corpse")]
     public class GrayGoblinMageRenowned : BaseRenowned
     {
         [Constructable]
@@ -46,8 +46,8 @@ namespace Server.Mobiles
             Karma = -1500;
 
             VirtualArmor = 28;
-			
-            switch ( Utility.Random(20) )
+
+            switch (Utility.Random(20))
             {
                 case 0:
                     PackItem(new Scimitar());
@@ -71,7 +71,7 @@ namespace Server.Mobiles
 
             PackItem(new ThighBoots());
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     PackItem(new Ribs());
@@ -114,13 +114,13 @@ namespace Server.Mobiles
                 return true;
             }
         }
-        
-		public override int GetAngerSound() { return 0x600; }
+
+        public override int GetAngerSound() { return 0x600; }
         public override int GetIdleSound() { return 0x600; }
         public override int GetAttackSound() { return 0x5FD; }
         public override int GetHurtSound() { return 0x5FF; }
         public override int GetDeathSound() { return 0x5FE; }
-		
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich);

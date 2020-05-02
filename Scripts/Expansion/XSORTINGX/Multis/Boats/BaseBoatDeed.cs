@@ -68,7 +68,7 @@ namespace Server.Multis
         public override void OnDoubleClick(Mobile from)
         {
             BaseBoat boat = BaseBoat.FindBoatAt(from, from.Map);
-            
+
             if (from.AccessLevel < AccessLevel.GameMaster && (from.Map == Map.Ilshenar || from.Map == Map.Malas))
             {
                 from.SendLocalizedMessage(1010567, null, 0x25); // You may not place a boat from this location.
@@ -99,7 +99,7 @@ namespace Server.Multis
             if (Deleted)
             {
                 return;
-            }           
+            }
             else
             {
                 Map map = from.Map;

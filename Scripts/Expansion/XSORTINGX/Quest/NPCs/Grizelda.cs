@@ -139,7 +139,7 @@ namespace Server.Engines.Quests.Hag
                                 else
                                 {
                                     Item item;
-							
+
                                     if (Core.AOS)
                                     {
                                         item = Loot.RandomArmorOrShieldOrJewelry();

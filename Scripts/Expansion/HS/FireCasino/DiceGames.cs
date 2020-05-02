@@ -20,8 +20,8 @@ namespace Server.Engines.ResortAndCasino
         Error
     }
 
-	public class BaseDiceGame
-	{
+    public class BaseDiceGame
+    {
         public PlayerMobile Player { get; set; }
         public CasinoDealer Dealer { get; set; }
 
@@ -129,7 +129,7 @@ namespace Server.Engines.ResortAndCasino
             Dealer.AddGame(Player, this);
             SendGump();
         }
-	}
+    }
 
     public class ChucklesLuck : BaseDiceGame
     {
@@ -237,11 +237,11 @@ namespace Server.Engines.ResortAndCasino
                     case HighMiddleLowType.High:
                         if (WinsHi(total)) winnings = CurrentBet * 2; break;
                     case HighMiddleLowType.Middle:
-                         if (WinsMiddle(total)) winnings = CurrentBet * 2; break;
+                        if (WinsMiddle(total)) winnings = CurrentBet * 2; break;
                     case HighMiddleLowType.Low:
-                         if (WinsLow(total)) winnings = CurrentBet * 2; break;
+                        if (WinsLow(total)) winnings = CurrentBet * 2; break;
                     case HighMiddleLowType.Outside:
-                         if (WinsOutside(total)) winnings = CurrentBet * 5; break;
+                        if (WinsOutside(total)) winnings = CurrentBet * 5; break;
                 }
 
                 if (winnings > 0)
@@ -328,7 +328,7 @@ namespace Server.Engines.ResortAndCasino
                 _RollTimer = null;
             }
 
-            if(RollNumber == 1)
+            if (RollNumber == 1)
                 Player.PrivateOverheadMessage(MessageType.Regular, 0x35, 1153631, (CurrentBet / 3).ToString(CultureInfo.GetCultureInfo("en-US")), Player.NetState); // *bets ~1_AMT~ chips on ~2_PROP~*
         }
 

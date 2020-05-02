@@ -38,7 +38,7 @@ namespace Server.Factions
         {
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -118,7 +118,7 @@ namespace Server.Factions
             {
                 TimeSpan period;
 
-                switch ( m_State )
+                switch (m_State)
                 {
                     default:
                     case ElectionState.Pending:
@@ -143,7 +143,7 @@ namespace Server.Factions
             {
                 TimeSpan period;
 
-                switch ( m_State )
+                switch (m_State)
                 {
                     default:
                     case ElectionState.Pending:
@@ -324,7 +324,7 @@ namespace Server.Factions
                 return;
             }
 
-            switch ( m_State )
+            switch (m_State)
             {
                 case ElectionState.Pending:
                     {
@@ -450,7 +450,7 @@ namespace Server.Factions
 
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -545,7 +545,7 @@ namespace Server.Factions
         {
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

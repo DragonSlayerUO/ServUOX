@@ -15,7 +15,7 @@ namespace Server.Items
             Attributes.BonusDex = 5;
         }
 
-        public ClockworkLeggings(Serial serial)  : base(serial)
+        public ClockworkLeggings(Serial serial) : base(serial)
         {
         }
 

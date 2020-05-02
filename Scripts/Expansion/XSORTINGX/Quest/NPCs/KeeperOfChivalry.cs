@@ -35,7 +35,7 @@ namespace Server.Mobiles
             AddItem(new StuddedGorget());
             AddItem(new PlateLegs());
 
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 case 0:
                     AddItem(new PlateHelm());
@@ -51,7 +51,7 @@ namespace Server.Mobiles
                     break;
             }
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     AddItem(new BodySash(0x482));
@@ -72,7 +72,7 @@ namespace Server.Mobiles
             };
             AddItem(shield);
 
-            switch ( Utility.Random(2) )
+            switch (Utility.Random(2))
             {
                 case 0:
                     AddItem(new Boots());

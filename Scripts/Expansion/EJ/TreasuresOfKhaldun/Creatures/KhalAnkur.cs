@@ -142,7 +142,7 @@ namespace Server.Mobiles
 
         public override void OnThink()
         {
-            base.OnThink();            
+            base.OnThink();
 
             if (Spawn == null || Map == null)
                 return;

@@ -3,7 +3,7 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    [CorpseName("Fire Daemon [Renowned] corpse")]  
+    [CorpseName("Fire Daemon [Renowned] corpse")]
     public class FireDaemonRenowned : BaseRenowned
     {
         [Constructable]

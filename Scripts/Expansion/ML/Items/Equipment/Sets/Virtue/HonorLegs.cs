@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B06, 0x2B07)]
     public class HonorLegs : BaseArmor
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public HonorLegs()
             : base(0x2B06)
@@ -14,8 +14,8 @@ namespace Server.Items
             this.Weight = 9.0;
             this.SetHue = 0;
             this.Hue = 0x226;
-			
-            this.SetSelfRepair = 5;			
+
+            this.SetSelfRepair = 5;
             this.SetPhysicalBonus = 5;
             this.SetFireBonus = 5;
             this.SetColdBonus = 5;
@@ -115,14 +115,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

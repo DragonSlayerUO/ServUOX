@@ -24,7 +24,7 @@ namespace Server.Items
 
         [Constructable]
         public LargeGargoyleBedEastAddon()
-        { 
+        {
             //Left Side
             this.AddComponent(new AddonComponent(0x4019), 0, 0, 0);
             this.AddComponent(new AddonComponent(0x401C), 0, 1, 0);

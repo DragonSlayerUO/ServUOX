@@ -19,7 +19,7 @@ namespace Server.Items
 
     public class AncientFarmersKasa : Kasa
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public AncientFarmersKasa()
             : base()
@@ -88,9 +88,9 @@ namespace Server.Items
         }
     }
 
-    public class AncientSamuraiDo : PlateDo 
+    public class AncientSamuraiDo : PlateDo
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public AncientSamuraiDo()
             : base()
@@ -178,7 +178,7 @@ namespace Server.Items
 
     public class ArmsOfTacticalExcellence : LeatherHiroSode
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public ArmsOfTacticalExcellence()
             : base()
@@ -251,7 +251,7 @@ namespace Server.Items
 
     public class BlackLotusHood : ClothNinjaHood
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public BlackLotusHood()
             : base()
@@ -345,7 +345,7 @@ namespace Server.Items
 
     public class DaimyosHelm : PlateBattleKabuto
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public DaimyosHelm()
             : base()
@@ -406,7 +406,7 @@ namespace Server.Items
 
     public class DemonForks : Sai
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public DemonForks()
             : base()
@@ -462,7 +462,7 @@ namespace Server.Items
 
     public class DragonNunchaku : Nunchaku
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public DragonNunchaku()
             : base()
@@ -518,7 +518,7 @@ namespace Server.Items
 
     public class Exiler : Tetsubo
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public Exiler()
             : base()
@@ -580,7 +580,7 @@ namespace Server.Items
 
     public class GlovesOfTheSun : LeatherNinjaMitts
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public GlovesOfTheSun()
             : base()
@@ -641,7 +641,7 @@ namespace Server.Items
 
     public class HanzosBow : Yumi
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public HanzosBow()
             : base()
@@ -697,7 +697,7 @@ namespace Server.Items
 
     public class LegsOfStability : PlateSuneate
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public LegsOfStability()
             : base()
@@ -766,7 +766,7 @@ namespace Server.Items
 
     public class PeasantsBokuto : Bokuto
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public PeasantsBokuto()
             : base()
@@ -822,7 +822,7 @@ namespace Server.Items
 
     public class PilferedDancerFans : Tessen
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public PilferedDancerFans()
             : base()
@@ -877,7 +877,7 @@ namespace Server.Items
 
     public class TheDestroyer : NoDachi
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public TheDestroyer()
             : base()
@@ -932,7 +932,7 @@ namespace Server.Items
 
     public class TomeOfEnlightenment : Spellbook
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public TomeOfEnlightenment()
             : base()
@@ -974,7 +974,7 @@ namespace Server.Items
 
     public class LeurociansMempoOfFortune : LeatherMempo
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public LeurociansMempoOfFortune()
             : base()
@@ -1065,7 +1065,7 @@ namespace Server.Items
     //Non weapon/armor ones:
     public class AncientUrn : Item
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         private static readonly string[] m_Names = new string[]
         {
             "Akira",
@@ -1181,7 +1181,7 @@ namespace Server.Items
 
     public class HonorableSwords : Item
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         private string m_SwordsName;
         [Constructable]
         public HonorableSwords(string swordsName)
@@ -1255,7 +1255,7 @@ namespace Server.Items
     [Flipable(0x2811, 0x2812)]
     public class ChestOfHeirlooms : LockableContainer
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public ChestOfHeirlooms()
             : base(0x2811)
@@ -1264,21 +1264,21 @@ namespace Server.Items
             LockLevel = 95;
             MaxLockLevel = 140;
             RequiredSkill = 95;
-			
+
             TrapType = TrapType.ExplosionTrap;
             TrapLevel = 10;
             TrapPower = 100;
-			
+
             GumpID = 0x10B;
-			
+
             for (int i = 0; i < 10; ++i)
             {
                 Item item = Loot.ChestOfHeirloomsContains();
-				
+
                 int attributeCount = Utility.RandomMinMax(1, 5);
                 int min = 20;
                 int max = 80;
-				
+
                 if (item is BaseWeapon)
                 {
                     BaseWeapon weapon = (BaseWeapon)item;
@@ -1308,7 +1308,7 @@ namespace Server.Items
                     BaseRunicTool.ApplyAttributesTo((BaseHat)item, attributeCount, min, max);
                 else if (item is BaseJewel && Core.AOS)
                     BaseRunicTool.ApplyAttributesTo((BaseJewel)item, attributeCount, min, max);
-				
+
                 DropItem(item);
             }
         }
@@ -1342,7 +1342,7 @@ namespace Server.Items
 
     public class FluteOfRenewal : BambooFlute
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public FluteOfRenewal()
             : base()
@@ -1398,7 +1398,7 @@ namespace Server.Items
 
     public class LesserPigmentsOfTokuno : BasePigmentsOfTokuno
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         private static readonly int[][] m_Table = new int[][]
         {
             // Hue, Label
@@ -1444,7 +1444,7 @@ namespace Server.Items
             set
             {
                 m_Type = value;
-				
+
                 int v = (int)m_Type;
 
                 if (v >= 0 && v < m_Table.Length)
@@ -1465,7 +1465,7 @@ namespace Server.Items
 
             if (v < 0 || v >= m_Table.Length)
                 v = 0;
-			
+
             return m_Table[v];
         }
 
@@ -1483,8 +1483,8 @@ namespace Server.Items
             base.Deserialize(reader);
 
             int version = (InheritsItem ? 0 : reader.ReadInt()); // Required for BasePigmentsOfTokuno insertion
-			
-            switch ( version )
+
+            switch (version)
             {
                 case 1:
                     Type = (LesserPigmentType)reader.ReadEncodedInt();
@@ -1497,7 +1497,7 @@ namespace Server.Items
 
     public class MetalPigmentsOfTokuno : BasePigmentsOfTokuno
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public MetalPigmentsOfTokuno()
             : base(1)

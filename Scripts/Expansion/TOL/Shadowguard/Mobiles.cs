@@ -69,7 +69,7 @@ namespace Server.Engines.Shadowguard
                 BlockReflect = true;
                 AOS.Damage(from, this, Math.Max(1, (int)((double)dam * .37)), 0, 0, 0, 0, 0, 0, 100);
                 BlockReflect = false;
-                
+
                 from.PlaySound(0x1F1);
             }
 

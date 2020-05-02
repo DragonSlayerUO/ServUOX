@@ -31,7 +31,7 @@ namespace Server.Factions.AI
         {
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -89,7 +89,7 @@ namespace Server.Factions.AI
 
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

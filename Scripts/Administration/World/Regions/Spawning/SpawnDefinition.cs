@@ -16,7 +16,7 @@ namespace Server.Regions
 
         public static SpawnDefinition GetSpawnDefinition(XmlElement xml)
         {
-            switch ( xml.Name )
+            switch (xml.Name)
             {
                 case "object":
                     {

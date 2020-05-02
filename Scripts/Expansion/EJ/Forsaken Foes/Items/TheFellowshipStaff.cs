@@ -12,7 +12,7 @@ namespace Server.Items
 
         [Constructable]
         public TheFellowshipStaff()
-            : base (0xA343)
+            : base(0xA343)
         {
             Hue = 2721;
         }
@@ -23,7 +23,7 @@ namespace Server.Items
         public override int AosMinDamage { get { return 15; } }
         public override int AosMaxDamage { get { return 18; } }
         public override float MlSpeed { get { return 3.25f; } }
-        
+
         public override int InitMinHits { get { return 30; } }
         public override int InitMaxHits { get { return 60; } }
 
@@ -37,7 +37,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

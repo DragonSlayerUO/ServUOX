@@ -39,7 +39,7 @@ namespace Server.Mobiles
             Fame = 1400;
             Karma = -1400;
 
-            switch ( Utility.Random(12) )
+            switch (Utility.Random(12))
             {
                 case 0:
                     PackItem(new LeatherGorget());

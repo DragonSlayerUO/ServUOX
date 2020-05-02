@@ -414,7 +414,7 @@ namespace Server.Mobiles.MannequinProperty
         public override AosElementAttribute Element { get { return AosElementAttribute.Fire; } }
         public override int SpriteW { get { return 180; } }
         public override int SpriteH { get { return 210; } }
-    }    
+    }
 
     public class PoisonDamageProperty : ElementalDamageAttr
     {
@@ -441,7 +441,7 @@ namespace Server.Mobiles.MannequinProperty
         public override AosElementAttribute Element { get { return AosElementAttribute.Chaos; } }
         public override int SpriteW { get { return 30; } }
         public override int SpriteH { get { return 240; } }
-    }   
+    }
 
     public class VelocityProperty : ValuedProperty
     {
@@ -484,5 +484,5 @@ namespace Server.Mobiles.MannequinProperty
 
             return false;
         }
-    }    
+    }
 }

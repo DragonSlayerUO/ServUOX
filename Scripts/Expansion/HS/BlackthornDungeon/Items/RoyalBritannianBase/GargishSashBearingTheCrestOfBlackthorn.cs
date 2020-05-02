@@ -6,7 +6,7 @@ namespace Server.Items
     public class GargishSashBearingTheCrestOfBlackthorn : GargishSash
     {
         public override bool IsArtifact { get { return true; } }
-        
+
         [Constructable]
         public GargishSashBearingTheCrestOfBlackthorn()
             : base()

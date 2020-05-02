@@ -2,11 +2,11 @@ using System;
 
 namespace Server.Items
 {
-    [Flipable(0x4919, 0x491A)]     
+    [Flipable(0x4919, 0x491A)]
     public class GoblinTopiary : Item
     {
 
-        public override int LabelNumber{ get{ return 1070878; } } // a decorative topiary
+        public override int LabelNumber { get { return 1070878; } } // a decorative topiary
 
         [Constructable]
         public GoblinTopiary() : base(0x4919)

@@ -25,7 +25,7 @@ namespace Server.Factions
 
             // NOTE: Gump not entirely OSI-accurate, intentionally so
 
-            switch ( election.State )
+            switch (election.State)
             {
                 case ElectionState.Pending:
                     {
@@ -101,7 +101,7 @@ namespace Server.Factions
 
         public override void OnResponse(NetState sender, RelayInfo info)
         {
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0: // back
                     {

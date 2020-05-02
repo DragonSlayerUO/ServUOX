@@ -4,7 +4,7 @@ using Server.Spells;
 
 namespace Server.Mobiles
 {
-    [CorpseName("a juka corpse")] 
+    [CorpseName("a juka corpse")]
     public class JukaLord : BaseCreature
     {
         public override double HealChance => 1.0;
@@ -43,7 +43,7 @@ namespace Server.Mobiles
             Fame = 15000;
             Karma = -15000;
 
-            VirtualArmor = 28;                
+            VirtualArmor = 28;
 
             AddItem(new JukaBow());
             AddItem(new Arrow(Utility.RandomMinMax(15, 25)));

@@ -42,7 +42,7 @@ namespace Server.Spells.Chivalry
                 */
                 int itemID, soundID;
 
-                switch ( weapon.Skill )
+                switch (weapon.Skill)
                 {
                     case SkillName.Macing:
                         itemID = 0xFB4;

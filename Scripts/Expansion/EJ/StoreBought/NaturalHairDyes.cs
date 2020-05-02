@@ -189,18 +189,18 @@ namespace Server.Items
             {
                 if (!Dye.Deleted && Dye.IsChildOf(User.Backpack))
                 {
-					if (User.HairItemID !=0)
-					{
-						User.HairHue = Hue;
+                    if (User.HairItemID != 0)
+                    {
+                        User.HairHue = Hue;
 
-						User.SendLocalizedMessage(501199);  // You dye your hair
-						Dye.Delete();
-						User.PlaySound(0x4E);
-					}
-					else
-					{
-						User.SendLocalizedMessage(502623); // You have no hair to dye and you cannot use this.
-					}
+                        User.SendLocalizedMessage(501199);  // You dye your hair
+                        Dye.Delete();
+                        User.PlaySound(0x4E);
+                    }
+                    else
+                    {
+                        User.SendLocalizedMessage(502623); // You have no hair to dye and you cannot use this.
+                    }
                 }
                 else
                 {

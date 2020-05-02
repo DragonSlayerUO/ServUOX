@@ -35,7 +35,7 @@ namespace Server.Engines.Quests.Haven
             this.AddItem(new LeatherGorget());
 
             Item weapon;
-            switch ( Utility.Random(6) )
+            switch (Utility.Random(6))
             {
                 case 0:
                     weapon = new Broadsword();
@@ -71,7 +71,7 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override bool ClickTitle{ get{ return false; } }
+        public override bool ClickTitle { get { return false; } }
         public override bool IsEnemy(Mobile m)
         {
             if (m.Player || m is BaseVendor)

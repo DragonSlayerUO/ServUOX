@@ -98,7 +98,7 @@ namespace Server.Engines.VvV
             foreach (Mobile m in eable)
             {
                 if (Owner == null || (ViceVsVirtueSystem.IsEnemy(Owner, m) && m.InLOS(this.Location)
-                                                                           && m is PlayerMobile 
+                                                                           && m is PlayerMobile
                                                                            && m.AccessLevel == AccessLevel.Player))
                 {
                     list.Add(m);

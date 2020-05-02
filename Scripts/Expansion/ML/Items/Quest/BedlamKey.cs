@@ -39,7 +39,7 @@ namespace Server.Items
         {
             if (from.Region != null && from.Region.IsPartOf("Bedlam"))
                 return base.CanOfferConfirmation(from);
-				
+
             return false;
         }
     }

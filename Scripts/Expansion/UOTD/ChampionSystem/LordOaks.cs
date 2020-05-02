@@ -317,7 +317,7 @@ namespace Server.Mobiles
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

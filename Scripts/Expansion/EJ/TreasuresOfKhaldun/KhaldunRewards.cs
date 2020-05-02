@@ -9,7 +9,7 @@ namespace Server.Engines.Khaldun
     public static class KhaldunRewards
     {
         public static List<CollectionItem> Rewards { get; set; }
-        
+
         public static void Initialize()
         {
             Rewards = new List<CollectionItem>();

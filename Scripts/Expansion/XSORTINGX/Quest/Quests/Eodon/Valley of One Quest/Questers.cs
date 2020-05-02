@@ -79,7 +79,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(UnitingTheTribesQuest) };
 
-        public override bool ChangeRace=> false;
+        public override bool ChangeRace => false;
 
         [Constructable]
         public SirGeoffery()

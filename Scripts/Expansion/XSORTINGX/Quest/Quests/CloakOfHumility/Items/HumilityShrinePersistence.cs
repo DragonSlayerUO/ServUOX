@@ -63,7 +63,7 @@ namespace Server.Engines.Quests
             : base(serial)
         {
         }
- 
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

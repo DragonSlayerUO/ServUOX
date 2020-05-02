@@ -497,7 +497,7 @@ namespace Server.Items
             }
 
             var n = (ld.Name ?? string.Empty).ToLower();
-                
+
             if (n != "dirt" && n != "grass" && n != "jungle" && n != "forest" && n != "snow")
             {
                 return false;
@@ -514,7 +514,7 @@ namespace Server.Items
                 }
 
                 n = (td.Name ?? string.Empty).ToLower();
-                
+
                 if (n != "dirt" && n != "grass" && n != "jungle" && n != "forest" && n != "snow")
                 {
                     return false;
@@ -723,7 +723,7 @@ namespace Server.Items
             {
                 BaseCreature bc;
                 var list = GetSpawnList(spawns, level);
-                 
+
                 try
                 {
                     bc = (BaseCreature)Activator.CreateInstance(list[Utility.Random(list.Length)]);
@@ -1596,7 +1596,7 @@ namespace Server.Items
                     {
                         var guardian = TreasureMapInfo.NewSystem ? Utility.RandomDouble() >= 0.3 : true;
 
-                        BaseCreature bc = Spawn(m_TreasureMap.Level, m_Chest.Location, m_Chest.Map, null, guardian);                        
+                        BaseCreature bc = Spawn(m_TreasureMap.Level, m_Chest.Location, m_Chest.Map, null, guardian);
 
                         if (bc != null && guardian)
                         {

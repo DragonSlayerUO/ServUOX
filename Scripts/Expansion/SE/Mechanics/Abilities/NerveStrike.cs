@@ -53,14 +53,14 @@ namespace Server.Items
                     doEffects = true;
                 }
 
-                if(attacker is BaseCreature)
+                if (attacker is BaseCreature)
                     PetTrainingHelper.OnWeaponAbilityUsed((BaseCreature)attacker, SkillName.Bushido);
             }
             else
             {
                 AOS.Damage(defender, attacker, (int)(15.0 * (attacker.Skills[SkillName.Bushido].Value - 50.0) / 70.0 + 10), true, 100, 0, 0, 0, 0); //10-25
 
-                if(!immune)
+                if (!immune)
                 {
                     defender.Freeze(TimeSpan.FromSeconds(2.0));
                     doEffects = true;

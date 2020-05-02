@@ -95,7 +95,7 @@ namespace Server.Engines.Quests
                 delegate
                 {
                     Spawn();
-                }));            
+                }));
 
             base.OnDelete();
         }

@@ -7,8 +7,8 @@ using Server.Items;
 
 namespace Server.Engines.HuntsmasterChallenge
 {
-	public class HuntmasterRewardGump : BaseRewardGump
-	{
+    public class HuntmasterRewardGump : BaseRewardGump
+    {
         public HuntmasterRewardGump(Mobile huntmaster, PlayerMobile pm)
             : base(huntmaster, pm, _Collections, 1155726) // Huntmaster's Challenge
         {
@@ -105,5 +105,5 @@ namespace Server.Engines.HuntsmasterChallenge
             new CollectionItem(typeof(LumbjacksSatchel), 0xA274, 1158772, 0, 1.0),
             new CollectionItem(typeof(HarvestersAxe), 0x1443, 1158774, 0, 1.0),
         };
-	}
+    }
 }

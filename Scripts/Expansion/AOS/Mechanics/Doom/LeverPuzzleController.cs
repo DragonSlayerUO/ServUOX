@@ -9,21 +9,21 @@ namespace Server.Engines.Doom
 {
     public class LeverPuzzleController : Item
     {
-        public static string[] Msgs = 
+        public static string[] Msgs =
         {
             "You are pinned down by the weight of the boulder!!!", // 0
             "A speeding rock hits you in the head!", // 1
             "OUCH!"							// 2
         };
         /* font&hue for above msgs. index matches */
-        public static int[][] MsgParams = 
+        public static int[][] MsgParams =
         {
             new int[] { 0x66d, 3 },
             new int[] { 0x66d, 3 },
             new int[] { 0x34, 3 }
         };
         /* World data for items */
-        public static int[][] TA = 
+        public static int[][] TA =
         {
             new int[] { 316, 64, 5 },
             /* 3D Coords for levers */ new int[] { 323, 58, 5 },
@@ -51,7 +51,7 @@ namespace Server.Engines.Doom
         /* Lamp Room Area */
         public static Rectangle2D lr_Rect = new Rectangle2D(465, 92, 10, 10);
         /* Lamp Room area Poison message data */
-        public static int[][] PA = 
+        public static int[][] PA =
         {
             new int[] { 0, 0, 0xA6 },
             new int[] { 1050001, 0x485, 0xAA },
@@ -60,7 +60,7 @@ namespace Server.Engines.Doom
             new int[] { 1050057, 0x485, 0xA4 },
             new int[] { 1062091, 0x23F3, 0xAC }
         };
-        public static Poison[] PA2 = 
+        public static Poison[] PA2 =
         {
             Poison.Lesser,
             Poison.Regular,
@@ -147,20 +147,20 @@ namespace Server.Engines.Doom
         }
         public static void Initialize()
         {
-			CommandSystem.Register("GenLeverPuzzle", AccessLevel.Administrator, new CommandEventHandler(GenLampPuzzle_OnCommand));
-			CommandSystem.Register("LampPuzzleDelete", AccessLevel.Administrator, new CommandEventHandler(LampPuzzleDelete_OnCommand));
-		}
+            CommandSystem.Register("GenLeverPuzzle", AccessLevel.Administrator, new CommandEventHandler(GenLampPuzzle_OnCommand));
+            CommandSystem.Register("LampPuzzleDelete", AccessLevel.Administrator, new CommandEventHandler(LampPuzzleDelete_OnCommand));
+        }
 
-		[Usage("LampPuzzleDelete")]
-		[Description("Deletes lamp room and lever puzzle in doom.")]
-		public static void LampPuzzleDelete_OnCommand(CommandEventArgs e)
-		{
-			WeakEntityCollection.Delete("LeverPuzzleController");
-			e.Mobile.SendMessage("Lamp room puzzle successfully deleted.");
-		}
+        [Usage("LampPuzzleDelete")]
+        [Description("Deletes lamp room and lever puzzle in doom.")]
+        public static void LampPuzzleDelete_OnCommand(CommandEventArgs e)
+        {
+            WeakEntityCollection.Delete("LeverPuzzleController");
+            e.Mobile.SendMessage("Lamp room puzzle successfully deleted.");
+        }
 
 
-		[Usage("GenLeverPuzzle")]
+        [Usage("GenLeverPuzzle")]
         [Description("Generates lamp room and lever puzzle in doom.")]
         public static void GenLampPuzzle_OnCommand(CommandEventArgs e)
         {
@@ -173,9 +173,9 @@ namespace Server.Engines.Doom
                 }
             }
             e.Mobile.SendMessage("Generating Lamp Room puzzle...");
-			LeverPuzzleController controller = new LeverPuzzleController();
-			WeakEntityCollection.Add("LeverPuzzleController", controller);
-			controller.MoveToWorld(lp_Center, Map.Malas);
+            LeverPuzzleController controller = new LeverPuzzleController();
+            WeakEntityCollection.Add("LeverPuzzleController", controller);
+            controller.MoveToWorld(lp_Center, Map.Malas);
 
             if (!installed)
                 e.Mobile.SendMessage("There was a problem generating the puzzle.");
@@ -283,7 +283,7 @@ namespace Server.Engines.Doom
         }
 
         /* I cant find any better way to send "speech" using fonts other than default */
-        public static void POHMessage(Mobile from, int index) 
+        public static void POHMessage(Mobile from, int index)
         {
             Packet p = new AsciiMessage(from.Serial, from.Body, MessageType.Regular, MsgParams[index][0], MsgParams[index][1], from.Name, Msgs[index]);
             p.Acquire();
@@ -433,7 +433,7 @@ namespace Server.Engines.Doom
                     GenKey();
                     if ((Successful = (m_Player = GetOccupant(0))) != null)
                     {
-                        SendLocationEffect(lp_Center, 0x1153, 0, 60, 1); 
+                        SendLocationEffect(lp_Center, 0x1153, 0, 60, 1);
                         PlaySounds(lp_Center, cs1);
 
                         Effects.SendBoltEffect(m_Player, true);
@@ -562,7 +562,7 @@ namespace Server.Engines.Doom
                 {
                     Count++;
                     if (Count == 1) /* TODO consolidate */
-                    { 
+                    {
                         m_Player.Paralyze(TimeSpan.FromSeconds(2));
                         Effects.SendTargetEffect(m_Player, 0x11B7, 20, 10);
                         PlayerSendASCII(m_Player, 0);  // You are pinned down ...

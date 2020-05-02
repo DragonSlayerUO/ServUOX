@@ -38,7 +38,7 @@ namespace Server.Engines.Points
 
             if (!Enabled || bc == null || bc.Controlled || bc.Summoned || !damager.Alive)
                 return;
-                
+
             Region r = bc.Region;
 
             if (damager is PlayerMobile && r.IsPartOf("KotlCity"))

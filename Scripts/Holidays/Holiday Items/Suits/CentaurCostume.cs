@@ -12,8 +12,8 @@ namespace Server.Items
         {
             this.CostumeBody = 101;
         }
-		
-		public override int LabelNumber
+
+        public override int LabelNumber
         {
             get
             {

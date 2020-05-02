@@ -19,7 +19,7 @@ namespace Server.Mobiles
             SetInt(475, 675);
 
             SetHits(1000, 2000);
-            
+
             SetDamage(24, 33);
 
             SetDamageType(ResistanceType.Physical, 100);

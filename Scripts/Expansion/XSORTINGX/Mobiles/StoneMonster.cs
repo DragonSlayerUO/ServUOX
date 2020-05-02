@@ -12,7 +12,7 @@ namespace Server.Mobiles
         {
             this.Name = "Stone Monster";
 
-            switch ( Utility.Random(6) )
+            switch (Utility.Random(6))
             {
                 default:
                 case 0:
@@ -26,20 +26,20 @@ namespace Server.Mobiles
                     break;
                 case 3:
                     this.Body = 85;
-                    break; 
+                    break;
                 case 4:
                     this.Body = 310;
                     break;
                 case 5:
                     this.Body = 83;
-                    break;						
+                    break;
             }
 
             this.Hue = 0;
-                   
+
             if (this.Body == 86)
             {
-                this.BaseSoundID = 634;  
+                this.BaseSoundID = 634;
                 this.SetStr(150, 320);
                 this.SetDex(94, 190);
                 this.SetInt(64, 160);
@@ -59,7 +59,7 @@ namespace Server.Mobiles
 
                 this.SetSkill(SkillName.MagicResist, 70.1, 85.0);
                 this.SetSkill(SkillName.Swords, 60.1, 85.0);
-                this.SetSkill(SkillName.Tactics, 75.1, 90.0); 
+                this.SetSkill(SkillName.Tactics, 75.1, 90.0);
             }
             else if (this.Body == 722)
             {
@@ -76,7 +76,7 @@ namespace Server.Mobiles
                 this.SetDamageType(ResistanceType.Physical, 10);
                 this.SetDamageType(ResistanceType.Cold, 50);
                 this.SetDamageType(ResistanceType.Energy, 40);
-	 
+
                 this.SetResistance(ResistanceType.Physical, 45, 55);
                 this.SetResistance(ResistanceType.Fire, 30, 40);
                 this.SetResistance(ResistanceType.Cold, 40, 55);
@@ -93,7 +93,7 @@ namespace Server.Mobiles
                     this.PackItem(new GargoylesPickaxe());
 
                 if (0.2 > Utility.RandomDouble())
-                    this.PackItem(new UndeadGargHorn()); 
+                    this.PackItem(new UndeadGargHorn());
                 //if ( 0.2 > Utility.RandomDouble() )
                 //PackItem( new UndeadGargoyleMedallions() );
             }
@@ -175,7 +175,7 @@ namespace Server.Mobiles
             }
             else if (this.Body == 83)
             {
-                this.BaseSoundID = 427; 
+                this.BaseSoundID = 427;
                 this.SetStr(767, 945);
                 this.SetDex(66, 75);
                 this.SetInt(46, 70);
@@ -196,7 +196,7 @@ namespace Server.Mobiles
                 this.SetSkill(SkillName.Tactics, 90.1, 100.0);
                 this.SetSkill(SkillName.Wrestling, 90.1, 100.0);
             }
-			
+
             this.Fame = 8000;
             this.Karma = -8000;
 

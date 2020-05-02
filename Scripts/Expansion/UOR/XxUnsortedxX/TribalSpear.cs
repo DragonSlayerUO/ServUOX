@@ -5,16 +5,16 @@ namespace Server.Items
     [Flipable(0xF62, 0xF63)]
     public class TribalSpear : BaseSpear
     {
-		public override int LabelNumber { get { return 1062474; } } // Tribal Spear
-		
+        public override int LabelNumber { get { return 1062474; } } // Tribal Spear
+
         [Constructable]
         public TribalSpear()
             : base(0xF62)
         {
             Weight = 7.0;
             Hue = 837;
-			Attributes.WeaponDamage = 20;
-			WeaponAttributes.DurabilityBonus = 20;
+            Attributes.WeaponDamage = 20;
+            WeaponAttributes.DurabilityBonus = 20;
         }
 
         public TribalSpear(Serial serial)
@@ -112,8 +112,8 @@ namespace Server.Items
             {
                 return 80;
             }
-        }       
-        
+        }
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -123,7 +123,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();		
+            int version = reader.ReadInt();
         }
     }
 }

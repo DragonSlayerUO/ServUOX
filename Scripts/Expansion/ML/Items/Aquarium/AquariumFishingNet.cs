@@ -112,7 +112,7 @@ namespace Server.Items
                 if (max > 20)
                     max = 20;
 
-                switch ( Utility.Random(max) )
+                switch (Utility.Random(max))
                 {
                     case 0:
                         return new MinocBlueFish();

@@ -70,7 +70,7 @@ namespace Server.Mobiles
                 return HideType.Spined;
             }
         }
-		public override int TreasureMapLevel
+        public override int TreasureMapLevel
         {
             get
             {
@@ -81,7 +81,7 @@ namespace Server.Mobiles
         {
             AddLoot(LootPack.Rich, 2);
         }
-      
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -18,7 +18,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override void OnDoubleClick(Mobile from)
         {
             PlayerMobile pm = from as PlayerMobile;

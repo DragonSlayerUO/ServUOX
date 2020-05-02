@@ -15,7 +15,7 @@ namespace Server.Items
         Splintering,
         Searing,
         Bane,
-        BoneBreaker, 
+        BoneBreaker,
         Swarm,
         Sparks,
     }
@@ -53,7 +53,7 @@ namespace Server.Items
         {
             StopTimer();
 
-            if(Effects.Contains(this))
+            if (Effects.Contains(this))
                 Effects.Remove(this);
         }
 
@@ -227,11 +227,11 @@ namespace Server.Items
             if (m_Charges >= 20)
                 return;
 
-            double pd = 0; double fd = 0; 
-            double cd = 0; double pod = 0; 
+            double pd = 0; double fd = 0;
+            double cd = 0; double pod = 0;
             double ed = 0; double dd = 0;
 
-            double k = (double)GetValue(DamageType.Kinetic,  this.Mobile) / 100;
+            double k = (double)GetValue(DamageType.Kinetic, this.Mobile) / 100;
             double f = (double)GetValue(DamageType.Fire, this.Mobile) / 100;
             double c = (double)GetValue(DamageType.Cold, this.Mobile) / 100;
             double p = (double)GetValue(DamageType.Poison, this.Mobile) / 100;

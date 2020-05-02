@@ -27,7 +27,7 @@ namespace Server.Engines.Chat
         {
             AddChannel(name).AlwaysAvailable = true;
         }
-               
+
         public Channel(string name)
         {
             Name = name;

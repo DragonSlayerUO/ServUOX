@@ -169,7 +169,7 @@ namespace Server.PathAlgorithms.FastAStar
 
             for (int i = 0; i < 8; ++i)
             {
-                switch ( i )
+                switch (i)
                 {
                     default:
                     case 0:

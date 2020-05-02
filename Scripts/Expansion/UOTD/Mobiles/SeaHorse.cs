@@ -7,7 +7,7 @@ namespace Server.Mobiles
         public SeaHorse()
             : this("a sea horse")
         {
-			CanSwim = true;
+            CanSwim = true;
         }
 
         [Constructable]
@@ -37,12 +37,12 @@ namespace Server.Mobiles
 
             int version = reader.ReadInt();
 
-			switch (version)
-			{
-				case 0:
-					CanSwim = true;
-					break;
-			}
+            switch (version)
+            {
+                case 0:
+                    CanSwim = true;
+                    break;
+            }
         }
     }
 }

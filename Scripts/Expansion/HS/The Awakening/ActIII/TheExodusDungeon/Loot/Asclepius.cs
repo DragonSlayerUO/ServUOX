@@ -10,7 +10,7 @@ namespace Server.Items
 
         [Constructable]
         public Asclepius()
-        { 
+        {
         }
 
         public override bool CanFortify { get { return false; } }

@@ -21,7 +21,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override int BasePhysicalResistance
         {
             get

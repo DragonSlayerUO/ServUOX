@@ -39,7 +39,7 @@ namespace Server.Items
 
             foreach (PlayerMobile pm in SeedUsageList.Keys)
             {
-               if (SeedUsageList[pm] < DateTime.Now + Cooldown)
+                if (SeedUsageList[pm] < DateTime.Now + Cooldown)
                 {
                     toRemove.Add(pm);
                 }
@@ -77,7 +77,7 @@ namespace Server.Items
             }
             else
             {
-                by.SendLocalizedMessage(1079263,((int)(((SeedUsageList[by] + Cooldown)-DateTime.Now).TotalSeconds)).ToString());
+                by.SendLocalizedMessage(1079263, ((int)(((SeedUsageList[by] + Cooldown) - DateTime.Now).TotalSeconds)).ToString());
             }
         }
 
@@ -89,10 +89,10 @@ namespace Server.Items
             if (diff == 0)
             {
                 pm.SendLocalizedMessage(1049547); //You are already at full health 
-                return; 
+                return;
             }
             toHeal = Math.Min(toHeal, diff);
-            
+
             pm.Hits += toHeal;
             this.Consume();
 
@@ -102,7 +102,7 @@ namespace Server.Items
             }
             else
             {
-                SeedUsageList[pm] = DateTime.Now; 
+                SeedUsageList[pm] = DateTime.Now;
             }
             pm.SendLocalizedMessage(1095126);//The bitter seed instantly restores some of your health!
         }

@@ -37,7 +37,7 @@ namespace Server.Mobiles
             Karma = -3500;
 
             VirtualArmor = 32;
-         }
+        }
 
         public AgapiteElemental(Serial serial)
             : base(serial)

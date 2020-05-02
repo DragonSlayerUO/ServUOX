@@ -174,7 +174,7 @@ namespace Server.Gumps
 
         private static readonly int[] m_FoundationNumbers = (Core.ML ? new int[]
         {
-            20, 189, 765, 65, 101, 11767, 11771, 11207, 11715, 11181, 13938, 13942, 16806, 16732, 19208, 39614, 39888 
+            20, 189, 765, 65, 101, 11767, 11771, 11207, 11715, 11181, 13938, 13942, 16806, 16732, 19208, 39614, 39888
         } : new int[]
             {
                 20, 189, 765, 65, 101
@@ -277,7 +277,7 @@ namespace Server.Gumps
             AddPageButton(Core.TOL ? 10 : 150, 70, GetButtonID(1, 3), 1060671, HouseGumpPageAOS.Customize);
             AddPageButton(Core.TOL ? 10 : 150, 90, GetButtonID(1, 4), 1060672, HouseGumpPageAOS.Ownership);
 
-            switch ( page )
+            switch (page)
             {
                 case HouseGumpPageAOS.Information:
                     {
@@ -289,7 +289,7 @@ namespace Server.Gumps
                         AddHtmlLocalized(20, 210, 380, 20, (house is HouseFoundation) ? 1060681 : 1060680, SelectedColor, false, false); // This is a (pre | custom)-built house.
                         AddHtmlLocalized(20, 230, 380, 20, house.Public ? 1060678 : 1060679, SelectedColor, false, false); // This house is (private | open to the public).
 
-                        switch ( house.DecayType )
+                        switch (house.DecayType)
                         {
                             case DecayType.Ageless:
                             case DecayType.AutoRefresh:
@@ -504,7 +504,7 @@ namespace Server.Gumps
                 case HouseGumpPageAOS.ChangeSign:
                     {
                         int index = 0;
-					
+
                         if (_HouseSigns.Count == 0)
                         {
                             // Add standard signs
@@ -517,7 +517,7 @@ namespace Server.Gumps
                             _HouseSigns.Add(2966);
                             _HouseSigns.Add(3140);
                         }
-					
+
                         int signsPerPage = Core.ML ? 24 : 18;
                         int totalSigns = Core.ML ? 56 : 54;
                         int pages = (int)Math.Ceiling((double)totalSigns / signsPerPage);
@@ -933,11 +933,11 @@ namespace Server.Gumps
             if (!isFriend)
                 return;
 
-            switch ( type )
+            switch (type)
             {
                 case 0:
                     {
-                        switch ( index )
+                        switch (index)
                         {
                             case 0: // Banish
                                 {
@@ -981,7 +981,7 @@ namespace Server.Gumps
                     {
                         HouseGumpPageAOS page;
 
-                        switch ( index )
+                        switch (index)
                         {
                             case 0:
                                 page = HouseGumpPageAOS.Information;
@@ -1007,7 +1007,7 @@ namespace Server.Gumps
                     }
                 case 3:
                     {
-                        switch ( index )
+                        switch (index)
                         {
                             case 0: // View Co-Owner List
                                 {
@@ -1179,7 +1179,7 @@ namespace Server.Gumps
                     }
                 case 5:
                     {
-                        switch ( index )
+                        switch (index)
                         {
                             case 0: // Convert Into Customizable House
                                 {
@@ -1341,13 +1341,13 @@ namespace Server.Gumps
                     }
                 case 6:
                     {
-                        switch ( index )
+                        switch (index)
                         {
                             case 0: // Demolish
                                 {
                                     if (isOwner && m_House.MovingCrate == null && m_House.InternalizedVendors.Count == 0)
                                     {
-                                        if (!Guilds.Guild.NewGuildSystem && m_House.FindGuildstone() != null) 
+                                        if (!Guilds.Guild.NewGuildSystem && m_House.FindGuildstone() != null)
                                         {
                                             from.SendLocalizedMessage(501389); // You cannot redeed a house with a guildstone inside.
                                         }
@@ -1355,7 +1355,7 @@ namespace Server.Gumps
                                         {
                                             from.SendLocalizedMessage(1080178); // You must wait one hour between each house demolition.
                                         }
-                                        else 
+                                        else
                                         {
                                             from.CloseGump(typeof(HouseDemolishGump));
                                             from.SendGump(new HouseDemolishGump(from, m_House));
@@ -1417,7 +1417,7 @@ namespace Server.Gumps
 
                             if (Core.ML && index >= 5)
                             {
-                                switch( index )
+                                switch (index)
                                 {
                                     case 5:
                                         newType = FoundationType.ElvenGrey;
@@ -1461,7 +1461,7 @@ namespace Server.Gumps
                             }
                             else
                             {
-                                switch( index )
+                                switch (index)
                                 {
                                     case 0:
                                         newType = FoundationType.DarkWood;

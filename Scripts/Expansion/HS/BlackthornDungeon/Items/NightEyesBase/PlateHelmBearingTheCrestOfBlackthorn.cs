@@ -32,7 +32,7 @@ namespace Server.Items
             {
                 return ArmorMaterialType.Plate;
             }
-        }       
+        }
 
         public PlateHelmBearingTheCrestOfBlackthorn1(Serial serial)
             : base(serial)

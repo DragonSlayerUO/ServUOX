@@ -21,7 +21,7 @@ namespace Server.Items
 
             ClearCurrentAbility(attacker);
 
-			defender.SendLocalizedMessage(1112369); // 	You have been poisoned by a lethal arrow!
+            defender.SendLocalizedMessage(1112369); // 	You have been poisoned by a lethal arrow!
 
             int level;
 

@@ -47,7 +47,7 @@ namespace Server.Items
         {
             if (from.Region != null && from.Region.IsPartOf("TheCitadel"))
                 return base.CanOfferConfirmation(from);
-				
+
             return false;
         }
     }

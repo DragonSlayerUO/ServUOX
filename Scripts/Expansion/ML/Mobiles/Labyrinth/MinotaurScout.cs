@@ -12,7 +12,7 @@ namespace Server.Mobiles
         {
             Name = "a minotaur scout";
             Body = 281;
-		   
+
             SetStr(353, 375);
             SetDex(111, 130);
             SetInt(34, 50);
@@ -51,8 +51,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override int TreasureMapLevel { get { return 3; } }
+
+        public override int TreasureMapLevel { get { return 3; } }
 
         public override void GenerateLoot()
         {

@@ -32,10 +32,10 @@ namespace Server.Mobiles
             public InternalBuyInfo()
             {
                 Add(new GenericBuyInfo(typeof(Spellbook), 18, 10, 0xEFA, 0));
-				
+
                 if (Core.AOS)
                     Add(new GenericBuyInfo(typeof(NecromancerSpellbook), 115, 10, 0x2253, 0));
-				
+
                 Add(new GenericBuyInfo(typeof(ScribesPen), 8, 10, 0xFBF, 0));
 
                 Add(new GenericBuyInfo(typeof(BlankScroll), 5, 20, 0x0E34, 0));
@@ -94,14 +94,14 @@ namespace Server.Mobiles
             public InternalSellInfo()
             {
                 Add(typeof(WizardsHat), 15);
-                Add(typeof(BlackPearl), 3); 
-                Add(typeof(Bloodmoss), 4); 
-                Add(typeof(MandrakeRoot), 2); 
-                Add(typeof(Garlic), 2); 
-                Add(typeof(Ginseng), 2); 
-                Add(typeof(Nightshade), 2); 
-                Add(typeof(SpidersSilk), 2); 
-                Add(typeof(SulfurousAsh), 2); 
+                Add(typeof(BlackPearl), 3);
+                Add(typeof(Bloodmoss), 4);
+                Add(typeof(MandrakeRoot), 2);
+                Add(typeof(Garlic), 2);
+                Add(typeof(Ginseng), 2);
+                Add(typeof(Nightshade), 2);
+                Add(typeof(SpidersSilk), 2);
+                Add(typeof(SulfurousAsh), 2);
 
                 if (Core.AOS)
                 {
@@ -121,7 +121,7 @@ namespace Server.Mobiles
                     Add(types[i], ((i / 8) + 2) * 2);
 
                 if (Core.SE)
-                { 
+                {
                     Add(typeof(ExorcismScroll), 3);
                     Add(typeof(AnimateDeadScroll), 8);
                     Add(typeof(BloodOathScroll), 8);

@@ -2,7 +2,7 @@
 namespace Server.Items
 {
     public class AlbinoFrog : BaseFish
-    { 
+    {
         [Constructable]
         public AlbinoFrog()
             : base(0x3B0D)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public AlbinoFrog(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber => 1073824; // an albino frog

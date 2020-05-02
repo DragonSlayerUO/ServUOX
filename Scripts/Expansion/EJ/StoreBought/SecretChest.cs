@@ -39,7 +39,7 @@ namespace Server.Items
         [Constructable]
         public SecretChest(int id)
             : base(id)
-        {            
+        {
             Weight = 5;
         }
 
@@ -49,7 +49,7 @@ namespace Server.Items
 
             return Locked && LockingPerson.Account != from.Account && p != null && !p.Permission;
         }
-        
+
         public override void Open(Mobile from)
         {
             if (Locked && from.AccessLevel < AccessLevel.GameMaster && LockingPerson.Account != from.Account)
@@ -60,7 +60,7 @@ namespace Server.Items
                 {
                     l = new SecretChestArray { Mobile = from, TrialsNumber = 3 };
                     list.Add(l);
-                }                
+                }
 
                 if (l.Permission)
                 {
@@ -252,7 +252,7 @@ namespace Server.Items
 
                 if (m != null)
                 {
-                    list.Add(new SecretChestArray { Mobile = m, Permission= reader.ReadBool(), TrialsNumber = reader.ReadInt(), Expire = reader.ReadDateTime() });
+                    list.Add(new SecretChestArray { Mobile = m, Permission = reader.ReadBool(), TrialsNumber = reader.ReadInt(), Expire = reader.ReadDateTime() });
                 }
             }
 
@@ -297,7 +297,7 @@ namespace Server.Items
                 {
                     TempSecretKey = sk;
                 }
-            }            
+            }
 
             AddPage(0);
 
@@ -349,7 +349,7 @@ namespace Server.Items
                             {
                                 from.SendLocalizedMessage(1151590); // The number which you have entered is wrong. You still can't open this chest...                                
                                 from.SendLocalizedMessage(1152346, string.Format("{0}", l.TrialsNumber)); // Number of tries left: ~1_times~
-                                Timer.DelayCall(TimeSpan.FromSeconds(0.2), () => from.SendGump(new SecretChestGump(Chest, TempSecretKey, SetEdit))); 
+                                Timer.DelayCall(TimeSpan.FromSeconds(0.2), () => from.SendGump(new SecretChestGump(Chest, TempSecretKey, SetEdit)));
                             }
                             else
                             {

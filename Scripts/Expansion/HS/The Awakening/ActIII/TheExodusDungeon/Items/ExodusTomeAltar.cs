@@ -31,7 +31,7 @@ namespace Server.Items
         }
 
         [Constructable]
-        public ExodusTomeAltar(Mobile from) 
+        public ExodusTomeAltar(Mobile from)
             : base(0x1C11)
         {
             this.Hue = 1943;
@@ -42,7 +42,7 @@ namespace Server.Items
             this.m_Rituals = new List<RitualArray>();
             this.m_ExodusAlterAddon = new ExodusAlterAddon();
             this.m_ExodusAlterAddon.Movable = false;
-        }        
+        }
 
         public ExodusTomeAltar(Serial serial) : base(serial)
         {
@@ -266,7 +266,8 @@ namespace Server.Items
 
             switch (info.ButtonID)
             {
-                case 0: {
+                case 0:
+                    {
                         //Cancel
                         break;
                     }

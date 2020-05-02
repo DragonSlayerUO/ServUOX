@@ -78,7 +78,7 @@ namespace Server.Engines.Quests.RitualQuest
 
         public static void Initialize()
         {
-            if(Core.SA && Instance == null)
+            if (Core.SA && Instance == null)
             {
                 Instance = new Bexil();
                 Instance.MoveToWorld(new Point3D(662, 3819, -43), Map.TerMur);

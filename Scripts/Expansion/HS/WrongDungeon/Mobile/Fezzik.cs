@@ -20,7 +20,7 @@ namespace Server.Mobiles
             this.SetStr(1142, 1381);
             this.SetDex(73, 90);
             this.SetInt(52, 84);
-            
+
             this.SetMana(0);
 
             this.SetDamage(25, 30);
@@ -86,10 +86,10 @@ namespace Server.Mobiles
             if (0.1 > Utility.RandomDouble())
             {
                 c.DropItem(new RecipeScroll(603));
-            } 
+            }
         }
-		
-		public override int TreasureMapLevel { get { return 3; } }
+
+        public override int TreasureMapLevel { get { return 3; } }
 
         public override void GenerateLoot()
         {

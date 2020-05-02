@@ -48,7 +48,7 @@ namespace Server.Items
         {
             SkillName.Spellweaving
         };
-        
+
         private static SkillName[] m_SASkills = new SkillName[]
         {
         SkillName.Throwing,
@@ -100,7 +100,7 @@ namespace Server.Items
                                 _Skills.AddRange(m_MLSkills);
                                 if (Core.SA)
                                 {
-                                    _Skills.AddRange( m_SASkills );
+                                    _Skills.AddRange(m_SASkills);
                                 }
                                 /*
                                 if (Core.HS)
@@ -165,7 +165,7 @@ namespace Server.Items
             {
                 skillName = Skills[Utility.Random(Skills.Count)];
             }
-            while (skillName == SkillName.Blacksmith || skillName == SkillName.Tailoring  || skillName == SkillName.Imbuing);
+            while (skillName == SkillName.Blacksmith || skillName == SkillName.Tailoring || skillName == SkillName.Imbuing);
 
             return new PowerScroll(skillName, 100 + (Utility.RandomMinMax(min, max) * 5));
         }

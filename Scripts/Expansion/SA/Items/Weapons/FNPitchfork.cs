@@ -4,8 +4,8 @@ namespace Server.Items
 {
     [Flipable(0xE87, 0xE88)]
     public class FNPitchfork : BaseSpear
-	{
-		public override bool IsArtifact { get { return true; } }
+    {
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public FNPitchfork()
             : base(0xE87)

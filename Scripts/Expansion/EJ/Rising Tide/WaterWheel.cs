@@ -23,14 +23,14 @@ namespace Server.Items
         public int Quantity
         {
             get { return 500; }
-            set {}
+            set { }
         }
 
         public WaterWheelAddon(Serial serial)
             : base(serial)
         {
         }
-        
+
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsRewardItem { get; set; }
 
@@ -65,7 +65,7 @@ namespace Server.Items
     public class WaterWheelDeed : BaseAddonDeed, IRewardItem, IRewardOption
     {
         public override int LabelNumber { get { return 1158881; } } // Water Wheel
-        
+
         public override BaseAddon Addon
         {
             get

@@ -61,7 +61,7 @@ namespace Server.Items
                 }
 
                 if (item is BaseWeapon)
-                {                    
+                {
                     BaseWeapon weapon = (BaseWeapon)obj;
 
                     if (weapon.ExtendedWeaponAttributes.Focus == 0)
@@ -99,6 +99,6 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
         }
-    }    
+    }
 }
 

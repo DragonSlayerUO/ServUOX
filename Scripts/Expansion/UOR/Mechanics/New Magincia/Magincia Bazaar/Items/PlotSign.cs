@@ -83,7 +83,7 @@ namespace Server.Engines.NewMagincia
         {
             base.GetContextMenuEntries(from, list);
 
-            if(m_Plot != null && m_Plot.Active)
+            if (m_Plot != null && m_Plot.Active)
                 list.Add(new RecallRuneEntry(from, this));
         }
 

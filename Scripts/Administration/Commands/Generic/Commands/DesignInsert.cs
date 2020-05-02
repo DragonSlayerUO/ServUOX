@@ -60,7 +60,7 @@ namespace Server.Commands.Generic
                 HouseFoundation house;
                 DesignInsertResult result = ProcessInsert(obj as Item, this.m_StaticsOnly, out house);
 
-                switch ( result )
+                switch (result)
                 {
                     case DesignInsertResult.Valid:
                         {
@@ -118,7 +118,7 @@ namespace Server.Commands.Generic
                     HouseFoundation house;
                     DesignInsertResult result = ProcessInsert(list[i] as Item, staticsOnly, out house);
 
-                    switch ( result )
+                    switch (result)
                     {
                         case DesignInsertResult.Valid:
                             {

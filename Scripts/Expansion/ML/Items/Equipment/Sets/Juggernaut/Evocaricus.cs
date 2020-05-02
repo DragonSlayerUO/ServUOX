@@ -4,16 +4,16 @@ namespace Server.Items
 {
     public class Evocaricus : VikingSword
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public Evocaricus()
             : base()
         {
             this.SetHue = 0x76D;
-			
+
             this.Attributes.WeaponDamage = 50;
-			
-            this.SetSelfRepair = 3;			
+
+            this.SetSelfRepair = 3;
             this.SetAttributes.DefendChance = 10;
             this.SetAttributes.BonusStr = 10;
             this.SetAttributes.WeaponSpeed = 35;

@@ -30,7 +30,7 @@ namespace Server.Gumps
             this.AddHtmlLocalized(55, 70, 470, 30, 1011109, false, false); // Set the guild's abbreviation.
 
             this.AddButton(20, 100, 4005, 4007, 4, GumpButtonType.Reply, 0);
-            switch ( this.m_Guild.Type )
+            switch (this.m_Guild.Type)
             {
                 case GuildType.Regular:
                     this.AddHtmlLocalized(55, 100, 470, 30, 1013059, false, false); // Change guild type: Currently Standard
@@ -84,7 +84,7 @@ namespace Server.Gumps
             if (GuildGump.BadLeader(this.m_Mobile, this.m_Guild))
                 return;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Main menu
                     {

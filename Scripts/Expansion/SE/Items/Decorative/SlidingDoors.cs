@@ -1,7 +1,7 @@
 using System;
 
 namespace Server.Items
-{ 
+{
     public class PaperSlidingDoor : BaseDoor
     {
         [Constructable]

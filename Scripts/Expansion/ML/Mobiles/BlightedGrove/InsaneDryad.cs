@@ -7,21 +7,8 @@ namespace Server.Mobiles
     [CorpseName("a dryad's corpse")]
     public class MLDryad : BaseCreature
     {
-        public override bool InitialInnocent
-        {
-            get
-            {
-                return true;
-            }
-        }
-
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
+        public override bool InitialInnocent => true;
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
 
         [Constructable]
         public MLDryad()
@@ -74,13 +61,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.Rich);
         }
 
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override int Meat => 1;
 
         public override void OnThink()
         {
@@ -175,34 +156,26 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write((int)0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
     [CorpseName("an insane dryad corpse")]
     public class InsaneDryad : MLDryad
     {
-        public override bool InitialInnocent
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool InitialInnocent => false;
 
         [Constructable]
         public InsaneDryad()
             : base()
         {
-            Name = "an insane dryad";	
+            Name = "an insane dryad";
             Hue = 0x487;
 
             FightMode = FightMode.Closest;
@@ -210,32 +183,30 @@ namespace Server.Mobiles
             Fame = 7000;
             Karma = -7000;
         }
-		
+
         public InsaneDryad(Serial serial)
             : base(serial)
         {
         }
-		
+
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);		
-						
-            if (Utility.RandomDouble() < 0.1)				
-                c.DropItem(new ParrotItem());	
+            base.OnDeath(c);
+
+            if (Utility.RandomDouble() < 0.1)
+                c.DropItem(new ParrotItem());
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
-            writer.Write((int)0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

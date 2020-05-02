@@ -19,7 +19,7 @@ namespace Server.Factions
             {
                 var state = PlayerState.Find(e.Mobile);
 
-                if(state != null)
+                if (state != null)
                 {
                     ShrineGem gem = null;
 

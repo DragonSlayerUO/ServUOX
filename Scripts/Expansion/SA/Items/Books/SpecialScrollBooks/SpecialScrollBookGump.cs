@@ -131,7 +131,7 @@ namespace Server.Gumps
             int index = 0;
             int split = Book.ValueInfo.Count >= 9 ? Book.ValueInfo.Count / 2 : -1;
 
-            foreach(var kvp in Book.ValueInfo)
+            foreach (var kvp in Book.ValueInfo)
             {
                 if (split > -1 && index == split)
                 {

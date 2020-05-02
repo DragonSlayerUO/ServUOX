@@ -141,7 +141,7 @@ namespace Server.Engines.Quests.Ninja
 
             for (int i = 0; i < 75; i++)
             {
-                switch ( Utility.Random(3) )
+                switch (Utility.Random(3))
                 {
                     case 0:
                         this.DropItem(new GoldBracelet());

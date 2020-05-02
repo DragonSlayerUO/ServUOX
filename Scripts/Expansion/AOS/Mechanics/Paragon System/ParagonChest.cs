@@ -40,18 +40,18 @@ namespace Server.Items
 
         public void Flip()
         {
-            switch ( ItemID )
+            switch (ItemID)
             {
-                case 0x9AB :
+                case 0x9AB:
                     ItemID = 0xE7C;
                     break;
-                case 0xE7C :
+                case 0xE7C:
                     ItemID = 0x9AB;
                     break;
-                case 0xE40 :
+                case 0xE40:
                     ItemID = 0xE41;
                     break;
-                case 0xE41 :
+                case 0xE41:
                     ItemID = 0xE40;
                     break;
             }
@@ -114,7 +114,7 @@ namespace Server.Items
             TrapLevel = level;
             Locked = true;
 
-            switch ( level )
+            switch (level)
             {
                 case 1:
                     RequiredSkill = 36;
@@ -222,7 +222,7 @@ namespace Server.Items
                 DropItem(item);
             }
 
-            DropItem(new TreasureMap(TreasureMapInfo.ConvertLevel(level + 1), (Siege.SiegeShard ?  Map.Felucca : Utility.RandomBool() ? Map.Felucca : Map.Trammel)));
+            DropItem(new TreasureMap(TreasureMapInfo.ConvertLevel(level + 1), (Siege.SiegeShard ? Map.Felucca : Utility.RandomBool() ? Map.Felucca : Map.Trammel)));
         }
     }
 }

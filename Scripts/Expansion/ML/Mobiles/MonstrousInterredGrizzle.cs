@@ -30,7 +30,7 @@ namespace Server.Mobiles
             : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "a monstrous interred grizzle";
-            Body = 0x103;			
+            Body = 0x103;
             BaseSoundID = 589;
 
             SetStr(1198, 1207);
@@ -179,14 +179,14 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
 
@@ -205,7 +205,7 @@ namespace Server.Mobiles
     }
 
     public class InfernalOoze : Item
-    { 
+    {
         private bool m_Corrosive;
         private int m_Damage;
         private Mobile m_Owner;
@@ -227,7 +227,7 @@ namespace Server.Mobiles
             Hue = 0x95;
 
             m_Damage = damage;
-			
+
             m_Corrosive = corrosive;
             m_StartTime = DateTime.UtcNow;
 
@@ -279,7 +279,7 @@ namespace Server.Mobiles
         }
 
         public virtual void Damage(Mobile m)
-        { 
+        {
             if (m_Corrosive)
             {
                 for (int i = 0; i < m.Items.Count; i++)

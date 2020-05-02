@@ -1,10 +1,9 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
 {
     [CorpseName("the remains of Grim")]
-    public class Grim : Drake 
+    public class Grim : Drake
     {
         [Constructable]
         public Grim()
@@ -51,37 +50,16 @@ namespace Server.Mobiles
             SetSpecialAbility(SpecialAbility.DragonBreath);
         }
 
-        public override bool GivesMLMinorArtifact
-        {
-            get { return true; }
-        }
+        public override bool GivesMLMinorArtifact => true;
 
         public Grim(Serial serial)
             : base(serial)
         {
         }
 
-        public override bool ReacquireOnMovement
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 20;
-            }
-        }
+        public override bool ReacquireOnMovement => true;
+        public override int Meat => 10;
+        public override int Hides => 20;
 
         public override void GenerateLoot()
         {
@@ -93,13 +71,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Server.Guilds
             if (this.guild.Disbanded || this.player.Guild != null)
                 return;
 
-            switch( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0:
                     {
@@ -49,7 +49,7 @@ namespace Server.Guilds
 
                         break;
                     }
-                case 2: 
+                case 2:
                     {
                         this.player.AcceptGuildInvites = false;
                         this.player.SendLocalizedMessage(1070698); // You are now ignoring guild invitations.

@@ -3,7 +3,7 @@ using Server;
 
 namespace Server.Items
 {
-    public class BegBedRoll: Bedroll
+    public class BegBedRoll : Bedroll
     {
         [Constructable]
         public BegBedRoll()

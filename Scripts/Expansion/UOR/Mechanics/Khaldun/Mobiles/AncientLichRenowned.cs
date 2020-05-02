@@ -3,7 +3,7 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    [CorpseName("Ancient Lich [Renowned] corpse")]  
+    [CorpseName("Ancient Lich [Renowned] corpse")]
     public class AncientLichRenowned : BaseRenowned
     {
         [Constructable]

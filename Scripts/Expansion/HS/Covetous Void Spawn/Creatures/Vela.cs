@@ -62,8 +62,8 @@ namespace Server.Engines.VoidPool
             : base(serial)
         {
         }
-		
-		public override void GetProperties(ObjectPropertyList list)
+
+        public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
 

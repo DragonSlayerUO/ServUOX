@@ -54,7 +54,7 @@ namespace Server.Ethics
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

@@ -134,7 +134,7 @@ namespace Server.Items
 
             public int GetTypeNumber(StatueType type)
             {
-                switch ( type )
+                switch (type)
                 {
                     case StatueType.Marble:
                         return 1076181;

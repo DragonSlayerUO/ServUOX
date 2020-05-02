@@ -60,7 +60,7 @@ namespace Server.Gumps
                             if (gump.Item.IsChildOf(gump.User.Backpack) || gump.User.Items.Contains(gump.Item))
                             {
                                 gump.User.SendLocalizedMessage(1155612); // A skill bonus has been applied to the item!
-                            Bonuses.SetValues(gump.Index, gump.Selection, gump.Value);
+                                Bonuses.SetValues(gump.Index, gump.Selection, gump.Value);
 
                                 gump.Item.InvalidateProperties();
                             }
@@ -89,7 +89,7 @@ namespace Server.Gumps
                             if (gump.Item.IsChildOf(gump.User.Backpack) || gump.User.Items.Contains(gump.Item))
                             {
                                 gump.User.SendLocalizedMessage(1155612); // A skill bonus has been applied to the item!
-                            Bonuses.SetValues(gump.Index, gump.Selection, gump.Value);
+                                Bonuses.SetValues(gump.Index, gump.Selection, gump.Value);
 
                                 gump.Item.InvalidateProperties();
                             }

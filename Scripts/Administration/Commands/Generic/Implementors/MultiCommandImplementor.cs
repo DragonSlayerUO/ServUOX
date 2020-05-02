@@ -33,7 +33,7 @@ namespace Server.Commands.Generic
                 return;
             }
 
-            switch ( command.ObjectTypes )
+            switch (command.ObjectTypes)
             {
                 case ObjectTypes.Both:
                     {

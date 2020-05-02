@@ -7,7 +7,7 @@ using Server.Items;
 namespace Server.Engines.VvV
 {
     public class VvVEpaulette : Epaulette
-	{
+    {
         public override int InitMinHits { get { return 255; } }
         public override int InitMaxHits { get { return 255; } }
 
@@ -18,25 +18,25 @@ namespace Server.Engines.VvV
 
         public VvVEpaulette(Serial serial)
             : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(1);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(1);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
 
 
             if (version == 0)
                 Timer.DelayCall(() => ViceVsVirtueSystem.Instance.AddVvVItem(this));
-		}
-	}
+        }
+    }
 
     public class VvVGargishEpaulette : GargishEpaulette
     {

@@ -77,7 +77,7 @@ namespace Server.Items
                             m_Book.Recipes.ForEach(x =>
                             {
                                 if (x.RecipeID == m_Recipe.RecipeID)
-                                    x.Amount -=  1;
+                                    x.Amount -= 1;
                             });
 
                             m_Book.InvalidateProperties();

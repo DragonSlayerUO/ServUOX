@@ -36,22 +36,22 @@ namespace Server.Engines.CannedEvil
         public List<Mobile> Creatures { get; private set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-		public string GroupName { get; set; }
+        public string GroupName { get; set; }
 
-		[CommandProperty(AccessLevel.GameMaster)]
-		public double SpawnMod { get; set; }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public double SpawnMod { get; set; }
 
-		[CommandProperty(AccessLevel.GameMaster)]
-		public int SpawnRadius { get; set; }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public int SpawnRadius { get; set; }
 
-		[CommandProperty(AccessLevel.GameMaster)]
-		public double KillsMod { get; set; }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public double KillsMod { get; set; }
 
-		[CommandProperty(AccessLevel.GameMaster)]
-		public bool AutoRestart { get; set; }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool AutoRestart { get; set; }
 
-		[CommandProperty(AccessLevel.GameMaster)]
-		public string SpawnName { get; set; }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public string SpawnName { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool ConfinedRoaming { get; set; }
@@ -78,7 +78,7 @@ namespace Server.Engines.CannedEvil
             m_RestartDelay = TimeSpan.FromMinutes(10.0);
 
             m_DamageEntries = new Dictionary<Mobile, int>();
-			RandomizeType = false;
+            RandomizeType = false;
 
             SpawnRadius = 35;
             SpawnMod = 1;
@@ -90,7 +90,7 @@ namespace Server.Engines.CannedEvil
         {
             //Previous default used to be 24;
             SpawnArea = new Rectangle2D(new Point2D(X - SpawnRadius, Y - SpawnRadius),
-				new Point2D(X + SpawnRadius, Y + SpawnRadius));
+                new Point2D(X + SpawnRadius, Y + SpawnRadius));
         }
 
         public void UpdateRegion()
@@ -237,7 +237,7 @@ namespace Server.Engines.CannedEvil
         {
             get
             {
-				int l = Level;
+                int l = Level;
                 return ChampionSystem.MaxKillsForLevel(l);
             }
         }
@@ -393,7 +393,7 @@ namespace Server.Engines.CannedEvil
         private ScrollOfTranscendence CreateRandomSoT(bool felucca)
         {
             int level = Utility.RandomMinMax(1, 5);
-			
+
             if (felucca)
                 level += 5;
 
@@ -411,7 +411,7 @@ namespace Server.Engines.CannedEvil
                 killer.SendLocalizedMessage(1094936); // You have received a Scroll of Transcendence!
             else
                 killer.SendLocalizedMessage(1049524); // You have received a scroll of power!
-			
+
             if (killer.Alive)
                 killer.AddToBackpack(scroll);
             else
@@ -421,19 +421,19 @@ namespace Server.Engines.CannedEvil
                 else
                     killer.AddToBackpack(scroll);
             }
-			
+
             // Justice reward
             PlayerMobile pm = (PlayerMobile)killer;
             for (int j = 0; j < pm.JusticeProtectors.Count; ++j)
             {
                 Mobile prot = (Mobile)pm.JusticeProtectors[j];
-				
+
                 if (prot.Map != killer.Map || prot.Murderer || prot.Criminal || !JusticeVirtue.CheckMapRegion(killer, prot))
                     continue;
 
                 int chance = 0;
 
-                switch ( VirtueHelper.GetLevel(prot, VirtueName.Justice) )
+                switch (VirtueHelper.GetLevel(prot, VirtueName.Justice))
                 {
                     case VirtueLevel.Seeker:
                         chance = 60;
@@ -453,7 +453,7 @@ namespace Server.Engines.CannedEvil
                         prot.SendLocalizedMessage(1049368); // You have been rewarded for your dedication to Justice!
 
                         SpecialScroll scrollDupe = Activator.CreateInstance(scroll.GetType()) as SpecialScroll;
-					
+
                         if (scrollDupe != null)
                         {
                             scrollDupe.Skill = scroll.Skill;
@@ -475,7 +475,7 @@ namespace Server.Engines.CannedEvil
             if (!m_Active || Deleted)
                 return;
 
-			int currentRank = Rank;
+            int currentRank = Rank;
 
             if (Champion != null)
             {
@@ -501,8 +501,8 @@ namespace Server.Engines.CannedEvil
                     Champion = null;
                     Stop();
 
-					if(AutoRestart)
-						BeginRestart(m_RestartDelay);
+                    if (AutoRestart)
+                        BeginRestart(m_RestartDelay);
                 }
                 else if (Champion.Alive && Champion.GetDistanceToSqrt(this) > MaxStrayDistance)
                 {
@@ -526,9 +526,9 @@ namespace Server.Engines.CannedEvil
                         Creatures.RemoveAt(i);
                         --i;
 
-						int rankOfMob = GetRankFor(m);
-						if(rankOfMob == currentRank)
-							++m_Kills;
+                        int rankOfMob = GetRankFor(m);
+                        if (rankOfMob == currentRank)
+                            ++m_Kills;
 
                         Mobile killer = m.FindMostRecentDamager(false);
 
@@ -571,9 +571,9 @@ namespace Server.Engines.CannedEvil
                                     }
                                 }
                             }
-							#endregion
+                            #endregion
 
-							int mobSubLevel = rankOfMob + 1;
+                            int mobSubLevel = rankOfMob + 1;
                             if (mobSubLevel >= 0)
                             {
                                 bool gainedPath = false;
@@ -696,26 +696,26 @@ namespace Server.Engines.CannedEvil
             if (!m_Active || Deleted || Champion != null)
                 return;
 
-			int currentLevel = Level;
-			int currentRank = Rank;
-			int maxSpawn = (int)(MaxKills * 0.5d * SpawnMod);
-			if (currentLevel >= 16)
-				maxSpawn = Math.Min(maxSpawn, MaxKills - m_Kills);
-			if (maxSpawn < 3)
-				maxSpawn = 3;
+            int currentLevel = Level;
+            int currentRank = Rank;
+            int maxSpawn = (int)(MaxKills * 0.5d * SpawnMod);
+            if (currentLevel >= 16)
+                maxSpawn = Math.Min(maxSpawn, MaxKills - m_Kills);
+            if (maxSpawn < 3)
+                maxSpawn = 3;
 
-			int spawnRadius = (int)(SpawnRadius * ChampionSystem.SpawnRadiusModForLevel(Level));
-			Rectangle2D spawnBounds = new Rectangle2D(new Point2D(X - spawnRadius, Y - spawnRadius),
-				new Point2D(X + spawnRadius, Y + spawnRadius));
+            int spawnRadius = (int)(SpawnRadius * ChampionSystem.SpawnRadiusModForLevel(Level));
+            Rectangle2D spawnBounds = new Rectangle2D(new Point2D(X - spawnRadius, Y - spawnRadius),
+                new Point2D(X + spawnRadius, Y + spawnRadius));
 
-			int mobCount = 0;
-			foreach(Mobile m in Creatures)
-			{
-				if (GetRankFor(m) == currentRank)
-					++mobCount;
-			}
+            int mobCount = 0;
+            foreach (Mobile m in Creatures)
+            {
+                if (GetRankFor(m) == currentRank)
+                    ++mobCount;
+            }
 
-			while (mobCount <= maxSpawn)
+            while (mobCount <= maxSpawn)
             {
                 Mobile m = Spawn();
 
@@ -729,7 +729,7 @@ namespace Server.Engines.CannedEvil
 
                 Creatures.Add(m);
                 m.MoveToWorld(loc, Map);
-				++mobCount;
+                ++mobCount;
 
                 if (m is BaseCreature)
                 {
@@ -740,7 +740,7 @@ namespace Server.Engines.CannedEvil
                     if (!ConfinedRoaming)
                     {
                         bc.Home = Location;
-						bc.RangeHome = spawnRadius;
+                        bc.RangeHome = spawnRadius;
                     }
                     else
                     {
@@ -760,10 +760,10 @@ namespace Server.Engines.CannedEvil
             }
         }
 
-		public Point3D GetSpawnLocation()
-		{
-			return GetSpawnLocation(m_SpawnArea, 24);
-		}
+        public Point3D GetSpawnLocation()
+        {
+            return GetSpawnLocation(m_SpawnArea, 24);
+        }
 
         public Point3D GetSpawnLocation(Rectangle2D rect, int range)
         {
@@ -772,20 +772,20 @@ namespace Server.Engines.CannedEvil
             if (map == null)
                 return Location;
 
-			int cx = Location.X;
-			int cy = Location.Y;
+            int cx = Location.X;
+            int cy = Location.Y;
 
             // Try 20 times to find a spawnable location.
             for (int i = 0; i < 20; i++)
             {
-				int dx = Utility.Random(range * 2);
-				int dy = Utility.Random(range * 2);
-				int x = rect.X + dx;
-				int y = rect.Y + dy;
+                int dx = Utility.Random(range * 2);
+                int dy = Utility.Random(range * 2);
+                int x = rect.X + dx;
+                int y = rect.Y + dy;
 
-				// Make spawn area circular
-				//if ((cx - x) * (cx - x) + (cy - y) * (cy - y) > range * range)
-				//	continue;
+                // Make spawn area circular
+                //if ((cx - x) * (cx - x) + (cy - y) * (cy - y) > range * range)
+                //	continue;
 
                 int z = Map.GetAverageZ(x, y);
 
@@ -825,7 +825,7 @@ namespace Server.Engines.CannedEvil
         {
             Type[][] types = ChampionSpawnInfo.GetInfo(m_Type).SpawnTypes;
 
-			int v = Rank;
+            int v = Rank;
 
             if (v >= 0 && v < types.Length)
                 return Spawn(types[v]);
@@ -897,7 +897,7 @@ namespace Server.Engines.CannedEvil
         {
             int x, y;
 
-            switch( index )
+            switch (index)
             {
                 default:
                 case 0:
@@ -1132,7 +1132,7 @@ namespace Server.Engines.CannedEvil
             if (to == null || artifact == null)
                 return;
 
-			to.PlaySound(0x5B4);
+            to.PlaySound(0x5B4);
 
             Container pack = to.Backpack;
 
@@ -1155,13 +1155,13 @@ namespace Server.Engines.CannedEvil
 
             writer.Write(StartLevel);
 
-			writer.Write(KillsMod);
-			writer.Write(GroupName);
+            writer.Write(KillsMod);
+            writer.Write(GroupName);
 
-			writer.Write(SpawnName);
-			writer.Write(AutoRestart);
-			writer.Write(SpawnMod);
-			writer.Write(SpawnRadius);
+            writer.Write(SpawnName);
+            writer.Write(AutoRestart);
+            writer.Write(SpawnMod);
+            writer.Write(SpawnRadius);
 
             writer.Write(m_DamageEntries.Count);
             foreach (KeyValuePair<Mobile, int> kvp in m_DamageEntries)
@@ -1206,21 +1206,21 @@ namespace Server.Engines.CannedEvil
 
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 8:
                     StartLevel = reader.ReadInt();
                     goto case 7;
-				case 7:
-					KillsMod = reader.ReadDouble();
-					GroupName = reader.ReadString();
-					goto case 6;
-				case 6:
-					SpawnName = reader.ReadString();
-					AutoRestart = reader.ReadBool();
-					SpawnMod = reader.ReadDouble();
-					SpawnRadius = reader.ReadInt();
-					goto case 5;
+                case 7:
+                    KillsMod = reader.ReadDouble();
+                    GroupName = reader.ReadString();
+                    goto case 6;
+                case 6:
+                    SpawnName = reader.ReadString();
+                    AutoRestart = reader.ReadBool();
+                    SpawnMod = reader.ReadDouble();
+                    SpawnRadius = reader.ReadInt();
+                    goto case 5;
                 case 5:
                     {
                         int entries = reader.ReadInt();
@@ -1318,109 +1318,109 @@ namespace Server.Engines.CannedEvil
             Timer.DelayCall(TimeSpan.Zero, new TimerCallback(UpdateRegion));
         }
 
-		public void SendGump(Mobile mob)
-		{
-			mob.SendGump(new ChampionSpawnInfoGump(this));
-		}
+        public void SendGump(Mobile mob)
+        {
+            mob.SendGump(new ChampionSpawnInfoGump(this));
+        }
 
-		private class ChampionSpawnInfoGump : Gump
-		{
-			private class Damager
-			{
-				public Mobile Mobile;
-				public int Damage;
-				public Damager(Mobile mob, int dmg)
-				{
-					Mobile = mob;
-					Damage = dmg;
-				}
+        private class ChampionSpawnInfoGump : Gump
+        {
+            private class Damager
+            {
+                public Mobile Mobile;
+                public int Damage;
+                public Damager(Mobile mob, int dmg)
+                {
+                    Mobile = mob;
+                    Damage = dmg;
+                }
 
-			}
-			private const int gBoarder = 20;
-			private const int gRowHeight = 25;
-			private const int gFontHue = 0;
-			private static readonly int[] gWidths = { 20, 160, 160, 20 };
-			private static readonly int[] gTab;
-			private static readonly int gWidth;
+            }
+            private const int gBoarder = 20;
+            private const int gRowHeight = 25;
+            private const int gFontHue = 0;
+            private static readonly int[] gWidths = { 20, 160, 160, 20 };
+            private static readonly int[] gTab;
+            private static readonly int gWidth;
 
-			static ChampionSpawnInfoGump()
-			{
-				gWidth = gWidths.Sum();
-				int tab = 0;
-				gTab = new int[gWidths.Length];
-				for (int i = 0; i < gWidths.Length; ++i)
-				{
-					gTab[i] = tab;
-					tab += gWidths[i];
-				}
-			}
+            static ChampionSpawnInfoGump()
+            {
+                gWidth = gWidths.Sum();
+                int tab = 0;
+                gTab = new int[gWidths.Length];
+                for (int i = 0; i < gWidths.Length; ++i)
+                {
+                    gTab[i] = tab;
+                    tab += gWidths[i];
+                }
+            }
 
-			private ChampionSpawn m_Spawn;
+            private ChampionSpawn m_Spawn;
 
-			public ChampionSpawnInfoGump(ChampionSpawn spawn)
-				: base(40, 40)
-			{
-				m_Spawn = spawn;
+            public ChampionSpawnInfoGump(ChampionSpawn spawn)
+                : base(40, 40)
+            {
+                m_Spawn = spawn;
 
-				AddBackground(0, 0, gWidth, gBoarder * 2 + gRowHeight * (8 + spawn.m_DamageEntries.Count), 0x13BE);
+                AddBackground(0, 0, gWidth, gBoarder * 2 + gRowHeight * (8 + spawn.m_DamageEntries.Count), 0x13BE);
 
-				int top = gBoarder;
-				AddLabel(gBoarder, top, gFontHue, "Champion Spawn Info Gump");
-				top += gRowHeight;
+                int top = gBoarder;
+                AddLabel(gBoarder, top, gFontHue, "Champion Spawn Info Gump");
+                top += gRowHeight;
 
-				AddLabel(gTab[1], top, gFontHue, "Kills");
-				AddLabel(gTab[2], top, gFontHue, spawn.Kills.ToString());
-				top += gRowHeight;
+                AddLabel(gTab[1], top, gFontHue, "Kills");
+                AddLabel(gTab[2], top, gFontHue, spawn.Kills.ToString());
+                top += gRowHeight;
 
-				AddLabel(gTab[1], top, gFontHue, "Max Kills");
-				AddLabel(gTab[2], top, gFontHue, spawn.MaxKills.ToString());
-				top += gRowHeight;
+                AddLabel(gTab[1], top, gFontHue, "Max Kills");
+                AddLabel(gTab[2], top, gFontHue, spawn.MaxKills.ToString());
+                top += gRowHeight;
 
-				AddLabel(gTab[1], top, gFontHue, "Level");
-				AddLabel(gTab[2], top, gFontHue, spawn.Level.ToString());
-				top += gRowHeight;
+                AddLabel(gTab[1], top, gFontHue, "Level");
+                AddLabel(gTab[2], top, gFontHue, spawn.Level.ToString());
+                top += gRowHeight;
 
-				AddLabel(gTab[1], top, gFontHue, "Rank");
-				AddLabel(gTab[2], top, gFontHue, spawn.Rank.ToString());
-				top += gRowHeight;
+                AddLabel(gTab[1], top, gFontHue, "Rank");
+                AddLabel(gTab[2], top, gFontHue, spawn.Rank.ToString());
+                top += gRowHeight;
 
-				AddLabel(gTab[1], top, gFontHue, "Active");
-				AddLabel(gTab[2], top, gFontHue, spawn.Active.ToString());
-				top += gRowHeight;
+                AddLabel(gTab[1], top, gFontHue, "Active");
+                AddLabel(gTab[2], top, gFontHue, spawn.Active.ToString());
+                top += gRowHeight;
 
-				AddLabel(gTab[1], top, gFontHue, "Auto Restart");
-				AddLabel(gTab[2], top, gFontHue, spawn.AutoRestart.ToString());
-				top += gRowHeight;
+                AddLabel(gTab[1], top, gFontHue, "Auto Restart");
+                AddLabel(gTab[2], top, gFontHue, spawn.AutoRestart.ToString());
+                top += gRowHeight;
 
-				List<Damager> damagers = new List<Damager>();
-				foreach (Mobile mob in spawn.m_DamageEntries.Keys)
-				{
-					damagers.Add(new Damager(mob, spawn.m_DamageEntries[mob]));
-				}
-				damagers = damagers.OrderByDescending(x => x.Damage).ToList<Damager>();
+                List<Damager> damagers = new List<Damager>();
+                foreach (Mobile mob in spawn.m_DamageEntries.Keys)
+                {
+                    damagers.Add(new Damager(mob, spawn.m_DamageEntries[mob]));
+                }
+                damagers = damagers.OrderByDescending(x => x.Damage).ToList<Damager>();
 
-				foreach (Damager damager in damagers)
-				{
-					AddLabelCropped(gTab[1], top, 100, gRowHeight, gFontHue, damager.Mobile.RawName);
-					AddLabelCropped(gTab[2], top, 80, gRowHeight, gFontHue, damager.Damage.ToString());
-					top += gRowHeight;
-				}
+                foreach (Damager damager in damagers)
+                {
+                    AddLabelCropped(gTab[1], top, 100, gRowHeight, gFontHue, damager.Mobile.RawName);
+                    AddLabelCropped(gTab[2], top, 80, gRowHeight, gFontHue, damager.Damage.ToString());
+                    top += gRowHeight;
+                }
 
-				AddButton(gWidth - (gBoarder + 30), top, 0xFA5, 0xFA7, 1, GumpButtonType.Reply, 0);
-				AddLabel(gWidth - (gBoarder + 100), top, gFontHue, "Refresh");
-			}
+                AddButton(gWidth - (gBoarder + 30), top, 0xFA5, 0xFA7, 1, GumpButtonType.Reply, 0);
+                AddLabel(gWidth - (gBoarder + 100), top, gFontHue, "Refresh");
+            }
 
-			public override void OnResponse(Network.NetState sender, RelayInfo info)
-			{
-				switch (info.ButtonID)
-				{
-					case 1:
-						m_Spawn.SendGump(sender.Mobile);
-						break;
-				}
-			}
-		}
-	}
+            public override void OnResponse(Network.NetState sender, RelayInfo info)
+            {
+                switch (info.ButtonID)
+                {
+                    case 1:
+                        m_Spawn.SendGump(sender.Mobile);
+                        break;
+                }
+            }
+        }
+    }
 
     public class ChampionSpawnRegion : BaseRegion
     {
@@ -1559,7 +1559,7 @@ namespace Server.Engines.CannedEvil
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

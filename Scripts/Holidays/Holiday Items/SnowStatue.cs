@@ -250,7 +250,7 @@ namespace Server.Items
 
                 Item statue = null;
 
-                switch ( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     case 1:
                         statue = new SnowStatuePegasus();

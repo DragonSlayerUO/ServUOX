@@ -75,7 +75,7 @@ namespace Server.Mobiles
                 }
 
                 _NextMastery = DateTime.UtcNow + TimeSpan.FromSeconds(Utility.RandomMinMax(45, 70));
-            }           
+            }
         }
 
         public override int DragonBlood { get { return 6; } }

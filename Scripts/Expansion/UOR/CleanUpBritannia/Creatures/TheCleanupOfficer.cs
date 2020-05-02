@@ -42,14 +42,14 @@ namespace Server.Engines.CleanUpBritannia
             SetWearable(new Doublet(), 50);
             SetWearable(new FancyShirt(), 1644);
             SetWearable(new Necklace());
-        }        
+        }
 
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
             list.Add(1151317); // Clean Up Britannia Reward Trader
         }
-        
+
         public override void OnDoubleClick(Mobile from)
         {
             if (from is PlayerMobile && from.InRange(Location, 5))
@@ -72,5 +72,5 @@ namespace Server.Engines.CleanUpBritannia
             base.Deserialize(reader);
             _ = reader.ReadInt();
         }
-    }    
+    }
 }

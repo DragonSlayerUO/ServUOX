@@ -105,24 +105,24 @@ namespace Server.Items
             {
                 list.Add(new SimpleContextMenuEntry(from, 1155742, m => // Toggle: On/Off
                 {
-                        if (_TurnedOn)
-                        {
-                            TurnedOn = false;
+                    if (_TurnedOn)
+                    {
+                        TurnedOn = false;
 
-                            if (InactiveMessage != 0)
-                                PrivateOverheadMessage(MessageType.Regular, 0x3B2, InactiveMessage, from.NetState);
-                        }
-                        else
-                        {
-                            TurnedOn = true;
+                        if (InactiveMessage != 0)
+                            PrivateOverheadMessage(MessageType.Regular, 0x3B2, InactiveMessage, from.NetState);
+                    }
+                    else
+                    {
+                        TurnedOn = true;
 
-                            if (ActiveMessage != 0)
-                            {
-                                PrivateOverheadMessage(MessageType.Regular, 0x3B2, ActiveMessage, from.NetState);
-                                from.PlaySound(84);
-                            }
+                        if (ActiveMessage != 0)
+                        {
+                            PrivateOverheadMessage(MessageType.Regular, 0x3B2, ActiveMessage, from.NetState);
+                            from.PlaySound(84);
                         }
-                    }, 8));
+                    }
+                }, 8));
 
                 SetSecureLevelEntry.AddTo(from, Addon, list);
             }
@@ -272,7 +272,7 @@ namespace Server.Items
                         TurnedOn = reader.ReadBool();
                         break;
                     }
-            }            
+            }
 
             if (Addon != null)
                 Addon.OnCraftComponentLoaded(this);

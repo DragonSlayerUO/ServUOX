@@ -9,10 +9,10 @@ namespace Server.Engines.Quests
     {
         private bool m_HasObtained;
 
-        public bool HasObtained 
-        { 
-            get { return m_HasObtained; } 
-            set { m_HasObtained = true; } 
+        public bool HasObtained
+        {
+            get { return m_HasObtained; }
+            set { m_HasObtained = true; }
         }
 
         public CollectionsObtainObjective(Type obtain, string name, int amount) : base(obtain, name, amount)
@@ -49,7 +49,7 @@ namespace Server.Engines.Quests
                 }
             }
         }
- 
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

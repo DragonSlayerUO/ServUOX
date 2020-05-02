@@ -67,7 +67,7 @@ namespace Server.Mobiles
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 2);
-        }        
+        }
 
         public override int GetAttackSound() { return 0x34C; }
         public override int GetHurtSound() { return 0x354; }

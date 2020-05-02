@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B08, 0x2B09)]
     public class JusticeBreastplate : BaseArmor
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public JusticeBreastplate()
             : base(0x2B08)
@@ -14,9 +14,9 @@ namespace Server.Items
             this.Weight = 7.0;
             this.SetHue = 0;
             this.Hue = 0x226;
-			
+
             this.SetSelfRepair = 5;
-			
+
             this.SetPhysicalBonus = 5;
             this.SetFireBonus = 5;
             this.SetColdBonus = 5;
@@ -116,14 +116,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

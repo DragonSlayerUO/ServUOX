@@ -290,7 +290,7 @@ namespace Server.Items
             {
                 for (int y = p.Y - 1; y <= p.Y + 1; y++)
                 {
-                    if(TreasureMap.ValidateLocation(x, y, map))
+                    if (TreasureMap.ValidateLocation(x, y, map))
                     {
                         int z = map.GetAverageZ(x, y);
                         IPooledEnumerable eable = map.GetItemsInRange(new Point3D(x, y, z), 0);

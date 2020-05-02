@@ -25,11 +25,11 @@ namespace Server.Mobiles
         }
 
         [Constructable]
-        public DockMaster() : base( "the dockmaster" )
+        public DockMaster() : base("the dockmaster")
         {
         }
 
-        public override void GetContextMenuEntries( Mobile from, List<ContextMenuEntry> list )
+        public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
         {
             base.GetContextMenuEntries(from, list);
             list.Add(new DryDockEntry(from, this));
@@ -94,8 +94,10 @@ namespace Server.Mobiles
 
         public void TryRetrieveHold(Mobile from, BaseBoat boat)
         {
-            for (int i = 0; i < m_Crates.Count; i++) {
-                if (m_Crates[i].Owner == from) {
+            for (int i = 0; i < m_Crates.Count; i++)
+            {
+                if (m_Crates[i].Owner == from)
+                {
                     from.SendLocalizedMessage(1116516); //Thou must return thy current shipping crate before I can retrieve another shipment for you.
                     return;
                 }
@@ -171,9 +173,9 @@ namespace Server.Mobiles
                 Point3D p = new Point3D(x, y, z);
                 IPooledEnumerable eable = map.GetItemsInRange(pnt, 0);
 
-                foreach (Item item in eable) 
+                foreach (Item item in eable)
                 {
-                    if (item != null && item is Container && !item.Movable) 
+                    if (item != null && item is Container && !item.Movable)
                     {
                         badSpot = true;
                         break;

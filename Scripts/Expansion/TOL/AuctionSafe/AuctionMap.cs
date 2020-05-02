@@ -27,13 +27,13 @@ namespace Server.Items
 
         [CommandProperty(AccessLevel.GameMaster)]
         public string HouseName { get; set; }
-        
+
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D SetLocation { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Map SetMap { get; set; }
-        
+
         public AuctionMap(AuctionSafe auctionsafe)
             : base(auctionsafe.Map)
         {
@@ -60,7 +60,7 @@ namespace Server.Items
             Height = 400;
 
             Bounds = new Rectangle2D(auctionsafe.X - 100, auctionsafe.Y - 100, 200, 200);
-            AddWorldPin(auctionsafe.X, auctionsafe.Y);            
+            AddWorldPin(auctionsafe.X, auctionsafe.Y);
         }
 
         public override bool DropToWorld(Mobile from, Point3D p)
@@ -99,7 +99,7 @@ namespace Server.Items
             string[] coord = GetCoords();
 
             list.Add(1154639, string.Format("{0}\t{1}", coord[0], coord[1])); //  Vendor Located at ~1_loc~ (~2_facet~)
-            
+
             if (!CheckItem())
             {
                 list.Add(1154700); // Item no longer for sale.
@@ -162,7 +162,7 @@ namespace Server.Items
             if (SetLocation != Point3D.Zero)
             {
                 SetLocation = Point3D.Zero;
-                SetMap = null;                
+                SetMap = null;
             }
             else
             {
@@ -264,8 +264,8 @@ namespace Server.Items
 
         public AuctionMap(Serial serial)
             : base(serial)
-		{
-		}
+        {
+        }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -302,7 +302,7 @@ namespace Server.Items
             public ConfirmTeleportGump(AuctionMap map, PlayerMobile pm)
                 : base(pm, 10, 10)
             {
-                AuctionMap = map;                
+                AuctionMap = map;
             }
 
             public override void AddGumpLayout()

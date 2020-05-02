@@ -13,7 +13,7 @@ namespace Server.Engines.Exodus
         public static bool Active
         {
             get { return m_Active; }
-            set { if (value) Start(); else Stop();}
+            set { if (value) Start(); else Stop(); }
         }
 
         private static ClockworkExodus m_Mobile;
@@ -26,7 +26,7 @@ namespace Server.Engines.Exodus
         }
 
         [CommandProperty(AccessLevel.Administrator)]
-        public static VerLorRegController IlshenarInstance { get; set; }        
+        public static VerLorRegController IlshenarInstance { get; set; }
 
         public VerLorRegController(Map map) : base(7107)
         {
@@ -86,7 +86,7 @@ namespace Server.Engines.Exodus
                 m.RangeHome = 4;
                 m.MoveToWorld(new Point3D(854, 642, -40), Map.Ilshenar);
                 m_Mobile = m;
-            }          
+            }
         }
 
         public static void Stop()
@@ -96,7 +96,7 @@ namespace Server.Engines.Exodus
 
             m_Active = false;
             m_Mobile.Delete();
-            m_Mobile = null;                        
-        }        
+            m_Mobile = null;
+        }
     }
 }

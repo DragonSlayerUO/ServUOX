@@ -53,7 +53,7 @@ namespace Server.Engines.Points
                     points = 2500;
 
                 if (item.Stackable)
-                    points = points * item.Amount;                
+                    points = points * item.Amount;
 
                 return points;
             }
@@ -225,7 +225,7 @@ namespace Server.Engines.Points
             Entries[typeof(Sapphire)] = 0.30;
             Entries[typeof(StarSapphire)] = 0.30;
             Entries[typeof(Diamond)] = 0.30;
-            Entries[typeof(BlueDiamond)] = 25.0;           
+            Entries[typeof(BlueDiamond)] = 25.0;
             Entries[typeof(FireRuby)] = 25.0;
             Entries[typeof(PerfectEmerald)] = 25.0;
             Entries[typeof(DarkSapphire)] = 25.0;
@@ -605,7 +605,7 @@ namespace Server.Engines.Points
             Entries[typeof(BraceletOfHealth)] = 5500.0;
             Entries[typeof(Aegis)] = 5500.0;
             Entries[typeof(AxeOfTheHeavens)] = 5500.0;
-            Entries[typeof(HelmOfInsight)] = 5500.0;            
+            Entries[typeof(HelmOfInsight)] = 5500.0;
             Entries[typeof(Frostbringer)] = 5500.0;
             Entries[typeof(StaffOfTheMagi)] = 5500.0;
             Entries[typeof(TheDragonSlayer)] = 5500.0;

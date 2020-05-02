@@ -79,21 +79,21 @@ namespace Server.Items
         }
 
         private bool FindItem()
-		{
+        {
             IPooledEnumerable eable = this.Map.GetItemsInRange(this.Location, m_Range * 2);
-				
-			foreach(Item item in eable)
-			{
-				if(item.GetType() == QuestItemType)
-				{
-					eable.Free();
-					return true;
-				}
-			}
-				
-			eable.Free();
-			return false;
-		}
+
+            foreach (Item item in eable)
+            {
+                if (item.GetType() == QuestItemType)
+                {
+                    eable.Free();
+                    return true;
+                }
+            }
+
+            eable.Free();
+            return false;
+        }
 
         public QuestHintItem(Serial serial)
             : base(serial)
@@ -126,7 +126,7 @@ namespace Server.Items
                     m_String = reader.ReadString();
                     break;
             }
-            
+
         }
     }
 }

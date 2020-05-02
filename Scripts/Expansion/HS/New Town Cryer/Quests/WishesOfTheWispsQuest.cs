@@ -102,7 +102,7 @@ namespace Server.Engines.Quests
         {
             AddObjective(new InternalObjective());
 
-            AddReward(new BaseReward(typeof(DespiseTitleDeed), 1158139)); 
+            AddReward(new BaseReward(typeof(DespiseTitleDeed), 1158139));
         }
 
         public override bool RenderObjective(MondainQuestGump g, bool offer)
@@ -136,12 +136,12 @@ namespace Server.Engines.Quests
         {
             foreach (var ds in boss.GetLootingRights())
             {
-                if(ds.m_Mobile is PlayerMobile)
+                if (ds.m_Mobile is PlayerMobile)
                 {
                     var pm = ds.m_Mobile as PlayerMobile;
                     var quest = QuestHelper.GetQuest<WhisperingWithWispsQuest>(pm);
 
-                    if(quest != null && !quest.Completed)
+                    if (quest != null && !quest.Completed)
                     {
                         quest.Objectives[0].CurProgress++;
                         quest.OnCompleted();

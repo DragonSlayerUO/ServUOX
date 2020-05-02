@@ -27,7 +27,7 @@ namespace Server.Items
         public override void OnDoubleClick(Mobile from)
         {
             from.SendMessage("You make a copy of the key in your pack");
-			
+
             RedKey1 redkey = new RedKey1();
             if (!from.AddToBackpack(redkey))
                 redkey.Delete();

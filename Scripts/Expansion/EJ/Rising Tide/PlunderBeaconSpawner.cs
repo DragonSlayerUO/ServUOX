@@ -148,7 +148,7 @@ namespace Server.Items
                 var rec = _Zones[(int)zone];
                 Point3D p;
 
-                while(true)
+                while (true)
                 {
                     p = map.GetRandomSpawnPoint(rec); //new Point3D(rec.X + Utility.Random(rec.Width), rec.Y + Utility.RandomMinMax(rec.Start.X, rec.Height), -5);
 

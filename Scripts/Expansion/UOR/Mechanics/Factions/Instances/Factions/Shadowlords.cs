@@ -71,9 +71,9 @@ namespace Server.Factions
                     new GuardDefinition[]
                     {
                         new GuardDefinition(typeof(FactionHenchman), 0x1403, 5000, 1000, 10, new TextDefinition(1011526, "HENCHMAN"), new TextDefinition(1011510, "Hire Henchman")),
-                        new GuardDefinition(typeof(FactionMercenary),	0x0F62, 6000, 2000, 10, new TextDefinition(1011527, "MERCENARY"), new TextDefinition(1011511, "Hire Mercenary")),
-                        new GuardDefinition(typeof(FactionDeathKnight),	0x0F45, 7000, 3000, 10, new TextDefinition(1011512, "DEATH KNIGHT"),	new TextDefinition(1011503, "Hire Death Knight")),
-                        new GuardDefinition(typeof(FactionNecromancer),	0x13F8, 8000, 4000, 10, new TextDefinition(1011513, "SHADOW MAGE"),	new TextDefinition(1011504, "Hire Shadow Mage")),
+                        new GuardDefinition(typeof(FactionMercenary),   0x0F62, 6000, 2000, 10, new TextDefinition(1011527, "MERCENARY"), new TextDefinition(1011511, "Hire Mercenary")),
+                        new GuardDefinition(typeof(FactionDeathKnight), 0x0F45, 7000, 3000, 10, new TextDefinition(1011512, "DEATH KNIGHT"),    new TextDefinition(1011503, "Hire Death Knight")),
+                        new GuardDefinition(typeof(FactionNecromancer), 0x13F8, 8000, 4000, 10, new TextDefinition(1011513, "SHADOW MAGE"), new TextDefinition(1011504, "Hire Shadow Mage")),
                     });
         }
 

@@ -44,10 +44,10 @@ namespace Server.Mobiles
 
             this.m_FieldActive = this.CanUseField;
         }
-		
+
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich);            
+            this.AddLoot(LootPack.Rich);
         }
 
         public override void OnKilledBy(Mobile m)
@@ -60,7 +60,7 @@ namespace Server.Mobiles
             }
         }
 
-        public ExodusJuggernaut(Serial serial): base(serial)
+        public ExodusJuggernaut(Serial serial) : base(serial)
         {
         }
 

@@ -379,11 +379,11 @@ namespace Server.Multis
 
         public override bool CheckAddon(Item item)
         {
-            if(Addons == null)
+            if (Addons == null)
             {
                 return false;
             }
-        
+
             if (Addons.ContainsKey(item))
             {
                 return true;
@@ -1527,7 +1527,7 @@ namespace Server.Multis
                     if (version < 6)
                     {
                         count = reader.ReadInt();
-                        var list = new List<Item>(); 
+                        var list = new List<Item>();
 
                         for (int i = 0; i < count; i++)
                         {

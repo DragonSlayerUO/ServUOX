@@ -126,7 +126,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -159,7 +159,7 @@ namespace Server.Items
 
         public override int AosStrReq { get { return 10; } }
         public override Race RequiredRace { get { return Race.Gargoyle; } }
-        public override bool CanBeWornByGargoyles { get { return true; } }        
+        public override bool CanBeWornByGargoyles { get { return true; } }
 
         public GargishClothWingArmor(Serial serial)
             : base(serial)

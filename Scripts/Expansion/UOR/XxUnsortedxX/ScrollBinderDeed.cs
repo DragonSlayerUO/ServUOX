@@ -130,7 +130,7 @@ namespace Server.Items
                                 from.SendLocalizedMessage(1113144); // This scroll is already the highest of its type and cannot be bound.
                                 return;
                             }
-                            
+
                             double value = ps.Value;
                             int needed = 0;
 
@@ -188,7 +188,7 @@ namespace Server.Items
                             {
                                 from.SendLocalizedMessage(1113144); //This scroll is already the highest of its type and cannot be bound.
                                 return;
-                            }                                
+                            }
 
                             Skill = sot.Skill;
                             BinderType = BinderType.SOT;

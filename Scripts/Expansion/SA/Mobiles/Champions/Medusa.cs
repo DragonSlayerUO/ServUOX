@@ -103,7 +103,7 @@ namespace Server.Mobiles
 
             corpse.DropItem(new MedusaDarkScales(amount));
 
-            if(0.20 > Utility.RandomDouble())
+            if (0.20 > Utility.RandomDouble())
                 corpse.DropItem(new MedusaBlood());
 
             base.OnCarve(from, corpse, with);
@@ -148,7 +148,7 @@ namespace Server.Mobiles
             IPooledEnumerable eable = this.GetMobilesInRange(12);
             foreach (Mobile m in eable)
             {
-                if ( m == null || m == this || m_TurnedToStone.Contains(m) || !CanBeHarmful(m) || !InLOS(m) || m.AccessLevel > AccessLevel.Player)
+                if (m == null || m == this || m_TurnedToStone.Contains(m) || !CanBeHarmful(m) || !InLOS(m) || m.AccessLevel > AccessLevel.Player)
                     continue;
 
                 //Pets
@@ -453,7 +453,7 @@ namespace Server.Mobiles
 
             foreach (Mobile m in m_Helpers)
             {
-                if(m == null)
+                if (m == null)
                     continue;
 
                 if (!m.Alive || m.Deleted)
@@ -491,7 +491,7 @@ namespace Server.Mobiles
                     stones.Add(mob);
             }
 
-            if(stones.Count == 0)
+            if (stones.Count == 0)
                 return;
 
             Mobile m = stones[Utility.Random(stones.Count)];

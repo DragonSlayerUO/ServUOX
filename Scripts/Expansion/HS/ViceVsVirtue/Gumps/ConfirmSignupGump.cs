@@ -19,7 +19,7 @@ namespace Server.Engines.VvV
 
             AddBackground(0, 0, 360, 300, 83);
 
-            AddHtmlLocalized(0, 25, 360, 20, 1154645, "#1155565",0xFFFF, false, false); // Vice vs Virtue Signup
+            AddHtmlLocalized(0, 25, 360, 20, 1154645, "#1155565", 0xFFFF, false, false); // Vice vs Virtue Signup
 
             if (ViceVsVirtueSystem.EnhancedRules)
             {

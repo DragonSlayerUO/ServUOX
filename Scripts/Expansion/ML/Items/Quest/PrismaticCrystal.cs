@@ -28,7 +28,7 @@ namespace Server.Items
         {
             if (from.Backpack == null)
                 return;
-		
+
             if (from.InRange(this.Location, 2))
             {
                 if (from.Backpack.FindItemByType(typeof(PrismaticAmber), true) == null)

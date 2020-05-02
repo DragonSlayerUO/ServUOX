@@ -133,7 +133,7 @@ namespace Server.Items
 
         public override Race RequiredRace { get { return Race.Gargoyle; } }
         public override bool CanBeWornByGargoyles { get { return true; } }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

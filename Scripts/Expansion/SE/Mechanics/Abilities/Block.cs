@@ -85,7 +85,7 @@ namespace Server.Items
 
             Timer.DelayCall(TimeSpan.FromSeconds(Core.TOL ? 6 : 3), () =>
             {
-                if(IsBlocking(m))
+                if (IsBlocking(m))
                     EndBlock(m);
             });
         }
@@ -129,7 +129,7 @@ namespace Server.Items
 
             BeginBlock(attacker, dcibonus, spellblock, meleeblock);
 
-            if(creature)
+            if (creature)
                 PetTrainingHelper.OnWeaponAbilityUsed((BaseCreature)attacker, SkillName.Bushido);
         }
 

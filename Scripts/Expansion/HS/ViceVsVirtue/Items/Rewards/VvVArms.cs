@@ -7,7 +7,7 @@ using Server.Items;
 namespace Server.Engines.VvV
 {
     public class VvVWoodlandArms : WoodlandArms
-	{
+    {
         public override int BasePhysicalResistance { get { return 15; } }
         public override int BaseFireResistance { get { return 6; } }
         public override int BaseColdResistance { get { return 17; } }
@@ -27,25 +27,25 @@ namespace Server.Engines.VvV
 
         public VvVWoodlandArms(Serial serial)
             : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(1);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(1);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
 
 
             if (version == 0)
                 Timer.DelayCall(() => ViceVsVirtueSystem.Instance.AddVvVItem(this));
-		}
-	}
+        }
+    }
 
     public class VvVDragonArms : DragonArms
     {

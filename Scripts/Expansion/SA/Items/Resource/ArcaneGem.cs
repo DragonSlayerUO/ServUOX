@@ -7,7 +7,7 @@ namespace Server.Items
     public class ArcaneGem : Item, ICommodity
     {
         public const int DefaultArcaneHue = 2117;
-        public override int LabelNumber {get {return 1114115;} } // Arcane Gem
+        public override int LabelNumber { get { return 1114115; } } // Arcane Gem
 
         [Constructable]
         public ArcaneGem()
@@ -31,7 +31,7 @@ namespace Server.Items
 
         TextDefinition ICommodity.Description { get { return LabelNumber; } }
         bool ICommodity.IsDeedable { get { return true; } }
-       
+
         public static bool ConsumeCharges(Mobile from, int amount)
         {
             List<Item> items = from.Items;
@@ -130,7 +130,7 @@ namespace Server.Items
                 {
                     from.SendMessage("You may only target items in your backpack.");
                     return;
-                }             
+                }
 
                 int charges = GetChargesFor(from);
 

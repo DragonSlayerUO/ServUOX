@@ -79,7 +79,7 @@ namespace Server.Mobiles
 
         public override bool OverrideBondingReqs() { return true; }
 
-        public override double GetControlChance(Mobile m, bool useBaseSkill) 
+        public override double GetControlChance(Mobile m, bool useBaseSkill)
         {
             if (PetTrainingHelper.Enabled)
             {
@@ -91,7 +91,7 @@ namespace Server.Mobiles
                 }
             }
 
-            return 1.0; 
+            return 1.0;
         }
 
         public override int GetAngerSound() { return 0x21D; }

@@ -4,21 +4,21 @@ namespace Server.Items
 {
     public class MyrmidonArms : StuddedArms
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public MyrmidonArms()
             : base()
         {
             this.SetHue = 0x331;
-			
+
             this.Attributes.BonusStr = 1;
             this.Attributes.BonusHits = 2;
-			
+
             this.SetAttributes.Luck = 500;
             this.SetAttributes.NightSight = 1;
-			
+
             this.SetSelfRepair = 3;
-			
+
             this.SetPhysicalBonus = 3;
             this.SetFireBonus = 3;
             this.SetColdBonus = 3;
@@ -90,14 +90,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

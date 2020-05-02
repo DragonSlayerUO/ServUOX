@@ -3,17 +3,17 @@ using Server;
 
 namespace Server.Items
 {
-	public class MaddeningHorrorCostume : BaseCostume
-	{
+    public class MaddeningHorrorCostume : BaseCostume
+    {
         public override string CreatureName { get { return "maddening horror"; } }
 
         [Constructable]
-		public MaddeningHorrorCostume() : base( )
-		{
+        public MaddeningHorrorCostume() : base()
+        {
             this.CostumeBody = 721;
-		}
-		
-		public override int LabelNumber
+        }
+
+        public override int LabelNumber
         {
             get
             {
@@ -21,22 +21,22 @@ namespace Server.Items
             }
         }// maddening horror costume
 
-		public MaddeningHorrorCostume( Serial serial ) : base( serial )
-		{
-		}
+        public MaddeningHorrorCostume(Serial serial) : base(serial)
+        {
+        }
 
-		public override void Serialize( GenericWriter writer )
-		{
-			base.Serialize( writer );
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
 
-			writer.Write( (int) 0 );
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize( reader );
+            writer.Write((int)0);
+        }
 
-			int version = reader.ReadInt();
-		}
-	}
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+
+            int version = reader.ReadInt();
+        }
+    }
 }

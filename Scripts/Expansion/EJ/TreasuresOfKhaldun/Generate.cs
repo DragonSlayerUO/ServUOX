@@ -12,8 +12,8 @@ using Server.Engines.Quests;
 
 namespace Server.Engines.Khaldun
 {
-	public static class TreasuresOfKhaldunGeneration
-	{
+    public static class TreasuresOfKhaldunGeneration
+    {
         public static void Initialize()
         {
             if (Core.EJ)
@@ -78,7 +78,7 @@ namespace Server.Engines.Khaldun
                     khaldun.Enabled = true;
                 }
 
-                if(!khaldun.QuestContentGenerated)
+                if (!khaldun.QuestContentGenerated)
                 {
                     GenerateQuestContent();
                     khaldun.QuestContentGenerated = true;

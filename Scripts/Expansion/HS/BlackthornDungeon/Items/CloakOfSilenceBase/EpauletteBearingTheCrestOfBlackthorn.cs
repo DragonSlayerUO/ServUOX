@@ -17,8 +17,8 @@ namespace Server.Items
             SkillBonuses.SetValues(0, SkillName.Stealth, 10.0);
             Hue = 2130;
 
-			Layer = Layer.OuterTorso;
-        }     
+            Layer = Layer.OuterTorso;
+        }
 
         public EpauletteBearingTheCrestOfBlackthorn3(Serial serial)
             : base(serial)
@@ -35,8 +35,8 @@ namespace Server.Items
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-			
-			if (version == 0)
+
+            if (version == 0)
             {
                 MaxHitPoints = 0;
                 HitPoints = 0;

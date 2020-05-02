@@ -64,7 +64,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                 case 0:
@@ -73,7 +73,7 @@ namespace Server.Items
                         break;
                     }
             }
-			
+
             if (version < 1)
                 Stackable = Core.ML;
         }

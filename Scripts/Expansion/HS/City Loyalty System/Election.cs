@@ -11,8 +11,8 @@ using Server.Gumps;
 namespace Server.Engines.CityLoyalty
 {
     [PropertyObject]
-	public class CityElection
-	{
+    public class CityElection
+    {
         public static readonly int VotePeriod = 7;
         public static readonly int NominationDeadline = 24;
 
@@ -105,7 +105,7 @@ namespace Server.Engines.CityLoyalty
                 {
                     Mobile m = a[i];
 
-                    if(!(m is PlayerMobile))
+                    if (!(m is PlayerMobile))
                         continue;
 
                     BallotEntry ballot = Candidates.FirstOrDefault(entry => entry.Player == m);
@@ -149,7 +149,7 @@ namespace Server.Engines.CityLoyalty
                 {
                     Mobile m = a[i];
 
-                    if(!(m is PlayerMobile))
+                    if (!(m is PlayerMobile))
                         continue;
 
                     BallotEntry ballot = Candidates.FirstOrDefault(entry => entry.Endorsements.Contains(m as PlayerMobile));
@@ -157,7 +157,7 @@ namespace Server.Engines.CityLoyalty
                     if (m is PlayerMobile && ballot != null)
                     {
                         pm.SendLocalizedMessage(1153892); // A character from this account has already endorsed a nominee! 
-                        return false;                                                               
+                        return false;
                     }
 
                     BallotEntry ballot2 = Candidates.FirstOrDefault(entry => entry.Player == m);
@@ -165,7 +165,7 @@ namespace Server.Engines.CityLoyalty
                     if (m is PlayerMobile && ballot2 != null)
                     {
                         pm.SendLocalizedMessage(1153912); // A character from this account is currently nominated for candidacy and cannot offer an endorsement.  
-                        return false;     
+                        return false;
                     }
                 }
 
@@ -179,7 +179,7 @@ namespace Server.Engines.CityLoyalty
                         BallotEntry e = o as BallotEntry;
                         e.Endorsements.Add(m as PlayerMobile);
                         m.PrivateOverheadMessage(Network.MessageType.Regular, 0x3B2, 1153913, m.NetState); // *You etch your endorsement for the nominee into the stone*
-                    
+
                     }));
 
                     return true;
@@ -281,7 +281,7 @@ namespace Server.Engines.CityLoyalty
 
         public void OnTick()
         {
-            foreach(DateTime dt in StartTimes)
+            foreach (DateTime dt in StartTimes)
             {
                 if (dt.Year == DateTime.Now.Year && DateTime.Now.Month == dt.Month && DateTime.Now.Day > 14 && !ElectionEnded)
                 {
@@ -343,7 +343,7 @@ namespace Server.Engines.CityLoyalty
         {
             StartTimes = new DateTime[4];
 
-            for(int i = 0; i < _Periods.Length; i++)
+            for (int i = 0; i < _Periods.Length; i++)
             {
                 DateTime dt = new DateTime(DateTime.Now.Year, _Periods[i], 1);
 
@@ -395,7 +395,7 @@ namespace Server.Engines.CityLoyalty
             if (times == null || times.Length == 0)
                 return false;
 
-            for(int i = 0; i < times.Length; i++)
+            for (int i = 0; i < times.Length; i++)
             {
                 DateTime t = times[i];
 
@@ -497,7 +497,7 @@ namespace Server.Engines.CityLoyalty
                     City.Stone.InvalidateProperties();
             }
 
-            for(int i = 0; i < StartTimes.Length; i++)
+            for (int i = 0; i < StartTimes.Length; i++)
             {
                 DateTime dt = StartTimes[i];
 
@@ -564,7 +564,7 @@ namespace Server.Engines.CityLoyalty
                     Candidates.Add(entry);
             }
         }
-	}
+    }
 
     public class BallotEntry : IComparable<BallotEntry>
     {

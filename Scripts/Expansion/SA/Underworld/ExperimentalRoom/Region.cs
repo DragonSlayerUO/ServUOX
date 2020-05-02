@@ -63,7 +63,7 @@ namespace Server.Regions
             Point3D loc = from.Location;
             Point3D p = new Point3D(x, y, z);
 
-            if(from is PlayerMobile)
+            if (from is PlayerMobile)
                 BaseCreature.TeleportPets(from, p, Map.TerMur);
 
             from.MoveToWorld(p, Map.TerMur);

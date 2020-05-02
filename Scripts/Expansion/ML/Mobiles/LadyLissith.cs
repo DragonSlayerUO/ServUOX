@@ -52,19 +52,19 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		public override bool CanBeParagon { get { return false; } }
-        public override void OnDeath( Container c )
+        public override bool CanBeParagon { get { return false; } }
+        public override void OnDeath(Container c)
         {
-            base.OnDeath( c );
+            base.OnDeath(c);
 
-            if ( Utility.RandomDouble() < 0.025 )
-            c.DropItem( new GreymistChest() );
+            if (Utility.RandomDouble() < 0.025)
+                c.DropItem(new GreymistChest());
 
-            if ( Utility.RandomDouble() < 0.45 )
-            c.DropItem( new LissithsSilk() );
+            if (Utility.RandomDouble() < 0.45)
+                c.DropItem(new LissithsSilk());
 
-            if ( Utility.RandomDouble() < 0.1 )
-            c.DropItem( new ParrotItem() );
+            if (Utility.RandomDouble() < 0.1)
+                c.DropItem(new ParrotItem());
         }
 
         /*public override bool GivesMLMinorArtifact

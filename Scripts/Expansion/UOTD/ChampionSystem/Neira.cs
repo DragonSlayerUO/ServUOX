@@ -202,7 +202,7 @@ namespace Server.Mobiles
 
             if (0.1 >= Utility.RandomDouble()) // 10% chance to drop or throw an unholy bone
                 AddUnholyBone(defender, 0.25);
-				
+
             CheckSpeedBoost();
         }
 
@@ -252,8 +252,8 @@ namespace Server.Mobiles
             base.Deserialize(reader);
 
             int version = reader.ReadInt();
-			
-            switch( version )
+
+            switch (version)
             {
                 case 1:
                     {

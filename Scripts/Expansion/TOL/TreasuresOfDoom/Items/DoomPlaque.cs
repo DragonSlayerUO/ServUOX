@@ -20,7 +20,7 @@ namespace Server.Items
 
         [Constructable]
         public DoomPlaque()
-            : base(0x4B20) 
+            : base(0x4B20)
         {
             Movable = false;
             Hue = 2500;

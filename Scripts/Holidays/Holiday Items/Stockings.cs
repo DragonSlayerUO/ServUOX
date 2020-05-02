@@ -61,20 +61,20 @@ namespace Server.Items
         {
         }
 
-        public override int DefaultGumpID 
-        { 
-            get 
-            { 
-                return 0x103; 
-            } 
-        }
-
-        public override int DefaultDropSound 
+        public override int DefaultGumpID
         {
             get
-            { 
-                return 0x42; 
-            } 
+            {
+                return 0x103;
+            }
+        }
+
+        public override int DefaultDropSound
+        {
+            get
+            {
+                return 0x42;
+            }
         }
 
         public override void Serialize(GenericWriter writer)

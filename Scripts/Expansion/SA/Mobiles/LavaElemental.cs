@@ -11,7 +11,7 @@ namespace Server.Mobiles
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "a lava elemental";
-            Body = 720; 
+            Body = 720;
 
             SetStr(446, 510);
             SetDex(160, 190);

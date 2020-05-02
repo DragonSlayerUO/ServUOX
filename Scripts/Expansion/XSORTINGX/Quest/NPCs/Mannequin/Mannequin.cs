@@ -568,7 +568,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
             writer.Write((int)1); // version
-            
+
             writer.Write(Description);
             writer.Write(Owner);
         }
@@ -592,11 +592,11 @@ namespace Server.Mobiles
 
                         break;
                     }
-            }            
+            }
         }
     }
 
-    
+
 
     [Flipable(0x14F0, 0x14EF)]
     public class MannequinDeed : Item
@@ -626,7 +626,7 @@ namespace Server.Mobiles
                     if (house.Owner == from || house.IsCoOwner(from))
                     {
                         from.SendLocalizedMessage(1151657); // Where do you wish to place this?
-                        from.Target = new PlaceTarget(this);                       
+                        from.Target = new PlaceTarget(this);
                     }
                     else
                     {

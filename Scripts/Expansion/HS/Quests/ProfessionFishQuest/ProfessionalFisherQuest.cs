@@ -143,7 +143,7 @@ namespace Server.Engines.Quests
 
                     if (obj != null)
                     {
-                        foreach(KeyValuePair<Type, int[]> kvp in obj.Line)
+                        foreach (KeyValuePair<Type, int[]> kvp in obj.Line)
                             entry.OnQuestResign(kvp.Key);
                     }
                 }
@@ -196,7 +196,7 @@ namespace Server.Engines.Quests
             FishQuestObjective obj = GetObjective();
             if (obj != null)
             {
-                foreach(KeyValuePair<Type, int[]> kvp in obj.Line)
+                foreach (KeyValuePair<Type, int[]> kvp in obj.Line)
                     m_Crate.ConsumeTotal(kvp.Key, kvp.Value[1]);
             }
 

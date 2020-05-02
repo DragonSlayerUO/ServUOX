@@ -56,8 +56,8 @@ namespace Server.Engines.Fellowship
                 };
 
                 AddItem(backpack);
-            }    
-        }        
+            }
+        }
 
         public override void GetProperties(ObjectPropertyList list)
         {
@@ -126,5 +126,5 @@ namespace Server.Engines.Fellowship
                 InstanceFel = this;
             }
         }
-    }    
+    }
 }

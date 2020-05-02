@@ -204,7 +204,7 @@ namespace Server.Items
 
                                 if (northWall)
                                     itemID = 0x8B8F;
-                                else if(westWall)
+                                else if (westWall)
                                     itemID = 0x8B90;
                                 else
                                     m.SendLocalizedMessage(500268); // This object needs to be mounted on something.

@@ -182,8 +182,8 @@ namespace Server.Mobiles
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-			
-            switch( version )
+
+            switch (version)
             {
                 case 1:
                     {

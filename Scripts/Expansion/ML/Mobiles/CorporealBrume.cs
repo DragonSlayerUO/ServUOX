@@ -44,8 +44,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		public override bool CanBeParagon { get { return false; } }
-  
+        public override bool CanBeParagon { get { return false; } }
+
         public void AuraEffect(Mobile m)
         {
             m.FixedParticles(0x374A, 10, 15, 5038, 1181, 2, EffectLayer.Head);

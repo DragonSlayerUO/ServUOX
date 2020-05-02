@@ -89,7 +89,7 @@ namespace Server.Gumps
                 AddButton(15, 90 + (yOffset * 25), 4005, 4007, 10004, GumpButtonType.Reply, 0);
                 AddHtmlLocalized(50, 90 + (yOffset * 25), 150, 18, 1114254, LabelColor, false, false);   //Resists
                 yOffset += 1;
-            }            
+            }
 
             if (itemRef == 1 || itemRef == 2)
             {
@@ -712,7 +712,7 @@ namespace Server.Gumps
                     {
                         User.EndAction(typeof(Imbuing));
                         break;
-                    }                
+                    }
                 case 10001:
                     {
                         context.ImbMenu_Cat = 1;
@@ -834,7 +834,7 @@ namespace Server.Gumps
                         {
                             BaseGump.SendGump(new ImbueGump(User, context.LastImbued, id, -1));
                         }
-                        
+
                         break;
                     }
             }

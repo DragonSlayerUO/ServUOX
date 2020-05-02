@@ -64,7 +64,7 @@ namespace Server.Items
 
         public override BaseAddon Addon { get { return new FireDemonStatueAddon(); } }
 
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

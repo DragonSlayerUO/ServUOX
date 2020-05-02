@@ -154,7 +154,7 @@ namespace Server.Mobiles
             if (Spawner.Deleted || User.AccessLevel < AccessLevel.GameMaster)
                 return;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0: // Closed
                     {

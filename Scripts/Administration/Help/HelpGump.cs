@@ -48,7 +48,7 @@ namespace Server.Engines.Help
     public class HelpGump : Gump
     {
         public static readonly string SupportWebsite = Config.Get("General.SupportWebsite", default(string));
-		
+
         public HelpGump(Mobile from)
             : base(0, 0)
         {
@@ -185,7 +185,7 @@ namespace Server.Engines.Help
 
             PageType type = (PageType)(-1);
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0: // Close/Cancel
                     {

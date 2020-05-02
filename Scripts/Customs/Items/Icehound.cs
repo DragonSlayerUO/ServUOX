@@ -30,7 +30,7 @@ namespace Server.Mobiles
             SetResistance(ResistanceType.Cold, 40, 50);
             SetResistance(ResistanceType.Poison, 10, 20);
             SetResistance(ResistanceType.Energy, 10, 20);
-			
+
             SetSkill(SkillName.Swords, 99.0);
 
             Fame = 3400;

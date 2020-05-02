@@ -36,8 +36,8 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 95.1, 105.0);
             SetSkill(SkillName.Wrestling, 97.6, 107.5);
 
-            Fame = 4200;	
-            Karma = -4200; 
+            Fame = 4200;
+            Karma = -4200;
 
             SetWeaponAbility(WeaponAbility.DoubleStrike);
         }
@@ -96,7 +96,7 @@ namespace Server.Mobiles
         }
 
         // TODO: Throwing Dagger
-        public override void OnGaveMeleeAttack(Mobile defender) 
+        public override void OnGaveMeleeAttack(Mobile defender)
         {
             base.OnGaveMeleeAttack(defender);
 

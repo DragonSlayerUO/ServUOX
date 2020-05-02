@@ -97,7 +97,7 @@ namespace Server.Engines.Quests
         {
             get
             {
-                return new Type[] 
+                return new Type[]
                 {
                     typeof(IntoTheVoidQuest)
                 };
@@ -106,7 +106,7 @@ namespace Server.Engines.Quests
         public override void InitBody()
         {
             InitStats(100, 100, 25);
-            
+
             CantWalk = true;
             Race = Race.Gargoyle;
 

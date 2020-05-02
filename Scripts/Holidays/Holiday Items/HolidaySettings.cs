@@ -53,7 +53,7 @@ namespace Server.Events.Halloween
         {
             get
             {
-                return (Item)Activator.CreateInstance(m_Treats[Utility.Random(m_Treats.Length)]) ;
+                return (Item)Activator.CreateInstance(m_Treats[Utility.Random(m_Treats.Length)]);
             }
         }
     }

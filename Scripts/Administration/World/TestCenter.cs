@@ -179,7 +179,7 @@ namespace Server.Misc
             keg.Hue = hue;
 
             //   return MakeNewbie(keg);
-            return(keg);
+            return (keg);
         }
 
         private static Item MakeNewbie(Item item)
@@ -683,7 +683,7 @@ namespace Server.Misc
 
             public override void OnResponse(NetState sender, RelayInfo info)
             {
-                switch ( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     case 1:
                         {

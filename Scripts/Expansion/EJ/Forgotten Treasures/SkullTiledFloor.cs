@@ -1,13 +1,13 @@
 using Server.Gumps;
 
 namespace Server.Items
-{ 
+{
     public class SkullTiledFloorAddon : BaseAddon
     {
         [Constructable]
         public SkullTiledFloorAddon(bool east)
             : base()
-        { 
+        {
             if (!east)
             {
                 AddComponent(new LocalizedAddonComponent(0xA34F, 1125827), 0, 0, 0);
@@ -103,7 +103,7 @@ namespace Server.Items
 
         public void OnOptionSelected(Mobile from, int option)
         {
-            switch ( option )
+            switch (option)
             {
                 case 1:
                     m_East = false;

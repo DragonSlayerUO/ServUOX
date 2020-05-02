@@ -16,18 +16,18 @@ namespace Server.Items
                 case 1:
                     DropItem(new DaemonClaw());
                     break;
-              /*  case 2:
-                    DropItem(new SpiderCarapace());
-                    break;
-                case 3:
-                    DropItem(new VialOfVitriol());
-                    break;
-                case 4:
-                    DropItem(new LavaSerpenCrust());
-                    break;
-                case 5:
-                    DropItem(new GoblinBlood());
-                    break;*/
+                    /*  case 2:
+                          DropItem(new SpiderCarapace());
+                          break;
+                      case 3:
+                          DropItem(new VialOfVitriol());
+                          break;
+                      case 4:
+                          DropItem(new LavaSerpenCrust());
+                          break;
+                      case 5:
+                          DropItem(new GoblinBlood());
+                          break;*/
             }
         }
 

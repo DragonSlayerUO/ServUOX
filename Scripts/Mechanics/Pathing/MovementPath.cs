@@ -9,7 +9,7 @@ namespace Server
 {
     public sealed class MovementPath
     {
-        public MovementPath(Mobile m, Point3D goal) 
+        public MovementPath(Mobile m, Point3D goal)
             : this(m, goal, m.Map)
         {
         }

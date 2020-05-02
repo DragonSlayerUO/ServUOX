@@ -7,8 +7,8 @@ namespace Server.Engines.BulkOrders
     public class BOBFilterGump : Gump
     {
         private static int[,] m_MaterialFilters = new int[,]
-			{
-				{ 1044067,  1 }, // Blacksmithy
+            {
+                { 1044067,  1 }, // Blacksmithy
 				{ 1062226,  3 }, // Iron
 				{ 1018332,  4 }, // Dull Copper
 				{ 1018333,  5 }, // Shadow Iron
@@ -222,7 +222,7 @@ namespace Server.Engines.BulkOrders
 
             int index = info.ButtonID;
 
-            switch ( index )
+            switch (index)
             {
                 case 0: // Apply
                     {
@@ -269,7 +269,7 @@ namespace Server.Engines.BulkOrders
                                 if (filters[index, 0] == 0)
                                     break;
 
-                                switch ( type )
+                                switch (type)
                                 {
                                     case 0:
                                         f.Type = filters[index, 1];

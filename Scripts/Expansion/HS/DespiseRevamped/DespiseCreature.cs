@@ -141,7 +141,7 @@ namespace Server.Engines.Despise
         }
 
         public override TimeSpan ReacquireDelay
-        { 
+        {
             get
             {
                 if (!Controlled || m_Orb == null || m_Orb.Aggression == Aggression.Defensive)
@@ -152,7 +152,7 @@ namespace Server.Engines.Despise
                 {
                     return TimeSpan.FromSeconds(Utility.RandomMinMax(4, 6));
                 }
-            } 
+            }
         }
 
         public DespiseCreature(AIType ai, FightMode fightmode)

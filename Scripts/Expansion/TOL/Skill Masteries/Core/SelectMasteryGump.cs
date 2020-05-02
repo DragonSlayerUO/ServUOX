@@ -18,7 +18,7 @@ namespace Server.Gumps
 
         public BookOfMasteries Book { get; private set; }
 
-        public MasterySelectionGump(PlayerMobile user, BookOfMasteries book) 
+        public MasterySelectionGump(PlayerMobile user, BookOfMasteries book)
             : base(user, 75, 25)
         {
             Book = book;

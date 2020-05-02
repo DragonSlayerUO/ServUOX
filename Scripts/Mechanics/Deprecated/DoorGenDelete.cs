@@ -335,8 +335,8 @@ namespace Server
         [Description("Deletes doors by analyzing the map.")]
         public static void DoorGenDelete_OnCommand(CommandEventArgs e)
         {
-			WeakEntityCollection.Delete("door");
-			// Retained for backward compatibility
+            WeakEntityCollection.Delete("door");
+            // Retained for backward compatibility
             Delete();
         }
 
@@ -388,7 +388,7 @@ namespace Server
         {
             int doorZ = z;
             int doorTop = doorZ + 20;
-			
+
             m_Count += DeleteBaseDoor(m_Map, new Point3D(x, y, z));
         }
 
@@ -418,8 +418,10 @@ namespace Server
                             }
                             else if (IsEastFrame(vx + 3, vy, z))
                             {
-                                /*BaseDoor first = */DeleteDoor(vx + 1, vy, z);
-                                /*BaseDoor second = */DeleteDoor(vx + 2, vy, z);
+                                /*BaseDoor first = */
+                                DeleteDoor(vx + 1, vy, z);
+                                /*BaseDoor second = */
+                                DeleteDoor(vx + 2, vy, z);
                                 /*if (first != null && second != null)
                                 {
                                 first.Link = second;
@@ -442,8 +444,10 @@ namespace Server
                             }
                             else if (IsSouthFrame(vx, vy + 3, z))
                             {
-                                /*BaseDoor first = */DeleteDoor(vx, vy + 1, z);
-                                /*BaseDoor second = */DeleteDoor(vx, vy + 2, z);
+                                /*BaseDoor first = */
+                                DeleteDoor(vx, vy + 1, z);
+                                /*BaseDoor second = */
+                                DeleteDoor(vx, vy + 2, z);
                                 /*if (first != null && second != null)
                                 {
                                 first.Link = second;

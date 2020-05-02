@@ -37,7 +37,7 @@ namespace Server.Items
                         {
                             BaseWeapon wep = targeted as BaseWeapon;
 
-                            if(!wep.IsChildOf(m.Backpack))
+                            if (!wep.IsChildOf(m.Backpack))
                                 m.SendLocalizedMessage(1042001); // That must be in your pack for you to use it.
                             else if (wep.TimesImbued > 0 || wep.Quality != ItemQuality.Exceptional)
                                 m.SendLocalizedMessage(1046439); // Invalid target.

@@ -89,7 +89,7 @@ namespace Server.Engines.TreasuresOfKotlCity
             if (Stations == null)
                 Stations = new List<PowerCoreDockingStation>();
 
-            if(!Stations.Contains(this))
+            if (!Stations.Contains(this))
                 Stations.Add(this);
         }
 

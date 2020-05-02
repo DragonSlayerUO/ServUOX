@@ -10,7 +10,7 @@ public class RoundBasketHandles : BaseContainer
     public RoundBasketHandles()
         : base(0x9AC)
     {
-        Weight = 1.0; 
+        Weight = 1.0;
     }
 
     public RoundBasketHandles(Serial serial)

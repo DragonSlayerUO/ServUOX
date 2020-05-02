@@ -53,7 +53,7 @@ namespace Server.Engines.NewMagincia
                 {
                     foreach (MaginciaHousingPlot plot in m_Plots)
                     {
-                        if(plot.IsAvailable)
+                        if (plot.IsAvailable)
                             plot.LottoEnds = DateTime.UtcNow + m_LottoDuration;
                     }
                 }
@@ -96,7 +96,7 @@ namespace Server.Engines.NewMagincia
             m_FreeHousingZones[Map.Trammel] = new List<Rectangle2D>();
             m_FreeHousingZones[Map.Felucca] = new List<Rectangle2D>();
 
-            if(m_Enabled)
+            if (m_Enabled)
                 StartTimer();
 
             LoadPlots();
@@ -553,7 +553,7 @@ namespace Server.Engines.NewMagincia
                 m_Plots[i].Serialize(writer);
 
             writer.Write(m_FreeHousingZones[Map.Trammel].Count);
-            foreach(Rectangle2D rec in m_FreeHousingZones[Map.Trammel])
+            foreach (Rectangle2D rec in m_FreeHousingZones[Map.Trammel])
                 writer.Write(rec);
 
             writer.Write(m_FreeHousingZones[Map.Felucca].Count);
@@ -561,12 +561,12 @@ namespace Server.Engines.NewMagincia
                 writer.Write(rec);
 
             writer.Write(m_MessageQueue.Count);
-            foreach(KeyValuePair<Mobile, List<NewMaginciaMessage>> kvp in m_MessageQueue)
+            foreach (KeyValuePair<Mobile, List<NewMaginciaMessage>> kvp in m_MessageQueue)
             {
                 writer.Write(kvp.Key);
 
                 writer.Write(kvp.Value.Count);
-                foreach(NewMaginciaMessage message in kvp.Value)
+                foreach (NewMaginciaMessage message in kvp.Value)
                     message.Serialize(writer);
             }
 
@@ -606,7 +606,7 @@ namespace Server.Engines.NewMagincia
                 List<NewMaginciaMessage> messages = new List<NewMaginciaMessage>();
 
                 int count = reader.ReadInt();
-                for(int j = 0; j < count; j++)
+                for (int j = 0; j < count; j++)
                     messages.Add(new NewMaginciaMessage(reader));
 
                 if (m != null && messages.Count > 0)
@@ -623,7 +623,7 @@ namespace Server.Engines.NewMagincia
 
         public void ValidatePlots()
         {
-            for(int i = 0; i < m_Identifiers.Length; i++)
+            for (int i = 0; i < m_Identifiers.Length; i++)
             {
                 var rec = m_MagHousingZones[i];
                 var id = m_Identifiers[i];

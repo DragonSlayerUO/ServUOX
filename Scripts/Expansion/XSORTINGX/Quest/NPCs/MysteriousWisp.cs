@@ -560,7 +560,7 @@ namespace Server.Mobiles
                         if (m_Viewers.Contains(m))
                             m_Viewers.Remove(m);
 
-                        if(wisp.InRange(m.Location, 5) && wisp.Backpack != null)
+                        if (wisp.InRange(m.Location, 5) && wisp.Backpack != null)
                             m.SendGump(new InternalGump(wisp, m));
                     }
                 }
@@ -606,7 +606,7 @@ namespace Server.Mobiles
                 string cost = m_Available ? m_Wisp.GetCostFor(item).ToString() : "No Longer Available";
 
                 AddHtml(10, 100, 140, 20, "<BASEFONT COLOR=#FFFFFF>Despise Crystals:</BASEFONT>", false, false);
-                AddHtml(10, 120, 140, 20, "<BASEFONT COLOR=#FFFFFF>"+cost+"</BASEFONT>", false, false);
+                AddHtml(10, 120, 140, 20, "<BASEFONT COLOR=#FFFFFF>" + cost + "</BASEFONT>", false, false);
 
                 Rectangle2D b = ItemBounds.Table[item.ItemID];
                 AddItem(210 - b.Width / 2 - b.X, 70 - b.Height / 2 - b.Y, item.ItemID, item.Hue);

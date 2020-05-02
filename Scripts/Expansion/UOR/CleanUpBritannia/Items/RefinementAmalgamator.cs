@@ -66,7 +66,7 @@ namespace Server.Items
                     m.SendLocalizedMessage(1154353); // You can't upgrade this refinement.
                 }
             }
-            else 
+            else
             {
                 if (ToUpgrade.RefinementType != component.RefinementType
                             || ToUpgrade.CraftType != component.CraftType

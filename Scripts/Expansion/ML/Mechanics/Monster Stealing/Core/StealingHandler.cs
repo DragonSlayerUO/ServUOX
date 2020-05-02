@@ -11,16 +11,16 @@ namespace Server.Engines.CreatureStealing
 {
     class StealingHandler
     {
-        private static Type[] SpecialItemList = 
-        { 
-            typeof(SeedOfLife), 
-            typeof(BalmOfStrength), 
+        private static Type[] SpecialItemList =
+        {
+            typeof(SeedOfLife),
+            typeof(BalmOfStrength),
             typeof(BalmOfWisdom),
-            typeof(BalmOfSwiftness), 
-            typeof(ManaDraught), 
-            typeof(BalmOfProtection), 
-            typeof(StoneSkinLotion), 
-            typeof(GemOfSalvation), 
+            typeof(BalmOfSwiftness),
+            typeof(ManaDraught),
+            typeof(BalmOfProtection),
+            typeof(StoneSkinLotion),
+            typeof(GemOfSalvation),
             typeof(LifeShieldLotion),
             typeof(SmugglersLantern),
             typeof(SmugglersToolBox)
@@ -31,13 +31,13 @@ namespace Server.Engines.CreatureStealing
             if (from.HasBeenStolen)
             {
                 thief.SendLocalizedMessage(1094948); //That creature has already been stolen from.  There is nothing left to steal.
-                return; 
+                return;
             }
-            
+
             if (from.Controlled || from.Summoned)
             {
                 thief.SendLocalizedMessage(502708); //You can't steal from this.
-                return; 
+                return;
             }
 
             if (!CheckLocation(thief, from))
@@ -50,7 +50,7 @@ namespace Server.Engines.CreatureStealing
 
             int chance = GetStealingChance(thief, from, stealing);
 
-            if ((Utility.Random(100)+1) <= chance) 
+            if ((Utility.Random(100) + 1) <= chance)
             {
                 thief.SendLocalizedMessage(1094947);//You successfully steal a special item from the creature!
 
@@ -66,7 +66,7 @@ namespace Server.Engines.CreatureStealing
                 }
 
                 thief.AddToBackpack(item);
-            } 
+            }
 
             from.HasBeenStolen = true;
         }
@@ -166,7 +166,7 @@ namespace Server.Engines.CreatureStealing
 
             if (level >= 40)
                 chance += 5;
-             else if (level >= 35) 
+            else if (level >= 35)
                 chance += 3;
             else if (level >= 30)
                 chance += 2;

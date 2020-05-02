@@ -53,7 +53,7 @@ namespace Server.Items
             return true;
         }
 
-        public PetTrainingGate(Serial serial) 
+        public PetTrainingGate(Serial serial)
             : base(serial)
         {
         }

@@ -7,7 +7,7 @@ namespace Server.Items
     public class GardeningContract : Item
     {
         public override int LabelNumber { get { return 1155764; } } // Gardening Contract
-        
+
         [Constructable]
         public GardeningContract()
             : base(0x14F0)

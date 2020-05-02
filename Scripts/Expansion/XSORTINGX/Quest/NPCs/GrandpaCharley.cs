@@ -10,9 +10,9 @@ namespace Server.Mobiles
         [Constructable]
         public GrandpaCharley()
             : base("the farmer")
-        { 
+        {
             this.Name = "Grandpa Charley";
-			
+
             this.SetSkill(SkillName.ItemID, 70.0, 80.0);
         }
 
@@ -50,22 +50,22 @@ namespace Server.Mobiles
             }
         }
         public override void InitSBInfo()
-        { 
+        {
         }
 
         public override void InitBody()
         {
             this.InitStats(100, 100, 25);
-			
+
             this.Female = false;
             this.CantWalk = false;
             this.Race = Race.Human;
-			
+
             this.Hue = 0x8410;
             this.HairItemID = 0x203B;
-            this.HairHue = 0x3B2;	
+            this.HairHue = 0x3B2;
             this.FacialHairItemID = 0x203E;
-            this.FacialHairHue = 0x3B2;				
+            this.FacialHairHue = 0x3B2;
         }
 
         public override void InitOutfit()
@@ -81,14 +81,14 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-	
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-	
+
             int version = reader.ReadInt();
         }
     }

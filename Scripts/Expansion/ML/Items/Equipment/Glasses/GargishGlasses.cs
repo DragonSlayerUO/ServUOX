@@ -3,9 +3,9 @@ using Server.Engines.Craft;
 
 namespace Server.Items
 {
-    [Flipable(0x4644, 0x4645)]     
+    [Flipable(0x4644, 0x4645)]
     public class GargishGlasses : BaseArmor, IRepairable
-	{
+    {
         public CraftSystem RepairSystem { get { return DefTinkering.CraftSystem; } }
 
         public override Race RequiredRace { get { return Race.Gargoyle; } }
@@ -15,7 +15,7 @@ namespace Server.Items
         public GargishGlasses()
             : base(0x4644)
         {
-            Layer = Layer.Earrings;       
+            Layer = Layer.Earrings;
             Weight = 2;
         }
 
@@ -122,7 +122,7 @@ namespace Server.Items
                 return ArmorMeditationAllowance.All;
             }
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

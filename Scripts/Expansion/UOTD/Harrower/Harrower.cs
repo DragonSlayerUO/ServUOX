@@ -214,7 +214,7 @@ namespace Server.Mobiles
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {
@@ -280,7 +280,7 @@ namespace Server.Mobiles
 
                         int chance = 0;
 
-                        switch ( VirtueHelper.GetLevel(prot, VirtueName.Justice) )
+                        switch (VirtueHelper.GetLevel(prot, VirtueName.Justice))
                         {
                             case VirtueLevel.Seeker:
                                 chance = 60;
@@ -303,22 +303,22 @@ namespace Server.Mobiles
             }
         }
 
-		private static int RandomStatScrollLevel()
-		{
-			double random = Utility.RandomDouble();
+        private static int RandomStatScrollLevel()
+        {
+            double random = Utility.RandomDouble();
 
-			if (0.1 >= random)
-				return 25;
-			else if (0.25 >= random)
-				return 20;
-			else if (0.45 >= random)
-				return 15;
-			else if (0.70 >= random)
-				return 10;
-			return 5;
-		}
+            if (0.1 >= random)
+                return 25;
+            else if (0.25 >= random)
+                return 20;
+            else if (0.45 >= random)
+                return 15;
+            else if (0.70 >= random)
+                return 10;
+            return 5;
+        }
 
-		public override bool OnBeforeDeath()
+        public override bool OnBeforeDeath()
         {
             if (m_TrueForm)
             {
@@ -338,7 +338,7 @@ namespace Server.Mobiles
 
                     Map map = Map;
 
-					GoldShower.DoForHarrower(Location, Map);
+                    GoldShower.DoForHarrower(Location, Map);
 
                     m_DamageEntries = new Dictionary<Mobile, int>();
 
@@ -442,7 +442,7 @@ namespace Server.Mobiles
             if (to == null || artifact == null)
                 return;
 
-			to.PlaySound(0x5B4);
+            to.PlaySound(0x5B4);
 
             Container pack = to.Backpack;
 
@@ -475,7 +475,7 @@ namespace Server.Mobiles
                 return null;
 
             int random = Utility.Random(list.Length);
-			
+
             Type type = list[random];
 
             return Loot.Construct(type);

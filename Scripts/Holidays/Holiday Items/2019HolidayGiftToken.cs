@@ -102,7 +102,7 @@ namespace Server.Items
             else
                 box.DropItem(new Poinsettia(1154));
 
-            switch(Gift)
+            switch (Gift)
             {
                 case HolidayGift2019.JollyHolidayTree:
                     {
@@ -134,7 +134,7 @@ namespace Server.Items
                                     break;
                                 }
                         }
-                            
+
                         break;
                     }
             }

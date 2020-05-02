@@ -93,15 +93,15 @@ namespace Server.Mobiles
             return 0x4F5;
         }
 
-		public override void OnDeath(Container c)
-		{
-			base.OnDeath(c);
+        public override void OnDeath(Container c)
+        {
+            base.OnDeath(c);
 
-			if(!Controlled && Core.ML)
-				c.AddItem(Loot.Construct(typeof(GamanHorns)));
-		}
+            if (!Controlled && Core.ML)
+                c.AddItem(Loot.Construct(typeof(GamanHorns)));
+        }
 
-		public override void Serialize(GenericWriter writer)
+        public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
             writer.Write((int)0);

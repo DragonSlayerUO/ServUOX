@@ -32,7 +32,7 @@ namespace Server.Factions
         {
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 6:
                 case 5:
@@ -114,7 +114,7 @@ namespace Server.Factions
                         }
 
                         m_Faction.State = this;
-					
+
                         m_Faction.ZeroRankOffset = m_Members.Count;
                         m_Members.Sort();
 
@@ -138,7 +138,7 @@ namespace Server.Factions
                             {
                                 FactionItem factionItem = new FactionItem(reader, m_Faction);
 
-                                if(Settings.Enabled)
+                                if (Settings.Enabled)
                                     Timer.DelayCall(TimeSpan.Zero, new TimerCallback(factionItem.CheckAttach)); // sandbox attachment
                             }
                         }
@@ -317,7 +317,7 @@ namespace Server.Factions
             for (int i = 0; i < members.Count; ++i)
             {
                 PlayerState ps = members[i];
-					
+
                 if (ps.IsActive)
                 {
                     ps.IsActive = false;

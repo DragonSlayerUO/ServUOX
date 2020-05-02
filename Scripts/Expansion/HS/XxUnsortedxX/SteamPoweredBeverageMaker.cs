@@ -16,7 +16,7 @@ namespace Server.Items
         public SteamPoweredBeverageMaker(Serial serial)
             : base(serial)
         {
-        }       
+        }
 
         public override void Serialize(GenericWriter writer)
         {

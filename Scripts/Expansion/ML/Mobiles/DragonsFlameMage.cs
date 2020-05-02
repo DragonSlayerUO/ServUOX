@@ -79,7 +79,7 @@ namespace Server.Mobiles
             base.OnDeath(c);
 
             if (Utility.RandomDouble() < 0.3)
-                c.DropItem(new DragonFlameSectBadge());      
+                c.DropItem(new DragonFlameSectBadge());
         }
 
         public override void Serialize(GenericWriter writer)

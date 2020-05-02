@@ -15,7 +15,7 @@ namespace Server.ContextMenus
         }
 
         public override void OnClick()
-        { 
+        {
             Party p = Party.Get(this.m_From);
 
             if (p == null || p.Leader != this.m_From || !p.Contains(this.m_Target))

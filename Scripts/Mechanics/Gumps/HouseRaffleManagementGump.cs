@@ -28,7 +28,7 @@ namespace Server.Gumps
             this.m_List = new List<RaffleEntry>(this.m_Stone.Entries);
             this.m_Sort = sort;
 
-            switch ( this.m_Sort )
+            switch (this.m_Sort)
             {
                 case SortMethod.Name:
                     {
@@ -169,7 +169,7 @@ namespace Server.Gumps
             Mobile from = sender.Mobile;
             int buttonId = info.ButtonID;
 
-            switch ( buttonId )
+            switch (buttonId)
             {
                 case 1: // Previous
                     {

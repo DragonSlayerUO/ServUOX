@@ -4,19 +4,19 @@ using Server.Items;
 using System.Collections;
 using Server.Network;
 
-namespace Server.Mobiles 
-{ 
-    public class DemonicJailor : BaseCreature 
-    { 
-        [Constructable] 
+namespace Server.Mobiles
+{
+    public class DemonicJailor : BaseCreature
+    {
+        [Constructable]
         public DemonicJailor()
             : base(AIType.AI_Melee, FightMode.Closest, 15, 1, 0.1, 0.3)
         {
             this.Name = NameList.RandomName("male");
-            this.SpeechHue = Utility.RandomDyedHue(); 
+            this.SpeechHue = Utility.RandomDyedHue();
             this.Title = "the demonic jailor";
             this.Hue = 34531;
-            this.Body = 0x190;             
+            this.Body = 0x190;
 
             this.SetStr(386, 400);
             this.SetDex(151, 165);
@@ -48,7 +48,7 @@ namespace Server.Mobiles
             this.VirtualArmor = 40;
 
             this.SetWearable(new ShortPants(Utility.RandomRedHue()));
-            this.AddItem(new Sandals(Utility.RandomRedHue())); 
+            this.AddItem(new Sandals(Utility.RandomRedHue()));
             this.AddItem(new Shirt(Utility.RandomRedHue()));
             this.AddItem(new SkinningKnife());
 
@@ -58,7 +58,7 @@ namespace Server.Mobiles
         public override void OnGaveMeleeAttack(Mobile defender)
         {
             base.OnGaveMeleeAttack(defender);
-        
+
             Point3D loc = new Point3D(5703, 639, 0);
             Map map = this.Map;
 
@@ -121,7 +121,7 @@ namespace Server.Mobiles
 
         public DemonicJailor(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         private DateTime m_NextTerror;
@@ -133,7 +133,7 @@ namespace Server.Mobiles
                 m.RevealingAction();
             base.OnMovement(m, oldLocation);
 
-               if (m_NextTerror < DateTime.Now && m != null && InRange(m.Location, 3) && m.AccessLevel == AccessLevel.Player)
+            if (m_NextTerror < DateTime.Now && m != null && InRange(m.Location, 3) && m.AccessLevel == AccessLevel.Player)
             {
                 m.Frozen = true;
                 m.SendLocalizedMessage(1080342, Title, 33); // Terror slices into your very being, destroying any chance of resisting ~1_name~ you might have had
@@ -165,18 +165,18 @@ namespace Server.Mobiles
         {
             this.AddLoot(LootPack.FilthyRich);
             this.AddLoot(LootPack.Meager);
-        }       
+        }
 
-        public override void Serialize(GenericWriter writer) 
-        { 
+        public override void Serialize(GenericWriter writer)
+        {
             base.Serialize(writer);
             writer.Write((int)0); // version 
         }
 
-        public override void Deserialize(GenericReader reader) 
-        { 
+        public override void Deserialize(GenericReader reader)
+        {
             base.Deserialize(reader);
-            int version = reader.ReadInt(); 
+            int version = reader.ReadInt();
         }
     }
 }

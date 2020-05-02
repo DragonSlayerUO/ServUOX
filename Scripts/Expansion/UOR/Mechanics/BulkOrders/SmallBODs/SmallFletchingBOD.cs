@@ -38,7 +38,7 @@ namespace Server.Engines.BulkOrders
 
             if (entries.Length > 0)
             {
-                 SmallBulkEntry entry = entries[Utility.Random(entries.Length)];
+                SmallBulkEntry entry = entries[Utility.Random(entries.Length)];
 
                 int amountMax = Utility.RandomList(10, 15, 20);
 
@@ -51,7 +51,7 @@ namespace Server.Engines.BulkOrders
 
                 bool reqExceptional = false;
 
-                if(useMaterials)
+                if (useMaterials)
                     reqExceptional = Utility.RandomBool() || (material == BulkMaterialType.None);
 
                 this.Hue = 1425;

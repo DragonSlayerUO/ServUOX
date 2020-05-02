@@ -8,8 +8,8 @@ using Server.Multis;
 
 namespace Server.Engines.MyrmidexInvasion
 {
-	public static class GenerateMyrmidexQuest
-	{
+    public static class GenerateMyrmidexQuest
+    {
         public static void Generate()
         {
             Map map = Map.TerMur;
@@ -253,5 +253,5 @@ namespace Server.Engines.MyrmidexInvasion
             sp.Respawn();
 
         }
-	}
+    }
 }

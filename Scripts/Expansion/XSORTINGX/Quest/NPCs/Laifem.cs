@@ -239,7 +239,7 @@ namespace Server.Engines.Quests
     public class Dermott : MondainQuester
     {
         public override Type[] Quests { get { return null; } }
-        
+
         [Constructable]
         public Dermott() : base("Dermott", "the Weaver")
         {

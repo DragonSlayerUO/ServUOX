@@ -50,7 +50,7 @@ namespace Server.Mobiles
 
             this.VirtualArmor = 100;
             if (0.02 > Utility.RandomDouble())
-                this.PackStatue();				
+                this.PackStatue();
         }
 
         public override void OnDeath(Container c)

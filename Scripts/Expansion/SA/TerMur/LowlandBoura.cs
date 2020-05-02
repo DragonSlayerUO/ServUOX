@@ -109,12 +109,12 @@ namespace Server.Mobiles
         public override void OnDeath(Container c)
         {
             base.OnDeath(c);
-            
+
             if (Controlled)
                 return;
 
             if (!Controlled)
-            c.DropItem(new BouraSkin());
+                c.DropItem(new BouraSkin());
         }
 
         public override void Serialize(GenericWriter writer)

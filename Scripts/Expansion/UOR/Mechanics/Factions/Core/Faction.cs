@@ -26,7 +26,7 @@ namespace Server.Factions
                 FactionsDisabledNotice = new List<Mobile>();
                 FactionsDisabledNotice.Add(m);
             }
-            else if(!FactionsDisabledNotice.Contains(m))
+            else if (!FactionsDisabledNotice.Contains(m))
             {
                 FactionsDisabledNotice.Add(m);
             }
@@ -128,7 +128,7 @@ namespace Server.Factions
             {
                 this.m_Definition = value;
 
-                if(Settings.Enabled)
+                if (Settings.Enabled)
                     this.m_StrongholdRegion = new StrongholdRegion(this);
             }
         }
@@ -1309,7 +1309,7 @@ namespace Server.Factions
 
                             if (1 > Utility.Random(3))
                                 killerState.IsActive = true;
-							
+
                             int silver = 0;
 
                             silver = killerState.Faction.AwardSilver(killer, award * 40);
@@ -1477,7 +1477,7 @@ namespace Server.Factions
             this.Supports = CommandSupport.AllMobiles;
             this.ObjectTypes = ObjectTypes.Mobiles;
 
-            switch ( this.m_KickType )
+            switch (this.m_KickType)
             {
                 case FactionKickType.Kick:
                     {
@@ -1507,7 +1507,7 @@ namespace Server.Factions
         {
             Mobile mob = (Mobile)obj;
 
-            switch ( this.m_KickType )
+            switch (this.m_KickType)
             {
                 case FactionKickType.Kick:
                     {

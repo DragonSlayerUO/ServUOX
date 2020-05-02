@@ -31,7 +31,7 @@ namespace Server.Factions
 
         public override void OnDoubleClick(Mobile from)
         {
-            if(IsChildOf(from.Backpack))
+            if (IsChildOf(from.Backpack))
             {
                 if (FactionEquipment.CanUse(this, from))
                 {

@@ -34,7 +34,7 @@ namespace Server.Engines.Reports
             m_StaffHistory.Load();
 
             DateTime now = DateTime.UtcNow;
-            
+
             if (!Enabled)
                 return;
 
@@ -54,12 +54,12 @@ namespace Server.Engines.Reports
             Generate();
             m_GenerateTime += TimeSpan.FromHours(1.0);
         }
-        
+
         [Usage("GenReports")]
         [Description("Generates Reports on Command.")]
         public static void GenReports_OnCommand(CommandEventArgs e)
         {
-			Generate();
+            Generate();
         }
 
         public static void Generate()
@@ -416,7 +416,7 @@ namespace Server.Engines.Reports
             renderer.Render();
             renderer.Upload();
         }
-                
+
         public class SkillDistribution : IComparable
         {
             public SkillInfo m_Skill;

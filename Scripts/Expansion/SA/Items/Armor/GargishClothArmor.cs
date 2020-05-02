@@ -375,7 +375,7 @@ namespace Server.Items
         public override int ArmorBase { get { return 18; } }
 
         public override ArmorMaterialType MaterialType { get { return ArmorMaterialType.Leather; } }
-        public override CraftResource DefaultResource { get { return CraftResource.None; } }        
+        public override CraftResource DefaultResource { get { return CraftResource.None; } }
         public override ArmorMeditationAllowance DefMedAllowance { get { return ArmorMeditationAllowance.All; } }
 
         public override int OnCraft(int quality, bool makersMark, Mobile from, CraftSystem craftSystem, Type typeRes, ITool tool, CraftItem craftItem, int resHue)
@@ -550,7 +550,7 @@ namespace Server.Items
         {
             Hue = hue;
             Weight = 2.0;
-        }        
+        }
 
         public FemaleGargishClothKiltArmor(Serial serial)
             : base(serial)

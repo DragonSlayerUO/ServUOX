@@ -339,7 +339,7 @@ namespace Server.Engines.Quests
                  * hoard and you can't wait to find it!*/
                 AddHtmlLocalized(177, 122, 235, 228, 1158242, true, true);
 
-                AddItem(85, 120, 0x14EB, 0); 
+                AddItem(85, 120, 0x14EB, 0);
             }
         }
 
@@ -376,10 +376,10 @@ namespace Server.Engines.Quests
 
         protected override void BeginLockpick(Mobile from, ILockpickable item)
         {
-            if (from is PlayerMobile && 
+            if (from is PlayerMobile &&
                 item.Locked &&
                 QuestHelper.HasQuest<TheTreasureChaseQuest>((PlayerMobile)from) &&
-                item is TreasureMapChest && 
+                item is TreasureMapChest &&
                 ((TreasureMapChest)item).TreasureMap is BuriedRichesTreasureMap)
             {
                 var chest = (TreasureMapChest)item;

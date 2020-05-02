@@ -75,7 +75,7 @@ namespace Server.Mobiles
         public static void Convert(BaseCreature bc)
         {
             if (bc.IsParagon ||
-				!bc.CanBeParagon)
+                !bc.CanBeParagon)
                 return;
 
             bc.Hue = Hue;

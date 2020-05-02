@@ -96,9 +96,9 @@ namespace Server.Factions
                     new GuardDefinition[]
                     {
                         new GuardDefinition(typeof(FactionHenchman), 0x1403, 5000, 1000, 10, new TextDefinition(1011526, "HENCHMAN"), new TextDefinition(1011510, "Hire Henchman")),
-                        new GuardDefinition(typeof(FactionMercenary),	0x0F62, 6000, 2000, 10, new TextDefinition(1011527, "MERCENARY"), new TextDefinition(1011511, "Hire Mercenary")),
-                        new GuardDefinition(typeof(FactionSorceress),	0x0E89, 7000, 3000, 10, new TextDefinition(1011507, "SORCERESS"), new TextDefinition(1011501, "Hire Sorceress")),
-                        new GuardDefinition(typeof(FactionWizard), 0x13F8, 8000, 4000, 10, new TextDefinition(1011508, "ELDER WIZARD"),	new TextDefinition(1011502, "Hire Elder Wizard")),
+                        new GuardDefinition(typeof(FactionMercenary),   0x0F62, 6000, 2000, 10, new TextDefinition(1011527, "MERCENARY"), new TextDefinition(1011511, "Hire Mercenary")),
+                        new GuardDefinition(typeof(FactionSorceress),   0x0E89, 7000, 3000, 10, new TextDefinition(1011507, "SORCERESS"), new TextDefinition(1011501, "Hire Sorceress")),
+                        new GuardDefinition(typeof(FactionWizard), 0x13F8, 8000, 4000, 10, new TextDefinition(1011508, "ELDER WIZARD"), new TextDefinition(1011502, "Hire Elder Wizard")),
                     });
         }
 

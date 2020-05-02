@@ -15,11 +15,11 @@ namespace Server.Spells.SkillMasteries
                 -1,
                 9002
             );
- 
+
         public override int RequiredMana { get { return 30; } }
-		
+
         public override SkillName CastSkill { get { return SkillName.Poisoning; } }
-		public override SkillName DamageSkill { get { return SkillName.Anatomy; } }
+        public override SkillName DamageSkill { get { return SkillName.Anatomy; } }
 
         public override bool CancelsWeaponAbility { get { return true; } }
 
@@ -45,8 +45,8 @@ namespace Server.Spells.SkillMasteries
         {
             BaseWeapon weapon = GetWeapon();
 
-			if(CheckWeapon())
-			{
+            if (CheckWeapon())
+            {
                 if (weapon.Poison == null || weapon.PoisonCharges == 0)
                 {
                     var poison = GetLastPotion(Caster);
@@ -74,11 +74,11 @@ namespace Server.Spells.SkillMasteries
                 }
                 else
                     Caster.SendLocalizedMessage(501775); // This spell is already in effect.
-			}
-			else
-				Caster.SendLocalizedMessage(1060179); //You must be wielding a weapon to use this ability!
-			
-			FinishSequence();
+            }
+            else
+                Caster.SendLocalizedMessage(1060179); //You must be wielding a weapon to use this ability!
+
+            FinishSequence();
         }
 
         protected override void OnTarget(object o)

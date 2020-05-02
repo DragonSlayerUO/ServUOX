@@ -62,9 +62,9 @@ namespace Server.Items
             switch (level)
             {
                 default: return (int)TreasureLevel.Stash;
-                case 2: 
+                case 2:
                 case 3: return (int)TreasureLevel.Supply;
-                case 4: 
+                case 4:
                 case 5: return (int)TreasureLevel.Cache;
                 case 6: return (int)TreasureLevel.Hoard;
                 case 7: return (int)TreasureLevel.Trove;
@@ -336,7 +336,7 @@ namespace Server.Items
         {
             var baseAmount = 0;
 
-            switch(quality)
+            switch (quality)
             {
                 case ChestQuality.Rusty: baseAmount = 7; break;
                 case ChestQuality.Standard: baseAmount = Utility.RandomBool() ? 7 : 9; break;
@@ -348,7 +348,7 @@ namespace Server.Items
 
         public static int GetGoldCount(TreasureLevel level)
         {
-            switch(level)
+            switch (level)
             {
                 default:
                 case TreasureLevel.Stash: return Utility.RandomMinMax(10000, 40000);
@@ -372,7 +372,7 @@ namespace Server.Items
 
         public static int GetResourceAmount(TreasureLevel level)
         {
-            switch(level)
+            switch (level)
             {
                 case TreasureLevel.Stash: return 50;
                 case TreasureLevel.Supply: return 100;
@@ -383,7 +383,7 @@ namespace Server.Items
 
         public static int GetRegAmount(ChestQuality quality)
         {
-            switch(quality)
+            switch (quality)
             {
                 default:
                 case ChestQuality.Rusty: return 20;
@@ -954,7 +954,7 @@ namespace Server.Items
             #region Magic Equipment
             amount = GetEquipmentAmount(from, level, package);
 
-            foreach(var type in GetRandomEquipment(level, package, facet, amount))
+            foreach (var type in GetRandomEquipment(level, package, facet, amount))
             {
                 var item = Loot.Construct(type);
                 int min, max;

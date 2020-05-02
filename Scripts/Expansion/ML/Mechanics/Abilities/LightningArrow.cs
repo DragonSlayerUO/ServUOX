@@ -35,7 +35,7 @@ namespace Server.Items
             List<Mobile> targets = new List<Mobile>();
             IPooledEnumerable eable = defender.GetMobilesInRange(5);
 
-            foreach(Mobile m in eable)
+            foreach (Mobile m in eable)
             {
                 if (m != defender && m != attacker && SpellHelper.ValidIndirectTarget(attacker, m))
                 {

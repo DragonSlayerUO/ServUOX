@@ -182,10 +182,10 @@ namespace Server.Engines.VvV
 
                                         if (item is GargishWizardsCrystalGlasses)
                                         {
-                                            ((GargishWizardsCrystalGlasses)item).PhysicalBonus = 5;                                            
-                                            ((GargishWizardsCrystalGlasses)item).FireBonus = 5;                                            
-                                            ((GargishWizardsCrystalGlasses)item).ColdBonus = 5;                                            
-                                            ((GargishWizardsCrystalGlasses)item).PoisonBonus = 5;                                            
+                                            ((GargishWizardsCrystalGlasses)item).PhysicalBonus = 5;
+                                            ((GargishWizardsCrystalGlasses)item).FireBonus = 5;
+                                            ((GargishWizardsCrystalGlasses)item).ColdBonus = 5;
+                                            ((GargishWizardsCrystalGlasses)item).PoisonBonus = 5;
                                             ((GargishWizardsCrystalGlasses)item).EnergyBonus = 5;
                                         }
 

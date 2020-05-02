@@ -73,7 +73,7 @@ namespace Server.Items
                     from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1154339); // *You carefully carve the pumpkin*
 
                     m_Item.Delete();
-                    
+
                 }
                 else
                 {

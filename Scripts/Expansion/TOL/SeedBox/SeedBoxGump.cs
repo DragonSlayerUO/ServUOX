@@ -289,7 +289,7 @@ namespace Server.Engines.Plants
                         Box.Entries.Remove(Entry);
                         Box.Entries.Insert(index - 1, Entry);
                         Box.TrimEntries();
-                        if(Parent is SeedBoxGump)
+                        if (Parent is SeedBoxGump)
                             ((SeedBoxGump)Parent).CheckPage(Entry);
                         RefreshParent(true);
                     }

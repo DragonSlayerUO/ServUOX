@@ -113,13 +113,13 @@ namespace Server.Mobiles
         {
             get
             {
-                return new MonsterStatuetteType[] { };         
+                return new MonsterStatuetteType[] { };
             }
         }
         public override bool Unprovokable { get { return true; } }
         public override bool Uncalmable { get { return true; } }
         public override Poison PoisonImmunity { get { return Poison.Lethal; } }
-        public override int TreasureMapLevel { get { return 5; } }   
+        public override int TreasureMapLevel { get { return 5; } }
 
         public virtual void PackTalismans(int amount)
         {
@@ -134,7 +134,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.UltraRich, 4);
             AddLoot(LootPack.FilthyRich);
         }
-  
+
         public override void OnDamage(int amount, Mobile from, bool willKill)
         {
             if (Utility.RandomDouble() < 0.1)

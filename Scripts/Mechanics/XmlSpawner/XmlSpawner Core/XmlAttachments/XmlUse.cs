@@ -247,25 +247,25 @@ namespace Server.Engines.XmlSpawner2
                     }
                     else
                         if (o is Mobile)
+                    {
+                        Mobile m = (Mobile)o;
+                        if (m is BaseCreature)
                         {
-                            Mobile m = (Mobile)o;
-                            if (m is BaseCreature)
-                            {
-                                BaseCreature c = (BaseCreature)m;
-                                c.Home = loc; // Spawners location is the home point
-                            }
-
-                            m.Location = loc;
-                            m.Map = map;
-
-                            BaseXmlSpawner.ApplyObjectStringProperties(null, substitutedtypeName, m, mob, target, out status_str);
+                            BaseCreature c = (BaseCreature)m;
+                            c.Home = loc; // Spawners location is the home point
                         }
-                        else
+
+                        m.Location = loc;
+                        m.Map = map;
+
+                        BaseXmlSpawner.ApplyObjectStringProperties(null, substitutedtypeName, m, mob, target, out status_str);
+                    }
+                    else
                             if (o is Item)
-                            {
-                                Item item = (Item)o;
-                                BaseXmlSpawner.AddSpawnItem(null, target, TheSpawn, item, loc, map, mob, false, substitutedtypeName, out status_str);
-                            }
+                    {
+                        Item item = (Item)o;
+                        BaseXmlSpawner.AddSpawnItem(null, target, TheSpawn, item, loc, map, mob, false, substitutedtypeName, out status_str);
+                    }
                 }
                 catch { }
             }
@@ -331,9 +331,9 @@ namespace Server.Engines.XmlSpawner2
                 else
                     // block use in other containers or on other mobiles
                     if (targetitem.Parent != null)
-                    {
-                        return false;
-                    }
+                {
+                    return false;
+                }
             }
 
             bool haslos = true;

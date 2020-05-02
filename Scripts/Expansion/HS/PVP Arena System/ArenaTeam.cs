@@ -90,7 +90,7 @@ namespace Server.Engines.ArenaSystem
             writer.Write(0);
 
             writer.Write(Players.Count);
-            foreach(var kvp in Players)
+            foreach (var kvp in Players)
             {
                 writer.Write(kvp.Key);
             }

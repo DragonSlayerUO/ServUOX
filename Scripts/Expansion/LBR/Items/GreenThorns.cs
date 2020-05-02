@@ -370,7 +370,7 @@ namespace Server.Items
 
         protected override TimeSpan Play(int step)
         {
-            switch ( step )
+            switch (step)
             {
                 case 0:
                     {
@@ -436,7 +436,7 @@ namespace Server.Items
             Item reagents;
             int amount = Utility.RandomMinMax(10, 25);
 
-            switch ( Utility.Random(9) )
+            switch (Utility.Random(9))
             {
                 case 0:
                     reagents = new BlackPearl(amount);
@@ -481,7 +481,7 @@ namespace Server.Items
 
         protected override TimeSpan Play(int step)
         {
-            switch ( step )
+            switch (step)
             {
                 case 0:
                     {
@@ -529,7 +529,7 @@ namespace Server.Items
 
         protected override TimeSpan Play(int step)
         {
-            switch ( step )
+            switch (step)
             {
                 case 0:
                     {
@@ -575,7 +575,7 @@ namespace Server.Items
 
         protected override TimeSpan Play(int step)
         {
-            switch ( step )
+            switch (step)
             {
                 case 0:
                     {
@@ -627,7 +627,7 @@ namespace Server.Items
 
         protected override TimeSpan Play(int step)
         {
-            switch ( step )
+            switch (step)
             {
                 case 0:
                     {

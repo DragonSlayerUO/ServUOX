@@ -113,7 +113,7 @@ namespace Server.Items
                 else if (!Core.AOS)
                     damage /= count;
 
-                foreach(var m in targets)
+                foreach (var m in targets)
                 {
                     double toDeal = damage;
 

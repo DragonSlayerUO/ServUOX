@@ -63,8 +63,8 @@ namespace Server.Items
                 defender.FixedParticles(0x37BE, 232, 25, 9948, EffectLayer.LeftHand);
 
                 pack.DropItem(toDisarm);
-                
-                BuffInfo.AddBuff(defender, new BuffInfo( BuffIcon.NoRearm, 1075637, BlockEquipDuration, defender));
+
+                BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.NoRearm, 1075637, BlockEquipDuration, defender));
 
                 BaseWeapon.BlockEquip(defender, BlockEquipDuration);
 
@@ -77,7 +77,7 @@ namespace Server.Items
                     });
                 }
 
-                if(Core.SA)
+                if (Core.SA)
                     AddImmunity(defender, Core.TOL && attacker.Weapon is Fists ? TimeSpan.FromSeconds(10) : TimeSpan.FromSeconds(15));
             }
         }

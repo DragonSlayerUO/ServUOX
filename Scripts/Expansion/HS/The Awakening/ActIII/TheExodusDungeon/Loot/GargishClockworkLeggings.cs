@@ -15,8 +15,8 @@ namespace Server.Items
             Attributes.BonusDex = 5;
             StrRequirement = 90;
         }
-        
-        public GargishClockworkLeggings(Serial serial)  : base(serial)
+
+        public GargishClockworkLeggings(Serial serial) : base(serial)
         {
         }
 

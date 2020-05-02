@@ -73,7 +73,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.Rich);
             AddLoot(LootPack.Average);
         }
-      
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

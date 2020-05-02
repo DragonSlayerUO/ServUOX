@@ -10,7 +10,7 @@ namespace Server.Mobiles
         public Type CreatureType { get { return typeof(SkeletalCat); } }
 
         [Constructable]
-        public SkeletalCatStatue() 
+        public SkeletalCatStatue()
             : base(0xA138)
         {
             LootType = LootType.Blessed;

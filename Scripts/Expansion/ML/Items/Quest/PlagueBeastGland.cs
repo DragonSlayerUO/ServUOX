@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public class PlagueBeastGland : Item
     {
-		public override int LabelNumber { get { return 1153759; } } // a healthy gland
-		
+        public override int LabelNumber { get { return 1153759; } } // a healthy gland
+
         [Constructable]
         public PlagueBeastGland()
             : base(0x1CEF)

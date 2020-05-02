@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public CraftSystem RepairSystem { get { return DefTailoring.CraftSystem; } }
 
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public TheMostKnowledgePerson()
             : base(0x2684)
@@ -48,7 +48,7 @@ namespace Server.Items
             {
                 return false;
             }
-        }       
+        }
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

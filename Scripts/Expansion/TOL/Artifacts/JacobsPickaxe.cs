@@ -70,7 +70,7 @@ namespace Server.Items
 
         public override void Serialize(GenericWriter writer)
         {
-			base.Serialize(writer);
+            base.Serialize(writer);
             writer.WriteEncodedInt(0); // version
         }
 
@@ -78,7 +78,7 @@ namespace Server.Items
         {
             base.Deserialize(reader);
             int version = reader.ReadEncodedInt();
-			_Instances.Add(this);
+            _Instances.Add(this);
         }
     }
 }

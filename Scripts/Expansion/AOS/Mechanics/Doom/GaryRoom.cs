@@ -51,9 +51,9 @@ namespace Server.Engines.Doom
         private static Point3D _SpawnLoc = new Point3D(396, 8, 4);
         private static Point3D _DoorOneLoc = new Point3D(395, 15, -1);
         private static Point3D _DoorTwoLoc = new Point3D(396, 15, -1);
-        private static Point3D[] _StatueLocs = new Point3D[] 
-        { 
-            new Point3D(393, 4, 5), 
+        private static Point3D[] _StatueLocs = new Point3D[]
+        {
+            new Point3D(393, 4, 5),
             new Point3D(395, 4 ,5),
             new Point3D(397, 4, 5)
         };
@@ -80,7 +80,7 @@ namespace Server.Engines.Doom
         }
 
         public override void OnRegister()
-		{
+        {
             NextRoll = DateTime.UtcNow;
             Timer = Timer.DelayCall(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1), OnTick);
 
@@ -88,7 +88,7 @@ namespace Server.Engines.Doom
         }
 
         public override void OnUnregister()
-		{
+        {
             if (Timer != null)
             {
                 Timer.Stop();
@@ -330,18 +330,18 @@ namespace Server.Engines.Doom
 
         private DisplayStatue[] GetStatues()
         {
-            if(Statues == null || Statues.Length != 3)
+            if (Statues == null || Statues.Length != 3)
             {
                 Statues = new DisplayStatue[3];
             }
-            
-            for(int i = 0; i < 3; i++)
+
+            for (int i = 0; i < 3; i++)
             {
-                if(Statues[i] == null || Statues[i].Deleted)
+                if (Statues[i] == null || Statues[i].Deleted)
                 {
                     DisplayStatue s = GetEnumeratedItems().OfType<DisplayStatue>().FirstOrDefault(st => Array.IndexOf(Statues, st) == -1);
 
-                    if(s == null)
+                    if (s == null)
                     {
                         Statues[i] = new DisplayStatue();
                         Statues[i].Movable = false;
@@ -471,7 +471,7 @@ namespace Server.Engines.Doom
 
             foreach (Item item in eable)
             {
-                if(item is BaseDoor)
+                if (item is BaseDoor)
                 {
                     eable.Free();
                     return (BaseDoor)item;
@@ -631,11 +631,11 @@ namespace Server.Engines.Doom
 
         public override void OnDoubleClick(Mobile from)
         {
-            if(from.InRange(GetWorldLocation(), 3))
+            if (from.InRange(GetWorldLocation(), 3))
             {
                 int cliloc;
 
-                if(_Index == 0)
+                if (_Index == 0)
                 {
                     cliloc = 1080095;
                 }

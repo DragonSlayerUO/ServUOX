@@ -22,7 +22,7 @@ namespace Server.Items
                 from.SendGump(new MTSchematicsGump(from));
             }
         }
-        
+
 
         public MasterThinkerSchematics(Serial serial) : base(serial)
         {

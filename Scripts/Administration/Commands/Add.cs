@@ -590,7 +590,7 @@ namespace Server.Commands
             TileState ts = (TileState)state;
             bool mapAvg = false;
 
-            switch ( ts.m_ZType )
+            switch (ts.m_ZType)
             {
                 case TileZType.Fixed:
                     {

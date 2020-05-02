@@ -1,5 +1,3 @@
-// By Nerun
-
 using System;
 
 namespace Server.Items
@@ -33,7 +31,7 @@ namespace Server.Items
         {
             if (from.IsPlayer())
             {
-                from.SendMessage("This item is to only be used by staff members."); 
+                from.SendMessage("This item is to only be used by staff members.");
                 this.Delete();
             }
         }
@@ -42,7 +40,7 @@ namespace Server.Items
         {
             if (from.IsPlayer())
             {
-                from.SendMessage("This item is to only be used by staff members."); 
+                from.SendMessage("This item is to only be used by staff members.");
                 this.Delete();
             }
             return true;

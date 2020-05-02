@@ -60,19 +60,19 @@ namespace Server.Items
             base.GetProperties(list);
 
             if (m_Exceptional && m_Crafter != null)
-				list.Add(1050043, m_Crafter.TitleName); // crafted by ~1_NAME~
+                list.Add(1050043, m_Crafter.TitleName); // crafted by ~1_NAME~
         }
 
-		public override void OnSingleClick(Mobile from)
-		{
-			base.OnSingleClick(from);
+        public override void OnSingleClick(Mobile from)
+        {
+            base.OnSingleClick(from);
 
-			if (m_Crafter != null)
-			{
-				LabelTo(from, 1050043, m_Crafter.TitleName); // crafted by ~1_NAME~
-			}
-		}
-        
+            if (m_Crafter != null)
+            {
+                LabelTo(from, 1050043, m_Crafter.TitleName); // crafted by ~1_NAME~
+            }
+        }
+
         public override void OnDoubleClick(Mobile from)
         {
             if (IsChildOf(from.Backpack))
@@ -141,7 +141,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                 case 0:

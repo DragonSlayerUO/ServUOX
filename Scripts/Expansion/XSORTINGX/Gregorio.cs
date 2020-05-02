@@ -5,18 +5,18 @@ using Server.Items;
 namespace Server.Mobiles
 {
     public class Gregorio : BaseCreature
-    { 
+    {
         [Constructable]
         public Gregorio()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
-        { 
+        {
             Race = Race.Human;
             Name = "Gregorio";
             Title = "the brigand";
-			
+
             InitBody();
             InitOutfit();
-			
+
             SetStr(86, 100);
             SetDex(81, 95);
             SetInt(61, 75);
@@ -32,8 +32,8 @@ namespace Server.Mobiles
 
             SetSkill(SkillName.MagicResist, 25.0, 50.0);
             SetSkill(SkillName.Tactics, 80.0, 100.0);
-            SetSkill(SkillName.Wrestling, 80.0, 100.0);	
-			
+            SetSkill(SkillName.Wrestling, 80.0, 100.0);
+
             PackGold(50, 150);
         }
 
@@ -97,10 +97,10 @@ namespace Server.Mobiles
         public void InitBody()
         {
             InitStats(100, 100, 25);
-				
+
             Hue = 0x8412;
-            Female = false;		
-			
+            Female = false;
+
             HairItemID = 0x203C;
             HairHue = 0x47A;
             FacialHairItemID = 0x204D;
@@ -108,7 +108,7 @@ namespace Server.Mobiles
         }
 
         public void InitOutfit()
-        { 
+        {
             AddItem(new Sandals(0x75E));
             AddItem(new Shirt());
             AddItem(new ShortPants(0x66C));
@@ -119,14 +119,14 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-	
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-	
+
             int version = reader.ReadInt();
         }
     }

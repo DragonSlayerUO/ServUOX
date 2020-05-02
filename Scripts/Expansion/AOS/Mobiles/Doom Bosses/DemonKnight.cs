@@ -127,7 +127,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.SuperBoss, 2);
             AddLoot(LootPack.HighScrolls, Utility.RandomMinMax(6, 60));
         }
-        
+
         public override void OnDamage(int amount, Mobile from, bool willKill)
         {
             if (from != null && from != this && !m_InHere)

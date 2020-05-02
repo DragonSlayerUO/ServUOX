@@ -77,7 +77,7 @@ namespace Server.Items
 
         public static void RemoveBuff(Mobile from, FishPieEffect type)
         {
-            if(!m_EffectsList.ContainsKey(from))
+            if (!m_EffectsList.ContainsKey(from))
                 return;
 
             if (m_EffectsList[from] != null && m_EffectsList[from].Contains(type))

@@ -40,7 +40,7 @@ namespace Server.Mobiles
             this.PackItem(new ArcaneGem());
             this.PackItem(new ClockworkAssembly());
 
-            switch( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     this.PackItem(new PowerCrystal());

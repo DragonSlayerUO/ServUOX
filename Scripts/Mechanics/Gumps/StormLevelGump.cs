@@ -270,7 +270,7 @@ namespace Server.Gumps
             Mobile from = state.Mobile;
 
             if (info.ButtonID != 0)
-            {               
+            {
                 int index = info.ButtonID - 1;
                 StormLevelEntry[] entries = m_Entries;
 

@@ -5,7 +5,7 @@ namespace Server
 {
     public class ImbuingContext
     {
-        public Mobile Player { get; private set; }       
+        public Mobile Player { get; private set; }
         public Item LastImbued { get; set; }
         public int Imbue_Mod { get; set; }
         public int Imbue_ModInt { get; set; }

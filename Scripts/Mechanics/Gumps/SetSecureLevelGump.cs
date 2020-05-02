@@ -74,7 +74,7 @@ namespace Server.Gumps
         {
             SecureLevel level = m_Info.Level;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1:
                     level = SecureLevel.Owner;

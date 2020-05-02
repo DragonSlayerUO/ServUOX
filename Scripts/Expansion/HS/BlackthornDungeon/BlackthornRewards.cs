@@ -9,7 +9,7 @@ namespace Server.Engines.Blackthorn
     public static class BlackthornRewards
     {
         public static List<CollectionItem> Rewards { get; set; }
-        
+
         public static void Initialize()
         {
             Rewards = new List<CollectionItem>();

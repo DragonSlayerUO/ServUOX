@@ -49,7 +49,7 @@ namespace Server.Guilds
             this.AddImageTiled(65, 148, 160, 26, 0xA40);
             this.AddImageTiled(67, 150, 156, 22, 0xBBC);
             this.AddHtmlLocalized(70, 151, 150, 20, 1063084, 0x0, false, false); // <i>Guild Faction</i>
-		
+
             Faction f = Faction.Find(this.guild.Leader);
             if (f != null)
                 this.AddHtml(233, 152, 320, 26, f.ToString(), false, false);

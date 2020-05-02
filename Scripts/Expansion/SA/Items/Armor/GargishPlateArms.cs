@@ -35,7 +35,7 @@ namespace Server.Items
         public override int InitMaxHits { get { return 65; } }
 
         public override int AosStrReq { get { return 80; } }
-        
+
         public override ArmorMaterialType MaterialType { get { return ArmorMaterialType.Plate; } }
 
         public override Race RequiredRace { get { return Race.Gargoyle; } }

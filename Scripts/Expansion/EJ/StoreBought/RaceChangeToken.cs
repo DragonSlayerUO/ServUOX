@@ -198,7 +198,7 @@ namespace Server.Items
 
             switch (id)
             {
-                case 0: 
+                case 0:
                     break;
                 case 1:
                     Mode = GumpMode.Select;

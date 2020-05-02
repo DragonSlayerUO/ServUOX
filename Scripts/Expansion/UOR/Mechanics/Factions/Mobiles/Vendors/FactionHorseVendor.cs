@@ -13,7 +13,7 @@ namespace Server.Factions
         {
             this.SetSkill(SkillName.AnimalLore, 64.0, 100.0);
             this.SetSkill(SkillName.AnimalTaming, 90.0, 100.0);
-            this.SetSkill(SkillName.Veterinary, 65.0, 88.0);	
+            this.SetSkill(SkillName.Veterinary, 65.0, 88.0);
         }
 
         public FactionHorseVendor(Serial serial)

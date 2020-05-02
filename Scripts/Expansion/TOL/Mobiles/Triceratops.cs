@@ -20,7 +20,7 @@ namespace Server.Mobiles
             SetDex(150, 170);
             SetInt(280, 310);
 
-            SetHits(1100 , 1200);
+            SetHits(1100, 1200);
 
             SetDamage(21, 28);
 
@@ -52,7 +52,7 @@ namespace Server.Mobiles
         public override int GetDeathSound() { return 0x671; }
 
         public override double WeaponAbilityChance { get { return 0.5; } }
-        
+
         public override int Hides { get { return 11; } }
         public override HideType HideType { get { return HideType.Regular; } }
         public override int Meat { get { return 3; } }

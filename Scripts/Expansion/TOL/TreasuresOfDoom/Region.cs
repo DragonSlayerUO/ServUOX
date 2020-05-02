@@ -28,6 +28,6 @@ namespace Server.Regions
             }
 
             return type == TravelCheckType.TeleportTo || type == TravelCheckType.TeleportFrom;
-        } 
+        }
     }
 }

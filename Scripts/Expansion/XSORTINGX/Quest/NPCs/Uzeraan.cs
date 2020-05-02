@@ -324,7 +324,7 @@ namespace Server.Engines.Quests.Haven
                             else
                             {
                                 BaseWeapon weapon;
-                                switch ( Utility.Random(6) )
+                                switch (Utility.Random(6))
                                 {
                                     case 0:
                                         weapon = new Broadsword();

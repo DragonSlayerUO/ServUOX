@@ -241,12 +241,12 @@ namespace Server.Items
             }
         }
 
-        public static Type[] ImbuingGems = 
+        public static Type[] ImbuingGems =
         {
-            typeof(FireRuby), 
-            typeof(WhitePearl), 
-            typeof(BlueDiamond), 
-			typeof(Turquoise)
+            typeof(FireRuby),
+            typeof(WhitePearl),
+            typeof(BlueDiamond),
+            typeof(Turquoise)
         };
     }
 }

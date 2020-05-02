@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class SanctuaryTele : Teleporter
-    { 
+    {
         [Constructable]
         public SanctuaryTele()
             : base(new Point3D(6172, 22, 0), Map.Trammel)
@@ -27,7 +27,7 @@ namespace Server.Items
                 m.SendLocalizedMessage(1042753, "Sanctuary"); // ~1_SOMETHING~ has been temporarily disabled.
                 return true;
             }
-			
+
             return base.OnMoveOver(m);
         }
 
@@ -41,7 +41,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

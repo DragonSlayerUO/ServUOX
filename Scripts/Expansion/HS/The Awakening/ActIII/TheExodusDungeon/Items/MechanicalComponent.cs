@@ -5,7 +5,7 @@ namespace Server.Items
     public class MechanicalComponent : BaseDecayingItem
     {
         [Constructable]
-        public MechanicalComponent() 
+        public MechanicalComponent()
             : base(0x2DD7)
         {
             this.Hue = 2500;

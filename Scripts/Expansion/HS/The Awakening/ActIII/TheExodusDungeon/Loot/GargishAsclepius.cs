@@ -7,10 +7,10 @@ namespace Server.Items
     public class GargishAsclepius : GargishGnarledStaff
     {
         public override bool IsArtifact { get { return true; } }
-		
+
         [Constructable]
         public GargishAsclepius()
-        { 
+        {
         }
 
         public override bool CanFortify { get { return false; } }
@@ -18,7 +18,7 @@ namespace Server.Items
         public GargishAsclepius(Serial serial) : base(serial)
         {
         }
-        
+
         public override int InitMinHits { get { return 255; } }
         public override int InitMaxHits { get { return 255; } }
 

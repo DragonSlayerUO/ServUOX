@@ -230,7 +230,7 @@ namespace Server.Regions
                         m_SpawnTimer.Stop();
 
                     TimeSpan delay = m_NextSpawn - DateTime.UtcNow;
-                    m_SpawnTimer = Timer.DelayCall(delay > TimeSpan.Zero ? delay : TimeSpan.Zero, new TimerCallback(TimerCallback)); 
+                    m_SpawnTimer = Timer.DelayCall(delay > TimeSpan.Zero ? delay : TimeSpan.Zero, new TimerCallback(TimerCallback));
                 }
             }
 

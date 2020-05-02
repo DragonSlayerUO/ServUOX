@@ -5,18 +5,18 @@ namespace Server.Items
     [Flipable(0x2B10, 0x2B11)]
     public class SpiritualityHelm : BaseArmor
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public SpiritualityHelm()
             : base(0x2B10)
-        { 
+        {
             this.LootType = LootType.Blessed;
             this.Weight = 6.0;
             this.SetHue = 0;
             this.Hue = 0x226;
-			
+
             this.SetSelfRepair = 5;
-			
+
             this.SetPhysicalBonus = 5;
             this.SetFireBonus = 5;
             this.SetColdBonus = 5;
@@ -116,14 +116,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

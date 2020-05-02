@@ -41,7 +41,7 @@ namespace Server.Items
         public override bool ExcludeDeedHue { get { return true; } }
 
         public override BaseAddon Addon { get { return new CrystalAltarAddon(); } }
-        
+
         [Constructable]
         public CrystalAltarDeed()
             : base()

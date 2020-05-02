@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable]
     public class Futon : Item
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public Futon()
             : base(Utility.RandomDouble() > 0.5 ? 0x295C : 0x295E)
@@ -19,7 +19,7 @@ namespace Server.Items
 
         public void Flip()
         {
-            switch ( this.ItemID )
+            switch (this.ItemID)
             {
                 case 0x295C:
                     this.ItemID = 0x295D;

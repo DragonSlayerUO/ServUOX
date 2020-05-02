@@ -64,7 +64,7 @@ namespace Server.Items
         public bool SingleTarget { get; set; }
         public bool RequiresSurface { get; set; }
 
-        public AmmoInfo(Type type, AmmunitionType ammoType, TextDefinition name, int minDamage, int maxDamage, int lateralOffset) 
+        public AmmoInfo(Type type, AmmunitionType ammoType, TextDefinition name, int minDamage, int maxDamage, int lateralOffset)
             : this(type, ammoType, name, minDamage, maxDamage, lateralOffset, true, 100, 0, 0, 0, 0, false)
         {
         }

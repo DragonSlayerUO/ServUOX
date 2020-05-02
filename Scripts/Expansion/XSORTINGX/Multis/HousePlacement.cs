@@ -332,11 +332,11 @@ namespace Server.Multis
             for (int i = 0; i < yard.Count; i++)
             {
                 Sector sector = map.GetSector(yard[i]);
-				
+
                 if (!_sectors.Contains(sector))
                 {
                     _sectors.Add(sector);
-					
+
                     if (sector.Multis != null)
                     {
                         for (int j = 0; j < sector.Multis.Count; j++)

@@ -370,5 +370,5 @@ namespace Server.Gumps
                 y += 20;
             }
         }
-    }   
+    }
 }

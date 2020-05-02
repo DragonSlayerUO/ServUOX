@@ -18,7 +18,7 @@ namespace Server.Items
             Attributes.WeaponDamage = 100;
             WeaponAttributes.HitManaDrain = 50;
         }
-        
+
         public DupresSword(Serial serial) : base(serial)
         {
         }
@@ -26,18 +26,18 @@ namespace Server.Items
         public override int InitMinHits { get { return 255; } }
         public override int InitMaxHits { get { return 255; } }
 
-        public override int LabelNumber { get { return 1153551; } }       
+        public override int LabelNumber { get { return 1153551; } }
 
-        public override void Serialize( GenericWriter writer )
+        public override void Serialize(GenericWriter writer)
         {
-            base.Serialize( writer );
+            base.Serialize(writer);
 
-            writer.Write( (int) 0 );
+            writer.Write((int)0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
-            base.Deserialize( reader );
+            base.Deserialize(reader);
 
             int version = reader.ReadInt();
         }

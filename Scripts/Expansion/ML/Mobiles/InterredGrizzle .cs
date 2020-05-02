@@ -48,7 +48,7 @@ namespace Server.Mobiles
                 this.PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
             }
         }
-		public override bool CanBeParagon { get { return false; } }
+        public override bool CanBeParagon { get { return false; } }
         /*
         public override bool OnBeforeDeath()
         {
@@ -61,8 +61,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override int TreasureMapLevel { get { return 4; } }
+
+        public override int TreasureMapLevel { get { return 4; } }
 
         public override void GenerateLoot() // -- Need to verify
         {

@@ -956,7 +956,7 @@ namespace Server
         public Skills(Mobile owner)
         {
             Owner = owner;
-            Cap = Initialization.Get("PlayerCaps.TotalSkillCap", 7000); ;
+            Cap = Config.Get("PlayerCaps.TotalSkillCap", 7000); ;
 
             var info = SkillInfo.Table;
 

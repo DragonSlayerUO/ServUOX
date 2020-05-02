@@ -147,7 +147,7 @@ namespace Server.Gumps
             if (BadMember(this.m_Mobile, this.m_Guild))
                 return;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Loyalty
                     {

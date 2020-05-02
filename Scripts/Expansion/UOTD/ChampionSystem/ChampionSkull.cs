@@ -16,12 +16,12 @@ namespace Server.Items
         public static ChampionSkullType RandomType { get { return Types[Utility.Random(Types.Length)]; } }
 
         private ChampionSkullType m_Type;
-		
+
         [Constructable]
-		public ChampionSkull()
-			: this(RandomType)
-		{ }
-		
+        public ChampionSkull()
+            : this(RandomType)
+        { }
+
         [Constructable]
         public ChampionSkull(ChampionSkullType type)
             : base(0x1AE1)

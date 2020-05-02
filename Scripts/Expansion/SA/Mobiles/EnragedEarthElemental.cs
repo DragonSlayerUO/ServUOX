@@ -44,7 +44,7 @@ namespace Server.Mobiles
 
             this.PackItem(new FertileDirt(Utility.RandomMinMax(1, 4)));
             this.PackItem(new MandrakeRoot());
-			
+
             Item ore = new IronOre(5);
             ore.ItemID = 0x19B7;
             this.PackItem(ore);

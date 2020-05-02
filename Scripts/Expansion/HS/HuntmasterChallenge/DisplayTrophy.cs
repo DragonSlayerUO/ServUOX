@@ -107,7 +107,7 @@ namespace Server.Items
         {
             foreach (HuntingDisplayTrophy trophy in m_DisplayTrophies)
             {
-                if(trophy != null && !trophy.Deleted)
+                if (trophy != null && !trophy.Deleted)
                     trophy.InvalidateProperties();
             }
         }

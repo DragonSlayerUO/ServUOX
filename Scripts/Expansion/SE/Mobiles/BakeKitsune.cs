@@ -151,7 +151,7 @@ namespace Server.Mobiles
             FacialHairItemID = Race.Human.RandomFacialHair(this);
             FacialHairHue = HairHue;
 
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 case 0:
                     AddItem(new Shoes(Utility.RandomNeutralHue()));
@@ -177,7 +177,7 @@ namespace Server.Mobiles
         {
             if (!IsBodyMod)
                 return;
-			
+
             Name = "a bake kitsune";
             Title = null;
             BodyMod = 0;
@@ -202,7 +202,7 @@ namespace Server.Mobiles
         }
 
         #endregion
-        	
+
         public override int GetAngerSound()
         {
             return 0x4DE;

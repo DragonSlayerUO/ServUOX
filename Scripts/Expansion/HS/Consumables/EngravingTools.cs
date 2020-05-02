@@ -249,7 +249,7 @@ namespace Server.Items
             base.GetProperties(list);
 
             if (m_IsRewardItem)
-                list.Add(VeteranRewardCliloc);	
+                list.Add(VeteranRewardCliloc);
         }
 
         public override void AddUsesRemainingProperties(ObjectPropertyList list)
@@ -258,7 +258,7 @@ namespace Server.Items
             {
                 list.Add(1060584, m_UsesRemaining.ToString()); // uses remaining: ~1_val~
             }
-        }   
+        }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -348,7 +348,7 @@ namespace Server.Items
             protected override void OnTargetOutOfRange(Mobile from, object targeted)
             {
                 from.SendLocalizedMessage(m_Tool.NotAccessibleMessage);
-            }            
+            }
         }
 
         public class ConfirmGump : Gump

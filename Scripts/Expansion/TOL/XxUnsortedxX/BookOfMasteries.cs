@@ -12,11 +12,11 @@ using Server.Spells.Spellweaving;
 namespace Server.Items
 {
     [Flipable(0x225A, 0x225B)]
-	public class BookOfMasteries : Spellbook
-	{
-		public override SpellbookType SpellbookType{ get{ return SpellbookType.SkillMasteries; } }
-		public override int BookOffset{ get{ return 700; } }
-		public override int BookCount{ get{ return 45; } }
+    public class BookOfMasteries : Spellbook
+    {
+        public override SpellbookType SpellbookType { get { return SpellbookType.SkillMasteries; } }
+        public override int BookOffset { get { return 700; } }
+        public override int BookCount { get { return 45; } }
 
         private ulong _Content;
 
@@ -38,18 +38,18 @@ namespace Server.Items
             }
         }
 
-		[Constructable]
-		public BookOfMasteries() : this( 0x1FFFFFFFFFFF )
-		{
-		}
+        [Constructable]
+        public BookOfMasteries() : this(0x1FFFFFFFFFFF)
+        {
+        }
 
-		[Constructable]
-		public BookOfMasteries( ulong content ) : base( content, 0x225A )
-		{
-			Layer = Layer.OneHanded;
+        [Constructable]
+        public BookOfMasteries(ulong content) : base(content, 0x225A)
+        {
+            Layer = Layer.OneHanded;
 
             _Content = content;
-		}
+        }
 
         public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
         {
@@ -71,7 +71,7 @@ namespace Server.Items
 
         public static void AddToCooldown(Mobile from)
         {
-            if(m_Cooldown == null)
+            if (m_Cooldown == null)
                 m_Cooldown = new Dictionary<Mobile, DateTime>();
 
             m_Cooldown[from] = DateTime.UtcNow + TimeSpan.FromMinutes(10);
@@ -100,7 +100,7 @@ namespace Server.Items
         {
             base.AddProperty(list);
 
-            if(RootParent is Mobile)
+            if (RootParent is Mobile)
             {
                 SkillName sk = ((Mobile)RootParent).Skills.CurrentMastery;
 
@@ -118,21 +118,21 @@ namespace Server.Items
 
         public BookOfMasteries(Serial serial)
             : base(serial)
-		{
-		}
+        {
+        }
 
-		public override void Serialize( GenericWriter writer )
-		{
-			base.Serialize( writer );
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
 
-			writer.WriteEncodedInt( 1 ); // version
-		}
+            writer.WriteEncodedInt(1); // version
+        }
 
-		public override void Deserialize( GenericReader reader )
-		{
-			base.Deserialize( reader );
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
 
-			int version = reader.ReadEncodedInt();
-		}
-	}
+            int version = reader.ReadEncodedInt();
+        }
+    }
 }

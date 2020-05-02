@@ -112,7 +112,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                switch ( this.From.Profession )
+                switch (this.From.Profession)
                 {
                     case 1:
                         return 0x15C9; // warrior

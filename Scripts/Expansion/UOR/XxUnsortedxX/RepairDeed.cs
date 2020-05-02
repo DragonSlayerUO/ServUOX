@@ -63,7 +63,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override bool DisplayLootType
         {
             get
@@ -93,7 +93,7 @@ namespace Server.Items
             }
             set
             {
-                m_SkillLevel = Math.Max(Math.Min(value, 120.0), 0) ;
+                m_SkillLevel = Math.Max(Math.Min(value, 120.0), 0);
                 InvalidateProperties();
             }
         }
@@ -139,7 +139,7 @@ namespace Server.Items
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
-            
+
             list.Add(1071345, String.Format("{0:F1}", m_SkillLevel)); // Skill: ~1_val~
 
             var desc = RepairSkillInfo.GetInfo(m_Skill).Description;
@@ -194,7 +194,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -216,7 +216,7 @@ namespace Server.Items
             else if (skill >= 5)
                 return (1061123 + skill - 5);
 
-            switch( skill )
+            switch (skill)
             {
                 case 4:
                     return "a Novice";
@@ -225,7 +225,7 @@ namespace Server.Items
                 default:
                     return "a Newbie";		//On OSI, it shouldn't go below 50, but, this is for 'custom' support.
             }
-        }        
+        }
     }
 
     public class RepairSkillInfo

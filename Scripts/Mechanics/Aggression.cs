@@ -42,7 +42,7 @@ namespace Server.Misc
         public static void EventSink_PlayerDeath(PlayerDeathEventArgs e)
         {
             var killed = e.Mobile;
-             
+
             foreach (var m in killed.Aggressed.Select(m => m.Defender))
             {
                 CheckCombat(m);

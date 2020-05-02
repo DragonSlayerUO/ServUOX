@@ -33,7 +33,7 @@ namespace Server.Factions
 
         public override void OnResponse(NetState sender, RelayInfo info)
         {
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // continue
                     {

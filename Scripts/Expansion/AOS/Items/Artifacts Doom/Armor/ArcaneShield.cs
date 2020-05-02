@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ArcaneShield : WoodenKiteShield
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public ArcaneShield()
         {

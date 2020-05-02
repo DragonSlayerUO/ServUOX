@@ -62,7 +62,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.Rich);
             AddLoot(LootPack.Gems);
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

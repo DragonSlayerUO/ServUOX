@@ -27,7 +27,7 @@ namespace Server.Items
         Bloodwood,
         Frostwood,
         Alchemy,
-        Blacksmith, 
+        Blacksmith,
         Cooking,
         Fletching,
         Carpentry,
@@ -43,7 +43,7 @@ namespace Server.Items
         public static void Initialize()
         {
             Infos = new List<CoverInfo>();
- 
+
             Infos.Add(new CoverInfo(CoverType.Normal, 1071097, 0));
             Infos.Add(new CoverInfo(CoverType.DullCopper, 1071101, CraftResources.GetHue(CraftResource.DullCopper)));
             Infos.Add(new CoverInfo(CoverType.ShadowIron, 1071107, CraftResources.GetHue(CraftResource.ShadowIron)));
@@ -254,7 +254,7 @@ namespace Server.Items
 
         public BagOfBulkOrderCovers(int start, int end)
         {
-            for(int i = start; i <= end; i++)
+            for (int i = start; i <= end; i++)
             {
                 if (i >= 0 && i < CoverInfo.Infos.Count)
                 {

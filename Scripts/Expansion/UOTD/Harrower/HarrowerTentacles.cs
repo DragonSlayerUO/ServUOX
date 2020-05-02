@@ -59,10 +59,10 @@ namespace Server.Mobiles
             PackReg(50);
             PackNecroReg(15, 75);
 
-			switch (Utility.Random(3))
+            switch (Utility.Random(3))
             {
                 case 0: PackItem(new VampiricEmbraceScroll()); break;
-			}
+            }
 
         }
 
@@ -129,7 +129,7 @@ namespace Server.Mobiles
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

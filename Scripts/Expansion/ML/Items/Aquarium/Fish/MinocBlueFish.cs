@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class MinocBlueFish : BaseFish
-    { 
+    {
         [Constructable]
         public MinocBlueFish()
             : base(0x3AFE)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public MinocBlueFish(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

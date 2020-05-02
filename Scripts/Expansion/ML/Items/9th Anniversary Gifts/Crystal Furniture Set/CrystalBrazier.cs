@@ -38,7 +38,7 @@ namespace Server.Items
         public override bool ExcludeDeedHue { get { return true; } }
 
         public override BaseAddon Addon { get { return new CrystalBrazierAddon(); } }
-        
+
         [Constructable]
         public CrystalBrazierDeed()
             : base()

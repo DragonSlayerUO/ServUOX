@@ -130,13 +130,13 @@ namespace Server.Mobiles
                 return !Core.SE;
             }
         }
-		public override bool AllureImmunity
-		{
-			get
-			{
-				return true;
-			}
-		}
+        public override bool AllureImmunity
+        {
+            get
+            {
+                return true;
+            }
+        }
         public override bool Unprovokable
         {
             get
@@ -200,11 +200,12 @@ namespace Server.Mobiles
             {
                 m.BodyMod = 42;
                 m.HueMod = 0;
-                if (m == this) { 
+                if (m == this)
+                {
                     m_SlayerVulnerabilities.Add("Vermin");
                     m_SlayerVulnerabilities.Add("Repond");
                 }
-   
+
                 new ExpirePolymorphTimer(m).Start();
             }
         }
@@ -238,7 +239,7 @@ namespace Server.Mobiles
                 {
                     BaseCreature rat;
 
-                    switch ( Utility.Random(5) )
+                    switch (Utility.Random(5))
                     {
                         default:
                         case 0:
@@ -351,7 +352,7 @@ namespace Server.Mobiles
                     if (m_Owner.SlayerVulnerabilities != null)
                     {
                         m_Owner.SlayerVulnerabilities.Remove("Vermin");
-                        m_Owner.SlayerVulnerabilities.Remove("Repond");    
+                        m_Owner.SlayerVulnerabilities.Remove("Repond");
                     }
                 }
             }

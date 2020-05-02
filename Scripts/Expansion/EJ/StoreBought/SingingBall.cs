@@ -10,7 +10,7 @@ namespace Server.Items
     public class SingingBall : Item, ISecurable
     {
         public override int LabelNumber { get { return 1041245; } } // Singing Ball
-        
+
         private bool m_TurnedOn;
 
         [CommandProperty(AccessLevel.GameMaster)]

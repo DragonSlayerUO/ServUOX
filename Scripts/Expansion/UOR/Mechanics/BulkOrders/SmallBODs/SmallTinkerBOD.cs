@@ -389,7 +389,7 @@ namespace Server.Engines.BulkOrders
                 case 2:
                     GemType = (GemType)reader.ReadInt();
                     break;
-                case 1: 
+                case 1:
                     break;
             }
 

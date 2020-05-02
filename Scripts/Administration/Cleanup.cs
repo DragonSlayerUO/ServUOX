@@ -148,7 +148,7 @@ namespace Server.Misc
                 item is BaseClothing ||
                 (item is BaseJewel && Core.AOS) ||
                 (item is BasePotion && Core.ML)
-                #region Champion artifacts
+            #region Champion artifacts
                 ||
                 item is SkullPole ||
                 item is EvilIdolSkull ||
@@ -167,7 +167,7 @@ namespace Server.Misc
                 item is WindSpirit ||
                 item is DirtPatch ||
                 item is Futon)
-            #endregion
+                #endregion
                 return true;
 
             return false;

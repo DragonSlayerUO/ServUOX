@@ -56,7 +56,7 @@ namespace Server.Engines.MiniChamps
 
             ColUtility.Free(list);
             return killed;
-        }        
+        }
 
         public bool Respawn()
         {
@@ -137,5 +137,5 @@ namespace Server.Engines.MiniChamps
             MonsterType = ScriptCompiler.FindTypeByFullName(reader.ReadString());
             Creatures = reader.ReadStrongMobileList();
         }
-    }   
+    }
 }

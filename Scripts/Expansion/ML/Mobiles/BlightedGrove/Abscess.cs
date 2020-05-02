@@ -64,24 +64,24 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);		
-			
-            c.DropItem(new AbscessTail());			
-			
-            if ( Paragon.ChestChance > Utility.RandomDouble() )
-            c.DropItem( new ParagonChest( Name, 5 ) );
+            base.OnDeath(c);
+
+            c.DropItem(new AbscessTail());
+
+            if (Paragon.ChestChance > Utility.RandomDouble())
+                c.DropItem(new ParagonChest(Name, 5));
         }
 
         public override void Serialize(GenericWriter writer)
         {
-            base.Serialize(writer);			
-            writer.Write(0); // version
+            base.Serialize(writer);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
-            base.Deserialize(reader);			
-            int version = reader.ReadInt();
+            base.Deserialize(reader);
+            _ = reader.ReadInt();
         }
     }
 }

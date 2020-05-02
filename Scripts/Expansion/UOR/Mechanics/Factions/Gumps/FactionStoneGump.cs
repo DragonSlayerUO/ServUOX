@@ -267,11 +267,11 @@ namespace Server.Factions
             if (!FromButtonID(info.ButtonID, out type, out index))
                 return;
 
-            switch ( type )
+            switch (type)
             {
                 case 0: // general
                     {
-                        switch ( index )
+                        switch (index)
                         {
                             case 0: // vote
                                 {

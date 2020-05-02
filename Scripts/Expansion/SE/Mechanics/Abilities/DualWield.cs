@@ -69,11 +69,11 @@ namespace Server.Items
                 Registry[from].Stop();
                 Registry.Remove(from);
 
-                if(from.Weapon is BaseWeapon)
+                if (from.Weapon is BaseWeapon)
                     ((BaseWeapon)from.Weapon).ProcessingMultipleHits = false;
             }
         }
-        
+
         /// <summary>
         /// Called from BaseWeapon, on successful hit
         /// </summary>

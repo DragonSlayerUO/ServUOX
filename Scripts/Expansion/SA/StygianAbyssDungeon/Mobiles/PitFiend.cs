@@ -110,7 +110,7 @@ namespace Server.Mobiles
             this.AddLoot(LootPack.Average, 2);
             this.AddLoot(LootPack.MedScrolls, 2);
         }
- 
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

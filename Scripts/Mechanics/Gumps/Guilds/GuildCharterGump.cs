@@ -47,7 +47,7 @@ namespace Server.Gumps
             if (GuildGump.BadMember(this.m_Mobile, this.m_Guild))
                 return;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0:
                     return; // Close

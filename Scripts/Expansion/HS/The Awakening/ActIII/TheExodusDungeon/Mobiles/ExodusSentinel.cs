@@ -58,7 +58,7 @@ namespace Server.Mobiles
             if (Utility.RandomDouble() < 0.1)
             {
                 ExodusChest.GiveRituelItem(m);
-            }            
+            }
         }
 
         public ExodusSentinel(Serial serial) : base(serial)
@@ -71,7 +71,7 @@ namespace Server.Mobiles
         public override bool IsScaryToPets { get { return true; } }
         public override bool BardImmunity { get { return !Core.AOS; } }
         public override Poison PoisonImmunity { get { return Poison.Lethal; } }
-        
+
         public override int GetIdleSound() { return 0x218; }
         public override int GetAngerSound() { return 0x26C; }
         public override int GetDeathSound() { return 0x211; }

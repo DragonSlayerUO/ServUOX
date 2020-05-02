@@ -370,7 +370,7 @@ namespace Server.Gumps
         {
             Mobile from = this.m_Owner;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0: // Closed
                     {

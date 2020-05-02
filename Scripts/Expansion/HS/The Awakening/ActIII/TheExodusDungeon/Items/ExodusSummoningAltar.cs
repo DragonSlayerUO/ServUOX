@@ -20,7 +20,7 @@ namespace Server.Items
         }
 
         public override int Lifespan { get { return 604800; } }
-        public override bool UseSeconds { get { return false; } }        
+        public override bool UseSeconds { get { return false; } }
 
         public ExodusSummoningAlter(Serial serial)
             : base(serial)
@@ -38,7 +38,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
         }
-        
+
         public override void OnDoubleClick(Mobile from)
         {
             if (!IsChildOf(from.Backpack))
@@ -53,11 +53,11 @@ namespace Server.Items
             {
                 from.SendLocalizedMessage(1153675); // The Summoning Altar must be built upon a shrine, within Trammel or Felucca it matters not...                
                 from.Target = new SummoningTarget(from, this);
-            }                
+            }
         }
 
         public class SummoningTarget : Target
-        {            
+        {
             private Mobile m_Mobile;
             private Item m_Deed;
 
@@ -69,7 +69,7 @@ namespace Server.Items
 
             public static bool IsValidTile(int itemID)
             {
-                return (itemID >= 0x149F && itemID <= 0x14D6); 
+                return (itemID >= 0x149F && itemID <= 0x14D6);
             }
 
             protected override void OnTarget(Mobile from, object targeted)

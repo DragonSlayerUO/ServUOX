@@ -82,7 +82,7 @@ namespace Server.Items
             }
             if (!(item is ChickenLizardEgg))
             {
-                m.SendMessage("This will only accept chicken eggs."); 
+                m.SendMessage("This will only accept chicken eggs.");
                 return false;
             }
 

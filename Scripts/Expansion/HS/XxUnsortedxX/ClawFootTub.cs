@@ -35,7 +35,7 @@ namespace Server.Items
                 {
                     Components.ForEach(x =>
                     {
-                        switch(x.ItemID)
+                        switch (x.ItemID)
                         {
                             case 0x996D:
                                 {

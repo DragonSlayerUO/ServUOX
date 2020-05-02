@@ -1,16 +1,16 @@
-using System; 
-using System.Collections.Generic; 
-using Server.Items; 
+using System;
+using System.Collections.Generic;
+using Server.Items;
 
-namespace Server.Mobiles 
-{ 
-    public class SBFisherman : SBInfo 
-    { 
-        private readonly List<GenericBuyInfo> m_BuyInfo = new InternalBuyInfo(); 
-        private readonly IShopSellInfo m_SellInfo = new InternalSellInfo(); 
+namespace Server.Mobiles
+{
+    public class SBFisherman : SBInfo
+    {
+        private readonly List<GenericBuyInfo> m_BuyInfo = new InternalBuyInfo();
+        private readonly IShopSellInfo m_SellInfo = new InternalSellInfo();
 
-        public SBFisherman() 
-        { 
+        public SBFisherman()
+        {
         }
 
         public override IShopSellInfo SellInfo
@@ -28,9 +28,9 @@ namespace Server.Mobiles
             }
         }
 
-        public class InternalBuyInfo : List<GenericBuyInfo> 
-        { 
-            public InternalBuyInfo() 
+        public class InternalBuyInfo : List<GenericBuyInfo>
+        {
+            public InternalBuyInfo()
             {
                 Add(new GenericBuyInfo(typeof(RawFishSteak), 3, 20, 0x97A, 0, true));
                 //TODO: Add( new GenericBuyInfo( typeof( SmallFish ), 3, 20, 0xDD6, 0 ) );
@@ -53,10 +53,10 @@ namespace Server.Mobiles
             }
         }
 
-        public class InternalSellInfo : GenericSellInfo 
-        { 
-            public InternalSellInfo() 
-            { 
+        public class InternalSellInfo : GenericSellInfo
+        {
+            public InternalSellInfo()
+            {
                 Add(typeof(RawFishSteak), 1);
                 Add(typeof(Fish), 1);
                 //TODO: Add( typeof( SmallFish ), 1 );

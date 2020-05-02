@@ -10,15 +10,15 @@ namespace Server.Factions
         public static void Initialize()
         {
             CommandSystem.Register("GenerateFactions", AccessLevel.Administrator, new CommandEventHandler(GenerateFactions_OnCommand));
-			CommandSystem.Register("DeleteFactions", AccessLevel.Administrator, new CommandEventHandler(DeleteFactions_OnCommand));
-		}
+            CommandSystem.Register("DeleteFactions", AccessLevel.Administrator, new CommandEventHandler(DeleteFactions_OnCommand));
+        }
 
         public static void RemoveFactions()
         {
             // Removes Items, ie monoliths, stones, etc
             WeakEntityCollection.Delete("factions");
 
-            List<Item> items = new List<Item>(World.Items.Values.Where(i => i is StrongholdRune || 
+            List<Item> items = new List<Item>(World.Items.Values.Where(i => i is StrongholdRune ||
                 i is ShrineGem || i is EnchantedBandage || i is PowderOfPerseverance || i is Sigil));
 
             foreach (var item in items)
@@ -29,10 +29,10 @@ namespace Server.Factions
             ColUtility.Free(items);
         }
 
-		public static void DeleteFactions_OnCommand(CommandEventArgs e)
-		{
+        public static void DeleteFactions_OnCommand(CommandEventArgs e)
+        {
             RemoveFactions();
-		}
+        }
 
         public static void GenerateFactions_OnCommand(CommandEventArgs e)
         {
@@ -69,16 +69,16 @@ namespace Server.Factions
                 TownMonolith mono = new TownMonolith(town);
                 mono.MoveToWorld(def.Monolith, facet);
                 mono.Sigil = new Sigil(town);
-				WeakEntityCollection.Add("factions", mono);
-				WeakEntityCollection.Add("factions", mono.Sigil);
-			}
+                WeakEntityCollection.Add("factions", mono);
+                WeakEntityCollection.Add("factions", mono.Sigil);
+            }
 
-			if (!CheckExistance(def.TownStone, facet, typeof(TownStone)))
-			{
-				TownStone stone = new TownStone(town);
-				WeakEntityCollection.Add("factions", stone);
-				stone.MoveToWorld(def.TownStone, facet);
-			}
+            if (!CheckExistance(def.TownStone, facet, typeof(TownStone)))
+            {
+                TownStone stone = new TownStone(town);
+                WeakEntityCollection.Add("factions", stone);
+                stone.MoveToWorld(def.TownStone, facet);
+            }
         }
 
         public static void Generate(Faction faction)
@@ -89,30 +89,30 @@ namespace Server.Factions
 
             StrongholdDefinition stronghold = faction.Definition.Stronghold;
 
-			if (!CheckExistance(stronghold.JoinStone, facet, typeof(JoinStone)))
-			{
-				JoinStone join = new JoinStone(faction);
-				WeakEntityCollection.Add("factions", join);
-				join.MoveToWorld(stronghold.JoinStone, facet);
-			}
+            if (!CheckExistance(stronghold.JoinStone, facet, typeof(JoinStone)))
+            {
+                JoinStone join = new JoinStone(faction);
+                WeakEntityCollection.Add("factions", join);
+                join.MoveToWorld(stronghold.JoinStone, facet);
+            }
 
-			if (!CheckExistance(stronghold.FactionStone, facet, typeof(FactionStone)))
-			{
-				FactionStone stone = new FactionStone(faction);
-				WeakEntityCollection.Add("factions", stone);
-				stone.MoveToWorld(stronghold.FactionStone, facet);
-			}
+            if (!CheckExistance(stronghold.FactionStone, facet, typeof(FactionStone)))
+            {
+                FactionStone stone = new FactionStone(faction);
+                WeakEntityCollection.Add("factions", stone);
+                stone.MoveToWorld(stronghold.FactionStone, facet);
+            }
 
             for (int i = 0; i < stronghold.Monoliths.Length; ++i)
             {
                 Point3D monolith = stronghold.Monoliths[i];
 
-				if (!CheckExistance(monolith, facet, typeof(StrongholdMonolith)))
-				{
-					StrongholdMonolith mono = new StrongholdMonolith(towns[i], faction);
-					WeakEntityCollection.Add("factions", mono);
-					mono.MoveToWorld(monolith, facet);
-				}
+                if (!CheckExistance(monolith, facet, typeof(StrongholdMonolith)))
+                {
+                    StrongholdMonolith mono = new StrongholdMonolith(towns[i], faction);
+                    WeakEntityCollection.Add("factions", mono);
+                    mono.MoveToWorld(monolith, facet);
+                }
             }
 
             if (Core.ML && !CheckExistance(stronghold.FactionStone, facet, typeof(FactionCollectionBox)))

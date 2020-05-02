@@ -109,7 +109,7 @@ namespace Server.Gumps
             this.m_Caster = caster;
             this.m_Scroll = scroll;
 
-            int x,y;
+            int x, y;
             this.AddPage(0);
             this.AddBackground(0, 0, 585, 393, 5054);
             this.AddBackground(195, 36, 387, 275, 3000);

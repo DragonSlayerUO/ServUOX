@@ -94,7 +94,7 @@ namespace Server.Items
         }
 
         public override BaseAddon Addon { get { return new HorsePaintingAddon(_Direction); } }
-                
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

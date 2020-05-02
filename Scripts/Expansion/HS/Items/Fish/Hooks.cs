@@ -18,10 +18,10 @@ namespace Server.Items
         private int m_Uses;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Uses 
+        public int Uses
         {
-            get { return m_Uses; } 
-            set { m_Uses = value; } 
+            get { return m_Uses; }
+            set { m_Uses = value; }
         }
 
         public virtual HookType HookType { get { return HookType.None; } }

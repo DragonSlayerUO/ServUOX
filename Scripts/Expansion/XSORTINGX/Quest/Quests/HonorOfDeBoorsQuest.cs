@@ -154,7 +154,7 @@ namespace Server.Engines.Quests
         {
             get
             {
-                return new Type[] { typeof( HonorOfDeBoorsQuest ) };
+                return new Type[] { typeof(HonorOfDeBoorsQuest) };
             }
         }
 

@@ -40,13 +40,13 @@ namespace Server.Mobiles
             SetSkill(SkillName.Wrestling, 90.5, 104.2);
             SetSkill(SkillName.Magery, 105.5, 119.1);
             SetSkill(SkillName.EvalInt, 94.9, 107.7);
-			
+
             Fame = 1500;
             Karma = -1500;
 
             VirtualArmor = 28;
 
-            switch ( Utility.Random(20) )
+            switch (Utility.Random(20))
             {
                 case 0:
                     PackItem(new Scimitar());
@@ -70,7 +70,7 @@ namespace Server.Mobiles
 
             PackItem(new ThighBoots());
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     PackItem(new Ribs());

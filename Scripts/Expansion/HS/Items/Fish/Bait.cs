@@ -119,7 +119,7 @@ namespace Server.Items
 
             public override void OnResponse(Mobile from, string text)
             {
-                int amount = Utility.ToInt32( text );
+                int amount = Utility.ToInt32(text);
                 m_Bait.TryBeginTarget(from, amount);
             }
 

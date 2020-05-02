@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MedusaStatue : Item
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public MedusaStatue()
             : base(0x40BC)

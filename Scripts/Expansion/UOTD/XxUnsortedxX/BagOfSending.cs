@@ -120,7 +120,7 @@ namespace Server.Items
             {
                 m_BagOfSendingHue = value;
 
-                switch ( value )
+                switch (value)
                 {
                     case BagOfSendingHue.Yellow:
                         Hue = 0x8A5;
@@ -139,7 +139,7 @@ namespace Server.Items
         }
         public static BagOfSendingHue RandomHue()
         {
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 case 0:
                     return BagOfSendingHue.Yellow;
@@ -212,7 +212,7 @@ namespace Server.Items
 
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

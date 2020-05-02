@@ -63,7 +63,7 @@ namespace Server.Mobiles
             get { return 20; }
         }
 
-        public override int DragonBlood{ get{ return 8; } }
+        public override int DragonBlood { get { return 8; } }
 
         public override HideType HideType
         {
@@ -127,7 +127,7 @@ namespace Server.Mobiles
             base.OnDeath(c);
 
             if (!Controlled)
-            c.DropItem(new BouraSkin());
+                c.DropItem(new BouraSkin());
         }
 
         public override void Serialize(GenericWriter writer)

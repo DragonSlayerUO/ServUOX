@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class PurpleFrog : BaseFish
-    { 
+    {
         [Constructable]
         public PurpleFrog()
             : base(0x3B0D)
@@ -13,7 +13,7 @@ namespace Server.Items
 
         public PurpleFrog(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

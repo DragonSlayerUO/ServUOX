@@ -4,12 +4,12 @@ using Server.Items;
 namespace Server.Engines.Quests
 {
     public class LostAndFoundQuest : BaseQuest
-    { 
+    {
         public LostAndFoundQuest()
             : base()
-        { 
-            this.AddObjective(new DeliverObjective(typeof(BatteredBucket) , "battered bucket", 1, typeof(Dallid), "Dallid (Sanctuary)", 600));
-			
+        {
+            this.AddObjective(new DeliverObjective(typeof(BatteredBucket), "battered bucket", 1, typeof(Dallid), "Dallid (Sanctuary)", 600));
+
             this.AddReward(new BaseReward(typeof(TrinketBag), 1072341));
         }
 
@@ -84,10 +84,10 @@ namespace Server.Engines.Quests
         }
 
         public override Type[] Quests
-        { 
+        {
             get
             {
-                return new Type[] 
+                return new Type[]
                 {
                     typeof(LostAndFoundQuest)
                 };

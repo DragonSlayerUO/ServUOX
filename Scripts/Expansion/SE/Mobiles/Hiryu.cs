@@ -250,7 +250,7 @@ namespace Server.Mobiles
                 return 0x848D;
             else if (rand <= 74)
                 return 0x847F;
-			
+
             return 0;
         }
     }

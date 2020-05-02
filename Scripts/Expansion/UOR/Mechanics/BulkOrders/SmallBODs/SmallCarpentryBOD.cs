@@ -32,8 +32,8 @@ namespace Server.Engines.BulkOrders
                 int amountMax = Utility.RandomList(10, 15, 20);
 
                 BulkMaterialType material = BulkMaterialType.None;
-                
-                if(useMaterials)
+
+                if (useMaterials)
                     material = GetRandomMaterial(BulkMaterialType.OakWood, m_CarpentryMaterialChances);
 
                 bool reqExceptional = Utility.RandomBool() || (material == BulkMaterialType.None);

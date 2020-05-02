@@ -60,7 +60,7 @@ namespace Server.Items
         {
             if (from.Region != null && from.Region.IsPartOf("Palace of Paroxysmus"))
                 return base.CanOfferConfirmation(from);
-				
+
             return false;
         }
     }

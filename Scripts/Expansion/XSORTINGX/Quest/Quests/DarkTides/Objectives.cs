@@ -237,7 +237,7 @@ namespace Server.Engines.Quests.Necro
                         hmf.QuestOverride = true;
                         hmf.AIObject.MoveTo(new Point3D(1076, 450, -89), false, 0);
                     }
-                    
+
                 }
             }
         }

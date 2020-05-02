@@ -279,7 +279,7 @@ namespace Server.Items
                         }
                 }
             }
-        }        
+        }
     }
 
     public class HarpsichordAddonDeed : BaseAddonDeed, IRewardOption

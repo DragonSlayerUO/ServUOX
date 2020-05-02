@@ -14,7 +14,7 @@ namespace Server.ContextMenus
         }
 
         public override void OnClick()
-        { 
+        {
             Party p = Party.Get(m_From);
             Party mp = Party.Get(m_Target);
 

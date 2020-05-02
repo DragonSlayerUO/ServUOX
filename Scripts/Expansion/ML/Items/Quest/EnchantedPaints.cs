@@ -101,7 +101,7 @@ namespace Server.Engines.Quests.Collector
                                 ImageType image;
                                 CaptureResponse response = obj.CaptureImage((targeted.GetType().Name == "GreaterMongbat" ? new Mongbat().GetType() : targeted.GetType()), out image);
 
-                                switch ( response )
+                                switch (response)
                                 {
                                     case CaptureResponse.Valid:
                                         {

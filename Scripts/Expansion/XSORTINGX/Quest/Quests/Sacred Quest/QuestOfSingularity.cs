@@ -21,7 +21,7 @@ namespace Server.Engines.Quests
         /*Repeating the mantra, you gradually enter a state of enlightened meditation.<br><br>
          * As you contemplate your worthiness, an image of the Book of Circles comes into focus.<br><br>
          * Perhaps you are ready for La Insep Om?<br>
-         */ 
+         */
         public override object Description { get { return 1112682; } }
 
         //You feel as if you should return when you are worthy.

@@ -139,7 +139,7 @@ namespace Server.Engines.Quests
                 var list = new List<Type>();
                 int lastTierComplete = 0;
 
-                for(int i = 0; i < info.Tiers.Length; i++)
+                for (int i = 0; i < info.Tiers.Length; i++)
                 {
                     var tier = info.Tiers[i];
 

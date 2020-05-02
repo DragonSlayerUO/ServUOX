@@ -32,7 +32,7 @@ namespace Server.Engines.XmlSpawner2
             // this replaces the default packet handler for Use requests.  Items and Mobiles will still 
             // behave exactly the same way, it simply adds a hook in to call the OnUse method for attachments
             // they might have.
-            Timer.DelayCall( TimeSpan.Zero, new TimerCallback( UseReqOverride ) );
+            Timer.DelayCall(TimeSpan.Zero, new TimerCallback(UseReqOverride));
 
             // This will REPLACE the default packet handler called when the quest button on the paperdoll is pressed with the xmlquest gump.
             //Timer.DelayCall(TimeSpan.Zero, new TimerCallback(QuestButtonOverride));
@@ -59,7 +59,7 @@ namespace Server.Engines.XmlSpawner2
 
         public static void QuestButtonOverride()
         {
-            PacketHandlers.RegisterEncoded( 0x32, true, new OnEncodedPacketReceive( XmlQuest.QuestButton ) );
+            PacketHandlers.RegisterEncoded(0x32, true, new OnEncodedPacketReceive(XmlQuest.QuestButton));
         }
     }
 }

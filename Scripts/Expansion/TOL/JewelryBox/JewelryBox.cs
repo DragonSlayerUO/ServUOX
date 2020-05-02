@@ -10,7 +10,7 @@ namespace Server.Items
     [Flipable(0x9F1C, 0x9F1D)]
     public class JewelryBox : Container, IDyable
     {
-		public override int LabelNumber { get { return 1157694; } } // Jewelry Box
+        public override int LabelNumber { get { return 1157694; } } // Jewelry Box
 
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
@@ -27,7 +27,7 @@ namespace Server.Items
         {
             Weight = 10.0;
             Filter = new JewelryBoxFilter();
-            Level = SecureLevel.CoOwners;            
+            Level = SecureLevel.CoOwners;
         }
 
         public bool Dye(Mobile from, DyeTub sender)

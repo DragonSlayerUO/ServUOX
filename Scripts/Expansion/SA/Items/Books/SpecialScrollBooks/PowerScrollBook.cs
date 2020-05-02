@@ -17,7 +17,7 @@ namespace Server.Items
         public override int GumpTitle { get { return 1155689; } }  // Power Scrolls
 
         [Constructable]
-        public PowerScrollBook() 
+        public PowerScrollBook()
             : base(0x9A95)
         {
             Hue = 1153;

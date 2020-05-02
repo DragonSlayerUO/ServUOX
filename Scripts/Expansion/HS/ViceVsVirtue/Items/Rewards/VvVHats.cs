@@ -7,7 +7,7 @@ using Server.Items;
 namespace Server.Engines.VvV
 {
     public class VvVWizardsHat : WizardsHat
-	{
+    {
         public override int BasePhysicalResistance { get { return 6; } }
         public override int BaseFireResistance { get { return 6; } }
         public override int BaseColdResistance { get { return 6; } }
@@ -28,24 +28,24 @@ namespace Server.Engines.VvV
 
         public VvVWizardsHat(Serial serial)
             : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(1);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(1);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
 
             if (version == 0)
                 Timer.DelayCall(() => ViceVsVirtueSystem.Instance.AddVvVItem(this));
-		}
-	}
+        }
+    }
 
     public class VvVGargishEarrings : GargishEarrings
     {

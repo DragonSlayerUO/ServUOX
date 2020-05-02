@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class GlacialStaff : BlackStaff
-	{
+    {
         [Constructable]
         public GlacialStaff()
         {

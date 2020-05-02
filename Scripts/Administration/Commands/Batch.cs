@@ -327,11 +327,11 @@ namespace Server.Commands
                     m_Batch.BatchCommands.RemoveAt(i);
             }
 
-            switch ( type )
+            switch (type)
             {
                 case 0: // main
                     {
-                        switch ( index )
+                        switch (index)
                         {
                             case 0: // run
                                 {
@@ -401,7 +401,7 @@ namespace Server.Commands
 
             if (SplitButtonID(info.ButtonID, 1, out type, out index))
             {
-                switch ( type )
+                switch (type)
                 {
                     case 0:
                         {

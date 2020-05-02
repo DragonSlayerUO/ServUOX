@@ -20,7 +20,7 @@ namespace Server.Engines.Quests
 
         public override Type[] Quests
         {
-            get { return new Type[]  { typeof(TheQuestionsQuest) }; }
+            get { return new Type[] { typeof(TheQuestionsQuest) }; }
         }
 
         public override void OnOfferFailed()

@@ -8,7 +8,7 @@ public class RoundBasket : BaseContainer
     public RoundBasket()
         : base(0x990)
     {
-        this.Weight = 1.0; 
+        this.Weight = 1.0;
     }
 
     public RoundBasket(Serial serial)

@@ -5,8 +5,8 @@ namespace Server.Engines.Quests.Samurai
 {
     public class HaochisKatana : QuestItem
     {
-		public override int LabelNumber { get { return 1063165; } }// Daimyo Haochi's Katana
-		
+        public override int LabelNumber { get { return 1063165; } }// Daimyo Haochi's Katana
+
         [Constructable]
         public HaochisKatana()
             : base(0x13FF)
@@ -18,7 +18,7 @@ namespace Server.Engines.Quests.Samurai
             : base(serial)
         {
         }
-       
+
         public override bool CanDrop(PlayerMobile player)
         {
             HaochisTrialsQuest qs = player.Quest as HaochisTrialsQuest;

@@ -15,7 +15,7 @@ namespace Server.Items
         public ShrineOfSingularity() : base(0x48A8)
         {
             Movable = false;
-            Name = "Shrine Of Singularity";	
+            Name = "Shrine Of Singularity";
         }
 
         public ShrineOfSingularity(Serial serial)

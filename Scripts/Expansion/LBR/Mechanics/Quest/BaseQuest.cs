@@ -32,7 +32,7 @@ namespace Server.Engines.Quests
         public virtual bool ShowDescription => true;
         public virtual bool ShowRewards => true;
         public virtual bool CanRefuseReward => false;
-               
+
         private Timer m_Timer;
         public List<BaseObjective> Objectives { get; private set; }
         public List<BaseReward> Rewards { get; private set; }

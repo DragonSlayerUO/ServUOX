@@ -11,7 +11,7 @@ namespace Server.Items
 
         [Constructable]
         public SorcerersScroll()
-            :base(0x46B2)
+            : base(0x46B2)
         {
             this.Hue = 33;
             this.Movable = false;

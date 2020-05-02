@@ -1140,7 +1140,7 @@ namespace Server.Multis
                 Internalize();
 
                 OnDryDock(from);
-            }            
+            }
         }
 
         public virtual void OnDryDock(Mobile from)
@@ -2732,7 +2732,7 @@ namespace Server.Multis
         public void RemovePilot(Mobile from)
         {
             Pilot.RemoveItem(VirtualMount);
-            VirtualMount.Internalize();            
+            VirtualMount.Internalize();
 
             if (IsMoving)
                 StopMove(false);
@@ -2781,7 +2781,7 @@ namespace Server.Multis
 
         public static void ForceRemovePilot(Mobile m)
         {
-            
+
 
             if (m.FindItemOnLayer(Layer.Mount) is BoatMountItem mountItem)
             {

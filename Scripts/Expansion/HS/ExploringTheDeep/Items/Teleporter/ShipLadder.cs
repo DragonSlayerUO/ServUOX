@@ -14,7 +14,7 @@ namespace Server.Items
             this.ItemID = id;
             this.m_PointDest = point;
             this.m_Map = map;
-            this.Movable = false;          
+            this.Movable = false;
         }
 
         public ShipLadder(Serial serial)

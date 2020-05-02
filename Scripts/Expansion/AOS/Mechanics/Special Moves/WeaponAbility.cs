@@ -162,11 +162,11 @@ namespace Server.Items
             switch (skill)
             {
                 default: return Core.TOL ? 1157351 : 1079308;
-                    // You need ~1_SKILL_REQUIREMENT~ weapon and tactics skill to perform that attack                                                             
-                    // You need ~1_SKILL_REQUIREMENT~ tactics skill to perform that attack
+                // You need ~1_SKILL_REQUIREMENT~ weapon and tactics skill to perform that attack                                                             
+                // You need ~1_SKILL_REQUIREMENT~ tactics skill to perform that attack
                 case SkillName.Bushido:
                 case SkillName.Ninjitsu: return 1063347;
-                    // You need ~1_SKILL_REQUIREMENT~ Bushido or Ninjitsu skill to perform that attack!
+                // You need ~1_SKILL_REQUIREMENT~ Bushido or Ninjitsu skill to perform that attack!
                 case SkillName.Poisoning: return 1060184;
                     // You lack the required poisoning to perform that attack
             }

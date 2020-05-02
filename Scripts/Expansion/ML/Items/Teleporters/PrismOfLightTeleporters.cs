@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class PrismOfLightTele : Teleporter
-    { 
+    {
         [Constructable]
         public PrismOfLightTele()
             : base(new Point3D(6474, 188, 0), Map.Trammel)
@@ -27,16 +27,16 @@ namespace Server.Items
                 m.SendLocalizedMessage(1042753, "Prism of Light"); // ~1_SOMETHING~ has been temporarily disabled.
                 return true;
             }
-		
+
             if (m.Backpack != null)
             {
                 if (m.Backpack.FindItemByType(typeof(PrismOfLightAdmissionTicket), true) != null)
                     return base.OnMoveOver(m);
             }
-			
+
             m.SendLocalizedMessage(1074277); // No admission without a ticket.
-			
-            return true;	
+
+            return true;
         }
 
         public override void Serialize(GenericWriter writer)
@@ -49,7 +49,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }
@@ -137,7 +137,7 @@ namespace Server.Items
                     Server.Mobiles.BaseCreature.TeleportPets(m, p, m.Map);
                     m.MoveToWorld(p, m.Map);
                 }
-				
+
                 this.Delete();
                 return false;
             }
@@ -155,7 +155,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

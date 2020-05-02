@@ -2,7 +2,7 @@ using System;
 using Server.Items;
 
 namespace Server.Engines.Quests
-{ 
+{
     public class Ansikart : MondainQuester
     {
         [Constructable]
@@ -22,7 +22,7 @@ namespace Server.Engines.Quests
         {
             get
             {
-                return new Type[] 
+                return new Type[]
                 {
                     typeof(MasteringtheSoulforge),
                     typeof(ALittleSomething)

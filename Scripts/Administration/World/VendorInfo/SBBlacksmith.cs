@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using Server.Items;
 
-namespace Server.Mobiles 
-{ 
-    public class SBBlacksmith : SBInfo 
-    { 
+namespace Server.Mobiles
+{
+    public class SBBlacksmith : SBInfo
+    {
         private readonly List<GenericBuyInfo> m_BuyInfo = new InternalBuyInfo();
         private readonly IShopSellInfo m_SellInfo = new InternalSellInfo();
-        public SBBlacksmith() 
-        { 
+        public SBBlacksmith()
+        {
         }
 
         public override IShopSellInfo SellInfo
@@ -27,13 +27,13 @@ namespace Server.Mobiles
             }
         }
 
-        public class InternalBuyInfo : List<GenericBuyInfo> 
-        { 
-            public InternalBuyInfo() 
+        public class InternalBuyInfo : List<GenericBuyInfo>
+        {
+            public InternalBuyInfo()
             {
                 this.Add(new GenericBuyInfo(typeof(IronIngot), 5, 16, 0x1BF2, 0, true));
-                this.Add(new GenericBuyInfo(typeof(Tongs), 13, 14, 0xFBB, 0)); 
- 
+                this.Add(new GenericBuyInfo(typeof(Tongs), 13, 14, 0xFBB, 0));
+
                 this.Add(new GenericBuyInfo(typeof(BronzeShield), 66, 20, 0x1B72, 0));
                 this.Add(new GenericBuyInfo(typeof(Buckler), 50, 20, 0x1B73, 0));
                 this.Add(new GenericBuyInfo(typeof(MetalKiteShield), 123, 20, 0x1B74, 0));
@@ -131,12 +131,12 @@ namespace Server.Mobiles
             }
         }
 
-        public class InternalSellInfo : GenericSellInfo 
-        { 
-            public InternalSellInfo() 
-            { 
-                this.Add(typeof(Tongs), 7); 
-                this.Add(typeof(IronIngot), 4); 
+        public class InternalSellInfo : GenericSellInfo
+        {
+            public InternalSellInfo()
+            {
+                this.Add(typeof(Tongs), 7);
+                this.Add(typeof(IronIngot), 4);
 
                 this.Add(typeof(Buckler), 25);
                 this.Add(typeof(BronzeShield), 33);
@@ -202,7 +202,7 @@ namespace Server.Mobiles
 
                 this.Add(typeof(HeavyCrossbow), 27);
                 this.Add(typeof(Bow), 17);
-                this.Add(typeof(Crossbow), 23); 
+                this.Add(typeof(Crossbow), 23);
 
                 if (Core.AOS)
                 {

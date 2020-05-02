@@ -3,8 +3,8 @@ using Server;
 
 namespace Server.Items
 {
-	public class FortunesFireGrog : BaseBeverage
-	{
+    public class FortunesFireGrog : BaseBeverage
+    {
         public override int MaxQuantity { get { return 1; } }
 
         [Constructable]
@@ -14,7 +14,7 @@ namespace Server.Items
 
         public override int ComputeItemID()
         {
-            if(Quantity > 0)
+            if (Quantity > 0)
                 return Utility.RandomBool() ? 2542 : 2543;
 
             return ItemID = ItemID == 2543 ? 8067 : 8065;
@@ -41,5 +41,5 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
         }
-	}
+    }
 }

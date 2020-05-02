@@ -9,12 +9,12 @@ using Server.Spells;
 
 namespace Server.Items
 {
-	public class Volcano
+    public class Volcano
     {
         public static readonly Rectangle2D LavaStart = new Rectangle2D(927, 1615, 2, 2);
         public static readonly int LastLavaStage = 70;
 
-        public static readonly Rectangle2D[] SafeZone = new Rectangle2D[] 
+        public static readonly Rectangle2D[] SafeZone = new Rectangle2D[]
         {
             new Rectangle2D(959, 1704, 15, 14),
             new Rectangle2D(915, 1696, 15, 15),
@@ -146,7 +146,7 @@ namespace Server.Items
                         mobiles.Free();
 
                         if (Map.TerMur.CanFit(x, y, 0, 16, false, false, true) && !InSafeZone(p))
-                        {                            
+                        {
                             Effects.SendLocationEffect(p, Map.TerMur, 4847, (int)LavaAdvance.TotalSeconds * 10);
 
                             IPooledEnumerable eable = Map.TerMur.GetMobilesInRange(p, 0);
@@ -204,7 +204,7 @@ namespace Server.Items
         public Volcano Volcano { get; private set; }
 
         public VolcanoRegion(Volcano volcano)
-            : base("Eodon_Volcano", Map.TerMur, Region.DefaultPriority, new Rectangle2D[] { new Rectangle2D(832, 1502, 255, 217)})
+            : base("Eodon_Volcano", Map.TerMur, Region.DefaultPriority, new Rectangle2D[] { new Rectangle2D(832, 1502, 255, 217) })
         {
             Volcano = volcano;
             Register();
@@ -217,7 +217,7 @@ namespace Server.Items
 
         public override void OnLocationChanged(Mobile m, Point3D oldLocation)
         {
-            if(Volcano != null)
+            if (Volcano != null)
                 Volcano.CheckMovement(m);
 
             base.OnLocationChanged(m, oldLocation);

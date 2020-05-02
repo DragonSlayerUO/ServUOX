@@ -4,7 +4,7 @@ using Server.Misc;
 
 namespace Server.Mobiles
 {
-    [CorpseName("Tikitavi [Renowned] corpse")] 
+    [CorpseName("Tikitavi [Renowned] corpse")]
     public class TikitaviRenowned : BaseRenowned
     {
         [Constructable]
@@ -21,8 +21,8 @@ namespace Server.Mobiles
             this.SetInt(243, 288);
 
             this.SetHits(50000);
-			this.SetMana(243, 288);
-			this.SetStam(139, 177);
+            this.SetMana(243, 288);
+            this.SetStam(139, 177);
 
             this.SetDamage(7, 9);
 

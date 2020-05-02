@@ -32,7 +32,7 @@ namespace Server.Items
         {
         }
 
-    
+
         public override string TranslocationItemName
         {
             get

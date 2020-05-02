@@ -132,7 +132,7 @@ namespace Server.Items
             m_ResourceCount = reader.ReadInt();
             NextResourceCount = reader.ReadDateTime();
         }
-    }    
+    }
 
     public class FirePaintingDeed : BaseAddonDeed, IRewardOption
     {
@@ -180,7 +180,7 @@ namespace Server.Items
         }
 
         public override BaseAddon Addon { get { return new FirePaintingAddon(_Direction); } }
-                
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

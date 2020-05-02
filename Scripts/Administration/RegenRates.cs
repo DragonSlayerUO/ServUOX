@@ -300,7 +300,7 @@ namespace Server.Misc
             if (ar == null || ar.ArmorAttributes.MageArmor != 0 || ar.Attributes.SpellChanneling != 0)
                 return 0.0;
 
-            switch ( ar.MeditationAllowance )
+            switch (ar.MeditationAllowance)
             {
                 default:
                 case ArmorMeditationAllowance.None:

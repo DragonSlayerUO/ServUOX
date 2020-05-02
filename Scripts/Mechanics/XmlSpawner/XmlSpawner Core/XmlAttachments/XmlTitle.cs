@@ -43,7 +43,7 @@ namespace Server.Engines.XmlSpawner2
                 return this.m_Title;
             }
             set
-            { 
+            {
                 this.m_Title = value;
                 // change the title
                 if (this.AttachedTo is Mobile)

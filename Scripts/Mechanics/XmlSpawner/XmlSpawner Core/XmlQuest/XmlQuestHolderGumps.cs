@@ -165,91 +165,91 @@ namespace Server.Gumps
                 }
                 else
                     if (foundescort)
+                {
+                    // get the current escort status
+                    int escorted = 0;
+                    try
                     {
-                        // get the current escort status
-                        int escorted = 0;
-                        try
-                        {
-                            escorted = int.Parse(statestr);
-                        }
-                        catch { }
-
-                        int remaining = targetcount - escorted;
-
-                        if (remaining < 0) remaining = 0;
-
-                        // report the escort task objective status
-                        if (descriptionstr != null)
-                            text = descriptionstr;
-                        else
-                            text = String.Format("Escort {0}", name);
+                        escorted = int.Parse(statestr);
                     }
+                    catch { }
+
+                    int remaining = targetcount - escorted;
+
+                    if (remaining < 0) remaining = 0;
+
+                    // report the escort task objective status
+                    if (descriptionstr != null)
+                        text = descriptionstr;
                     else
+                        text = String.Format("Escort {0}", name);
+                }
+                else
                         if (foundcollect)
+                {
+                    // get the current collection status
+                    int collected = 0;
+                    try
+                    {
+                        collected = int.Parse(statestr);
+                    }
+                    catch { }
+
+                    int remaining = targetcount - collected;
+
+                    if (remaining < 0) remaining = 0;
+
+                    // report the collect task objective status
+                    if (descriptionstr != null)
+                        text = String.Format("{0} ({1} left)", descriptionstr, remaining);
+                    else
+                    {
+                        if (name != null)
                         {
-                            // get the current collection status
-                            int collected = 0;
-                            try
-                            {
-                                collected = int.Parse(statestr);
-                            }
-                            catch { }
+                            if (type == null) type = "mob";
 
-                            int remaining = targetcount - collected;
-
-                            if (remaining < 0) remaining = 0;
-
-                            // report the collect task objective status
-                            if (descriptionstr != null)
-                                text = String.Format("{0} ({1} left)", descriptionstr, remaining);
-                            else
-                            {
-                                if (name != null)
-                                {
-                                    if (type == null) type = "mob";
-
-                                    text = String.Format("Collect {0} {1}(s) named {2} ({3} left)", targetcount, type, name, remaining);
-                                }
-                                else
-                                    text = String.Format("Collect {0} {1}(s) ({2} left)", targetcount, type, remaining);
-                            }
+                            text = String.Format("Collect {0} {1}(s) named {2} ({3} left)", targetcount, type, name, remaining);
                         }
                         else
+                            text = String.Format("Collect {0} {1}(s) ({2} left)", targetcount, type, remaining);
+                    }
+                }
+                else
                             if (foundgive)
-                            {
-                                // get the current give status
-                                int collected = 0;
+                {
+                    // get the current give status
+                    int collected = 0;
 
-                                try
-                                {
-                                    collected = int.Parse(statestr);
-                                }
-                                catch { }
+                    try
+                    {
+                        collected = int.Parse(statestr);
+                    }
+                    catch { }
 
-                                int remaining = targetcount - collected;
+                    int remaining = targetcount - collected;
 
-                                if (remaining < 0) remaining = 0;
+                    if (remaining < 0) remaining = 0;
 
-                                // report the collect task objective status
-                                if (descriptionstr != null)
-                                    text = String.Format("{0} ({1} left)", descriptionstr, remaining);
-                                else
-                                {
-                                    if (name != null)
-                                    {
-                                        if (type == null) type = "item";
+                    // report the collect task objective status
+                    if (descriptionstr != null)
+                        text = String.Format("{0} ({1} left)", descriptionstr, remaining);
+                    else
+                    {
+                        if (name != null)
+                        {
+                            if (type == null) type = "item";
 
-                                        text = String.Format("Give {0} {1}(s) named {2} to {3} ({4} left)", targetcount, type, name, mobname, remaining);
-                                    }
-                                    else
-                                        text = String.Format("Give {0} {1}(s) to {2} ({3} left)", targetcount, type, mobname, remaining);
-                                }
-                            }
-                            else
-                            {
-                                // just report the objectivestring
-                                text = objectivestr;
-                            }
+                            text = String.Format("Give {0} {1}(s) named {2} to {3} ({4} left)", targetcount, type, name, mobname, remaining);
+                        }
+                        else
+                            text = String.Format("Give {0} {1}(s) to {2} ({3} left)", targetcount, type, mobname, remaining);
+                    }
+                }
+                else
+                {
+                    // just report the objectivestring
+                    text = objectivestr;
+                }
 
                 AddHtml(x, y, 223, 35, XmlSimpleGump.Color(text, "EFEF5A"), false, false);
 
@@ -402,16 +402,16 @@ namespace Server.Gumps
                     }
                     else
                         if (questitem.RewardItem is Container)
-                        {
-                            AddLabel(230, 356, 55, String.Format("Reward: {0} ({1} items)", questitem.RewardItem.GetType().Name,
-                                questitem.RewardItem.TotalItems));
-                            AddLabel(230, 373, 55, String.Format("Weight: {0}", questitem.RewardItem.TotalWeight + questitem.RewardItem.Weight));
-                        }
-                        else
-                        {
-                            AddLabel(230, 356, 55, String.Format("Reward: {0}", questitem.RewardItem.GetType().Name));
-                            AddLabel(230, 373, 55, String.Format("Weight: {0}", questitem.RewardItem.Weight));
-                        }
+                    {
+                        AddLabel(230, 356, 55, String.Format("Reward: {0} ({1} items)", questitem.RewardItem.GetType().Name,
+                            questitem.RewardItem.TotalItems));
+                        AddLabel(230, 373, 55, String.Format("Weight: {0}", questitem.RewardItem.TotalWeight + questitem.RewardItem.Weight));
+                    }
+                    else
+                    {
+                        AddLabel(230, 356, 55, String.Format("Reward: {0}", questitem.RewardItem.GetType().Name));
+                        AddLabel(230, 373, 55, String.Format("Weight: {0}", questitem.RewardItem.Weight));
+                    }
                     AddImageTiled(330, 373, 81, 40, 200);
                     AddItem(340, 376, questitem.RewardItem.ItemID);
 
@@ -438,35 +438,35 @@ namespace Server.Gumps
                 else
                     // indicate the expiration time
                     if (questitem.IsValid)
+                {
+                    //AddHtmlLocalized(150, 400, 50, 37, 1046033, 0xf0000 , false , false ); // Expires
+                    AddHtml(130, 392, 200, 37, XmlSimpleGump.Color(questitem.ExpirationString, "00FF42"), false, false);
+                }
+                else
+                        if (questitem.AlreadyDone)
+                {
+                    if (!questitem.Repeatable)
                     {
-                        //AddHtmlLocalized(150, 400, 50, 37, 1046033, 0xf0000 , false , false ); // Expires
-                        AddHtml(130, 392, 200, 37, XmlSimpleGump.Color(questitem.ExpirationString, "00FF42"), false, false);
+                        AddLabel(100, 392, 33, "Already done - cannot be repeated");
                     }
                     else
-                        if (questitem.AlreadyDone)
+                    {
+                        List<XmlAttachment> a = XmlAttach.FindAttachments(questitem.Owner, typeof(XmlQuestAttachment), questitem.Name);
+                        if (a != null && a.Count > 0)
                         {
-                            if (!questitem.Repeatable)
-                            {
-                                AddLabel(100, 392, 33, "Already done - cannot be repeated");
-                            }
-                            else
-                            {
-                                List<XmlAttachment> a = XmlAttach.FindAttachments(questitem.Owner, typeof(XmlQuestAttachment), questitem.Name);
-                                if (a != null && a.Count > 0)
-                                {
-                                    AddLabel(100, 392, 33, String.Format("Repeatable in {0}", a[0].Expiration));
-                                }
-                                else
-                                {
-                                    AddLabel(150, 392, 33, "Already done - ???");
-                                }
-                            }
+                            AddLabel(100, 392, 33, String.Format("Repeatable in {0}", a[0].Expiration));
                         }
                         else
                         {
-                            //AddHtml( 150, 384, 200, 37, XmlSimpleGump.Color( "No longer valid", "00FF42" ), false, false );
-                            AddLabel(150, 392, 33, "No longer valid");
+                            AddLabel(150, 392, 33, "Already done - ???");
                         }
+                    }
+                }
+                else
+                {
+                    //AddHtml( 150, 384, 200, 37, XmlSimpleGump.Color( "No longer valid", "00FF42" ), false, false );
+                    AddLabel(150, 392, 33, "No longer valid");
+                }
                 if (XmlQuest.QuestPointsEnabled)
                 {
                     AddHtml(250, 40, 200, 30, XmlSimpleGump.Color(String.Format("Difficulty Level {0}", questitem.Difficulty), "00FF42"), false, false);
@@ -502,7 +502,7 @@ namespace Server.Gumps
                     state.Mobile.SendGump(new XmlQuestStatusGump(m_questitem, m_gumptitle, m_X, m_Y, m_solid, m_screen));
                     break;
                 case 800:
-                    if(!m_questitem.CanSeeReward) return;
+                    if (!m_questitem.CanSeeReward) return;
                     if (m_questitem.RewardItem != null || m_questitem.RewardAttachment != null)
                     {
                         // open a new status gump

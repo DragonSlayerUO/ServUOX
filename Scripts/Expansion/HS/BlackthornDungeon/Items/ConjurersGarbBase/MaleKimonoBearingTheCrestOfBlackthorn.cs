@@ -6,7 +6,7 @@ namespace Server.Items
     public class MaleKimonoBearingTheCrestOfBlackthorn7 : MaleKimono
     {
         public override bool IsArtifact { get { return true; } }
-        
+
         [Constructable]
         public MaleKimonoBearingTheCrestOfBlackthorn7()
             : base()
@@ -33,8 +33,8 @@ namespace Server.Items
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-			
-			if (version == 0)
+
+            if (version == 0)
             {
                 MaxHitPoints = 0;
                 HitPoints = 0;

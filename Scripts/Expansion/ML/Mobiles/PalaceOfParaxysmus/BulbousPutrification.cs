@@ -35,7 +35,7 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.Tactics, 111.9, 119.1);
             this.SetSkill(SkillName.MagicResist, 55.5, 64.1);
             this.SetSkill(SkillName.Anatomy, 110.0);
-            this.SetSkill(SkillName.Poisoning, 80.0);	
+            this.SetSkill(SkillName.Poisoning, 80.0);
         }
 
         public BulbousPutrification(Serial serial)
@@ -65,14 +65,14 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

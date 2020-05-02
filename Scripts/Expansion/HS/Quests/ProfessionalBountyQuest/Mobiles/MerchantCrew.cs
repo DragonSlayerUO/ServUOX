@@ -26,7 +26,7 @@ namespace Server.Mobiles
             }
             return null;
         }
-        
+
         [Constructable]
         public MerchantCrew()
             : base(AIType.AI_Paladin, FightMode.Aggressor, 10, 1, .2, .4)

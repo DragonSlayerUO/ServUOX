@@ -47,7 +47,7 @@ namespace Server.Mobiles
 
             SetSpecialAbility(SpecialAbility.DragonBreath);
             SetAreaEffect(AreaEffect.AuraDamage);
-        }        
+        }
 
         public FireDaemon(Serial serial)
             : base(serial)

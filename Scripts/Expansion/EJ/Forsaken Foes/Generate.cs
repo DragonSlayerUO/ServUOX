@@ -136,7 +136,7 @@ namespace Server.Engines.Fellowship
                         GenerateQuestContent();
                         fellowship.QuestContentGenerated = true;
                     }
-                }                
+                }
             }
         }
 

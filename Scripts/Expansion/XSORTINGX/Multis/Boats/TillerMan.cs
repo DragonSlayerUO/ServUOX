@@ -42,7 +42,7 @@ namespace Server.Items
 
             if (Boat.IsRowBoat)
                 return;
-            
+
             list.Add(Boat.Status);
             list.Add(1116580 + (int)Boat.DamageTaken); //State: Prisine            
         }

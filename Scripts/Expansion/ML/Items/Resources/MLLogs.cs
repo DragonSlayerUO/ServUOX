@@ -20,7 +20,7 @@ namespace Server.Items
         }
 
         TextDefinition ICommodity.Description => 1075066;
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

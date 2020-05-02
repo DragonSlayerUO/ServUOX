@@ -117,7 +117,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                switch ( this.m_Step )
+                switch (this.m_Step)
                 {
                     case KillHordeMinionsStep.First:
                         /* Find the mountain pass beyond the house which lies at the
@@ -146,7 +146,7 @@ namespace Server.Engines.Quests.Haven
             {
                 if (this.System.From.Profession == 5) // paladin
                 {
-                    switch ( this.m_Step )
+                    switch (this.m_Step)
                     {
                         case KillHordeMinionsStep.First:
                             return 1;
@@ -214,7 +214,7 @@ namespace Server.Engines.Quests.Haven
         {
             if (this.System.From.Profession == 5)
             {
-                switch ( this.m_Step )
+                switch (this.m_Step)
                 {
                     case KillHordeMinionsStep.First:
                         {

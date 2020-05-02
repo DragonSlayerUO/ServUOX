@@ -8,7 +8,7 @@ namespace Server.Engines.Quests
 {
     public class PaladinsOfTrinsic : BaseQuest
     {
-        public override QuestChain ChainID{get {return QuestChain.PaladinsOfTrinsic; } }
+        public override QuestChain ChainID { get { return QuestChain.PaladinsOfTrinsic; } }
         public override Type NextQuest { get { return typeof(PaladinsOfTrinsic2); } }
 
         /* The Paladins of Trinsic */
@@ -206,11 +206,11 @@ namespace Server.Engines.Quests
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {
-            if(m is PlayerMobile && InRange(m.Location, 5) && !InRange(oldLocation, 5))
+            if (m is PlayerMobile && InRange(m.Location, 5) && !InRange(oldLocation, 5))
             {
                 PaladinsOfTrinsic2 quest = QuestHelper.GetQuest<PaladinsOfTrinsic2>((PlayerMobile)m);
 
-                if(quest != null && !quest.SentMessage && quest.Completed)
+                if (quest != null && !quest.SentMessage && quest.Completed)
                 {
                     m.SendLocalizedMessage(1158111); // You have proven yourself Honorable, the Lord Commander looks overjoyed as you approach him triumphantly! Speak to him to claim your reward!
                     quest.SentMessage = true;

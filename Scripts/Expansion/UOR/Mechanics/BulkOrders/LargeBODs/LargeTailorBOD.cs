@@ -20,7 +20,7 @@ namespace Server.Engines.BulkOrders
             LargeBulkEntry[] entries;
             bool useMaterials = false;
 
-            switch ( Utility.Random(14) )
+            switch (Utility.Random(14))
             {
                 default:
                 case 0:

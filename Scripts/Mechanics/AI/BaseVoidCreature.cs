@@ -236,7 +236,7 @@ namespace Server.Mobiles
 
                 foreach (XmlSpawner.SpawnObject obj in spawner.SpawnObjects)
                 {
-                    if(obj == null || obj.TypeName == null)
+                    if (obj == null || obj.TypeName == null)
                         continue;
 
                     Type t = ScriptCompiler.FindTypeByName(obj.TypeName, true);

@@ -20,7 +20,7 @@ namespace Server.Items
             ac.Hue = 2702;
             this.AddComponent(ac, x, y, z);
         }
-       
+
         public ExodusAlterAddon(Serial serial) : base(serial)
         {
         }

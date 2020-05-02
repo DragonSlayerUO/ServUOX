@@ -121,7 +121,7 @@ namespace Server.Mobiles
                             packKey.Name = "a ship key";
 
                             m_From.AddToBackpack(packKey);
-                        }                        
+                        }
                     }
                     else
                     {

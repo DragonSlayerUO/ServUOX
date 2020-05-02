@@ -17,7 +17,7 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if(IsChildOf(from.Backpack))
+            if (IsChildOf(from.Backpack))
                 from.Target = new InternalTarget(this);
         }
 

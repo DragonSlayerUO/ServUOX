@@ -7,7 +7,7 @@ using Server.Targeting;
 namespace Server.Items
 {
     public class GuardsmansRope : BaseDecayingItem
-	{
+    {
         public override int LabelNumber { get { return 1152261; } } // guardsman's rope
         public override int Lifespan { get { return 3600; } }
 
@@ -54,17 +54,17 @@ namespace Server.Items
             : base(serial)
         {
         }
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
-		}
-	}
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
 }

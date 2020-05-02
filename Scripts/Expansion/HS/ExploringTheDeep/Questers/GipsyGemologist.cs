@@ -173,7 +173,7 @@ namespace Server.Gumps
             AddButton(345, 440, 0xF7, 0xF8, 0, GumpButtonType.Reply, 0);//OK
         }
 
-        public override void OnResponse(NetState state, RelayInfo info) 
+        public override void OnResponse(NetState state, RelayInfo info)
         {
             Mobile from = state.Mobile;
 

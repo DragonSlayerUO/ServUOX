@@ -12,7 +12,7 @@ namespace Server.Items
             this.Slayer = SlayerName.ArachnidDoom;
 
             UsesRemaining = 450;
-        }       
+        }
 
         public ArachnidDoom(Serial serial)
             : base(serial)

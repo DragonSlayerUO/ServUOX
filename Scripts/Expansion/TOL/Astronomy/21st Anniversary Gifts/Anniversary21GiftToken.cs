@@ -41,7 +41,7 @@ namespace Server.Items
             var bag = new Bag();
             bag.Hue = 2720;
 
-            switch(choice)
+            switch (choice)
             {
                 default:
                     bag.Delete();

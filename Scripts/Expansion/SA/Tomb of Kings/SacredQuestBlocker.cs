@@ -32,13 +32,13 @@ namespace Server.Items
                 pm = ((BaseCreature)m).ControlMaster as PlayerMobile;
 
             if (pm != null && pm.AbyssEntry)
-            {                
+            {
                 m.SendLocalizedMessage(1112227); // May the Virtues guide thine quest.
 
                 return true;
             }
             else
-            {                
+            {
                 m.SendLocalizedMessage(1112226); // Thou must be on a Sacred Quest to pass through.
 
                 return false;

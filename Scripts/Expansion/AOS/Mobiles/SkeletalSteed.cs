@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("an undead horse corpse")]
     public class SkeletalSteed : BaseMount
     {
-        [Constructable] 
+        [Constructable]
         public SkeletalSteed()
             : this("a skeletal steed")
         {
@@ -56,7 +56,7 @@ namespace Server.Mobiles
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 0:
                     {

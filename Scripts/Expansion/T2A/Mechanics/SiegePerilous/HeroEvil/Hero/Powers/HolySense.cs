@@ -50,7 +50,7 @@ namespace Server.Ethics.Hero
             {
                 sb.Append(", and a strong presense");
 
-                switch ( from.Mobile.GetDirectionTo(primary.Mobile) )
+                switch (from.Mobile.GetDirectionTo(primary.Mobile))
                 {
                     case Direction.West:
                         sb.Append(" to the west.");

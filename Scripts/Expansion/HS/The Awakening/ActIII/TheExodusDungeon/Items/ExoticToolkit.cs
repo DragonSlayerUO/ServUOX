@@ -6,7 +6,7 @@ namespace Server.Items
     public class ExoticToolkit : BaseDecayingItem
     {
         [Constructable]
-        public ExoticToolkit() 
+        public ExoticToolkit()
             : base(0x1EB9)
         {
             this.Hue = 2500;
@@ -54,10 +54,10 @@ namespace Server.Items
                         {
                             ((ExodusNexus)addon.Addon).OpenGump(from);
                         }
-                    }                        
+                    }
                 }
             }
-        }        
+        }
 
         public override void Serialize(GenericWriter writer)
         {

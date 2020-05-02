@@ -40,18 +40,18 @@ namespace Server.Gumps
                         }
                     }
                 }
-                    /*
-                    if (_Parent != null)
-                    {
-                        if (_Parent is BaseGump && !((BaseGump)_Parent).Children.Contains(this))
-                            ((BaseGump)_Parent).Children.Add(this);
-                    }
-                    else if (_Parent is BaseGump && ((BaseGump)_Parent).Children.Contains(this))
-                    {
-                        ((BaseGump)_Parent).Children.Remove(this);
-                    }
-                    */
+                /*
+                if (_Parent != null)
+                {
+                    if (_Parent is BaseGump && !((BaseGump)_Parent).Children.Contains(this))
+                        ((BaseGump)_Parent).Children.Add(this);
                 }
+                else if (_Parent is BaseGump && ((BaseGump)_Parent).Children.Contains(this))
+                {
+                    ((BaseGump)_Parent).Children.Remove(this);
+                }
+                */
+            }
         }
 
         public List<BaseGump> Children { get; set; }
@@ -586,7 +586,7 @@ namespace Server.Gumps
             {
                 Packet.Release(ref _PropertyList);
 
-                _Text = string.Empty;  
+                _Text = string.Empty;
                 _ClilocTable = null;
 
                 _SpoofPool.Add(this);

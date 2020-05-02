@@ -55,21 +55,10 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		public override bool CanBeParagon { get { return false; } }
-        public override bool GivesMLMinorArtifact
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool AlwaysMurderer
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool CanBeParagon => false;
+        public override bool GivesMLMinorArtifact => true;
+        public override bool AlwaysMurderer => true;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 3);
@@ -80,22 +69,19 @@ namespace Server.Mobiles
         public override void OnDeath(Container c)
         {
             base.OnDeath(c);
-
             c.DropItem(new ResolvesBridle());
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write((int)0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -20,14 +20,14 @@ namespace Server
 
         public static void Initialize()
         {
-        //    Console.WriteLine("Loading Fraz's Teleporter System");
+            //    Console.WriteLine("Loading Fraz's Teleporter System");
             LoadPaths();
 
-        //    CommandSystem.Register("TeleMenu", AccessLevel.Administrator, new CommandEventHandler(TeleMenu_OnCommand)); // Next Version - Fraz
+            //    CommandSystem.Register("TeleMenu", AccessLevel.Administrator, new CommandEventHandler(TeleMenu_OnCommand)); // Next Version - Fraz
             CommandSystem.Register("TeleGlow", AccessLevel.Player, new CommandEventHandler(TeleGlow_OnCommand));
 
             EventSink.Movement += new MovementEventHandler(EventSink_Movement);
-        //  EventSink.OnTeleport += new TeleportEventHandler(EventSink_Teleport); // This EventSink is not yet implemented in ServUOX - Fraz
+            //  EventSink.OnTeleport += new TeleportEventHandler(EventSink_Teleport); // This EventSink is not yet implemented in ServUOX - Fraz
         }
 
         public static void EventSink_Movement(MovementEventArgs e)
@@ -52,7 +52,7 @@ namespace Server
         {
             if (UseCsvFiles)
             {
-                LoadCsvFiles();                
+                LoadCsvFiles();
             }
 
             if (!UseCustomFiles) return;
@@ -244,7 +244,7 @@ namespace Server
         [Usage("TeleGlow")]
         [Description("Glows any teleporters in visual range.")]
         public static void TeleGlow_OnCommand(CommandEventArgs e)
-        {    
+        {
             Mobile m = e.Mobile;
             m.SendMessage("Teleporters in your area are now highlighted.");
 
@@ -299,7 +299,7 @@ namespace Server
                         parts[3] = "Greyhawk";
                     }
                     */
-                    Map mapLoc = Map.Parse(parts[3]);         
+                    Map mapLoc = Map.Parse(parts[3]);
 
                     Point3D pointDest = new Point3D(int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]));
                     /*

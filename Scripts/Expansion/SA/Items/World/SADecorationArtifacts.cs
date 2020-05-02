@@ -5,7 +5,7 @@ namespace Server.Items
     #region GargishBentasVaseArtifact
     public class GargishBentasVaseArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -51,7 +51,7 @@ namespace Server.Items
     #region GargishPortraitArtifact
     public class GargishPortraitArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -97,7 +97,7 @@ namespace Server.Items
     #region DyingPlantArtifact
     public class DyingPlantArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -143,7 +143,7 @@ namespace Server.Items
     #region LargeDyingPlantArtifact
     public class LargeDyingPlantArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -189,7 +189,7 @@ namespace Server.Items
     #region GargishLuckTotemArtifact
     public class GargishLuckTotemArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -235,7 +235,7 @@ namespace Server.Items
     #region GargishKnowledgeTotemArtifact
     public class GargishKnowledgeTotemArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -281,7 +281,7 @@ namespace Server.Items
     #region BookOfTruthArtifact
     public class BookOfTruthArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -327,7 +327,7 @@ namespace Server.Items
     #region GargishTraditionalVaseArtifact
     public class GargishTraditionalVaseArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -373,7 +373,7 @@ namespace Server.Items
     #region GargishProtectiveTotemArtifact
     public class GargishProtectiveTotemArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -415,11 +415,11 @@ namespace Server.Items
         }
     }
     #endregion
-  
+
     #region PushmePullyuArtifact
     public class PushmePullyuArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -465,7 +465,7 @@ namespace Server.Items
     #region LargePewterBowlArtifact
     public class LargePewterBowlArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -511,7 +511,7 @@ namespace Server.Items
     #region GargishMemorialStatueArtifact
     public class GargishMemorialStatueArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -557,7 +557,7 @@ namespace Server.Items
     #region StolenBottlesOfLiquor1Artifact
     public class StolenBottlesOfLiquor1Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -603,7 +603,7 @@ namespace Server.Items
     #region StolenBottlesOfLiquor2Artifact
     public class StolenBottlesOfLiquor2Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -649,7 +649,7 @@ namespace Server.Items
     #region StolenBottlesOfLiquor3Artifact
     public class StolenBottlesOfLiquor3Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -695,7 +695,7 @@ namespace Server.Items
     #region StolenBottlesOfLiquor4Artifact
     public class StolenBottlesOfLiquor4Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -741,7 +741,7 @@ namespace Server.Items
     #region BottlesOfSpoiledWine1Artifact
     public class BottlesOfSpoiledWine1Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -787,7 +787,7 @@ namespace Server.Items
     #region BottlesOfSpoiledWine2Artifact
     public class BottlesOfSpoiledWine2Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -833,7 +833,7 @@ namespace Server.Items
     #region BottlesOfSpoiledWine3Artifact
     public class BottlesOfSpoiledWine3Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -879,7 +879,7 @@ namespace Server.Items
     #region NaverysWeb1Artifact
     public class NaverysWeb1Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -925,7 +925,7 @@ namespace Server.Items
     #region NaverysWeb2Artifact
     public class NaverysWeb2Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -971,7 +971,7 @@ namespace Server.Items
     #region NaverysWeb3Artifact
     public class NaverysWeb3Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1017,7 +1017,7 @@ namespace Server.Items
     #region NaverysWeb4Artifact 
     public class NaverysWeb4Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1063,7 +1063,7 @@ namespace Server.Items
     #region NaverysWeb5Artifact
     public class NaverysWeb5Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1109,7 +1109,7 @@ namespace Server.Items
     #region NaverysWeb6Artifact
     public class NaverysWeb6Artifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1155,7 +1155,7 @@ namespace Server.Items
     #region RottedOarsArtifact
     public class RottedOarsArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1201,7 +1201,7 @@ namespace Server.Items
     #region BloodySpoonArtifact
     public class BloodySpoonArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1247,7 +1247,7 @@ namespace Server.Items
     #region MysteriousSupperArtifact
     public class MysteriousSupperArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1293,7 +1293,7 @@ namespace Server.Items
     #region DriedUpInkWellArtifact
     public class DriedUpInkWellArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1339,7 +1339,7 @@ namespace Server.Items
     #region TyballsFlaskStandArtifact
     public class TyballsFlaskStandArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1385,7 +1385,7 @@ namespace Server.Items
     #region BlockAndTackleArtifact
     public class BlockAndTackleArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1431,7 +1431,7 @@ namespace Server.Items
     #region RemnantsOfMeatLoafArtifact
     public class RemnantsOfMeatLoafArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1477,7 +1477,7 @@ namespace Server.Items
     #region HalfEatenSupperArtifact
     public class HalfEatenSupperArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1523,7 +1523,7 @@ namespace Server.Items
     #region PricelessTreasureArtifact
     public class PricelessTreasureArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1569,7 +1569,7 @@ namespace Server.Items
     #region FakeCopperIngotsArtifact
     public class FakeCopperIngotsArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1615,7 +1615,7 @@ namespace Server.Items
     #region JugsOfGoblinRotgutArtifact
     public class JugsOfGoblinRotgutArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1661,7 +1661,7 @@ namespace Server.Items
     #region BatteredPanArtifact
     public class BatteredPanArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get
@@ -1707,7 +1707,7 @@ namespace Server.Items
     #region RustedPanArtifact
     public class RustedPanArtifact : BaseDecorationArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public override int LabelNumber
         {
             get

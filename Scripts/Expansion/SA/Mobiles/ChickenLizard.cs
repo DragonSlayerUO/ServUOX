@@ -23,8 +23,8 @@ namespace Server.Mobiles
             SetInt(6, 10);
 
             SetHits(74, 95);
-			SetMana(6, 10);
-			SetStam(78, 95);
+            SetMana(6, 10);
+            SetStam(78, 95);
 
             SetDamage(2, 5);
 
@@ -101,7 +101,7 @@ namespace Server.Mobiles
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch(version)
+            switch (version)
             {
                 case 1:
                     m_NextEgg = reader.ReadDateTime();

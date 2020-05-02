@@ -79,7 +79,7 @@ namespace Server.Misc
 
         private static bool OnProfanityDetected(Mobile from, string speech)
         {
-            switch ( Action )
+            switch (Action)
             {
                 case ProfanityAction.None:
                     return true;

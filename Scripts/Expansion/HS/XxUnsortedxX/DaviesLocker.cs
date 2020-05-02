@@ -220,7 +220,7 @@ namespace Server.Engines.VeteranRewards
             {
                 base.GetContextMenuEntries(from, list);
 
-                if(Addon is DaviesLockerAddon)
+                if (Addon is DaviesLockerAddon)
                     SetSecureLevelEntry.AddTo(from, (DaviesLockerAddon)Addon, list);
             }
 
@@ -552,8 +552,8 @@ namespace Server.Engines.VeteranRewards
 
             if (totalPages < 1) totalPages = 1;
 
-            if(page < 0) page = 0;
-            if(page + 1 > totalPages) page = totalPages - 1;
+            if (page < 0) page = 0;
+            if (page + 1 > totalPages) page = totalPages - 1;
             m_Page = page;
 
             int start = page * perPage;
@@ -562,7 +562,7 @@ namespace Server.Engines.VeteranRewards
             AddHtmlLocalized(40, 450, 200, 20, 1153561, String.Format("{0}\t{1}", (page + 1).ToString(), (totalPages).ToString()), Blue, false, false); // Page ~1_CUR~ of ~2_MAX~
 
             AddHtmlLocalized(380, 427, 72, 20, 1153553, Yellow, false, false); // <DIV ALIGN="CENTER">ADD MAPS</DIV>
-            AddButton(340, 428, 4011, 4013, 1, GumpButtonType.Reply, 0); 
+            AddButton(340, 428, 4011, 4013, 1, GumpButtonType.Reply, 0);
 
             AddHtmlLocalized(377, 450, 40, 20, 1153562, Yellow, false, false); // <DIV ALIGN="CENTER">PAGE</DIV>
             AddButton(340, 450, 4014, 4016, 2, GumpButtonType.Reply, 0);
@@ -580,7 +580,7 @@ namespace Server.Engines.VeteranRewards
                 if (entry == null)
                     continue;
 
-                if(addon.CanUse(from))
+                if (addon.CanUse(from))
                     AddButton(45, y + 3, 1209, 1210, 5 + i, GumpButtonType.Reply, 0);
 
                 AddHtml(80, y, 100, 20, String.Format("<basefont color=yellow>{0}", GetFacet(entry)), false, false);
@@ -598,7 +598,7 @@ namespace Server.Engines.VeteranRewards
                     AddHtmlLocalized(370, y, 100, 20, 1153569, Yellow, false, false); // Unknown
                 else
                     AddHtmlLocalized(370, y, 100, 20, 1060847, String.Format("{0}\t{1}", entry.Location.X.ToString(), entry.Location.Y.ToString()), Yellow, false, false); // ~1_val~ ~2_val~
-                
+
                 AddHtmlLocalized(475, y, 100, 20, GetStatus(entry), Yellow, false, false);
 
                 y += 35;
@@ -734,7 +734,7 @@ namespace Server.Engines.VeteranRewards
             if (entry == null)
                 return null;
 
-            
+
             TreasureMap map;
 
             if (entry.QuestItem)
@@ -790,7 +790,7 @@ namespace Server.Engines.VeteranRewards
         {
             if (entry is SOSEntry)
                 return 1153568;             // S-O-S
-            else if(entry is TreasureMapEntry)
+            else if (entry is TreasureMapEntry)
                 return 1153572 + entry.Level;
 
             return 1153569; // Unknown

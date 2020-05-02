@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class SmallMouthSuckerFin : BaseFish
-    { 
+    {
         [Constructable]
         public SmallMouthSuckerFin()
             : base(0x3B01)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public SmallMouthSuckerFin(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

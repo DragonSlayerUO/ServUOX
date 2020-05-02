@@ -61,7 +61,7 @@ namespace Server
                 RemoveQuesters(m, ns, oldMap);
                 AddQuesters(m);
             }
-            else if(m.Corpse != null)
+            else if (m.Corpse != null)
             {
                 AddCorpse(m);
                 RemoveHealers(m, oldMap);
@@ -187,7 +187,7 @@ namespace Server
             m_Stream.Write((ushort)type);
             m_Stream.Write((ushort)(ignoreObject ? 1 : 0));
 
-            if(type == WaypointType.Corpse)
+            if (type == WaypointType.Corpse)
                 m_Stream.Write(1046414);
             else
                 m_Stream.Write(1062613);

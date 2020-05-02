@@ -22,7 +22,7 @@ namespace Server.Items
 
         public override int LabelNumber { get { return 1071498; } } // Undertaker's Staff
         public override bool IsArtifact { get { return true; } }
-		public override int InitMinHits { get { return 255; } }
+        public override int InitMinHits { get { return 255; } }
         public override int InitMaxHits { get { return 255; } }
 
         [Constructable]
@@ -54,13 +54,13 @@ namespace Server.Items
                         InvalidateProperties();
                     }); // Summon Most Recent Corpse Only
 
-                var entry2 = new SimpleContextMenuEntry(from, 1071508, m => 
+                var entry2 = new SimpleContextMenuEntry(from, 1071508, m =>
                     {
                         _SummonAll = true;
                         InvalidateProperties();
                     }); // Summon All Corpses
 
-                if(_SummonAll)
+                if (_SummonAll)
                     entry2.Flags |= CMEFlags.Highlighted;
                 else
                     entry1.Flags |= CMEFlags.Highlighted;
@@ -95,7 +95,7 @@ namespace Server.Items
                     {
                         m.SendLocalizedMessage(1071527, corpses.Count.ToString()); // The staff reaches out to ~1_COUNT~ of your corpses and tries to draw them to you...
 
-                         _Timers[m] = new CorpseRetrieveTimer(m, corpses, this);
+                        _Timers[m] = new CorpseRetrieveTimer(m, corpses, this);
                     }
                     else
                     {
@@ -109,7 +109,7 @@ namespace Server.Items
                     if (corpse != null)
                     {
                         m.SendLocalizedMessage(1071528); // The staff reaches out to your corpse and tries to draw it to you...
-                    
+
                         _Timers[m] = new CorpseRetrieveTimer(m, new List<Corpse> { corpse }, this);
                     }
                     else
@@ -122,7 +122,7 @@ namespace Server.Items
 
         private bool CanGetCorpse(Mobile m, bool firstCheck = true)
         {
-            if(m.Criminal)
+            if (m.Criminal)
             {
                 m.SendLocalizedMessage(1071510); // You are a criminal and cannot use this item...
                 return false;
@@ -279,7 +279,7 @@ namespace Server.Items
                     if (list == null)
                         list = new List<Corpse>();
 
-                    if(!list.Contains(kvp.Key))
+                    if (!list.Contains(kvp.Key))
                         list.Add(kvp.Key);
                 }
 

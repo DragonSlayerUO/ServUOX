@@ -136,13 +136,13 @@ namespace Server.Engines.ShameRevamped
         }
 
         public void StartDeadlineTimer()
-		{
-			if(DeadLineTimer != null)
-				DeadLineTimer.Stop();
-		
-			DeadLineTimer = Timer.DelayCall(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), CheckDeadLine);
-			DeadLineTimer.Start();
-		}
+        {
+            if (DeadLineTimer != null)
+                DeadLineTimer.Stop();
+
+            DeadLineTimer = Timer.DelayCall(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), CheckDeadLine);
+            DeadLineTimer.Start();
+        }
 
         public void EndDeadLineTimer()
         {

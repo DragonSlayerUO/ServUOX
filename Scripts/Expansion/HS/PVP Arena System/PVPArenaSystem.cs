@@ -381,7 +381,7 @@ namespace Server.Engines.ArenaSystem
         {
             var pm = e.Mobile as PlayerMobile;
 
-            if(pm != null)
+            if (pm != null)
             {
                 BaseGump.SendGump(new PVPArenaSystemSetupGump(pm));
             }
@@ -641,6 +641,6 @@ namespace Server.Mobiles
         BuddingGladiator = 1,
         Gladiator = 3,
         WellKnownGladiator = 4,
-        VeteranGladiator =5
+        VeteranGladiator = 5
     }
 }

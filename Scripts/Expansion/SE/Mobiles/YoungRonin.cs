@@ -25,7 +25,7 @@ namespace Server.Engines.Quests.Samurai
             this.AddItem(new LeatherHiroSode());
             this.AddItem(new SamuraiTabi());
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     this.AddItem(new StuddedHaidate());
@@ -40,7 +40,7 @@ namespace Server.Engines.Quests.Samurai
 
             this.AddItem(new Bandana(Utility.RandomNondyedHue()));
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     this.AddItem(new NoDachi());

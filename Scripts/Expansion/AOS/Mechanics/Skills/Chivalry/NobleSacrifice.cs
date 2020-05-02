@@ -105,13 +105,13 @@ namespace Server.Spells.Chivalry
                             sendEffect = true;
                         }
 
-                        if(m.RemoveStatMod("[Magic] Str Offset"))
-							sendEffect = true;
-
-                        if(m.RemoveStatMod("[Magic] Dex Offset"))
+                        if (m.RemoveStatMod("[Magic] Str Offset"))
                             sendEffect = true;
 
-                        if(m.RemoveStatMod("[Magic] Int Offset"))
+                        if (m.RemoveStatMod("[Magic] Dex Offset"))
+                            sendEffect = true;
+
+                        if (m.RemoveStatMod("[Magic] Int Offset"))
                             sendEffect = true;
 
                         if (m.Paralyzed)

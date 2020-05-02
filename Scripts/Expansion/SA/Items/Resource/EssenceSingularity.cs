@@ -31,7 +31,7 @@ namespace Server.Items
                 return 1113341;
             }
         }// essence of singularity
-		TextDefinition ICommodity.Description
+        TextDefinition ICommodity.Description
         {
             get
             {

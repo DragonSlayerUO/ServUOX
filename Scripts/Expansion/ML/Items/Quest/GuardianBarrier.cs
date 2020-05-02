@@ -10,7 +10,7 @@ namespace Server.Engines.Quests.Ninja
             : base(0x3967)
         {
             this.Movable = false;
-            this.Visible = false; 
+            this.Visible = false;
         }
 
         public GuardianBarrier(Serial serial)

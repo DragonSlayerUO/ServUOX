@@ -167,7 +167,7 @@ namespace Server.Factions
 
                 string warning = null;
 
-                switch ( Utility.Random(6) )
+                switch (Utility.Random(6))
                 {
                     case 0:
                         warning = "I warn you, {0}, you would do well to leave this area before someone shows you the world of gray.";
@@ -450,7 +450,7 @@ namespace Server.Factions
         {
             if (faction == null)
             {
-                switch ( type )
+                switch (type)
                 {
                     case ReactionType.Ignore:
                         this.Say(1005179);
@@ -466,7 +466,7 @@ namespace Server.Factions
             {
                 TextDefinition def = null;
 
-                switch ( type )
+                switch (type)
                 {
                     case ReactionType.Ignore:
                         def = faction.Definition.GuardIgnore;

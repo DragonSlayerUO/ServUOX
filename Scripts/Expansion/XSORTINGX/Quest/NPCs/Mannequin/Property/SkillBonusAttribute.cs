@@ -64,7 +64,7 @@ namespace Server.Mobiles.MannequinProperty
 
             return false;
         }
-    }    
+    }
 
     public class SwordsBonusProperty : SkillBonusAttr
     {

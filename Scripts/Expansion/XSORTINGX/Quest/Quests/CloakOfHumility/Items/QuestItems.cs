@@ -18,7 +18,7 @@ namespace Server.Engines.Quests
             : base(serial)
         {
         }
- 
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -61,7 +61,7 @@ namespace Server.Engines.Quests
 
             int version = reader.ReadInt();
 
-            if(version == 0)
+            if (version == 0)
                 reader.ReadMobile();
         }
     }

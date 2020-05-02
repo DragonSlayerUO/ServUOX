@@ -55,7 +55,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            if(this.ItemID != 0x311)
+            if (this.ItemID != 0x311)
                 this.ItemID = 0x311;
         }
     }

@@ -49,7 +49,7 @@ namespace Server.Factions
                 return;
             }
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // hire sheriff
                     {

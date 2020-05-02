@@ -101,7 +101,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.Potions);
         }
 
-		public override void OnDeath(Container CorpseLoot)
+        public override void OnDeath(Container CorpseLoot)
         {
             if (!Controlled && Utility.RandomDouble() < 0.3)
                 CorpseLoot.DropItem(new KirinBrains());

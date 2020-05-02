@@ -9,8 +9,8 @@ using Server.Spells;
 
 namespace Server.Engines.Exodus
 {
-	public class VerLorRegCity : DungeonRegion
-	{
+    public class VerLorRegCity : DungeonRegion
+    {
         private static readonly Point3D[] Random_Locations =
         {
             new Point3D(1217, 469, -13),

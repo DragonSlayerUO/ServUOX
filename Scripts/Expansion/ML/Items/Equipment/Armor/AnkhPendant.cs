@@ -226,8 +226,8 @@ namespace Server.Items
 
         public static Rectangle2D[] ShrineLocs { get { return m_ShrineLocs; } }
         private static Rectangle2D[] m_ShrineLocs = new Rectangle2D[]
-		{
-			new Rectangle2D(4208, 563, 2, 2), //Honesty
+        {
+            new Rectangle2D(4208, 563, 2, 2), //Honesty
 			new Rectangle2D(1857, 874, 2, 2), //Compassion
 			new Rectangle2D(2491, 3930, 2, 2), //Valor
 			new Rectangle2D(1300, 633, 2, 2), //Justice

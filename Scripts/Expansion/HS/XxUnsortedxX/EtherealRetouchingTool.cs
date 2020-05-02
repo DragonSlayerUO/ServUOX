@@ -82,7 +82,7 @@ namespace Server.Items
 
                         mount.Transparent = mount.Transparent ? false : true;
                         mount.InvalidateProperties();
-                    }                    
+                    }
                 }
                 else
                 {

@@ -8,7 +8,7 @@ using Server.Engines.CityLoyalty;
 namespace Server.Mobiles
 {
     public class Raider : BaseCreature
-	{
+    {
         public DateTime DeleteTime { get; set; }
 
         public override bool Commandable { get { return false; } }
@@ -162,5 +162,5 @@ namespace Server.Mobiles
 
             DeleteTime = reader.ReadDateTime();
         }
-	}
+    }
 }

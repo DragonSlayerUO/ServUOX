@@ -64,7 +64,7 @@ namespace Server.Spells.SkillMasteries
         {
             ShadowSpell spell = GetSpell(m, typeof(ShadowSpell)) as ShadowSpell;
 
-            if(spell != null)
+            if (spell != null)
                 return ((spell.Caster.Skills[spell.CastSkill].Value + spell.Caster.Skills[spell.DamageSkill].Value + (spell.GetMasteryLevel() * 40)) / 3) / 150;
 
             return 0.0;

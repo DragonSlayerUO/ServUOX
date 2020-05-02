@@ -194,7 +194,7 @@ namespace Server.Mobiles
             {
                 Mobile m = (Mobile)targets[i];
                 if (m == null || m.Deleted) continue;
-                               
+
                 if (m is PlayerMobile pm && pm.Mounted)
                 {
                     pm.SetMountBlock(BlockMountType.DismountRecovery, TimeSpan.FromSeconds(10), true);

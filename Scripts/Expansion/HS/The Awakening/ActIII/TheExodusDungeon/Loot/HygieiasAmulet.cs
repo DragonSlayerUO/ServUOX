@@ -12,9 +12,9 @@ namespace Server.Items
         public HygieiasAmulet()
         {
             SkillBonuses.SetValues(0, SkillName.Alchemy, 10);
-        }        
+        }
 
-        public HygieiasAmulet(Serial serial)  : base(serial)
+        public HygieiasAmulet(Serial serial) : base(serial)
         {
         }
 

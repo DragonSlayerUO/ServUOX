@@ -77,7 +77,7 @@ namespace Server.Factions
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                 case 0:
@@ -86,7 +86,7 @@ namespace Server.Factions
 
                         while ((type = (PersistedType)reader.ReadEncodedInt()) != PersistedType.Terminator)
                         {
-                            switch ( type )
+                            switch (type)
                             {
                                 case PersistedType.Faction:
                                     new FactionState(reader);

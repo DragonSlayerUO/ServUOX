@@ -155,7 +155,7 @@ namespace Server.Items
                 else
                 {
                     from.Animate(from.Mounted ? 26 : 9, 7, 1, true, false, 0);
-                }                
+                }
             }
 
             from.PlaySound(0x23A);
@@ -216,7 +216,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

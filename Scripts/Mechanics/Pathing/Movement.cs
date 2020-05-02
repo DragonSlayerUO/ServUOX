@@ -167,7 +167,7 @@ namespace Server.Movement
                         }
                     }
                 }
-				#endregion
+                #endregion
 
                 if ((flags & ImpassableSurface) == TileFlag.Surface || (canSwim && (flags & TileFlag.Wet) != 0)) // Surface && !Impassable
                 {
@@ -223,13 +223,13 @@ namespace Server.Movement
                 ItemData itemData = item.ItemData;
                 TileFlag flags = itemData.Flags;
 
-				#region SA
+                #region SA
                 if (m != null && m.Flying && (itemData.Name == "hover over" || (flags & TileFlag.HoverOver) != 0))
                 {
                     newZ = item.Z;
                     return true;
                 }
-				#endregion
+                #endregion
                 if (!item.Movable && ((flags & ImpassableSurface) == TileFlag.Surface || (m != null && m.CanSwim && (flags & TileFlag.Wet) != 0))) // Surface && !Impassable && !Movable
                 {
                     if (cantWalk && (flags & TileFlag.Wet) == 0)
@@ -634,7 +634,7 @@ namespace Server.Movement
 
         public void Offset(Direction d, ref int x, ref int y)
         {
-            switch ( d & Direction.Mask )
+            switch (d & Direction.Mask)
             {
                 case Direction.North:
                     --y;

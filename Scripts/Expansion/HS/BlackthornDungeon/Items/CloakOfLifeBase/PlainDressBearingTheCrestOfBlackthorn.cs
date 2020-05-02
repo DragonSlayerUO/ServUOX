@@ -6,7 +6,7 @@ namespace Server.Items
     public class PlainDressBearingTheCrestOfBlackthorn5 : PlainDress
     {
         public override bool IsArtifact { get { return true; } }
-        
+
         [Constructable]
         public PlainDressBearingTheCrestOfBlackthorn5()
             : base()
@@ -16,7 +16,7 @@ namespace Server.Items
             Attributes.RegenHits = 1;
             Hue = 132;
         }
-		
+
         public PlainDressBearingTheCrestOfBlackthorn5(Serial serial)
             : base(serial)
         {
@@ -32,8 +32,8 @@ namespace Server.Items
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-			
-			if (version == 0)
+
+            if (version == 0)
             {
                 MaxHitPoints = 0;
                 HitPoints = 0;

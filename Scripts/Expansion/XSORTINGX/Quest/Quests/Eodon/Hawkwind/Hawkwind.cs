@@ -22,7 +22,7 @@ namespace Server.Engines.Quests.TimeLord
         public Hawkwind(Serial serial) : base(serial) { }
 
         public override bool CanBeDamaged() { return false; }
-        public override bool ChangeRace=> false;
+        public override bool ChangeRace => false;
 
         public override void InitBody()
         {

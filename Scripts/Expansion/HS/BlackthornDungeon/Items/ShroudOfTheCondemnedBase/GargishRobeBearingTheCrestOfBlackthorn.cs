@@ -6,7 +6,7 @@ namespace Server.Items
     public class GargishRobeBearingTheCrestOfBlackthorn1 : GargishRobe
     {
         public override bool IsArtifact { get { return true; } }
-        
+
         [Constructable]
         public GargishRobeBearingTheCrestOfBlackthorn1()
             : base()
@@ -14,7 +14,7 @@ namespace Server.Items
             ReforgedSuffix = ReforgedSuffix.Blackthorn;
             Attributes.BonusHits = 3;
             Attributes.BonusInt = 5;
-            Hue = 2075;            
+            Hue = 2075;
         }
 
         public GargishRobeBearingTheCrestOfBlackthorn1(Serial serial)
@@ -32,8 +32,8 @@ namespace Server.Items
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-			
-			if (version == 0)
+
+            if (version == 0)
             {
                 MaxHitPoints = 0;
                 HitPoints = 0;

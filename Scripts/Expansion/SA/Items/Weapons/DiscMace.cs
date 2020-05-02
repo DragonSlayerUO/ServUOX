@@ -109,7 +109,7 @@ namespace Server.Items
                 return 110;
             }
         }
-        
+
         public override Race RequiredRace { get { return Race.Gargoyle; } }
         public override bool CanBeWornByGargoyles { get { return true; } }
 

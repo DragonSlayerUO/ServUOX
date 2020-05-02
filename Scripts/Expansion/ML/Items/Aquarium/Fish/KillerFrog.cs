@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class KillerFrog : BaseFish
-    { 
+    {
         [Constructable]
         public KillerFrog()
             : base(0x3B0D)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public KillerFrog(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

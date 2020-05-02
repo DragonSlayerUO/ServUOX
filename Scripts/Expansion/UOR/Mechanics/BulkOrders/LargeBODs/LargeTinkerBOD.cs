@@ -45,10 +45,10 @@ namespace Server.Engines.BulkOrders
             LargeBulkEntry[] entries;
             bool useMaterials = true;
             bool jewelry = false;
-			
+
             int rand = Utility.Random(4);
 
-            switch ( rand )
+            switch (rand)
             {
                 default:
                 case 0:

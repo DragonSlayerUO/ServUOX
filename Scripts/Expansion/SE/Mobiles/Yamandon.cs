@@ -172,7 +172,7 @@ namespace Server.Mobiles
                 if (attacker is BaseCreature)
                 {
                     Mobile m = ((BaseCreature)attacker).GetMaster();
-					
+
                     if (m != null)
                         target = m;
                 }

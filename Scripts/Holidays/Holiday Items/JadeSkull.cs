@@ -10,14 +10,14 @@ namespace Server.Items
         [Constructable]
         public JadeSkull()
             : base(0x9A1C)
-        {          
+        {
         }
 
         public JadeSkull(Serial serial)
             : base(serial)
         {
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -88,7 +88,7 @@ namespace Server.Mobiles
 
             SetWeaponAbility(WeaponAbility.BleedAttack);
             SetAreaEffect(AreaEffect.AuraOfEnergy);
-        }        
+        }
 
         public static void DistributeRandomArtifact(BaseCreature bc, Type[] typelist)
         {
@@ -108,7 +108,7 @@ namespace Server.Mobiles
                 to.BankBox.DropItem(artifact);
 
             to.SendLocalizedMessage(502088); // A special gift has been placed in your backpack.
-		}
+        }
 
         public override bool OnBeforeDeath()
         {
@@ -155,7 +155,7 @@ namespace Server.Mobiles
 
             if (map == null)
                 return;
-            
+
             MovingParticles(target, 0x1AF6, 5, 0, false, false, 0x816, 0, 3006, 0, 0, 0);
 
             DeathVortexTrap dv;
@@ -179,7 +179,7 @@ namespace Server.Mobiles
                 {
                     target.SendLocalizedMessage(1152692, Name); // ~1_CREATURE~ casts a deadly vortex at you!                    
                     SpawnVortices(target);
-                }                
+                }
             }
         }
 
@@ -212,7 +212,7 @@ namespace Server.Mobiles
                 m_MinHits = Hits;
 
             if (Hits >= HitsMax * 0.75)
-                m_MinHits = HitsMax;            
+                m_MinHits = HitsMax;
         }
 
         public ClockworkExodus(Serial serial)
@@ -273,7 +273,7 @@ namespace Server.Mobiles
                 g.MoveToWorld(new Point3D(m_X, m_Y, z), m_Map);
 
                 if (0.3 >= Utility.RandomDouble())
-                {                    
+                {
                     Effects.SendLocationParticles(EffectItem.Create(g.Location, g.Map, EffectItem.DefaultDuration), 0x3709, 10, 30, 5052);
                     Effects.PlaySound(g, g.Map, 0x208);
                 }

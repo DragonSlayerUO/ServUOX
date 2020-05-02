@@ -19,7 +19,7 @@ namespace Server.Misc
                 e.Beholder.SendMessage("You do not have permission to do that.");
                 return;
             }
-            
+
             Mobile from = e.Beholder;
 
             if (from.ProfileLocked)

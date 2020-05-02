@@ -5,11 +5,11 @@ using Server.Spells.SkillMasteries;
 using System.Collections.Generic;
 
 namespace Server.Engines.Quests
-{ 
+{
     public class TheBeaconOfHarmonyQuest : BaseQuest
     {
         public TheBeaconOfHarmonyQuest() : base()
-        { 
+        {
             AddObjective(new PeacemakingObjective());
 
             AddReward(new BaseReward(1115679)); // Recognition for mastery of spirit soothing.
@@ -145,7 +145,7 @@ namespace Server.Engines.Quests
         {
             get
             {
-                return new Type[] 
+                return new Type[]
                 {
                     typeof(TheBeaconOfHarmonyQuest),
                 };

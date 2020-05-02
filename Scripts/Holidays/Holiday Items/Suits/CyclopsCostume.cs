@@ -3,8 +3,8 @@ using Server;
 
 namespace Server.Items
 {
-	public class CyclopsCostume : BaseCostume
-	{
+    public class CyclopsCostume : BaseCostume
+    {
         public override string CreatureName { get { return "cyclops"; } }
 
         [Constructable]
@@ -12,8 +12,8 @@ namespace Server.Items
         {
             this.CostumeBody = 75;
         }
-		
-		public override int LabelNumber
+
+        public override int LabelNumber
         {
             get
             {
@@ -21,22 +21,22 @@ namespace Server.Items
             }
         }// cyclops costume
 
-		public CyclopsCostume( Serial serial ) : base( serial )
-		{
-		}
+        public CyclopsCostume(Serial serial) : base(serial)
+        {
+        }
 
-		public override void Serialize( GenericWriter writer )
-		{
-			base.Serialize( writer );
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
 
-			writer.Write( (int) 0 );
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize( reader );
+            writer.Write((int)0);
+        }
 
-			int version = reader.ReadInt();
-		}
-	}
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+
+            int version = reader.ReadInt();
+        }
+    }
 }

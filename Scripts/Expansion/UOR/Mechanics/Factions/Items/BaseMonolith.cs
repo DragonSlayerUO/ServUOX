@@ -132,7 +132,7 @@ namespace Server.Factions
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

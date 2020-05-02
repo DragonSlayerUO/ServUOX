@@ -43,7 +43,7 @@ namespace Server.Mobiles
             VirtualArmor = 28;
 
             // Loot - 30-40gold, magicitem,gem,goblin blood, essence control
-            switch ( Utility.Random(20) )
+            switch (Utility.Random(20))
             {
                 case 0:
                     PackItem(new Scimitar());
@@ -67,7 +67,7 @@ namespace Server.Mobiles
 
             PackItem(new ThighBoots());
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     PackItem(new Ribs());
@@ -88,8 +88,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override int GetAngerSound() { return 0x600; }
+
+        public override int GetAngerSound() { return 0x600; }
         public override int GetIdleSound() { return 0x600; }
         public override int GetAttackSound() { return 0x5FD; }
         public override int GetHurtSound() { return 0x5FF; }

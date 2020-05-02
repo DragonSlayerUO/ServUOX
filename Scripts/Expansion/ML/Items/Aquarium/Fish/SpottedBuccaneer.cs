@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class SpottedBuccaneer : BaseFish
-    { 
+    {
         [Constructable]
         public SpottedBuccaneer()
             : base(0x3B09)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public SpottedBuccaneer(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

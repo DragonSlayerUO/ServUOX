@@ -62,17 +62,17 @@ namespace Server.Mobiles
         {
         }
 
-		public override void OnDamage(int amount, Mobile from, bool willKill)
-		{
-			RevealingAction();
-			base.OnDamage(amount, from, willKill);
-		}
+        public override void OnDamage(int amount, Mobile from, bool willKill)
+        {
+            RevealingAction();
+            base.OnDamage(amount, from, willKill);
+        }
 
-		public override void OnDamagedBySpell(Mobile from)
-		{
-			RevealingAction();
-			base.OnDamagedBySpell(from);
-		}
+        public override void OnDamagedBySpell(Mobile from)
+        {
+            RevealingAction();
+            base.OnDamagedBySpell(from);
+        }
 
         public override bool IgnoreYoungProtection => Core.ML;
         public override bool CanFlee => false;

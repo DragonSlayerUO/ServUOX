@@ -132,7 +132,7 @@ namespace Server.Items
                 {
                     PathDirection dir = choices[Utility.Random(count)];
 
-                    switch ( dir )
+                    switch (dir)
                     {
                         case PathDirection.Left:
                             current = new Node(current.X - 1, current.Y);
@@ -446,7 +446,7 @@ namespace Server.Items
                     Node curNode = m_Panel.Path[m_Step];
 
                     int newX, newY;
-                    switch ( info.ButtonID )
+                    switch (info.ButtonID)
                     {
                         case 1: // Left
                             newX = curNode.X - 1;
@@ -493,7 +493,7 @@ namespace Server.Items
             private void AddNode(int x, int y, NodeHue hue)
             {
                 int id;
-                switch ( hue )
+                switch (hue)
                 {
                     case NodeHue.Gray:
                         id = 0x25F8;

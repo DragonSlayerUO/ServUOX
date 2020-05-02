@@ -70,7 +70,7 @@ namespace Server.Mobiles
 
         private static int GetRandomHue()
         {
-            switch ( Utility.Random(5) )
+            switch (Utility.Random(5))
             {
                 default:
                 case 0:

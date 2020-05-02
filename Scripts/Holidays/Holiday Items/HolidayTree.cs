@@ -23,7 +23,7 @@ namespace Server.Items
             this.m_Placer = from;
             this.m_Components = new ArrayList();
 
-            switch ( type )
+            switch (type)
             {
                 case HolidayTreeType.Classic:
                     {
@@ -156,7 +156,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {
@@ -324,7 +324,7 @@ namespace Server.Items
 
                 int version = reader.ReadInt();
 
-                switch ( version )
+                switch (version)
                 {
                     case 0:
                         {

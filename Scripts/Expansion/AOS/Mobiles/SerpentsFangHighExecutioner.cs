@@ -3,7 +3,7 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    [CorpseName("a black order high executioner corpse")] 
+    [CorpseName("a black order high executioner corpse")]
     public class SerpentsFangHighExecutioner : SerpentsFangAssassin
     {
         [Constructable]
@@ -58,7 +58,7 @@ namespace Server.Mobiles
 
         public override void Serialize(GenericWriter writer)
         {
-            base.Serialize(writer);			
+            base.Serialize(writer);
             writer.Write(0);
         }
 

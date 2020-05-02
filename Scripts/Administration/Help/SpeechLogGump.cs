@@ -87,7 +87,7 @@ namespace Server.Engines.Help
         {
             Mobile from = sender.Mobile;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Previous page
                     {

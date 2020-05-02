@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class LongClawCrab : BaseFish
-    { 
+    {
         [Constructable]
         public LongClawCrab()
             : base(0x3AFC)
@@ -13,7 +13,7 @@ namespace Server.Items
 
         public LongClawCrab(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

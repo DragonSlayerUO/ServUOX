@@ -43,7 +43,7 @@ namespace Server.Mobiles
             Fame = 7000;
             Karma = 7000;
 
-            VirtualArmor = 100;		
+            VirtualArmor = 100;
         }
 
         public PixieRenowned(Serial serial)
@@ -61,7 +61,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-			AddLoot(LootPack.UltraRich, 2);
+            AddLoot(LootPack.UltraRich, 2);
         }
 
         public override void OnDeath(Container CorpseLoot)

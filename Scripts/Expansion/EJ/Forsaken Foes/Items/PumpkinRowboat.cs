@@ -80,7 +80,7 @@ namespace Server.Multis
             if (Rudder == null || Rudder.Handle == null)
                 return;
 
-            switch(facing)
+            switch (facing)
             {
                 case Direction.North:
                     {
@@ -106,7 +106,7 @@ namespace Server.Multis
             if (Line != null)
                 Line.Location = new Point3D(X + (Line.X - old.X), Y + (Line.Y - old.Y), Z + (Line.Z - old.Z));
 
-            if(Rudder != null && Rudder.Handle != null)
+            if (Rudder != null && Rudder.Handle != null)
                 Rudder.Handle.Location = new Point3D(X + (Rudder.Handle.X - old.X), Y + (Rudder.Handle.Y - old.Y), Z + (Rudder.Handle.Z - old.Z));
         }
 
@@ -280,7 +280,7 @@ namespace Server.Multis
         public PumpkinRudder(BaseBoat boat, Direction d)
             : base(boat, d)
         {
-        }       
+        }
 
         public override void SetFacing(Direction dir)
         {
@@ -329,7 +329,7 @@ namespace Server.Multis
             {
                 X++;
                 Y++;
-            }                
+            }
         }
     }
 

@@ -1,28 +1,28 @@
 using Server.Items;
 
-namespace Server.Mobiles 
-{ 
-    public class Executioner : BaseCreature 
-    { 
-        [Constructable] 
+namespace Server.Mobiles
+{
+    public class Executioner : BaseCreature
+    {
+        [Constructable]
         public Executioner()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
-        { 
-            SpeechHue = Utility.RandomDyedHue(); 
-            Title = "the executioner"; 
-            Hue = Utility.RandomSkinHue(); 
+        {
+            SpeechHue = Utility.RandomDyedHue();
+            Title = "the executioner";
+            Hue = Utility.RandomSkinHue();
 
-            if (Female = Utility.RandomBool()) 
-            { 
-                Body = 0x191; 
-                Name = NameList.RandomName("female"); 
-                AddItem(new Skirt(Utility.RandomRedHue())); 
+            if (Female = Utility.RandomBool())
+            {
+                Body = 0x191;
+                Name = NameList.RandomName("female");
+                AddItem(new Skirt(Utility.RandomRedHue()));
             }
-            else 
-            { 
-                Body = 0x190; 
-                Name = NameList.RandomName("male"); 
-                AddItem(new ShortPants(Utility.RandomRedHue())); 
+            else
+            {
+                Body = 0x190;
+                Name = NameList.RandomName("male");
+                AddItem(new ShortPants(Utility.RandomRedHue()));
             }
 
             SetStr(386, 400);
@@ -58,13 +58,13 @@ namespace Server.Mobiles
 
         public Executioner(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override bool AlwaysMurderer => true;
 
         public bool BlockReflect { get; set; }
-        
+
         public override int Damage(int amount, Mobile from, bool informMount, bool checkDisrupt)
         {
             int dam = base.Damage(amount, from, informMount, checkDisrupt);
@@ -74,7 +74,7 @@ namespace Server.Mobiles
                 BlockReflect = true;
                 AOS.Damage(from, this, dam, 0, 0, 0, 0, 0, 0, 100);
                 BlockReflect = false;
-                
+
                 from.PlaySound(0x1F1);
             }
 
@@ -96,14 +96,14 @@ namespace Server.Mobiles
             base.OnDeath(CorpseLoot);
         }
 
-        public override void Serialize(GenericWriter writer) 
-        { 
-            base.Serialize(writer); 
-            writer.Write(0); 
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
         }
 
-        public override void Deserialize(GenericReader reader) 
-        { 
+        public override void Deserialize(GenericReader reader)
+        {
             base.Deserialize(reader);
             _ = reader.ReadInt();
         }

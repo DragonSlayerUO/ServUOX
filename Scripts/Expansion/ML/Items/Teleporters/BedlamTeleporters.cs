@@ -25,9 +25,9 @@ namespace Server.Items
                 return 1074161;
             }
         }// Access to Bedlam by invitation only
-        
+
         public override bool ForceShowProperties { get { return ObjectPropertyList.Enabled; } }
-        
+
         public virtual Type Quest
         {
             get
@@ -47,7 +47,7 @@ namespace Server.Items
                 from.SendLocalizedMessage(1042753, "Bedlam"); // ~1_SOMETHING~ has been temporarily disabled.
                 return;
             }
-		
+
             if (from is PlayerMobile)
             {
                 PlayerMobile player = (PlayerMobile)from;
@@ -67,14 +67,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

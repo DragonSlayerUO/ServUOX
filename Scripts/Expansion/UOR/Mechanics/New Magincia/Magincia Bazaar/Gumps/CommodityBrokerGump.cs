@@ -455,7 +455,7 @@ namespace Server.Engines.NewMagincia
         }
 
         public ViewInventoryGump(CommodityBroker broker, int index, int page)
-            : base (660, 520)
+            : base(660, 520)
         {
             m_Broker = broker;
             m_Index = index;
@@ -507,7 +507,7 @@ namespace Server.Engines.NewMagincia
                 AddButton(390, 350, 4005, 4007, 401, GumpButtonType.Reply, 0);
 
             AddHtmlLocalized(160, 415, 150, 18, 1150202, OrangeColor16, false, false); // WITHDRAW
-            AddBackground(250, 415, 360, 22, 9350); 
+            AddBackground(250, 415, 360, 22, 9350);
             AddTextEntry(251, 415, 358, 20, LabelHueBlue, 0, "");
             AddButton(620, 415, 4014, 4016, 1, GumpButtonType.Reply, 0);
 

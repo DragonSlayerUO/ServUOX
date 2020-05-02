@@ -108,7 +108,7 @@ namespace Server.Items
                 if (i == 5)
                     random = 0;
 
-                switch ( random )
+                switch (random)
                 {
                     default:
                     case 0:

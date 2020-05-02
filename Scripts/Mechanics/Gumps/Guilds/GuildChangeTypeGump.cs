@@ -59,7 +59,7 @@ namespace Server.Gumps
             {
                 GuildType newType;
 
-                switch ( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     default:
                         return; // Close

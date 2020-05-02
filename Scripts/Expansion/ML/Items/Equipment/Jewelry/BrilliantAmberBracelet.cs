@@ -11,8 +11,8 @@ namespace Server.Items
             this.Weight = 1.0;
 
             BaseRunicTool.ApplyAttributesTo(this, true, 0, Utility.RandomMinMax(1, 4), 0, 100);
-			
-            switch ( Utility.Random(4) )
+
+            switch (Utility.Random(4))
             {
                 case 0:
                     this.Attributes.LowerRegCost += 10;

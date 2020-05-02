@@ -54,7 +54,7 @@ namespace Server.Mobiles
             //if ( !Female )
             //AddItem( new Longsword() );
 
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 case 0:
                     this.AddItem(new ShortHair(Utility.RandomHairHue()));
@@ -89,7 +89,7 @@ namespace Server.Mobiles
 
         private static int GetRandomHue()
         {
-            switch ( Utility.Random(6) )
+            switch (Utility.Random(6))
             {
                 default:
                 case 0:

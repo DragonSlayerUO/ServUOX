@@ -157,7 +157,7 @@ public class MadelineHarteCompleteGump : Gump
         switch (info.ButtonID)
         {
             case 0:
-                {                    
+                {
                     break;
                 }
         }

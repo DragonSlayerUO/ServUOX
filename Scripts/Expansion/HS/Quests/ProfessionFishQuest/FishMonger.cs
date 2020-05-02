@@ -26,7 +26,7 @@ namespace Server.Mobiles
             Name = NameList.RandomName("male");
             Title = "the fish monger";
 
-            Hue = Race.RandomSkinHue();      
+            Hue = Race.RandomSkinHue();
             Race.RandomHair(this);
             HairHue = Race.RandomHairHue();
         }

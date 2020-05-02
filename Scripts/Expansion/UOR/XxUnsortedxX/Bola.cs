@@ -165,7 +165,7 @@ namespace Server.Items
         {
             if (Core.ML && AnimalForm.UnderTransformation(dismounted))
             {
-               AnimalForm.RemoveContext(dismounted, true);
+                AnimalForm.RemoveContext(dismounted, true);
                 if (dismounted.Player)
                     dismounted.SendLocalizedMessage(1114066, dismounter.Name); // ~1_NAME~ knocked you out of animal form!
             }

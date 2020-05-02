@@ -1,12 +1,12 @@
 using System;
 using Server.Items;
 
-namespace Server.Mobiles 
-{ 
-    [CorpseName("an archmage corpse")] 
-    public class Archmage : BaseCreature 
-    { 
-        [Constructable] 
+namespace Server.Mobiles
+{
+    [CorpseName("an archmage corpse")]
+    public class Archmage : BaseCreature
+    {
+        [Constructable]
         public Archmage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -44,13 +44,13 @@ namespace Server.Mobiles
             Karma = -14500;
 
             VirtualArmor = 16;
-			switch (Utility.Random(16))
+            switch (Utility.Random(16))
             {
                 case 0: PackItem(new BloodOathScroll()); break;
                 case 1: PackItem(new CurseWeaponScroll()); break;
                 case 2: PackItem(new StrangleScroll()); break;
                 case 3: PackItem(new LichFormScroll()); break;
-			}
+            }
             PackReg(23);
             PackItem(new Sandals());
 
@@ -62,7 +62,7 @@ namespace Server.Mobiles
 
         public Archmage(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override bool CanRummageCorpses { get { return true; } }
@@ -77,16 +77,16 @@ namespace Server.Mobiles
             AddLoot(LootPack.MedScrolls, 2);
         }
 
-        public override void Serialize(GenericWriter writer) 
-        { 
-            base.Serialize(writer); 
-            writer.Write((int)0); 
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write((int)0);
         }
 
-        public override void Deserialize(GenericReader reader) 
-        { 
-            base.Deserialize(reader); 
-            int version = reader.ReadInt(); 
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
         }
     }
 }

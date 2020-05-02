@@ -775,7 +775,7 @@ namespace Server.Engines.BulkOrders
 
         private static Item CreateStretchedHide(int type)
         {
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 default:
                 case 0:
@@ -791,7 +791,7 @@ namespace Server.Engines.BulkOrders
 
         private static Item CreateTapestry(int type)
         {
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 default:
                 case 0:
@@ -807,7 +807,7 @@ namespace Server.Engines.BulkOrders
 
         private static Item CreateBearRug(int type)
         {
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 default:
                 case 0:
@@ -1010,7 +1010,7 @@ namespace Server.Engines.BulkOrders
         }
     }
     #endregion
-     
+
     #region Tinkering Rewards
     public sealed class TinkeringRewardCalculator : RewardCalculator
     {
@@ -1285,7 +1285,7 @@ namespace Server.Engines.BulkOrders
             switch (material)
             {
                 case BulkMaterialType.None: break;
-                case BulkMaterialType.OakWood: points += 300;  break;
+                case BulkMaterialType.OakWood: points += 300; break;
                 case BulkMaterialType.AshWood: points += 350; break;
                 case BulkMaterialType.YewWood: points += 400; break;
                 case BulkMaterialType.Heartwood: points += 450; break;
@@ -1880,7 +1880,7 @@ namespace Server.Engines.BulkOrders
 
             if (itemCount == 3)
             {
-                if(type == typeof(RefreshPotion) || type == typeof(HealPotion) || type == typeof(CurePotion))
+                if (type == typeof(RefreshPotion) || type == typeof(HealPotion) || type == typeof(CurePotion))
                     points += 250;
                 else
                     points += 300;
@@ -1925,7 +1925,7 @@ namespace Server.Engines.BulkOrders
         public override int ComputeGold(int quantity, bool exceptional, BulkMaterialType material, int itemCount, Type type)
         {
             int gold = 0;
-            
+
             if (itemCount == 1 && BulkOrderSystem.NewSystemEnabled && BulkOrderSystem.ComputeGold(type, quantity, out gold))
             {
                 return gold;

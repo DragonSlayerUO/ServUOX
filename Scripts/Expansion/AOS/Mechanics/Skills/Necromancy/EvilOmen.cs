@@ -105,10 +105,10 @@ namespace Server.Spells.Necromancy
 
             HarmfulSpell(m);
             double resistMalas = 0;
-            
-            if(m.Skills[SkillName.MagicResist].Base > 50.0)
+
+            if (m.Skills[SkillName.MagicResist].Base > 50.0)
                 resistMalas = m.Skills[SkillName.MagicResist].Base / 2.0;
-            
+
             m_Table[m] = resistMalas;
 
             TimeSpan duration = TimeSpan.FromSeconds(((Caster.Skills[SkillName.SpiritSpeak].Value / 12) + 1.0) * strength);

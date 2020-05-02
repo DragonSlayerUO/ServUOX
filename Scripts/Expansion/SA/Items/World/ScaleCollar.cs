@@ -93,7 +93,7 @@ namespace Server.Items
 
             protected override void OnTarget(Mobile from, object targeted)
             {
-                if(m_Collar != null)
+                if (m_Collar != null)
                     m_Collar.OnTarget(from, targeted);
             }
         }

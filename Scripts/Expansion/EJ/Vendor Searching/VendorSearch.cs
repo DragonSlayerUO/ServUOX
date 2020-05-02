@@ -16,8 +16,8 @@ using Server.Engines.Auction;
 
 namespace Server.Engines.VendorSearching
 {
-	public class VendorSearch
-	{
+    public class VendorSearch
+    {
         public static string FilePath = Path.Combine("Saves/Misc", "VendorSearch.bin");
         public static Ultima.StringList StringList { get; private set; }
 
@@ -61,7 +61,7 @@ namespace Server.Engines.VendorSearching
                                                                                pv.Map != null &&
                                                                                pv.Backpack != null &&
                                                                                pv.VendorSearch &&
-                                                                               pv.Backpack.Items.Count > 0 && 
+                                                                               pv.Backpack.Items.Count > 0 &&
                                                                                (!excludefel || pv.Map != Map.Felucca)))
             {
                 List<Item> items = GetItems(pv);
@@ -120,21 +120,21 @@ namespace Server.Engines.VendorSearching
             return vendorItem;
         }
 
-		public static bool CheckMatch(Item item, int price, SearchCriteria searchCriteria)
-		{
+        public static bool CheckMatch(Item item, int price, SearchCriteria searchCriteria)
+        {
             if (item is CommodityDeed && ((CommodityDeed)item).Commodity != null)
             {
                 item = ((CommodityDeed)item).Commodity;
             }
 
             if (searchCriteria.MinPrice > -1 && price < searchCriteria.MinPrice)
-				return false;
+                return false;
 
             if (searchCriteria.MaxPrice > -1 && price > searchCriteria.MaxPrice)
-				return false;
-			
-			if (!string.IsNullOrEmpty(searchCriteria.SearchName))
-			{
+                return false;
+
+            if (!string.IsNullOrEmpty(searchCriteria.SearchName))
+            {
                 string name;
 
                 if (item is CommodityDeed && ((CommodityDeed)item).Commodity is ICommodity)
@@ -154,28 +154,28 @@ namespace Server.Engines.VendorSearching
                 {
                     name = GetItemName(item);
                 }
-				
-				if(name == null)
-				{
+
+                if (name == null)
+                {
                     return false; // TODO? REturn null names?
-				}
+                }
 
                 if (!CheckKeyword(searchCriteria.SearchName, item) && name.ToLower().IndexOf(searchCriteria.SearchName.ToLower()) < 0)
                 {
                     return false;
                 }
-			}
+            }
 
             if (searchCriteria.SearchType != Layer.Invalid && searchCriteria.SearchType != item.Layer)
-			{
-				return false;
-			}
-			
-			if(searchCriteria.Details.Count == 0)
-				return true;
-			
-            foreach(SearchDetail detail in searchCriteria.Details)
-			{
+            {
+                return false;
+            }
+
+            if (searchCriteria.Details.Count == 0)
+                return true;
+
+            foreach (SearchDetail detail in searchCriteria.Details)
+            {
                 object o = detail.Attribute;
                 int value = detail.Value;
 
@@ -422,10 +422,10 @@ namespace Server.Engines.VendorSearching
                         return false;
                     }
                 }
-			}
+            }
 
             return true;
-		}
+        }
 
         private static bool CheckSlayer(Item item, object o)
         {
@@ -840,7 +840,7 @@ namespace Server.Engines.VendorSearching
             typeof(Plants.SeedBox),     typeof(BaseSpecialScrollBook),
             typeof(GardenShedBarrel),   typeof(JewelryBox),
         };
-	}
+    }
 
     public enum SortBy
     {
@@ -1120,8 +1120,8 @@ namespace Server.Engines.VendorSearching
             writer.Write(PropLabel);
 
             WriteAttribute(writer);
-            
-            writer.Write(Label);            
+
+            writer.Write(Label);
             writer.Write(Value);
             writer.Write((int)Category);
         }
@@ -1186,7 +1186,7 @@ namespace Server.Engines.VendorSearching
 
             if (o is AosElementAttribute)
                 return (int)AttributeID.AosElementAttribute;
-            
+
             if (o is SkillName)
                 return (int)AttributeID.SkillName;
 

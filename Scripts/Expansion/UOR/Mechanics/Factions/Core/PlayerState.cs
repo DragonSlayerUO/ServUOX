@@ -38,7 +38,7 @@ namespace Server.Factions
 
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {
@@ -127,13 +127,13 @@ namespace Server.Factions
             }
         }
         public int KillPoints
-        { 
+        {
             get
             {
                 return m_KillPoints;
             }
             set
-            { 
+            {
                 if (m_KillPoints != value)
                 {
                     if (value > m_KillPoints)
@@ -146,7 +146,7 @@ namespace Server.Factions
                                 Invalidate();
                                 return;
                             }
-							
+
                             m_Owner.Remove(this);
                             m_Owner.Insert(m_Faction.ZeroRankOffset, this);
 
@@ -229,9 +229,9 @@ namespace Server.Factions
             }
         }
         public RankDefinition Rank
-        { 
+        {
             get
-            { 
+            {
                 if (m_InvalidateRank)
                 {
                     RankDefinition[] ranks = m_Faction.Definition.Ranks;

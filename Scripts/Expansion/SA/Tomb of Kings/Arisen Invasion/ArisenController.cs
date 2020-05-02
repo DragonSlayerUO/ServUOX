@@ -189,10 +189,10 @@ namespace Server.Items
                 }
                 else
                 {
-					if (!spawner.Running)
-					{
-						spawner.Respawn();
-					}
+                    if (!spawner.Running)
+                    {
+                        spawner.Respawn();
+                    }
                 }
             }
         }

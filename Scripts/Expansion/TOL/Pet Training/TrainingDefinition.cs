@@ -22,7 +22,7 @@ namespace Server.Mobiles
             Class classificaion,
             MagicalAbility magicalAbility,
             SpecialAbility[] specialAbility,
-            WeaponAbility[] weaponAbility, 
+            WeaponAbility[] weaponAbility,
             AreaEffect[] areaEffect,
             int controlmin,
             int controlmax)

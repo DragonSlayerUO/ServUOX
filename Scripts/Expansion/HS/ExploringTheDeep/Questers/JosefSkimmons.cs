@@ -6,16 +6,16 @@ using Server.Commands;
 using Server.Gumps;
 
 namespace Server.Mobiles
-{    
-	public class JosefSkimmons : Mobile
+{
+    public class JosefSkimmons : Mobile
     {
         public virtual bool IsInvulnerable { get { return true; } }
 
         [Constructable]
-		public JosefSkimmons()
+        public JosefSkimmons()
         {
             Name = "Josef Skimmons";
-			Title = "The Master Blacksmith";
+            Title = "The Master Blacksmith";
             Female = false;
             Race = Race.Human;
             this.Blessed = true;
@@ -36,10 +36,10 @@ namespace Server.Mobiles
             Item weapon = new SmithHammer();
             weapon.Hue = 1;
             AddItem(weapon);
-		}
+        }
 
-        public JosefSkimmons(Serial serial): base(serial)
-		{		
+        public JosefSkimmons(Serial serial) : base(serial)
+        {
         }
 
         public override void OnDoubleClick(Mobile m)
@@ -112,8 +112,8 @@ namespace Server.Mobiles
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-        }        
-	}
+        }
+    }
 }
 
 namespace Server.Gumps

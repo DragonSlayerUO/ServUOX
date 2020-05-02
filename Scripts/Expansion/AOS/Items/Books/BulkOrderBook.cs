@@ -140,9 +140,9 @@ namespace Server.Engines.BulkOrders
                         this.m_Entries.Add(new BOBLargeEntry((LargeBOD)dropped));
                     else if (dropped is SmallBOD) // Sanity
                         this.m_Entries.Add(new BOBSmallEntry((SmallBOD)dropped));
-					
+
                     this.InvalidateProperties();
-					
+
                     if (this.m_Entries.Count / 5 > this.m_ItemCount)
                     {
                         this.m_ItemCount++;
@@ -173,7 +173,7 @@ namespace Server.Engines.BulkOrders
         public override int GetTotal(TotalType type)
         {
             int total = base.GetTotal(type);
-			
+
             if (type == TotalType.Items)
                 total = this.m_ItemCount;
 
@@ -196,7 +196,7 @@ namespace Server.Engines.BulkOrders
             if (parent != null && parent is Container)
             {
                 Container c = (Container)parent;
-				
+
                 c.InvalidateProperties();
                 this.InvalidateContainers(c.Parent);
             }
@@ -207,7 +207,7 @@ namespace Server.Engines.BulkOrders
             base.Serialize(writer);
 
             writer.Write((int)2); // version
-			
+
             writer.Write((int)this.m_ItemCount);
 
             writer.Write((int)this.m_Level);
@@ -245,7 +245,7 @@ namespace Server.Engines.BulkOrders
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 2:
                     {
@@ -271,7 +271,7 @@ namespace Server.Engines.BulkOrders
                         {
                             int v = reader.ReadEncodedInt();
 
-                            switch ( v )
+                            switch (v)
                             {
                                 case 0:
                                     this.m_Entries.Add(new BOBLargeEntry(reader));

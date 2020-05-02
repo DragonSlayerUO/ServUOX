@@ -43,12 +43,12 @@ namespace Server.Mobiles
             SetSkill(SkillName.Wrestling, 110.0, 115.0);
             SetSkill(SkillName.Tactics, 119.6, 125.0);
             SetSkill(SkillName.MagicResist, 115.0, 130.8);
-			SetSkill(SkillName.Parry, 75.0, 85.0);
-			SetSkill(SkillName.DetectHidden, 100.0);            
+            SetSkill(SkillName.Parry, 75.0, 85.0);
+            SetSkill(SkillName.DetectHidden, 100.0);
 
             Fame = 24000;
             Karma = -24000;
-            
+
             VirtualArmor = 70;
 
             if (Instances == null)
@@ -102,7 +102,7 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            List<DamageStore> rights = GetLootingRights();            
+            List<DamageStore> rights = GetLootingRights();
 
             foreach (Mobile m in rights.Select(x => x.m_Mobile).Distinct())
             {
@@ -112,8 +112,8 @@ namespace Server.Mobiles
 
                     if (pm.ExploringTheDeepQuest == ExploringTheDeepQuestChain.CollectTheComponent)
                     {
-						Item item = new WillemHartesHat();
-						
+                        Item item = new WillemHartesHat();
+
                         if (m.Backpack == null || !m.Backpack.TryDropItem(m, item, false))
                         {
                             m.BankBox.DropItem(item);

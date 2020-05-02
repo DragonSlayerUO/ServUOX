@@ -21,7 +21,7 @@ namespace Server.Items
         {
                 new Rectangle2D(2885, 1373, 500, 800),
                 new Rectangle2D(330,  2940, 400, 400),
-                new Rectangle2D(4040, 2550, 500, 350), 
+                new Rectangle2D(4040, 2550, 500, 350),
                 new Rectangle2D(4040, 1755, 500, 250),
                 new Rectangle2D(180,  180,  300, 300)
         };
@@ -50,17 +50,17 @@ namespace Server.Items
         private List<Item> m_IslandMaps = new List<Item>();
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Activated {  get { return m_Activated; } }
+        public bool Activated { get { return m_Activated; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Active 
-        { 
-            get { return m_Active; } 
-            set 
-            { 
-                m_Active = value; 
-                PublicOverheadMessage(Server.Network.MessageType.Regular, 25, false, String.Format("Corgul Altar for {0} has been {1}", this.Map, m_Active ? "activated" : "deactivated")); 
-            } 
+        public bool Active
+        {
+            get { return m_Active; }
+            set
+            {
+                m_Active = value;
+                PublicOverheadMessage(Server.Network.MessageType.Regular, 25, false, String.Format("Corgul Altar for {0} has been {1}", this.Map, m_Active ? "activated" : "deactivated"));
+            }
         }
 
         public CorgulWarpRegion WarpRegion { get { return m_WarpRegion; } }
@@ -191,7 +191,7 @@ namespace Server.Items
                 if (!m_Activated)
                 {
                     SpawnBoss(from);
-                 // m_DeadLineTimer = Timer.DelayCall(ExpireTime, new TimerCallback(OnDeadLine));
+                    // m_DeadLineTimer = Timer.DelayCall(ExpireTime, new TimerCallback(OnDeadLine));
                     m_DeadLineTimer = Timer.DelayCall(TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(10), OnTick);
                     m_DeadLine = DateTime.UtcNow + ExpireTime;
                 }
@@ -297,7 +297,7 @@ namespace Server.Items
 
             m_WarpPoint = Point3D.Zero;
 
-            if(m_BossRegion != null)
+            if (m_BossRegion != null)
                 m_BossRegion.RemovePlayers(false);
 
             EndResetTimer();
@@ -469,8 +469,8 @@ namespace Server.Items
                     m_WarpRegion.Register();
 
 
-                //    TimeSpan ts = m_DeadLine - DateTime.UtcNow;
-                //    m_DeadLineTimer = Timer.DelayCall(ts, new TimerCallback(OnDeadLine));
+                    //    TimeSpan ts = m_DeadLine - DateTime.UtcNow;
+                    //    m_DeadLineTimer = Timer.DelayCall(ts, new TimerCallback(OnDeadLine));
 
                     m_DeadLineTimer = Timer.DelayCall(TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(10), OnTick);
                 }

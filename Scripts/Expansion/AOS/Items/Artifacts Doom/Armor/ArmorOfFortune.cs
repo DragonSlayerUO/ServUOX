@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ArmorOfFortune : StuddedChest
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public ArmorOfFortune()
         {

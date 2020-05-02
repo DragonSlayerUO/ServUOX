@@ -32,7 +32,8 @@ namespace Server.Misc
 
             /*if ( Core.Service )
             e.Close = true;
-            else */ if (RestartServer)
+            else */
+            if (RestartServer)
                 Restart(e);
         }
 

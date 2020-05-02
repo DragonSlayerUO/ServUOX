@@ -556,20 +556,20 @@ namespace Server.Items
 
             eodon.Opposition = new SlayerGroup[] { };
             eodon.FoundOn = new Type[] { };
-            eodon.Super = 
+            eodon.Super =
                 new SlayerEntry(
-                    
-                    SlayerName.Eodon, 
-                    
-                    typeof(Dimetrosaur), typeof(Gallusaurus), 
+
+                    SlayerName.Eodon,
+
+                    typeof(Dimetrosaur), typeof(Gallusaurus),
                     typeof(Archaeosaurus), typeof(Najasaurus),
-                    typeof(Saurosaurus), typeof(Allosaurus), 
-                    typeof(MyrmidexLarvae), typeof(MyrmidexDrone), 
-                    typeof(MyrmidexWarrior), typeof(DragonTurtle), 
+                    typeof(Saurosaurus), typeof(Allosaurus),
+                    typeof(MyrmidexLarvae), typeof(MyrmidexDrone),
+                    typeof(MyrmidexWarrior), typeof(DragonTurtle),
                     typeof(DragonTurtleHatchling), typeof(DesertScorpion),
-                    typeof(TribeWarrior), typeof(TribeShaman), 
-                    typeof(TribeChieftan), typeof(WildTiger), 
-                    typeof(WildBlackTiger), typeof(WildWhiteTiger), 
+                    typeof(TribeWarrior), typeof(TribeShaman),
+                    typeof(TribeChieftan), typeof(WildTiger),
+                    typeof(WildBlackTiger), typeof(WildWhiteTiger),
                     typeof(TRex), typeof(SilverbackGorilla));
 
             eodon.Entries = new SlayerEntry[] { };
@@ -583,10 +583,10 @@ namespace Server.Items
             dino.FoundOn = new Type[] { };
             dino.Super =
                 new SlayerEntry(
-                    
-                    SlayerName.Dinosaur, 
-                    
-                    typeof(Dimetrosaur), typeof(Gallusaurus), 
+
+                    SlayerName.Dinosaur,
+
+                    typeof(Dimetrosaur), typeof(Gallusaurus),
                     typeof(Archaeosaurus), typeof(Najasaurus),
                     typeof(Saurosaurus), typeof(Allosaurus),
                     typeof(MyrmidexLarvae), typeof(MyrmidexDrone),
@@ -597,27 +597,27 @@ namespace Server.Items
             myrmidex.Opposition = new SlayerGroup[] { fey };
             myrmidex.FoundOn = new Type[] { };
             myrmidex.Super = new SlayerEntry(
-                
+
                 SlayerName.Myrmidex,
-                
-                typeof(MyrmidexLarvae), typeof(MyrmidexDrone), 
+
+                typeof(MyrmidexLarvae), typeof(MyrmidexDrone),
                 typeof(MyrmidexWarrior));
             myrmidex.Entries = new SlayerEntry[] { };
 
             Groups = new SlayerGroup[]
-				{
-					humanoid,
-					undead,
-					elemental,
-					abyss,
-					arachnid,
-					reptilian,
-					fey,
+                {
+                    humanoid,
+                    undead,
+                    elemental,
+                    abyss,
+                    arachnid,
+                    reptilian,
+                    fey,
                     eodon,
                     eodonTribe,
-                    dino, 
+                    dino,
                     myrmidex,
-				};
+                };
 
             TotalEntries = CompileEntries(Groups);
         }

@@ -92,7 +92,7 @@ namespace Server.Gumps
         {
             Mobile from = state.Mobile;
 
-            switch( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1:
                     CityInfo city = new CityInfo("Britain", "Town Center", 1475, 1645, 20);
@@ -114,7 +114,7 @@ namespace Server.Gumps
 
                     from.MoveToWorld(city3.Location, Map.Malas);
                     break;
-                case 5: 
+                case 5:
                     CityInfo city4 = new CityInfo("Zento", "Town Center", 735, 1257, 30);
 
                     from.MoveToWorld(city4.Location, Map.Tokuno);

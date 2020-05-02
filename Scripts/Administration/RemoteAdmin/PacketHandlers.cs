@@ -68,7 +68,7 @@ namespace Server.RemoteAdmin
                 if (!CanAccessAccount(state.Account, a))
                     continue;
 
-                switch ( type )
+                switch (type)
                 {
                     case AcctSearchType.Username:
                         {
@@ -140,7 +140,7 @@ namespace Server.RemoteAdmin
         }
 
         private static void UpdateAccount(NetState state, PacketReader pvSrc)
-        { 
+        {
             if (state.Account.AccessLevel < AccessLevel.Administrator)
             {
                 state.Send(new MessageBoxMessage("You do not have permission to edit accounts.", "Account Access Exception"));

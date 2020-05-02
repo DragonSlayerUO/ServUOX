@@ -358,9 +358,9 @@ namespace Server.Items
             return p.X >= X - 8 && p.X <= X + 8 && p.Y >= Y - 8 && p.Y <= Y + 8;
         }
 
-        public PlunderBeaconAddon( Serial serial ) : base( serial )
-		{
-		}
+        public PlunderBeaconAddon(Serial serial) : base(serial)
+        {
+        }
 
         public override void Serialize(GenericWriter writer)
         {

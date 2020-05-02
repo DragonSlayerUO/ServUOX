@@ -53,7 +53,7 @@ namespace Server.Mobiles
                 if (Utility.RandomDouble() < 0.6)
                     CorpseLoot.DropItem(new BrokenCrystals());
 
-                if ( Utility.RandomDouble() < 0.1 )
+                if (Utility.RandomDouble() < 0.1)
                     CorpseLoot.DropItem(new ParrotItem());
 
                 for (int i = 0; i < Utility.RandomMinMax(0, 2); i++)
@@ -61,7 +61,7 @@ namespace Server.Mobiles
                     CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
                 }
             }
-            
+
             base.OnDeath(CorpseLoot);
         }
 

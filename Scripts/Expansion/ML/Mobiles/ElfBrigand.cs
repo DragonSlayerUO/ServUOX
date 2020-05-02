@@ -1,8 +1,8 @@
 using System;
 using Server.Items;
 
-namespace Server.Mobiles 
-{ 
+namespace Server.Mobiles
+{
     [CorpseName("an elf corpse")]
     public class ElfBrigand : BaseCreature
     {

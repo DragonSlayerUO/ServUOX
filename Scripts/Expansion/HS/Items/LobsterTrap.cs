@@ -24,11 +24,11 @@ namespace Server.Items
         private int m_Bobs;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Type BaitType 
-        { 
-            get { return m_BaitType; } 
-            set 
-            { 
+        public Type BaitType
+        {
+            get { return m_BaitType; }
+            set
+            {
                 m_BaitType = value;
 
                 if (m_BaitType == null)
@@ -37,7 +37,7 @@ namespace Server.Items
                     m_BaitUses = 0;
                 }
 
-                InvalidateProperties(); 
+                InvalidateProperties();
             }
         }
 
@@ -150,7 +150,7 @@ namespace Server.Items
             }
             else
             {
-                from.SendLocalizedMessage( 1042001 ); // That must be in your pack for you to use it.
+                from.SendLocalizedMessage(1042001); // That must be in your pack for you to use it.
             }
         }
 
@@ -418,7 +418,7 @@ namespace Server.Items
         private int[] m_WaterTiles = new int[]
         {
             //Deep Water
-            0x00AA, 0x00A9, 
+            0x00AA, 0x00A9,
             0x00A8, 0x00AB,
             0x0136, 0x0137,
             //Shallow Water

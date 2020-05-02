@@ -55,20 +55,20 @@ namespace Server.Mobiles
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.FilthyRich, 2);
-            AddLoot( LootPack.Parrot );
+            AddLoot(LootPack.Parrot);
             AddLoot(LootPack.MedScrolls);
             AddLoot(LootPack.HighScrolls);
         }
 
-        public override void OnDeath( Container c )
+        public override void OnDeath(Container c)
         {
-            base.OnDeath( c );
+            base.OnDeath(c);
 
-            if ( Utility.RandomDouble() < 0.75 )
-            c.DropItem( new CrystallineFragments() );
+            if (Utility.RandomDouble() < 0.75)
+                c.DropItem(new CrystallineFragments());
 
-            if ( Utility.RandomDouble() < 0.06 )
-            c.DropItem( new JaggedCrystals() );
+            if (Utility.RandomDouble() < 0.06)
+                c.DropItem(new JaggedCrystals());
         }
 
         public override int GetAngerSound()

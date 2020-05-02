@@ -38,7 +38,7 @@ namespace Server.Mobiles
 
         public GenericBuyInfo(string name, Type type, int price, int amount, int itemID, int hue, object[] args, bool stacks = false)
         {
-            if(type != null)
+            if (type != null)
                 BuyPrices[type] = price;
 
             m_Type = type;
@@ -57,7 +57,7 @@ namespace Server.Mobiles
                 m_MaxAmount = m_Amount = amount;
             }
 
-            if(Siege.SiegeShard)
+            if (Siege.SiegeShard)
             {
                 m_Price *= 3;
             }

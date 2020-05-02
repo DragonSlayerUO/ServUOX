@@ -52,7 +52,7 @@ namespace Server.Misc
 
             public override int RandomHair(bool female)	//Random hair doesn't include baldness
             {
-                switch( Utility.Random(9) )
+                switch (Utility.Random(9))
                 {
                     case 0:
                         return 0x203B;	//Short
@@ -206,7 +206,7 @@ namespace Server.Misc
 
             public override int RandomHair(bool female)	//Random hair doesn't include baldness
             {
-                switch( Utility.Random(8) )
+                switch (Utility.Random(8))
                 {
                     case 0:
                         return 0x2FC0;	//Long Feather

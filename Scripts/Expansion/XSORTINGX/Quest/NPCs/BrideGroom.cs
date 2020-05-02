@@ -11,7 +11,7 @@ namespace Server.Mobiles
             if (this.Female)
                 this.Title = "the bride";
             else
-                this.Title = "the groom";			
+                this.Title = "the groom";
         }
 
         public BrideGroom(Serial serial)
@@ -36,7 +36,7 @@ namespace Server.Mobiles
         public override void InitOutfit()
         {
             if (this.Female)
-				
+
                 this.AddItem(new FancyDress());
             else
                 this.AddItem(new FancyShirt());
@@ -76,7 +76,7 @@ namespace Server.Mobiles
 
         private static int GetRandomHue()
         {
-            switch ( Utility.Random(6) )
+            switch (Utility.Random(6))
             {
                 default:
                 case 0:

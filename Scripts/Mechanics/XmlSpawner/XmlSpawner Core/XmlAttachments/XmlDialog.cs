@@ -266,13 +266,13 @@ namespace Server.Engines.XmlSpawner2
                 }
                 else
                     if (AttachedTo is Mobile)
-                    {
-                        map = ((Mobile)AttachedTo).Map;
-                        x = ((Mobile)AttachedTo).Location.X;
-                        y = ((Mobile)AttachedTo).Location.Y;
-                    }
+                {
+                    map = ((Mobile)AttachedTo).Map;
+                    x = ((Mobile)AttachedTo).Location.X;
+                    y = ((Mobile)AttachedTo).Location.Y;
+                }
 
-                Server.Items.Clock.GetTime(map, x, y, out  hours, out  minutes);
+                Server.Items.Clock.GetTime(map, x, y, out hours, out minutes);
                 return (new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, hours, minutes, 0).TimeOfDay);
             }
         }
@@ -331,11 +331,11 @@ namespace Server.Engines.XmlSpawner2
                 }
                 else
                     if (AttachedTo is Mobile)
-                    {
-                        map = ((Mobile)AttachedTo).Map;
-                        x = ((Mobile)AttachedTo).Location.X;
-                        y = ((Mobile)AttachedTo).Location.Y;
-                    }
+                {
+                    map = ((Mobile)AttachedTo).Map;
+                    x = ((Mobile)AttachedTo).Location.X;
+                    y = ((Mobile)AttachedTo).Location.Y;
+                }
                 return Clock.GetMoonPhase(map, x, y);
             }
         }
@@ -812,46 +812,46 @@ namespace Server.Engines.XmlSpawner2
                     else
                         // parse the keyword string
                         if (keyword != null && s.Keywords != null)
-                        {
+                    {
 
-                            string[] arglist = s.Keywords.Split(",".ToCharArray());
-                            for (int i = 0; i < arglist.Length; i++)
+                        string[] arglist = s.Keywords.Split(",".ToCharArray());
+                        for (int i = 0; i < arglist.Length; i++)
+                        {
+                            if (arglist[i] == "*")
                             {
-                                if (arglist[i] == "*")
+                                // special match anything expression (regex doesnt parse this well)
+                                matchlist.Add(s);
+                                break;
+                            }
+                            else
+                            {
+                                bool error = false;
+                                Regex r = null;
+                                string status_str = null;
+                                try
                                 {
-                                    // special match anything expression (regex doesnt parse this well)
-                                    matchlist.Add(s);
-                                    break;
+                                    r = new Regex(arglist[i], RegexOptions.IgnoreCase);
+                                }
+                                catch (Exception e) { error = true; status_str = e.Message; }
+
+                                if (!error && r != null)
+                                {
+
+                                    Match m = r.Match(keyword);
+                                    if (m.Success)
+                                    {
+                                        // add it to the list of match candidates
+                                        matchlist.Add(s);
+                                        break;
+                                    }
                                 }
                                 else
                                 {
-                                    bool error = false;
-                                    Regex r = null;
-                                    string status_str = null;
-                                    try
-                                    {
-                                        r = new Regex(arglist[i], RegexOptions.IgnoreCase);
-                                    }
-                                    catch (Exception e) { error = true; status_str = e.Message; }
-
-                                    if (!error && r != null)
-                                    {
-
-                                        Match m = r.Match(keyword);
-                                        if (m.Success)
-                                        {
-                                            // add it to the list of match candidates
-                                            matchlist.Add(s);
-                                            break;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        ReportError(from, String.Format("Bad regular expression: {0} ", status_str));
-                                    }
+                                    ReportError(from, String.Format("Bad regular expression: {0} ", status_str));
                                 }
                             }
                         }
+                    }
                 }
             }
             if (matchlist.Count > 0)
@@ -904,11 +904,11 @@ namespace Server.Engines.XmlSpawner2
             }
             else
                 if (AttachedTo is Item && ((Item)AttachedTo).Parent == null)
-                {
-                    Item i = AttachedTo as Item;
-                    loc = i.Location;
-                    map = i.Map;
-                }
+            {
+                Item i = AttachedTo as Item;
+                loc = i.Location;
+                map = i.Map;
+            }
 
             if (typeName == "GUMP")
             {
@@ -946,11 +946,11 @@ namespace Server.Engines.XmlSpawner2
             }
             else
                 if (AttachedTo is Item && ((Item)AttachedTo).Parent == null)
-                {
-                    Item i = AttachedTo as Item;
-                    loc = i.Location;
-                    map = i.Map;
-                }
+            {
+                Item i = AttachedTo as Item;
+                loc = i.Location;
+                map = i.Map;
+            }
 
             if (BaseXmlSpawner.IsTypeOrItemKeyword(typeName))
             {
@@ -971,25 +971,25 @@ namespace Server.Engines.XmlSpawner2
                     }
                     else
                         if (o is Mobile)
+                    {
+                        Mobile m = (Mobile)o;
+                        if (m is BaseCreature)
                         {
-                            Mobile m = (Mobile)o;
-                            if (m is BaseCreature)
-                            {
-                                BaseCreature c = (BaseCreature)m;
-                                c.Home = loc; // Spawners location is the home point
-                            }
-
-                            m.Location = loc;
-                            m.Map = map;
-
-                            BaseXmlSpawner.ApplyObjectStringProperties(null, substitutedtypeName, m, mob, AttachedTo, out status_str);
+                            BaseCreature c = (BaseCreature)m;
+                            c.Home = loc; // Spawners location is the home point
                         }
-                        else
+
+                        m.Location = loc;
+                        m.Map = map;
+
+                        BaseXmlSpawner.ApplyObjectStringProperties(null, substitutedtypeName, m, mob, AttachedTo, out status_str);
+                    }
+                    else
                             if (o is Item)
-                            {
-                                Item item = (Item)o;
-                                BaseXmlSpawner.AddSpawnItem(null, AttachedTo, TheSpawn, item, loc, map, mob, false, substitutedtypeName, out status_str);
-                            }
+                    {
+                        Item item = (Item)o;
+                        BaseXmlSpawner.AddSpawnItem(null, AttachedTo, TheSpawn, item, loc, map, mob, false, substitutedtypeName, out status_str);
+                    }
                 }
                 catch { }
             }
@@ -1039,11 +1039,11 @@ namespace Server.Engines.XmlSpawner2
             }
             else
                 if (AttachedTo is Item && ((Item)AttachedTo).Parent == null)
-                {
-                    Item i = AttachedTo as Item;
-                    loc = i.Location;
-                    map = i.Map;
-                }
+            {
+                Item i = AttachedTo as Item;
+                loc = i.Location;
+                map = i.Map;
+            }
 
             if (CurrentEntry != null)
             {
@@ -1091,11 +1091,11 @@ namespace Server.Engines.XmlSpawner2
             }
             else
                 if (AttachedTo is Item && ((Item)AttachedTo).Parent == null)
-                {
-                    Item i = AttachedTo as Item;
-                    loc = i.Location;
-                    map = i.Map;
-                }
+            {
+                Item i = AttachedTo as Item;
+                loc = i.Location;
+                map = i.Map;
+            }
 
             // if proximity sensing is off, a speech entry has been activated, or player is an admin then ignore
             if (m_Running && m_ProximityRange >= 0 && ValidMovementTrig(m) && !IsActive && !m_HoldProcessing)
@@ -1142,7 +1142,7 @@ namespace Server.Engines.XmlSpawner2
         private void CheckForReset()
         {
             // check to see if the interaction time has elapsed or player has gone out of range.  If so then reset to entry zero
-            if (!m_HoldProcessing && 
+            if (!m_HoldProcessing &&
                 ((DateTime.UtcNow - ResetTime > m_LastInteraction) ||
                 (AttachedTo is IEntity && m_ActivePlayer != null && !IsInRange(m_ActivePlayer, (IEntity)AttachedTo, ResetRange))))
             {
@@ -1195,18 +1195,18 @@ namespace Server.Engines.XmlSpawner2
                     }
                     else
                         if (AttachedTo is Mobile)
+                    {
+                        // mobiles can produce actual speech
+                        // so let them.  This allows mobiles to talk with one another
+                        int speechhue = ((Mobile)AttachedTo).SpeechHue;
+                        if (CurrentEntry.SpeechHue >= 0)
                         {
-                            // mobiles can produce actual speech
-                            // so let them.  This allows mobiles to talk with one another
-                            int speechhue = ((Mobile)AttachedTo).SpeechHue;
-                            if (CurrentEntry.SpeechHue >= 0)
-                            {
-                                speechhue = CurrentEntry.SpeechHue;
-                            }
+                            speechhue = CurrentEntry.SpeechHue;
+                        }
 
                             ((Mobile)AttachedTo).DoSpeech(text, new int[] { }, CurrentEntry.SpeechStyle, speechhue);
-                            //((Mobile)AttachedTo).PublicOverheadMessage( MessageType.Regular, 0x3B2, true, text );
-                        }
+                        //((Mobile)AttachedTo).PublicOverheadMessage( MessageType.Regular, 0x3B2, true, text );
+                    }
                 }
 
                 IsActive = true;
@@ -1430,9 +1430,9 @@ namespace Server.Engines.XmlSpawner2
                             }
                             else
                                 if (AttachedTo is Mobile)
-                                {
-                                    ((Mobile)AttachedTo).Name = (string)dr["Name"];
-                                }
+                            {
+                                ((Mobile)AttachedTo).Name = (string)dr["Name"];
+                            }
 
                         }
                         catch { }
@@ -1572,9 +1572,9 @@ namespace Server.Engines.XmlSpawner2
             }
             else
                 if (AttachedTo is Mobile)
-                {
-                    dr["Name"] = (string)((Mobile)AttachedTo).Name;
-                }
+            {
+                dr["Name"] = (string)((Mobile)AttachedTo).Name;
+            }
 
             dr["Running"] = (bool)this.Running;
             dr["ProximityRange"] = (int)this.m_ProximityRange;

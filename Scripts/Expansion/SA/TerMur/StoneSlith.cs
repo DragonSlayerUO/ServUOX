@@ -75,7 +75,7 @@ namespace Server.Mobiles
         public override void OnDeath(Container c)
         {
             base.OnDeath(c);
-            
+
             if (!Controlled && Utility.RandomDouble() <= 0.005)
             {
                 c.DropItem(new StoneSlithClaw());
@@ -97,8 +97,8 @@ namespace Server.Mobiles
                         c.DropItem(new TatteredAncientScroll());
                         break;
                 }
-            }        
-        }     
+            }
+        }
 
         public override void Serialize(GenericWriter writer)
         {

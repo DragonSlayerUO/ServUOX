@@ -302,7 +302,7 @@ namespace Server.Items
                                 Atlas.Openers.Remove(User);
                             }
                             break;
-                        }                        
+                        }
                     case 3:
                         {
                             if (entry != null)
@@ -442,7 +442,7 @@ namespace Server.Items
 
         private void RecallSpell()
         {
-            RunebookEntry e = Atlas.Entries[Selected];            
+            RunebookEntry e = Atlas.Entries[Selected];
 
             if (RunebookGump.HasSpell(User, 31))
             {

@@ -19,14 +19,14 @@ namespace Server.Items
 
         [Constructable]
         public DardensTunic()
-		{
+        {
             AbsorptionAttributes.EaterKinetic = 2;
-			Attributes.BonusStr = 4;
-			Attributes.BonusHits = 4;
-			Attributes.LowerRegCost = 15;
-			
-			SetAttributes.BonusMana = 15;
-			SetAttributes.LowerManaCost = 20;
+            Attributes.BonusStr = 4;
+            Attributes.BonusHits = 4;
+            Attributes.LowerRegCost = 15;
+
+            SetAttributes.BonusMana = 15;
+            SetAttributes.LowerManaCost = 20;
             SetSelfRepair = 3;
 
             SetPhysicalBonus = 9;
@@ -34,7 +34,7 @@ namespace Server.Items
             SetColdBonus = 8;
             SetPoisonBonus = 8;
             SetEnergyBonus = 8;
-		}
+        }
 
         public override void GetProperties(ObjectPropertyList list)
         {

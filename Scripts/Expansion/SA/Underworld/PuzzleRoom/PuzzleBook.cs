@@ -31,7 +31,7 @@ namespace Server.Items
                 "my other playground should you",
                 "discover its location within",
                 "the underworld!!"));
-				
+
         [Constructable]
         public PuzzleBook() : base(false)
         {
@@ -45,7 +45,7 @@ namespace Server.Items
         }
 
         public override BookContent DefaultContent { get { return Content; } }
-		
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

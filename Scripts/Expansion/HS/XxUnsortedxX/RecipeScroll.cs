@@ -117,7 +117,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -130,7 +130,7 @@ namespace Server.Items
     }
 
     public class DoomRecipeScroll : RecipeScroll
-    {  
+    {
         [Constructable]
         public DoomRecipeScroll()
             : base(Utility.RandomList(355, 356, 456, 585))

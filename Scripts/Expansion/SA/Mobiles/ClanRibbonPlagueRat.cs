@@ -29,7 +29,7 @@ namespace Server.Mobiles
             this.SetResistance(ResistanceType.Fire, 20, 30);
             this.SetResistance(ResistanceType.Cold, 30, 40);
             this.SetResistance(ResistanceType.Energy, 30, 40);
-			
+
             this.SetSkill(SkillName.MagicResist, 30.0);
             this.SetSkill(SkillName.Tactics, 34.0);
             this.SetSkill(SkillName.Wrestling, 40.0);
@@ -40,7 +40,7 @@ namespace Server.Mobiles
             this.VirtualArmor = 6;
 
             this.Hue = 52;
-			
+
             this.Tamable = false;
             this.ControlSlots = 1;
             this.MinTameSkill = -0.9;

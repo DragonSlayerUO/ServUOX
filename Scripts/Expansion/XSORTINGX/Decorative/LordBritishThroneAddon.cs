@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LordBritishThroneAddon : BaseAddon
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public LordBritishThroneAddon()
         {

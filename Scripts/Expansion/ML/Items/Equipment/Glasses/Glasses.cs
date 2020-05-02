@@ -5,14 +5,14 @@ namespace Server.Items
 {
     [Alterable(typeof(DefTinkering), typeof(GargishGlasses), true)]
     public class Glasses : BaseArmor, IRepairable
-	{
+    {
         public CraftSystem RepairSystem { get { return DefTinkering.CraftSystem; } }
 
         [Constructable]
         public Glasses()
             : base(0x2FB8)
         {
-            Weight = 2.0;			
+            Weight = 2.0;
         }
 
         public Glasses(Serial serial)
@@ -53,16 +53,16 @@ namespace Server.Items
             if (m.NetState != null && !m.NetState.SupportsExpansion(Expansion.ML))
             {
                 m.SendLocalizedMessage(1072791); // You must upgrade to Mondain's Legacy in order to use that item.
-				
+
                 return false;
             }
-			
+
             return true;
         }
 
         public override void Serialize(GenericWriter writer)
         {
-            base.Serialize(writer);			
+            base.Serialize(writer);
             writer.Write((int)1); // version
         }
 

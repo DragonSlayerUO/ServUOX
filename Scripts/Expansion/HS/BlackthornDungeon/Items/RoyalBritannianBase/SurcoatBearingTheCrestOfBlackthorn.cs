@@ -6,7 +6,7 @@ namespace Server.Items
     public class SurcoatBearingTheCrestOfBlackthorn : Surcoat
     {
         public override bool IsArtifact { get { return true; } }
-        
+
         [Constructable]
         public SurcoatBearingTheCrestOfBlackthorn()
             : base()

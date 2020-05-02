@@ -180,7 +180,7 @@ namespace Server.Engines.Distillation
                         {
                             int sel = info.ButtonID - 2000;
 
-                            if(m_Def.Ingredients[0] == typeof(Yeast) && m_Def.Amounts.Length > 0)
+                            if (m_Def.Ingredients[0] == typeof(Yeast) && m_Def.Amounts.Length > 0)
                             {
                                 int amt = m_Def.Amounts[0];
 
@@ -371,7 +371,7 @@ namespace Server.Engines.Distillation
 
                         if (GetAmount(from, type, m_Def.Liquor) < toConsume)
                             return false;
-                    } 
+                    }
                 }
 
                 return true;

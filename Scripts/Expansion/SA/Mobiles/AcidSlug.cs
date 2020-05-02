@@ -21,13 +21,13 @@ namespace Server.Mobiles
                 case 3: Hue = 245; break;
             }
 
-			SetStr(213, 294);
-			SetDex(80, 82);
+            SetStr(213, 294);
+            SetDex(80, 82);
             SetInt(18, 22);
 
-			SetHits(333, 370);
+            SetHits(333, 370);
 
-			SetDamage(21, 28);
+            SetDamage(21, 28);
 
             SetDamageType(ResistanceType.Physical, 100);
 

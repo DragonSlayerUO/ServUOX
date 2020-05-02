@@ -55,13 +55,13 @@ namespace Server.Factions
             int netCashFlow = town.NetCashFlow;
 
             this.AddHtmlLocalized(20, 30, 300, 25, 1011524, false, false); // FINANCE STATEMENT
-			
+
             this.AddHtmlLocalized(20, 80, 300, 25, 1011538, false, false); // Current total money for town : 
             this.AddLabel(20, 100, 0x44, town.Silver.ToString("N0")); // NOTE: Added 'N0'
 
             this.AddHtmlLocalized(20, 130, 300, 25, 1011520, false, false); // Finance Minister Upkeep : 
             this.AddLabel(20, 150, 0x44, financeUpkeep.ToString("N0")); // NOTE: Added 'N0'
-	
+
             this.AddHtmlLocalized(20, 180, 300, 25, 1011521, false, false); // Sheriff Upkeep : 
             this.AddLabel(20, 200, 0x44, sheriffUpkeep.ToString("N0")); // NOTE: Added 'N0'
 

@@ -287,7 +287,7 @@ namespace Server.Items
 
             foreach (List<BaseCreature> bcList in m_Stored.Values)
             {
-                if(bcList != null)
+                if (bcList != null)
                     count += bcList.Count;
             }
 
@@ -466,7 +466,7 @@ namespace Server.Items
                 writer.Write(kvp.Key);
                 writer.Write(kvp.Value.Count);
 
-                foreach(BaseCreature bc in kvp.Value)
+                foreach (BaseCreature bc in kvp.Value)
                     writer.Write(bc);
             }
         }

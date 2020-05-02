@@ -19,8 +19,8 @@ namespace Server.Items
             Attributes.LowerManaCost = 1;
             Attributes.BonusMana = 5;
             Hue = 1306;
-			
-			Layer = Layer.OuterTorso;
+
+            Layer = Layer.OuterTorso;
         }
 
         public GargishEpauletteBearingTheCrestOfBlackthorn2(Serial serial)
@@ -38,8 +38,8 @@ namespace Server.Items
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-			
-			if (version == 0)
+
+            if (version == 0)
             {
                 MaxHitPoints = 0;
                 HitPoints = 0;

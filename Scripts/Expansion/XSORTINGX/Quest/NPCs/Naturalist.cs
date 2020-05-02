@@ -63,7 +63,7 @@ namespace Server.Engines.Quests.Naturalist
                             Seed reward;
 
                             PlantType type;
-                            switch ( Utility.Random(17) )
+                            switch (Utility.Random(17))
                             {
                                 case 0:
                                     type = PlantType.CampionFlowers;
@@ -123,11 +123,11 @@ namespace Server.Engines.Quests.Naturalist
                                 PlantHue hue;
                                 switch (Utility.Random(3))
                                 {
-                                    case 0: 
-                                        hue = PlantHue.FireRed; 
+                                    case 0:
+                                        hue = PlantHue.FireRed;
                                         break;
-                                    case 1: 
-                                        hue = PlantHue.White; 
+                                    case 1:
+                                        hue = PlantHue.White;
                                         break;
                                     default:
                                         hue = PlantHue.Black;
@@ -139,7 +139,7 @@ namespace Server.Engines.Quests.Naturalist
                             else
                             {
                                 PlantHue hue;
-                                switch ( Utility.Random(3) )
+                                switch (Utility.Random(3))
                                 {
                                     case 0:
                                         hue = PlantHue.Pink;

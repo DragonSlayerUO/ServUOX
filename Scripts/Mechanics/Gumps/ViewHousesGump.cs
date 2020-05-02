@@ -187,7 +187,7 @@ namespace Server.Gumps
             }
             else if (!m_Selection.Deleted)
             {
-                switch ( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     case 0:
                         {

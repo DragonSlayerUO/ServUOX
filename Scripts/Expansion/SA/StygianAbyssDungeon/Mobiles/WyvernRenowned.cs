@@ -55,12 +55,12 @@ namespace Server.Mobiles
 
         public override Type[] UniqueSAList
         {
-            get { return new Type[] {}; }
+            get { return new Type[] { }; }
         }
 
         public override Type[] SharedSAList
         {
-            get { return new[] {typeof (AnimatedLegsoftheInsaneTinker), typeof (PillarOfStrength), typeof(StormCaller) }; }
+            get { return new[] { typeof(AnimatedLegsoftheInsaneTinker), typeof(PillarOfStrength), typeof(StormCaller) }; }
         }
 
         public override bool ReacquireOnMovement

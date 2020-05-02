@@ -277,8 +277,8 @@ namespace Server.Engines.SeasonalEvents
             new Type[] { typeof(SnowElemental), typeof(IceElemental) },
             new Type[] { typeof(IceSerpent), typeof(FrostTroll) },
             new Type[] { typeof(IceFiend), typeof(WhiteWyrm) },
-			new Type[] { typeof(KrampusMinion) },
-			new Type[] { typeof(Krampus) }
+            new Type[] { typeof(KrampusMinion) },
+            new Type[] { typeof(Krampus) }
         };
 
         public Type[] _WetSpawnTypes =

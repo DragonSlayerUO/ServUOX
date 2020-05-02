@@ -87,7 +87,7 @@ namespace Server.Items
 
         public virtual void Flip(Mobile from, Direction direction)
         {
-            switch ( direction )
+            switch (direction)
             {
                 case Direction.East:
                     this.AddComponent(new BoneCouchComponent(0x2A80), 0, 0, 0);

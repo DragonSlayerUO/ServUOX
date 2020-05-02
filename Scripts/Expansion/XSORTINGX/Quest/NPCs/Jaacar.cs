@@ -20,7 +20,7 @@ namespace Server.Engines.Quests
         {
             get
             {
-                return new Type[] 
+                return new Type[]
                 {
                     typeof(BadCompany)
                 };

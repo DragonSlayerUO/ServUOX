@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ScrollBox2 : WoodenBox
     {
-        [Constructable]	
+        [Constructable]
         public ScrollBox2()
             : base()
         {
@@ -90,10 +90,10 @@ namespace Server.Items
             int version = reader.ReadInt();
         }
 
-        private static void PlaceItemIn(Container parent, int x, int y, Item item) 
-        { 
-            parent.AddItem(item); 
-            item.Location = new Point3D(x, y, 0); 
+        private static void PlaceItemIn(Container parent, int x, int y, Item item)
+        {
+            parent.AddItem(item);
+            item.Location = new Point3D(x, y, 0);
         }
     }
 }

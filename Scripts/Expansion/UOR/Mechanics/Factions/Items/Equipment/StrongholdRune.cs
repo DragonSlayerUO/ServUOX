@@ -123,7 +123,7 @@ namespace Server.Factions
 
             PlayerState ps = PlayerState.Find(m);
 
-            if(ps != null)
+            if (ps != null)
                 minutes = 30 - (ps.Rank.Rank * 2);
 
             Timer.DelayCall<Mobile>(TimeSpan.FromMinutes(minutes), mob =>

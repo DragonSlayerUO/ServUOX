@@ -208,7 +208,7 @@ namespace Server.Items
                 {
                     HarvestMap harvestmap = item as HarvestMap;
 
-                    if (harvestmap != null && harvestmap.TargetMap == map && harvestmap.UsesRemaining > 0 
+                    if (harvestmap != null && harvestmap.TargetMap == map && harvestmap.UsesRemaining > 0
                         && def.GetBank(map, p.X, p.Y) == def.GetBank(harvestmap.TargetMap, harvestmap.Target.X, harvestmap.Target.Y))
                     {
                         return harvestmap;

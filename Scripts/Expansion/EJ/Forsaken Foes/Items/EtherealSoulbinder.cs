@@ -93,7 +93,7 @@ namespace Server.Items
                 list.Add(1159178, string.Format("#{0}", desc)); // Contains a ~1_TYPE~ Soul
             }
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

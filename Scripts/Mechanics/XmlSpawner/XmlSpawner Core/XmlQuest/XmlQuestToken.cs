@@ -90,10 +90,10 @@ namespace Server.Items
             return false;
         }
 
-#if(NEWPARENT)
+#if (NEWPARENT)
 		public override void OnAdded(IEntity target)
 #else
-		public override void OnAdded(object target)
+        public override void OnAdded(object target)
 #endif
         {
             base.OnAdded(target);
@@ -123,7 +123,7 @@ namespace Server.Items
                 {
                     Item child = items[i];
 
-                    if (!child.Deleted )
+                    if (!child.Deleted)
                     {
                         Point3D loc = child.Location;
 
@@ -547,19 +547,19 @@ namespace Server.Items
             }
             else
                 if (from is PlayerMobile && Owner == null)
-                {
-                    Owner = from as PlayerMobile;
+            {
+                Owner = from as PlayerMobile;
 
-                    LootType = LootType.Blessed;
-                    // flag the owner as carrying a questtoken
-                    Owner.SetFlag(XmlQuest.CarriedXmlQuestFlag, true);
-                }
+                LootType = LootType.Blessed;
+                // flag the owner as carrying a questtoken
+                Owner.SetFlag(XmlQuest.CarriedXmlQuestFlag, true);
+            }
         }
 
-#if(NEWPARENT)
+#if (NEWPARENT)
 		public override void OnAdded(IEntity target)
 #else
-		public override void OnAdded(object target)
+        public override void OnAdded(object target)
 #endif
         {
             base.OnAdded(target);
@@ -592,73 +592,73 @@ namespace Server.Items
                 }
                 else
                     if ((parentOfTarget != null) && (parentOfTarget is PlayerMobile) && PlayerMade && (Owner != null) && ((Owner == Creator) || (Creator == null)))
+                {
+                    // check the old owner
+                    CheckOwnerFlag();
+
+                    Owner = parentOfTarget as PlayerMobile;
+
+                    // first owner will become creator by default
+                    if (Creator == null)
+                        Creator = Owner;
+
+                    LootType = LootType.Blessed;
+
+                    // flag the new owner as carrying a questtoken
+                    Owner.SetFlag(XmlQuest.CarriedXmlQuestFlag, true);
+
+                }
+                else
+                        if ((parentOfTarget != null) && (parentOfTarget is PlayerMobile))
+                {
+                    if (Owner == null)
                     {
-                        // check the old owner
-                        CheckOwnerFlag();
-
                         Owner = parentOfTarget as PlayerMobile;
-
-                        // first owner will become creator by default
-                        if (Creator == null)
-                            Creator = Owner;
 
                         LootType = LootType.Blessed;
 
-                        // flag the new owner as carrying a questtoken
+                        // flag the owner as carrying a questtoken
                         Owner.SetFlag(XmlQuest.CarriedXmlQuestFlag, true);
-
                     }
                     else
-                        if ((parentOfTarget != null) && (parentOfTarget is PlayerMobile))
-                        {
-                            if (Owner == null)
-                            {
-                                Owner = parentOfTarget as PlayerMobile;
+                        if ((parentOfTarget as PlayerMobile != Owner) || (target is BankBox))
+                    {
+                        // tried to give it to another player or placed it in the players bankbox. try to return it to the owners pack
+                        Owner.AddToBackpack(this);
+                        /*
+                        // this has been added to a player who is not the owner so invalidate it
+                        WasMoved = true;
 
-                                LootType = LootType.Blessed;
+                        CheckOwnerFlag();
 
-                                // flag the owner as carrying a questtoken
-                                Owner.SetFlag(XmlQuest.CarriedXmlQuestFlag, true);
-                            }
-                            else
-                                if ((parentOfTarget as PlayerMobile != Owner) || (target is BankBox))
-                                {
-                                    // tried to give it to another player or placed it in the players bankbox. try to return it to the owners pack
-                                    Owner.AddToBackpack(this);
-                                    /*
-                                    // this has been added to a player who is not the owner so invalidate it
-                                    WasMoved = true;
+                        Invalidate();
+                        */
 
-                                    CheckOwnerFlag();
+                    }
+                }
+                else
+                {
+                    if (Owner != null)
+                    {
+                        // try to return it to the owners pack
+                        Owner.AddToBackpack(this);
+                    }
+                    // allow placement into npcs or drop on their corpses when owner is null
+                    else
+                        if (!(parentOfTarget is Mobile) && !(target is Corpse) && parentOfTarget != null)
+                    {
 
-                                    Invalidate();
-                                    */
+                        // in principle this should never be reached
 
-                                }
-                        }
-                        else
-                        {
-                            if (Owner != null)
-                            {
-                                // try to return it to the owners pack
-                                Owner.AddToBackpack(this);
-                            }
-                            // allow placement into npcs or drop on their corpses when owner is null
-                            else
-                                if (!(parentOfTarget is Mobile) && !(target is Corpse) && parentOfTarget != null)
-                                {
+                        // invalidate the token
 
-                                    // in principle this should never be reached
+                        WasMoved = true;
 
-                                    // invalidate the token
+                        CheckOwnerFlag();
 
-                                    WasMoved = true;
-
-                                    CheckOwnerFlag();
-
-                                    Invalidate();
-                                }
-                        }
+                        Invalidate();
+                    }
+                }
             }
         }
 
@@ -967,7 +967,7 @@ namespace Server.Items
             get { return m_AutoReward; }
             set { m_AutoReward = value; }
         }
-        
+
         [CommandProperty(AccessLevel.GameMaster)]
         public bool CanSeeReward
         {
@@ -1042,10 +1042,10 @@ namespace Server.Items
                     }
                     else
                         if (o is XmlAttachment)
-                        {
-                            m_RewardAttachment = o as XmlAttachment;
-                            m_RewardAttachment.OwnedBy = this;
-                        }
+                    {
+                        m_RewardAttachment = o as XmlAttachment;
+                        m_RewardAttachment.OwnedBy = this;
+                    }
                 }
 
                 return m_RewardAttachment;
@@ -1081,10 +1081,10 @@ namespace Server.Items
                     }
                     else
                         if (o is XmlAttachment)
-                        {
-                            // should never get here
-                            ((XmlAttachment)o).Delete();
-                        }
+                    {
+                        // should never get here
+                        ((XmlAttachment)o).Delete();
+                    }
                 }
 
                 // place it in the xmlquesttoken pack if it isnt already there
@@ -1445,37 +1445,37 @@ namespace Server.Items
                 }
                 else
                     if (m_ExpirationDuration <= 0)
+                {
+                    return "Never expires";
+                }
+                else
+                        if (IsExpired)
+                {
+                    return "Expired";
+                }
+                else
+                {
+                    TimeSpan ts = ExpiresIn;
+
+                    int days = (int)ts.TotalDays;
+                    int hours = (int)(ts - TimeSpan.FromDays(days)).TotalHours;
+                    int minutes = (int)(ts - TimeSpan.FromHours(hours)).TotalMinutes;
+                    int seconds = (int)(ts - TimeSpan.FromMinutes(minutes)).TotalSeconds;
+
+                    if (days > 0)
                     {
-                        return "Never expires";
+                        return String.Format("Expires in {0} days {1} hrs", days, hours);
                     }
                     else
-                        if (IsExpired)
-                        {
-                            return "Expired";
-                        }
-                        else
-                        {
-                            TimeSpan ts = ExpiresIn;
-
-                            int days = (int)ts.TotalDays;
-                            int hours = (int)(ts - TimeSpan.FromDays(days)).TotalHours;
-                            int minutes = (int)(ts - TimeSpan.FromHours(hours)).TotalMinutes;
-                            int seconds = (int)(ts - TimeSpan.FromMinutes(minutes)).TotalSeconds;
-
-                            if (days > 0)
-                            {
-                                return String.Format("Expires in {0} days {1} hrs", days, hours);
-                            }
-                            else
-                                if (hours > 0)
-                                {
-                                    return String.Format("Expires in {0} hrs {1} mins", hours, minutes);
-                                }
-                                else
-                                {
-                                    return String.Format("Expires in {0} mins {1} secs", minutes, seconds);
-                                }
-                        }
+                        if (hours > 0)
+                    {
+                        return String.Format("Expires in {0} hrs {1} mins", hours, minutes);
+                    }
+                    else
+                    {
+                        return String.Format("Expires in {0} mins {1} secs", minutes, seconds);
+                    }
+                }
             }
         }
 
@@ -1501,11 +1501,11 @@ namespace Server.Items
                 }
                 else
                     if (AlreadyDone)
-                    {
-                        return false;
-                    }
-                    else
-                        return true;
+                {
+                    return false;
+                }
+                else
+                    return true;
             }
         }
 

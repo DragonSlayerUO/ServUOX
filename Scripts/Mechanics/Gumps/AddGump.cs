@@ -109,7 +109,7 @@ namespace Server.Gumps
         {
             Mobile from = sender.Mobile;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Search
                     {

@@ -15,15 +15,15 @@ namespace Server.Items
             this.Hue = 1916;
             this.LootType = LootType.Blessed;
         }
-		
-		public override void OnDoubleClick(Mobile from)
+
+        public override void OnDoubleClick(Mobile from)
         {
-			base.OnDoubleClick(from);			
-			
-			from.PublicOverheadMessage(MessageType.Regular, 0x3B2, 1154245); // *You hold the gem and admire its brilliance as it radiates blue beams of light*
+            base.OnDoubleClick(from);
+
+            from.PublicOverheadMessage(MessageType.Regular, 0x3B2, 1154245); // *You hold the gem and admire its brilliance as it radiates blue beams of light*
         }
-		
-		public override void GetProperties(ObjectPropertyList list)
+
+        public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
 

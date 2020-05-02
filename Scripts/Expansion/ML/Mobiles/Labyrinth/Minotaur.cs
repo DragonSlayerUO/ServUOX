@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -55,50 +54,30 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override int TreasureMapLevel { get { return 3; } }
+
+        public override int TreasureMapLevel => 3;
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.Rich);  // Need to verify
+            AddLoot(LootPack.Rich);
         }
 
-        // Using Tormented Minotaur sounds - Need to veryfy
-        public override int GetAngerSound()
-        {
-            return 0x597;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x596;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x599;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x59a;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x59c;
-        }
+        public override int GetAngerSound() { return 0x597; }
+        public override int GetIdleSound() { return 0x596; }
+        public override int GetAttackSound() { return 0x599; }
+        public override int GetHurtSound() { return 0x59a; }
+        public override int GetDeathSound() { return 0x59c; }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

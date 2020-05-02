@@ -10,9 +10,9 @@ namespace Server.Mobiles
     {
         Astaroth,
         Faulinei,
-        Nosfentor        
+        Nosfentor
     };
-    
+
     [CorpseName("a shadowlord corpse")]
     public class Shadowlord : BaseCreature
     {
@@ -78,7 +78,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.MagicResist, 110.2, 120.0);
             SetSkill(SkillName.Tactics, 110.1, 115.0);
             SetSkill(SkillName.Wrestling, 110.1, 115.0);
-			SetSkill(SkillName.Necromancy, 120.0);
+            SetSkill(SkillName.Necromancy, 120.0);
             SetSkill(SkillName.SpiritSpeak, 120.0);
             SetSkill(SkillName.Anatomy, 10.0, 20.0);
 
@@ -116,7 +116,7 @@ namespace Server.Mobiles
         public override int GetAngerSound() { return 1550; }
         public override int GetHurtSound() { return 1552; }
         public override int GetDeathSound() { return 1551; }
-        
+
         public class InternalSelfDeleteTimer : Timer
         {
             private Shadowlord Mare;

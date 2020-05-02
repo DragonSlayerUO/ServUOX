@@ -13,10 +13,10 @@ namespace Server.Engines.NewMagincia
         private MaginciaHousingPlot m_Plot;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MaginciaHousingPlot Plot 
-        { 
-            get { return m_Plot; } 
-            set { m_Plot = value; } 
+        public MaginciaHousingPlot Plot
+        {
+            get { return m_Plot; }
+            set { m_Plot = value; }
         }
 
         [Constructable]

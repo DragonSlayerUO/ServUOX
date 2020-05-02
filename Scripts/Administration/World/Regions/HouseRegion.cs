@@ -220,7 +220,7 @@ namespace Server.Regions
                 from.SendGump(new NoticeGump(1060635, 30720, 1061826, 32512, 320, 180, null, null));
             }
 
-            if(Core.AOS)
+            if (Core.AOS)
                 House.AddVisit(from);
 
             return true;
@@ -228,8 +228,8 @@ namespace Server.Regions
 
         public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list, Item item)
         {
-            if (House.IsOwner(from) && item.Parent == null && 
-                (House.IsLockedDown(item) || House.IsSecure(item)) && 
+            if (House.IsOwner(from) && item.Parent == null &&
+                (House.IsLockedDown(item) || House.IsSecure(item)) &&
                 !House.Addons.ContainsKey(item))
             {
                 list.Add(new ReleaseEntry(from, item, House));
@@ -284,10 +284,10 @@ namespace Server.Regions
 
             if (!isFriend)
                 return;
-			
+
             if (!from.Alive)
                 return;
-			
+
             if (Core.ML && Insensitive.Equals(e.Speech, "I wish to resize my house"))
             {
                 if (from.Map != sign.Map || !from.InRange(sign, 0))
@@ -302,14 +302,14 @@ namespace Server.Regions
                 {
                     from.CloseGump(typeof(ConfirmHouseResize));
                     from.CloseGump(typeof(HouseGumpAOS));
-                    from.SendGump(new ConfirmHouseResize(from, House));	
+                    from.SendGump(new ConfirmHouseResize(from, House));
                 }
                 else
                 {
                     from.SendLocalizedMessage(501320); // Only the house owner may do 
                 }
             }
-			
+
             if (!House.IsInside(from) || !House.IsActive)
                 return;
 
@@ -433,7 +433,7 @@ namespace Server.Regions
 
                 SecureAccessResult res = House.CheckSecureAccess(from, c);
 
-                switch ( res )
+                switch (res)
                 {
                     case SecureAccessResult.Insecure:
                         break;
@@ -467,7 +467,7 @@ namespace Server.Regions
         {
             if (House.IsLockedDown(item) || House.IsSecure(item))
             {
-                House.SetLockdown(null, item, false); 
+                House.SetLockdown(null, item, false);
             }
         }
 

@@ -17,7 +17,7 @@ namespace Server.Mobiles
             this.HairItemID = Race.Human.RandomHair(this);
             this.HairHue = Race.Human.RandomHairHue();
 
-			this.Name = NameList.RandomName("male");
+            this.Name = NameList.RandomName("male");
             this.Title = "The Exodus Zealot";
 
             this.SetStr(150, 210);
@@ -40,13 +40,13 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.Tactics, 80.0, 100.0);
             this.SetSkill(SkillName.MagicResist, 50.0, 70.0);
             this.SetSkill(SkillName.Anatomy, 70.0, 100.0);
-			this.SetSkill(SkillName.Magery, 85.0, 100.0);
-			this.SetSkill(SkillName.EvalInt, 80.0, 100.0);
-			this.SetSkill(SkillName.Poisoning, 70.0, 100.0);
+            this.SetSkill(SkillName.Magery, 85.0, 100.0);
+            this.SetSkill(SkillName.EvalInt, 80.0, 100.0);
+            this.SetSkill(SkillName.Poisoning, 70.0, 100.0);
 
             this.Fame = 10000;
             this.Karma = -10000;
-			this.VirtualArmor = 30;
+            this.VirtualArmor = 30;
 
             Item boots = new ThighBoots();
             boots.Movable = false;
@@ -65,15 +65,15 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-        
+
         public override bool AlwaysMurderer { get { return true; } }
         public override bool ShowFameTitle { get { return false; } }
-		public override Poison PoisonImmunity{ get{ return Poison.Lethal; } }
-		
+        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.FilthyRich);
-			this.AddLoot(LootPack.MedScrolls);
+            this.AddLoot(LootPack.MedScrolls);
         }
 
         public override void Serialize(GenericWriter writer)

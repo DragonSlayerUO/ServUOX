@@ -182,7 +182,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
             do
             {
-                loc = Map.TerMur.GetRandomSpawnPoint(SpawnBounds); 
+                loc = Map.TerMur.GetRandomSpawnPoint(SpawnBounds);
             }
             while (!Map.TerMur.CanSpawnMobile(loc));
 
@@ -203,9 +203,9 @@ namespace Server.Engines.TreasuresOfKotlCity
                 bc.Home = HomeLocation;
                 bc.RangeHome = HomeRange;
 
-				bc.OnBeforeSpawn(loc, Map.TerMur);
+                bc.OnBeforeSpawn(loc, Map.TerMur);
                 bc.MoveToWorld(loc, Map.TerMur);
-				bc.OnAfterSpawn();
+                bc.OnAfterSpawn();
 
                 if (Spawn == null)
                     Spawn = new List<ISpawnable>();

@@ -26,7 +26,7 @@ namespace Server.Items
                 if (map == Map.Trammel || map == Map.Felucca)
                 {
                     from.MoveToWorld(new Point3D(5922, 2024, 0), map);
-                    PublicOverheadMessage(MessageType.Regular, 0x3B2, true, string.Format("* {0} dives into the hole and disappears!*", from.Name)); 
+                    PublicOverheadMessage(MessageType.Regular, 0x3B2, true, string.Format("* {0} dives into the hole and disappears!*", from.Name));
                 }
             }
             else
@@ -79,7 +79,7 @@ namespace Server.Items
         {
             if (!m.Player || !m.Alive || m.Hidden || !SpawnKilled())
                 return;
-				
+
             if (Utility.InRange(Location, m.Location, 3) && !Utility.InRange(Location, oldLocation, 3))
             {
                 int count = 1 + Utility.Random(4);
@@ -150,7 +150,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.WriteEncodedInt(0); 
+            writer.WriteEncodedInt(0);
             writer.WriteMobileList(m_Spawned);
         }
 

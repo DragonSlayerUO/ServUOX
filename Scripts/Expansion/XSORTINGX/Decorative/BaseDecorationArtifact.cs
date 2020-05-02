@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public abstract class BaseDecorationArtifact : Item, IArtifact
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         public virtual bool ShowArtifactRarity { get { return true; } }
 
         public BaseDecorationArtifact(int itemID)
@@ -30,7 +30,7 @@ namespace Server.Items
         {
             base.GetProperties(list);
 
-            if(ShowArtifactRarity)
+            if (ShowArtifactRarity)
                 list.Add(1061078, this.ArtifactRarity.ToString()); // artifact rarity ~1_val~
         }
 

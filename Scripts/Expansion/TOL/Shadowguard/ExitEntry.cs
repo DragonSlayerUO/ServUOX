@@ -23,7 +23,7 @@ namespace Server.Engines.Shadowguard
             {
                 ShadowguardEncounter.MovePlayer(_From, ShadowguardController.Instance.KickLocation);
 
-                if(instance.Encounter != null)
+                if (instance.Encounter != null)
                     instance.Encounter.CheckPlayerStatus(_From);
             }
         }

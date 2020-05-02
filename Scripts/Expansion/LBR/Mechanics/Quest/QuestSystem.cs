@@ -118,7 +118,7 @@ namespace Server.Engines.Quests
             }
             else
             {
-                switch ( Utility.Random(3) )
+                switch (Utility.Random(3))
                 {
                     case 0:
                         who.Animate(32, 7, 1, true, false, 0);
@@ -213,7 +213,7 @@ namespace Server.Engines.Quests
 
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

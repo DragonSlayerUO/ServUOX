@@ -94,7 +94,7 @@ namespace Server.Engines.XmlSpawner2
             base.Deserialize(reader);
 
             int version = reader.ReadInt();
-            switch(version)
+            switch (version)
             {
                 case 0:
                     // version 0

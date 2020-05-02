@@ -21,7 +21,7 @@ namespace Server.Engines.Quests.Haven
         {
             m_CannonDirection = direction;
 
-            switch ( direction )
+            switch (direction)
             {
                 case CannonDirection.North:
                     {
@@ -93,7 +93,7 @@ namespace Server.Engines.Quests.Haven
         public void DoFireEffect(IPoint3D target)
         {
             Point3D from;
-            switch ( m_CannonDirection )
+            switch (m_CannonDirection)
             {
                 case CannonDirection.North:
                     from = new Point3D(X, Y - 1, Z);
@@ -132,7 +132,7 @@ namespace Server.Engines.Quests.Haven
                 return;
 
             bool canFire;
-            switch ( m_CannonDirection )
+            switch (m_CannonDirection)
             {
                 case CannonDirection.North:
                     canFire = m.X >= X - 7 && m.X <= X + 7 && m.Y == Y - 7 && oldLocation.Y < Y - 7;

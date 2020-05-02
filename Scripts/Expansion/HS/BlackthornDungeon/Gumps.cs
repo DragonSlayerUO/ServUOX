@@ -10,12 +10,12 @@ using Server.Commands;
 
 namespace Server.Engines.Blackthorn
 {
-	public class BlackthornRewardGump : BaseRewardGump
-	{
+    public class BlackthornRewardGump : BaseRewardGump
+    {
         public BlackthornRewardGump(Mobile owner, PlayerMobile user)
             : base(owner, user, BlackthornRewards.Rewards, 1154516)
-		{
-		}
+        {
+        }
 
         public override double GetPoints(Mobile m)
         {
@@ -26,5 +26,5 @@ namespace Server.Engines.Blackthorn
         {
             PointsSystem.Blackthorn.DeductPoints(User, points);
         }
-	}
+    }
 }

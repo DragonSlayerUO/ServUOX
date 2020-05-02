@@ -69,7 +69,7 @@ namespace Server.Gumps
             if (GuildGump.BadLeader(this.m_Mobile, this.m_Guild))
                 return;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Declare war
                     {

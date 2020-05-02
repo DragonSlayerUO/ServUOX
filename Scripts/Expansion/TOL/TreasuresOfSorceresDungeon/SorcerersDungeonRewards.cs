@@ -9,7 +9,7 @@ namespace Server.Engines.SorcerersDungeon
     public static class SorcerersDungeonRewards
     {
         public static List<CollectionItem> Rewards { get; set; }
-        
+
         public static void Initialize()
         {
             Rewards = new List<CollectionItem>();

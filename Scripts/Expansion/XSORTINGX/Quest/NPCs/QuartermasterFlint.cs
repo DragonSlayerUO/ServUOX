@@ -61,10 +61,10 @@ namespace Server.Engines.Quests
         }
 
         public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write((int)0);
-		}
+        {
+            base.Serialize(writer);
+            writer.Write((int)0);
+        }
 
         public override void Deserialize(GenericReader reader)
         {
@@ -155,7 +155,7 @@ namespace Server.Engines.Quests
         {
             get
             {
-                return new Type[] 
+                return new Type[]
                 {
                     typeof(ThievesBeAfootQuest)
                 };

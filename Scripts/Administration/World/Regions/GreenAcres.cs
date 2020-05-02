@@ -18,7 +18,7 @@ namespace Server.Regions
         {
             if (from.IsPlayer())
                 return false;
-            
+
             return base.AllowHousing(from, p);
         }
 

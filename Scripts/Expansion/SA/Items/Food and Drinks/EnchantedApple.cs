@@ -14,7 +14,7 @@ namespace Server.Items
         {
             Weight = 1.0;
             Hue = 0x488;
-	        Stackable = true;
+            Stackable = true;
         }
 
         public EnchantedApple(Serial serial)

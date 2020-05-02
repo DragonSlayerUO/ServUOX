@@ -210,7 +210,7 @@ namespace Server.Gumps
                 {
                     VirtueLevel level = VirtueHelper.GetLevel(m_Healer, VirtueName.Compassion);
 
-                    switch( level )
+                    switch (level)
                     {
                         case VirtueLevel.Seeker:
                             from.Hits = AOS.Scale(from.HitsMax, 20);

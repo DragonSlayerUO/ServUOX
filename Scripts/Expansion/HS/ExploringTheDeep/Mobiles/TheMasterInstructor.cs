@@ -52,7 +52,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Wrestling, 75.1, 100.0);
             SetSkill(SkillName.Necromancy, 120.0);
             SetSkill(SkillName.SpiritSpeak, 120.0);
-			SetSkill(SkillName.DetectHidden, 100.0);
+            SetSkill(SkillName.DetectHidden, 100.0);
 
             Fame = 23000;
             Karma = -23000;
@@ -63,7 +63,7 @@ namespace Server.Mobiles
             Timer SelfDeleteTimer = new InternalSelfDeleteTimer(this);
             SelfDeleteTimer.Start();
         }
-        
+
         public class InternalSelfDeleteTimer : Timer
         {
             private TheMasterInstructor Mare;
@@ -129,7 +129,7 @@ namespace Server.Mobiles
         {
             if (Instances.Count > 0)
                 return null;
-            
+
             TheMasterInstructor creature = new TheMasterInstructor(controller);
             creature.Home = platLoc;
             creature.RangeHome = 4;

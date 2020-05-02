@@ -163,21 +163,21 @@ namespace Server.Regions
             if (r == null)
                 return;
 
-            foreach (var player in r.GetEnumeratedMobiles().Where(p => p is PlayerMobile && 
+            foreach (var player in r.GetEnumeratedMobiles().Where(p => p is PlayerMobile &&
                                                                        p.Alive /*&&
                                                                        QuestHelper.GetQuest((PlayerMobile)p, typeof(ProfessionalBountyQuest)) != null*/))
             {
-                    IPooledEnumerable eable = player.GetMobilesInRange(4);
+                IPooledEnumerable eable = player.GetMobilesInRange(4);
 
-                    foreach (Mobile mob in eable)
+                foreach (Mobile mob in eable)
+                {
+                    if (mob is BaseVendor || mob is MondainQuester || mob is GalleonPilot)
                     {
-                        if (mob is BaseVendor || mob is MondainQuester || mob is GalleonPilot)
-                        {
-                            TryPirateBlab(player, mob);
-                            break;
-                        }
+                        TryPirateBlab(player, mob);
+                        break;
                     }
-                    eable.Free();
+                }
+                eable.Free();
             }
         }
         #endregion
@@ -271,10 +271,10 @@ namespace Server.Regions
 
         private Rectangle2D[] m_KickLocs = new Rectangle2D[]
         {
-	        new Rectangle2D(m_Bounds[0].X - 100, m_Bounds[0].X - 100, 200 + m_Bounds[0].Width, 100),
-	        new Rectangle2D(m_Bounds[0].X - 100, m_Bounds[0].Y, 100, m_Bounds[0].Height + 100),
-	        new Rectangle2D(m_Bounds[0].X, m_Bounds[0].Y + m_Bounds[0].Height, m_Bounds[0].Width + 100, 100),
-	        new Rectangle2D(m_Bounds[0].X + m_Bounds[0].Width, m_Bounds[0].Y, 100, m_Bounds[0].Height),
+            new Rectangle2D(m_Bounds[0].X - 100, m_Bounds[0].X - 100, 200 + m_Bounds[0].Width, 100),
+            new Rectangle2D(m_Bounds[0].X - 100, m_Bounds[0].Y, 100, m_Bounds[0].Height + 100),
+            new Rectangle2D(m_Bounds[0].X, m_Bounds[0].Y + m_Bounds[0].Height, m_Bounds[0].Width + 100, 100),
+            new Rectangle2D(m_Bounds[0].X + m_Bounds[0].Width, m_Bounds[0].Y, 100, m_Bounds[0].Height),
         };
 
         public bool KickBoat(BaseBoat boat)

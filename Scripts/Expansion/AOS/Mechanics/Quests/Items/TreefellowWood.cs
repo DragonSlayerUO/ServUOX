@@ -6,7 +6,7 @@ namespace Server.Items
         public TreefellowWood()
             : base(0x1BDD)
         {
-            Name = "Treefellow Wood";  
+            Name = "Treefellow Wood";
 
             Hue = 2425;
             Movable = true;

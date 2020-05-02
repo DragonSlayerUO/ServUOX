@@ -39,7 +39,7 @@ namespace Server.Mobiles
 
             Fame = 9000;
             Karma = -9000;
-                       
+
             SetWeaponAbility(WeaponAbility.DoubleStrike);
         }
 

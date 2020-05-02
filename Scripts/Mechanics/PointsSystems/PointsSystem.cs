@@ -31,7 +31,7 @@ namespace Server.Engines.Points
         Moonglow,
         Britain,
         Jhelom,
-        Yew, 
+        Yew,
         Minoc,
         Trinsic,
         SkaraBrae,
@@ -78,7 +78,7 @@ namespace Server.Engines.Points
 
         private static void AddSystem(PointsSystem system)
         {
-            if(Systems.FirstOrDefault(s => s.Loyalty == system.Loyalty) != null)
+            if (Systems.FirstOrDefault(s => s.Loyalty == system.Loyalty) != null)
                 return;
 
             Systems.Add(system);
@@ -130,7 +130,7 @@ namespace Server.Engines.Points
         {
             PointsEntry entry = GetEntry(pm);
 
-            if(entry != null)
+            if (entry != null)
                 entry.Points = points;
         }
 
@@ -173,7 +173,7 @@ namespace Server.Engines.Points
             {
                 PlayerTable.Add(entry);
 
-                if(!existed)
+                if (!existed)
                     OnPlayerAdded(pm);
             }
 
@@ -196,7 +196,7 @@ namespace Server.Engines.Points
         }
 
         public PointsEntry GetEntry(Mobile from, bool create = false)
-		{
+        {
             PlayerMobile pm = from as PlayerMobile;
 
             if (pm == null)
@@ -206,9 +206,9 @@ namespace Server.Engines.Points
 
             if (entry == null && (create || AutoAdd))
                 entry = AddEntry(pm);
-				
-			return entry;
-		}
+
+            return entry;
+        }
 
         public TEntry GetPlayerEntry<TEntry>(Mobile mobile, bool create = false) where TEntry : PointsEntry
         {
@@ -234,7 +234,7 @@ namespace Server.Engines.Points
         {
             return new PointsEntry(pm);
         }
-        
+
         public int Version { get; set; }
 
         public virtual void Serialize(GenericWriter writer)
@@ -259,28 +259,28 @@ namespace Server.Engines.Points
                 case 2: // added serialize/deserialize in all base classes. Poor implementation on my part, should have had from the get-go
                 case 1:
                 case 0:
-					{
-	                    int count = reader.ReadInt();
+                    {
+                        int count = reader.ReadInt();
 
-	                    for (int i = 0; i < count; i++)
-	                    {
-	                        PlayerMobile player = reader.ReadMobile() as PlayerMobile;
-	                        PointsEntry entry = GetSystemEntry(player);
-	
-	                        if (Version > 0)
-	                            entry.Deserialize(reader);
-	                        else
-	                            entry.Points = reader.ReadDouble();
-	
-	                        if (player != null)
-	                        {
-	                            if (!PlayerTable.Contains(entry))
-	                            {
-	                                PlayerTable.Add(entry);
-	                            }
-	                        }
-	                    }
-					}
+                        for (int i = 0; i < count; i++)
+                        {
+                            PlayerMobile player = reader.ReadMobile() as PlayerMobile;
+                            PointsEntry entry = GetSystemEntry(player);
+
+                            if (Version > 0)
+                                entry.Deserialize(reader);
+                            else
+                                entry.Points = reader.ReadDouble();
+
+                            if (player != null)
+                            {
+                                if (!PlayerTable.Contains(entry))
+                                {
+                                    PlayerTable.Add(entry);
+                                }
+                            }
+                        }
+                    }
                     break;
             }
         }
@@ -410,9 +410,9 @@ namespace Server.Engines.Points
     }
 
     public class PointsEntry
-	{
+    {
         [CommandProperty(AccessLevel.GameMaster)]
-		public PlayerMobile Player { get; private set; }
+        public PlayerMobile Player { get; private set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public double Points { get; set; }
@@ -422,11 +422,11 @@ namespace Server.Engines.Points
             Player = pm;
         }
 
-		public PointsEntry(PlayerMobile pm, double points)
-		{
-			Player = pm;
-			Points = points;
-		}
+        public PointsEntry(PlayerMobile pm, double points)
+        {
+            Player = pm;
+            Points = points;
+        }
 
         public override bool Equals(object o)
         {
@@ -445,19 +445,19 @@ namespace Server.Engines.Points
 
             return base.GetHashCode();
         }
-		
-		public virtual void Serialize(GenericWriter writer)
-		{
-			writer.Write(0);
-			writer.Write(Player);
-			writer.Write(Points);
-		}
-		
-		public virtual void Deserialize(GenericReader reader)
-		{
-			int version = reader.ReadInt();
-			Player = reader.ReadMobile() as PlayerMobile;
-			Points = reader.ReadDouble();
-		}
-	}
+
+        public virtual void Serialize(GenericWriter writer)
+        {
+            writer.Write(0);
+            writer.Write(Player);
+            writer.Write(Points);
+        }
+
+        public virtual void Deserialize(GenericReader reader)
+        {
+            int version = reader.ReadInt();
+            Player = reader.ReadMobile() as PlayerMobile;
+            Points = reader.ReadDouble();
+        }
+    }
 }

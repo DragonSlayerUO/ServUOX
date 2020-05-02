@@ -165,7 +165,7 @@ namespace Server.Items
                     this.m_Controller.Array.Find(s => s.Mobile == from).Tunic = true;
                     from.PublicOverheadMessage(MessageType.Regular, 0x3B2, 1154221); // *You carefully examine the garment and take note of it's superior quality. You surmise it would be useful in keeping you warm in a cold environment*
                 }
-                
+
                 if (ClickCheck(from) == 1)
                 {
                     PlayerMobile pm = from as PlayerMobile;
@@ -197,7 +197,7 @@ namespace Server.Items
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-            
+
             this.m_Controller = reader.ReadItem() as MasterThinkerContoller;
             this.m_Type = (DecorType)reader.ReadInt();
         }

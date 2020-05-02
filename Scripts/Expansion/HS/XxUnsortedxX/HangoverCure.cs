@@ -4,7 +4,7 @@ namespace Server.Engines.Quests.Hag
 {
     public class HangoverCure : Item
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         private int m_Uses;
         [Constructable]
         public HangoverCure()
@@ -83,7 +83,7 @@ namespace Server.Engines.Quests.Hag
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

@@ -46,7 +46,7 @@ namespace Server.Items
         }
 
         [Constructable]
-        public ChocolateNutcracker(ChocolateType type) 
+        public ChocolateNutcracker(ChocolateType type)
             : base(39952)
         {
             Wrapped = true;
@@ -76,8 +76,8 @@ namespace Server.Items
         }
 
         private void Unwrap(Mobile from)
-		{
-			from.PrivateOverheadMessage(Server.Network.MessageType.Regular, 1154, 1156393, from.NetState); // *You carefully peel back the wrapper...*
+        {
+            from.PrivateOverheadMessage(Server.Network.MessageType.Regular, 1154, 1156393, from.NetState); // *You carefully peel back the wrapper...*
             from.PlaySound(Utility.Random(0x21F, 4));
 
             Timer.DelayCall(TimeSpan.FromSeconds(1), () =>
@@ -90,11 +90,11 @@ namespace Server.Items
 
                 Wrapped = false;
             });
-		}
+        }
 
         public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
         {
-            if(!_Wrapped)
+            if (!_Wrapped)
                 base.GetContextMenuEntries(from, list);
         }
 

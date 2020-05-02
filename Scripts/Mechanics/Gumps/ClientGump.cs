@@ -150,7 +150,7 @@ namespace Server.Gumps
                 return;
             }
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Tell
                     {

@@ -48,7 +48,7 @@ namespace Server.Items
         {
             if (from.Region != null && from.Region.IsPartOf("Twisted Weald"))
                 return base.CanOfferConfirmation(from);
-				
+
             return false;
         }
     }

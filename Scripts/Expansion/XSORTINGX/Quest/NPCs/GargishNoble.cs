@@ -4,7 +4,7 @@ using Server.Items;
 namespace Server.Mobiles
 {
     public class GargishNoble : BaseEscortable
-    { 
+    {
         [Constructable]
         public GargishNoble() //: base(AIType.AI_Animal, FightMode.None, 10, 1, 0.2, 0.4)
         {
@@ -13,7 +13,7 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.Parry, 80.0, 100.0);
             this.SetSkill(SkillName.Swords, 80.0, 100.0);
             this.SetSkill(SkillName.Tactics, 80.0, 100.0);
-		
+
             if (this.Female = Utility.RandomBool())
             {
                 this.Body = 667;

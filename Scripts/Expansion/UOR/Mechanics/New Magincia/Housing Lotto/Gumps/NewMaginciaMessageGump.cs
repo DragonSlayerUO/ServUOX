@@ -11,12 +11,12 @@ namespace Server.Engines.NewMagincia
         public List<NewMaginciaMessage> Messages;
 
         public readonly int LightBlueColor = 0x4AFD;
-        public readonly int GreenColor = 0x4BB7;        
+        public readonly int GreenColor = 0x4BB7;
 
         public NewMaginciaMessageGump(PlayerMobile from)
             : base(from, 490, 30)
         {
-            Messages = MaginciaLottoSystem.GetMessages(from);            
+            Messages = MaginciaLottoSystem.GetMessages(from);
         }
 
         public override void AddGumpLayout()
@@ -62,7 +62,7 @@ namespace Server.Engines.NewMagincia
             : base(from, 490, 30)
         {
             Widescreen = widescreen;
-            Messages = MaginciaLottoSystem.GetMessages(from);            
+            Messages = MaginciaLottoSystem.GetMessages(from);
         }
 
         public override void AddGumpLayout()
@@ -174,7 +174,7 @@ namespace Server.Engines.NewMagincia
             Messages = messages;
             Message = messages[messageid];
 
-            
+
         }
 
         public override void AddGumpLayout()

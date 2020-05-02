@@ -92,7 +92,7 @@ namespace Server.Mobiles
             init = true;
         }
         #endregion
-        
+
         #region Broadcast Message
         public void BroadcastMessage()
         {

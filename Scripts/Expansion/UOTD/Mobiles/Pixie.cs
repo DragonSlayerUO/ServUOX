@@ -60,7 +60,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.Gems, 2);
         }
 
-		public override void OnDeath(Container CorpseLoot)
+        public override void OnDeath(Container CorpseLoot)
         {
             if (0.02 > Utility.RandomDouble())
                 CorpseLoot.DropItem(Loot.RandomStatue());

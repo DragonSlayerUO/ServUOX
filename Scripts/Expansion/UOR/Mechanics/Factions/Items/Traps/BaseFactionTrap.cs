@@ -192,7 +192,7 @@ namespace Server.Factions
                 }
             }
 
-            switch( AllowedPlacing )
+            switch (AllowedPlacing)
             {
                 case AllowedPlacing.FactionStronghold:
                     {

@@ -10,14 +10,14 @@ namespace Server.Items
         [Constructable]
         public ObsidianSkull()
             : base(0x9A1E)
-        {          
+        {
         }
 
         public ObsidianSkull(Serial serial)
             : base(serial)
         {
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

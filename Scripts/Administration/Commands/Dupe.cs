@@ -172,7 +172,7 @@ namespace Server.Commands
                         done = true;
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.StackTrace);
 

@@ -14,7 +14,7 @@ namespace Server.Items
 
         public override int LabelNumber { get { return 1071520; } } // Smuggler's Tool Box
 
-        [Constructable] 
+        [Constructable]
         public SmugglersToolBox()
            : base(0x1EB6)
         {

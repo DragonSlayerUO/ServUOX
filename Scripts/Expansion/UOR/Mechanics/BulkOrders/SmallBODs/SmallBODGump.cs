@@ -85,7 +85,7 @@ namespace Server.Engines.BulkOrders
 
                 int points = 0;
                 double banked = 0.0;
-                
+
                 BulkOrderSystem.ComputePoints(deed, out points, out banked);
 
                 AddHtmlLocalized(75, y, 300, 20, 1157301, String.Format("{0}\t{1}", points, banked.ToString("0.000000")), 0x7FFF, false, false); // Worth ~1_POINTS~ turn in points and ~2_POINTS~ bank points.

@@ -57,7 +57,7 @@ namespace Server
         {
             int type = reader.ReadEncodedInt();
 
-            switch ( type )
+            switch (type)
             {
                 case 0:
                     return new TextDefinition();

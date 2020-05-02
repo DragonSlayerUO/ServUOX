@@ -46,7 +46,7 @@ namespace Server.Mobiles
             VirtualArmor = 50;
 
             CanSwim = true;
-            CantWalk = true;                   
+            CantWalk = true;
         }
 
         public Kraken(Serial serial)

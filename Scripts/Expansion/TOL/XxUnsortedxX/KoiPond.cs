@@ -11,7 +11,7 @@ namespace Server.Items
         Medium,
         Large,
     }
-    
+
     public class KoiPondAddon : BaseAddon
     {
         public override BaseAddonDeed Deed { get { return new KoiPondDeed(); } }
@@ -104,7 +104,7 @@ namespace Server.Items
             int version = reader.ReadInt();
         }
     }
-    
+
     public class KoiPondDeed : BaseAddonDeed
     {
         public override int LabelNumber { get { return 1157996; } } // Koi Pond

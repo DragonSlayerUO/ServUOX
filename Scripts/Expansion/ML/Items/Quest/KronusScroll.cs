@@ -35,7 +35,7 @@ namespace Server.Engines.Quests.Necro
 
             if (qs == null)
                 return true;
-            
+
             return false;
         }
 

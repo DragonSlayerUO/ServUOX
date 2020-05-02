@@ -15,7 +15,7 @@ namespace Server.Items
         public static EtherealSoulcleanser InstanceFel { get; set; }
 
         [Constructable]
-        public EtherealSoulcleanser() 
+        public EtherealSoulcleanser()
             : base(0x2DF4)
         {
             Hue = 2591;

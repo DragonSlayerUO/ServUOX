@@ -7,8 +7,8 @@ using Server.Gumps;
 
 namespace Server.Engines.VvV
 {
-	public class ForgedRoyalPardon : Item
-	{
+    public class ForgedRoyalPardon : Item
+    {
         public override int LabelNumber { get { return 1155524; } } // Forged Royal Pardon
 
         [Constructable]
@@ -66,19 +66,19 @@ namespace Server.Engines.VvV
 
         public ForgedRoyalPardon(Serial serial)
             : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
-		}
-	}
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
 }

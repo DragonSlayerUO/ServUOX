@@ -17,8 +17,8 @@ namespace Server.Commands
         [Description("Deletes world/shop signs on all facets.")]
         public static void SignGenDelete_OnCommand(CommandEventArgs c)
         {
-			WeakEntityCollection.Delete("sign");
-			// Retained for backward compatibility
+            WeakEntityCollection.Delete("sign");
+            // Retained for backward compatibility
             Parse(c.Mobile);
         }
 
@@ -60,7 +60,7 @@ namespace Server.Commands
                     SignEntry e = list[i];
                     Map[] maps = null;
 
-                    switch ( e.m_Map )
+                    switch (e.m_Map)
                     {
                         case 0:
                             maps = brit;

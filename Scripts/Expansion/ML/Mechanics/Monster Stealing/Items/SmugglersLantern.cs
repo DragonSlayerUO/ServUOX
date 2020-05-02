@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber { get { return 1071521; } } // Smuggler's Lantern
 
-        [Constructable] 
+        [Constructable]
         public SmugglersLantern()
         {
             Hue = Utility.RandomMinMax(192, 291);

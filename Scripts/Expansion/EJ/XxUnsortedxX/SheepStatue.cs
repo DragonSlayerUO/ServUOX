@@ -111,7 +111,7 @@ namespace Server.Items
                 {
                     Item res = null;
 
-                    switch ( Utility.Random(5) )
+                    switch (Utility.Random(5))
                     {
                         case 0: res = new Wool(); break;
                         case 1: res = new Leather(); break;
@@ -147,7 +147,7 @@ namespace Server.Items
         private class InternalAddonComponent : AddonComponent
         {
             public InternalAddonComponent(int id)
-                :base(id)
+                : base(id)
             {
             }
 

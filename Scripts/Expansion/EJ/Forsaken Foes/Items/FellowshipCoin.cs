@@ -7,7 +7,7 @@ namespace Server.Items
     public class FellowshipCoin : Item
     {
         public override int LabelNumber { get { return 1159036; } } // The Fellowship Coin
-        
+
         [Constructable]
         public FellowshipCoin()
             : base(0x2F60)

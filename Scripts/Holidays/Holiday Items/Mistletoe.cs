@@ -104,7 +104,7 @@ namespace Server.Items
                     return false;
                 }
             }
-            else 
+            else
             {
                 return false;
             }
@@ -343,7 +343,7 @@ namespace Server.Items
                 if (this.m_Deed.Deleted)
                     return;
 
-                switch( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     case 1:
                         this.m_Deed.PlaceAddon(this.m_From, this.m_Loc, false, true);

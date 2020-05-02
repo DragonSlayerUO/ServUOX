@@ -23,7 +23,7 @@ namespace Server.Engines.VvV
         Assist,
         Steal,
         TurnInVice,
-        TurnInVirtue, 
+        TurnInVirtue,
         Disarm
     }
 
@@ -226,7 +226,7 @@ namespace Server.Engines.VvV
 
             NextAltarActivate = DateTime.UtcNow + TimeSpan.FromMinutes(1);
 
-            System.SendVvVMessage(1154721, String.Format("#{0}", ViceVsVirtueSystem.GetCityLocalization(City).ToString())); 
+            System.SendVvVMessage(1154721, String.Format("#{0}", ViceVsVirtueSystem.GetCityLocalization(City).ToString()));
             // A Battle between Vice and Virtue is active! To Arms! The City of ~1_CITY~ is besieged!
         }
 
@@ -243,10 +243,10 @@ namespace Server.Engines.VvV
 
         public void SpawnPriests(bool movetoworld = true)
         {
-            if(VicePriest == null || VicePriest.Deleted)
+            if (VicePriest == null || VicePriest.Deleted)
                 VicePriest = new VvVPriest(VvVType.Vice, this);
 
-            if(VirtuePriest == null || VirtuePriest.Deleted)
+            if (VirtuePriest == null || VirtuePriest.Deleted)
                 VirtuePriest = new VvVPriest(VvVType.Virtue, this);
 
             if (movetoworld)
@@ -459,13 +459,13 @@ namespace Server.Engines.VvV
 
             foreach (VvVAltar altar in Altars)
             {
-                if(!altar.Deleted)
+                if (!altar.Deleted)
                     altar.Delete();
             }
 
             foreach (VvVTrap trap in Traps)
             {
-                if(!trap.Deleted)
+                if (!trap.Deleted)
                     trap.Delete();
             }
 
@@ -699,8 +699,8 @@ namespace Server.Engines.VvV
 
             BattleTeam killerTeam = GetTeam(killer.Guild);
             BattleTeam victimTeam = null;
-            
-            if(victim != null)
+
+            if (victim != null)
                 victimTeam = GetTeam(victim.Guild);
 
             switch (type)
@@ -732,7 +732,7 @@ namespace Server.Engines.VvV
 
                     break;
                 case UpdateType.Assist:
-                    if (killerStats != null) 
+                    if (killerStats != null)
                         killerStats.Assists++;
 
                     if (killerTeam != null)
@@ -918,7 +918,7 @@ namespace Server.Engines.VvV
                 score = teams[0].Score;
                 return teams[0];
             }
-            
+
             return null;
         }
 
@@ -1027,7 +1027,7 @@ namespace Server.Engines.VvV
         {
             Messages.Add(message);
 
-            if(sendgumps)
+            if (sendgumps)
                 UpdateAllGumps();
         }
 
@@ -1167,7 +1167,7 @@ namespace Server.Engines.VvV
             }
             else
                 writer.Write(1);
-            
+
         }
     }
 }

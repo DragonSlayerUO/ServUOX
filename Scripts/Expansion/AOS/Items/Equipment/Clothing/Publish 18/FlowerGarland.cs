@@ -6,7 +6,7 @@ namespace Server.Items
     public class BegFlowerGarland : FlowerGarland
     {
         [Constructable]
-        public BegFlowerGarland() 
+        public BegFlowerGarland()
         {
             ItemID = Utility.RandomDouble() > .5 ? 8965 : 8966;
         }

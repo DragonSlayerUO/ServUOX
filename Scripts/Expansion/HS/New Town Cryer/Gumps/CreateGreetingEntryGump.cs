@@ -171,7 +171,7 @@ namespace Server.Services.TownCryer
                     }
                 }
 
-                if(!Edit && (expires < 1 || expires > 30))
+                if (!Edit && (expires < 1 || expires > 30))
                 {
                     User.SendLocalizedMessage(1158033); // The expiry can be between 1 and 30 days. Please check your entry and try again.
                 }

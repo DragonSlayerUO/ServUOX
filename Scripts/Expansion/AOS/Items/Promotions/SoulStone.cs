@@ -852,7 +852,7 @@ namespace Server.Items
 
             int version = reader.ReadEncodedInt();
 
-            switch( version )
+            switch (version)
             {
                 case 3:
                     {
@@ -1051,7 +1051,7 @@ namespace Server.Items
 
         public void Flip()
         {
-            switch( ItemID )
+            switch (ItemID)
             {
                 case 0x2ADC:
                     ItemID = 0x2AEC;
@@ -1141,7 +1141,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

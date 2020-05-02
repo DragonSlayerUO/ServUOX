@@ -50,7 +50,7 @@ namespace Server.Items
 
         public override BaseAddon Addon { get { return new SpikeColumnAddon(); } }
 
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

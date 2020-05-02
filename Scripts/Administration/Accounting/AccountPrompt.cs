@@ -13,7 +13,7 @@ namespace Server.Misc
                 Write("Do you want to create the owner account now? (y/n)");
 
                 string key = ReadLine();
- 
+
                 if (key.ToUpper() == "Y")
                 {
                     WriteLine();

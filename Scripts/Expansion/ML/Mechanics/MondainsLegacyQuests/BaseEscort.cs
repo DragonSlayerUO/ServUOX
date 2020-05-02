@@ -170,7 +170,7 @@ namespace Server.Engines.Quests
                 m_EscortTable.Remove(m);
 
             m_DeleteTimer = Timer.DelayCall(TimeSpan.FromSeconds(45.0), new TimerCallback(Delete));
-        }        
+        }
 
         public virtual bool AcceptEscorter(Mobile m)
         {
@@ -411,7 +411,7 @@ namespace Server.Engines.Quests
                     owner.PlaySound(0x5B3);
                     escort.Delete();
                 }));
-            }            
+            }
         }
     }
 }

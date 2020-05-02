@@ -170,7 +170,7 @@ namespace Server.Items
                         Table = new Dictionary<BaseCreature, DateTime>();
 
                     Table[bc] = dt;
-                    
+
                     Timer.DelayCall(dt - DateTime.UtcNow, RemoveInfluence, bc);
                 }
             }
@@ -190,7 +190,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class YellowFinBluebelly : BaseFish
-    { 
+    {
         [Constructable]
         public YellowFinBluebelly()
             : base(0x3B07)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public YellowFinBluebelly(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

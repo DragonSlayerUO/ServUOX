@@ -119,7 +119,7 @@ namespace Server.Spells.Ninjitsu
                 Effects.SendLocationParticles(EffectItem.Create(from, m.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 2023);
 
                 m.PlaySound(0x512);
-				
+
                 Server.SkillHandlers.Stealth.OnUse(m); // stealth check after the a jump
             }
 

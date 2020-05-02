@@ -221,7 +221,7 @@ namespace Server.Misc
             {
                 title.AppendFormat(pm.FameKarmaTitle, beheld.Name, beheld.Female ? "Lady" : "Lord");
             }
-			else if (beheld.ShowFameTitle || (beholder == beheld))
+            else if (beheld.ShowFameTitle || (beholder == beheld))
             {
                 title.Append(ComputeFameTitle(beheld));
             }
@@ -239,7 +239,7 @@ namespace Server.Misc
                     if (pm.CurrentChampTitle != null)
                         title.AppendFormat(pm.CurrentChampTitle);
                 }
-				else if (info.Harrower > 0)
+                else if (info.Harrower > 0)
                     title.AppendFormat(": {0} of Evil", HarrowerTitles[Math.Min(HarrowerTitles.Length, info.Harrower) - 1]);
                 else
                 {
@@ -275,8 +275,8 @@ namespace Server.Misc
             {
                 if (pm != null && pm.PaperdollSkillTitle != null)
                     title.Append(", ").Append(pm.PaperdollSkillTitle);
-                else if (beheld is BaseVendor) 
-					title.AppendFormat(" {0}", customTitle);
+                else if (beheld is BaseVendor)
+                    title.AppendFormat(" {0}", customTitle);
             }
             else if (customTitle != null && (customTitle = customTitle.Trim()).Length > 0)
             {
@@ -372,7 +372,7 @@ namespace Server.Misc
 
         private static int GetTableType(Skill skill)
         {
-            switch ( skill.SkillName )
+            switch (skill.SkillName)
             {
                 default:
                     return 0;

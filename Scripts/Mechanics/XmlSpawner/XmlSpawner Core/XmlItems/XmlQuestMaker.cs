@@ -21,10 +21,10 @@ using System.Xml;
 namespace Server.Items
 {
 
-	public class XmlQuestMaker : Item
+    public class XmlQuestMaker : Item
     {
 
-        public XmlQuestMaker( Serial serial ) : base( serial )
+        public XmlQuestMaker(Serial serial) : base(serial)
         {
         }
 
@@ -38,26 +38,26 @@ namespace Server.Items
         }
 
 
-        public override void Serialize( GenericWriter writer )
+        public override void Serialize(GenericWriter writer)
         {
-            base.Serialize( writer );
-            writer.Write( (int) 0 ); // version
+            base.Serialize(writer);
+            writer.Write((int)0); // version
 
         }
 
-        public override void Deserialize( GenericReader reader )
+        public override void Deserialize(GenericReader reader)
         {
-            base.Deserialize( reader );
+            base.Deserialize(reader);
 
             int version = reader.ReadInt();
 
         }
 
-         public override void OnDoubleClick( Mobile from )
+        public override void OnDoubleClick(Mobile from)
         {
             base.OnDoubleClick(from);
 
-            if(!(from is PlayerMobile)) return;
+            if (!(from is PlayerMobile)) return;
 
             // make a quest note
             QuestHolder newquest = new QuestHolder();

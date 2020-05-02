@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B04, 0x2B05)]
     public class HumilityCloak : BaseClothing
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public HumilityCloak()
             : base(0x2B04, Layer.Cloak)
@@ -14,8 +14,8 @@ namespace Server.Items
             this.Weight = 6.0;
             this.SetHue = 0;
             this.Hue = 0x226;
-			
-            this.SetSelfRepair = 5;			
+
+            this.SetSelfRepair = 5;
             this.SetPhysicalBonus = 5;
             this.SetFireBonus = 5;
             this.SetColdBonus = 5;
@@ -73,14 +73,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
+
             writer.Write((int)0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

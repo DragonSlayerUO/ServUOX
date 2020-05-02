@@ -58,8 +58,8 @@ namespace Server.Mobiles
         {
             base.OnDeath(c);
 
-            if (Utility.RandomDouble() < 0.03)            
-                c.DropItem(new LuckyCoin());            
+            if (Utility.RandomDouble() < 0.03)
+                c.DropItem(new LuckyCoin());
         }
 
         public override int GetIdleSound()

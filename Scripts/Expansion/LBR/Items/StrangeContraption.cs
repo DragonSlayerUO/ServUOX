@@ -11,7 +11,7 @@ namespace Server.Items
     public class StrangeContraptionComponent : AddonComponent
     {
         public override bool ForceShowProperties => true;
-        
+
         public StrangeContraptionComponent(int id, int hue = 0)
             : base(id)
         {
@@ -95,7 +95,7 @@ namespace Server.Items
                         {
                             m_Mobile.SendLocalizedMessage(1055142, "", 0x59); // You do not have the necessary ingredients. The contraptions rumbles angrily but does nothing.
                         }
-                    }                    
+                    }
                 }
                 else
                 {
@@ -123,7 +123,7 @@ namespace Server.Items
         public static StrangeContraptionAddon InstanceFel { get; set; }
 
         public static void Initialize()
-        {            
+        {
             if (Core.LBR)
             {
                 if (InstanceTram == null)
@@ -167,7 +167,7 @@ namespace Server.Items
             AddComponent(new StrangeContraptionComponent(2643), 1, 0, 3);
             AddComponent(new StrangeContraptionComponent(6434), 2, 0, 1);
             AddComponent(new StrangeContraptionComponent(4758, 1545), -1, 0, 0);
-            AddComponent(new StrangeContraptionComponent(4272, 1545), - 1, 0, 1);
+            AddComponent(new StrangeContraptionComponent(4272, 1545), -1, 0, 1);
             AddComponent(new StrangeContraptionComponent(6039, 999), 2, 0, 20);
             AddComponent(new StrangeContraptionComponent(6040, 999), 1, 0, 20);
         }

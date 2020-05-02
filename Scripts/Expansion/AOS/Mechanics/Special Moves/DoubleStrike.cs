@@ -1,7 +1,7 @@
 namespace Server.Items
 {
-	public class DoubleStrike : WeaponAbility
-	{
+    public class DoubleStrike : WeaponAbility
+    {
         public override int BaseMana => 30;
         public override double DamageScalar => 0.9;
 
@@ -15,21 +15,21 @@ namespace Server.Items
             return true;
         }
 
-		public override void OnHit(Mobile attacker, Mobile defender, int damage)
-		{
-			if (!Validate(attacker) || !CheckMana(attacker, true))
-			{
-				return;
-			}
+        public override void OnHit(Mobile attacker, Mobile defender, int damage)
+        {
+            if (!Validate(attacker) || !CheckMana(attacker, true))
+            {
+                return;
+            }
 
-			ClearCurrentAbility(attacker);
+            ClearCurrentAbility(attacker);
 
-			BaseWeapon weapon = attacker.Weapon as BaseWeapon;
+            BaseWeapon weapon = attacker.Weapon as BaseWeapon;
 
-			if (weapon == null)
-			{
-				return;
-			}
+            if (weapon == null)
+            {
+                return;
+            }
 
             // If no combatant, wrong map, one of us is a ghost, or cannot see, or deleted, then stop combat
             if (defender.Deleted || attacker.Deleted || defender.Map != attacker.Map || !defender.Alive ||
@@ -40,11 +40,11 @@ namespace Server.Items
                 return;
             }
 
-			if (!attacker.InRange(defender, weapon.MaxRange))
-			{
+            if (!attacker.InRange(defender, weapon.MaxRange))
+            {
                 weapon.InDoubleStrike = false;
-				return;
-			}
+                return;
+            }
 
             attacker.SendLocalizedMessage(1060084); // You attack with lightning speed!
             defender.SendLocalizedMessage(1060085); // Your attacker strikes with lightning speed!
@@ -52,13 +52,13 @@ namespace Server.Items
             defender.PlaySound(0x3BB);
             defender.FixedEffect(0x37B9, 244, 25);
 
-			if (attacker.InLOS(defender))
-			{
-				attacker.RevealingAction();
-				attacker.NextCombatTime = Core.TickCount + (int)weapon.OnSwing(attacker, defender).TotalMilliseconds;
-			}
+            if (attacker.InLOS(defender))
+            {
+                attacker.RevealingAction();
+                attacker.NextCombatTime = Core.TickCount + (int)weapon.OnSwing(attacker, defender).TotalMilliseconds;
+            }
 
             weapon.InDoubleStrike = false;
-		}
-	}
+        }
+    }
 }

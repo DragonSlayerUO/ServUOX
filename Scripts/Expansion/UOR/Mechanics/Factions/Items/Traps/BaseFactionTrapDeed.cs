@@ -65,7 +65,7 @@ namespace Server.Factions
                 from.SendLocalizedMessage(1010354, "", 0x23); // You may only place faction traps created by your faction
             else if (faction.Traps.Count >= faction.MaximumTraps)
                 from.SendLocalizedMessage(1010358, "", 0x23); // Your faction already has the maximum number of traps placed
-            else 
+            else
             {
                 BaseFactionTrap trap = this.Construct(from);
 

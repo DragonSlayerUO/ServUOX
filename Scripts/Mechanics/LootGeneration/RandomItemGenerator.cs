@@ -48,7 +48,7 @@ namespace Server.Items
         /// <param name="victim">the victim</param>
         public static bool GenerateRandomItem(Item item, Mobile killer, BaseCreature victim)
         {
-            if(Enabled)
+            if (Enabled)
                 return RunicReforging.GenerateRandomItem(item, killer, victim);
             return false;
         }
@@ -139,7 +139,7 @@ namespace Server.Items
                 new BossEntry(100, typeof(BaseRenowned), typeof(TRex), typeof(BaseShipCaptain), typeof(Navrey)));
 
             Entries.Add(
-                new BossEntry(150, typeof(BaseChampion), typeof(Impaler), typeof(DarknightCreeper), typeof(FleshRenderer), 
+                new BossEntry(150, typeof(BaseChampion), typeof(Impaler), typeof(DarknightCreeper), typeof(FleshRenderer),
                                    typeof(ShadowKnight), typeof(AbysmalHorror), typeof(AdrianTheGloriousLord), typeof(AndrosTheDreadLord)));
 
             Entries.Add(

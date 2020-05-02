@@ -37,7 +37,7 @@ namespace Server.Engines.Quests
         {
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

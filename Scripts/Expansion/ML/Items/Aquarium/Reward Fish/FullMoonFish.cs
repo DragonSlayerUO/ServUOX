@@ -3,7 +3,7 @@ using System;
 namespace Server.Items
 {
     public class FullMoonFish : BaseFish
-    { 
+    {
         [Constructable]
         public FullMoonFish()
             : base(0x3B15)
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public FullMoonFish(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber

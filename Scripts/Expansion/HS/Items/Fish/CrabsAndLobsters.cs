@@ -120,7 +120,7 @@ namespace Server.Items
         public override int LabelNumber { get { return 1116378; } }
 
         [Constructable]
-        public AppleCrab() : base (BaseHighseasFish.GetCrabID())
+        public AppleCrab() : base(BaseHighseasFish.GetCrabID())
         {
         }
 

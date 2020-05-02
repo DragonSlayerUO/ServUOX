@@ -37,7 +37,7 @@ namespace Server.Multis
         private DesignState m_Current; // State which is currently visible.
         private DesignState m_Design;  // State of current design.
         private DesignState m_Backup;  // State at last user backup.        
-        
+
         // Graphic type of this foundation.
         public FoundationType Type { get; set; }
 
@@ -80,7 +80,7 @@ namespace Server.Multis
                 return m_Current.Components;
             }
         }
-        
+
         public DesignState CurrentState
         {
             get
@@ -275,7 +275,7 @@ namespace Server.Multis
                     DoorFacing linkFacing;
                     int xOffset, yOffset;
 
-                    switch( door.Facing )
+                    switch (door.Facing)
                     {
                         default:
                         case DoorFacing.WestCW:
@@ -625,7 +625,7 @@ namespace Server.Multis
         public void BeginCustomize(Mobile m)
         {
             if (!m.CheckAlive())
-            { 
+            {
                 return;
             }
             else if (SpellHelper.CheckCombat(m))
@@ -715,7 +715,7 @@ namespace Server.Multis
         {
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 5:
                 case 4:
@@ -989,7 +989,7 @@ namespace Server.Multis
 
             if (!Deleted)
             {
-				// Temporary Fix. We should be booting a client out of customization mode in the delete handler.
+                // Temporary Fix. We should be booting a client out of customization mode in the delete handler.
                 if (from.AccessLevel >= AccessLevel.GameMaster && cost != 0)
                 {
                     from.SendMessage("{0} gold would have been {1} your bank if you were not a GM.", cost.ToString(), ((cost > 0) ? "withdrawn from" : "deposited into"));
@@ -1062,7 +1062,7 @@ namespace Server.Multis
             Delta(ItemDelta.Update);
             ProcessDelta();
             CurrentState.SendDetailedInfoTo(from.NetState, false);
-            
+
             // If a signpost is needed, add it
             CheckSignpost();
 
@@ -1270,7 +1270,7 @@ namespace Server.Multis
             int xStart, yStart;
             int xInc, yInc;
 
-            switch( dir )
+            switch (dir)
             {
                 default:
                 case 0: // North
@@ -1402,7 +1402,7 @@ namespace Server.Multis
 
                 // Resend design state
                 if (deleteStairs)
-                    design.SendDetailedInfoTo(state);                               
+                    design.SendDetailedInfoTo(state);
             }
         }
 
@@ -1452,7 +1452,7 @@ namespace Server.Multis
                 if (itemID >= 7668 && itemID <= 7675)
                 {
                     int idOffset = itemID <= 7671 ? 101 : 0;
-                    int[][] list = new int[][]{};
+                    int[][] list = new int[][] { };
 
                     switch (itemID)
                     {
@@ -1493,7 +1493,7 @@ namespace Server.Multis
         }
 
         #region TOL Stair Components cannot be found in MultiData
-        private static int[][] _StairsSouth = 
+        private static int[][] _StairsSouth =
         {
             new int[] { 0x9B4F, 0,  -3, 0,  },
             new int[] { 0x9B4F, 0,  -3, 5,  },
@@ -1508,7 +1508,7 @@ namespace Server.Multis
             new int[] { 0x9B50, 0 , 0, 0,  },
         };
 
-        private static int[][] _StairsWest = 
+        private static int[][] _StairsWest =
         {
             new int[] { 0x0001, 0,  0, 0,  },
             new int[] { 0x9B53, 0,  0, 0,  },
@@ -1523,7 +1523,7 @@ namespace Server.Multis
             new int[] { 0x9B53, 3 , 0, 15, },
         };
 
-        private static int[][] _StairsNorth = 
+        private static int[][] _StairsNorth =
         {
             new int[] { 0x0001, 0,  0, 0,  },
             new int[] { 0x9B52, 0,  0, 0,  },
@@ -1538,7 +1538,7 @@ namespace Server.Multis
             new int[] { 0x9B52, 0,  3, 15,  },
         };
 
-        private static int[][] _StairsEast = 
+        private static int[][] _StairsEast =
         {
             new int[] { 0x9B4F, -3, 0, 0  },
             new int[] { 0x9B4F, -3, 0, 5  },
@@ -1853,7 +1853,7 @@ namespace Server.Multis
 
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 1:
                 case 0:
@@ -2011,8 +2011,8 @@ namespace Server.Multis
                 return true;
             else if (itemID >= 0x319C && itemID < 0x31B0)
                 return true;
-			// ML doors
-            else if (itemID == 0x2D46 || itemID == 0x2D48 || itemID == 0x2FE2 || itemID == 0x2FE4)	
+            // ML doors
+            else if (itemID == 0x2D46 || itemID == 0x2D48 || itemID == 0x2FE2 || itemID == 0x2FE4)
                 return true;
             else if (itemID >= 0x2D63 && itemID < 0x2D70)
                 return true;
@@ -2039,11 +2039,11 @@ namespace Server.Multis
                 return true;
             else if (itemID >= 0x5142 && itemID < 0x514A)
                 return true;
-			// TOL doors
-			else if (itemID >= 0x9AD7 && itemID < 0x9AE7)
-				return true;
-			else if (itemID >= 0x9B3C && itemID < 0x9B4C)
-				return true;
+            // TOL doors
+            else if (itemID >= 0x9AD7 && itemID < 0x9AE7)
+                return true;
+            else if (itemID >= 0x9B3C && itemID < 0x9B4C)
+                return true;
 
             return false;
         }

@@ -34,14 +34,14 @@ namespace Server.Spells.SkillMasteries
                 double lore = Caster.Skills[SkillName.AnimalLore].Base;
                 bool asone = SpellType == TrainingType.AsOne;
 
-                double skillvalue = (taming + (lore/2));
+                double skillvalue = (taming + (lore / 2));
                 int mastery_base = 12;
                 if (skillvalue < 150) mastery_base = 12;
                 if (skillvalue < 165) mastery_base = 10;
                 if (skillvalue < 180) mastery_base = 8;
                 if (skillvalue >= 180) mastery_base = 6;
 
-                return asone ? mastery_base*2 : mastery_base;
+                return asone ? mastery_base * 2 : mastery_base;
             }
         }
 

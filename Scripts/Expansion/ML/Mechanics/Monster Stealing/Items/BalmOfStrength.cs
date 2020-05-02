@@ -18,15 +18,15 @@ namespace Server.Items
 
         protected override void ApplyEffect(PlayerMobile pm)
         {
-            pm.AddStatMod(new StatMod(StatType.Str, "Balm", 10, m_EffectDuration)); 
-            
+            pm.AddStatMod(new StatMod(StatType.Str, "Balm", 10, m_EffectDuration));
+
             pm.SendLocalizedMessage(1095136); //You apply the balm and suddenly feel stronger!
             base.ApplyEffect(pm);
 
         }
 
-          public BalmOfStrength(Serial serial)
-            : base(serial)
+        public BalmOfStrength(Serial serial)
+          : base(serial)
         {
         }
 

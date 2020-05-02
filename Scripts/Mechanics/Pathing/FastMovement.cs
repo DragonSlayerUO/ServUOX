@@ -386,7 +386,7 @@ namespace Server.Movement
                 newZ = 0;
                 return false;
             }
-            
+
             IEnumerable<Item> itemsStart, itemsForward, itemsLeft, itemsRight;
 
             var ignoreMovableImpassables = MovementImpl.IgnoreMovableImpassables;

@@ -213,7 +213,7 @@ namespace Server.Engines.Quests.Haven
                 this.Add(new GenericBuyInfo(typeof(Garlic), 3, 20, 0xF84, 0));
                 this.Add(new GenericBuyInfo(typeof(Bloodmoss), 5, 20, 0xF7B, 0));
                 this.Add(new GenericBuyInfo(typeof(Nightshade), 3, 20, 0xF88, 0));
-                this.Add(new GenericBuyInfo(typeof(SpidersSilk), 3, 20, 0xF8D, 0)); 
+                this.Add(new GenericBuyInfo(typeof(SpidersSilk), 3, 20, 0xF8D, 0));
                 this.Add(new GenericBuyInfo(typeof(MandrakeRoot), 3, 20, 0xF86, 0));
             }
         }
@@ -227,7 +227,7 @@ namespace Server.Engines.Quests.Haven
                 this.Add(typeof(Ginseng), 2);
                 this.Add(typeof(Bloodmoss), 3);
                 this.Add(typeof(Nightshade), 2);
-                this.Add(typeof(SpidersSilk), 2); 
+                this.Add(typeof(SpidersSilk), 2);
                 this.Add(typeof(MandrakeRoot), 2);
             }
         }

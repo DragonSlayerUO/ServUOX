@@ -44,7 +44,7 @@ namespace Server.Mobiles
             ControlSlots = 1;
             MinTameSkill = 23.1;
         }
-           
+
         public CorrosiveSlime(Serial serial)
             : base(serial)
         {
@@ -89,8 +89,8 @@ namespace Server.Mobiles
                     case 2: item = new PartiallyDigestedTorso(); break;
                 }
 
-				if (item != null)
-					c.DropItem(item);
+                if (item != null)
+                    c.DropItem(item);
             }
 
             base.OnDeath(c);

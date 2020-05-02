@@ -22,7 +22,7 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		public override bool CanBeParagon => false;
+        public override bool CanBeParagon => false;
         public abstract ChampionSkullType SkullType { get; }
         public abstract Type[] UniqueList { get; }
         public abstract Type[] SharedList { get; }
@@ -60,7 +60,7 @@ namespace Server.Mobiles
 
                     int chance = 0;
 
-                    switch( VirtueHelper.GetLevel(prot, VirtueName.Justice) )
+                    switch (VirtueHelper.GetLevel(prot, VirtueName.Justice))
                     {
                         case VirtueLevel.Seeker:
                             chance = 60;
@@ -75,7 +75,7 @@ namespace Server.Mobiles
 
                     if (chance > Utility.Random(100))
                     {
-						PowerScroll powerScroll = CreateRandomPowerScroll();
+                        PowerScroll powerScroll = CreateRandomPowerScroll();
 
                         prot.SendLocalizedMessage(1049368); // You have been rewarded for your dedication to Justice!
 
@@ -125,7 +125,7 @@ namespace Server.Mobiles
                 return null;
 
             int random = Utility.Random(list.Length);
-			
+
             Type type = list[random];
 
             Item artifact = Loot.Construct(type);
@@ -236,7 +236,7 @@ namespace Server.Mobiles
                 if (this.NoGoodies)
                     return base.OnBeforeDeath();
 
-				GoldShower.DoForChamp(Location, Map);
+                GoldShower.DoForChamp(Location, Map);
             }
 
             return base.OnBeforeDeath();
@@ -266,7 +266,7 @@ namespace Server.Mobiles
                         c.DropItem(new ChampionSkull(this.SkullType));
                 }
 
-                if(Core.SA)
+                if (Core.SA)
                     RefinementComponent.Roll(c, 3, 0.10);
             }
 

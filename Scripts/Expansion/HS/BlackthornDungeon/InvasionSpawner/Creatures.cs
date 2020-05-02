@@ -129,7 +129,7 @@ namespace Server.Engines.Blackthorn
                 SetDamage(8, 18);
 
             Fame = 8000;
-            Karma = -8000;  
+            Karma = -8000;
 
             SetResists();
             SetSkills();
@@ -376,7 +376,7 @@ namespace Server.Engines.Blackthorn
 
         public Item RandomFencingWeapon()
         {
-            if(Race == Race.Elf)
+            if (Race == Race.Elf)
                 return Loot.Construct(new Type[] { typeof(Leafblade), typeof(WarCleaver), typeof(AssassinSpike) });
 
             return Loot.Construct(new Type[] { typeof(Kryss), typeof(Spear), typeof(ShortSpear), typeof(Lance), typeof(Pike) });
@@ -384,7 +384,7 @@ namespace Server.Engines.Blackthorn
 
         public Item RandomMaceWeapon()
         {
-            return Loot.Construct(new Type[] { typeof(Mace), typeof(WarHammer), typeof(WarAxe), typeof(BlackStaff), typeof(QuarterStaff), typeof(WarMace), typeof(DiamondMace), typeof(Scepter)  });
+            return Loot.Construct(new Type[] { typeof(Mace), typeof(WarHammer), typeof(WarAxe), typeof(BlackStaff), typeof(QuarterStaff), typeof(WarMace), typeof(DiamondMace), typeof(Scepter) });
         }
 
         public Item RandomArhceryWeapon()
@@ -552,7 +552,7 @@ namespace Server.Engines.Blackthorn
                 SetDamage(10, 20);
 
             Fame = 48000;
-            Karma = -48000;  
+            Karma = -48000;
         }
 
         public override void OnDeath(Container c)
@@ -564,7 +564,7 @@ namespace Server.Engines.Blackthorn
 
             List<Mobile> list = rights.Select(x => x.m_Mobile).Where(m => m.InRange(c.Location, 20)).ToList();
 
-            if(list.Count > 0)
+            if (list.Count > 0)
             {
                 for (int i = 0; i < 2; i++)
                 {

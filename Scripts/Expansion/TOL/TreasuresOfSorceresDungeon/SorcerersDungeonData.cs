@@ -48,7 +48,7 @@ namespace Server.Engines.SorcerersDungeon
 
             if (!Enabled || bc.Controlled || bc.Summoned || !damager.Alive)
                 return;
-                
+
             Region r = bc.Region;
 
             if (damager is PlayerMobile && r.IsPartOf("Sorcerer's Dungeon"))

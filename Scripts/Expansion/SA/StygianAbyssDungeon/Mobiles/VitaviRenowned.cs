@@ -42,7 +42,7 @@ namespace Server.Mobiles
             this.Karma = -7500;
 
             this.VirtualArmor = 44;
-            
+
             this.PackReg(6);
 
             if (0.02 > Utility.RandomDouble())
@@ -56,12 +56,12 @@ namespace Server.Mobiles
 
         public override Type[] UniqueSAList
         {
-            get { return new Type[] {}; }
+            get { return new Type[] { }; }
         }
 
         public override Type[] SharedSAList
         {
-            get { return new[] {typeof (AxeOfAbandon), typeof (DemonBridleRing), typeof (VoidInfusedKilt)}; }
+            get { return new[] { typeof(AxeOfAbandon), typeof(DemonBridleRing), typeof(VoidInfusedKilt) }; }
         }
 
         public override InhumanSpeech SpeechType
@@ -110,7 +110,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            var version = reader.ReadInt();          
+            var version = reader.ReadInt();
         }
     }
 }

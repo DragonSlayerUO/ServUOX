@@ -288,7 +288,7 @@ namespace Server.Commands
             public override void OnResponse(NetState sender, RelayInfo info)
             {
                 Mobile m = sender.Mobile;
-                switch( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     case 0:
                         {

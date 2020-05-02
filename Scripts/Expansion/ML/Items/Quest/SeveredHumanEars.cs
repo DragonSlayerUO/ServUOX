@@ -4,7 +4,7 @@ namespace Server.Items
 {
     [Flipable(0x312F, 0x3130)]
     public class SeveredHumanEars : Item
-    { 
+    {
         [Constructable]
         public SeveredHumanEars()
             : this(1)
@@ -17,7 +17,7 @@ namespace Server.Items
         {
             this.Stackable = true;
             this.Amount = amount;
-            this.Weight = 1;			
+            this.Weight = 1;
         }
 
         public SeveredHumanEars(Serial serial)

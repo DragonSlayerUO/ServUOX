@@ -128,7 +128,7 @@ namespace Server.Multis
             {
                 string message;
 
-                switch ( m_Owner.DecayLevel )
+                switch (m_Owner.DecayLevel)
                 {
                     case DecayLevel.Ageless:
                         message = "ageless";
@@ -324,7 +324,7 @@ namespace Server.Multis
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

@@ -146,7 +146,7 @@ namespace Server.Items
                 AddHtml(112, 140, 80, 36, Color("#0040FF", Chart.ChartedOn.ToShortDateString()), false, false);
 
                 AddHtmlLocalized(32, 176, 125, 18, 1158504, false, false); // Time-Coordinate:
-                AddHtmlLocalized(47, 199, 60, 36, AstronomySystem.TimeCoordinateLocalization(info.TimeCoordinate), 0x1F, false, false); 
+                AddHtmlLocalized(47, 199, 60, 36, AstronomySystem.TimeCoordinateLocalization(info.TimeCoordinate), 0x1F, false, false);
 
                 AddHtmlLocalized(157, 199, 20, 36, 1158489, false, false); // RA
                 AddHtml(182, 199, 20, 36, Color("#0040FF", info.CoordRA.ToString()), false, false);

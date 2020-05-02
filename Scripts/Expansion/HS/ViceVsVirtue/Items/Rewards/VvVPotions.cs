@@ -116,7 +116,7 @@ namespace Server.Engines.VvV
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
-            
+
             list.Add(1155569, Charges.ToString()); // Potions: ~1_val~
             list.Add(1154937); // VvV Item
         }
@@ -438,7 +438,7 @@ namespace Server.Engines.VvV
         public override void Use(Mobile m)
         {
             Effects.SendMovingEffect(m, new Entity(Serial.Zero, new Point3D(m.X, m.Y, m.Z + 25), m.Map), this.ItemID, 3, 0, false, false, this.Hue, 0);
-            
+
             int count = 5;
 
             Timer.DelayCall(TimeSpan.FromSeconds(1), () =>

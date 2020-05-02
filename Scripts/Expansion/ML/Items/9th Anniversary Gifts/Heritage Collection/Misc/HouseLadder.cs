@@ -53,7 +53,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -85,7 +85,7 @@ namespace Server.Items
         }
 
         public override BaseAddon Addon { get { return new HouseLadderAddon(m_Type); } }
-        
+
         public override void OnDoubleClick(Mobile from)
         {
             if (IsChildOf(from.Backpack))

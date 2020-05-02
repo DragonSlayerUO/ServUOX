@@ -44,7 +44,7 @@ namespace Server.Gumps
             Point3D offset = Point3D.Zero;
             Direction direction;
 
-            if(info.ButtonID == 0)
+            if (info.ButtonID == 0)
                 return;
 
             switch (info.ButtonID)

@@ -2,7 +2,7 @@
 namespace Server.Items
 {
     public class AlbinoCourtesanFish : BaseFish
-    { 
+    {
         [Constructable]
         public AlbinoCourtesanFish()
             : base(0x3B04)
@@ -11,7 +11,7 @@ namespace Server.Items
 
         public AlbinoCourtesanFish(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
         public override int LabelNumber => 1074592; // Albino Courtesan Fish

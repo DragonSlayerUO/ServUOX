@@ -18,7 +18,7 @@ namespace Server.Items
             Weight = 1;
             Movable = false;
 
-            Timer.DelayCall(TimeSpan.FromMinutes(10.0), delegate()
+            Timer.DelayCall(TimeSpan.FromMinutes(10.0), delegate ()
             {
                 Delete();
             });
@@ -58,16 +58,18 @@ namespace Server.Items
                     case 4:
                         new Ballem().MoveToWorld(loc, map);
                         break;
-                    case 5: case 10: case 15:
-						if (Utility.RandomDouble() < 0.20)
+                    case 5:
+                    case 10:
+                    case 15:
+                        if (Utility.RandomDouble() < 0.20)
                         {
                             from.AddToBackpack(new FNPitchfork());
 
-                            from.SendMessage("You find Farmer Nash's pitchfork under one of the brambles of weeds. You pick up the pitchfork and put it in your backpack."); 
+                            from.SendMessage("You find Farmer Nash's pitchfork under one of the brambles of weeds. You pick up the pitchfork and put it in your backpack.");
                         }
-						break;
-                  }
-             }
+                        break;
+                }
+            }
         }
 
         public override void Serialize(GenericWriter writer)

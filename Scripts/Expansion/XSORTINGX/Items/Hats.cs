@@ -94,7 +94,7 @@ namespace Server.Items
             : base(serial)
         {
         }
-       
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -626,7 +626,7 @@ namespace Server.Items
         public FlowerGarland(int hue)
             : base(0x2306, hue)
         {
-            
+
         }
 
         public FlowerGarland(Serial serial)

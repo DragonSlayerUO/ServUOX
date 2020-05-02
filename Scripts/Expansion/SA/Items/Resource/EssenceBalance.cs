@@ -16,7 +16,7 @@ namespace Server.Items
         {
             Stackable = true;
             Amount = amount;
-			Hue = 1268;
+            Hue = 1268;
         }
 
         public EssenceBalance(Serial serial)
@@ -31,7 +31,7 @@ namespace Server.Items
                 return 1113324;
             }
         }// essence of balance
-		TextDefinition ICommodity.Description
+        TextDefinition ICommodity.Description
         {
             get
             {

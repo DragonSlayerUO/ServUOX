@@ -44,7 +44,7 @@ namespace Server.Engines.ArenaSystem
     public enum PotionRules
     {
         All,
-        None, 
+        None,
         NoHealing
     }
 
@@ -129,7 +129,7 @@ namespace Server.Engines.ArenaSystem
 
         // used in team mode
         public ArenaTeam TeamOrder { get { return Teams != null && Teams.Count > 0 ? Teams[0] : null; } }
-        public ArenaTeam TeamChaos { get { return Teams != null && Teams.Count > 1 ?Teams[1] : null; } }
+        public ArenaTeam TeamChaos { get { return Teams != null && Teams.Count > 1 ? Teams[1] : null; } }
 
         public int ParticipantCount
         {
@@ -856,7 +856,7 @@ namespace Server.Engines.ArenaSystem
                         }
                     }
                 }
-  
+
                 if (InPreFight)
                 {
                     if (EntryDeadline != DateTime.MinValue && EntryDeadline < DateTime.UtcNow)
@@ -994,7 +994,7 @@ namespace Server.Engines.ArenaSystem
             {
                 PlayerMobile pm = reader.ReadMobile() as PlayerMobile;
 
-                if(pm != null)
+                if (pm != null)
                     Warned.Add(pm);
             }
         }

@@ -33,7 +33,7 @@ namespace Server.Mobiles
                 this.Name = NameList.RandomName("male");
             }
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     this.AddItem(new Lajatang());
@@ -46,7 +46,7 @@ namespace Server.Mobiles
                     break;
             }
 
-            switch ( Utility.Random(3) )
+            switch (Utility.Random(3))
             {
                 case 0:
                     this.AddItem(new LeatherSuneate());
@@ -59,7 +59,7 @@ namespace Server.Mobiles
                     break;
             }
 
-            switch ( Utility.Random(4) )
+            switch (Utility.Random(4))
             {
                 case 0:
                     this.AddItem(new LeatherJingasa());

@@ -91,7 +91,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int v = reader.ReadInt();
 
-            if(v > 0)
+            if (v > 0)
                 m_PlantHue = (PlantHue)reader.ReadInt();
         }
     }
@@ -189,7 +189,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int v = reader.ReadInt();
 
-            if(v > 1)
+            if (v > 1)
                 m_PlantHue = (PlantHue)reader.ReadInt();
         }
     }

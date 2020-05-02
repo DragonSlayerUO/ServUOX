@@ -17,7 +17,7 @@ namespace Server.Items
         public CustomizableSquaredDoorMatAddon(DirectionType type)
         {
             Lines = new string[3];
-            
+
             switch (type)
             {
                 case DirectionType.South:
@@ -176,5 +176,5 @@ namespace Server.Items
             if (!Deleted)
                 base.OnDoubleClick(from);
         }
-    }    
+    }
 }

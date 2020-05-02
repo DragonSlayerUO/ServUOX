@@ -116,7 +116,7 @@ namespace Server.Mobiles
             if (to == null || artifact == null)
                 return;
 
-			to.PlaySound(0x5B4);
+            to.PlaySound(0x5B4);
 
             Container pack = to.Backpack;
 
@@ -156,7 +156,7 @@ namespace Server.Mobiles
 
             return artifact;
         }
-        
+
         public override bool OnBeforeDeath()
         {
             if (!NoKillAwards)

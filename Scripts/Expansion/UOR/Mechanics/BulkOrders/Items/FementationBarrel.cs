@@ -106,7 +106,7 @@ namespace Server.Items
                         BottlesRemaining = _Fruit / 4;
                     }
                 }
-                
+
                 if (_Fermented)
                 {
                     if (_BadBatch)
@@ -305,7 +305,7 @@ namespace Server.Items
 
         private FruitType GetFruitType(Type t)
         {
-            for(int i = 0; i < _FruitTypes.Length; i++)
+            for (int i = 0; i < _FruitTypes.Length; i++)
             {
                 foreach (var type in _FruitTypes[i])
                 {
@@ -400,7 +400,7 @@ namespace Server.Items
             : base(BeverageType.Wine)
         {
             Quantity = MaxQuantity;
-            
+
             _FruitType = type;
             _Vintage = vintage;
             _Maker = maker;

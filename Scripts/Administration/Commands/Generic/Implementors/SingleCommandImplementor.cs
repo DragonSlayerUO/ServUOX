@@ -54,7 +54,7 @@ namespace Server.Commands.Generic
             BaseCommand command = (BaseCommand)states[0];
             string[] args = (string[])states[1];
 
-            switch ( command.ObjectTypes )
+            switch (command.ObjectTypes)
             {
                 case ObjectTypes.Both:
                     {

@@ -9,7 +9,7 @@ using System.Xml;
 namespace Server.Engines.MyrmidexInvasion
 {
     public class BattleRegion : DungeonRegion
-	{
+    {
         public BattleSpawner Spawner { get; set; }
 
         public BattleRegion(XmlElement xml, Map map, Region parent)
@@ -65,5 +65,5 @@ namespace Server.Engines.MyrmidexInvasion
 
             return base.OnDamage(m, ref Damage);
         }
-	}
+    }
 }

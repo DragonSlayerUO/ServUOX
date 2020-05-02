@@ -382,7 +382,7 @@ namespace Server.Regions
                 }
 
                 int z;
-                switch ( SpawnZLevel )
+                switch (SpawnZLevel)
                 {
                     case SpawnZLevel.Lowest:
                         {

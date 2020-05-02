@@ -116,7 +116,7 @@ namespace Server.Factions
             int netCashFlow = town.NetCashFlow;
 
             this.AddHtmlLocalized(20, 30, 300, 25, 1011524, false, false); // FINANCE STATEMENT
-	
+
             this.AddHtmlLocalized(20, 80, 300, 25, 1011538, false, false); // Current total money for town : 
             this.AddLabel(20, 100, 0x44, town.Silver.ToString());
 
@@ -189,11 +189,11 @@ namespace Server.Factions
             if (!this.FromButtonID(info.ButtonID, out type, out index))
                 return;
 
-            switch ( type )
+            switch (type)
             {
                 case 0: // general
                     {
-                        switch ( index )
+                        switch (index)
                         {
                             case 0: // set price
                                 {
@@ -223,7 +223,7 @@ namespace Server.Factions
                                             this.m_From.SendLocalizedMessage(1042167); // You must wait up to an hour before changing prices again.
                                         else if (remaining.TotalHours < 4)
                                             this.m_From.SendLocalizedMessage(1042168); // You must wait a few hours before changing prices again.
-                                        else 
+                                        else
                                             this.m_From.SendLocalizedMessage(1042169); // You must wait several hours before changing prices again.
                                     }
                                     else

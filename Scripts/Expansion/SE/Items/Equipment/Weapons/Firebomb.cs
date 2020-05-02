@@ -92,7 +92,7 @@ namespace Server.Items
             if (Map == Map.Internal && HeldBy == null)
                 return;
 
-            switch ( m_Ticks )
+            switch (m_Ticks)
             {
                 case 0:
                 case 1:

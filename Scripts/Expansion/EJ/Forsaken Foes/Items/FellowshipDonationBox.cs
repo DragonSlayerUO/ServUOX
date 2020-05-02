@@ -24,7 +24,7 @@ namespace Server.Items
         public static FellowshipDonationBox InstanceFel { get; set; }
 
         [Constructable]
-        public FellowshipDonationBox() 
+        public FellowshipDonationBox()
             : base(0x2DE9)
         {
             Hue = 1191;
@@ -68,7 +68,7 @@ namespace Server.Items
             else
             {
                 Donations.Add(from, amount);
-            }            
+            }
 
             from.SendMessage(1159032, string.Format("{0}", Donations[from].ToString())); // The Fellowship thanks you for your donation. You have donated ~1_val~ worth of goods!
 

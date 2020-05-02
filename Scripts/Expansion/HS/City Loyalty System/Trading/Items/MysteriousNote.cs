@@ -26,7 +26,7 @@ namespace Server.Items
              * the crown are ya? Well...maybe yer interested in a bit of something fer yerself?  Look fer me in Felucca...
              * the taverns of Ocllo, Nujelm, & Serpent's Hold if ye want to fence yer goods.<br><br>-A Friend*/
 
-            g.AddHtmlLocalized(37, 50, 340, 225, 1151735, 0xC63, false, true);            
+            g.AddHtmlLocalized(37, 50, 340, 225, 1151735, 0xC63, false, true);
 
             from.SendGump(g);
         }

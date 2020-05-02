@@ -34,7 +34,7 @@ namespace Server.Engines.Plants
             {
                 int count = 0;
 
-                if(Entries != null)
+                if (Entries != null)
                     Entries.ForEach(e => count += e == null || e.Seed == null ? 0 : e.Seed.Amount);
 
                 return count;
@@ -324,10 +324,10 @@ namespace Server.Engines.Plants
 
             List<SeedEntry> entries = new List<SeedEntry>(Entries);
 
-            foreach(var entry in entries.Where(e => e != null && (e.Seed == null || e.Seed.Amount == 0 || e.Seed.Deleted)))
+            foreach (var entry in entries.Where(e => e != null && (e.Seed == null || e.Seed.Amount == 0 || e.Seed.Deleted)))
                 Entries.Remove(entry);
 
-            ColUtility.Free(entries); 
+            ColUtility.Free(entries);
             ColUtility.Free(toDelete);
         }
 

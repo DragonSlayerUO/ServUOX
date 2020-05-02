@@ -106,7 +106,7 @@ namespace Server.Mobiles
             {
                 return new MonsterStatuetteType[] { };
             }
-        }        
+        }
 
         public override void GenerateLoot()
         {
@@ -126,7 +126,7 @@ namespace Server.Mobiles
         {
             ForceReacquire();
             BeginFlee(TimeSpan.FromSeconds(2.5));
-        }       
+        }
 
         public override void OnThink()
         {
@@ -418,7 +418,7 @@ namespace Server.Mobiles
                         mods.Add(new DefaultSkillMod((SkillName)i, true, target.Skills[i].Value * scalar));
                     }
                 }
-                
+
                 target.PlaySound(0x458);
 
                 ApplyMods(target, mods);

@@ -15,7 +15,7 @@ namespace Server.Engines.Quests
             AddReward(new BaseReward(1157538)); // A step closer to mastering Animal Training.
         }
 
-        public override QuestChain ChainID{get {return QuestChain.AnimalTraining; } }
+        public override QuestChain ChainID { get { return QuestChain.AnimalTraining; } }
         public override Type NextQuest { get { return typeof(UsingAnimalLoreQuest); } }
 
         /* Discovering Animal Training */

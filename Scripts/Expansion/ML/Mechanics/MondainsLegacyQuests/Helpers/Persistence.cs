@@ -18,7 +18,7 @@ namespace Server.Engines.Quests
         {
             if (!QuestData.ContainsKey(pm))
             {
-                QuestData[pm] = new List<BaseQuest>(); 
+                QuestData[pm] = new List<BaseQuest>();
             }
 
             return QuestData[pm];
@@ -70,7 +70,7 @@ namespace Server.Engines.Quests
             {
                 ChainData[pm].Remove(chain);
 
-                if(ChainData[pm].Count == 0)
+                if (ChainData[pm].Count == 0)
                     ChainData.Remove(pm);
             }
         }

@@ -33,7 +33,7 @@ namespace Server.Engines.Points
 
             if (bc == null || bc.Controlled || bc.Summoned || !damager.Alive || damager.Deleted)
                 return;
-        
+
             Region r = bc.Region;
 
             if (damager is PlayerMobile && r.IsPartOf("BlackthornDungeon"))

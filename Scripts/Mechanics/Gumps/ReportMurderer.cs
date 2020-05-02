@@ -113,7 +113,7 @@ namespace Server.Gumps
         {
             Mobile from = state.Mobile;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1:
                     {

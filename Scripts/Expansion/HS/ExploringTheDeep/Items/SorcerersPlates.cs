@@ -335,7 +335,7 @@ namespace Server.Items
                     }
                     else
                     {
-						from.SendLocalizedMessage(500309); // Nothing Happens.                        
+                        from.SendLocalizedMessage(500309); // Nothing Happens.                        
                     }
                 }
             }

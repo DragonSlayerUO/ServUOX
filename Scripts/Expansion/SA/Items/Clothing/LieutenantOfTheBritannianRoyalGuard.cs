@@ -5,8 +5,8 @@ namespace Server.Items
 {
     [Alterable(typeof(DefTailoring), typeof(GargishLieutenantOfTheBritannianRoyalGuard))]
     public class LieutenantOfTheBritannianRoyalGuard : BodySash
-	{
-		public override bool IsArtifact { get { return true; } }
+    {
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public LieutenantOfTheBritannianRoyalGuard()
         {
@@ -67,7 +67,7 @@ namespace Server.Items
     public class GargishLieutenantOfTheBritannianRoyalGuard : GargishSash
     {
         public override bool IsArtifact { get { return true; } }
-      
+
         [Constructable]
         public GargishLieutenantOfTheBritannianRoyalGuard()
         {

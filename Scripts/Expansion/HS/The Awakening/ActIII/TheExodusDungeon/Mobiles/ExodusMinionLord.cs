@@ -40,7 +40,7 @@ namespace Server.Mobiles
             PackItem(new ArcaneGem());
             PackItem(new ClockworkAssembly());
 
-		}
+        }
 
         public override void GenerateLoot()
         {

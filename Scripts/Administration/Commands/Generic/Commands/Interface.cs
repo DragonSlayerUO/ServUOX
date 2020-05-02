@@ -194,7 +194,7 @@ namespace Server.Commands.Generic
 
         public override void OnResponse(NetState sender, RelayInfo info)
         {
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1:
                     {
@@ -306,7 +306,7 @@ namespace Server.Commands.Generic
                 return;
             }
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0:
                 case 1:
@@ -463,7 +463,7 @@ namespace Server.Commands.Generic
                 return;
             }
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0:
                 case 1:

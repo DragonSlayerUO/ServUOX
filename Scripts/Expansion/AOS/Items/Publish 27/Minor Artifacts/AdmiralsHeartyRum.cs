@@ -5,7 +5,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.AdmiralHeartyRum")]
     public class AdmiralsHeartyRum : BeverageBottle
     {
-		public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact { get { return true; } }
         [Constructable]
         public AdmiralsHeartyRum()
             : base(BeverageType.Ale)

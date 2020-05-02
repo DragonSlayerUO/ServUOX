@@ -11,8 +11,8 @@ using Server.Spells;
 
 namespace Server
 {
-	public static class TimeOfLegends
-	{
+    public static class TimeOfLegends
+    {
         public static void Initialize()
         {
             CommandSystem.Register("DecorateTOL", AccessLevel.GameMaster, new CommandEventHandler(DecorateTOL_OnCommand));
@@ -23,7 +23,7 @@ namespace Server
             EventSink.CreatureDeath += CheckRecipeDrop;
         }
 
-        private  static readonly DateTime _EndCurrencyWarning = new DateTime(2017, 3, 1, 1, 1, 1);		
+        private static readonly DateTime _EndCurrencyWarning = new DateTime(2017, 3, 1, 1, 1, 1);
 
         public static bool FindItem(int x, int y, int z, Map map, Item test)
         {
@@ -148,5 +148,5 @@ namespace Server
             570, 571, 572, 573, 574, 575, 576, 577,
             580, 581, 582, 583, 584
         };
-	}
+    }
 }

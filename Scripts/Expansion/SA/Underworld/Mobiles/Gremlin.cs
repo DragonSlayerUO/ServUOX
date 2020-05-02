@@ -11,7 +11,7 @@ namespace Server.Mobiles
             : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "a gremlin";
-            Body = 724; 
+            Body = 724;
 
             SetStr(106);
             SetDex(130);

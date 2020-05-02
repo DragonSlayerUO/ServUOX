@@ -33,16 +33,16 @@ namespace Server.Items
         public bool CanUseTaxidermyOn { get { return HasDocumentedKill && m_KillEntry.KillIndex < HuntingTrophyInfo.Infos.Count && !m_ProducedTrophy; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool HasSubmitted 
-        { 
+        public bool HasSubmitted
+        {
             get { return m_HasSubmitted; }
-            set 
+            set
             {
-                m_HasSubmitted = value; 
+                m_HasSubmitted = value;
 
-                if(m_HasSubmitted && m_Permits.Contains(this)) 
+                if (m_HasSubmitted && m_Permits.Contains(this))
                     m_Permits.Remove(this);
-            } 
+            }
         }
 
         public override int LabelNumber { get { return 1155704; } } // Hunting Permit

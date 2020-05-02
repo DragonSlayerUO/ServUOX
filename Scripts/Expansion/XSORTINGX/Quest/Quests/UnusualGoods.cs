@@ -7,11 +7,11 @@ namespace Server.Engines.Quests
     {
         public UnusualGoods()
         {
-            AddObjective(new ObtainObjective(typeof (PerfectEmerald), "Perfect Emerald", 2, 0x3194));
+            AddObjective(new ObtainObjective(typeof(PerfectEmerald), "Perfect Emerald", 2, 0x3194));
 
-            AddObjective(new ObtainObjective(typeof (CrystallineBlackrock), "Crystalline Blackrock", 1, 0x5732));
+            AddObjective(new ObtainObjective(typeof(CrystallineBlackrock), "Crystalline Blackrock", 1, 0x5732));
 
-            AddReward(new BaseReward(typeof (EssenceBox), "Essence Box"));
+            AddReward(new BaseReward(typeof(EssenceBox), "Essence Box"));
 
             AddReward(new BaseReward("Loyalty Rating"));
         }

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber { get { return 1152265; } } // mysterious tunnel       
         private Point3D m_PointDest;
-        
+
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D PointDest
         {
@@ -25,7 +25,7 @@ namespace Server.Items
         public MysteriousTunnel(Serial serial)
             : base(serial)
         {
-        }        
+        }
 
         public override bool OnMoveOver(Mobile m)
         {
@@ -35,7 +35,7 @@ namespace Server.Items
                 m.MoveToWorld(loc, this.Map);
                 BaseCreature.TeleportPets(m, loc, this.Map);
 
-                return false;              
+                return false;
             }
 
             return true;

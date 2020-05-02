@@ -10,7 +10,7 @@ namespace Server.Mobiles
         public Type CreatureType { get { return typeof(Lasher); } }
 
         [Constructable]
-        public LasherStatue() 
+        public LasherStatue()
             : base(0x9E35)
         {
             LootType = LootType.Blessed;

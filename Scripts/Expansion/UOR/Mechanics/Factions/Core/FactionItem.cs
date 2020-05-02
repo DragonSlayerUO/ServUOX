@@ -26,7 +26,7 @@ namespace Server.Factions
         {
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

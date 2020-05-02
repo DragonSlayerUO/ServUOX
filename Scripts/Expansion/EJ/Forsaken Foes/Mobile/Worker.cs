@@ -25,7 +25,7 @@ namespace Server.Engines.Fellowship
     {
         public static string FilePath = Path.Combine("Saves/Misc", "FellowshipChain.bin");
         public static Dictionary<Mobile, FellowshipChain> FellowshipChainList = new Dictionary<Mobile, FellowshipChain>();
-        
+
         public static void Configure()
         {
             EventSink.WorldSave += OnSave;

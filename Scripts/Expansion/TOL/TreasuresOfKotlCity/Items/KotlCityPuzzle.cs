@@ -21,8 +21,8 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Complete
-        { 
-            get { return _Complete; } 
+        {
+            get { return _Complete; }
             set
             {
                 foreach (var comp in Components.OfType<KotlCityPuzzleComponent>().Where(c => (value && c.Active) || (!value && !c.Active)))
@@ -100,7 +100,7 @@ namespace Server.Engines.TreasuresOfKotlCity
                 if (comp.Offset.X == _Order[_Index])
                 {
                     comp.Active = false;
-                   
+
                     _Fails = 0;
                     from.PrivateOverheadMessage(Server.Network.MessageType.Regular, 1154, 1157028, from.NetState); // *You activate the switch!*
 
@@ -194,10 +194,10 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Active
-        { 
-            get { return _Active; } 
-            set 
-            { 
+        {
+            get { return _Active; }
+            set
+            {
                 _Active = value;
 
                 if (_Active && ItemID != 0x9CDE)

@@ -97,13 +97,13 @@ namespace Server.Items
             }
             else if (from.Map == Map.Ilshenar)
             {
-                #if false
+#if false
 				banks = m_IlshenarBanks;
 				moongates = PMList.Ilshenar;
-                #else
+#else
                 from.Send(new MessageLocalized(Serial, ItemID, MessageType.Label, 0x482, 3, 1061684, "", "")); // The magic of the sextant fails...
                 return;
-                #endif
+#endif
             }
             else if (from.Map == Map.Malas)
             {

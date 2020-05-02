@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0xE8A, 0xE89)]
     public class Blowpipe : BaseTool
     {
-		public override CraftSystem CraftSystem { get { return DefGlassblowing.CraftSystem; } }
+        public override CraftSystem CraftSystem { get { return DefGlassblowing.CraftSystem; } }
         public override int LabelNumber { get { return 1044609; } } // Blow Pipe
 
         [Constructable]
         public Blowpipe()
             : base(0xE8A)
-        {          
+        {
         }
 
         [Constructable]
@@ -26,7 +26,7 @@ namespace Server.Items
         public Blowpipe(Serial serial)
             : base(serial)
         {
-        }       
+        }
 
         public override void Serialize(GenericWriter writer)
         {

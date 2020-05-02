@@ -9,7 +9,7 @@ namespace Server.Items
             : base(0x166F)
         {
             this.LootType = LootType.Blessed;
-            this.Weight = 1;			
+            this.Weight = 1;
         }
 
         public StoutWhip(Serial serial)
