@@ -11,7 +11,7 @@ namespace Server.Engines.InstancedPeerless
         private PeerlessInstance m_Instance;
         private List<Mobile> m_AllowedPlayers;
 
-        public override int LabelNumber { get { return 1113494; } } // (Entrance)
+        public override int LabelNumber => 1113494;  // (Entrance)
 
         public override bool ForceShowProperties => true;
 

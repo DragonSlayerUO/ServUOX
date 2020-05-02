@@ -465,7 +465,7 @@ namespace Server.Items
 
     public class SearingWeaponContext : PropertyEffect
     {
-        public static int Damage { get { return Utility.RandomMinMax(10, 15); } }
+        public static int Damage => Utility.RandomMinMax(10, 15);
 
         public SearingWeaponContext(Mobile from, Mobile defender)
             : base(from, defender, null, EffectsType.Searing, TimeSpan.FromSeconds(4), TimeSpan.FromSeconds(4))

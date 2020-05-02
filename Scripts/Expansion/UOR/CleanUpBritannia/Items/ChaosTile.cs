@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ChaosTileAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new ChaosTileDeed(); } }
+        public override BaseAddonDeed Deed => new ChaosTileDeed();
 
         [Constructable]
         public ChaosTileAddon()
@@ -38,8 +38,8 @@ namespace Server.Items
 
     public class ChaosTileDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new ChaosTileAddon(); } }
-        public override int LabelNumber { get { return 1080490; } } // Chaos Tile Deed
+        public override BaseAddon Addon => new ChaosTileAddon();
+        public override int LabelNumber => 1080490;  // Chaos Tile Deed
 
         [Constructable]
         public ChaosTileDeed()

@@ -207,13 +207,7 @@ namespace Server.Factions
 
         public static readonly TimeSpan LeavePeriod = TimeSpan.FromDays(3.0);
 
-        public bool FactionMessageReady
-        {
-            get
-            {
-                return this.m_State.FactionMessageReady;
-            }
-        }
+        public bool FactionMessageReady => this.m_State.FactionMessageReady;
 
         public void Broadcast(string text)
         {
@@ -1027,7 +1021,7 @@ namespace Server.Factions
 
         #region Skill Loss
         public const double SkillLossFactor = 1.0 / 3;
-        public static TimeSpan SkillLossPeriod { get { return Core.SA ? TimeSpan.FromMinutes(5) : TimeSpan.FromMinutes(20.0); } }
+        public static TimeSpan SkillLossPeriod => Core.SA ? TimeSpan.FromMinutes(5) : TimeSpan.FromMinutes(20.0);
 
         private static readonly Dictionary<Mobile, SkillLossContext> m_SkillLoss = new Dictionary<Mobile, SkillLossContext>();
 
@@ -1112,13 +1106,7 @@ namespace Server.Factions
             return silver;
         }
 
-        public virtual int MaximumTraps
-        {
-            get
-            {
-                return 15;
-            }
-        }
+        public virtual int MaximumTraps => 15;
 
         public List<BaseFactionTrap> Traps
         {
@@ -1390,13 +1378,7 @@ namespace Server.Factions
             writer.WriteEncodedInt((int)(idx + 1));
         }
 
-        public static List<Faction> Factions
-        {
-            get
-            {
-                return Reflector.Factions;
-            }
-        }
+        public static List<Faction> Factions => Reflector.Factions;
 
         public static Faction ReadReference(GenericReader reader)
         {

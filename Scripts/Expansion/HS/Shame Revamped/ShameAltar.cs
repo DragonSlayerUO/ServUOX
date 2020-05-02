@@ -48,7 +48,7 @@ namespace Server.Engines.ShameRevamped
 
         public Timer DeadLineTimer { get; set; }
 
-        public override int LabelNumber { get { return 1151636; } } // Guardian's Altar
+        public override int LabelNumber => 1151636;  // Guardian's Altar
         public override bool ForceShowProperties => true;
 
         public ShameAltar(Type type, Point3D teleLoc, Point3D teleDest, Point3D spawnLoc, int cost, bool active = true)

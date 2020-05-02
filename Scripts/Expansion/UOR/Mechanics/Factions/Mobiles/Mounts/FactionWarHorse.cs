@@ -70,13 +70,7 @@ namespace Server.Factions
                 this.ItemID = (this.m_Faction == null ? 0x3EA0 : this.m_Faction.Definition.WarHorseItem);
             }
         }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
-            }
-        }
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
         public override void OnDoubleClick(Mobile from)
         {
             PlayerState pl = PlayerState.Find(from);

@@ -7,8 +7,8 @@ namespace Server.Engines.InstancedPeerless
 {
     public class MedusaPlatform : PeerlessPlatform
     {
-        public override Type KeyType { get { return typeof(RareSerpentEgg); } }
-        public override Type BossType { get { return typeof(Medusa); } }
+        public override Type KeyType => typeof(RareSerpentEgg);
+        public override Type BossType => typeof(Medusa);
 
         [Constructable]
         public MedusaPlatform()

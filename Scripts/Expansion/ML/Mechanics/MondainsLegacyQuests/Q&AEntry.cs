@@ -8,9 +8,9 @@ namespace Server.Engines.Quests
         private object[] m_Answers;
         private object[] m_WrongAnswers;
 
-        public int Question { get { return m_Question; } }
-        public object[] Answers { get { return m_Answers; } }
-        public object[] WrongAnswers { get { return m_WrongAnswers; } }
+        public int Question => m_Question;
+        public object[] Answers => m_Answers;
+        public object[] WrongAnswers => m_WrongAnswers;
 
         public QuestionAndAnswerEntry(int question, object[] answerText, object[] wrongAnswers)
         {

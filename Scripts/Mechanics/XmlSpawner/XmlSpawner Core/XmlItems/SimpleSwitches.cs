@@ -779,8 +779,7 @@ namespace Server.Items
             set { m_Digit0Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit0
-        { get { return (CheckDigit(m_Digit0Object, m_Digit0Property)); } }
+        public int Digit0 => (CheckDigit(m_Digit0Object, m_Digit0Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Digit1Object
@@ -795,8 +794,7 @@ namespace Server.Items
             set { m_Digit1Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit1
-        { get { return (CheckDigit(m_Digit1Object, m_Digit1Property)); } }
+        public int Digit1 => (CheckDigit(m_Digit1Object, m_Digit1Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Digit2Object
@@ -811,8 +809,7 @@ namespace Server.Items
             set { m_Digit2Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit2
-        { get { return (CheckDigit(m_Digit2Object, m_Digit2Property)); } }
+        public int Digit2 => (CheckDigit(m_Digit2Object, m_Digit2Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Digit3Object
@@ -827,8 +824,7 @@ namespace Server.Items
             set { m_Digit3Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit3
-        { get { return (CheckDigit(m_Digit3Object, m_Digit3Property)); } }
+        public int Digit3 => (CheckDigit(m_Digit3Object, m_Digit3Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Digit4Object
@@ -843,8 +839,7 @@ namespace Server.Items
             set { m_Digit4Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit4
-        { get { return (CheckDigit(m_Digit4Object, m_Digit4Property)); } }
+        public int Digit4 => (CheckDigit(m_Digit4Object, m_Digit4Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Digit5Object
@@ -859,8 +854,7 @@ namespace Server.Items
             set { m_Digit5Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit5
-        { get { return (CheckDigit(m_Digit5Object, m_Digit5Property)); } }
+        public int Digit5 => (CheckDigit(m_Digit5Object, m_Digit5Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Digit6Object
@@ -875,8 +869,7 @@ namespace Server.Items
             set { m_Digit6Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit6
-        { get { return (CheckDigit(m_Digit6Object, m_Digit6Property)); } }
+        public int Digit6 => (CheckDigit(m_Digit6Object, m_Digit6Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Digit7Object
@@ -891,8 +884,7 @@ namespace Server.Items
             set { m_Digit7Property = value; InvalidateProperties(); }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Digit7
-        { get { return (CheckDigit(m_Digit7Object, m_Digit7Property)); } }
+        public int Digit7 => (CheckDigit(m_Digit7Object, m_Digit7Property));
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item TargetItem
@@ -922,10 +914,7 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Matched
-        {
-            get { return (m_Combination == CurrentValue); }
-        }
+        public bool Matched => (m_Combination == CurrentValue);
         [CommandProperty(AccessLevel.GameMaster)]
 
         public int CurrentValue

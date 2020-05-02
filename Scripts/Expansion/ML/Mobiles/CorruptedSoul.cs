@@ -42,27 +42,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool DeleteCorpseOnDeath
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool AlwaysAttackable
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool BleedImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }// NEED TO VERIFY
+        public override bool DeleteCorpseOnDeath => true;
+        public override bool AlwaysAttackable => true;
+        public override bool BleedImmunity => true;// NEED TO VERIFY
 
         // NEED TO VERIFY SOUNDS! Known: No Idle Sound.
 
@@ -70,13 +52,7 @@ namespace Server.Mobiles
         {
         return 0x0;
         }*/
-        public override bool AlwaysMurderer
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool AlwaysMurderer => true;
         /*public override int GetAngerSound()
         {
         return 0x0;

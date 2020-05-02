@@ -13,7 +13,7 @@ namespace Server.Engines.InstancedPeerless
     {
         private PeerlessInstance m_Owner;
 
-        public PeerlessInstance Owner { get { return m_Owner; } }
+        public PeerlessInstance Owner => m_Owner;
 
         public static void Initialize()
         {

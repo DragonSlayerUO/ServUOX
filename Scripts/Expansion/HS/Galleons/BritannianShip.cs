@@ -9,26 +9,26 @@ namespace Server.Multis
 {
     public class BritannianShip : BaseGalleon
     {
-        public override int NorthID { get { return 0x40 + (DamageValue * 4); } }
-        public override int EastID { get { return 0x41 + (DamageValue * 4); } }
-        public override int SouthID { get { return 0x42 + (DamageValue * 4); } }
-        public override int WestID { get { return 0x43 + (DamageValue * 4); } }
+        public override int NorthID => 0x40 + (DamageValue * 4);
+        public override int EastID => 0x41 + (DamageValue * 4);
+        public override int SouthID => 0x42 + (DamageValue * 4);
+        public override int WestID => 0x43 + (DamageValue * 4);
 
-        public override int HoldDistance { get { return 9; } }
-        public override int TillerManDistance { get { return 7; } }
-        public override int RuneOffset { get { return -5; } }
-        public override int MaxAddons { get { return 2; } }
+        public override int HoldDistance => 9;
+        public override int TillerManDistance => 7;
+        public override int RuneOffset => -5;
+        public override int MaxAddons => 2;
 
-        public override int WheelDistance { get { return 3; } }
-        public override int CaptiveOffset { get { return 5; } }
-        public override int MaxCannons { get { return 9; } }
-        public override int MaxHits { get { return 200000; } }
+        public override int WheelDistance => 3;
+        public override int CaptiveOffset => 5;
+        public override int MaxCannons => 9;
+        public override int MaxHits => 200000;
 
-        public override double TurnDelay { get { return 3; } }
-        public override TimeSpan BoatDecayDelay { get { return TimeSpan.FromDays(30); } }
-        public override int ZSurface { get { return 18; } }
+        public override double TurnDelay => 3;
+        public override TimeSpan BoatDecayDelay => TimeSpan.FromDays(30);
+        public override int ZSurface => 18;
 
-        public override BaseDockedBoat DockedBoat { get { return new DockedBritannianShip(this); } }
+        public override BaseDockedBoat DockedBoat => new DockedBritannianShip(this);
 
         public override int DamageValue
         {
@@ -55,7 +55,7 @@ namespace Server.Multis
         {
         }
 
-        public override int[][] CannonTileIDs { get { return m_CannonTileIDs; } }
+        public override int[][] CannonTileIDs => m_CannonTileIDs;
         private int[][] m_CannonTileIDs = new int[][]
         {
             new int[] { 23612, 23631, 23630, 23632, 23634, 23639, 23637, 23643, 23641 }, //SOUTH
@@ -69,7 +69,7 @@ namespace Server.Multis
             new int[] { 23504, 23522, 23523, 23526, 23524, 23529, 23531, 23533, 23535 }, //EAST 
         };
 
-        public override int[][] FillerIDs { get { return m_FillerIDs; } }
+        public override int[][] FillerIDs => m_FillerIDs;
         private int[][] m_FillerIDs = new int[][]
         {                 
             //          fsail  faddn  baddn
@@ -84,7 +84,7 @@ namespace Server.Multis
             new int[] { 23725, 23556, 23557 },  //EAST
         };
 
-        public override int[][] HoldIDs { get { return m_HoldIDs; } }
+        public override int[][] HoldIDs => m_HoldIDs;
         private int[][] m_HoldIDs = new int[][]
         {
             new int[] { 23649, 23650, 23652, 23653, 23654, 23655, 23656, 23651},  //SOUTH
@@ -98,7 +98,7 @@ namespace Server.Multis
             new int[] { 23541, 23542, 23544, 23545, 23546, 23547, 23548, 23543},  //EAST
         };
 
-        public override int[][] HoldItemIDs { get { return m_HoldItemIDs; } }
+        public override int[][] HoldItemIDs => m_HoldItemIDs;
         private int[][] m_HoldItemIDs = new int[][]
         {
             new int[] { 23648 },
@@ -112,7 +112,7 @@ namespace Server.Multis
             new int[] { 23540 },
         };
 
-        public override int[][] WheelItemIDs { get { return m_WheelItemIDs; } }
+        public override int[][] WheelItemIDs => m_WheelItemIDs;
         private int[][] m_WheelItemIDs = new int[][]
         {
 
@@ -303,8 +303,8 @@ namespace Server.Multis
 
     public class BritannianShipDeed : BaseBoatDeed
     {
-        public override int LabelNumber { get { return 1150017; } }
-        public override BaseBoat Boat { get { return new BritannianShip(this.BoatDirection); } }
+        public override int LabelNumber => 1150017;
+        public override BaseBoat Boat => new BritannianShip(this.BoatDirection);
 
         [Constructable]
         public BritannianShipDeed()
@@ -334,8 +334,8 @@ namespace Server.Multis
 
     public class DockedBritannianShip : BaseDockedBoat
     {
-        public override int LabelNumber { get { return 1150100; } } //Britannian Ship
-        public override BaseBoat Boat { get { return new BritannianShip(this.BoatDirection); } }
+        public override int LabelNumber => 1150100;  //Britannian Ship
+        public override BaseBoat Boat => new BritannianShip(this.BoatDirection);
 
         public DockedBritannianShip(BaseBoat boat)
             : base(0x40, Point3D.Zero, boat)

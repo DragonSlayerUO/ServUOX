@@ -30,13 +30,7 @@ namespace Server.Factions
                 this.m_Charges = value;
             }
         }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1041508;
-            }
-        }// a faction trap removal kit
+        public override int LabelNumber => 1041508;// a faction trap removal kit
         public void ConsumeCharge(Mobile consumer)
         {
             --this.m_Charges;

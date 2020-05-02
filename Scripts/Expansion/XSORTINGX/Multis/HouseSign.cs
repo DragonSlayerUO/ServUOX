@@ -31,13 +31,7 @@ namespace Server.Multis
             return Name;
         }
 
-        public BaseHouse Owner
-        {
-            get
-            {
-                return m_Owner;
-            }
-        }
+        public BaseHouse Owner => m_Owner;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool RestrictDecay
@@ -54,13 +48,7 @@ namespace Server.Multis
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile OriginalOwner
-        {
-            get
-            {
-                return m_OrgOwner;
-            }
-        }
+        public Mobile OriginalOwner => m_OrgOwner;
 
         public override void OnAfterDelete()
         {
@@ -75,23 +63,11 @@ namespace Server.Multis
             list.Add(1061638); // A House Sign
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
         private bool m_GettingProperties;
 
-        public bool GettingProperties
-        {
-            get
-            {
-                return m_GettingProperties;
-            }
-        }
+        public bool GettingProperties => m_GettingProperties;
 
         public override void GetProperties(ObjectPropertyList list)
         {

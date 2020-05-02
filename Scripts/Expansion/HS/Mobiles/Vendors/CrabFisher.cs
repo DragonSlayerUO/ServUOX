@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class CrabFisher : BaseVendor
     {
         private List<SBInfo> m_SBInfos = new List<SBInfo>();
-        protected override List<SBInfo> SBInfos { get { return m_SBInfos; } }
+        protected override List<SBInfo> SBInfos => m_SBInfos;
 
         [Constructable]
         public CrabFisher()

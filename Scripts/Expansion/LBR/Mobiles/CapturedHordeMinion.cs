@@ -15,13 +15,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool InitialInnocent
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool InitialInnocent => true;
         public override bool CanBeDamaged()
         {
             return false;

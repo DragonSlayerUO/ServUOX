@@ -25,8 +25,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new RitualTableDeed(); } }
-        public override bool RetainDeedHue { get { return true; } }
+        public override BaseAddonDeed Deed => new RitualTableDeed();
+        public override bool RetainDeedHue => true;
 
         public override void Serialize(GenericWriter writer)
         {
@@ -43,7 +43,7 @@ namespace Server.Items
 
     public class RitualTableDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1097690; } } // ritual table
+        public override int LabelNumber => 1097690;  // ritual table
 
         [Constructable]
         public RitualTableDeed()
@@ -55,7 +55,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon { get { return new RitualTableAddon(Hue); } }
+        public override BaseAddon Addon => new RitualTableAddon(Hue);
 
 
         public override void Serialize(GenericWriter writer)

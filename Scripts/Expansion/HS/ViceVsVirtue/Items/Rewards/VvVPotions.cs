@@ -27,13 +27,7 @@ namespace Server.Engines.VvV
         [CommandProperty(AccessLevel.GameMaster)]
         public int Charges { get { return _Charges; } set { _Charges = value; if (_Charges <= 0) Delete(); else InvalidateProperties(); } }
 
-        public override double DefaultWeight
-        {
-            get
-            {
-                return 10 + _Charges * 1.8;
-            }
-        }
+        public override double DefaultWeight => 10 + _Charges * 1.8;
 
         [Constructable]
         public VvVPotionKeg(PotionType type)
@@ -160,8 +154,8 @@ namespace Server.Engines.VvV
         }
         #endregion
 
-        public virtual TimeSpan CooldownDuration { get { return TimeSpan.MinValue; } }
-        public virtual PotionType CooldownType { get { return PotionType.None; } }
+        public virtual TimeSpan CooldownDuration => TimeSpan.MinValue;
+        public virtual PotionType CooldownType => PotionType.None;
 
         public static Dictionary<Mobile, Dictionary<PotionType, DateTime>> _Cooldown = new Dictionary<Mobile, Dictionary<PotionType, DateTime>>();
 
@@ -373,7 +367,7 @@ namespace Server.Engines.VvV
 
     public class AntiParalysisPotion : VvVPotion
     {
-        public override PotionType CooldownType { get { return PotionType.AntiParalysis; } }
+        public override PotionType CooldownType => PotionType.AntiParalysis;
 
         [Constructable]
         public AntiParalysisPotion()
@@ -426,8 +420,8 @@ namespace Server.Engines.VvV
 
     public class SupernovaPotion : VvVPotion
     {
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromMinutes(2); } }
-        public override PotionType CooldownType { get { return PotionType.Supernova; } }
+        public override TimeSpan CooldownDuration => TimeSpan.FromMinutes(2);
+        public override PotionType CooldownType => PotionType.Supernova;
 
         [Constructable]
         public SupernovaPotion()
@@ -502,8 +496,8 @@ namespace Server.Engines.VvV
 
     public class StatLossRemovalPotion : VvVPotion
     {
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromMinutes(20); } }
-        public override PotionType CooldownType { get { return PotionType.StatLossRemoval; } }
+        public override TimeSpan CooldownDuration => TimeSpan.FromMinutes(20);
+        public override PotionType CooldownType => PotionType.StatLossRemoval;
 
         [Constructable]
         public StatLossRemovalPotion()
@@ -557,8 +551,8 @@ namespace Server.Engines.VvV
 
     public class GreaterStaminaPotion : VvVPotion
     {
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromSeconds(10); } }
-        public override PotionType CooldownType { get { return PotionType.GreaterStamina; } }
+        public override TimeSpan CooldownDuration => TimeSpan.FromSeconds(10);
+        public override PotionType CooldownType => PotionType.GreaterStamina;
 
         [Constructable]
         public GreaterStaminaPotion()

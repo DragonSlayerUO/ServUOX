@@ -28,16 +28,16 @@ namespace Server.Items
         public string DateKilled { get { return m_DateKilled; } set { m_DateKilled = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TextDefinition Species { get { return Info.Species; } }
+        public TextDefinition Species => Info.Species;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MeasuredBy MeasuredBy { get { return Info.MeasuredBy; } }
+        public MeasuredBy MeasuredBy => Info.MeasuredBy;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual int EastID { get { return Info.EastID; } }
+        public virtual int EastID => Info.EastID;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual int SouthID { get { return Info.SouthID; } }
+        public virtual int SouthID => Info.SouthID;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Index
@@ -58,12 +58,12 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public HuntingTrophyInfo Info { get { return HuntingTrophyInfo.Infos[Index]; } }
+        public HuntingTrophyInfo Info => HuntingTrophyInfo.Infos[Index];
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Complex { get { return Info.Complex; } }
+        public bool Complex => Info.Complex;
 
-        public override BaseAddonDeed Deed { get { return new HuntTrophyAddonDeed(m_Owner, Index, m_Measurement, m_DateKilled, m_Location); } }
+        public override BaseAddonDeed Deed => new HuntTrophyAddonDeed(m_Owner, Index, m_Measurement, m_DateKilled, m_Location);
 
         public HuntTrophyAddon(string name, int index, int measurement, string killed, string location)
         {
@@ -251,9 +251,9 @@ namespace Server.Items
 
     public class HuntTrophyAddonDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1084024 + SouthID; } }
+        public override int LabelNumber => 1084024 + SouthID;
 
-        public override BaseAddon Addon { get { return new HuntTrophyAddon(m_Owner, Index, m_Measurement, m_DateKilled, m_Location); } }
+        public override BaseAddon Addon => new HuntTrophyAddon(m_Owner, Index, m_Measurement, m_DateKilled, m_Location);
 
         private string m_Owner;
         private int m_Measurement;
@@ -274,22 +274,22 @@ namespace Server.Items
         public string DateKilled { get { return m_DateKilled; } set { m_DateKilled = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TextDefinition Species { get { return Info.Species; } }
+        public TextDefinition Species => Info.Species;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TextDefinition TrophyName { get { return Info.TrophyName; } }
+        public TextDefinition TrophyName => Info.TrophyName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MeasuredBy MeasuredBy { get { return Info.MeasuredBy; } }
+        public MeasuredBy MeasuredBy => Info.MeasuredBy;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int EastID { get { return Info.EastID; } }
+        public int EastID => Info.EastID;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int SouthID { get { return Info.SouthID; } }
+        public int SouthID => Info.SouthID;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Complex { get { return Info.Complex; } }
+        public bool Complex => Info.Complex;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Index
@@ -310,7 +310,7 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public HuntingTrophyInfo Info { get { return HuntingTrophyInfo.Infos[Index]; } }
+        public HuntingTrophyInfo Info => HuntingTrophyInfo.Infos[Index];
 
         public HuntTrophyAddonDeed(string name, int index, int measurement, string killed, string location)
         {

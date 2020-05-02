@@ -36,12 +36,12 @@ namespace Server.Engines.VvV
 
         public List<VvVTrap> Links { get; set; }
 
-        public override bool HandlesOnMovement { get { return true; } }
-        public bool CheckWhenHidden { get { return true; } }
+        public override bool HandlesOnMovement => true;
+        public bool CheckWhenHidden => true;
 
-        public virtual int MinDamage { get { return 0; } }
-        public virtual int MaxDamage { get { return 0; } }
-        public virtual VvVTrapType TrapType { get { return VvVTrapType.Explosion; } }
+        public virtual int MinDamage => 0;
+        public virtual int MaxDamage => 0;
+        public virtual VvVTrapType TrapType => VvVTrapType.Explosion;
 
         public static int HiddenID = 8600;
         public static int VisibleID = 39818;
@@ -230,8 +230,8 @@ namespace Server.Engines.VvV
 
     public class VvVExplosionTrap : VvVTrap
     {
-        public override int MinDamage { get { return 40; } }
-        public override int MaxDamage { get { return 50; } }
+        public override int MinDamage => 40;
+        public override int MaxDamage => 50;
 
         public VvVExplosionTrap(Mobile owner, DeploymentType type)
             : base(owner, type)
@@ -273,9 +273,9 @@ namespace Server.Engines.VvV
 
     public class VvVPoisonTrap : VvVTrap
     {
-        public override int MinDamage { get { return 25; } }
-        public override int MaxDamage { get { return 35; } }
-        public override VvVTrapType TrapType { get { return VvVTrapType.Poison; } }
+        public override int MinDamage => 25;
+        public override int MaxDamage => 35;
+        public override VvVTrapType TrapType => VvVTrapType.Poison;
 
         public VvVPoisonTrap(Mobile owner, DeploymentType type)
             : base(owner, type)
@@ -317,9 +317,9 @@ namespace Server.Engines.VvV
 
     public class VvVColdTrap : VvVTrap
     {
-        public override int MinDamage { get { return 25; } }
-        public override int MaxDamage { get { return 35; } }
-        public override VvVTrapType TrapType { get { return VvVTrapType.Cold; } }
+        public override int MinDamage => 25;
+        public override int MaxDamage => 35;
+        public override VvVTrapType TrapType => VvVTrapType.Cold;
 
         public VvVColdTrap(Mobile owner, DeploymentType type)
             : base(owner, type)
@@ -363,9 +363,9 @@ namespace Server.Engines.VvV
 
     public class VvVEnergyTrap : VvVTrap
     {
-        public override int MinDamage { get { return 25; } }
-        public override int MaxDamage { get { return 35; } }
-        public override VvVTrapType TrapType { get { return VvVTrapType.Energy; } }
+        public override int MinDamage => 25;
+        public override int MaxDamage => 35;
+        public override VvVTrapType TrapType => VvVTrapType.Energy;
 
         public VvVEnergyTrap(Mobile owner, DeploymentType type)
             : base(owner, type)
@@ -406,9 +406,9 @@ namespace Server.Engines.VvV
 
     public class VvVBladeTrap : VvVTrap
     {
-        public override int MinDamage { get { return 25; } }
-        public override int MaxDamage { get { return 35; } }
-        public override VvVTrapType TrapType { get { return VvVTrapType.Blade; } }
+        public override int MinDamage => 25;
+        public override int MaxDamage => 35;
+        public override VvVTrapType TrapType => VvVTrapType.Blade;
 
         public VvVBladeTrap(Mobile owner, DeploymentType type)
             : base(owner, type)

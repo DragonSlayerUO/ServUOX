@@ -21,13 +21,7 @@ namespace Server.Factions
         {
         }
 
-        public override VendorShoeType ShoeType
-        {
-            get
-            {
-                return this.Female ? VendorShoeType.ThighBoots : VendorShoeType.Boots;
-            }
-        }
+        public override VendorShoeType ShoeType => this.Female ? VendorShoeType.ThighBoots : VendorShoeType.Boots;
         public override void InitSBInfo()
         {
         }

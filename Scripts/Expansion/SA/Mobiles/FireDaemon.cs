@@ -54,10 +54,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool CanRummageCorpses { get { return true; } }
-        public override Poison PoisonImmunity { get { return Poison.Regular; } }
-        public override int TreasureMapLevel { get { return 4; } }
-        public override int Meat { get { return 1; } }
+        public override bool CanRummageCorpses => true;
+        public override Poison PoisonImmunity => Poison.Regular;
+        public override int TreasureMapLevel => 4;
+        public override int Meat => 1;
 
         public void AuraEffect(Mobile m)
         {

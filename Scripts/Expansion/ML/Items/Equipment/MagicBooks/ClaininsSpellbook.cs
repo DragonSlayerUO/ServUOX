@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ClaininsSpellbook : Spellbook
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public ClaininsSpellbook()
             : base()
@@ -21,13 +21,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073262;
-            }
-        }// Clainin's Spellbook - Museum of Vesper Replica
+        public override int LabelNumber => 1073262;// Clainin's Spellbook - Museum of Vesper Replica
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

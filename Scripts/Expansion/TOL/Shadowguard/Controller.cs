@@ -49,7 +49,7 @@ namespace Server.Engines.Shadowguard
 
         public Timer Timer { get; set; }
 
-        public override int LabelNumber { get { return 1156235; } } // An Enchanting Crystal Ball
+        public override int LabelNumber => 1156235;  // An Enchanting Crystal Ball
 
         public static void Initialize()
         {

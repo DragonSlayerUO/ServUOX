@@ -13,10 +13,10 @@ namespace Server.Items
         public BindEntry[] Friends = new BindEntry[10];
         public BindEntry Pending { get; set; }
 
-        public bool IsFull { get { return Friends.FirstOrDefault(entry => entry == null) != null; } }
+        public bool IsFull => Friends.FirstOrDefault(entry => entry == null) != null;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public override int MaxRecharges { get { return -1; } }
+        public override int MaxRecharges => -1;
 
         [Constructable]
         public GreaterBraceletOfBinding()
@@ -33,13 +33,7 @@ namespace Server.Items
         }
 
 
-        public override string TranslocationItemName
-        {
-            get
-            {
-                return "greater bracelet of binding";
-            }
-        }
+        public override string TranslocationItemName => "greater bracelet of binding";
 
         public override void AddNameProperty(ObjectPropertyList list)
         {

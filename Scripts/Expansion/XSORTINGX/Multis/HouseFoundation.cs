@@ -544,13 +544,7 @@ namespace Server.Multis
             }
         }
 
-        public override Point3D BaseBanLocation
-        {
-            get
-            {
-                return new Point3D(Components.Min.X, Components.Height - 1 - Components.Center.Y, 0);
-            }
-        }
+        public override Point3D BaseBanLocation => new Point3D(Components.Min.X, Components.Height - 1 - Components.Center.Y, 0);
 
         public void CheckSignpost()
         {
@@ -703,13 +697,7 @@ namespace Server.Multis
 
         private int m_DefaultPrice;
 
-        public override int DefaultPrice
-        {
-            get
-            {
-                return m_DefaultPrice;
-            }
-        }
+        public override int DefaultPrice => m_DefaultPrice;
 
         public override void Deserialize(GenericReader reader)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LordBritishThroneAddon : BaseAddon
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public LordBritishThroneAddon()
         {
@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new LordBritishThroneDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new LordBritishThroneDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -52,20 +46,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new LordBritishThroneAddon();
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073243;
-            }
-        }// Replica of Lord British's Throne - Museum of Vesper
+        public override BaseAddon Addon => new LordBritishThroneAddon();
+        public override int LabelNumber => 1073243;// Replica of Lord British's Throne - Museum of Vesper
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

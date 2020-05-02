@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Luckblade : Leafblade
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public Luckblade()
         {
@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073522;
-            }
-        }// luckblade
+        public override int LabelNumber => 1073522;// luckblade
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

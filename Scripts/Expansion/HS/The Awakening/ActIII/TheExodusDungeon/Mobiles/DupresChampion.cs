@@ -120,9 +120,9 @@ namespace Server.Mobiles
             }
         }
 
-        public override bool CanBeParagon { get { return false; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
-        public override int TreasureMapLevel { get { return 5; } }
+        public override bool CanBeParagon => false;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override int TreasureMapLevel => 5;
 
         public DupresChampion(Serial serial)
             : base(serial)

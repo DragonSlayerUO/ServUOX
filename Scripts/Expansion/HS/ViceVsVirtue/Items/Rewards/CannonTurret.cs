@@ -39,7 +39,7 @@ namespace Server.Engines.VvV
 
         private DateTime _NextShot;
 
-        public override BaseAddonDeed Deed { get { return null; } }
+        public override BaseAddonDeed Deed => null;
 
         [Constructable]
         public CannonTurret()
@@ -182,7 +182,7 @@ namespace Server.Engines.VvV
 
         public class CannonBase : DamageableItem
         {
-            public override int LabelNumber { get { return 1155505; } }
+            public override int LabelNumber => 1155505;
 
             public CannonTurret Turret { get; set; }
 
@@ -268,7 +268,7 @@ namespace Server.Engines.VvV
 
     public class CannonTurretPlans : Item
     {
-        public override int LabelNumber { get { return 1155503; } } // Plans for a Cannon Turret
+        public override int LabelNumber => 1155503;  // Plans for a Cannon Turret
 
         [Constructable]
         public CannonTurretPlans() : base(5630)

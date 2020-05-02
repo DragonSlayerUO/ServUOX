@@ -57,61 +57,13 @@ namespace Server.Factions
             this.m_Label = label;
         }
 
-        public static VendorDefinition[] Definitions
-        {
-            get
-            {
-                return m_Definitions;
-            }
-        }
-        public Type Type
-        {
-            get
-            {
-                return this.m_Type;
-            }
-        }
-        public int Price
-        {
-            get
-            {
-                return this.m_Price;
-            }
-        }
-        public int Upkeep
-        {
-            get
-            {
-                return this.m_Upkeep;
-            }
-        }
-        public int Maximum
-        {
-            get
-            {
-                return this.m_Maximum;
-            }
-        }
-        public int ItemID
-        {
-            get
-            {
-                return this.m_ItemID;
-            }
-        }
-        public TextDefinition Header
-        {
-            get
-            {
-                return this.m_Header;
-            }
-        }
-        public TextDefinition Label
-        {
-            get
-            {
-                return this.m_Label;
-            }
-        }
+        public static VendorDefinition[] Definitions => m_Definitions;
+        public Type Type => this.m_Type;
+        public int Price => this.m_Price;
+        public int Upkeep => this.m_Upkeep;
+        public int Maximum => this.m_Maximum;
+        public int ItemID => this.m_ItemID;
+        public TextDefinition Header => this.m_Header;
+        public TextDefinition Label => this.m_Label;
     }
 }

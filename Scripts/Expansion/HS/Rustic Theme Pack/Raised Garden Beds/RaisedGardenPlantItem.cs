@@ -8,8 +8,8 @@ namespace Server.Engines.Plants
 {
     public class RaisedGardenPlantItem : PlantItem
     {
-        public override bool RequiresUpkeep { get { return false; } }
-        public override int BowlOfDirtID { get { return 2323; } }
+        public override bool RequiresUpkeep => false;
+        public override int BowlOfDirtID => 2323;
         public override int GreenBowlID
         {
             get
@@ -21,9 +21,9 @@ namespace Server.Engines.Plants
             }
         }
 
-        public override int ContainerLocalization { get { return 1150436; } } // mound
-        public override int OnPlantLocalization { get { return 1150442; } } // You plant the seed in the mound of dirt.
-        public override int CantUseLocalization { get { return 1150511; } } // That is not your gardening plot.
+        public override int ContainerLocalization => 1150436;  // mound
+        public override int OnPlantLocalization => 1150442;  // You plant the seed in the mound of dirt.
+        public override int CantUseLocalization => 1150511;  // That is not your gardening plot.
 
         public override int LabelNumber
         {
@@ -66,13 +66,7 @@ namespace Server.Engines.Plants
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public override bool ValidGrowthLocation
-        {
-            get
-            {
-                return RootParent == null && Component != null && !Movable && !Deleted;
-            }
-        }
+        public override bool ValidGrowthLocation => RootParent == null && Component != null && !Movable && !Deleted;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextGrowth

@@ -81,7 +81,7 @@ namespace Server.Mobiles
             AddLoot(LootPack.Meager);
         }
 
-        public override bool BleedImmunity { get { return true; } }
+        public override bool BleedImmunity => true;
 
         #region Start/Stop
         private void Start()
@@ -130,10 +130,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override OppositionGroup OppositionGroup
-        {
-            get { return OppositionGroup.FeyAndUndead; }
-        }
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
 
         public override void Serialize(GenericWriter writer)
         {

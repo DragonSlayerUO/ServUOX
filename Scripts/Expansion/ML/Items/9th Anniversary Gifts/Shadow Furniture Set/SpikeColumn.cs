@@ -15,7 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new SpikeColumnDeed(); } }
+        public override BaseAddonDeed Deed => new SpikeColumnDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -32,9 +32,9 @@ namespace Server.Items
 
     public class SpikeColumnDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1076675; } } // Spike Column
+        public override int LabelNumber => 1076675;  // Spike Column
 
-        public override bool ExcludeDeedHue { get { return true; } }
+        public override bool ExcludeDeedHue => true;
 
         [Constructable]
         public SpikeColumnDeed()
@@ -48,7 +48,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon { get { return new SpikeColumnAddon(); } }
+        public override BaseAddon Addon => new SpikeColumnAddon();
 
 
         public override void Serialize(GenericWriter writer)

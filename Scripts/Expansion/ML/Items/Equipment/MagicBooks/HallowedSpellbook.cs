@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HallowedSpellbook : Spellbook
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public HallowedSpellbook()
             : base(0x3FFFFFFFF)
@@ -18,13 +18,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1077620;
-            }
-        }// Hallowed Spellbook
+        public override int LabelNumber => 1077620;// Hallowed Spellbook
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -56,13 +56,13 @@ namespace Server.Mobiles
             this.AddLoot(LootPack.UltraRich);
         }
 
-        public override int TreasureMapLevel { get { return 4; } }
-        public override Poison PoisonImmunity { get { return Poison.Parasitic; } }
-        public override Poison HitPoison { get { return Poison.Lethal; } }
-        public override bool TaintedLifeAura { get { return true; } }
-        public override bool ReacquireOnMovement { get { return true; } }
-        public override bool AcquireOnApproach { get { return true; } }
-        public override int AcquireOnApproachRange { get { return 12; } }
+        public override int TreasureMapLevel => 4;
+        public override Poison PoisonImmunity => Poison.Parasitic;
+        public override Poison HitPoison => Poison.Lethal;
+        public override bool TaintedLifeAura => true;
+        public override bool ReacquireOnMovement => true;
+        public override bool AcquireOnApproach => true;
+        public override int AcquireOnApproachRange => 12;
 
         public override void OnGaveMeleeAttack(Mobile defender)
         {

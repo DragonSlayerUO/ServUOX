@@ -20,11 +20,11 @@ namespace Server.Misc
 
     public class TreasuresOfTokuno : PointsSystem
     {
-        public override PointsType Loyalty { get { return PointsType.TOT; } }
-        public override TextDefinition Name { get { return m_Name; } }
-        public override bool AutoAdd { get { return true; } }
-        public override double MaxPoints { get { return double.MaxValue; } }
-        public override bool ShowOnLoyaltyGump { get { return false; } }
+        public override PointsType Loyalty => PointsType.TOT;
+        public override TextDefinition Name => m_Name;
+        public override bool AutoAdd => true;
+        public override double MaxPoints => double.MaxValue;
+        public override bool ShowOnLoyaltyGump => false;
 
         private TextDefinition m_Name = new TextDefinition("Treasures of Tokuno");
 
@@ -103,13 +103,7 @@ namespace Server.Misc
             }
         };
 
-        public static Type[] LesserArtifacts
-        {
-            get
-            {
-                return m_LesserArtifacts[(int)RewardEra - 1];
-            }
-        }
+        public static Type[] LesserArtifacts => m_LesserArtifacts[(int)RewardEra - 1];
 
         private static Type[][] m_GreaterArtifacts = null;
 
@@ -317,50 +311,14 @@ namespace Server.Mobiles
 {
     public class IharaSoko : BaseVendor
     {
-        public override bool IsActiveVendor
-        {
-            get
-            {
-                return false;
-            }
-        }
-        public override bool IsInvulnerable
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool DisallowAllMoves
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool ClickTitle
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool CanTeach
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool IsActiveVendor => false;
+        public override bool IsInvulnerable => true;
+        public override bool DisallowAllMoves => true;
+        public override bool ClickTitle => true;
+        public override bool CanTeach => false;
 
         protected List<SBInfo> m_SBInfos = new List<SBInfo>();
-        protected override List<SBInfo> SBInfos
-        {
-            get
-            {
-                return this.m_SBInfos;
-            }
-        }
+        protected override List<SBInfo> SBInfos => this.m_SBInfos;
 
         public override void InitSBInfo()
         {
@@ -593,13 +551,7 @@ namespace Server.Gumps
         {
             private readonly Type m_Type;
 
-            public Type Type
-            {
-                get
-                {
-                    return this.m_Type;
-                }
-            }
+            public Type Type => this.m_Type;
 
             public TypeTileButtonInfo(Type type, int itemID, int hue, TextDefinition label, int localizedToolTip)
                 : base(itemID, hue, label, localizedToolTip)
@@ -689,13 +641,7 @@ namespace Server.Gumps
         };
         #endregion
 
-        public static TypeTileButtonInfo[][] NormalRewards
-        {
-            get
-            {
-                return m_NormalRewards;
-            }
-        }
+        public static TypeTileButtonInfo[][] NormalRewards => m_NormalRewards;
 
         #region ToT Pigment Rewards Table
         private static readonly PigmentsTileButtonInfo[][] m_PigmentRewards = new PigmentsTileButtonInfo[][]
@@ -744,13 +690,7 @@ namespace Server.Gumps
         };
         #endregion
 
-        public static PigmentsTileButtonInfo[][] PigmentRewards
-        {
-            get
-            {
-                return m_PigmentRewards;
-            }
-        }
+        public static PigmentsTileButtonInfo[][] PigmentRewards => m_PigmentRewards;
 
         private readonly Mobile m_Collector;
 

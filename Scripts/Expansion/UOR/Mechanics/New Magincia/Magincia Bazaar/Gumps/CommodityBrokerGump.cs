@@ -905,8 +905,8 @@ namespace Server.Engines.NewMagincia
         private CommodityBrokerEntry m_Entry;
         private int m_Index;
 
-        public override string TitleString { get { return "Remove Commodity Confirmation"; } }
-        public override string LabelString { get { return "Are you sure you want to remove this entry from your commodity broker? Any unused stock will be placed in your bankbox."; } }
+        public override string TitleString => "Remove Commodity Confirmation";
+        public override string LabelString => "Are you sure you want to remove this entry from your commodity broker? Any unused stock will be placed in your bankbox.";
 
         public ConfirmRemoveEntryGump(CommodityBroker broker, int index)
         {

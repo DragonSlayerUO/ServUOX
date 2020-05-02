@@ -171,7 +171,7 @@ namespace Server.Items
 
         private class InternalAddonComponent : AddonComponent
         {
-            public override int LabelNumber { get { return 1150122; } } // Dolphin Rug
+            public override int LabelNumber => 1150122;  // Dolphin Rug
 
             public InternalAddonComponent(int id)
                 : base(id)

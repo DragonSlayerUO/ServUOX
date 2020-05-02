@@ -6,8 +6,8 @@ namespace Server.Items
     [Alterable(typeof(DefTailoring), typeof(GargishTangle1))]
     public class Tangle1 : HalfApron
     {
-        public override int LabelNumber { get { return 1114784; } } // Tangle
-        public override bool IsArtifact { get { return true; } }
+        public override int LabelNumber => 1114784;  // Tangle
+        public override bool IsArtifact => true;
 
         [Constructable]
         public Tangle1()
@@ -41,8 +41,8 @@ namespace Server.Items
 
     public class GargishTangle1 : GargoyleHalfApron
     {
-        public override int LabelNumber { get { return 1114784; } } // Tangle
-        public override bool IsArtifact { get { return true; } }
+        public override int LabelNumber => 1114784;  // Tangle
+        public override bool IsArtifact => true;
 
         [Constructable]
         public GargishTangle1()

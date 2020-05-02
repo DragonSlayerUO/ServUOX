@@ -23,7 +23,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool DeleteOnRelease { get { return true; } }
+        public override bool DeleteOnRelease => true;
 
         public override void GetProperties(ObjectPropertyList list)
         {

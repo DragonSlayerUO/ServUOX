@@ -50,13 +50,7 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override bool AlwaysMurderer
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool AlwaysMurderer => true;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

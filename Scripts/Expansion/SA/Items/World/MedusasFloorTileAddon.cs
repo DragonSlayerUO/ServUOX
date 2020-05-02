@@ -14,13 +14,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.MedusasFloortileAddon")]
     public class MedusaFloorTileAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new MedusaFloorTileAddonDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new MedusaFloorTileAddonDeed();
 
         [Constructable]
         public MedusaFloorTileAddon()
@@ -72,15 +66,9 @@ namespace Server.Items
     [TypeAlias("Server.Items.MedusasFloortileAddonDeed")]
     public class MedusaFloorTileAddonDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1113918; } } // a Medusa Floor deed
+        public override int LabelNumber => 1113918;  // a Medusa Floor deed
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new MedusaFloorTileAddon();
-            }
-        }
+        public override BaseAddon Addon => new MedusaFloorTileAddon();
 
         [Constructable]
         public MedusaFloorTileAddonDeed()

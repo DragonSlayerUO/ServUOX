@@ -92,10 +92,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BleedImmunity { get { return true; } }
-        public override OppositionGroup OppositionGroup { get { return OppositionGroup.FeyAndUndead; } }
-        public override Poison PoisonImmunity { get { return Poison.Regular; } }
-        public override TribeType Tribe { get { return TribeType.Undead; } }
+        public override bool BleedImmunity => true;
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
+        public override Poison PoisonImmunity => Poison.Regular;
+        public override TribeType Tribe => TribeType.Undead;
 
         public override void GenerateLoot()
         {

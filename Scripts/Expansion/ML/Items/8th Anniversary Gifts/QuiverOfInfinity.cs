@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class QuiverOfInfinity : BaseQuiver
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public QuiverOfInfinity()
             : base(0x2B02)
@@ -21,21 +21,9 @@ namespace Server.Items
         {
         }
 
-        public override bool CanAlter
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool CanAlter => false;
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1075201;
-            }
-        }// Quiver of Infinity
+        public override int LabelNumber => 1075201;// Quiver of Infinity
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

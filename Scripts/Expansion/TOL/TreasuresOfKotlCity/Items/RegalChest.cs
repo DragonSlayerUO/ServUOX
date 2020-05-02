@@ -9,7 +9,7 @@ namespace Server.Engines.TreasuresOfKotlCity
     {
         private Timer m_Timer;
 
-        public bool CheckWhenHidden { get { return true; } }
+        public bool CheckWhenHidden => true;
 
         [Constructable]
         public KotlRegalChest()

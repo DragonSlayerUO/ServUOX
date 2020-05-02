@@ -15,7 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties { get { return ObjectPropertyList.Enabled; } }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
         public override void Serialize(GenericWriter writer)
         {
@@ -45,7 +45,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties { get { return ObjectPropertyList.Enabled; } }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
         public override void Serialize(GenericWriter writer)
         {

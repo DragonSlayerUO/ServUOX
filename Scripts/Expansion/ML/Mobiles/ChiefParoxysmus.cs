@@ -51,20 +51,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool GivesMLMinorArtifact
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
+        public override bool GivesMLMinorArtifact => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
 
         public override void GenerateLoot()
         {

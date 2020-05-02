@@ -31,7 +31,7 @@ namespace Server.Spells.Mysticism
 
     public class PurgeMagicSpell : MysticSpell
     {
-        public override SpellCircle Circle { get { return SpellCircle.Second; } }
+        public override SpellCircle Circle => SpellCircle.Second;
 
         private static SpellInfo m_Info = new SpellInfo(
                 "Purge", "An Ort Sanct ",
@@ -286,8 +286,8 @@ namespace Server.Spells.Mysticism
             private Mobile m_Caster;
             private DateTime m_StartTime;
 
-            public DateTime StartTime { get { return m_StartTime; } }
-            public Mobile Caster { get { return m_Caster; } }
+            public DateTime StartTime => m_StartTime;
+            public Mobile Caster => m_Caster;
 
             public CurseTimer(Mobile mob, Mobile caster, TimeSpan duration)
                 : base(duration)

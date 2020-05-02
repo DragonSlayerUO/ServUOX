@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class NictitatingLens : ElvenGlasses
     {
-        public override int LabelNumber { get { return 1154234; } } // Nictitating Lens
+        public override int LabelNumber => 1154234;  // Nictitating Lens
 
         [Constructable]
         public NictitatingLens()
@@ -31,13 +31,13 @@ namespace Server.Items
         }
 
 
-        public override int BasePhysicalResistance { get { return 2; } }
-        public override int BaseFireResistance { get { return 4; } }
-        public override int BaseColdResistance { get { return 4; } }
-        public override int BasePoisonResistance { get { return 3; } }
-        public override int BaseEnergyResistance { get { return 2; } }
-        public override int InitMinHits { get { return 50; } }
-        public override int InitMaxHits { get { return 60; } }
+        public override int BasePhysicalResistance => 2;
+        public override int BaseFireResistance => 4;
+        public override int BaseColdResistance => 4;
+        public override int BasePoisonResistance => 3;
+        public override int BaseEnergyResistance => 2;
+        public override int InitMinHits => 50;
+        public override int InitMaxHits => 60;
 
         public NictitatingLens(Serial serial)
             : base(serial)
@@ -59,7 +59,7 @@ namespace Server.Items
 
     public class GargishNictitatingLens : GargishGlasses
     {
-        public override int LabelNumber { get { return 1154234; } } // Nictitating Lens
+        public override int LabelNumber => 1154234;  // Nictitating Lens
 
         [Constructable]
         public GargishNictitatingLens()
@@ -77,13 +77,13 @@ namespace Server.Items
             from.PublicOverheadMessage(MessageType.Regular, 0x3B2, 1154235); // *Finely crafted lenses for use in allowing the wearer to maintain visual acuity while navigating an aquatic environment*
         }
 
-        public override int BasePhysicalResistance { get { return 2; } }
-        public override int BaseFireResistance { get { return 4; } }
-        public override int BaseColdResistance { get { return 4; } }
-        public override int BasePoisonResistance { get { return 3; } }
-        public override int BaseEnergyResistance { get { return 2; } }
-        public override int InitMinHits { get { return 50; } }
-        public override int InitMaxHits { get { return 60; } }
+        public override int BasePhysicalResistance => 2;
+        public override int BaseFireResistance => 4;
+        public override int BaseColdResistance => 4;
+        public override int BasePoisonResistance => 3;
+        public override int BaseEnergyResistance => 2;
+        public override int InitMinHits => 50;
+        public override int InitMaxHits => 60;
 
         public override void GetProperties(ObjectPropertyList list)
         {

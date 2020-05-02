@@ -35,7 +35,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new MonasteryBellDeed(); } }
+        public override BaseAddonDeed Deed => new MonasteryBellDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -52,7 +52,7 @@ namespace Server.Items
 
     public class MonasteryBellDeed : BaseAddonDeed, IRewardOption
     {
-        public override int LabelNumber { get { return 1098472; } } // monastery bell
+        public override int LabelNumber => 1098472;  // monastery bell
 
         private DirectionType _Direction;
 
@@ -95,7 +95,7 @@ namespace Server.Items
                 base.OnDoubleClick(from);
         }
 
-        public override BaseAddon Addon { get { return new MonasteryBellAddon(_Direction); } }
+        public override BaseAddon Addon => new MonasteryBellAddon(_Direction);
 
         public override void Serialize(GenericWriter writer)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PendantOfTheMagi : GoldNecklace
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public PendantOfTheMagi()
         {
@@ -21,13 +21,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1072937;
-            }
-        }// Pendant of the Magi
+        public override int LabelNumber => 1072937;// Pendant of the Magi
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -6,9 +6,9 @@ namespace Server.Mobiles
 {
     public class HungryCoconutCrabStatue : Item, ICreatureStatuette
     {
-        public override int LabelNumber { get { return 1159221; } } // Hungry Coconut Crab Statuette
+        public override int LabelNumber => 1159221;  // Hungry Coconut Crab Statuette
 
-        public Type CreatureType { get { return typeof(HungryCoconutCrab); } }
+        public Type CreatureType => typeof(HungryCoconutCrab);
 
         [Constructable]
         public HungryCoconutCrabStatue()
@@ -95,8 +95,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool DeleteOnRelease { get { return true; } }
-        public override FoodType FavoriteFood { get { return FoodType.FruitsAndVegies; } }
+        public override bool DeleteOnRelease => true;
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies;
 
         public override void Serialize(GenericWriter writer)
         {

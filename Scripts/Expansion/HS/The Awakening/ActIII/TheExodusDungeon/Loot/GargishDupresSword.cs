@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class GargishDupresSword : StoneWarSword
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
 
         [Constructable]
         public GargishDupresSword()
@@ -24,9 +24,9 @@ namespace Server.Items
         {
         }
 
-        public override bool CanFortify { get { return false; } }
+        public override bool CanFortify => false;
 
-        public override int LabelNumber { get { return 1153551; } }
+        public override int LabelNumber => 1153551;
 
         public override void Serialize(GenericWriter writer)
         {

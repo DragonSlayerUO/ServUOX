@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new WarriorStatueSouthDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new WarriorStatueSouthDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -49,20 +43,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new WarriorStatueSouthAddon();
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1072887;
-            }
-        }// warrior statue (south)
+        public override BaseAddon Addon => new WarriorStatueSouthAddon();
+        public override int LabelNumber => 1072887;// warrior statue (south)
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

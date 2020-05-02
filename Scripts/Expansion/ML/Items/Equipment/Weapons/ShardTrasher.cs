@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ShardThrasher : DiamondMace
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public ShardThrasher()
         {
@@ -21,13 +21,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1072918;
-            }
-        }// Shard Thrasher
+        public override int LabelNumber => 1072918;// Shard Thrasher
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

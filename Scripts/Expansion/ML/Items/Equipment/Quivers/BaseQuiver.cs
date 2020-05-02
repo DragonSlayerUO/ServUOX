@@ -38,34 +38,10 @@ namespace Server.Items
             set { _OwnerName = value; InvalidateProperties(); }
         }
 
-        public override int DefaultGumpID
-        {
-            get
-            {
-                return 0x108;
-            }
-        }
-        public override int DefaultMaxItems
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override int DefaultMaxWeight
-        {
-            get
-            {
-                return 50;
-            }
-        }
-        public override double DefaultWeight
-        {
-            get
-            {
-                return 2.0;
-            }
-        }
+        public override int DefaultGumpID => 0x108;
+        public override int DefaultMaxItems => 1;
+        public override int DefaultMaxWeight => 50;
+        public override double DefaultWeight => 2.0;
 
         public override bool DisplayWeight
         {
@@ -78,7 +54,7 @@ namespace Server.Items
             }
         }
 
-        public virtual int ArtifactRarity { get { return 0; } }
+        public virtual int ArtifactRarity => 0;
 
         private AosAttributes m_Attributes;
         private AosSkillBonuses m_AosSkillBonuses;
@@ -88,7 +64,7 @@ namespace Server.Items
         private int m_WeightReduction;
         private int m_DamageIncrease;
 
-        public virtual bool CanAlter { get { return true; } }
+        public virtual bool CanAlter => true;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsArrowAmmo { get; set; }
@@ -230,13 +206,7 @@ namespace Server.Items
             }
         }
 
-        public Item Ammo
-        {
-            get
-            {
-                return Items.Count > 0 ? Items[0] : null;
-            }
-        }
+        public Item Ammo => Items.Count > 0 ? Items[0] : null;
 
         public BaseQuiver()
             : this(0x2FB7)
@@ -264,7 +234,7 @@ namespace Server.Items
         {
         }
 
-        public override bool DisplaysContent { get { return false; } }
+        public override bool DisplaysContent => false;
 
         public override void OnAfterDuped(Item newItem)
         {
@@ -519,17 +489,17 @@ namespace Server.Items
             return true;
         }
 
-        public virtual int BasePhysicalResistance { get { return 0; } }
-        public virtual int BaseFireResistance { get { return 0; } }
-        public virtual int BaseColdResistance { get { return 0; } }
-        public virtual int BasePoisonResistance { get { return 0; } }
-        public virtual int BaseEnergyResistance { get { return 0; } }
+        public virtual int BasePhysicalResistance => 0;
+        public virtual int BaseFireResistance => 0;
+        public virtual int BaseColdResistance => 0;
+        public virtual int BasePoisonResistance => 0;
+        public virtual int BaseEnergyResistance => 0;
 
-        public override int PhysicalResistance { get { return BasePhysicalResistance + m_Resistances.Physical; } }
-        public override int FireResistance { get { return BaseFireResistance + m_Resistances.Fire; } }
-        public override int ColdResistance { get { return BaseColdResistance + m_Resistances.Cold; } }
-        public override int PoisonResistance { get { return BasePoisonResistance + m_Resistances.Poison; } }
-        public override int EnergyResistance { get { return BaseEnergyResistance + m_Resistances.Energy; } }
+        public override int PhysicalResistance => BasePhysicalResistance + m_Resistances.Physical;
+        public override int FireResistance => BaseFireResistance + m_Resistances.Fire;
+        public override int ColdResistance => BaseColdResistance + m_Resistances.Cold;
+        public override int PoisonResistance => BasePoisonResistance + m_Resistances.Poison;
+        public override int EnergyResistance => BaseEnergyResistance + m_Resistances.Energy;
 
         public override void AddWeightProperty(ObjectPropertyList list)
         {
@@ -1058,36 +1028,12 @@ namespace Server.Items
         #endregion
 
         #region Mondain's Legacy Sets
-        public virtual SetItem SetID
-        {
-            get
-            {
-                return SetItem.None;
-            }
-        }
-        public virtual int Pieces
-        {
-            get
-            {
-                return 0;
-            }
-        }
+        public virtual SetItem SetID => SetItem.None;
+        public virtual int Pieces => 0;
 
-        public virtual bool BardMasteryBonus
-        {
-            get
-            {
-                return (SetID == SetItem.Virtuoso);
-            }
-        }
+        public virtual bool BardMasteryBonus => (SetID == SetItem.Virtuoso);
 
-        public bool IsSetItem
-        {
-            get
-            {
-                return SetID != SetItem.None;
-            }
-        }
+        public bool IsSetItem => SetID != SetItem.None;
 
         private int m_SetHue;
         private bool m_SetEquipped;

@@ -5,8 +5,8 @@ namespace Server.Items
 {
     public class FigureheadOfBmvArarat : BaseDecorationArtifact
     {
-        public override int ArtifactRarity { get { return 8; } }
-        public override bool IsArtifact { get { return true; } }
+        public override int ArtifactRarity => 8;
+        public override bool IsArtifact => true;
 
         [Constructable]
         public FigureheadOfBmvArarat()

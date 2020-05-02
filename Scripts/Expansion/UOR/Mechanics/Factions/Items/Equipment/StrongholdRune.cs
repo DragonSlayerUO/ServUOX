@@ -8,7 +8,7 @@ namespace Server.Factions
 {
     public class StrongholdRune : Item, IFactionItem
     {
-        public override int LabelNumber { get { return 1094700; } } // Faction Stronghold Rune
+        public override int LabelNumber => 1094700;  // Faction Stronghold Rune
 
         #region Factions
         private FactionItem m_FactionState;

@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0xA511, 0xA512)]
     public class HorseStatue : MonsterStatuette
     {
-        public override int LabelNumber { get { return 1018263; } } // horse
+        public override int LabelNumber => 1018263;  // horse
 
         [Constructable]
         public HorseStatue()

@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public class AcidVine : Item
     {
-        public override int LabelNumber { get { return 1111655; } } // magic vines
-        public override bool ForceShowProperties { get { return ObjectPropertyList.Enabled; } }
+        public override int LabelNumber => 1111655;  // magic vines
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
         [Constructable]
         public AcidVine()

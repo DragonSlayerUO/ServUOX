@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AstronomyTent : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return null; } }
+        public override BaseAddonDeed Deed => null;
 
         [Constructable]
         public AstronomyTent()

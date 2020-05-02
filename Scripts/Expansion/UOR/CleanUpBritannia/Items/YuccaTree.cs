@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1023383;
-            }
-        }// yucca
+        public override int LabelNumber => 1023383;// yucca
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

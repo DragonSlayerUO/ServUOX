@@ -39,13 +39,7 @@ namespace Server.Factions
                 this.AssignName(this.m_Town == null ? null : this.m_Town.Definition.TownStoneName);
             }
         }
-        public override string DefaultName
-        {
-            get
-            {
-                return "faction town stone";
-            }
-        }
+        public override string DefaultName => "faction town stone";
         public override void OnDoubleClick(Mobile from)
         {
             if (this.m_Town == null)

@@ -20,13 +20,7 @@ namespace Server.Items
         {
         }
 
-        public override string DefaultName
-        {
-            get
-            {
-                return "Jaacar Reward Box";
-            }
-        }
+        public override string DefaultName => "Jaacar Reward Box";
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

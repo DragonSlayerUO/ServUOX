@@ -9,7 +9,7 @@ namespace Server.Items
 {
     public class MoonstonePowerGeneratorAddon : BaseAddon
     {
-        public override bool ShareHue { get { return false; } }
+        public override bool ShareHue => false;
 
         public Timer ActiveTimer { get; set; }
         public InternalComponent Activator1 { get; set; }
@@ -422,7 +422,7 @@ namespace Server.Items
 
     public class MoonstonePowerGenerator : DamageableItem
     {
-        public override int LabelNumber { get { return 1156854; } } // Moonstone Power Generator
+        public override int LabelNumber => 1156854;  // Moonstone Power Generator
 
         public List<BaseCreature> Spawn;
         public Timer Timer { get; set; }

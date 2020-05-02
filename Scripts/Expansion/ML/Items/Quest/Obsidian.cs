@@ -129,13 +129,7 @@ namespace Server.Engines.Quests.Collector
                 this.InvalidateProperties();
             }
         }
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public static string RandomName(Mobile from)
         {
             int index = Utility.Random(m_Names.Length);

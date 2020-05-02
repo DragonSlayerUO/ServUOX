@@ -11,7 +11,7 @@ namespace Server.Engines.HuntsmasterChallenge
     public class HuntingSystem : Item
     {
         private static HuntingSystem m_Instance;
-        public static HuntingSystem Instance { get { return m_Instance; } }
+        public static HuntingSystem Instance => m_Instance;
 
         private DateTime m_SeasonBegins;
         private DateTime m_SeasonEnds;
@@ -29,7 +29,7 @@ namespace Server.Engines.HuntsmasterChallenge
         public DateTime SeasonEnds { get { return m_SeasonEnds; } set { m_SeasonEnds = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int BonusIndex { get { return m_BonusIndex; } }
+        public int BonusIndex => m_BonusIndex;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Active { get { return m_Active; } set { m_Active = value; CheckTimer(); } }
@@ -303,13 +303,13 @@ namespace Server.Engines.HuntsmasterChallenge
         }
 
         private Dictionary<HuntType, List<HuntingKillEntry>> m_Leaders;
-        public Dictionary<HuntType, List<HuntingKillEntry>> Leaders { get { return m_Leaders; } }
+        public Dictionary<HuntType, List<HuntingKillEntry>> Leaders => m_Leaders;
 
         private Dictionary<Mobile, int> m_UnclaimedWinners = new Dictionary<Mobile, int>();
-        public Dictionary<Mobile, int> UnclaimedWinners { get { return m_UnclaimedWinners; } }
+        public Dictionary<Mobile, int> UnclaimedWinners => m_UnclaimedWinners;
 
         private Dictionary<HuntType, List<HuntingKillEntry>> m_Top10;
-        public Dictionary<HuntType, List<HuntingKillEntry>> Top10 { get { return m_Top10; } }
+        public Dictionary<HuntType, List<HuntingKillEntry>> Top10 => m_Top10;
 
         public override void Delete()
         {

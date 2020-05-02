@@ -46,13 +46,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override int Meat => 1;
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.Average, 2);

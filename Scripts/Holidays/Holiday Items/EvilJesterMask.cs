@@ -15,13 +15,7 @@ namespace Server.Items.Holiday
         {
         }
 
-        public override string MaskName
-        {
-            get
-            {
-                return "Evil Jester Mask";
-            }
-        }
+        public override string MaskName => "Evil Jester Mask";
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

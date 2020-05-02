@@ -62,34 +62,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Greater;
-            }
-        }
-        public override Poison HitPoison
-        {
-            get
-            {
-                return Poison.Greater;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
-            }
-        }
-        public override bool CanAngerOnTame
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override Poison PoisonImmunity => Poison.Greater;
+        public override Poison HitPoison => Poison.Greater;
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
+        public override bool CanAngerOnTame => true;
 
         public override int GetAngerSound()
         {

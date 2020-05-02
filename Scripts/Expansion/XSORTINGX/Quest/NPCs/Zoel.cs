@@ -18,13 +18,7 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override int TalkNumber
-        {
-            get
-            {
-                return -1;
-            }
-        }
+        public override int TalkNumber => -1;
         public override void InitBody()
         {
             this.InitStats(100, 100, 25);

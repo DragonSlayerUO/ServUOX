@@ -19,132 +19,24 @@ namespace Server.Items
         {
         }
 
-        public override WeaponAbility PrimaryAbility
-        {
-            get
-            {
-                return WeaponAbility.Feint;
-            }
-        }
-        public override WeaponAbility SecondaryAbility
-        {
-            get
-            {
-                return WeaponAbility.DualWield;
-            }
-        }
-        public override int AosStrengthReq
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override int AosMinDamage
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override int AosMaxDamage
-        {
-            get
-            {
-                return 13;
-            }
-        }
-        public override int AosSpeed
-        {
-            get
-            {
-                return 50;
-            }
-        }
-        public override float MlSpeed
-        {
-            get
-            {
-                return 2.00f;
-            }
-        }
-        public override int OldStrengthReq
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override int OldMinDamage
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override int OldMaxDamage
-        {
-            get
-            {
-                return 12;
-            }
-        }
-        public override int OldSpeed
-        {
-            get
-            {
-                return 50;
-            }
-        }
-        public override int DefHitSound
-        {
-            get
-            {
-                return 0x232;
-            }
-        }
-        public override int DefMissSound
-        {
-            get
-            {
-                return 0x238;
-            }
-        }
-        public override int InitMinHits
-        {
-            get
-            {
-                return 55;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 60;
-            }
-        }
-        public override WeaponAnimation DefAnimation
-        {
-            get
-            {
-                return WeaponAnimation.Bash2H;
-            }
-        }
-        public override Race RequiredRace
-        {
-            get
-            {
-                return Race.Gargoyle;
-            }
-        }
-        public override bool CanBeWornByGargoyles
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override WeaponAbility PrimaryAbility => WeaponAbility.Feint;
+        public override WeaponAbility SecondaryAbility => WeaponAbility.DualWield;
+        public override int AosStrengthReq => 10;
+        public override int AosMinDamage => 10;
+        public override int AosMaxDamage => 13;
+        public override int AosSpeed => 50;
+        public override float MlSpeed => 2.00f;
+        public override int OldStrengthReq => 10;
+        public override int OldMinDamage => 10;
+        public override int OldMaxDamage => 12;
+        public override int OldSpeed => 50;
+        public override int DefHitSound => 0x232;
+        public override int DefMissSound => 0x238;
+        public override int InitMinHits => 55;
+        public override int InitMaxHits => 60;
+        public override WeaponAnimation DefAnimation => WeaponAnimation.Bash2H;
+        public override Race RequiredRace => Race.Gargoyle;
+        public override bool CanBeWornByGargoyles => true;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

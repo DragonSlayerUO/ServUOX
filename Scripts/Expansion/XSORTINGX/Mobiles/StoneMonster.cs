@@ -208,20 +208,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BardImmunity
-        {
-            get
-            {
-                return !Core.AOS;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
+        public override bool BardImmunity => !Core.AOS;
+        public override Poison PoisonImmunity => Poison.Lethal;
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.Average, 2);

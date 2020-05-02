@@ -50,7 +50,7 @@ namespace Server.Mobiles
             }
         }*/
 
-        public override bool AlwaysMurderer { get { return true; } }
+        public override bool AlwaysMurderer => true;
 
         public override int Damage(int amount, Mobile from, bool informMount, bool checkDisrupt)
         {

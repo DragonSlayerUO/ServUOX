@@ -141,40 +141,16 @@ namespace Server.Factions
         }
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsBeingCorrupted
-        {
-            get
-            {
-                return (this.m_LastMonolith is StrongholdMonolith && this.m_LastMonolith.Faction == this.m_Corrupting && this.m_Corrupting != null);
-            }
-        }
+        public bool IsBeingCorrupted => (this.m_LastMonolith is StrongholdMonolith && this.m_LastMonolith.Faction == this.m_Corrupting && this.m_Corrupting != null);
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsCorrupted
-        {
-            get
-            {
-                return (this.m_Corrupted != null);
-            }
-        }
+        public bool IsCorrupted => (this.m_Corrupted != null);
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsPurifying
-        {
-            get
-            {
-                return (this.m_PurificationStart != DateTime.MinValue);
-            }
-        }
+        public bool IsPurifying => (this.m_PurificationStart != DateTime.MinValue);
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsCorrupting
-        {
-            get
-            {
-                return (this.m_Corrupting != null && this.m_Corrupting != this.m_Corrupted);
-            }
-        }
+        public bool IsCorrupting => (this.m_Corrupting != null && this.m_Corrupting != this.m_Corrupted);
 
         public void Update()
         {
@@ -535,12 +511,6 @@ namespace Server.Factions
 
         private static readonly List<Sigil> m_Sigils = new List<Sigil>();
 
-        public static List<Sigil> Sigils
-        {
-            get
-            {
-                return m_Sigils;
-            }
-        }
+        public static List<Sigil> Sigils => m_Sigils;
     }
 }

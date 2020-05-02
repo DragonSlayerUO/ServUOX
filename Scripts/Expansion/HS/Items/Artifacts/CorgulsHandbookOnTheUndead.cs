@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CorgulsHandbookOnTheUndead : NecromancerSpellbook
     {
-        public override int LabelNumber { get { return 1149780; } }
+        public override int LabelNumber => 1149780;
 
         [Constructable]
         public CorgulsHandbookOnTheUndead()

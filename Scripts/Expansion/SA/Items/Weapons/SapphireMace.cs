@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SapphireMace : DiamondMace
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public SapphireMace()
         {
@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073531;
-            }
-        }// sapphire mace
+        public override int LabelNumber => 1073531;// sapphire mace
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -177,7 +177,7 @@ namespace Server.Items
 
         private class InternalAddonComponent : AddonComponent
         {
-            public override int LabelNumber { get { return 1150121; } } // Rose Rug
+            public override int LabelNumber => 1150121;  // Rose Rug
 
             public InternalAddonComponent(int id)
                 : base(id)

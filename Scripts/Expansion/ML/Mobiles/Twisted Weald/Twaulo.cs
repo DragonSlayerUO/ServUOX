@@ -56,90 +56,18 @@ namespace Server.Mobiles
         {
         }
 
-        public override ChampionSkullType SkullType
-        {
-            get
-            {
-                return ChampionSkullType.Pain;
-            }
-        }
-        public override Type[] UniqueList
-        {
-            get
-            {
-                return new Type[] { typeof(Quell) };
-            }
-        }
-        public override Type[] SharedList
-        {
-            get
-            {
-                return new Type[] { typeof(TheMostKnowledgePerson), typeof(OblivionsNeedle), typeof(BraveKnightOfTheBritannia) };
-            }
-        }
-        public override Type[] DecorativeList
-        {
-            get
-            {
-                return new Type[] { typeof(Pier), typeof(MonsterStatuette) };
-            }
-        }
-        public override MonsterStatuetteType[] StatueTypes
-        {
-            get
-            {
-                return new MonsterStatuetteType[] { MonsterStatuetteType.DreadHorn };
-            }
-        }
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
-        public override bool Unprovokable
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Regular;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 5;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 8;
-            }
-        }
-        public override HideType HideType
-        {
-            get
-            {
-                return HideType.Spined;
-            }
-        }
+        public override ChampionSkullType SkullType => ChampionSkullType.Pain;
+        public override Type[] UniqueList => new Type[] { typeof(Quell) };
+        public override Type[] SharedList => new Type[] { typeof(TheMostKnowledgePerson), typeof(OblivionsNeedle), typeof(BraveKnightOfTheBritannia) };
+        public override Type[] DecorativeList => new Type[] { typeof(Pier), typeof(MonsterStatuette) };
+        public override MonsterStatuetteType[] StatueTypes => new MonsterStatuetteType[] { MonsterStatuetteType.DreadHorn };
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
+        public override bool Unprovokable => true;
+        public override Poison PoisonImmunity => Poison.Regular;
+        public override int TreasureMapLevel => 5;
+        public override int Meat => 1;
+        public override int Hides => 8;
+        public override HideType HideType => HideType.Spined;
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.UltraRich, 2);

@@ -20,7 +20,7 @@ namespace Server.Engines.Quests.RitualQuest
             }
         }
 
-        public override Type[] Quests { get { return new Type[] { typeof(ScalesOfADreamSerpentQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(ScalesOfADreamSerpentQuest) };
 
         public Prugyilonus()
             : base("Prugyilonus", "the Advisor to the Queen")
@@ -72,7 +72,7 @@ namespace Server.Engines.Quests.RitualQuest
 
     public class Bexil : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(CatchMeIfYouCanQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(CatchMeIfYouCanQuest) };
 
         public static Bexil Instance { get; set; }
 
@@ -140,7 +140,7 @@ namespace Server.Engines.Quests.RitualQuest
 
     public class BexilPunchingBag : BaseCreature
     {
-        public override bool InitialInnocent { get { return true; } }
+        public override bool InitialInnocent => true;
 
         private Dictionary<Mobile, int> _Table = new Dictionary<Mobile, int>();
         private DateTime _NextTeleport;
@@ -246,7 +246,7 @@ namespace Server.Engines.Quests.RitualQuest
 
     public class Grubbix : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(FilthyLifeStealersQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(FilthyLifeStealersQuest) };
 
         public static Grubbix Instance { get; set; }
 

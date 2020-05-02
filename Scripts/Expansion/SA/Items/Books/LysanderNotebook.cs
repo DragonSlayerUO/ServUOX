@@ -37,13 +37,7 @@ namespace Server.Items
         {
         }
 
-        public override BookContent DefaultContent
-        {
-            get
-            {
-                return Content;
-            }
-        }
+        public override BookContent DefaultContent => Content;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -124,13 +118,7 @@ namespace Server.Items
         {
         }
 
-        public override BookContent DefaultContent
-        {
-            get
-            {
-                return Content;
-            }
-        }
+        public override BookContent DefaultContent => Content;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -206,13 +194,7 @@ namespace Server.Items
         {
         }
 
-        public override BookContent DefaultContent
-        {
-            get
-            {
-                return Content;
-            }
-        }
+        public override BookContent DefaultContent => Content;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -301,13 +283,7 @@ namespace Server.Items
         {
         }
 
-        public override BookContent DefaultContent
-        {
-            get
-            {
-                return Content;
-            }
-        }
+        public override BookContent DefaultContent => Content;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -388,13 +364,7 @@ namespace Server.Items
         {
         }
 
-        public override BookContent DefaultContent
-        {
-            get
-            {
-                return Content;
-            }
-        }
+        public override BookContent DefaultContent => Content;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -472,13 +442,7 @@ namespace Server.Items
         {
         }
 
-        public override BookContent DefaultContent
-        {
-            get
-            {
-                return Content;
-            }
-        }
+        public override BookContent DefaultContent => Content;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

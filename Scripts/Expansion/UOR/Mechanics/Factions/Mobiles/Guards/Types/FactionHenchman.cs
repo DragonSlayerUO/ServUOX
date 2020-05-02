@@ -49,13 +49,7 @@ namespace Server.Factions
         {
         }
 
-        public override GuardAI GuardAI
-        {
-            get
-            {
-                return GuardAI.Melee;
-            }
-        }
+        public override GuardAI GuardAI => GuardAI.Melee;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

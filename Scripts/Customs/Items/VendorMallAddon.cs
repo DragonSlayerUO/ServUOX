@@ -6,13 +6,7 @@ namespace Server.Items
 {
     public class VendorMallAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new VendorMallAddonDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new VendorMallAddonDeed();
 
         [Constructable]
         public VendorMallAddon()
@@ -1038,13 +1032,7 @@ namespace Server.Items
 
     public class VendorMallAddonDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new VendorMallAddon();
-            }
-        }
+        public override BaseAddon Addon => new VendorMallAddon();
 
         [Constructable]
         public VendorMallAddonDeed()

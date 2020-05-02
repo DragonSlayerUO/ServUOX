@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PhillipsWoodenSteed : MonsterStatuette
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public PhillipsWoodenSteed()
             : base(MonsterStatuetteType.PhillipsWoodenSteed)
@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

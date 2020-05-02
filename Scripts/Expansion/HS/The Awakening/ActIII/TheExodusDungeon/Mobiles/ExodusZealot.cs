@@ -66,9 +66,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool AlwaysMurderer { get { return true; } }
-        public override bool ShowFameTitle { get { return false; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+        public override bool AlwaysMurderer => true;
+        public override bool ShowFameTitle => false;
+        public override Poison PoisonImmunity => Poison.Lethal;
 
         public override void GenerateLoot()
         {

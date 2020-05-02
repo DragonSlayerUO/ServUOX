@@ -77,12 +77,6 @@ namespace Server.Factions
                     });
         }
 
-        public static Faction Instance
-        {
-            get
-            {
-                return m_Instance;
-            }
-        }
+        public static Faction Instance => m_Instance;
     }
 }

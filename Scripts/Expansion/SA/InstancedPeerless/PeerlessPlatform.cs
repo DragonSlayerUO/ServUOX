@@ -12,8 +12,8 @@ namespace Server.Engines.InstancedPeerless
         public abstract Type KeyType { get; }
         public abstract Type BossType { get; }
 
-        public virtual int OfferGumpTitle { get { return 1113737; } } // Monster's Lair
-        public virtual int OfferGumpDesc { get { return 1113738; } } // Your party has gained entrance to a monster's lair. You may choose to join the fight or stay away.
+        public virtual int OfferGumpTitle => 1113737;  // Monster's Lair
+        public virtual int OfferGumpDesc => 1113738;  // Your party has gained entrance to a monster's lair. You may choose to join the fight or stay away.
 
         private List<PeerlessKeyBrazier> m_Braziers = new List<PeerlessKeyBrazier>();
         private List<PeerlessInstance> m_Instances = new List<PeerlessInstance>();
@@ -39,7 +39,7 @@ namespace Server.Engines.InstancedPeerless
         public abstract void AddInstances();
         public abstract void AddBraziers();
 
-        public override bool ShareHue { get { return false; } }
+        public override bool ShareHue => false;
 
         public void Validate()
         {

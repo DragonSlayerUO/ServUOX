@@ -17,102 +17,24 @@ namespace Server.Items
         {
         }
 
-        public override int MinThrowRange { get { return 8; } }
+        public override int MinThrowRange => 8;
 
-        public override WeaponAbility PrimaryAbility
-        {
-            get
-            {
-                return WeaponAbility.ArmorIgnore;
-            }
-        }
-        public override WeaponAbility SecondaryAbility
-        {
-            get
-            {
-                return WeaponAbility.MortalStrike;
-            }
-        }
-        public override int AosStrengthReq
-        {
-            get
-            {
-                return 60;
-            }
-        }
-        public override int AosMinDamage
-        {
-            get
-            {
-                return 16;
-            }
-        }
-        public override int AosMaxDamage
-        {
-            get
-            {
-                return 20;
-            }
-        }
-        public override int AosSpeed
-        {
-            get
-            {
-                return 25;
-            }
-        }
-        public override float MlSpeed
-        {
-            get
-            {
-                return 4.00f;
-            }
-        }
-        public override int OldStrengthReq
-        {
-            get
-            {
-                return 20;
-            }
-        }
-        public override int OldMinDamage
-        {
-            get
-            {
-                return 9;
-            }
-        }
-        public override int OldMaxDamage
-        {
-            get
-            {
-                return 41;
-            }
-        }
-        public override int OldSpeed
-        {
-            get
-            {
-                return 20;
-            }
-        }
-        public override int InitMinHits
-        {
-            get
-            {
-                return 31;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 65;
-            }
-        }
+        public override WeaponAbility PrimaryAbility => WeaponAbility.ArmorIgnore;
+        public override WeaponAbility SecondaryAbility => WeaponAbility.MortalStrike;
+        public override int AosStrengthReq => 60;
+        public override int AosMinDamage => 16;
+        public override int AosMaxDamage => 20;
+        public override int AosSpeed => 25;
+        public override float MlSpeed => 4.00f;
+        public override int OldStrengthReq => 20;
+        public override int OldMinDamage => 9;
+        public override int OldMaxDamage => 41;
+        public override int OldSpeed => 20;
+        public override int InitMinHits => 31;
+        public override int InitMaxHits => 65;
 
-        public override Race RequiredRace { get { return Race.Gargoyle; } }
-        public override bool CanBeWornByGargoyles { get { return true; } }
+        public override Race RequiredRace => Race.Gargoyle;
+        public override bool CanBeWornByGargoyles => true;
 
 
         public override void Serialize(GenericWriter writer)

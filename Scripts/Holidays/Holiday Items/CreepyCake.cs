@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CreepyCake : Food
     {
-        public override int LabelNumber { get { return 1153776; } } // Creepy Cake
+        public override int LabelNumber => 1153776;  // Creepy Cake
 
         [Constructable]
         public CreepyCake()

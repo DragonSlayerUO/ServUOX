@@ -21,7 +21,7 @@ namespace Server.Items
     [Flipable(0x992D, 0x992E)]
     public class PumpkinCarvingKit : Item
     {
-        public override int LabelNumber { get { return 1154271; } } // Jack O' Lantern Carving Kit
+        public override int LabelNumber => 1154271;  // Jack O' Lantern Carving Kit
 
         [Constructable]
         public PumpkinCarvingKit()
@@ -97,7 +97,7 @@ namespace Server.Items
 
     public class BaseCarvablePumpkin : BaseLight
     {
-        public override int LabelNumber { get { return CarvedBy == null ? 1123239 : 1096937; } } // Carvable Pumpkin | carved pumpkin
+        public override int LabelNumber => CarvedBy == null ? 1123239 : 1096937;  // Carvable Pumpkin | carved pumpkin
 
         [CommandProperty(AccessLevel.GameMaster)]
         public string CarvedBy { get; set; }
@@ -123,7 +123,7 @@ namespace Server.Items
             base.OnDoubleClick(from);
         }
 
-        public override int LitItemID { get { return PumpkinDefinition.FirstOrDefault(x => x.UnlitItemID == ItemID).LitItemID; } }
+        public override int LitItemID => PumpkinDefinition.FirstOrDefault(x => x.UnlitItemID == ItemID).LitItemID;
         public override int UnlitItemID { get { return PumpkinDefinition.FirstOrDefault(x => x.LitItemID == ItemID).UnlitItemID; ; } }
 
         public override void GetProperties(ObjectPropertyList list)
@@ -153,11 +153,7 @@ namespace Server.Items
 
     public class CarvablePumpkinTall : BaseCarvablePumpkin
     {
-        public override PumpkinDefinition[] PumpkinDefinition
-        {
-            get
-            {
-                return new PumpkinDefinition[]
+        public override PumpkinDefinition[] PumpkinDefinition => new PumpkinDefinition[]
                 {
                      new PumpkinDefinition(0x9934, 0x9931),
                      new PumpkinDefinition(0x9935, 0x9936),
@@ -168,8 +164,6 @@ namespace Server.Items
                      new PumpkinDefinition(0x9949, 0x994A),
                      new PumpkinDefinition(0x9951, 0x9952),
                 };
-            }
-        }
 
         [Constructable]
         public CarvablePumpkinTall()
@@ -198,17 +192,11 @@ namespace Server.Items
 
     public class CarvableGordPumpkinTall : BaseCarvablePumpkin
     {
-        public override PumpkinDefinition[] PumpkinDefinition
-        {
-            get
-            {
-                return new PumpkinDefinition[]
+        public override PumpkinDefinition[] PumpkinDefinition => new PumpkinDefinition[]
                 {
                      new PumpkinDefinition(0x9D23, 0x9D24),
                      new PumpkinDefinition(0x9D27, 0x9D28),
                 };
-            }
-        }
 
         [Constructable]
         public CarvableGordPumpkinTall()
@@ -237,17 +225,11 @@ namespace Server.Items
 
     public class CarvablePlainPumpkin : BaseCarvablePumpkin
     {
-        public override PumpkinDefinition[] PumpkinDefinition
-        {
-            get
-            {
-                return new PumpkinDefinition[]
+        public override PumpkinDefinition[] PumpkinDefinition => new PumpkinDefinition[]
                 {
                      new PumpkinDefinition(0x9F23, 0x9F24),
                      new PumpkinDefinition(0x9F27, 0x9F28),
                 };
-            }
-        }
 
         [Constructable]
         public CarvablePlainPumpkin()

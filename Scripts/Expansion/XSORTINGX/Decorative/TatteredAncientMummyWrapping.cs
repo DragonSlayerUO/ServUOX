@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TatteredAncientMummyWrapping : Item
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public TatteredAncientMummyWrapping()
             : base(0xE21)
@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1094912;
-            }
-        }// Tattered Ancient Mummy Wrapping [Replica]
+        public override int LabelNumber => 1094912;// Tattered Ancient Mummy Wrapping [Replica]
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

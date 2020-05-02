@@ -56,20 +56,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BardImmunity
-        {
-            get
-            {
-                return !Core.AOS;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override bool BardImmunity => !Core.AOS;
+        public override int Meat => 1;
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.FilthyRich);

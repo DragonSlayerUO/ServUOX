@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class SorcerersRewardChest : Item
     {
-        public override int LabelNumber { get { return 1023712; } } // strong box
+        public override int LabelNumber => 1023712;  // strong box
 
         [Constructable]
         public SorcerersRewardChest() : base(0x9AA)
@@ -42,7 +42,7 @@ namespace Server.Items
 
     public class StrongboxKey : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154227; } } // Strongbox Key        
+        public override int LabelNumber => 1154227;  // Strongbox Key        
 
         [Constructable]
         public StrongboxKey() : base(0x410A)
@@ -53,8 +53,8 @@ namespace Server.Items
             LootType = LootType.Blessed;
         }
 
-        public override int Lifespan { get { return 3600; } }
-        public override bool UseSeconds { get { return false; } }
+        public override int Lifespan => 3600;
+        public override bool UseSeconds => false;
 
         public override void GetProperties(ObjectPropertyList list)
         {

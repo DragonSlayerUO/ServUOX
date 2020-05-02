@@ -25,48 +25,12 @@ namespace Server.Factions
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1041047;
-            }
-        }// faction saw trap
-        public override int AttackMessage
-        {
-            get
-            {
-                return 1010544;
-            }
-        }// The blade cuts deep into your skin!
-        public override int DisarmMessage
-        {
-            get
-            {
-                return 1010540;
-            }
-        }// You carefully dismantle the saw mechanism and disable the trap.
-        public override int EffectSound
-        {
-            get
-            {
-                return 0x218;
-            }
-        }
-        public override int MessageHue
-        {
-            get
-            {
-                return 0x5A;
-            }
-        }
-        public override AllowedPlacing AllowedPlacing
-        {
-            get
-            {
-                return AllowedPlacing.ControlledFactionTown;
-            }
-        }
+        public override int LabelNumber => 1041047;// faction saw trap
+        public override int AttackMessage => 1010544;// The blade cuts deep into your skin!
+        public override int DisarmMessage => 1010540;// You carefully dismantle the saw mechanism and disable the trap.
+        public override int EffectSound => 0x218;
+        public override int MessageHue => 0x5A;
+        public override AllowedPlacing AllowedPlacing => AllowedPlacing.ControlledFactionTown;
         public override void DoVisibleEffect()
         {
             Effects.SendLocationEffect(this.Location, this.Map, 0x11AD, 25, 10);
@@ -104,20 +68,8 @@ namespace Server.Factions
         {
         }
 
-        public override Type TrapType
-        {
-            get
-            {
-                return typeof(FactionSawTrap);
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1044604;
-            }
-        }// faction saw trap deed
+        public override Type TrapType => typeof(FactionSawTrap);
+        public override int LabelNumber => 1044604;// faction saw trap deed
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

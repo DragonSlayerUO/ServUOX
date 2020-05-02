@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073530;
-            }
-        }// emerald mace
+        public override int LabelNumber => 1073530;// emerald mace
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

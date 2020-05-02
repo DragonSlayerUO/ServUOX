@@ -10,14 +10,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Speak to Daimyo Haochi.
-                return 1063026;
-            }
-        }
+                1063026;
         public override void OnComplete()
         {
             this.System.AddConversation(new FirstTrialIntroConversation());
@@ -30,14 +25,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Follow the green path. The guards will now let you through.
-                return 1063030;
-            }
-        }
+                1063030;
         public override void OnComplete()
         {
             this.System.AddConversation(new FirstTrialKillConversation());
@@ -52,21 +42,10 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Kill 3 Young Ronin or 3 Cursed Souls. Return to Daimyo Haochi when you have finished.
-                return 1063032;
-            }
-        }
-        public override int MaxProgress
-        {
-            get
-            {
-                return 3;
-            }
-        }
+                1063032;
+        public override int MaxProgress => 3;
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is CursedSoul)
@@ -127,14 +106,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // The first trial is complete. Return to Daimyo Haochi.
-                return 1063044;
-            }
-        }
+                1063044;
         public override void OnComplete()
         {
             this.System.AddConversation(new SecondTrialIntroConversation(this.m_CursedSoul));
@@ -161,14 +135,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Follow the yellow path. The guards will now let you through.
-                return 1063047;
-            }
-        }
+                1063047;
         public override void OnComplete()
         {
             this.System.AddConversation(new SecondTrialAttackConversation());
@@ -181,14 +150,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Choose your opponent and attack one with all your skill.
-                return 1063058;
-            }
-        }
+                1063058;
     }
 
     public class SecondTrialReturnObjective : QuestObjective
@@ -203,21 +167,10 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // The second trial is complete.  Return to Daimyo Haochi.
-                return 1063229;
-            }
-        }
-        public bool Dragon
-        {
-            get
-            {
-                return this.m_Dragon;
-            }
-        }
+                1063229;
+        public bool Dragon => this.m_Dragon;
         public override void OnComplete()
         {
             this.System.AddConversation(new ThirdTrialIntroConversation(this.m_Dragon));
@@ -244,16 +197,11 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* The next trial will test your benevolence. Follow the blue path.
-                * The guards will now let you through.
-                */
-                return 1063061;
-            }
-        }
+* The guards will now let you through.
+*/
+                1063061;
         public override void OnComplete()
         {
             this.System.AddConversation(new ThirdTrialKillConversation());
@@ -266,17 +214,12 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Use your Honorable Execution skill to finish off the wounded wolf.
-                * Double click the icon in your Book of Bushido to activate the skill.
-                * When you are done, return to Daimyo Haochi.
-                */
-                return 1063063;
-            }
-        }
+* Double click the icon in your Book of Bushido to activate the skill.
+* When you are done, return to Daimyo Haochi.
+*/
+                1063063;
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is InjuredWolf)
@@ -295,14 +238,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Return to Daimyo Haochi.
-                return 1063064;
-            }
-        }
+                1063064;
         public override void OnComplete()
         {
             this.System.AddConversation(new FourthTrialIntroConversation());
@@ -315,14 +253,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Follow the red path and pass through the guards to the entrance of the fourth trial.
-                return 1063066;
-            }
-        }
+                1063066;
         public override void OnComplete()
         {
             this.System.AddConversation(new FourthTrialCatsConversation());
@@ -335,16 +268,11 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Give the gypsy gold or hunt one of the cats to eliminate the undue
-                * need it has placed on the gypsy.
-                */
-                return 1063068;
-            }
-        }
+* need it has placed on the gypsy.
+*/
+                1063068;
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is DiseasedCat)
@@ -367,21 +295,10 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // You have made your choice.  Return now to Daimyo Haochi.
-                return 1063242;
-            }
-        }
-        public bool KilledCat
-        {
-            get
-            {
-                return this.m_KilledCat;
-            }
-        }
+                1063242;
+        public bool KilledCat => this.m_KilledCat;
         public override void OnComplete()
         {
             this.System.AddConversation(new FifthTrialIntroConversation(this.m_KilledCat));
@@ -409,14 +326,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Retrieve Daimyo Haochi’s katana from the treasure room.
-                return 1063072;
-            }
-        }
+                1063072;
         public bool StolenTreasure
         {
             get
@@ -454,14 +366,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Give the sword to Daimyo Haochi.
-                return 1063073;
-            }
-        }
+                1063073;
     }
 
     public class SixthTrialIntroObjective : QuestObjective
@@ -470,14 +377,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Light one of the candles near the altar and return to Daimyo Haochi.
-                return 1063078;
-            }
-        }
+                1063078;
         public override void OnComplete()
         {
             this.System.AddObjective(new SixthTrialReturnObjective());
@@ -490,14 +392,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // You have done as requested.  Return to Daimyo Haochi.
-                return 1063252;
-            }
-        }
+                1063252;
         public override void OnComplete()
         {
             this.System.AddConversation(new SeventhTrialIntroConversation());
@@ -510,23 +407,12 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Three young Ninja must be dealt with. Your job is to kill them.
-                * When you have done so, return to Daimyo Haochi.
-                */
-                return 1063080;
-            }
-        }
-        public override int MaxProgress
-        {
-            get
-            {
-                return 3;
-            }
-        }
+* When you have done so, return to Daimyo Haochi.
+*/
+                1063080;
+        public override int MaxProgress => 3;
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is YoungNinja)
@@ -545,14 +431,9 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // The executions are complete.  Return to the Daimyo.
-                return 1063253;
-            }
-        }
+                1063253;
         public override void OnComplete()
         {
             this.System.AddConversation(new EndConversation());

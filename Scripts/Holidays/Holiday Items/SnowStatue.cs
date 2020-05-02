@@ -18,13 +18,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -54,13 +48,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -90,13 +78,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -126,13 +108,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -162,20 +138,8 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1114296;
-            }
-        }// snow statue deed
-        public override double DefaultWeight
-        {
-            get
-            {
-                return 1.0;
-            }
-        }
+        public override int LabelNumber => 1114296;// snow statue deed
+        public override double DefaultWeight => 1.0;
         public override void OnDoubleClick(Mobile from)
         {
             if (this.IsChildOf(from.Backpack))

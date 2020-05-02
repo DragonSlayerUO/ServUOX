@@ -13,26 +13,8 @@ namespace Server.Factions
             this.m_TimeOfGift = DateTime.UtcNow;
         }
 
-        public Mobile GivenTo
-        {
-            get
-            {
-                return this.m_GivenTo;
-            }
-        }
-        public DateTime TimeOfGift
-        {
-            get
-            {
-                return this.m_TimeOfGift;
-            }
-        }
-        public bool IsExpired
-        {
-            get
-            {
-                return (this.m_TimeOfGift + ExpirePeriod) < DateTime.UtcNow;
-            }
-        }
+        public Mobile GivenTo => this.m_GivenTo;
+        public DateTime TimeOfGift => this.m_TimeOfGift;
+        public bool IsExpired => (this.m_TimeOfGift + ExpirePeriod) < DateTime.UtcNow;
     }
 }

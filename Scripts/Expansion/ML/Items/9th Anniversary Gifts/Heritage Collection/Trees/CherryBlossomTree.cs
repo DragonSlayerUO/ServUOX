@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new CherryBlossomTreeDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new CherryBlossomTreeDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -53,20 +47,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new CherryBlossomTreeAddon();
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1076268;
-            }
-        }// Cherry Blossom Tree
+        public override BaseAddon Addon => new CherryBlossomTreeAddon();
+        public override int LabelNumber => 1076268;// Cherry Blossom Tree
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

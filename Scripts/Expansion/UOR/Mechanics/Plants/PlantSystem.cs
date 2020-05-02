@@ -54,7 +54,7 @@ namespace Server.Engines.Plants
 
         public PlantGrowthIndicator GrowthIndicator { get; private set; }
 
-        public bool IsFullWater { get { return m_Water >= 4; } }
+        public bool IsFullWater => m_Water >= 4;
         public int Water
         {
             get { return m_Water; }
@@ -93,10 +93,7 @@ namespace Server.Engines.Plants
             }
         }
 
-        public int MaxHits
-        {
-            get { return 10 + (int)Plant.PlantStatus * 2; }
-        }
+        public int MaxHits => 10 + (int)Plant.PlantStatus * 2;
 
         public PlantHealth Health
         {
@@ -171,7 +168,7 @@ namespace Server.Engines.Plants
             }
         }
 
-        public bool IsFullPoisonPotion { get { return m_PoisonPotion >= 2; } }
+        public bool IsFullPoisonPotion => m_PoisonPotion >= 2;
         public int PoisonPotion
         {
             get { return m_PoisonPotion; }
@@ -186,7 +183,7 @@ namespace Server.Engines.Plants
             }
         }
 
-        public bool IsFullCurePotion { get { return m_CurePotion >= 2; } }
+        public bool IsFullCurePotion => m_CurePotion >= 2;
         public int CurePotion
         {
             get { return m_CurePotion; }
@@ -201,7 +198,7 @@ namespace Server.Engines.Plants
             }
         }
 
-        public bool IsFullHealPotion { get { return m_HealPotion >= 2; } }
+        public bool IsFullHealPotion => m_HealPotion >= 2;
         public int HealPotion
         {
             get { return m_HealPotion; }
@@ -216,7 +213,7 @@ namespace Server.Engines.Plants
             }
         }
 
-        public bool IsFullStrengthPotion { get { return m_StrengthPotion >= 2; } }
+        public bool IsFullStrengthPotion => m_StrengthPotion >= 2;
         public int StrengthPotion
         {
             get { return m_StrengthPotion; }
@@ -231,15 +228,9 @@ namespace Server.Engines.Plants
             }
         }
 
-        public bool HasMaladies
-        {
-            get { return Infestation > 0 || Fungus > 0 || Poison > 0 || Disease > 0 || Water != 2; }
-        }
+        public bool HasMaladies => Infestation > 0 || Fungus > 0 || Poison > 0 || Disease > 0 || Water != 2;
 
-        public bool PollenProducing
-        {
-            get { return Plant.IsCrossable && Plant.PlantStatus >= PlantStatus.FullGrownPlant; }
-        }
+        public bool PollenProducing => Plant.IsCrossable && Plant.PlantStatus >= PlantStatus.FullGrownPlant;
 
         public bool Pollinated { get; set; }
 

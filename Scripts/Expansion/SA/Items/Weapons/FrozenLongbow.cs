@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FrozenLongbow : ElvenCompositeLongbow
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public FrozenLongbow()
         {
@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073507;
-            }
-        }// frozen longbow
+        public override int LabelNumber => 1073507;// frozen longbow
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

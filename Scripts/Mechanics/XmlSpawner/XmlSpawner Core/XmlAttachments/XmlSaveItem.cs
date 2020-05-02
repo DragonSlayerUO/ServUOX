@@ -10,7 +10,7 @@ namespace Server.Engines.XmlSpawner2
     {
         private class SaveItemPack : Container
         {
-            public override int MaxWeight { get { return 0; } }
+            public override int MaxWeight => 0;
 
             public SaveItemPack() : base(0x9B2)
             {
@@ -40,10 +40,7 @@ namespace Server.Engines.XmlSpawner2
         private Mobile m_WasOwnedBy;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Container Container
-        {
-            get { return m_Container; }
-        }
+        public Container Container => m_Container;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item SavedItem

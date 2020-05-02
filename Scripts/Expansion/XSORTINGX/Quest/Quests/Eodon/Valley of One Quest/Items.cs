@@ -9,19 +9,13 @@ namespace Server.Items
 {
     public class KingBlackthornOrders : BaseQuestItem
     {
-        public override Type[] Quests
-        {
-            get
-            {
-                return new Type[]
+        public override Type[] Quests => new Type[]
                     {
                         typeof( TimeIsOfTheEssenceQuest )
                     };
-            }
-        }
 
-        public override int LabelNumber { get { return 1156516; } }  // Orders from King Blackthorn to Sir Geoffrey
-        public override int Lifespan { get { return 360; } }
+        public override int LabelNumber => 1156516;   // Orders from King Blackthorn to Sir Geoffrey
+        public override int Lifespan => 360;
 
         [Constructable]
         public KingBlackthornOrders()
@@ -75,7 +69,7 @@ namespace Server.Items
 
     public class MosaicOfHeluzz : Item
     {
-        public override int LabelNumber { get { return 1156467; } }  // Mosaic of Heluzz
+        public override int LabelNumber => 1156467;   // Mosaic of Heluzz
 
         [Constructable]
         public MosaicOfHeluzz() : base(39638)
@@ -103,7 +97,7 @@ namespace Server.Items
 
     public class TotemOfFabozz : Item
     {
-        public override int LabelNumber { get { return 1156468; } }  // Totem Of Faboz
+        public override int LabelNumber => 1156468;   // Totem Of Faboz
 
         [Constructable]
         public TotemOfFabozz() : base(40092)
@@ -131,7 +125,7 @@ namespace Server.Items
 
     public class FiresOfKukuzz : Item
     {
-        public override int LabelNumber { get { return 1156469; } }  // Fires of Kukuzz
+        public override int LabelNumber => 1156469;   // Fires of Kukuzz
 
         [Constructable]
         public FiresOfKukuzz() : base(40014)
@@ -158,7 +152,7 @@ namespace Server.Items
 
     public class SkullOfMotazz : Item
     {
-        public override int LabelNumber { get { return 1156470; } }  // The Skull of Motazz
+        public override int LabelNumber => 1156470;   // The Skull of Motazz
 
         [Constructable]
         public SkullOfMotazz() : base(40051)
@@ -186,7 +180,7 @@ namespace Server.Items
 
     public class SkullOfAphazz : Item
     {
-        public override int LabelNumber { get { return 1156471; } }  // The Skull of Aphazz
+        public override int LabelNumber => 1156471;   // The Skull of Aphazz
 
         [Constructable]
         public SkullOfAphazz() : base(8707)
@@ -220,7 +214,7 @@ namespace Server.Items
 
     public class TigerRugAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new TigerRugAddonDeed(this.RugType); } }
+        public override BaseAddonDeed Deed => new TigerRugAddonDeed(this.RugType);
 
         public RugHue RugType { get; set; }
 
@@ -313,7 +307,7 @@ namespace Server.Items
             }
         }
 
-        public override BaseAddon Addon { get { return new TigerRugAddon(this.RugType, SouthFacing); } }
+        public override BaseAddon Addon => new TigerRugAddon(this.RugType, SouthFacing);
 
         public RugHue RugType { get; set; }
         public bool SouthFacing { get; set; }
@@ -372,7 +366,7 @@ namespace Server.Items
 
     public class BananaHoardAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new BananaHoardAddonDeed(); } }
+        public override BaseAddonDeed Deed => new BananaHoardAddonDeed();
 
         public BananaHoardSize BananaHoardSize { get; set; }
 
@@ -431,8 +425,8 @@ namespace Server.Items
 
     public class BananaHoardAddonDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new BananaHoardAddon(BananaHoardSize); } }
-        public override int LabelNumber { get { return 1156556; } } // Great Ape's Banana Hoard
+        public override BaseAddon Addon => new BananaHoardAddon(BananaHoardSize);
+        public override int LabelNumber => 1156556;  // Great Ape's Banana Hoard
 
         public BananaHoardSize BananaHoardSize { get; set; }
 
@@ -509,7 +503,7 @@ namespace Server.Items
 
     public class DinosaurHunterRewardTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Dinosaur Hunter"); } }
+        public override TextDefinition Title => new TextDefinition("Dinosaur Hunter");
 
         [Constructable]
         public DinosaurHunterRewardTitleDeed()
@@ -536,7 +530,7 @@ namespace Server.Items
 
     public class LavaRockDisplay : Item
     {
-        public override int LabelNumber { get { return 1124033; } }  // lava rock display
+        public override int LabelNumber => 1124033;   // lava rock display
 
         [Constructable]
         public LavaRockDisplay() : base(40009)
@@ -564,7 +558,7 @@ namespace Server.Items
 
     public class DragonTurtleFountainAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new DragonTurtleFountainAddonDeed(); } }
+        public override BaseAddonDeed Deed => new DragonTurtleFountainAddonDeed();
 
         [Constructable]
         public DragonTurtleFountainAddon(bool south)
@@ -605,8 +599,8 @@ namespace Server.Items
 
     public class DragonTurtleFountainAddonDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new DragonTurtleFountainAddon(SouthFacing); } }
-        public override int LabelNumber { get { return 1156488; } } // Dragon Turtle Fountain
+        public override BaseAddon Addon => new DragonTurtleFountainAddon(SouthFacing);
+        public override int LabelNumber => 1156488;  // Dragon Turtle Fountain
 
         public bool SouthFacing { get; set; }
 
@@ -714,7 +708,7 @@ namespace Server.Items
 
     public class UniqueTreasureBag : Pouch
     {
-        public override int LabelNumber { get { return 1156581; } }  // A bag with a unique treasure
+        public override int LabelNumber => 1156581;   // A bag with a unique treasure
 
         [Constructable]
         public UniqueTreasureBag()

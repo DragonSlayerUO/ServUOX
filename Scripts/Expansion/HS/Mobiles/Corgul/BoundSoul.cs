@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class BoundSoul : BaseCreature
     {
-        public override bool AlwaysMurderer { get { return true; } }
+        public override bool AlwaysMurderer => true;
 
         public BoundSoul()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
@@ -52,7 +52,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override int TreasureMapLevel { get { return 3; } }
+        public override int TreasureMapLevel => 3;
 
         public override void Serialize(GenericWriter writer)
         {

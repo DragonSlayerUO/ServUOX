@@ -5,8 +5,8 @@ namespace Server.Items
 {
     public class WeatheredBronzeGlobeSculptureAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new WeatheredBronzeGlobeSculptureDeed(); } }
-        public override bool RetainDeedHue { get { return true; } }
+        public override BaseAddonDeed Deed => new WeatheredBronzeGlobeSculptureDeed();
+        public override bool RetainDeedHue => true;
 
         [Constructable]
         public WeatheredBronzeGlobeSculptureAddon()
@@ -34,8 +34,8 @@ namespace Server.Items
 
     public class WeatheredBronzeGlobeSculptureDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new WeatheredBronzeGlobeSculptureAddon(); } }
-        public override int LabelNumber { get { return 1156881; } } // weathered bronze globe sculpture
+        public override BaseAddon Addon => new WeatheredBronzeGlobeSculptureAddon();
+        public override int LabelNumber => 1156881;  // weathered bronze globe sculpture
 
         [Constructable]
         public WeatheredBronzeGlobeSculptureDeed()

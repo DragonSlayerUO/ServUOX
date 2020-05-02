@@ -34,7 +34,7 @@ namespace Server.Regions
         private CorgulAltar m_Altar;
         private Rectangle2D m_Bounds;
 
-        public CorgulAltar Altar { get { return m_Altar; } }
+        public CorgulAltar Altar => m_Altar;
 
         public CorgulRegion(Rectangle2D rec, CorgulAltar altar)
             : base("Corgul Boss Region", altar.Map, Region.DefaultPriority, new Rectangle2D[] { rec })

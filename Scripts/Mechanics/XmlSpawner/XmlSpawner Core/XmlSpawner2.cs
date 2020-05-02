@@ -45,9 +45,9 @@ namespace Server.Mobiles
         private static bool m_XmlFactions;
         private static bool m_XmlSockets;
 
-        public static bool PointsEnabled { get { return m_XmlPoints; } }
-        public static bool FactionsEnabled { get { return m_XmlFactions; } }
-        public static bool SocketsEnabled { get { return m_XmlSockets; } }
+        public static bool PointsEnabled => m_XmlPoints;
+        public static bool FactionsEnabled => m_XmlFactions;
+        public static bool SocketsEnabled => m_XmlSockets;
 
         public static void Configure()
         {
@@ -10163,13 +10163,7 @@ namespace Server.Mobiles
                 return false;
         }
 
-        public Rectangle2D SpawnerBounds
-        {
-            get
-            {
-                return new Rectangle2D(m_X, m_Y, m_Width + 1, m_Height + 1);
-            }
-        }
+        public Rectangle2D SpawnerBounds => new Rectangle2D(m_X, m_Y, m_Width + 1, m_Height + 1);
 
         private void FindTileLocations(ref List<Point3D> locations, Map map, int startx, int starty, int width, int height, List<int> includetilelist, List<int> excludetilelist, TileFlag tileflag, bool checkitems, int spawnerZ)
         {

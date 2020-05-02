@@ -20,7 +20,7 @@ namespace Server.Engines.NewMagincia
             set { m_Plot = value; InvalidateProperties(); }
         }
 
-        public override bool DisplayWeight { get { return false; } }
+        public override bool DisplayWeight => false;
 
         public PlotSign(MaginciaBazaarPlot plot)
             : base(3025)

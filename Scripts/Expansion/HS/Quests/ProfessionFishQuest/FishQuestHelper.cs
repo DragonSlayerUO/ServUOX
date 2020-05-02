@@ -10,7 +10,7 @@ namespace Server.Engines.Quests
 {
     public static class FishQuestHelper
     {
-        public static Type[] Fish { get { return m_Fish; } }
+        public static Type[] Fish => m_Fish;
         private static Type[] m_Fish = new Type[]
         {
 	        //to level 80.0 (shore fish) index to 11
@@ -42,7 +42,7 @@ namespace Server.Engines.Quests
 
         };
 
-        public static int[] Labels { get { return m_Labels; } }
+        public static int[] Labels => m_Labels;
         private static int[] m_Labels = new int[]
         {
 	        //to level 80.0 (shore fish) index to 11
@@ -253,7 +253,7 @@ namespace Server.Engines.Quests
             }
         }
 
-        public static List<FishMonger> Mongers { get { return m_Mongers; } }
+        public static List<FishMonger> Mongers => m_Mongers;
         private static List<FishMonger> m_Mongers = new List<FishMonger>();
 
         public static void AddMonger(Mobile mob)

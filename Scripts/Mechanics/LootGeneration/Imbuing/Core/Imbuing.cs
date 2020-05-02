@@ -32,7 +32,7 @@ namespace Server.SkillHandlers
         }
 
         private static Dictionary<Mobile, ImbuingContext> m_ContextTable = new Dictionary<Mobile, ImbuingContext>();
-        public static Dictionary<Mobile, ImbuingContext> ContextTable { get { return m_ContextTable; } }
+        public static Dictionary<Mobile, ImbuingContext> ContextTable => m_ContextTable;
 
         public static TimeSpan OnUse(Mobile from)
         {
@@ -1587,7 +1587,7 @@ namespace Server.SkillHandlers
             return (int)weight;
         }
 
-        public static SkillName[] PossibleSkills { get { return m_PossibleSkills; } }
+        public static SkillName[] PossibleSkills => m_PossibleSkills;
         private static SkillName[] m_PossibleSkills = new SkillName[]
             {
                 SkillName.Swords,
@@ -1732,7 +1732,7 @@ namespace Server.SkillHandlers
             return true;
         }
 
-        public static Type[] IngredTypes { get { return m_IngredTypes; } }
+        public static Type[] IngredTypes => m_IngredTypes;
         private static Type[] m_IngredTypes = new Type[]
         {
             typeof(MagicalResidue),     typeof(EnchantedEssence),       typeof(RelicFragment),

@@ -129,17 +129,11 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BleedImmunity { get { return true; } }
+        public override bool BleedImmunity => true;
 
-        public override TribeType Tribe { get { return TribeType.Undead; } }
+        public override TribeType Tribe => TribeType.Undead;
 
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Average);

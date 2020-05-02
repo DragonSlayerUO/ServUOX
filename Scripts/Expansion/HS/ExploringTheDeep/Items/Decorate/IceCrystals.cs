@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class IceCrystals : Item
     {
-        public override int LabelNumber { get { return 1028710; } } // crystal
+        public override int LabelNumber => 1028710;  // crystal
 
         private static readonly int[] m_ItemIDs = new int[]
         {

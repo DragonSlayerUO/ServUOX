@@ -39,7 +39,7 @@ namespace Server.Mobiles
             Karma = -3000;
         }
 
-        public override int TreasureMapLevel { get { return 3; } }
+        public override int TreasureMapLevel => 3;
 
         public override void GenerateLoot()
         {

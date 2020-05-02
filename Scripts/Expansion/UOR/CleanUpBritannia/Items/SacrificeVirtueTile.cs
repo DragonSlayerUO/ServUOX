@@ -12,7 +12,7 @@ namespace Server.Items
 
     public class SacrificeVirtueTileAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new SacrificeVirtueTileDeed(); } }
+        public override BaseAddonDeed Deed => new SacrificeVirtueTileDeed();
 
         private SacrificeTileType m_SacrificeTileType;
 
@@ -58,8 +58,8 @@ namespace Server.Items
 
     public class SacrificeVirtueTileDeed : BaseAddonDeed, IRewardOption
     {
-        public override BaseAddon Addon { get { return new SacrificeVirtueTileAddon(m_SacrificeTileType); } }
-        public override int LabelNumber { get { return 1080482; } } // Sacrifice Virtue Tile Deed
+        public override BaseAddon Addon => new SacrificeVirtueTileAddon(m_SacrificeTileType);
+        public override int LabelNumber => 1080482;  // Sacrifice Virtue Tile Deed
 
         private SacrificeTileType m_SacrificeTileType;
 

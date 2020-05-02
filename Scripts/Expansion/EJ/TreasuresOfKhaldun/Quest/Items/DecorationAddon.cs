@@ -220,7 +220,7 @@ namespace Server.Items
 			, {611, -75, -11, 1}// 653	
 		};
 
-        public override BaseAddonDeed Deed { get { return null; } }
+        public override BaseAddonDeed Deed => null;
 
         [Constructable]
         public KhaldunDecorationAddon()
@@ -322,7 +322,7 @@ namespace Server.Items
 			, {2879, -2, -2, 4}// 28	
 		};
 
-        public override BaseAddonDeed Deed { get { return null; } }
+        public override BaseAddonDeed Deed => null;
 
         [Constructable]
         public KhaldunWorkshop()

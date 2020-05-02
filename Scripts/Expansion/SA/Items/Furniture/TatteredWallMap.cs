@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class TatteredWallMapSouth : Item
     {
-        public override int LabelNumber { get { return 1031635; } } // tattered wall map
+        public override int LabelNumber => 1031635;  // tattered wall map
 
         [Constructable]
         public TatteredWallMapSouth() : base(11636)
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class TatteredWallMapEast : Item
     {
-        public override int LabelNumber { get { return 1031635; } } // tattered wall map
+        public override int LabelNumber => 1031635;  // tattered wall map
 
         [Constructable]
         public TatteredWallMapEast()

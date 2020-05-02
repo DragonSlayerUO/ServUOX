@@ -18,23 +18,11 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074161;
-            }
-        }// Access to Bedlam by invitation only
+        public override int LabelNumber => 1074161;// Access to Bedlam by invitation only
 
-        public override bool ForceShowProperties { get { return ObjectPropertyList.Enabled; } }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
-        public virtual Type Quest
-        {
-            get
-            {
-                return typeof(MistakenIdentityQuest);
-            }
-        }
+        public virtual Type Quest => typeof(MistakenIdentityQuest);
         public override void OnDoubleClick(Mobile from)
         {
             if (from.NetState == null || !from.NetState.SupportsExpansion(Expansion.ML))

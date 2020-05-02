@@ -50,27 +50,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Regular;
-            }
-        }
-        public override Poison HitPoison
-        {
-            get
-            {
-                return Poison.Regular;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Fish;
-            }
-        }
+        public override Poison PoisonImmunity => Poison.Regular;
+        public override Poison HitPoison => Poison.Regular;
+        public override FoodType FavoriteFood => FoodType.Fish;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Poor);

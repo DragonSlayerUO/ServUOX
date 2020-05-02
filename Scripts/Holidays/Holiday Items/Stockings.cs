@@ -17,21 +17,9 @@ namespace Server.Items
         {
         }
 
-        public override int DefaultGumpID
-        {
-            get
-            {
-                return 0x103;
-            }
-        }
+        public override int DefaultGumpID => 0x103;
 
-        public override int DefaultDropSound
-        {
-            get
-            {
-                return 0x42;
-            }
-        }
+        public override int DefaultDropSound => 0x42;
 
         public override void Serialize(GenericWriter writer)
         {
@@ -61,21 +49,9 @@ namespace Server.Items
         {
         }
 
-        public override int DefaultGumpID
-        {
-            get
-            {
-                return 0x103;
-            }
-        }
+        public override int DefaultGumpID => 0x103;
 
-        public override int DefaultDropSound
-        {
-            get
-            {
-                return 0x42;
-            }
-        }
+        public override int DefaultDropSound => 0x42;
 
         public override void Serialize(GenericWriter writer)
         {

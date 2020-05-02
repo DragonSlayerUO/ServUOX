@@ -8,7 +8,7 @@ namespace Server.Items
 {
     public class TeleportRope : Static
     {
-        public virtual bool AllowDead { get { return true; } }
+        public virtual bool AllowDead => true;
 
         [CommandProperty(AccessLevel.Administrator)]
         public Point3D ToLocation { get; set; }

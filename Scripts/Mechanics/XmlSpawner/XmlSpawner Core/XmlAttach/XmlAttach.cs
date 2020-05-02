@@ -35,7 +35,7 @@ namespace Server.Engines.XmlSpawner2
 
         private int m_SerialValue;
 
-        public int Value { get { return m_SerialValue; } }
+        public int Value => m_SerialValue;
 
         public ASerial(int serial)
         {

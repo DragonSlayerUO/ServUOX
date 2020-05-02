@@ -29,13 +29,7 @@ namespace Server.Factions
         {
         }
 
-        public override double DefaultWeight
-        {
-            get
-            {
-                return 0.02;
-            }
-        }
+        public override double DefaultWeight => 0.02;
         public override int GetDropSound()
         {
             if (this.Amount <= 1)

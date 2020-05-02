@@ -53,7 +53,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Meat { get { return 2; } }
+        public override int Meat => 2;
 
         public override void AlterDamageScalarFrom(Mobile caster, ref double scalar)
         {
@@ -89,7 +89,7 @@ namespace Server.Mobiles
             }
         }
 
-        public override int TreasureMapLevel { get { return 3; } }
+        public override int TreasureMapLevel => 3;
 
         public override void GenerateLoot()
         {

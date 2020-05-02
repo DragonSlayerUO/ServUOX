@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class PresentationStone : Item
     {
-        public override int LabelNumber { get { return 1154745; } } // Presentation Stone
+        public override int LabelNumber => 1154745;  // Presentation Stone
 
         [Constructable]
         public PresentationStone()

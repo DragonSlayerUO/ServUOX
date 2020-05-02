@@ -27,20 +27,8 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1041054;
-            }
-        }// guildstone teleporter
-        public override bool DisplayLootType
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override int LabelNumber => 1041054;// guildstone teleporter
+        public override bool DisplayLootType => false;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

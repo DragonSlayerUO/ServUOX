@@ -34,96 +34,18 @@ namespace Server.Factions
             this.m_TownStone = townStone;
         }
 
-        public int Sort
-        {
-            get
-            {
-                return this.m_Sort;
-            }
-        }
-        public int SigilID
-        {
-            get
-            {
-                return this.m_SigilID;
-            }
-        }
-        public string Region
-        {
-            get
-            {
-                return this.m_Region;
-            }
-        }
-        public string FriendlyName
-        {
-            get
-            {
-                return this.m_FriendlyName;
-            }
-        }
-        public TextDefinition TownName
-        {
-            get
-            {
-                return this.m_TownName;
-            }
-        }
-        public TextDefinition TownStoneHeader
-        {
-            get
-            {
-                return this.m_TownStoneHeader;
-            }
-        }
-        public TextDefinition StrongholdMonolithName
-        {
-            get
-            {
-                return this.m_StrongholdMonolithName;
-            }
-        }
-        public TextDefinition TownMonolithName
-        {
-            get
-            {
-                return this.m_TownMonolithName;
-            }
-        }
-        public TextDefinition TownStoneName
-        {
-            get
-            {
-                return this.m_TownStoneName;
-            }
-        }
-        public TextDefinition SigilName
-        {
-            get
-            {
-                return this.m_SigilName;
-            }
-        }
-        public TextDefinition CorruptedSigilName
-        {
-            get
-            {
-                return this.m_CorruptedSigilName;
-            }
-        }
-        public Point3D Monolith
-        {
-            get
-            {
-                return this.m_Monolith;
-            }
-        }
-        public Point3D TownStone
-        {
-            get
-            {
-                return this.m_TownStone;
-            }
-        }
+        public int Sort => this.m_Sort;
+        public int SigilID => this.m_SigilID;
+        public string Region => this.m_Region;
+        public string FriendlyName => this.m_FriendlyName;
+        public TextDefinition TownName => this.m_TownName;
+        public TextDefinition TownStoneHeader => this.m_TownStoneHeader;
+        public TextDefinition StrongholdMonolithName => this.m_StrongholdMonolithName;
+        public TextDefinition TownMonolithName => this.m_TownMonolithName;
+        public TextDefinition TownStoneName => this.m_TownStoneName;
+        public TextDefinition SigilName => this.m_SigilName;
+        public TextDefinition CorruptedSigilName => this.m_CorruptedSigilName;
+        public Point3D Monolith => this.m_Monolith;
+        public Point3D TownStone => this.m_TownStone;
     }
 }

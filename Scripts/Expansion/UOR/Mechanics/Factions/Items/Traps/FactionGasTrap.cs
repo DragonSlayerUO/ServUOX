@@ -25,48 +25,12 @@ namespace Server.Factions
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1044598;
-            }
-        }// faction gas trap
-        public override int AttackMessage
-        {
-            get
-            {
-                return 1010542;
-            }
-        }// A noxious green cloud of poison gas envelops you!
-        public override int DisarmMessage
-        {
-            get
-            {
-                return 502376;
-            }
-        }// The poison leaks harmlessly away due to your deft touch.
-        public override int EffectSound
-        {
-            get
-            {
-                return 0x230;
-            }
-        }
-        public override int MessageHue
-        {
-            get
-            {
-                return 0x44;
-            }
-        }
-        public override AllowedPlacing AllowedPlacing
-        {
-            get
-            {
-                return AllowedPlacing.FactionStronghold;
-            }
-        }
+        public override int LabelNumber => 1044598;// faction gas trap
+        public override int AttackMessage => 1010542;// A noxious green cloud of poison gas envelops you!
+        public override int DisarmMessage => 502376;// The poison leaks harmlessly away due to your deft touch.
+        public override int EffectSound => 0x230;
+        public override int MessageHue => 0x44;
+        public override AllowedPlacing AllowedPlacing => AllowedPlacing.FactionStronghold;
         public override void DoVisibleEffect()
         {
             Effects.SendLocationEffect(this.Location, this.Map, 0x3709, 28, 10, 0x1D3, 5);
@@ -104,20 +68,8 @@ namespace Server.Factions
         {
         }
 
-        public override Type TrapType
-        {
-            get
-            {
-                return typeof(FactionGasTrap);
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1044602;
-            }
-        }// faction gas trap deed
+        public override Type TrapType => typeof(FactionGasTrap);
+        public override int LabelNumber => 1044602;// faction gas trap deed
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

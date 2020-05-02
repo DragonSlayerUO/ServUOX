@@ -15,7 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new ObsidianPillarDeed(); } }
+        public override BaseAddonDeed Deed => new ObsidianPillarDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -32,9 +32,9 @@ namespace Server.Items
 
     public class ObsidianPillarDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1076678; } } // Obsidian Pillar
+        public override int LabelNumber => 1076678;  // Obsidian Pillar
 
-        public override bool ExcludeDeedHue { get { return true; } }
+        public override bool ExcludeDeedHue => true;
 
         [Constructable]
         public ObsidianPillarDeed()
@@ -48,7 +48,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon { get { return new ObsidianPillarAddon(); } }
+        public override BaseAddon Addon => new ObsidianPillarAddon();
 
 
         public override void Serialize(GenericWriter writer)

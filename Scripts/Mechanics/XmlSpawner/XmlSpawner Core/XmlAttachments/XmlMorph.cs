@@ -23,7 +23,7 @@ namespace Server.Engines.XmlSpawner2
         public TimeSpan Duration { get { return m_Duration; } set { m_Duration = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime MorphEnd { get { return m_MorphEnd; } }
+        public DateTime MorphEnd => m_MorphEnd;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public string ActivationWord { get { return m_Word; } set { m_Word = value; } }
@@ -151,7 +151,7 @@ namespace Server.Engines.XmlSpawner2
             }
         }
 
-        public override bool HandlesOnSpeech { get { return (ActivationWord != null); } }
+        public override bool HandlesOnSpeech => (ActivationWord != null);
 
         public override void OnSpeech(SpeechEventArgs e)
         {
@@ -168,7 +168,7 @@ namespace Server.Engines.XmlSpawner2
             }
         }
 
-        public override bool HandlesOnMovement { get { return (ActivationWord == null); } }
+        public override bool HandlesOnMovement => (ActivationWord == null);
 
         public override void OnMovement(MovementEventArgs e)
         {

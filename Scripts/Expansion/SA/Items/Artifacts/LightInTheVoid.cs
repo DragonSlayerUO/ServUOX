@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public class LightInTheVoid : GargishTalwar
     {
-        public override bool IsArtifact { get { return true; } }
-        public override int LabelNumber { get { return 1113521; } } // Light in the Void
+        public override bool IsArtifact => true;
+        public override int LabelNumber => 1113521;  // Light in the Void
 
         [Constructable]
         public LightInTheVoid()
@@ -26,28 +26,10 @@ namespace Server.Items
         {
         }
 
-        public override int ArtifactRarity
-        {
-            get
-            {
-                return 5;
-            }
-        }
+        public override int ArtifactRarity => 5;
 
-        public override int InitMinHits
-        {
-            get
-            {
-                return 255;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 255;
-            }
-        }
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

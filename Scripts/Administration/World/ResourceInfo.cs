@@ -545,23 +545,11 @@ namespace Server.Items
         private readonly Type[] m_ResourceTypes;
 
         public int Hue { get; }
-        public int Number
-        {
-            get
-            {
-                return this.m_Number;
-            }
-        }
+        public int Number => this.m_Number;
         public string Name { get; }
         public CraftAttributeInfo AttributeInfo { get; }
         public CraftResource Resource { get; }
-        public Type[] ResourceTypes
-        {
-            get
-            {
-                return this.m_ResourceTypes;
-            }
-        }
+        public Type[] ResourceTypes => this.m_ResourceTypes;
 
         public CraftResourceInfo(int hue, int number, string name, CraftAttributeInfo attributeInfo, CraftResource resource, params Type[] resourceTypes)
         {
@@ -867,12 +855,6 @@ namespace Server.Items
 
         public int Hue { get; }
 
-        public string Name
-        {
-            get
-            {
-                return m_Name;
-            }
-        }
+        public string Name => m_Name;
     }
 }

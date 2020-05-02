@@ -19,27 +19,9 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1154373;
-            }
-        }// Nature's Tears
-        public override int InitMinUses
-        {
-            get
-            {
-                return 450;
-            }
-        }
-        public override int InitMaxUses
-        {
-            get
-            {
-                return 450;
-            }
-        }
+        public override int LabelNumber => 1154373;// Nature's Tears
+        public override int InitMinUses => 450;
+        public override int InitMaxUses => 450;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

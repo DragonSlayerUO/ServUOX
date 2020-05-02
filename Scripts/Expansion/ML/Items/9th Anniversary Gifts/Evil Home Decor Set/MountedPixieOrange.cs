@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074482;
-            }
-        }// Mounted pixie
+        public override int LabelNumber => 1074482;// Mounted pixie
         public override void OnDoubleClick(Mobile from)
         {
             if (Utility.InRange(this.Location, from.Location, 2))
@@ -59,13 +53,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new MountedPixieOrangeDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new MountedPixieOrangeDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -95,20 +83,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new MountedPixieOrangeAddon();
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074482;
-            }
-        }// Mounted pixie
+        public override BaseAddon Addon => new MountedPixieOrangeAddon();
+        public override int LabelNumber => 1074482;// Mounted pixie
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -65,13 +65,7 @@ namespace Server.Engines.XmlSpawner2
                 this.m_MaxDelay = value;
             }
         }
-        public override bool HandlesOnKilled
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool HandlesOnKilled => true;
         private XmlSpawner MySpawner
         {
             get

@@ -18,100 +18,22 @@ namespace Server.Items
         {
         }
 
-        public override WeaponAbility PrimaryAbility
-        {
-            get
-            {
-                return WeaponAbility.DoubleStrike;
-            }
-        }
-        public override WeaponAbility SecondaryAbility
-        {
-            get
-            {
-                return WeaponAbility.Disarm;
-            }
-        }
-        public override int AosStrengthReq
-        {
-            get
-            {
-                return 50;
-            }
-        }
-        public override int AosMinDamage
-        {
-            get
-            {
-                return 11;
-            }
-        }
-        public override int AosMaxDamage
-        {
-            get
-            {
-                return 14;
-            }
-        }
-        public override int AosSpeed
-        {
-            get
-            {
-                return 42;
-            }
-        }
-        public override float MlSpeed
-        {
-            get
-            {
-                return 2.25f;
-            }
-        }
-        public override int OldStrengthReq
-        {
-            get
-            {
-                return 30;
-            }
-        }
-        public override int OldMinDamage
-        {
-            get
-            {
-                return 2;
-            }
-        }
-        public override int OldMaxDamage
-        {
-            get
-            {
-                return 36;
-            }
-        }
-        public override int OldSpeed
-        {
-            get
-            {
-                return 46;
-            }
-        }
-        public override int InitMinHits
-        {
-            get
-            {
-                return 31;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 80;
-            }
-        }
+        public override WeaponAbility PrimaryAbility => WeaponAbility.DoubleStrike;
+        public override WeaponAbility SecondaryAbility => WeaponAbility.Disarm;
+        public override int AosStrengthReq => 50;
+        public override int AosMinDamage => 11;
+        public override int AosMaxDamage => 14;
+        public override int AosSpeed => 42;
+        public override float MlSpeed => 2.25f;
+        public override int OldStrengthReq => 30;
+        public override int OldMinDamage => 2;
+        public override int OldMaxDamage => 36;
+        public override int OldSpeed => 46;
+        public override int InitMinHits => 31;
+        public override int InitMaxHits => 80;
 
-        public override Race RequiredRace { get { return Race.Gargoyle; } }
-        public override bool CanBeWornByGargoyles { get { return true; } }
+        public override Race RequiredRace => Race.Gargoyle;
+        public override bool CanBeWornByGargoyles => true;
 
         public override void Serialize(GenericWriter writer)
         {

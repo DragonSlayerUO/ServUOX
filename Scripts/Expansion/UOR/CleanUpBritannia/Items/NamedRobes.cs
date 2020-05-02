@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class HumansAndElvesRobe : Robe
     {
-        public override int LabelNumber { get { return 1151202; } } // Humans & Elves are our friends!
+        public override int LabelNumber => 1151202;  // Humans & Elves are our friends!
 
         [Constructable]
         public HumansAndElvesRobe()
@@ -37,7 +37,7 @@ namespace Server.Items
 
     public class GargoylesAreOurFriendsRobe : Robe
     {
-        public override int LabelNumber { get { return 1151203; } } // Gargoyles are our friends!
+        public override int LabelNumber => 1151203;  // Gargoyles are our friends!
 
         [Constructable]
         public GargoylesAreOurFriendsRobe()
@@ -68,7 +68,7 @@ namespace Server.Items
 
     public class WeArePiratesRobe : Robe
     {
-        public override int LabelNumber { get { return 1151204; } } // We are pirates!
+        public override int LabelNumber => 1151204;  // We are pirates!
 
         [Constructable]
         public WeArePiratesRobe()
@@ -99,7 +99,7 @@ namespace Server.Items
 
     public class FollowerOfBaneRobe : Robe
     {
-        public override int LabelNumber { get { return 1151205; } } // Follower of Bane
+        public override int LabelNumber => 1151205;  // Follower of Bane
 
         [Constructable]
         public FollowerOfBaneRobe()
@@ -130,7 +130,7 @@ namespace Server.Items
 
     public class QueenDawnForeverRobe : Robe
     {
-        public override int LabelNumber { get { return 1151206; } } // Queen Dawn Forever
+        public override int LabelNumber => 1151206;  // Queen Dawn Forever
 
         [Constructable]
         public QueenDawnForeverRobe()

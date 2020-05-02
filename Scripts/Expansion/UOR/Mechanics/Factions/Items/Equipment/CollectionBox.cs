@@ -87,30 +87,12 @@ namespace Server.Factions
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073436;
-            }
-        }
+        public override int LabelNumber => 1073436;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public override Collection CollectionID
-        {
-            get
-            {
-                return FactionCollection;
-            }
-        }
+        public override Collection CollectionID => FactionCollection;
 
-        public override int MaxTier
-        {
-            get
-            {
-                return 12;
-            }
-        }
+        public override int MaxTier => 12;
 
         private void LoadData()
         {

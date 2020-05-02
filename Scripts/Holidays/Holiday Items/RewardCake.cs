@@ -20,20 +20,8 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1049786;
-            }
-        }// Happy Birthday!  ...
-        public override bool DisplayLootType
-        {
-            get
-            {
-                return Core.ML;
-            }
-        }
+        public override int LabelNumber => 1049786;// Happy Birthday!  ...
+        public override bool DisplayLootType => Core.ML;
         public override void OnDoubleClick(Mobile from)
         {
             if (!from.InRange(this.GetWorldLocation(), 1))

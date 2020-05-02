@@ -8,7 +8,7 @@ namespace Server.Mobiles
 {
     public class GMEthereal : EtherealMount
     {
-        public override int FollowerSlots { get { return 0; } }
+        public override int FollowerSlots => 0;
 
         private static readonly EtherealInfo[] EthyItemTypes = new EtherealInfo[]
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         private int m_Cliloc;
 
-        public override int LabelNumber { get { return m_Cliloc; } }
+        public override int LabelNumber => m_Cliloc;
 
 
         [Constructable]

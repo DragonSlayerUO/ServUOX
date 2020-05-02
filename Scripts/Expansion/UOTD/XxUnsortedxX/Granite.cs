@@ -19,8 +19,8 @@ namespace Server.Items
         {
         }
 
-        TextDefinition ICommodity.Description { get { return LabelNumber; } }
-        bool ICommodity.IsDeedable { get { return true; } }
+        TextDefinition ICommodity.Description => LabelNumber;
+        bool ICommodity.IsDeedable => true;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public CraftResource Resource
@@ -35,20 +35,8 @@ namespace Server.Items
                 InvalidateProperties();
             }
         }
-        public override double DefaultWeight
-        {
-            get
-            {
-                return Core.ML ? 1.0 : 10.0;
-            }// Pub 57
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1044607;
-            }
-        }// high quality granite
+        public override double DefaultWeight => Core.ML ? 1.0 : 10.0;
+        public override int LabelNumber => 1044607;// high quality granite
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

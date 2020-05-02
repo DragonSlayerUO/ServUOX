@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class DreamWraithCostume : BaseCostume
     {
-        public override string CreatureName { get { return "dream wraith"; } }
+        public override string CreatureName => "dream wraith";
 
         [Constructable]
         public DreamWraithCostume() : base()
@@ -13,13 +13,7 @@ namespace Server.Items
             this.CostumeBody = 740;
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1114008;
-            }
-        }// dream wraith halloween costume
+        public override int LabelNumber => 1114008;// dream wraith halloween costume
 
         public DreamWraithCostume(Serial serial) : base(serial)
         {

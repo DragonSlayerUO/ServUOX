@@ -4,10 +4,7 @@ namespace Server.Items
 {
     public class JewelryBoxFilter
     {
-        public bool IsDefault
-        {
-            get { return (!Ring && !Bracelet && !Earrings && !Necklace && !Talisman); }
-        }
+        public bool IsDefault => (!Ring && !Bracelet && !Earrings && !Necklace && !Talisman);
 
         public void Clear()
         {

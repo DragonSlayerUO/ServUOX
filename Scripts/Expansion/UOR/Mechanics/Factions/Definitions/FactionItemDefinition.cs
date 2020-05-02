@@ -20,20 +20,8 @@ namespace Server.Factions
             this.m_VendorType = vendorType;
         }
 
-        public int SilverCost
-        {
-            get
-            {
-                return this.m_SilverCost;
-            }
-        }
-        public Type VendorType
-        {
-            get
-            {
-                return this.m_VendorType;
-            }
-        }
+        public int SilverCost => this.m_SilverCost;
+        public Type VendorType => this.m_VendorType;
         public static FactionItemDefinition Identify(Item item)
         {
             if (item is BaseArmor)

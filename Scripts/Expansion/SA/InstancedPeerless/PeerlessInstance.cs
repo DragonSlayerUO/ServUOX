@@ -36,7 +36,7 @@ namespace Server.Engines.InstancedPeerless
         private Timer m_SliceTimer;
         private Timer m_KickTimer;
 
-        public Mobile Boss { get { return m_Boss; } }
+        public Mobile Boss => m_Boss;
 
         public InstanceState State
         {
@@ -52,9 +52,9 @@ namespace Server.Engines.InstancedPeerless
             }
         }
 
-        public Map Map { get { return m_Map; } }
-        public Point3D EntranceLocation { get { return m_EntranceLocation; } }
-        public Rectangle2D RegionBounds { get { return m_RegionBounds; } }
+        public Map Map => m_Map;
+        public Point3D EntranceLocation => m_EntranceLocation;
+        public Rectangle2D RegionBounds => m_RegionBounds;
 
         public PeerlessInstance(PeerlessPlatform platform, Map map, Item light, Point3D entranceLoc, Point3D bossSpawnLoc, Rectangle2D regionBounds)
         {

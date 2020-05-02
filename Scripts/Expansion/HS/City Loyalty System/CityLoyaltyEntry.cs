@@ -36,13 +36,7 @@ namespace Server.Engines.CityLoyalty
         public bool ShowGainMessage { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public LoyaltyRating LoyaltyRating
-        {
-            get
-            {
-                return CityLoyaltySystem.GetCityInstance(City).GetLoyaltyRating(Player, this);
-            }
-        }
+        public LoyaltyRating LoyaltyRating => CityLoyaltySystem.GetCityInstance(City).GetLoyaltyRating(Player, this);
 
         private bool _Utilizing;
 
@@ -83,7 +77,7 @@ namespace Server.Engines.CityLoyalty
         public DateTime TradeDealExpires { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool TradeDealExpired { get { return TradeDealExpires < DateTime.UtcNow; } }
+        public bool TradeDealExpired => TradeDealExpires < DateTime.UtcNow;
 
         public CityLoyaltyEntry(PlayerMobile pm, City city) : base(pm)
         {

@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public class CaptainJohnesBlade : Scimitar
     {
-        public override bool IsArtifact { get { return true; } }
-        public override int LabelNumber { get { return 1154475; } } // CaptainJohnesBlade
+        public override bool IsArtifact => true;
+        public override int LabelNumber => 1154475;  // CaptainJohnesBlade
 
         [Constructable]
         public CaptainJohnesBlade()
@@ -26,8 +26,8 @@ namespace Server.Items
             phys = nrgy = chaos = direct = fire = 0;
         }
 
-        public override int InitMinHits { get { return 255; } }
-        public override int InitMaxHits { get { return 255; } }
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
 
         public CaptainJohnesBlade(Serial serial)
             : base(serial)
@@ -49,8 +49,8 @@ namespace Server.Items
 
     public class GargishCaptainJohnesBlade : GlassSword
     {
-        public override bool IsArtifact { get { return true; } }
-        public override int LabelNumber { get { return 1154475; } } // GargishCaptainJohnesBlade
+        public override bool IsArtifact => true;
+        public override int LabelNumber => 1154475;  // GargishCaptainJohnesBlade
 
         [Constructable]
         public GargishCaptainJohnesBlade()
@@ -71,8 +71,8 @@ namespace Server.Items
             phys = nrgy = chaos = direct = fire = 0;
         }
 
-        public override int InitMinHits { get { return 255; } }
-        public override int InitMaxHits { get { return 255; } }
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
 
         public GargishCaptainJohnesBlade(Serial serial)
             : base(serial)

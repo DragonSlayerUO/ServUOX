@@ -17,33 +17,9 @@ namespace Server.Ethics
             this.m_Description = description;
         }
 
-        public int Power
-        {
-            get
-            {
-                return this.m_Power;
-            }
-        }
-        public TextDefinition Name
-        {
-            get
-            {
-                return this.m_Name;
-            }
-        }
-        public TextDefinition Phrase
-        {
-            get
-            {
-                return this.m_Phrase;
-            }
-        }
-        public TextDefinition Description
-        {
-            get
-            {
-                return this.m_Description;
-            }
-        }
+        public int Power => this.m_Power;
+        public TextDefinition Name => this.m_Name;
+        public TextDefinition Phrase => this.m_Phrase;
+        public TextDefinition Description => this.m_Description;
     }
 }

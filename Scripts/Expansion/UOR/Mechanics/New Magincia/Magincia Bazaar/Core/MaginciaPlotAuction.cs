@@ -11,16 +11,16 @@ namespace Server.Engines.NewMagincia
     public class MaginciaPlotAuction
     {
         private Dictionary<Mobile, BidEntry> m_Auctioners = new Dictionary<Mobile, BidEntry>();
-        public Dictionary<Mobile, BidEntry> Auctioners { get { return m_Auctioners; } }
+        public Dictionary<Mobile, BidEntry> Auctioners => m_Auctioners;
 
         private MaginciaBazaarPlot m_Plot;
         private DateTime m_AuctionEnd;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MaginciaBazaarPlot Plot { get { return m_Plot; } }
+        public MaginciaBazaarPlot Plot => m_Plot;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime AuctionEnd { get { return m_AuctionEnd; } }
+        public DateTime AuctionEnd => m_AuctionEnd;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool EndCurrentAuction
@@ -308,10 +308,10 @@ namespace Server.Engines.NewMagincia
         private BidType m_BidType;
         private DateTime m_DatePlaced;
 
-        public Mobile Bidder { get { return m_Bidder; } }
-        public int Amount { get { return m_Amount; } }
-        public BidType BidType { get { return m_BidType; } }
-        public DateTime DatePlaced { get { return m_DatePlaced; } }
+        public Mobile Bidder => m_Bidder;
+        public int Amount => m_Amount;
+        public BidType BidType => m_BidType;
+        public DateTime DatePlaced => m_DatePlaced;
 
         public BidEntry(Mobile bidder, int amount, BidType type)
         {

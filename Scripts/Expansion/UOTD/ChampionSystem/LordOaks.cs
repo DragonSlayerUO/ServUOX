@@ -53,25 +53,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override ChampionSkullType SkullType
-        {
-            get
-            {
-                return ChampionSkullType.Enlightenment;
-            }
-        }
-        public override Type[] UniqueList
-        {
-            get
-            {
-                return new Type[] { typeof(OrcChieftainHelm) };
-            }
-        }
-        public override Type[] SharedList
-        {
-            get
-            {
-                return new Type[]
+        public override ChampionSkullType SkullType => ChampionSkullType.Enlightenment;
+        public override Type[] UniqueList => new Type[] { typeof(OrcChieftainHelm) };
+        public override Type[] SharedList => new Type[]
                 {
                     typeof(RoyalGuardSurvivalKnife),
                     typeof(DjinnisRing),
@@ -80,79 +64,23 @@ namespace Server.Mobiles
                     typeof(DetectiveBoots),
                     typeof(TheMostKnowledgePerson)
                 };
-            }
-        }
-        public override Type[] DecorativeList
-        {
-            get
-            {
-                return new Type[]
+        public override Type[] DecorativeList => new Type[]
                 {
                     typeof(WaterTile),
                     typeof(WindSpirit),
                     typeof(Pier),
                 };
-            }
-        }
-        public override MonsterStatuetteType[] StatueTypes
-        {
-            get
-            {
-                return new MonsterStatuetteType[] { };
-            }
-        }
-        public override bool AutoDispel
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool CanFly
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool BardImmunity
-        {
-            get
-            {
-                return !Core.SE;
-            }
-        }
-        public override bool Unprovokable
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
-        public override bool Uncalmable
-        {
-            get
-            {
-                return Core.SE;
-            }
-        }
+        public override MonsterStatuetteType[] StatueTypes => new MonsterStatuetteType[] { };
+        public override bool AutoDispel => true;
+        public override bool CanFly => true;
+        public override bool BardImmunity => !Core.SE;
+        public override bool Unprovokable => Core.SE;
+        public override bool Uncalmable => Core.SE;
 
-        public override TribeType Tribe { get { return TribeType.Fey; } }
+        public override TribeType Tribe => TribeType.Fey;
 
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Deadly;
-            }
-        }
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
+        public override Poison PoisonImmunity => Poison.Deadly;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 5);

@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073527;
-            }
-        }// serrated war cleaver
+        public override int LabelNumber => 1073527;// serrated war cleaver
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

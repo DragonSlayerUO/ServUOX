@@ -146,7 +146,7 @@ namespace Server.Engines.XmlSpawner2
 
         }
 
-        public override bool HandlesOnSpeech { get { return (ActivationWord != null); } }
+        public override bool HandlesOnSpeech => (ActivationWord != null);
 
         public override void OnSpeech(SpeechEventArgs e)
         {
@@ -160,7 +160,7 @@ namespace Server.Engines.XmlSpawner2
             }
         }
 
-        public override bool HandlesOnMovement { get { return (ActivationWord == null); } }
+        public override bool HandlesOnMovement => (ActivationWord == null);
 
         public override void OnMovement(MovementEventArgs e)
         {

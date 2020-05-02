@@ -10,13 +10,7 @@ namespace Server.Engines.VvV
     [Flipable(39351, 39352)]
     public class CompassionBanner : Item
     {
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1123375;
-            }
-        }
+        public override int LabelNumber => 1123375;
 
         [Constructable]
         public CompassionBanner() : base(39351)

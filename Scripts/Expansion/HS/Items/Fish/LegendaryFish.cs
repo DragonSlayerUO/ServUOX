@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class AbyssalDragonfish : RareFish
     {
-        public override int LabelNumber { get { return 1116118; } }
+        public override int LabelNumber => 1116118;
 
         [Constructable]
         public AbyssalDragonfish()
@@ -31,7 +31,7 @@ namespace Server.Items
 
     public class BlackMarlin : RareFish
     {
-        public override int LabelNumber { get { return 1116099; } }
+        public override int LabelNumber => 1116099;
 
         [Constructable]
         public BlackMarlin()
@@ -57,7 +57,7 @@ namespace Server.Items
 
     public class BlueMarlin : RareFish
     {
-        public override int LabelNumber { get { return 1116097; } }
+        public override int LabelNumber => 1116097;
 
         [Constructable]
         public BlueMarlin()
@@ -83,7 +83,7 @@ namespace Server.Items
 
     public class DungeonPike : RareFish
     {
-        public override int LabelNumber { get { return 1116107; } }
+        public override int LabelNumber => 1116107;
 
         [Constructable]
         public DungeonPike()
@@ -109,7 +109,7 @@ namespace Server.Items
 
     public class GiantSamuraiFish : RareFish
     {
-        public override int LabelNumber { get { return 1116103; } }
+        public override int LabelNumber => 1116103;
 
         [Constructable]
         public GiantSamuraiFish()
@@ -135,7 +135,7 @@ namespace Server.Items
 
     public class GoldenTuna : RareFish
     {
-        public override int LabelNumber { get { return 1116102; } }
+        public override int LabelNumber => 1116102;
 
         [Constructable]
         public GoldenTuna()
@@ -161,7 +161,7 @@ namespace Server.Items
 
     public class Kingfish : RareFish
     {
-        public override int LabelNumber { get { return 1116085; } }
+        public override int LabelNumber => 1116085;
 
         [Constructable]
         public Kingfish()
@@ -187,7 +187,7 @@ namespace Server.Items
 
     public class LanternFish : RareFish
     {
-        public override int LabelNumber { get { return 1116106; } }
+        public override int LabelNumber => 1116106;
 
         [Constructable]
         public LanternFish()
@@ -213,7 +213,7 @@ namespace Server.Items
 
     public class RainbowFish : RareFish
     {
-        public override int LabelNumber { get { return 1116108; } }
+        public override int LabelNumber => 1116108;
 
         [Constructable]
         public RainbowFish()
@@ -239,7 +239,7 @@ namespace Server.Items
 
     public class SeekerFish : RareFish
     {
-        public override int LabelNumber { get { return 1116109; } }
+        public override int LabelNumber => 1116109;
 
         [Constructable]
         public SeekerFish()
@@ -265,7 +265,7 @@ namespace Server.Items
 
     public class SpringDragonfish : RareFish
     {
-        public override int LabelNumber { get { return 1116104; } }
+        public override int LabelNumber => 1116104;
 
         [Constructable]
         public SpringDragonfish()
@@ -291,7 +291,7 @@ namespace Server.Items
 
     public class StoneFish : RareFish
     {
-        public override int LabelNumber { get { return 1116110; } }
+        public override int LabelNumber => 1116110;
 
         [Constructable]
         public StoneFish()
@@ -317,7 +317,7 @@ namespace Server.Items
 
     public class WinterDragonfish : RareFish
     {
-        public override int LabelNumber { get { return 1116105; } }
+        public override int LabelNumber => 1116105;
 
         [Constructable]
         public WinterDragonfish()
@@ -343,7 +343,7 @@ namespace Server.Items
 
     public class ZombieFish : RareFish
     {
-        public override int LabelNumber { get { return 1116101; } }
+        public override int LabelNumber => 1116101;
 
         [Constructable]
         public ZombieFish()

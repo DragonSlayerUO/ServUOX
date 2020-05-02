@@ -10,13 +10,7 @@ namespace Server.Factions
         {
         }
 
-        public virtual int ButtonTypes
-        {
-            get
-            {
-                return 10;
-            }
-        }
+        public virtual int ButtonTypes => 10;
         public static bool Exists(Mobile mob)
         {
             return (mob.FindGump(typeof(FactionGump)) != null);

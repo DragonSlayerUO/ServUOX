@@ -20,13 +20,7 @@ namespace Server.Multis
 
         public virtual int SignPostID => 9;
 
-        public override Point3D BaseBanLocation
-        {
-            get
-            {
-                return new Point3D(Components.Min.X, Components.Height - 1 - Components.Center.Y, 0);
-            }
-        }
+        public override Point3D BaseBanLocation => new Point3D(Components.Min.X, Components.Height - 1 - Components.Center.Y, 0);
 
         public override Rectangle2D[] Area
         {
@@ -278,13 +272,7 @@ namespace Server.Multis
         {
         }
 
-        public override Rectangle2D[] Area
-        {
-            get
-            {
-                return AreaArray;
-            }
-        }
+        public override Rectangle2D[] Area => AreaArray;
 
         public override void Serialize(GenericWriter writer)
         {
@@ -432,13 +420,7 @@ namespace Server.Multis
         {
         }
 
-        public override Rectangle2D[] Area
-        {
-            get
-            {
-                return AreaArray;
-            }
-        }
+        public override Rectangle2D[] Area => AreaArray;
 
         public override void Serialize(GenericWriter writer)
         {

@@ -48,27 +48,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool IsDispellable
-        {
-            get
-            {
-                return false;
-            }
-        }
-        public override bool IsBondable
-        {
-            get
-            {
-                return false;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
-            }
-        }
+        public override bool IsDispellable => false;
+        public override bool IsBondable => false;
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
         public override string ApplyNameSuffix(string suffix)
         {
             if (suffix.Length == 0)

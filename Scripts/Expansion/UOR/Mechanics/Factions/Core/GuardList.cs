@@ -13,20 +13,8 @@ namespace Server.Factions
             this.m_Guards = new List<BaseFactionGuard>();
         }
 
-        public GuardDefinition Definition
-        {
-            get
-            {
-                return this.m_Definition;
-            }
-        }
-        public List<BaseFactionGuard> Guards
-        {
-            get
-            {
-                return this.m_Guards;
-            }
-        }
+        public GuardDefinition Definition => this.m_Definition;
+        public List<BaseFactionGuard> Guards => this.m_Guards;
         public BaseFactionGuard Construct()
         {
             try

@@ -1475,10 +1475,7 @@ namespace Server.Items
             }
         }
 
-        public Container Pack
-        {
-            get { return this; }
-        }
+        public Container Pack => this;
 
         // this is the handler for skill use
         // not yet implemented, just a hook for now
@@ -1511,7 +1508,7 @@ namespace Server.Items
             }
         }
 
-        public bool HandlesOnSkillUse { get { return (IsValid && m_SkillTrigger != null && m_SkillTrigger.Length > 0); } }
+        public bool HandlesOnSkillUse => (IsValid && m_SkillTrigger != null && m_SkillTrigger.Length > 0);
 
         private void CheckOwnerFlag()
         {

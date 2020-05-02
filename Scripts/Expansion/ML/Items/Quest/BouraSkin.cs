@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BouraSkin : Item
     {
-        public override int LabelNumber { get { return 1112900; } }// Boura Skin
+        public override int LabelNumber => 1112900; // Boura Skin
 
         [Constructable]
         public BouraSkin()

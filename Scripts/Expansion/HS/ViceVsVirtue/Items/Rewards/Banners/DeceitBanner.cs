@@ -10,13 +10,7 @@ namespace Server.Engines.VvV
     [Flipable(39337, 39338)]
     public class DeceitBanner : Item
     {
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1123361;
-            }
-        }
+        public override int LabelNumber => 1123361;
 
         [Constructable]
         public DeceitBanner()

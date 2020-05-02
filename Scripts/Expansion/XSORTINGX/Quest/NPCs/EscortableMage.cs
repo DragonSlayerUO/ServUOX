@@ -22,20 +22,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool CanTeach
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool ClickTitle
-        {
-            get
-            {
-                return false;
-            }
-        }// Do not display 'the mage' when single-clicking
+        public override bool CanTeach => true;
+        public override bool ClickTitle => false;// Do not display 'the mage' when single-clicking
         public override void InitOutfit()
         {
             this.AddItem(new Robe(GetRandomHue()));

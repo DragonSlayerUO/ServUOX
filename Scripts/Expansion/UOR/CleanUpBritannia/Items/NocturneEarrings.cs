@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class NocturneEarrings : SilverEarrings
     {
-        public override int LabelNumber { get { return 1080189; } } // Nocturne Earrings
+        public override int LabelNumber => 1080189;  // Nocturne Earrings
 
         [Constructable]
         public NocturneEarrings()

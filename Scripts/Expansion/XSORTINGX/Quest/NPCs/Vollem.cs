@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a vollem corpse")]
     public class Vollem : BaseCreature, IRepairableMobile
     {
-        public Type RepairResource { get { return typeof(Server.Items.IronIngot); } }
+        public Type RepairResource => typeof(Server.Items.IronIngot);
 
         [Constructable]
         public Vollem()
@@ -43,18 +43,18 @@ namespace Server.Mobiles
             SetSpecialAbility(SpecialAbility.DragonBreath);
         }
 
-        public override bool IsScaredOfScaryThings { get { return false; } }
-        public override bool IsScaryToPets { get { return true; } }
-        public override bool IsBondable { get { return false; } }
-        public override bool DeleteOnRelease { get { return true; } }
-        public override bool AutoDispel { get { return !Controlled; } }
-        public override bool BleedImmunity { get { return true; } }
-        public override bool BardImmunity { get { return !Core.AOS || Controlled; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+        public override bool IsScaredOfScaryThings => false;
+        public override bool IsScaryToPets => true;
+        public override bool IsBondable => false;
+        public override bool DeleteOnRelease => true;
+        public override bool AutoDispel => !Controlled;
+        public override bool BleedImmunity => true;
+        public override bool BardImmunity => !Core.AOS || Controlled;
+        public override Poison PoisonImmunity => Poison.Lethal;
 
-        public override FoodType FavoriteFood { get { return FoodType.Meat; } }
-        public override int Meat { get { return 5; } }
-        public override int Hides { get { return 10; } }
+        public override FoodType FavoriteFood => FoodType.Meat;
+        public override int Meat => 5;
+        public override int Hides => 10;
 
         public override int GetAngerSound()
         {

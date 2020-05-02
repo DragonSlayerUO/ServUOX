@@ -19,97 +19,19 @@ namespace Server.Items
         {
         }
 
-        public override WeaponAbility PrimaryAbility
-        {
-            get
-            {
-                return WeaponAbility.ConcussionBlow;
-            }
-        }
-        public override WeaponAbility SecondaryAbility
-        {
-            get
-            {
-                return WeaponAbility.CrushingBlow;
-            }
-        }
-        public override int AosStrengthReq
-        {
-            get
-            {
-                return 35;
-            }
-        }
-        public override int AosMinDamage
-        {
-            get
-            {
-                return 13;
-            }
-        }
-        public override int AosMaxDamage
-        {
-            get
-            {
-                return 17;
-            }
-        }
-        public override int AosSpeed
-        {
-            get
-            {
-                return 37;
-            }
-        }
-        public override float MlSpeed
-        {
-            get
-            {
-                return 3.25f;
-            }
-        }
-        public override int OldStrengthReq
-        {
-            get
-            {
-                return 35;
-            }
-        }
-        public override int OldMinDamage
-        {
-            get
-            {
-                return 14;
-            }
-        }
-        public override int OldMaxDamage
-        {
-            get
-            {
-                return 17;
-            }
-        }
-        public override int OldSpeed
-        {
-            get
-            {
-                return 37;
-            }
-        }
-        public override int InitMinHits
-        {
-            get
-            {
-                return 30;
-            }
-        }// TODO
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 60;
-            }
-        }// TODO
+        public override WeaponAbility PrimaryAbility => WeaponAbility.ConcussionBlow;
+        public override WeaponAbility SecondaryAbility => WeaponAbility.CrushingBlow;
+        public override int AosStrengthReq => 35;
+        public override int AosMinDamage => 13;
+        public override int AosMaxDamage => 17;
+        public override int AosSpeed => 37;
+        public override float MlSpeed => 3.25f;
+        public override int OldStrengthReq => 35;
+        public override int OldMinDamage => 14;
+        public override int OldMaxDamage => 17;
+        public override int OldSpeed => 37;
+        public override int InitMinHits => 30;// TODO
+        public override int InitMaxHits => 60;// TODO
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

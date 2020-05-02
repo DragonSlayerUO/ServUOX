@@ -11,7 +11,7 @@ namespace Server.Items
     public abstract class InterchangeableAddonDeed : BaseAddonDeed
     {
         // This will need to be further implemented in any derived class
-        public override BaseAddon Addon { get { return null; } }
+        public override BaseAddon Addon => null;
 
         public abstract int EastID { get; }
         public abstract int SouthID { get; }
@@ -156,7 +156,7 @@ namespace Server.Items
         public abstract int SouthID { get; }
 
         // This will need to be further implemented in any derived class
-        public override BaseAddonDeed Deed { get { return null; } }
+        public override BaseAddonDeed Deed => null;
 
         public InterchangeableAddon(bool eastface = true, int loc = 0)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class RecarosRiposte : WarFork
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public RecarosRiposte()
         {
@@ -19,13 +19,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1078195;
-            }
-        }// Recaro's Riposte
+        public override int LabelNumber => 1078195;// Recaro's Riposte
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

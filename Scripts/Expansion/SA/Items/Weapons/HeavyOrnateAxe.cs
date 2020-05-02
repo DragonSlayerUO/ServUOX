@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073548;
-            }
-        }// heavy ornate axe
+        public override int LabelNumber => 1073548;// heavy ornate axe
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

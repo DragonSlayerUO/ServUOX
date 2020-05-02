@@ -37,13 +37,7 @@ namespace Server.Items
             }
         }
 
-        public override int BasePhysicalResistance
-        {
-            get
-            {
-                return 3;
-            }
-        }
+        public override int BasePhysicalResistance => 3;
 
         public override void OnAdded(object parent)
         {
@@ -157,9 +151,9 @@ namespace Server.Items
             Weight = 2.0;
         }
 
-        public override int AosStrReq { get { return 10; } }
-        public override Race RequiredRace { get { return Race.Gargoyle; } }
-        public override bool CanBeWornByGargoyles { get { return true; } }
+        public override int AosStrReq => 10;
+        public override Race RequiredRace => Race.Gargoyle;
+        public override bool CanBeWornByGargoyles => true;
 
         public GargishClothWingArmor(Serial serial)
             : base(serial)
@@ -182,20 +176,8 @@ namespace Server.Items
     [Flipable(0x4002, 0x4003)]
     public class GargishFancyRobe : BaseClothing
     {
-        public override Race RequiredRace
-        {
-            get
-            {
-                return Race.Gargoyle;
-            }
-        }
-        public override bool CanBeWornByGargoyles
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override Race RequiredRace => Race.Gargoyle;
+        public override bool CanBeWornByGargoyles => true;
 
         [Constructable]
         public GargishFancyRobe()
@@ -233,20 +215,8 @@ namespace Server.Items
     [Flipable(0x4000, 0x4001)]
     public class GargishRobe : BaseClothing
     {
-        public override Race RequiredRace
-        {
-            get
-            {
-                return Race.Gargoyle;
-            }
-        }
-        public override bool CanBeWornByGargoyles
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override Race RequiredRace => Race.Gargoyle;
+        public override bool CanBeWornByGargoyles => true;
 
         [Constructable]
         public GargishRobe()

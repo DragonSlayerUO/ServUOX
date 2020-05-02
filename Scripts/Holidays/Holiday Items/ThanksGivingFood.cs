@@ -90,10 +90,10 @@ namespace Server.Items
 
     public class SweetPotatoPie : BaseComplexFood
     {
-        public override int LabelNumber { get { return 1153514; } } // sweet potato pie
+        public override int LabelNumber => 1153514;  // sweet potato pie
 
-        public override Food Piece { get { return new SliceOfPie(); } }
-        public override int Pieces { get { return 6; } }
+        public override Food Piece => new SliceOfPie();
+        public override int Pieces => 6;
 
         [Constructable]
         public SweetPotatoPie()
@@ -132,7 +132,7 @@ namespace Server.Items
     [Flipable(19459, 19560)]
     public class SliceOfPie : Food
     {
-        public override int LabelNumber { get { return 1153519; } } // slice of pie
+        public override int LabelNumber => 1153519;  // slice of pie
 
         [Constructable]
         public SliceOfPie()
@@ -165,7 +165,7 @@ namespace Server.Items
 
     public class MashedSweetPotatoes : Food
     {
-        public override int LabelNumber { get { return 1153516; } } // mashed sweet potatoes
+        public override int LabelNumber => 1153516;  // mashed sweet potatoes
 
         [Constructable]
         public MashedSweetPotatoes()
@@ -199,10 +199,10 @@ namespace Server.Items
     [Flipable(19371, 19372)]
     public class BasketOfRolls : BaseComplexFood
     {
-        public override int LabelNumber { get { return 1153518; } } // basket of rolls
+        public override int LabelNumber => 1153518;  // basket of rolls
 
-        public override Food Piece { get { return new DinnerRoll(); } }
-        public override int Pieces { get { return 13; } }
+        public override Food Piece => new DinnerRoll();
+        public override int Pieces => 13;
 
         [Constructable]
         public BasketOfRolls()
@@ -234,7 +234,7 @@ namespace Server.Items
 
     public class DinnerRoll : Food
     {
-        public override int LabelNumber { get { return 1153520; } } // dinner roll
+        public override int LabelNumber => 1153520;  // dinner roll
 
         [Constructable]
         public DinnerRoll()
@@ -267,7 +267,7 @@ namespace Server.Items
     [Flipable(18824, 18831)]
     public class TurkeyPlatter : BaseComplexFood
     {
-        public override int LabelNumber { get { return 1153517; } } // turkey platter
+        public override int LabelNumber => 1153517;  // turkey platter
 
         public override Food Piece
         {
@@ -286,7 +286,7 @@ namespace Server.Items
             }
         }
 
-        public override int Pieces { get { return 8; } }
+        public override int Pieces => 8;
 
         [Constructable]
         public TurkeyPlatter()
@@ -318,7 +318,7 @@ namespace Server.Items
 
     public class TurkeyDinner : Food
     {
-        public override int LabelNumber { get { return 1153532; } } // Turkey Dinner
+        public override int LabelNumber => 1153532;  // Turkey Dinner
 
         [Constructable]
         public TurkeyDinner()
@@ -351,7 +351,7 @@ namespace Server.Items
     [Flipable(2487, 2488)]
     public class RoastDuck : Food
     {
-        public override int LabelNumber { get { return 1153505; } } // Roast Duck
+        public override int LabelNumber => 1153505;  // Roast Duck
 
         [Constructable]
         public RoastDuck()
@@ -384,7 +384,7 @@ namespace Server.Items
     [Flipable(2487, 2488)]
     public class RoastTurkey : Food
     {
-        public override int LabelNumber { get { return 1153507; } } // Roast Turkey
+        public override int LabelNumber => 1153507;  // Roast Turkey
 
         [Constructable]
         public RoastTurkey()
@@ -417,7 +417,7 @@ namespace Server.Items
     [Flipable(2487, 2488)]
     public class RoastChicken : Food
     {
-        public override int LabelNumber { get { return 1153506; } } // Roast Turkey
+        public override int LabelNumber => 1153506;  // Roast Turkey
 
         [Constructable]
         public RoastChicken()
@@ -449,7 +449,7 @@ namespace Server.Items
 
     public class TurkeyLeg : Food
     {
-        public override int LabelNumber { get { return 1153508; } } // turkey leg
+        public override int LabelNumber => 1153508;  // turkey leg
 
         [Constructable]
         public TurkeyLeg()
@@ -481,7 +481,7 @@ namespace Server.Items
 
     public class GibletGravey : Food
     {
-        public override int LabelNumber { get { return 1153509; } } // Giblet Gravey
+        public override int LabelNumber => 1153509;  // Giblet Gravey
 
         [Constructable]
         public GibletGravey()

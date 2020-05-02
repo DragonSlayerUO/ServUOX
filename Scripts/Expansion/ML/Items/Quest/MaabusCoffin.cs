@@ -27,13 +27,7 @@ namespace Server.Engines.Quests.Necro
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Maabus Maabus
-        {
-            get
-            {
-                return this.m_Maabus;
-            }
-        }
+        public Maabus Maabus => this.m_Maabus;
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D SpawnLocation
         {

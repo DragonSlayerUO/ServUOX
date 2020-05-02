@@ -34,7 +34,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new PicnicBlanketDeed(); } }
+        public override BaseAddonDeed Deed => new PicnicBlanketDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -87,9 +87,9 @@ namespace Server.Items
 
     public class PicnicBlanketDeed : BaseAddonDeed, IRewardOption
     {
-        public override int LabelNumber { get { return 1158332; } } // picnic blanket
+        public override int LabelNumber => 1158332;  // picnic blanket
 
-        public override BaseAddon Addon { get { return new PicnicBlanketAddon(_Direction); } }
+        public override BaseAddon Addon => new PicnicBlanketAddon(_Direction);
 
         private DirectionType _Direction;
 

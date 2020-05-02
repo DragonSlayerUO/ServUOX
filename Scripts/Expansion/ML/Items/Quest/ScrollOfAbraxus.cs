@@ -18,13 +18,7 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1028827;
-            }
-        }// Scroll of Abraxus
+        public override int LabelNumber => 1028827;// Scroll of Abraxus
         public override bool CanDrop(PlayerMobile player)
         {
             DarkTidesQuest qs = player.Quest as DarkTidesQuest;

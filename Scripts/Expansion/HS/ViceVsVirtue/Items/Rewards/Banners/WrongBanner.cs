@@ -10,13 +10,7 @@ namespace Server.Engines.VvV
     [Flipable(39349, 39350)]
     public class WrongBanner : Item
     {
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1123373;
-            }
-        }
+        public override int LabelNumber => 1123373;
 
         [Constructable]
         public WrongBanner()

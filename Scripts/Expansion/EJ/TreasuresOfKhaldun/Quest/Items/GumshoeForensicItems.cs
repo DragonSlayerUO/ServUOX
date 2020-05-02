@@ -12,10 +12,10 @@ namespace Server.Engines.Khaldun
 {
     public class BaseGumshoeForensicItem : Item, IForensicTarget
     {
-        public virtual string ItemName { get { return null; } }
-        public virtual int Cliloc { get { return 0; } }
+        public virtual string ItemName => null;
+        public virtual int Cliloc => 0;
 
-        public override bool DisplayWeight { get { return false; } }
+        public override bool DisplayWeight => false;
 
         public BaseGumshoeForensicItem(int itemID)
             : base(itemID)
@@ -65,8 +65,8 @@ namespace Server.Engines.Khaldun
 
     public class GumshoeBottles : BaseGumshoeForensicItem
     {
-        public override string ItemName { get { return "bottles of wine"; } }
-        public override int Cliloc { get { return 1158572; } }
+        public override string ItemName => "bottles of wine";
+        public override int Cliloc => 1158572;
 
         [Constructable]
         public GumshoeBottles()
@@ -96,8 +96,8 @@ namespace Server.Engines.Khaldun
 
     public class GumshoeDeed : BaseGumshoeForensicItem
     {
-        public override string ItemName { get { return "deed"; } }
-        public override int Cliloc { get { return 1158575; } }
+        public override string ItemName => "deed";
+        public override int Cliloc => 1158575;
 
         [Constructable]
         public GumshoeDeed()
@@ -127,8 +127,8 @@ namespace Server.Engines.Khaldun
 
     public class GumshoeRope : BaseGumshoeForensicItem
     {
-        public override string ItemName { get { return "rope"; } }
-        public override int Cliloc { get { return 1158573; } }
+        public override string ItemName => "rope";
+        public override int Cliloc => 1158573;
 
         [Constructable]
         public GumshoeRope()
@@ -158,8 +158,8 @@ namespace Server.Engines.Khaldun
 
     public class GumshoeMap : BaseGumshoeForensicItem
     {
-        public override string ItemName { get { return "map"; } }
-        public override int Cliloc { get { return 1158574; } }
+        public override string ItemName => "map";
+        public override int Cliloc => 1158574;
 
         [Constructable]
         public GumshoeMap()
@@ -189,8 +189,8 @@ namespace Server.Engines.Khaldun
 
     public class GumshoeTools : BaseGumshoeForensicItem
     {
-        public override string ItemName { get { return "tools"; } }
-        public override int Cliloc { get { return 1158576; } }
+        public override string ItemName => "tools";
+        public override int Cliloc => 1158576;
 
         [Constructable]
         public GumshoeTools()

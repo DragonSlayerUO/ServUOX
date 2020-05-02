@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a hellsteed corpse")]
     public class HellSteed : BaseMount, IElementalCreature
     {
-        public ElementType ElementType { get { return ElementType.Chaos; } }
+        public ElementType ElementType => ElementType.Chaos;
 
         [Constructable]
         public HellSteed()
@@ -46,7 +46,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+        public override Poison PoisonImmunity => Poison.Lethal;
 
         public override void Serialize(GenericWriter writer)
         {

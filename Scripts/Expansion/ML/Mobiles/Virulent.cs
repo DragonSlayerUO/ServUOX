@@ -59,34 +59,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool GivesMLMinorArtifact
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override Poison HitPoison
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
+        public override bool GivesMLMinorArtifact => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override Poison HitPoison => Poison.Lethal;
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.AosUltraRich, 4);

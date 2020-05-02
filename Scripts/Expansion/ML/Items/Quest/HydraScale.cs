@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074760;
-            }
-        }// A hydra scale.
+        public override int LabelNumber => 1074760;// A hydra scale.
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

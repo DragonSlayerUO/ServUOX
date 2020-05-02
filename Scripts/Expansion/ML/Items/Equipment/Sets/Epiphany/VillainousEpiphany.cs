@@ -7,12 +7,12 @@ namespace Server.Items
 {
     public class HelmOfVillainousEpiphany : DragonHelm, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150253; } } // Helm of Villainous Epiphany
+        public override int LabelNumber => 1150253;  // Helm of Villainous Epiphany
 
         [Constructable]
         public HelmOfVillainousEpiphany()
@@ -79,12 +79,12 @@ namespace Server.Items
 
     public class GorgetOfVillainousEpiphany : PlateGorget, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150254; } } // Gorget of Villainous Epiphany
+        public override int LabelNumber => 1150254;  // Gorget of Villainous Epiphany
 
         [Constructable]
         public GorgetOfVillainousEpiphany()
@@ -149,12 +149,12 @@ namespace Server.Items
 
     public class BreastplateOfVillainousEpiphany : DragonChest, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150255; } } // Breastplate of Villainous Epiphany
+        public override int LabelNumber => 1150255;  // Breastplate of Villainous Epiphany
 
         [Constructable]
         public BreastplateOfVillainousEpiphany()
@@ -221,12 +221,12 @@ namespace Server.Items
 
     public class ArmsOfVillainousEpiphany : DragonArms, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150256; } } // Arms of Villainous Epiphany
+        public override int LabelNumber => 1150256;  // Arms of Villainous Epiphany
 
         [Constructable]
         public ArmsOfVillainousEpiphany()
@@ -293,12 +293,12 @@ namespace Server.Items
 
     public class GauntletsOfVillainousEpiphany : DragonGloves, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150257; } } // Gauntlets of Villainous Epiphany
+        public override int LabelNumber => 1150257;  // Gauntlets of Villainous Epiphany
 
         [Constructable]
         public GauntletsOfVillainousEpiphany()
@@ -365,12 +365,12 @@ namespace Server.Items
 
     public class LegsOfVillainousEpiphany : DragonLegs, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150258; } } // Leggings of Villainous Epiphany
+        public override int LabelNumber => 1150258;  // Leggings of Villainous Epiphany
 
         [Constructable]
         public LegsOfVillainousEpiphany()
@@ -437,12 +437,12 @@ namespace Server.Items
 
     public class KiltOfVillainousEpiphany : GargishPlateKilt, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150263; } } // Kilt of Villainous Epiphany
+        public override int LabelNumber => 1150263;  // Kilt of Villainous Epiphany
 
         [Constructable]
         public KiltOfVillainousEpiphany()
@@ -507,12 +507,12 @@ namespace Server.Items
 
     public class EarringsOfVillainousEpiphany : GargishEarrings, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150260; } } // Earrings of Villainous Epiphany
+        public override int LabelNumber => 1150260;  // Earrings of Villainous Epiphany
 
         [Constructable]
         public EarringsOfVillainousEpiphany()
@@ -577,12 +577,12 @@ namespace Server.Items
 
     public class GargishBreastplateOfVillainousEpiphany : GargishPlateChest, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150255; } } // Breastplate of Villainous Epiphany
+        public override int LabelNumber => 1150255;  // Breastplate of Villainous Epiphany
 
         [Constructable]
         public GargishBreastplateOfVillainousEpiphany()
@@ -647,12 +647,12 @@ namespace Server.Items
 
     public class GargishArmsOfVillainousEpiphany : GargishPlateArms, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150256; } } // Arms of Villainous Epiphany
+        public override int LabelNumber => 1150256;  // Arms of Villainous Epiphany
 
         [Constructable]
         public GargishArmsOfVillainousEpiphany()
@@ -717,12 +717,12 @@ namespace Server.Items
 
     public class NecklaceOfVillainousEpiphany : GargishNecklace, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150264; } } // Necklace of Villainous Epiphany
+        public override int LabelNumber => 1150264;  // Necklace of Villainous Epiphany
 
         [Constructable]
         public NecklaceOfVillainousEpiphany()
@@ -787,12 +787,12 @@ namespace Server.Items
 
     public class GargishLegsOfVillainousEpiphany : GargishPlateLegs, IEpiphanyArmor
     {
-        public Alignment Alignment { get { return Alignment.Evil; } }
-        public SurgeType Type { get { return SurgeType.Mana; } }
-        public int Frequency { get { return EpiphanyHelper.GetFrequency(Parent as Mobile, this); } }
-        public int Bonus { get { return EpiphanyHelper.GetBonus(Parent as Mobile, this); } }
+        public Alignment Alignment => Alignment.Evil;
+        public SurgeType Type => SurgeType.Mana;
+        public int Frequency => EpiphanyHelper.GetFrequency(Parent as Mobile, this);
+        public int Bonus => EpiphanyHelper.GetBonus(Parent as Mobile, this);
 
-        public override int LabelNumber { get { return 1150258; } } // Legs of Villainous Epiphany
+        public override int LabelNumber => 1150258;  // Legs of Villainous Epiphany
 
         [Constructable]
         public GargishLegsOfVillainousEpiphany()

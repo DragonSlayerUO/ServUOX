@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074231;
-            }
-        }// Abscess' Tail
+        public override int LabelNumber => 1074231;// Abscess' Tail
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -58,13 +58,7 @@ namespace Server.Factions
                 this.Register();
             }
         }
-        protected override List<SBInfo> SBInfos
-        {
-            get
-            {
-                return this.m_SBInfos;
-            }
-        }
+        protected override List<SBInfo> SBInfos => this.m_SBInfos;
         public void Register()
         {
             if (this.m_Town != null && this.m_Faction != null)

@@ -11,7 +11,7 @@ namespace Server.Engines.ArenaSystem
     public class ArenaStone : Item
     {
         public override bool ForceShowProperties => true;
-        public override int LabelNumber { get { return 1115878; } }
+        public override int LabelNumber => 1115878;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public PVPArena Arena { get; set; }

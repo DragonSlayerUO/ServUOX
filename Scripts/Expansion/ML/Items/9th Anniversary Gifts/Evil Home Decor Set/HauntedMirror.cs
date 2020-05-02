@@ -15,20 +15,8 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074800;
-            }
-        }// Haunted Mirror
-        public override bool HandlesOnMovement
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override int LabelNumber => 1074800;// Haunted Mirror
+        public override bool HandlesOnMovement => true;
         public override void OnMovement(Mobile m, Point3D old)
         {
             base.OnMovement(m, old);
@@ -80,13 +68,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new HauntedMirrorDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new HauntedMirrorDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -117,20 +99,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new HaunterMirrorAddon();
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074800;
-            }
-        }// Haunted Mirror
+        public override BaseAddon Addon => new HaunterMirrorAddon();
+        public override int LabelNumber => 1074800;// Haunted Mirror
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

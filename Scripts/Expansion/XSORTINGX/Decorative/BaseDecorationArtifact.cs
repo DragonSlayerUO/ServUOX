@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public abstract class BaseDecorationArtifact : Item, IArtifact
     {
-        public override bool IsArtifact { get { return true; } }
-        public virtual bool ShowArtifactRarity { get { return true; } }
+        public override bool IsArtifact => true;
+        public virtual bool ShowArtifactRarity => true;
 
         public BaseDecorationArtifact(int itemID)
             : base(itemID)
@@ -19,13 +19,7 @@ namespace Server.Items
         }
 
         public abstract int ArtifactRarity { get; }
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool ForceShowProperties => true;
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
@@ -63,13 +57,7 @@ namespace Server.Items
         }
 
         public abstract int ArtifactRarity { get; }
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool ForceShowProperties => true;
         public override void AddNameProperties(ObjectPropertyList list)
         {
             base.AddNameProperties(list);

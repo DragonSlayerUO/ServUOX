@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1076266;
-            }
-        }// Suit of Silver Armor
+        public override int LabelNumber => 1076266;// Suit of Silver Armor
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -51,13 +45,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new SuitOfSilverArmorDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new SuitOfSilverArmorDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -87,20 +75,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new SuitOfSilverArmorAddon();
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1076266;
-            }
-        }// Suit of Silver Armor
+        public override BaseAddon Addon => new SuitOfSilverArmorAddon();
+        public override int LabelNumber => 1076266;// Suit of Silver Armor
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

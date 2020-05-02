@@ -6,13 +6,7 @@ namespace Server.Items
     public class BlackrockAutomaton : KotlAutomaton
     {
         [CommandProperty(AccessLevel.GameMaster)]
-        public override Type RepairResource
-        {
-            get
-            {
-                return typeof(CrystallineBlackrock); // TODO: Needs to be regular blackrock. THis doesn't exist on ServUOX
-            }
-        }
+        public override Type RepairResource => typeof(CrystallineBlackrock); // TODO: Needs to be regular blackrock. THis doesn't exist on ServUOX
 
         [Constructable]
         public BlackrockAutomaton()
@@ -49,7 +43,7 @@ namespace Server.Items
             SetWeaponAbility(WeaponAbility.ArmorPierce);
         }
 
-        public override double WeaponAbilityChance { get { return 0.45; } }
+        public override double WeaponAbilityChance => 0.45;
 
         public override void OnResourceChanged()
         {

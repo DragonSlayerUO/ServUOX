@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1032657;
-            }
-        }// elven quiver
+        public override int LabelNumber => 1032657;// elven quiver
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

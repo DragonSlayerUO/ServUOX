@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class DraconicOrb : PeerlessKey
     {
-        public override int LabelNumber { get { return 1113515; } } // Draconic Orb (Lesser)
+        public override int LabelNumber => 1113515;  // Draconic Orb (Lesser)
 
         [Constructable]
         public DraconicOrb()
@@ -16,7 +16,7 @@ namespace Server.Items
             Hue = 0x80F;
         }
 
-        public override int Lifespan { get { return 43200; } }
+        public override int Lifespan => 43200;
 
         public DraconicOrb(Serial serial)
             : base(serial)

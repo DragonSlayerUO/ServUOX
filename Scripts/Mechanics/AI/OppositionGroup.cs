@@ -54,9 +54,9 @@ namespace Server
             m_Types = types;
         }
 
-        public static OppositionGroup TerathansAndOphidians { get { return m_TerathansAndOphidians; } }
-        public static OppositionGroup SavagesAndOrcs { get { return m_SavagesAndOrcs; } }
-        public static OppositionGroup FeyAndUndead { get { return m_FeyAndUndead; } }
+        public static OppositionGroup TerathansAndOphidians => m_TerathansAndOphidians;
+        public static OppositionGroup SavagesAndOrcs => m_SavagesAndOrcs;
+        public static OppositionGroup FeyAndUndead => m_FeyAndUndead;
 
         public bool IsEnemy(object from, object target)
         {

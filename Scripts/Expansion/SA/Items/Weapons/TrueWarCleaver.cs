@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TrueWarCleaver : WarCleaver
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public TrueWarCleaver()
         {
@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073528;
-            }
-        }// true war cleaver
+        public override int LabelNumber => 1073528;// true war cleaver
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

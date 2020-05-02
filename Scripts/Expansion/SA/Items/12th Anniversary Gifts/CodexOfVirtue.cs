@@ -50,7 +50,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new CodexOfVirtueDeed(); } }
+        public override BaseAddonDeed Deed => new CodexOfVirtueDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -67,7 +67,7 @@ namespace Server.Items
 
     public class CodexOfVirtueDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1113919; } }// a Codex of Virtue deed
+        public override int LabelNumber => 1113919; // a Codex of Virtue deed
 
         [Constructable]
         public CodexOfVirtueDeed()
@@ -79,7 +79,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon { get { return new CodexOfVirtueAddon(); } }
+        public override BaseAddon Addon => new CodexOfVirtueAddon();
 
         public override void Serialize(GenericWriter writer)
         {

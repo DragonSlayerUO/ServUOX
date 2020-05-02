@@ -12,7 +12,7 @@ namespace Server.Multis
 
         private Mobile m_Mobile;
 
-        public List<BoatTrackingArrow> Arrows { get { return m_Arrows; } }
+        public List<BoatTrackingArrow> Arrows => m_Arrows;
         private List<BoatTrackingArrow> m_Arrows = new List<BoatTrackingArrow>();
 
         public ShipTrackingContext(Mobile mobile, List<BoatTrackingArrow> arrows)
@@ -101,9 +101,9 @@ namespace Server.Multis
         private Timer m_Timer;
         private Item m_Boat;
 
-        public Mobile From { get { return m_From; } }
-        public Timer Timer { get { return m_Timer; } }
-        public Item Boat { get { return m_Boat; } }
+        public Mobile From => m_From;
+        public Timer Timer => m_Timer;
+        public Item Boat => m_Boat;
 
         public BoatTrackingArrow(Mobile from, Item boat, int range) : base(from, boat)
         {

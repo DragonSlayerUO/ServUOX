@@ -22,13 +22,7 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1060149;
-            }
-        }// Calling of Kronus
+        public override int LabelNumber => 1060149;// Calling of Kronus
         public override bool CanDrop(PlayerMobile player)
         {
             DarkTidesQuest qs = player.Quest as DarkTidesQuest;

@@ -7,9 +7,9 @@ namespace Server.Items
 {
     public class BaseCrabAndLobster : BaseHighseasFish
     {
-        public override Item GetCarved { get { return null; } }
-        public override int GetCarvedAmount { get { return 1; } }
-        public override double DefaultWeight { get { return 2.0; } }
+        public override Item GetCarved => null;
+        public override int GetCarvedAmount => 1;
+        public override double DefaultWeight => 2.0;
 
         public BaseCrabAndLobster(int itemID) : base(itemID)
         {
@@ -67,7 +67,7 @@ namespace Server.Items
 
     public class Crab : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1096489; } }
+        public override int LabelNumber => 1096489;
 
         [Constructable]
         public Crab()
@@ -92,7 +92,7 @@ namespace Server.Items
 
     public class Lobster : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1096491; } }
+        public override int LabelNumber => 1096491;
 
         [Constructable]
         public Lobster()
@@ -117,7 +117,7 @@ namespace Server.Items
 
     public class AppleCrab : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116378; } }
+        public override int LabelNumber => 1116378;
 
         [Constructable]
         public AppleCrab() : base(BaseHighseasFish.GetCrabID())
@@ -141,7 +141,7 @@ namespace Server.Items
 
     public class BlueCrab : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116374; } }
+        public override int LabelNumber => 1116374;
 
         [Constructable]
         public BlueCrab()
@@ -166,7 +166,7 @@ namespace Server.Items
 
     public class DungeonessCrab : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116373; } }
+        public override int LabelNumber => 1116373;
 
         [Constructable]
         public DungeonessCrab()
@@ -191,7 +191,7 @@ namespace Server.Items
 
     public class KingCrab : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116375; } }
+        public override int LabelNumber => 1116375;
 
         [Constructable]
         public KingCrab()
@@ -216,7 +216,7 @@ namespace Server.Items
 
     public class RockCrab : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116376; } }
+        public override int LabelNumber => 1116376;
 
         [Constructable]
         public RockCrab()
@@ -241,7 +241,7 @@ namespace Server.Items
 
     public class SnowCrab : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116377; } }
+        public override int LabelNumber => 1116377;
 
         [Constructable]
         public SnowCrab()
@@ -266,8 +266,8 @@ namespace Server.Items
 
     public class StoneCrab : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116334; } }
-        public override Item GetCarved { get { return new StoneCrabMeat(); } }
+        public override int LabelNumber => 1116334;
+        public override Item GetCarved => new StoneCrabMeat();
 
         [Constructable]
         public StoneCrab()
@@ -293,8 +293,8 @@ namespace Server.Items
 
     public class SpiderCrab : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116336; } }
-        public override Item GetCarved { get { return new SpiderCrabMeat(); } }
+        public override int LabelNumber => 1116336;
+        public override Item GetCarved => new SpiderCrabMeat();
 
         [Constructable]
         public SpiderCrab()
@@ -320,7 +320,7 @@ namespace Server.Items
 
     public class TunnelCrab : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116372; } }
+        public override int LabelNumber => 1116372;
 
         [Constructable]
         public TunnelCrab()
@@ -346,7 +346,7 @@ namespace Server.Items
 
     public class VoidCrab : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116368; } }
+        public override int LabelNumber => 1116368;
 
         [Constructable]
         public VoidCrab()
@@ -371,7 +371,7 @@ namespace Server.Items
 
     public class CrustyLobster : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116383; } }
+        public override int LabelNumber => 1116383;
 
         [Constructable]
         public CrustyLobster()
@@ -396,7 +396,7 @@ namespace Server.Items
 
     public class FredLobster : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116382; } }
+        public override int LabelNumber => 1116382;
 
         [Constructable]
         public FredLobster()
@@ -421,7 +421,7 @@ namespace Server.Items
 
     public class HummerLobster : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116381; } }
+        public override int LabelNumber => 1116381;
 
         [Constructable]
         public HummerLobster()
@@ -446,7 +446,7 @@ namespace Server.Items
 
     public class RockLobster : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116380; } }
+        public override int LabelNumber => 1116380;
 
         [Constructable]
         public RockLobster()
@@ -471,7 +471,7 @@ namespace Server.Items
 
     public class ShovelNoseLobster : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116384; } }
+        public override int LabelNumber => 1116384;
 
         [Constructable]
         public ShovelNoseLobster()
@@ -496,7 +496,7 @@ namespace Server.Items
 
     public class SpineyLobster : BaseCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116379; } }
+        public override int LabelNumber => 1116379;
 
         [Constructable]
         public SpineyLobster()
@@ -521,8 +521,8 @@ namespace Server.Items
 
     public class BlueLobster : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116366; } }
-        public override Item GetCarved { get { return new BlueLobsterMeat(); } }
+        public override int LabelNumber => 1116366;
+        public override Item GetCarved => new BlueLobsterMeat();
 
         [Constructable]
         public BlueLobster()
@@ -548,7 +548,7 @@ namespace Server.Items
 
     public class BloodLobster : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116370; } }
+        public override int LabelNumber => 1116370;
 
         [Constructable]
         public BloodLobster()
@@ -574,7 +574,7 @@ namespace Server.Items
 
     public class DreadLobster : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116371; } }
+        public override int LabelNumber => 1116371;
 
         [Constructable]
         public DreadLobster()
@@ -600,7 +600,7 @@ namespace Server.Items
 
     public class VoidLobster : RareCrabAndLobster
     {
-        public override int LabelNumber { get { return 1116369; } }
+        public override int LabelNumber => 1116369;
 
         [Constructable]
         public VoidLobster()
@@ -626,7 +626,7 @@ namespace Server.Items
 
     public class StoneCrabMeat : Item
     {
-        public override int LabelNumber { get { return 1116317; } }
+        public override int LabelNumber => 1116317;
 
         [Constructable]
         public StoneCrabMeat() : base(4159)
@@ -651,7 +651,7 @@ namespace Server.Items
 
     public class SpiderCrabMeat : Item
     {
-        public override int LabelNumber { get { return 1116320; } }
+        public override int LabelNumber => 1116320;
 
         [Constructable]
         public SpiderCrabMeat()
@@ -677,7 +677,7 @@ namespace Server.Items
 
     public class BlueLobsterMeat : Item
     {
-        public override int LabelNumber { get { return 1116318; } }
+        public override int LabelNumber => 1116318;
 
         [Constructable]
         public BlueLobsterMeat()

@@ -43,13 +43,7 @@ namespace Server.Factions.AI
             }
         }
 
-        public Faction Faction
-        {
-            get
-            {
-                return this.m_Faction;
-            }
-        }
+        public Faction Faction => this.m_Faction;
         public ReactionType Type
         {
             get
@@ -111,13 +105,7 @@ namespace Server.Factions.AI
             }
         }
 
-        public BaseFactionGuard Guard
-        {
-            get
-            {
-                return this.m_Guard;
-            }
-        }
+        public BaseFactionGuard Guard => this.m_Guard;
         public MovementType Movement
         {
             get

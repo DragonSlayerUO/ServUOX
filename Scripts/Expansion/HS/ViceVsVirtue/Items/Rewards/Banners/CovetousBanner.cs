@@ -10,13 +10,7 @@ namespace Server.Engines.VvV
     [Flipable(39335, 39336)]
     public class CovetousBanner : Item
     {
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1123359;
-            }
-        }
+        public override int LabelNumber => 1123359;
 
         [Constructable]
         public CovetousBanner() : base(39335)

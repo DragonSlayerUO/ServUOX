@@ -49,10 +49,7 @@ namespace Server.Mobiles
             SetWeaponAbility(WeaponAbility.ParalyzingBlow);
         }
 
-        public override bool GivesMLMinorArtifact
-        {
-            get { return true; }
-        }
+        public override bool GivesMLMinorArtifact => true;
 
         public Pyre(Serial serial)
             : base(serial)

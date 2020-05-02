@@ -25,7 +25,7 @@ namespace Server.Items
             EventSink.Speech += new SpeechEventHandler(EventSink_Speech);
         }
 
-        public override int LabelNumber { get { return 1079525; } } // Ankh Pendant
+        public override int LabelNumber => 1079525;  // Ankh Pendant
 
         [Constructable]
         public AnkhPendant()
@@ -224,7 +224,7 @@ namespace Server.Items
             return atShrine;
         }
 
-        public static Rectangle2D[] ShrineLocs { get { return m_ShrineLocs; } }
+        public static Rectangle2D[] ShrineLocs => m_ShrineLocs;
         private static Rectangle2D[] m_ShrineLocs = new Rectangle2D[]
         {
             new Rectangle2D(4208, 563, 2, 2), //Honesty
@@ -301,13 +301,13 @@ namespace Server.Items
             private bool m_DoBump3;
             private DateTime m_Expires;
 
-            public VirtueType VType { get { return m_Type; } }
-            public bool DoBump { get { return m_DoBump; } }
-            public bool DoBump2 { get { return m_DoBump2; } }
-            public bool DoBump3 { get { return m_DoBump3; } }
-            public int Random { get { return m_Random; } }
+            public VirtueType VType => m_Type;
+            public bool DoBump => m_DoBump;
+            public bool DoBump2 => m_DoBump2;
+            public bool DoBump3 => m_DoBump3;
+            public int Random => m_Random;
 
-            public bool Expired { get { return DateTime.UtcNow > m_Expires; } }
+            public bool Expired => DateTime.UtcNow > m_Expires;
 
             public AnkhPendantBonusContext(Mobile from, VirtueType type)
             {

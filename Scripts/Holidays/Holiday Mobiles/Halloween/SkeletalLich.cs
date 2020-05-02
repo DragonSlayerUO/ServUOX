@@ -55,10 +55,10 @@ namespace Server.Mobiles
             AddLoot(LootPack.FilthyRich, 2);
         }
 
-        public override bool BleedImmunity { get { return true; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+        public override bool BleedImmunity => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
 
-        public override int TreasureMapLevel { get { return 1; } }
+        public override int TreasureMapLevel => 1;
 
         public SkeletalLich(Serial serial) : base(serial)
         {

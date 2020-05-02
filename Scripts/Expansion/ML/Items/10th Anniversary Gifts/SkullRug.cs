@@ -185,7 +185,7 @@ namespace Server.Items
 
         private class InternalAddonComponent : AddonComponent
         {
-            public override int LabelNumber { get { return 1150120; } } // Skull Rug
+            public override int LabelNumber => 1150120;  // Skull Rug
 
             public InternalAddonComponent(int id)
                 : base(id)

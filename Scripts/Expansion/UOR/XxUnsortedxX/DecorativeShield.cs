@@ -28,13 +28,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public Item Deed
         {
             get
@@ -145,13 +139,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1049771;
-            }
-        }// deed for a decorative shield wall hanging
+        public override int LabelNumber => 1049771;// deed for a decorative shield wall hanging
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsRewardItem
         {

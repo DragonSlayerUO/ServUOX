@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override string DefaultName
-        {
-            get
-            {
-                return "Twilight Lantern";
-            }
-        }
+        public override string DefaultName => "Twilight Lantern";
         public override bool AllowEquipedCast(Mobile from)
         {
             return true;

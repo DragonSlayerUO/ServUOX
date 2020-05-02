@@ -170,17 +170,17 @@ namespace Server.Items
 
         // Missing Wrestling Mastery Ability
 
-        public override double WeaponAbilityChance { get { return 0.33; } }
+        public override double WeaponAbilityChance => 0.33;
 
-        public override bool IsScaredOfScaryThings { get { return false; } }
-        public override bool IsScaryToPets { get { return !Controlled; } }
-        public override FoodType FavoriteFood { get { return FoodType.None; } }
-        public override bool CanBeDistracted { get { return false; } }
-        public override bool DeleteOnRelease { get { return true; } }
-        public override bool AutoDispel { get { return !Controlled; } }
-        public override bool BleedImmunity { get { return true; } }
-        public override bool BardImmunity { get { return true; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+        public override bool IsScaredOfScaryThings => false;
+        public override bool IsScaryToPets => !Controlled;
+        public override FoodType FavoriteFood => FoodType.None;
+        public override bool CanBeDistracted => false;
+        public override bool DeleteOnRelease => true;
+        public override bool AutoDispel => !Controlled;
+        public override bool BleedImmunity => true;
+        public override bool BardImmunity => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
 
         public override bool CanTransfer(Mobile m)
         {

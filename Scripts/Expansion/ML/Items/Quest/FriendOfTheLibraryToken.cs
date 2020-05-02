@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073136;
-            }
-        }// Friend of the Library Token (allows donations to be made)
+        public override int LabelNumber => 1073136;// Friend of the Library Token (allows donations to be made)
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

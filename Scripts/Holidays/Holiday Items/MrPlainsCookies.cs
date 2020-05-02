@@ -19,13 +19,7 @@ namespace Server.Items
         {
         }
 
-        public override string DefaultName
-        {
-            get
-            {
-                return "Mr Plain's Cookies";
-            }
-        }
+        public override string DefaultName => "Mr Plain's Cookies";
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

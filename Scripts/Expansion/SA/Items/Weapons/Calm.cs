@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Calm : Halberd
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public Calm()
         {
@@ -21,34 +21,10 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1094915;
-            }
-        }// Calm [Replica]
-        public override int InitMinHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
-        public override bool CanFortify
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override int LabelNumber => 1094915;// Calm [Replica]
+        public override int InitMinHits => 150;
+        public override int InitMaxHits => 150;
+        public override bool CanFortify => false;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

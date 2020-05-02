@@ -77,13 +77,7 @@ namespace Server.Factions
                 m_Faction = value;
             }
         }
-        public List<Candidate> Candidates
-        {
-            get
-            {
-                return m_Candidates;
-            }
-        }
+        public List<Candidate> Candidates => m_Candidates;
         public ElectionState State
         {
             get
@@ -96,21 +90,9 @@ namespace Server.Factions
                 m_LastStateTime = DateTime.UtcNow;
             }
         }
-        public DateTime LastStateTime
-        {
-            get
-            {
-                return m_LastStateTime;
-            }
-        }
+        public DateTime LastStateTime => m_LastStateTime;
         [CommandProperty(AccessLevel.GameMaster)]
-        public ElectionState CurrentState
-        {
-            get
-            {
-                return m_State;
-            }
-        }
+        public ElectionState CurrentState => m_State;
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
         public TimeSpan NextStateTime
         {
@@ -463,34 +445,10 @@ namespace Server.Factions
             }
         }
 
-        public Mobile From
-        {
-            get
-            {
-                return m_From;
-            }
-        }
-        public Mobile Candidate
-        {
-            get
-            {
-                return m_Candidate;
-            }
-        }
-        public IPAddress Address
-        {
-            get
-            {
-                return m_Address;
-            }
-        }
-        public DateTime Time
-        {
-            get
-            {
-                return m_Time;
-            }
-        }
+        public Mobile From => m_From;
+        public Mobile Candidate => m_Candidate;
+        public IPAddress Address => m_Address;
+        public DateTime Time => m_Time;
         public object[] AcquireFields()
         {
             TimeSpan gameTime = TimeSpan.Zero;
@@ -579,27 +537,9 @@ namespace Server.Factions
             }
         }
 
-        public Mobile Mobile
-        {
-            get
-            {
-                return m_Mobile;
-            }
-        }
-        public List<Voter> Voters
-        {
-            get
-            {
-                return m_Voters;
-            }
-        }
-        public int Votes
-        {
-            get
-            {
-                return m_Voters.Count;
-            }
-        }
+        public Mobile Mobile => m_Mobile;
+        public List<Voter> Voters => m_Voters;
+        public int Votes => m_Voters.Count;
         public void CleanMuleVotes()
         {
             for (int i = 0; i < m_Voters.Count; ++i)

@@ -12,7 +12,7 @@ namespace Server.Items
 
     public class JusticeVirtueTileAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new JusticeVirtueTileDeed(); } }
+        public override BaseAddonDeed Deed => new JusticeVirtueTileDeed();
 
         private JusticeTileType m_JusticeTileType;
 
@@ -58,8 +58,8 @@ namespace Server.Items
 
     public class JusticeVirtueTileDeed : BaseAddonDeed, IRewardOption
     {
-        public override BaseAddon Addon { get { return new JusticeVirtueTileAddon(m_JusticeTileType); } }
-        public override int LabelNumber { get { return 1080487; } } // Justice Virtue Tile Deed
+        public override BaseAddon Addon => new JusticeVirtueTileAddon(m_JusticeTileType);
+        public override int LabelNumber => 1080487;  // Justice Virtue Tile Deed
 
         private JusticeTileType m_JusticeTileType;
 

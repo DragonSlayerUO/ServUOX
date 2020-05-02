@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class RunicMalletAndChisel : BaseRunicTool
     {
-        public override CraftSystem CraftSystem { get { return DefMasonry.CraftSystem; } }
+        public override CraftSystem CraftSystem => DefMasonry.CraftSystem;
 
         public override int LabelNumber
         {

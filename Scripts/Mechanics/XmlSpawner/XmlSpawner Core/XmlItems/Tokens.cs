@@ -5,10 +5,7 @@ namespace Server.Items
 {
     public abstract class BaseRewardScroll : Item
     {
-        public override double DefaultWeight
-        {
-            get { return 0.0; }
-        }
+        public override double DefaultWeight => 0.0;
 
         public BaseRewardScroll() : base(0x2D51) { }
 

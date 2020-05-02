@@ -13,19 +13,16 @@ namespace Server.Engines.VeteranRewards
 {
     public class DaviesLockerAddon : BaseAddon, ISecurable
     {
-        public override BaseAddonDeed Deed { get { return new DaviesLockerAddonDeed(m_Entries); } }
+        public override BaseAddonDeed Deed => new DaviesLockerAddonDeed(m_Entries);
 
         private List<DaviesLockerEntry> m_Entries = new List<DaviesLockerEntry>();
-        public List<DaviesLockerEntry> Entries { get { return m_Entries; } }
+        public List<DaviesLockerEntry> Entries => m_Entries;
 
         private bool m_South;
         private SecureLevel m_Level;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool South
-        {
-            get { return m_South; }
-        }
+        public bool South => m_South;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level
@@ -255,19 +252,16 @@ namespace Server.Engines.VeteranRewards
 
     public class DaviesLockerAddonDeed : BaseAddonDeed, IRewardOption
     {
-        public override BaseAddon Addon { get { return new DaviesLockerAddon(m_South, m_Entries); } }
-        public override int LabelNumber { get { return 1153535; } } // deed to davies' locker
+        public override BaseAddon Addon => new DaviesLockerAddon(m_South, m_Entries);
+        public override int LabelNumber => 1153535;  // deed to davies' locker
 
         private List<DaviesLockerEntry> m_Entries;
-        public List<DaviesLockerEntry> Entries { get { return m_Entries; } }
+        public List<DaviesLockerEntry> Entries => m_Entries;
 
         private bool m_South;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool South
-        {
-            get { return m_South; }
-        }
+        public bool South => m_South;
 
         [Constructable]
         public DaviesLockerAddonDeed() : this(null)

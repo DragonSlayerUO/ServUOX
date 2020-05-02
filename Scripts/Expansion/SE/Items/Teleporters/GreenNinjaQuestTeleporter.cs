@@ -16,20 +16,8 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1026157;
-            }
-        }// teleporter
-        public override int NotWorkingMessage
-        {
-            get
-            {
-                return 1063198;
-            }
-        }// You stand on the strange floor tile but nothing happens.
+        public override int LabelNumber => 1026157;// teleporter
+        public override int NotWorkingMessage => 1063198;// You stand on the strange floor tile but nothing happens.
         public override bool GetDestination(PlayerMobile player, ref Point3D loc, ref Map map)
         {
             QuestSystem qs = player.Quest;

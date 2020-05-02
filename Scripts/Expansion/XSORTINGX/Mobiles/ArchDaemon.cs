@@ -53,62 +53,14 @@ namespace Server.Mobiles
         {
         }
 
-        public override double DispelDifficulty
-        {
-            get
-            {
-                return 125.0;
-            }
-        }
-        public override double DispelFocus
-        {
-            get
-            {
-                return 45.0;
-            }
-        }
-        public override Faction FactionAllegiance
-        {
-            get
-            {
-                return Shadowlords.Instance;
-            }
-        }
-        public override Ethics.Ethic EthicAllegiance
-        {
-            get
-            {
-                return Ethics.Ethic.Evil;
-            }
-        }
-        public override bool CanRummageCorpses
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Regular;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 4;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override double DispelDifficulty => 125.0;
+        public override double DispelFocus => 45.0;
+        public override Faction FactionAllegiance => Shadowlords.Instance;
+        public override Ethics.Ethic EthicAllegiance => Ethics.Ethic.Evil;
+        public override bool CanRummageCorpses => true;
+        public override Poison PoisonImmunity => Poison.Regular;
+        public override int TreasureMapLevel => 4;
+        public override int Meat => 1;
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.Rich);

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class QuagmireStatue : Item
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public QuagmireStatue()
             : base(0x2614)
@@ -18,13 +18,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073195;
-            }
-        }// A Quagmire Contribution Statue from the Britannia Royal Zoo.
+        public override int LabelNumber => 1073195;// A Quagmire Contribution Statue from the Britannia Royal Zoo.
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

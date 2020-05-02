@@ -55,7 +55,7 @@ namespace Server.Engines.VvV
         public int Deaths { get; set; }
         public int Stolen { get; set; }
 
-        public int ReturnedSigils { get { return ViceReturned + VirtueReturned; } }
+        public int ReturnedSigils => ViceReturned + VirtueReturned;
 
         public int ViceReturned { get; set; }
         public int VirtueReturned { get; set; }
@@ -148,7 +148,7 @@ namespace Server.Engines.VvV
         public int Deaths { get; set; }
         public int Stolen { get; set; }
 
-        public int ReturnedSigils { get { return ViceReturned + VirtueReturned; } }
+        public int ReturnedSigils => ViceReturned + VirtueReturned;
 
         public int ViceReturned { get; set; }
         public int VirtueReturned { get; set; }
@@ -209,7 +209,7 @@ namespace Server.Engines.VvV
         public int Deaths { get; set; }
         public int Stolen { get; set; }
 
-        public int ReturnedSigils { get { return ViceReturned + VirtueReturned; } }
+        public int ReturnedSigils => ViceReturned + VirtueReturned;
 
         public int ViceReturned { get; set; }
         public int VirtueReturned { get; set; }

@@ -5,7 +5,7 @@ namespace Server.Engines.BulkOrders
 {
     public class LargeFletchingBOD : LargeBOD
     {
-        public override BODType BODType { get { return BODType.Fletching; } }
+        public override BODType BODType => BODType.Fletching;
 
         public static double[] m_FletchingingMaterialChances = new double[]
         {

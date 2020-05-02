@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Soap : Item
     {
-        public override int LabelNumber { get { return 1152267; } } // soap
+        public override int LabelNumber => 1152267;  // soap
 
         [Constructable]
         public Soap()

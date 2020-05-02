@@ -36,13 +36,13 @@ namespace Server.Engines.Quests
         }
 
         // public override bool InitialInnocent { get { return true; } }
-        public override bool IsInvulnerable { get { return false; } }
-        public override bool Commandable { get { return false; } }
+        public override bool IsInvulnerable => false;
+        public override bool Commandable => false;
 
-        public override Type[] Quests { get { return null; } }
+        public override Type[] Quests => null;
 
-        public override bool CanAutoStable { get { return false; } }
-        public override bool CanDetectHidden { get { return false; } }
+        public override bool CanAutoStable => false;
+        public override bool CanDetectHidden => false;
 
         public override void OnTalk(PlayerMobile player)
         {

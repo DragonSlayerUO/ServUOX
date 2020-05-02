@@ -65,7 +65,7 @@ namespace Server.Items
             }
         }
 
-        public override BaseAddonDeed Deed { get { return new FirePaintingDeed(); } }
+        public override BaseAddonDeed Deed => new FirePaintingDeed();
 
         private class FirePaintingComponent : LocalizedAddonComponent
         {
@@ -136,7 +136,7 @@ namespace Server.Items
 
     public class FirePaintingDeed : BaseAddonDeed, IRewardOption
     {
-        public override int LabelNumber { get { return 1154182; } } // Fire Painting
+        public override int LabelNumber => 1154182;  // Fire Painting
 
         private DirectionType _Direction;
 
@@ -179,7 +179,7 @@ namespace Server.Items
                 base.OnDoubleClick(from);
         }
 
-        public override BaseAddon Addon { get { return new FirePaintingAddon(_Direction); } }
+        public override BaseAddon Addon => new FirePaintingAddon(_Direction);
 
         public override void Serialize(GenericWriter writer)
         {

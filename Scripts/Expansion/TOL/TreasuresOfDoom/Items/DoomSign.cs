@@ -15,7 +15,7 @@ namespace Server.Items
         public Dictionary<Mobile, DateTime> NextMessage { get; set; }
 
         public override bool ForceShowProperties => true;
-        public bool CheckWhenHidden { get { return false; } }
+        public bool CheckWhenHidden => false;
 
         [Constructable]
         public DoomSign()
@@ -36,7 +36,7 @@ namespace Server.Items
             }
         }
 
-        public override bool HandlesOnMovement { get { return PointsSystem.TreasuresOfDoom.InSeason; } }
+        public override bool HandlesOnMovement => PointsSystem.TreasuresOfDoom.InSeason;
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {

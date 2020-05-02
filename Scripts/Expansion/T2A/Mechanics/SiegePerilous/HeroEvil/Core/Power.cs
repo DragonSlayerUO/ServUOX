@@ -5,13 +5,7 @@ namespace Server.Ethics
     public abstract class Power
     {
         protected PowerDefinition m_Definition;
-        public PowerDefinition Definition
-        {
-            get
-            {
-                return this.m_Definition;
-            }
-        }
+        public PowerDefinition Definition => this.m_Definition;
         public virtual bool CheckInvoke(Player from)
         {
             if (!from.Mobile.CheckAlive())

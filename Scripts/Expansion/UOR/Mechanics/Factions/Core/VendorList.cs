@@ -13,20 +13,8 @@ namespace Server.Factions
             this.m_Vendors = new List<BaseFactionVendor>();
         }
 
-        public VendorDefinition Definition
-        {
-            get
-            {
-                return this.m_Definition;
-            }
-        }
-        public List<BaseFactionVendor> Vendors
-        {
-            get
-            {
-                return this.m_Vendors;
-            }
-        }
+        public VendorDefinition Definition => this.m_Definition;
+        public List<BaseFactionVendor> Vendors => this.m_Vendors;
         public BaseFactionVendor Construct(Town town, Faction faction)
         {
             try

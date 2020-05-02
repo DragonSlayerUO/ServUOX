@@ -322,13 +322,7 @@ namespace Server.Multis
         public virtual TimeSpan RestrictedPlacingTime => TimeSpan.FromHours(1.0);
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual double BonusStorageScalar
-        {
-            get
-            {
-                return GlobalBonusStorageScalar;
-            }
-        }
+        public virtual double BonusStorageScalar => GlobalBonusStorageScalar;
 
         private bool m_Public;
 
@@ -2079,13 +2073,7 @@ namespace Server.Multis
         {
             private readonly BaseHouse m_House;
 
-            public override string DefaultName
-            {
-                get
-                {
-                    return "a house transfer contract";
-                }
-            }
+            public override string DefaultName => "a house transfer contract";
 
             public TransferItem(BaseHouse house)
                 : base(0x14F0)
@@ -3605,10 +3593,7 @@ namespace Server.Multis
         public Dictionary<Mobile, DateTime> Visits { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int TotalVisits
-        {
-            get { return Visits.Count; }
-        }
+        public int TotalVisits => Visits.Count;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Public
@@ -3671,13 +3656,7 @@ namespace Server.Multis
         [CommandProperty(AccessLevel.GameMaster)]
         public int MaxLockDowns { get; set; }
 
-        public Region Region
-        {
-            get
-            {
-                return m_Region;
-            }
-        }
+        public Region Region => m_Region;
         public List<Mobile> CoOwners { get; set; }
         public List<Mobile> Friends { get; set; }
         public List<Mobile> Access { get; set; }

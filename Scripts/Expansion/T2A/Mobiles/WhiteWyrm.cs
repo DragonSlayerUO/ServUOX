@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a white wyrm corpse")]
     public class WhiteWyrm : BaseCreature
     {
-        public override double AverageThreshold { get { return 0.25; } }
+        public override double AverageThreshold => 0.25;
 
         [Constructable]
         public WhiteWyrm()

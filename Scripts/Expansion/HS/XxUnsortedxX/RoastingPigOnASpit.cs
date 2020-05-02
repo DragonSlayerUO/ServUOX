@@ -71,7 +71,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new RoastingPigOnASpitDeed(); } }
+        public override BaseAddonDeed Deed => new RoastingPigOnASpitDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -119,9 +119,9 @@ namespace Server.Items
 
     public class RoastingPigOnASpitDeed : BaseAddonDeed, IRewardOption
     {
-        public override int LabelNumber { get { return 1154557; } } // Deed for a Roasting Pig on a Spit
+        public override int LabelNumber => 1154557;  // Deed for a Roasting Pig on a Spit
 
-        public override BaseAddon Addon { get { return new RoastingPigOnASpitAddon(_Direction); } }
+        public override BaseAddon Addon => new RoastingPigOnASpitAddon(_Direction);
 
         private DirectionType _Direction;
 

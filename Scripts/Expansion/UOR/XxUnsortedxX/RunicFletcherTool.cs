@@ -26,13 +26,7 @@ namespace Server.Items
         {
         }
 
-        public override CraftSystem CraftSystem
-        {
-            get
-            {
-                return DefBowFletching.CraftSystem;
-            }
-        }
+        public override CraftSystem CraftSystem => DefBowFletching.CraftSystem;
         public override int LabelNumber
         {
             get

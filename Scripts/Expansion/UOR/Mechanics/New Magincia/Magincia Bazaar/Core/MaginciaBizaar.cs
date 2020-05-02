@@ -10,8 +10,8 @@ namespace Server.Engines.NewMagincia
     public class MaginciaBazaar : Item
     {
         public static readonly int DefaultComissionFee = 5;
-        public static TimeSpan GetShortAuctionTime { get { return TimeSpan.FromMinutes(Utility.RandomMinMax(690, 750)); } }
-        public static TimeSpan GetLongAuctionTime { get { return TimeSpan.FromHours(Utility.RandomMinMax(168, 180)); } }
+        public static TimeSpan GetShortAuctionTime => TimeSpan.FromMinutes(Utility.RandomMinMax(690, 750));
+        public static TimeSpan GetLongAuctionTime => TimeSpan.FromHours(Utility.RandomMinMax(168, 180));
 
         private static MaginciaBazaar m_Instance;
         public static MaginciaBazaar Instance { get { return m_Instance; } set { m_Instance = value; } }
@@ -19,13 +19,13 @@ namespace Server.Engines.NewMagincia
         private Timer m_Timer;
 
         private static List<MaginciaBazaarPlot> m_Plots = new List<MaginciaBazaarPlot>();
-        public static List<MaginciaBazaarPlot> Plots { get { return m_Plots; } }
+        public static List<MaginciaBazaarPlot> Plots => m_Plots;
 
         private static Dictionary<Mobile, BidEntry> m_NextAvailable = new Dictionary<Mobile, BidEntry>();
-        public static Dictionary<Mobile, BidEntry> NextAvailable { get { return m_NextAvailable; } }
+        public static Dictionary<Mobile, BidEntry> NextAvailable => m_NextAvailable;
 
         private static Dictionary<Mobile, int> m_Reserve = new Dictionary<Mobile, int>();
-        public static Dictionary<Mobile, int> Reserve { get { return m_Reserve; } }
+        public static Dictionary<Mobile, int> Reserve => m_Reserve;
 
         private bool m_Enabled;
 

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BasketWeavingBook : Item
     {
-        public override int LabelNumber { get { return 1153529; } } // Making valuables with Basket Weaving
+        public override int LabelNumber => 1153529;  // Making valuables with Basket Weaving
 
         [Constructable]
         public BasketWeavingBook()

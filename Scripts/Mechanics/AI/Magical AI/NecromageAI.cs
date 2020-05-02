@@ -18,7 +18,7 @@ namespace Server.Mobiles
 			set { m_Animated = value; }
 		}*/
 
-        public override SkillName CastSkill { get { return SkillName.Magery; } }
+        public override SkillName CastSkill => SkillName.Magery;
 
         public NecroMageAI(BaseCreature m)
             : base(m)

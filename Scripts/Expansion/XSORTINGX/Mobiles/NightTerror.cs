@@ -56,10 +56,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override int TreasureMapLevel { get { return 4; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
-        public override Poison HitPoison { get { return Poison.Lethal; } }
-        public override double HitPoisonChance { get { return 0.75; } }
+        public override int TreasureMapLevel => 4;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override Poison HitPoison => Poison.Lethal;
+        public override double HitPoisonChance => 0.75;
 
         public override void GenerateLoot()
         {

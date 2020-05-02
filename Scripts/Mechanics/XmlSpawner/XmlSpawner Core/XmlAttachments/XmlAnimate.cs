@@ -242,20 +242,8 @@ namespace Server.Engines.XmlSpawner2
         // These are the various ways in which the message attachment can be constructed.
         // These can be called via the [addatt interface, via scripts, via the spawner ATTACH keyword.
         // Other overloads could be defined to handle other types of arguments
-        public override bool HandlesOnSpeech
-        {
-            get
-            {
-                return (this.ActivationWord != null);
-            }
-        }
-        public override bool HandlesOnMovement
-        {
-            get
-            {
-                return (this.ProximityRange >= 0 && this.ActivationWord == null);
-            }
-        }
+        public override bool HandlesOnSpeech => (this.ActivationWord != null);
+        public override bool HandlesOnMovement => (this.ProximityRange >= 0 && this.ActivationWord == null);
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

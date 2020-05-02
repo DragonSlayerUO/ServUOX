@@ -9,27 +9,9 @@ namespace Server.Spells.Ninjitsu
         {
         }
 
-        public override int BaseMana
-        {
-            get
-            {
-                return Core.ML ? 10 : 20;
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return Core.ML ? 30.0 : 60;
-            }
-        }
-        public override TextDefinition AbilityMessage
-        {
-            get
-            {
-                return new TextDefinition(1063095);
-            }
-        }// You prepare to focus all of your abilities into your next strike.
+        public override int BaseMana => Core.ML ? 10 : 20;
+        public override double RequiredSkill => Core.ML ? 30.0 : 60;
+        public override TextDefinition AbilityMessage => new TextDefinition(1063095);// You prepare to focus all of your abilities into your next strike.
         public override bool Validate(Mobile from)
         {
             if (from.FindItemOnLayer(Layer.TwoHanded) as BaseShield != null)

@@ -17,13 +17,7 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1063214;
-            }
-        }// Daimyo Emino's Katana
+        public override int LabelNumber => 1063214;// Daimyo Emino's Katana
         public override bool CanDrop(PlayerMobile player)
         {
             EminosUndertakingQuest qs = player.Quest as EminosUndertakingQuest;

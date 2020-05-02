@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class ShameCrystal : Item
     {
-        public override int LabelNumber { get { return 1151624; } } // Crystal of Shame
+        public override int LabelNumber => 1151624;  // Crystal of Shame
 
         [Constructable]
         public ShameCrystal() : this(1)

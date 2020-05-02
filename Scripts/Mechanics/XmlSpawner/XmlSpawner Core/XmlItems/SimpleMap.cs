@@ -121,7 +121,7 @@ namespace Server.Items
             SetDisplay(0, 0, 5119, 4095, 400, 400);
         }
 
-        public override int LabelNumber { get { return 1025355; } } // map
+        public override int LabelNumber => 1025355;  // map
 
         public SimpleMap(Serial serial) : base(serial)
         {

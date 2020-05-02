@@ -49,34 +49,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BleedImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison HitPoison
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override double HitPoisonChance
-        {
-            get
-            {
-                return 0.6;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return Core.AOS ? 2 : 3;
-            }
-        }
+        public override bool BleedImmunity => true;
+        public override Poison HitPoison => Poison.Lethal;
+        public override double HitPoisonChance => 0.6;
+        public override int TreasureMapLevel => Core.AOS ? 2 : 3;
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.Rich);

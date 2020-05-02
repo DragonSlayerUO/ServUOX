@@ -53,7 +53,7 @@ namespace Server.Items
             WeakEntityCollection.Delete(EntityName);
         }
 
-        public override int LabelNumber { get { return 1154433; } } // Winch Assembly
+        public override int LabelNumber => 1154433;  // Winch Assembly
 
         private bool m_flywheel;
         private bool m_wirespool;
@@ -465,7 +465,7 @@ namespace Server.Items
     public class HatchTile : AddonComponent
     {
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Active { get { return (this.Z == 1); } }
+        public bool Active => (this.Z == 1);
 
         public HatchTile(Hatch hatch)
             : base(0x07CD)
@@ -478,7 +478,7 @@ namespace Server.Items
         {
         }
 
-        public override bool HandlesOnMovement { get { return true; } }
+        public override bool HandlesOnMovement => true;
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {

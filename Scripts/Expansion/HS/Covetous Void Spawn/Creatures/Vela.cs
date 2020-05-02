@@ -8,7 +8,7 @@ namespace Server.Engines.VoidPool
 {
     public class VelaTheSorceress : BaseCreature
     {
-        public override bool IsInvulnerable { get { return true; } }
+        public override bool IsInvulnerable => true;
 
         [Constructable]
         public VelaTheSorceress()

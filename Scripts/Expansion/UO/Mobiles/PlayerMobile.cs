@@ -390,7 +390,7 @@ namespace Server.Mobiles
         public DateTime LastOnline { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public long LastMoved { get { return LastMoveTime; } }
+        public long LastMoved => LastMoveTime;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public TimeSpan NpcGuildGameTime { get => m_NpcGuildGameTime; set => m_NpcGuildGameTime = value; }
@@ -602,7 +602,7 @@ namespace Server.Mobiles
         #endregion
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TimeSpan DisguiseTimeLeft { get { return DisguiseTimers.TimeRemaining(this); } }
+        public TimeSpan DisguiseTimeLeft => DisguiseTimers.TimeRemaining(this);
 
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime PeacedUntil { get; set; }
@@ -1059,7 +1059,7 @@ namespace Server.Mobiles
             UpdateResistances();
         }
 
-        public override int MaxWeight { get { return (((Core.ML && Race == Race.Human) ? 100 : 40) + (int)(3.5 * Str)); } }
+        public override int MaxWeight => (((Core.ML && Race == Race.Human) ? 100 : 40) + (int)(3.5 * Str));
 
         private int m_LastGlobalLight = -1, m_LastPersonalLight = -1;
 
@@ -2019,19 +2019,13 @@ namespace Server.Mobiles
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public override int StamMax { get { return base.StamMax + AosAttributes.GetValue(this, AosAttribute.BonusStam); } }
+        public override int StamMax => base.StamMax + AosAttributes.GetValue(this, AosAttribute.BonusStam);
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public override int ManaMax
-        {
-            get
-            {
-                return base.ManaMax + AosAttributes.GetValue(this, AosAttribute.BonusMana) +
+        public override int ManaMax => base.ManaMax + AosAttributes.GetValue(this, AosAttribute.BonusMana) +
                        ((Core.ML && Race == Race.Elf) ? 20 : 0) +
                        MasteryInfo.IntuitionBonus(this) +
                        UraliTranceTonic.GetManaBuff(this);
-            }
-        }
         #endregion
 
         #region Stat Getters/Setters
@@ -4367,7 +4361,7 @@ namespace Server.Mobiles
 
         public List<Mobile> PermaFlags { get; private set; }
 
-        public override int Luck { get { return AosAttributes.GetValue(this, AosAttribute.Luck) + TenthAnniversarySculpture.GetLuckBonus(this); } }
+        public override int Luck => AosAttributes.GetValue(this, AosAttribute.Luck) + TenthAnniversarySculpture.GetLuckBonus(this);
 
         public int RealLuck
         {
@@ -4461,13 +4455,7 @@ namespace Server.Mobiles
             SetHairMods(-1, -1);
         }
 
-        public BOBFilter BOBFilter
-        {
-            get
-            {
-                return BulkOrderSystem.GetBOBFilter(this);
-            }
-        }
+        public BOBFilter BOBFilter => BulkOrderSystem.GetBOBFilter(this);
 
         public override void Deserialize(GenericReader reader)
         {
@@ -5227,7 +5215,7 @@ namespace Server.Mobiles
             DisguiseTimers.RemoveTimer(this);
         }
 
-        public override bool NewGuildDisplay { get { return Guilds.Guild.NewGuildSystem; } }
+        public override bool NewGuildDisplay => Guilds.Guild.NewGuildSystem;
 
         public delegate void PlayerPropertiesEventHandler(PlayerPropertiesEventArgs e);
 
@@ -5502,21 +5490,9 @@ namespace Server.Mobiles
 
 		public List<BaseQuest> Quests { get { return m_Quests; } }
         public Dictionary<QuestChain, BaseChain> Chains { get { return m_Chains; } }*/
-        public List<BaseQuest> Quests
-        {
-            get
-            {
-                return MondainQuestData.GetQuests(this);
-            }
-        }
+        public List<BaseQuest> Quests => MondainQuestData.GetQuests(this);
 
-        public Dictionary<QuestChain, BaseChain> Chains
-        {
-            get
-            {
-                return MondainQuestData.GetChains(this);
-            }
-        }
+        public Dictionary<QuestChain, BaseChain> Chains => MondainQuestData.GetChains(this);
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Peaced
@@ -5894,7 +5870,7 @@ namespace Server.Mobiles
 
         public long NextMovementTime { get; private set; }
 
-        public virtual bool UsesFastwalkPrevention { get { return IsPlayer(); } }
+        public virtual bool UsesFastwalkPrevention => IsPlayer();
 
         public override int ComputeMovementSpeed(Direction dir, bool checkTurning)
         {
@@ -6821,7 +6797,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public ExploringTheDeepQuestChain ExploringTheDeepQuest { get; set; }
 
-        public static bool PetAutoStable { get { return Core.SE; } }
+        public static bool PetAutoStable => Core.SE;
 
         public void AutoStablePets()
         {

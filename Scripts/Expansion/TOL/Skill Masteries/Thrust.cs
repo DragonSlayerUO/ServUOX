@@ -18,13 +18,13 @@ namespace Server.Spells.SkillMasteries
                 9002
             );
 
-        public override int RequiredMana { get { return 30; } }
-        public override SkillName CastSkill { get { return SkillName.Fencing; } }
-        public override SkillName DamageSkill { get { return SkillName.Tactics; } }
+        public override int RequiredMana => 30;
+        public override SkillName CastSkill => SkillName.Fencing;
+        public override SkillName DamageSkill => SkillName.Tactics;
 
         private int _DefenseMod;
 
-        public int AttackModifier { get { return (GetMasteryLevel() * 6) * Phase; } }
+        public int AttackModifier => (GetMasteryLevel() * 6) * Phase;
         public int DefenseModifier
         {
             get
@@ -37,7 +37,7 @@ namespace Server.Spells.SkillMasteries
             }
         }
 
-        public int DefenseModDisplayed { get { return Math.Min(18, DefenseModifier); } }
+        public int DefenseModDisplayed => Math.Min(18, DefenseModifier);
 
         public int _Phase;
         public int Phase

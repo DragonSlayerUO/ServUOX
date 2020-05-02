@@ -25,34 +25,10 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override bool IsActiveVendor
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool DisallowAllMoves
-        {
-            get
-            {
-                return false;
-            }
-        }
-        public override bool ClickTitle
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool CanTeach
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool IsActiveVendor => true;
+        public override bool DisallowAllMoves => false;
+        public override bool ClickTitle => true;
+        public override bool CanTeach => true;
         public override void InitBody()
         {
             this.InitStats(100, 100, 25);
@@ -189,20 +165,8 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override IShopSellInfo SellInfo
-        {
-            get
-            {
-                return this.m_SellInfo;
-            }
-        }
-        public override List<GenericBuyInfo> BuyInfo
-        {
-            get
-            {
-                return this.m_BuyInfo;
-            }
-        }
+        public override IShopSellInfo SellInfo => this.m_SellInfo;
+        public override List<GenericBuyInfo> BuyInfo => this.m_BuyInfo;
 
         public class InternalBuyInfo : List<GenericBuyInfo>
         {

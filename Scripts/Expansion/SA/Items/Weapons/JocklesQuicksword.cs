@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class JocklesQuicksword : Longsword
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public JocklesQuicksword()
         {
@@ -19,13 +19,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1077666;
-            }
-        }// Jockles' Quicksword
+        public override int LabelNumber => 1077666;// Jockles' Quicksword
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

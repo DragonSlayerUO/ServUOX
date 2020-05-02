@@ -94,13 +94,7 @@ namespace Server.Items
                     sourceAddon.ChangeDest(value);
             }
         }
-        public override string DefaultName
-        {
-            get
-            {
-                return "a hole";
-            }
-        }
+        public override string DefaultName => "a hole";
         public override void OnDoubleClick(Mobile m)
         {
             if (!m_Active || m_TeleDest == null || m_TeleDest.Deleted || m_TeleDest.Map == Map.Internal)

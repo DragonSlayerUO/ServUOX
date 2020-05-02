@@ -53,7 +53,7 @@ namespace Server.Engines.Auction
             }
         }
 
-        public override BaseAddonDeed Deed { get { return new AuctionSafeDeed(); } }
+        public override BaseAddonDeed Deed => new AuctionSafeDeed();
 
         public AuctionSafe(Mobile from, bool south)
         {
@@ -180,7 +180,7 @@ namespace Server.Engines.Auction
         public class InternalComponent : AddonComponent
         {
             public override bool ForceShowProperties => true;
-            public override int LabelNumber { get { return 1156371; } } // Auction Safe
+            public override int LabelNumber => 1156371;  // Auction Safe
 
             public InternalComponent()
                 : base(0x9C18)
@@ -218,8 +218,8 @@ namespace Server.Engines.Auction
         public bool SouthFacing { get; set; }
         public Mobile From { get; set; }
 
-        public override BaseAddon Addon { get { return new AuctionSafe(From, SouthFacing); } }
-        public override int LabelNumber { get { return 1156371; } } // Auction Safe
+        public override BaseAddon Addon => new AuctionSafe(From, SouthFacing);
+        public override int LabelNumber => 1156371;  // Auction Safe
 
         public bool IsRewardItem { get; set; }
 

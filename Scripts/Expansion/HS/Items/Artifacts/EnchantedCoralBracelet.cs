@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class EnchantedCoralBracelet : SilverBracelet
     {
-        public override int LabelNumber { get { return 1116624; } }
+        public override int LabelNumber => 1116624;
 
         [Constructable]
         public EnchantedCoralBracelet()

@@ -51,13 +51,7 @@ namespace Server.Factions
         {
         }
 
-        public override GuardAI GuardAI
-        {
-            get
-            {
-                return GuardAI.Magic | GuardAI.Smart | GuardAI.Bless | GuardAI.Curse;
-            }
-        }
+        public override GuardAI GuardAI => GuardAI.Magic | GuardAI.Smart | GuardAI.Bless | GuardAI.Curse;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

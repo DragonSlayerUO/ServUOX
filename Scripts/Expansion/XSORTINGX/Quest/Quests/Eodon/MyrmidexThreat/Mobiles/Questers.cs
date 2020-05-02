@@ -8,7 +8,7 @@ namespace Server.Mobiles
 {
     public class Yar : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(TheZealotryOfZipactriotlQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(TheZealotryOfZipactriotlQuest) };
 
         public override bool ChangeRace => false;
 
@@ -60,7 +60,7 @@ namespace Server.Mobiles
 
     public class Carroll : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(HiddenTreasuresQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(HiddenTreasuresQuest) };
 
         public override bool ChangeRace => false;
 
@@ -109,7 +109,7 @@ namespace Server.Mobiles
 
     public class Bront : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(TheSaltySeaQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(TheSaltySeaQuest) };
 
         public override bool ChangeRace => false;
 
@@ -158,7 +158,7 @@ namespace Server.Mobiles
 
     public class Eriathwen : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(ATinkersTaskQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(ATinkersTaskQuest) };
 
         public override bool ChangeRace => false;
 
@@ -205,7 +205,7 @@ namespace Server.Mobiles
     public class CollectorOfOddities : BaseVendor
     {
         private List<SBInfo> m_SBInfos = new List<SBInfo>();
-        protected override List<SBInfo> SBInfos { get { return m_SBInfos; } }
+        protected override List<SBInfo> SBInfos => m_SBInfos;
 
         public override void InitSBInfo()
         {
@@ -240,8 +240,8 @@ namespace Server.Mobiles
                 m_BuyInfo = new InternalBuyInfo(owner);
             }
 
-            public override IShopSellInfo SellInfo { get { return m_SellInfo; } }
-            public override List<GenericBuyInfo> BuyInfo { get { return m_BuyInfo; } }
+            public override IShopSellInfo SellInfo => m_SellInfo;
+            public override List<GenericBuyInfo> BuyInfo => m_BuyInfo;
 
             public class InternalBuyInfo : List<GenericBuyInfo>
             {
@@ -282,13 +282,13 @@ namespace Server.Mobiles
 
     public class EllieRafkin : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(ExterminatingTheInfestationQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(ExterminatingTheInfestationQuest) };
 
         public override bool ChangeRace => false;
-        public override bool IsActiveVendor { get { return true; } }
+        public override bool IsActiveVendor => true;
 
         private List<SBInfo> _SBInfos = new List<SBInfo>();
-        protected override List<SBInfo> SBInfos { get { return _SBInfos; } }
+        protected override List<SBInfo> SBInfos => _SBInfos;
 
         public override void InitSBInfo()
         {
@@ -337,8 +337,8 @@ namespace Server.Mobiles
                 m_BuyInfo = new InternalBuyInfo(owner);
             }
 
-            public override IShopSellInfo SellInfo { get { return m_SellInfo; } }
-            public override List<GenericBuyInfo> BuyInfo { get { return m_BuyInfo; } }
+            public override IShopSellInfo SellInfo => m_SellInfo;
+            public override List<GenericBuyInfo> BuyInfo => m_BuyInfo;
 
             public class InternalBuyInfo : List<GenericBuyInfo>
             {
@@ -375,7 +375,7 @@ namespace Server.Mobiles
 
     public class Foxx : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(PestControlQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(PestControlQuest) };
 
         public override bool ChangeRace => false;
 
@@ -427,7 +427,7 @@ namespace Server.Mobiles
 
     public class Yero : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(GettingEvenQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(GettingEvenQuest) };
 
         public override bool ChangeRace => false;
 
@@ -471,7 +471,7 @@ namespace Server.Mobiles
 
     public class Alida : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(OfVorpalsAndLettacesTheGardnerQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(OfVorpalsAndLettacesTheGardnerQuest) };
 
         public override bool ChangeRace => false;
 

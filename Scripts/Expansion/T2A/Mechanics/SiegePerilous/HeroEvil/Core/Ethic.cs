@@ -20,20 +20,8 @@ namespace Server.Ethics
             this.m_Players = new PlayerCollection();
         }
 
-        public EthicDefinition Definition
-        {
-            get
-            {
-                return this.m_Definition;
-            }
-        }
-        public PlayerCollection Players
-        {
-            get
-            {
-                return this.m_Players;
-            }
-        }
+        public EthicDefinition Definition => this.m_Definition;
+        public PlayerCollection Players => this.m_Players;
         public static Ethic Find(Item item)
         {
             if ((item.SavedFlags & 0x100) != 0)

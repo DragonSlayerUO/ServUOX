@@ -80,7 +80,7 @@ namespace Server.Engines.XmlSpawner2
             }
         }
 
-        public override bool HandlesOnMovement { get { return true; } }
+        public override bool HandlesOnMovement => true;
 
         public override void OnMovement(MovementEventArgs e)
         {

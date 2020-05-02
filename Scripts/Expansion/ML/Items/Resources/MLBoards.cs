@@ -19,10 +19,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get => 1075062; // Heartwood
-        }
+        public override int LabelNumber => 1075062; // Heartwood
 
         public override void Serialize(GenericWriter writer)
         {
@@ -56,10 +53,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get => 1075055; // Bloodwood
-        }
+        public override int LabelNumber => 1075055; // Bloodwood
 
         public override void Serialize(GenericWriter writer)
         {
@@ -93,10 +87,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get => 1075056; // Frostwood
-        }
+        public override int LabelNumber => 1075056; // Frostwood
 
         public override void Serialize(GenericWriter writer)
         {
@@ -130,10 +121,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get => 1075052; // Oak
-        }
+        public override int LabelNumber => 1075052; // Oak
 
         public override void Serialize(GenericWriter writer)
         {
@@ -167,10 +155,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get => 1075053; // Ash
-        }
+        public override int LabelNumber => 1075053; // Ash
 
         public override void Serialize(GenericWriter writer)
         {
@@ -204,10 +189,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get => 1075054; // Yew
-        }
+        public override int LabelNumber => 1075054; // Yew
 
         public override void Serialize(GenericWriter writer)
         {

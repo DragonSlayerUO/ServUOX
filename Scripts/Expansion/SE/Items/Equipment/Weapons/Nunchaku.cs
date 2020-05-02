@@ -17,111 +17,21 @@ namespace Server.Items
         {
         }
 
-        public override WeaponAbility PrimaryAbility
-        {
-            get
-            {
-                return WeaponAbility.Block;
-            }
-        }
-        public override WeaponAbility SecondaryAbility
-        {
-            get
-            {
-                return WeaponAbility.DoubleStrike;
-            }
-        }
-        public override int AosStrengthReq
-        {
-            get
-            {
-                return 15;
-            }
-        }
-        public override int AosMinDamage
-        {
-            get
-            {
-                return 12;
-            }
-        }
-        public override int AosMaxDamage
-        {
-            get
-            {
-                return 15;
-            }
-        }
-        public override int AosSpeed
-        {
-            get
-            {
-                return 47;
-            }
-        }
-        public override float MlSpeed
-        {
-            get
-            {
-                return 2.50f;
-            }
-        }
-        public override int OldStrengthReq
-        {
-            get
-            {
-                return 15;
-            }
-        }
-        public override int OldMinDamage
-        {
-            get
-            {
-                return 11;
-            }
-        }
-        public override int OldMaxDamage
-        {
-            get
-            {
-                return 13;
-            }
-        }
-        public override int OldSpeed
-        {
-            get
-            {
-                return 47;
-            }
-        }
-        public override int DefHitSound
-        {
-            get
-            {
-                return 0x535;
-            }
-        }
-        public override int DefMissSound
-        {
-            get
-            {
-                return 0x239;
-            }
-        }
-        public override int InitMinHits
-        {
-            get
-            {
-                return 40;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 55;
-            }
-        }
+        public override WeaponAbility PrimaryAbility => WeaponAbility.Block;
+        public override WeaponAbility SecondaryAbility => WeaponAbility.DoubleStrike;
+        public override int AosStrengthReq => 15;
+        public override int AosMinDamage => 12;
+        public override int AosMaxDamage => 15;
+        public override int AosSpeed => 47;
+        public override float MlSpeed => 2.50f;
+        public override int OldStrengthReq => 15;
+        public override int OldMinDamage => 11;
+        public override int OldMaxDamage => 13;
+        public override int OldSpeed => 47;
+        public override int DefHitSound => 0x535;
+        public override int DefMissSound => 0x239;
+        public override int InitMinHits => 40;
+        public override int InitMaxHits => 55;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

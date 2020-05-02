@@ -21,40 +21,10 @@ namespace Server.Ethics
             this.m_Powers = powers;
         }
 
-        public int PrimaryHue
-        {
-            get
-            {
-                return this.m_PrimaryHue;
-            }
-        }
-        public TextDefinition Title
-        {
-            get
-            {
-                return this.m_Title;
-            }
-        }
-        public TextDefinition Adjunct
-        {
-            get
-            {
-                return this.m_Adjunct;
-            }
-        }
-        public TextDefinition JoinPhrase
-        {
-            get
-            {
-                return this.m_JoinPhrase;
-            }
-        }
-        public Power[] Powers
-        {
-            get
-            {
-                return this.m_Powers;
-            }
-        }
+        public int PrimaryHue => this.m_PrimaryHue;
+        public TextDefinition Title => this.m_Title;
+        public TextDefinition Adjunct => this.m_Adjunct;
+        public TextDefinition JoinPhrase => this.m_JoinPhrase;
+        public Power[] Powers => this.m_Powers;
     }
 }

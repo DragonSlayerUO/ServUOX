@@ -40,13 +40,7 @@ namespace Server.Items
                 InvalidateProperties();
             }
         }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1041490 + (int)m_Type;
-            }
-        }
+        public override int LabelNumber => 1041490 + (int)m_Type;
         public override void OnSingleClick(Mobile from)
         {
             if (IsChildOf(from.Backpack))

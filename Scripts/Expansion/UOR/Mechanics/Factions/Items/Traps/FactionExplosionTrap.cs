@@ -25,48 +25,12 @@ namespace Server.Factions
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1044599;
-            }
-        }// faction explosion trap
-        public override int AttackMessage
-        {
-            get
-            {
-                return 1010543;
-            }
-        }// You are enveloped in an explosion of fire!
-        public override int DisarmMessage
-        {
-            get
-            {
-                return 1010539;
-            }
-        }// You carefully remove the pressure trigger and disable the trap.
-        public override int EffectSound
-        {
-            get
-            {
-                return 0x307;
-            }
-        }
-        public override int MessageHue
-        {
-            get
-            {
-                return 0x78;
-            }
-        }
-        public override AllowedPlacing AllowedPlacing
-        {
-            get
-            {
-                return AllowedPlacing.AnyFactionTown;
-            }
-        }
+        public override int LabelNumber => 1044599;// faction explosion trap
+        public override int AttackMessage => 1010543;// You are enveloped in an explosion of fire!
+        public override int DisarmMessage => 1010539;// You carefully remove the pressure trigger and disable the trap.
+        public override int EffectSound => 0x307;
+        public override int MessageHue => 0x78;
+        public override AllowedPlacing AllowedPlacing => AllowedPlacing.AnyFactionTown;
         public override void DoVisibleEffect()
         {
             Effects.SendLocationEffect(this.GetWorldLocation(), this.Map, 0x36BD, 15, 10);
@@ -104,20 +68,8 @@ namespace Server.Factions
         {
         }
 
-        public override Type TrapType
-        {
-            get
-            {
-                return typeof(FactionExplosionTrap);
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1044603;
-            }
-        }// faction explosion trap deed
+        public override Type TrapType => typeof(FactionExplosionTrap);
+        public override int LabelNumber => 1044603;// faction explosion trap deed
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

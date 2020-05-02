@@ -24,20 +24,8 @@ namespace Server.Ethics
             m_Instance = this;
         }
 
-        public static EthicsPersistence Instance
-        {
-            get
-            {
-                return m_Instance;
-            }
-        }
-        public override string DefaultName
-        {
-            get
-            {
-                return "Ethics Persistence - Internal";
-            }
-        }
+        public static EthicsPersistence Instance => m_Instance;
+        public override string DefaultName => "Ethics Persistence - Internal";
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

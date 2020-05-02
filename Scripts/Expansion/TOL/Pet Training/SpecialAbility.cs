@@ -9,21 +9,21 @@ namespace Server.Mobiles
 {
     public abstract class SpecialAbility
     {
-        public virtual int ManaCost { get { return 10; } }
-        public virtual int MaxRange { get { return 1; } }
-        public virtual double TriggerChance { get { return 0.1; } }
-        public virtual bool RequiresCombatant { get { return true; } }
-        public virtual TimeSpan CooldownDuration { get { return TimeSpan.FromSeconds(30); } }
+        public virtual int ManaCost => 10;
+        public virtual int MaxRange => 1;
+        public virtual double TriggerChance => 0.1;
+        public virtual bool RequiresCombatant => true;
+        public virtual TimeSpan CooldownDuration => TimeSpan.FromSeconds(30);
 
-        public virtual MagicalAbility RequiredSchool { get { return MagicalAbility.None; } }
-        public virtual bool NaturalAbility { get { return false; } }
+        public virtual MagicalAbility RequiredSchool => MagicalAbility.None;
+        public virtual bool NaturalAbility => false;
 
-        public virtual bool TriggerOnGotMeleeDamage { get { return false; } }
-        public virtual bool TriggerOnDoMeleeDamage { get { return false; } }
-        public virtual bool TriggerOnGotSpellDamage { get { return false; } }
-        public virtual bool TriggerOnDoSpellDamage { get { return false; } }
-        public virtual bool TriggerOnThink { get { return false; } }
-        public virtual bool TriggerOnApproach { get { return false; } }
+        public virtual bool TriggerOnGotMeleeDamage => false;
+        public virtual bool TriggerOnDoMeleeDamage => false;
+        public virtual bool TriggerOnGotSpellDamage => false;
+        public virtual bool TriggerOnDoSpellDamage => false;
+        public virtual bool TriggerOnThink => false;
+        public virtual bool TriggerOnApproach => false;
 
         public abstract void DoEffects(BaseCreature creature, Mobile defender, ref int damage);
 
@@ -228,7 +228,7 @@ namespace Server.Mobiles
             _Cooldown.Remove(m);
         }
 
-        public static SpecialAbility[] Abilities { get { return _Abilities; } }
+        public static SpecialAbility[] Abilities => _Abilities;
         private static SpecialAbility[] _Abilities;
 
         static SpecialAbility()
@@ -268,243 +268,69 @@ namespace Server.Mobiles
             _Abilities[28] = new ColossalRage();
         }
 
-        public static SpecialAbility AngryFire
-        {
-            get
-            {
-                return _Abilities[0];
-            }
-        }
+        public static SpecialAbility AngryFire => _Abilities[0];
 
-        public static SpecialAbility ConductiveBlast
-        {
-            get
-            {
-                return _Abilities[1];
-            }
-        }
+        public static SpecialAbility ConductiveBlast => _Abilities[1];
 
-        public static SpecialAbility DragonBreath
-        {
-            get
-            {
-                return _Abilities[2];
-            }
-        }
+        public static SpecialAbility DragonBreath => _Abilities[2];
 
-        public static SpecialAbility GraspingClaw
-        {
-            get
-            {
-                return _Abilities[3];
-            }
-        }
+        public static SpecialAbility GraspingClaw => _Abilities[3];
 
-        public static SpecialAbility Inferno
-        {
-            get
-            {
-                return _Abilities[4];
-            }
-        }
+        public static SpecialAbility Inferno => _Abilities[4];
 
-        public static SpecialAbility LightningForce
-        {
-            get
-            {
-                return _Abilities[5];
-            }
-        }
+        public static SpecialAbility LightningForce => _Abilities[5];
 
-        public static SpecialAbility ManaDrain
-        {
-            get
-            {
-                return _Abilities[6];
-            }
-        }
+        public static SpecialAbility ManaDrain => _Abilities[6];
 
-        public static SpecialAbility RagingBreath
-        {
-            get
-            {
-                return _Abilities[7];
-            }
-        }
+        public static SpecialAbility RagingBreath => _Abilities[7];
 
-        public static SpecialAbility Repel
-        {
-            get
-            {
-                return _Abilities[8];
-            }
-        }
+        public static SpecialAbility Repel => _Abilities[8];
 
-        public static SpecialAbility SearingWounds
-        {
-            get
-            {
-                return _Abilities[9];
-            }
-        }
+        public static SpecialAbility SearingWounds => _Abilities[9];
 
-        public static SpecialAbility StealLife
-        {
-            get
-            {
-                return _Abilities[10];
-            }
-        }
+        public static SpecialAbility StealLife => _Abilities[10];
 
-        public static SpecialAbility RuneCorruption
-        {
-            get
-            {
-                return _Abilities[13];
-            }
-        }
+        public static SpecialAbility RuneCorruption => _Abilities[13];
 
-        public static SpecialAbility LifeLeech
-        {
-            get
-            {
-                return _Abilities[14];
-            }
-        }
+        public static SpecialAbility LifeLeech => _Abilities[14];
 
-        public static SpecialAbility StickySkin
-        {
-            get
-            {
-                return _Abilities[15];
-            }
-        }
+        public static SpecialAbility StickySkin => _Abilities[15];
 
-        public static SpecialAbility TailSwipe
-        {
-            get
-            {
-                return _Abilities[16];
-            }
-        }
+        public static SpecialAbility TailSwipe => _Abilities[16];
 
-        public static SpecialAbility VenomousBite
-        {
-            get
-            {
-                return _Abilities[11];
-            }
-        }
+        public static SpecialAbility VenomousBite => _Abilities[11];
 
-        public static SpecialAbility ViciousBite
-        {
-            get
-            {
-                return _Abilities[12];
-            }
-        }
+        public static SpecialAbility ViciousBite => _Abilities[12];
 
-        public static SpecialAbility FlurryForce
-        {
-            get
-            {
-                return _Abilities[17];
-            }
-        }
+        public static SpecialAbility FlurryForce => _Abilities[17];
 
-        public static SpecialAbility Rage
-        {
-            get
-            {
-                return _Abilities[18];
-            }
-        }
+        public static SpecialAbility Rage => _Abilities[18];
 
-        public static SpecialAbility Heal
-        {
-            get
-            {
-                return _Abilities[19];
-            }
-        }
+        public static SpecialAbility Heal => _Abilities[19];
 
-        public static SpecialAbility HowlOfCacophony
-        {
-            get
-            {
-                return _Abilities[20];
-            }
-        }
+        public static SpecialAbility HowlOfCacophony => _Abilities[20];
 
-        public static SpecialAbility Webbing
-        {
-            get
-            {
-                return _Abilities[21];
-            }
-        }
+        public static SpecialAbility Webbing => _Abilities[21];
 
-        public static SpecialAbility Anemia
-        {
-            get
-            {
-                return _Abilities[22];
-            }
-        }
+        public static SpecialAbility Anemia => _Abilities[22];
 
-        public static SpecialAbility BloodDisease
-        {
-            get
-            {
-                return _Abilities[23];
-            }
-        }
+        public static SpecialAbility BloodDisease => _Abilities[23];
 
-        public static SpecialAbility PoisonSpit
-        {
-            get
-            {
-                return _Abilities[24];
-            }
-        }
+        public static SpecialAbility PoisonSpit => _Abilities[24];
 
-        public static SpecialAbility TrueFear
-        {
-            get
-            {
-                return _Abilities[25];
-            }
-        }
+        public static SpecialAbility TrueFear => _Abilities[25];
 
-        public static SpecialAbility ColossalBlow
-        {
-            get
-            {
-                return _Abilities[26];
-            }
-        }
+        public static SpecialAbility ColossalBlow => _Abilities[26];
 
-        public static SpecialAbility LifeDrain
-        {
-            get
-            {
-                return _Abilities[27];
-            }
-        }
+        public static SpecialAbility LifeDrain => _Abilities[27];
 
-        public static SpecialAbility ColossalRage
-        {
-            get
-            {
-                return _Abilities[28];
-            }
-        }
+        public static SpecialAbility ColossalRage => _Abilities[28];
     }
 
     public class AngryFire : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         public AngryFire()
         {
@@ -525,8 +351,8 @@ namespace Server.Mobiles
 
     public class ConductiveBlast : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         private static Dictionary<Mobile, ExpireTimer> _Table;
 
@@ -606,9 +432,9 @@ namespace Server.Mobiles
 
     public class FlurryForce : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
 
         private static Dictionary<Mobile, ExpireTimer> _Table;
 
@@ -688,9 +514,9 @@ namespace Server.Mobiles
 
     public class DragonBreath : SpecialAbility
     {
-        public override int MaxRange { get { return 12; } }
-        public override bool TriggerOnThink { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override int MaxRange => 12;
+        public override bool TriggerOnThink => true;
+        public override int ManaCost => 30;
 
         public DragonBreath()
         {
@@ -1198,8 +1024,8 @@ namespace Server.Mobiles
     public class HowlOfCacophony : SpecialAbility
     {
         private static Dictionary<Mobile, InternalTimer> _Table;
-        public override int ManaCost { get { return 25; } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
+        public override int ManaCost => 25;
+        public override bool TriggerOnDoMeleeDamage => true;
 
         public HowlOfCacophony()
         {
@@ -1257,8 +1083,8 @@ namespace Server.Mobiles
 
     public class GraspingClaw : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         public static Dictionary<Mobile, ExpireTimer> _Table;
 
@@ -1336,8 +1162,8 @@ namespace Server.Mobiles
 
     public class Inferno : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         public static Dictionary<Mobile, ExpireTimer> _Table;
 
@@ -1416,8 +1242,8 @@ namespace Server.Mobiles
 
     public class LightningForce : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         public LightningForce()
         {
@@ -1432,8 +1258,8 @@ namespace Server.Mobiles
 
     public class ManaDrain : SpecialAbility
     {
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
+        public override bool TriggerOnGotMeleeDamage => true;
+        public override bool TriggerOnDoMeleeDamage => true;
 
         public ManaDrain()
         {
@@ -1475,8 +1301,8 @@ namespace Server.Mobiles
     public class RagingBreath : SpecialAbility
     {
         public static Dictionary<Mobile, InternalTimer> _Table;
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         public RagingBreath()
         {
@@ -1579,9 +1405,9 @@ namespace Server.Mobiles
 
     public class Repel : SpecialAbility
     {
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
-        public override bool TriggerOnGotSpellDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnGotMeleeDamage => true;
+        public override bool TriggerOnGotSpellDamage => true;
+        public override int ManaCost => 30;
 
         public Repel()
         {
@@ -1600,8 +1426,8 @@ namespace Server.Mobiles
     public class SearingWounds : SpecialAbility
     {
         private static Dictionary<Mobile, InternalTimer> _Table;
-        public override int ManaCost { get { return 25; } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
+        public override int ManaCost => 25;
+        public override bool TriggerOnDoMeleeDamage => true;
 
         public SearingWounds()
         {
@@ -1653,8 +1479,8 @@ namespace Server.Mobiles
 
     public class StealLife : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         public StealLife()
         {
@@ -1699,9 +1525,9 @@ namespace Server.Mobiles
 
     public class VenomousBite : SpecialAbility
     {
-        public override int ManaCost { get { return 30; } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override MagicalAbility RequiredSchool { get { return MagicalAbility.Poisoning; } }
+        public override int ManaCost => 30;
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override MagicalAbility RequiredSchool => MagicalAbility.Poisoning;
 
         public VenomousBite()
         {
@@ -1750,8 +1576,8 @@ namespace Server.Mobiles
 
     public class ViciousBite : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 20; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 20;
 
         private static Dictionary<Mobile, InternalTimer> _Table;
 
@@ -1811,8 +1637,8 @@ namespace Server.Mobiles
     {
         public static Dictionary<Mobile, ExpireTimer> _Table;
 
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override int ManaCost { get { return 30; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override int ManaCost => 30;
 
         public RuneCorruption()
         {
@@ -1962,9 +1788,9 @@ namespace Server.Mobiles
 
     public class LifeLeech : SpecialAbility
     {
-        public override int ManaCost { get { return 5; } }
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromSeconds(Utility.Random(10, 20)); } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
+        public override int ManaCost => 5;
+        public override TimeSpan CooldownDuration => TimeSpan.FromSeconds(Utility.Random(10, 20));
+        public override bool TriggerOnDoMeleeDamage => true;
 
         public static Dictionary<Mobile, InternalTimer> _Table;
 
@@ -2044,10 +1870,10 @@ namespace Server.Mobiles
 
     public class Webbing : SpecialAbility
     {
-        public override int ManaCost { get { return 0; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
+        public override int ManaCost => 0;
+        public override bool NaturalAbility => true;
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool TriggerOnGotMeleeDamage => true;
 
         public Webbing()
         {
@@ -2085,10 +1911,10 @@ namespace Server.Mobiles
 
     public class Anemia : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool TriggerOnGotMeleeDamage => true;
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
 
         private static Dictionary<Mobile, ExpireTimer> _Table;
 
@@ -2179,10 +2005,10 @@ namespace Server.Mobiles
 
     public class BloodDisease : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool TriggerOnGotMeleeDamage => true;
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
 
         private static Dictionary<Mobile, ExpireTimer> _Table;
 
@@ -2254,9 +2080,9 @@ namespace Server.Mobiles
 
     public class StickySkin : SpecialAbility
     {
-        public override int ManaCost { get { return 5; } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
+        public override int ManaCost => 5;
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool TriggerOnGotMeleeDamage => true;
 
         public static List<Mobile> _Table;
 
@@ -2295,8 +2121,8 @@ namespace Server.Mobiles
 
     public class TailSwipe : SpecialAbility
     {
-        public override int ManaCost { get { return 30; } }
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
+        public override int ManaCost => 30;
+        public override bool TriggerOnDoMeleeDamage => true;
 
         public TailSwipe()
         {
@@ -2328,9 +2154,9 @@ namespace Server.Mobiles
 
     public class Rage : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
 
         private static Dictionary<Mobile, ExpireTimer> _Table;
 
@@ -2404,12 +2230,12 @@ namespace Server.Mobiles
 
     public class Heal : SpecialAbility
     {
-        public override bool TriggerOnThink { get { return true; } }
-        public override double TriggerChance { get { return 1.0; } }
-        public override bool RequiresCombatant { get { return false; } }
-        public override int ManaCost { get { return 15; } }
-        public override TimeSpan CooldownDuration { get { return TimeSpan.MinValue; } }
-        public override bool NaturalAbility { get { return true; } }
+        public override bool TriggerOnThink => true;
+        public override double TriggerChance => 1.0;
+        public override bool RequiresCombatant => false;
+        public override int ManaCost => 15;
+        public override TimeSpan CooldownDuration => TimeSpan.MinValue;
+        public override bool NaturalAbility => true;
 
         public Heal()
         {
@@ -2438,12 +2264,12 @@ namespace Server.Mobiles
 
     public class PoisonSpit : SpecialAbility
     {
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
-        public override bool TriggerOnGotSpellDamage { get { return true; } }
-        public override int MaxRange { get { return 10; } }
+        public override bool TriggerOnGotMeleeDamage => true;
+        public override bool TriggerOnGotSpellDamage => true;
+        public override int MaxRange => 10;
 
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
 
         public PoisonSpit()
         {
@@ -2464,12 +2290,12 @@ namespace Server.Mobiles
 
     public class TrueFear : SpecialAbility
     {
-        public override bool TriggerOnApproach { get { return true; } }
-        public override int MaxRange { get { return 8; } }
+        public override bool TriggerOnApproach => true;
+        public override int MaxRange => 8;
 
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromMinutes(Utility.RandomMinMax(1, 3)); } }
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
+        public override TimeSpan CooldownDuration => TimeSpan.FromMinutes(Utility.RandomMinMax(1, 3));
 
         public TrueFear()
         {
@@ -2507,11 +2333,11 @@ namespace Server.Mobiles
 
     public class ColossalBlow : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
-        public override double TriggerChance { get { return 0.3; } }
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromSeconds(10); } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
+        public override double TriggerChance => 0.3;
+        public override TimeSpan CooldownDuration => TimeSpan.FromSeconds(10);
 
         public ColossalBlow()
         {
@@ -2553,10 +2379,10 @@ namespace Server.Mobiles
 
     public class LifeDrain : SpecialAbility
     {
-        public override bool TriggerOnDoMeleeDamage { get { return true; } }
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromSeconds(1); } }
+        public override bool TriggerOnDoMeleeDamage => true;
+        public override bool TriggerOnGotMeleeDamage => true;
+        public override bool NaturalAbility => true;
+        public override TimeSpan CooldownDuration => TimeSpan.FromSeconds(1);
 
         public LifeDrain()
         {
@@ -2617,11 +2443,11 @@ namespace Server.Mobiles
 
     public class ColossalRage : SpecialAbility
     {
-        public override bool TriggerOnGotMeleeDamage { get { return true; } }
-        public override bool NaturalAbility { get { return true; } }
-        public override int ManaCost { get { return 0; } }
-        public override double TriggerChance { get { return .5; } }
-        public override TimeSpan CooldownDuration { get { return TimeSpan.FromSeconds(15); } }
+        public override bool TriggerOnGotMeleeDamage => true;
+        public override bool NaturalAbility => true;
+        public override int ManaCost => 0;
+        public override double TriggerChance => .5;
+        public override TimeSpan CooldownDuration => TimeSpan.FromSeconds(15);
 
         public ColossalRage()
         {

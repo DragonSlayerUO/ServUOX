@@ -57,9 +57,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override Poison PoisonImmunity { get { return Poison.Lesser; } }
-        public override bool DisallowAllMoves { get { return true; } }
-        public override OppositionGroup OppositionGroup { get { return OppositionGroup.FeyAndUndead; } }
+        public override Poison PoisonImmunity => Poison.Lesser;
+        public override bool DisallowAllMoves => true;
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
 
         private static List<Mobile> m_TangleCooldown = new List<Mobile>();
         private Dictionary<Mobile, Timer> m_DamageTable = new Dictionary<Mobile, Timer>();

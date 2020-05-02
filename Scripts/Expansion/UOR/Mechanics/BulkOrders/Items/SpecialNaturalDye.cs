@@ -94,21 +94,9 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1112136;
-            }
-        }
+        public override int LabelNumber => 1112136;
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
         public override void GetProperties(ObjectPropertyList list)
         {

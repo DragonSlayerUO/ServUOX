@@ -42,8 +42,8 @@ namespace Server.Items
 
         public List<Item> Rubble { get; set; }
 
-        public override bool DeleteOnDestroy { get { return false; } }
-        public override double IDChange { get { return 0.50; } }
+        public override bool DeleteOnDestroy => false;
+        public override double IDChange => 0.50;
 
         public Beacon()
             : base(18212, 39299, 1)

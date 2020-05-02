@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x1515, 0x1530)]
     public class ObiDiEnse : Obi
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public ObiDiEnse()
             : base(0x27A0)
@@ -21,35 +21,11 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1112406;
-            }
-        }// Obi Di Ense [Replica]
+        public override int LabelNumber => 1112406;// Obi Di Ense [Replica]
 
-        public override int InitMinHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
-        public override bool CanFortify
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override int InitMinHits => 150;
+        public override int InitMaxHits => 150;
+        public override bool CanFortify => false;
 
         public override void Serialize(GenericWriter writer)
         {

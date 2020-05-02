@@ -10,13 +10,13 @@ namespace Server.Engines.InstancedPeerless
 {
     public class PeerlessKeyBrazier : AddonComponent
     {
-        public override int LabelNumber { get { return 1024622; } } // altar
+        public override int LabelNumber => 1024622;  // altar
 
         private PeerlessPlatform m_Platform;
         private Item m_Key;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public PeerlessPlatform Platform { get { return m_Platform; } }
+        public PeerlessPlatform Platform => m_Platform;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Item Key { get { return m_Key; } set { m_Key = value; } }

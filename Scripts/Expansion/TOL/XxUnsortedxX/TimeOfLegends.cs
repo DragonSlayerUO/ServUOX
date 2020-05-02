@@ -134,14 +134,14 @@ namespace Server
             }
         }
 
-        public static Type[] ArmorDropTypes { get { return _ArmorDropTypes; } }
+        public static Type[] ArmorDropTypes => _ArmorDropTypes;
         private static Type[] _ArmorDropTypes =
         {
             typeof(AloronsBustier), typeof(AloronsGorget), typeof(AloronsHelm), typeof(AloronsLegs), typeof(AloronsLongSkirt), typeof(AloronsSkirt), typeof(AloronsTunic),
             typeof(DardensBustier), typeof(DardensHelm), typeof(DardensLegs), typeof(DardensSleeves), typeof(DardensTunic)
         };
 
-        public static int[] RecipeTypes { get { return _RecipeTypes; } }
+        public static int[] RecipeTypes => _RecipeTypes;
         private static int[] _RecipeTypes =
         {
             560, 561, 562, 563, 564, 565, 566,

@@ -6,7 +6,7 @@ namespace Server.Items
     public class EnchantedVortexAddon : BaseAddon
     {
 
-        public override BaseAddonDeed Deed { get { return new EnchantedVortexDeed(); } }
+        public override BaseAddonDeed Deed => new EnchantedVortexDeed();
 
         [Constructable]
         public EnchantedVortexAddon()
@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class EnchantedVortexDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new EnchantedVortexAddon(); } }
+        public override BaseAddon Addon => new EnchantedVortexAddon();
 
         [Constructable]
         public EnchantedVortexDeed()

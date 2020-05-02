@@ -50,20 +50,8 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override bool ClickTitle
-        {
-            get
-            {
-                return false;
-            }
-        }
-        public override bool PlayerRangeSensitive
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool ClickTitle => false;
+        public override bool PlayerRangeSensitive => false;
         public static void BeginSummon(PlayerMobile player)
         {
             new SummonTimer(player).Start();

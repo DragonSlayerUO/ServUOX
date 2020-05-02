@@ -11,7 +11,7 @@ namespace Server.Items
 {
     public class DoomPlaque : Item
     {
-        public override int LabelNumber { get { return 1155662; } } // Plaque
+        public override int LabelNumber => 1155662;  // Plaque
         public override bool ForceShowProperties => true;
 
         public Dictionary<Mobile, DateTime> NextMessage { get; set; }
@@ -34,7 +34,7 @@ namespace Server.Items
             }
         }
 
-        public override bool HandlesOnMovement { get { return true; } }
+        public override bool HandlesOnMovement => true;
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {
@@ -80,7 +80,7 @@ namespace Server.Items
 
         private class DoomPlaquePrompt : Prompt
         {
-            public override int MessageCliloc { get { return 1155661; } }
+            public override int MessageCliloc => 1155661;
 
             public DoomPlaquePrompt()
             {

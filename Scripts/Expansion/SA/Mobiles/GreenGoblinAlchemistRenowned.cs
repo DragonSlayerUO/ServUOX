@@ -87,28 +87,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override Type[] UniqueSAList
-        {
-            get
-            {
-                return new Type[] { typeof(ObsidianEarrings), typeof(TheImpalersPick) };
-            }
-        }
-        public override Type[] SharedSAList
-        {
-            get
-            {
-                return new Type[] { };
-            }
-        }
+        public override Type[] UniqueSAList => new Type[] { typeof(ObsidianEarrings), typeof(TheImpalersPick) };
+        public override Type[] SharedSAList => new Type[] { };
 
-        public override bool AllureImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool AllureImmunity => true;
 
         public override int GetAngerSound() { return 0x600; }
         public override int GetIdleSound() { return 0x600; }

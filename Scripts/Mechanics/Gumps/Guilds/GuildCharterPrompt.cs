@@ -6,7 +6,7 @@ namespace Server.Gumps
 {
     public class GuildCharterPrompt : Prompt
     {
-        public override int MessageCliloc { get { return 1013071; } }
+        public override int MessageCliloc => 1013071;
         private readonly Mobile m_Mobile;
         private readonly Guild m_Guild;
         public GuildCharterPrompt(Mobile m, Guild g)

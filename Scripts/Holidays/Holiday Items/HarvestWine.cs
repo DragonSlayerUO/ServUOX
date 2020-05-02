@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public class HarvestWine : BeverageBottle
     {
-        public override double DefaultWeight { get { return 1; } }
-        public override int LabelNumber { get { return 1153873; } } // Harvest Wine
+        public override double DefaultWeight => 1;
+        public override int LabelNumber => 1153873;  // Harvest Wine
 
         [Constructable]
         public HarvestWine()

@@ -24,7 +24,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new CactusSpongeDeed(); } }
+        public override BaseAddonDeed Deed => new CactusSpongeDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -41,7 +41,7 @@ namespace Server.Items
 
     public class CactusSpongeDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1098374; } } // Cactus Sponge
+        public override int LabelNumber => 1098374;  // Cactus Sponge
 
         [Constructable]
         public CactusSpongeDeed()
@@ -54,7 +54,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon { get { return new CactusSpongeAddon(); } }
+        public override BaseAddon Addon => new CactusSpongeAddon();
 
         public override void Serialize(GenericWriter writer)
         {

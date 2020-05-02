@@ -18,20 +18,8 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074463;
-            }
-        }// An aquarium fishing net
-        public override bool RequireDeepWater
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override int LabelNumber => 1074463;// An aquarium fishing net
+        public override bool RequireDeepWater => false;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -173,13 +161,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074463;
-            }
-        }// An aquarium fishing net
+        public override int LabelNumber => 1074463;// An aquarium fishing net
         public override void OnDoubleClick(Mobile from)
         {
             if (!this.IsChildOf(from.Backpack))

@@ -24,13 +24,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new MedusaSNestAddonDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new MedusaSNestAddonDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -57,13 +51,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new MedusaSNestAddon();
-            }
-        }
+        public override BaseAddon Addon => new MedusaSNestAddon();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -20,7 +20,7 @@ namespace Server.Factions
         private DateTime m_TimeOfPlacement;
         private Timer m_Concealing;
 
-        public bool CheckWhenHidden { get { return true; } }
+        public bool CheckWhenHidden => true;
 
         public BaseFactionTrap(Faction f, Mobile m, int itemID)
             : base(itemID)
@@ -73,55 +73,13 @@ namespace Server.Factions
                 m_TimeOfPlacement = value;
             }
         }
-        public virtual int EffectSound
-        {
-            get
-            {
-                return 0;
-            }
-        }
-        public virtual int SilverFromDisarm
-        {
-            get
-            {
-                return 100;
-            }
-        }
-        public virtual int MessageHue
-        {
-            get
-            {
-                return 0;
-            }
-        }
-        public virtual int AttackMessage
-        {
-            get
-            {
-                return 0;
-            }
-        }
-        public virtual int DisarmMessage
-        {
-            get
-            {
-                return 0;
-            }
-        }
-        public virtual AllowedPlacing AllowedPlacing
-        {
-            get
-            {
-                return AllowedPlacing.Everywhere;
-            }
-        }
-        public virtual TimeSpan ConcealPeriod
-        {
-            get
-            {
-                return TimeSpan.FromMinutes(1.0);
-            }
-        }
+        public virtual int EffectSound => 0;
+        public virtual int SilverFromDisarm => 100;
+        public virtual int MessageHue => 0;
+        public virtual int AttackMessage => 0;
+        public virtual int DisarmMessage => 0;
+        public virtual AllowedPlacing AllowedPlacing => AllowedPlacing.Everywhere;
+        public virtual TimeSpan ConcealPeriod => TimeSpan.FromMinutes(1.0);
         public virtual TimeSpan DecayPeriod
         {
             get

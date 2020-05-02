@@ -17,13 +17,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073137;
-            }
-        }// A bauble
+        public override int LabelNumber => 1073137;// A bauble
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

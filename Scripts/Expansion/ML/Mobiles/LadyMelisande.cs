@@ -133,27 +133,9 @@ namespace Server.Mobiles
             base.OnDamage(amount, from, willKill);
         }
 
-        public override bool GivesMLMinorArtifact
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 5;
-            }
-        }
+        public override bool GivesMLMinorArtifact => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override int TreasureMapLevel => 5;
 
         public LadyMelisande(Serial serial)
             : base(serial)
@@ -230,20 +212,8 @@ namespace Server.Mobiles
         #endregion
 
         #region Helpers
-        public override bool CanSpawnHelpers
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int MaxHelpersWaves
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override bool CanSpawnHelpers => true;
+        public override int MaxHelpersWaves => 1;
 
         public override void SpawnHelpers()
         {

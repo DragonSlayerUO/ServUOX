@@ -237,13 +237,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1080406;
-            }
-        }// a deed for a tree stump decoration
+        public override int LabelNumber => 1080406;// a deed for a tree stump decoration
         public override BaseAddon Addon
         {
             get

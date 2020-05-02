@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class SmugglersLantern : Lantern
     {
-        public override int LabelNumber { get { return 1071521; } } // Smuggler's Lantern
+        public override int LabelNumber => 1071521;  // Smuggler's Lantern
 
         [Constructable]
         public SmugglersLantern()

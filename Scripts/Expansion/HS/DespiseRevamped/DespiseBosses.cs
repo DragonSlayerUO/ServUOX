@@ -10,14 +10,14 @@ namespace Server.Engines.Despise
     {
         public static readonly int ArtifactChance = 5;
 
-        public virtual BaseCreature SummonWisp { get { return null; } }
-        public virtual double WispScalar { get { return 0.33; } }
+        public virtual BaseCreature SummonWisp => null;
+        public virtual double WispScalar => 0.33;
 
         private BaseCreature m_Wisp;
         private Timer m_SummonTimer;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public BaseCreature Wisp { get { return m_Wisp; } }
+        public BaseCreature Wisp => m_Wisp;
 
         public DespiseBoss(AIType ai, FightMode fightmode) : base(ai, fightmode, 10, 1, .1, .2)
         {
@@ -129,7 +129,7 @@ namespace Server.Engines.Despise
                 m_Wisp.Kill();
         }
 
-        public static Type[] Artifacts { get { return m_Artifacts; } }
+        public static Type[] Artifacts => m_Artifacts;
 
         private static Type[] m_Artifacts = new Type[]
         {
@@ -221,8 +221,8 @@ namespace Server.Engines.Despise
             SetNonMovable(new Doublet(1281));
         }
 
-        public override bool InitialInnocent { get { return true; } }
-        public override BaseCreature SummonWisp { get { return new EnsorcledWisp(); } }
+        public override bool InitialInnocent => true;
+        public override BaseCreature SummonWisp => new EnsorcledWisp();
 
         public override void GenerateLoot()
         {
@@ -304,8 +304,8 @@ namespace Server.Engines.Despise
             SetNonMovable(staff);
         }
 
-        public override bool AlwaysMurderer { get { return true; } }
-        public override BaseCreature SummonWisp { get { return new CorruptedWisp(); } }
+        public override bool AlwaysMurderer => true;
+        public override BaseCreature SummonWisp => new CorruptedWisp();
 
         public override void GenerateLoot()
         {
@@ -389,7 +389,7 @@ namespace Server.Engines.Despise
             return base.OnBeforeDeath();
         }
 
-        public override bool InitialInnocent { get { return true; } }
+        public override bool InitialInnocent => true;
         //public override bool ForceNotoriety { get { return true; } }
 
         public EnsorcledWisp(Serial serial) : base(serial)
@@ -468,7 +468,7 @@ namespace Server.Engines.Despise
             return base.OnBeforeDeath();
         }
 
-        public override bool AlwaysMurderer { get { return true; } }
+        public override bool AlwaysMurderer => true;
         //public override bool ForceNotoriety { get { return true; } }
 
         public CorruptedWisp(Serial serial) : base(serial)

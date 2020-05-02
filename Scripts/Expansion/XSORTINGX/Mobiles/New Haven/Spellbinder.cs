@@ -42,27 +42,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BleedImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmunity
-        {
-            get
-            {
-                return Poison.Regular;
-            }
-        }
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
+        public override bool BleedImmunity => true;
+        public override Poison PoisonImmunity => Poison.Regular;
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Meager);

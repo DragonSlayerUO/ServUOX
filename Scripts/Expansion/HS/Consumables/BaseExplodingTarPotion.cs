@@ -14,7 +14,7 @@ namespace Server.Items
     {
         public abstract int Radius { get; }
 
-        public override bool RequireFreeHand { get { return false; } }
+        public override bool RequireFreeHand => false;
 
         public BaseExplodingTarPotion(PotionEffect effect) : base(0xF06, effect)
         {
@@ -184,10 +184,7 @@ namespace Server.Items
         {
             private BaseExplodingTarPotion m_Potion;
 
-            public BaseExplodingTarPotion Potion
-            {
-                get { return m_Potion; }
-            }
+            public BaseExplodingTarPotion Potion => m_Potion;
 
             public ThrowTarget(BaseExplodingTarPotion potion) : base(12, true, TargetFlags.None)
             {

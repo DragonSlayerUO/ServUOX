@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1072116;
-            }
-        }// Grizzled Skull collection
+        public override int LabelNumber => 1072116;// Grizzled Skull collection
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

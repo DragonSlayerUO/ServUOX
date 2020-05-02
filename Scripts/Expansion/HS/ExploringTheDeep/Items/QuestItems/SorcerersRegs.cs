@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class PerfectBlackPearlDecor : Item
     {
-        public override int LabelNumber { get { return 1154257; } } // Perfect Black Pearl
+        public override int LabelNumber => 1154257;  // Perfect Black Pearl
 
         [Constructable]
         public PerfectBlackPearlDecor()
@@ -67,7 +67,7 @@ namespace Server.Items
 
     public class PerfectBlackPearl : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154257; } } // Perfect Black Pearl
+        public override int LabelNumber => 1154257;  // Perfect Black Pearl
 
         [Constructable]
         public PerfectBlackPearl()
@@ -85,8 +85,8 @@ namespace Server.Items
             list.Add(1072351); // Quest Item
         }
 
-        public override int Lifespan { get { return 3600; } }
-        public override bool UseSeconds { get { return false; } }
+        public override int Lifespan => 3600;
+        public override bool UseSeconds => false;
 
         public PerfectBlackPearl(Serial serial)
             : base(serial)
@@ -109,7 +109,7 @@ namespace Server.Items
 
     public class BurstingBrimstoneDecor : Item
     {
-        public override int LabelNumber { get { return 1154258; } } // Bursting Brimstone
+        public override int LabelNumber => 1154258;  // Bursting Brimstone
 
         [Constructable]
         public BurstingBrimstoneDecor()
@@ -169,7 +169,7 @@ namespace Server.Items
 
     public class BurstingBrimstone : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154258; } } // Bursting Brimstone
+        public override int LabelNumber => 1154258;  // Bursting Brimstone
 
         [Constructable]
         public BurstingBrimstone()
@@ -187,8 +187,8 @@ namespace Server.Items
             list.Add(1072351); // Quest Item
         }
 
-        public override int Lifespan { get { return 3600; } }
-        public override bool UseSeconds { get { return false; } }
+        public override int Lifespan => 3600;
+        public override bool UseSeconds => false;
 
         public BurstingBrimstone(Serial serial)
             : base(serial)
@@ -211,7 +211,7 @@ namespace Server.Items
 
     public class BrightDaemonBloodDecor : Item
     {
-        public override int LabelNumber { get { return 1154259; } } // Bright Daemon Blood
+        public override int LabelNumber => 1154259;  // Bright Daemon Blood
 
         [Constructable]
         public BrightDaemonBloodDecor()
@@ -271,7 +271,7 @@ namespace Server.Items
 
     public class BrightDaemonBlood : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154259; } } // Bright Daemon Blood
+        public override int LabelNumber => 1154259;  // Bright Daemon Blood
 
         [Constructable]
         public BrightDaemonBlood()
@@ -289,8 +289,8 @@ namespace Server.Items
             list.Add(1072351); // Quest Item
         }
 
-        public override int Lifespan { get { return 3600; } }
-        public override bool UseSeconds { get { return false; } }
+        public override int Lifespan => 3600;
+        public override bool UseSeconds => false;
 
         public BrightDaemonBlood(Serial serial)
             : base(serial)
@@ -313,7 +313,7 @@ namespace Server.Items
 
     public class MightyMandrakeDecor : Item
     {
-        public override int LabelNumber { get { return 1154260; } } // Mighty Mandrake
+        public override int LabelNumber => 1154260;  // Mighty Mandrake
 
         [Constructable]
         public MightyMandrakeDecor()
@@ -373,7 +373,7 @@ namespace Server.Items
 
     public class MightyMandrake : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154260; } } // Mighty Mandrake
+        public override int LabelNumber => 1154260;  // Mighty Mandrake
 
         [Constructable]
         public MightyMandrake()
@@ -391,8 +391,8 @@ namespace Server.Items
             list.Add(1072351); // Quest Item
         }
 
-        public override int Lifespan { get { return 3600; } }
-        public override bool UseSeconds { get { return false; } }
+        public override int Lifespan => 3600;
+        public override bool UseSeconds => false;
 
         public MightyMandrake(Serial serial)
             : base(serial)
@@ -414,7 +414,7 @@ namespace Server.Items
 
     public class BurlyBoneDecor : Item
     {
-        public override int LabelNumber { get { return 1154261; } } // Burly Bone
+        public override int LabelNumber => 1154261;  // Burly Bone
 
         [Constructable]
         public BurlyBoneDecor()
@@ -474,7 +474,7 @@ namespace Server.Items
 
     public class BurlyBone : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154261; } } // Burly Bone
+        public override int LabelNumber => 1154261;  // Burly Bone
 
         [Constructable]
         public BurlyBone()
@@ -492,8 +492,8 @@ namespace Server.Items
             list.Add(1072351); // Quest Item
         }
 
-        public override int Lifespan { get { return 3600; } }
-        public override bool UseSeconds { get { return false; } }
+        public override int Lifespan => 3600;
+        public override bool UseSeconds => false;
 
         public BurlyBone(Serial serial)
             : base(serial)

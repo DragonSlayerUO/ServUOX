@@ -48,9 +48,9 @@ namespace Server.Factions
             m_Hold = hold;
         }
 
-        public Type Spell { get { return m_Spell; } }
-        public TimeSpan Hold { get { return m_Hold; } }
-        public int Chance { get { return m_Chance; } }
+        public Type Spell => m_Spell;
+        public TimeSpan Hold => m_Hold;
+        public int Chance => m_Chance;
     }
 
     public class SpellCombo
@@ -81,8 +81,8 @@ namespace Server.Factions
             m_Entries = entries;
         }
 
-        public int Mana { get { return m_Mana; } }
-        public ComboEntry[] Entries { get { return m_Entries; } }
+        public int Mana => m_Mana;
+        public ComboEntry[] Entries => m_Entries;
 
         public static Spell Process(Mobile mob, Mobile targ, ref SpellCombo combo, ref int index, ref DateTime releaseTime)
         {
@@ -124,8 +124,8 @@ namespace Server.Factions
             m_Guard = guard;
         }
 
-        public bool IsDamaged { get { return (m_Guard.Hits < m_Guard.HitsMax); } }
-        public bool IsPoisoned { get { return m_Guard.Poisoned; } }
+        public bool IsDamaged => (m_Guard.Hits < m_Guard.HitsMax);
+        public bool IsPoisoned => m_Guard.Poisoned;
 
         public TimeSpan TimeUntilBandage
         {

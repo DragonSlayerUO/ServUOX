@@ -997,10 +997,7 @@ namespace Server.Items
             set { m_ReturnContainer = value; }
         }
 
-        public Container Pack
-        {
-            get { return m_Pack; }
-        }
+        public Container Pack => m_Pack;
 
         private void PackItemsMovable(Container pack, bool canmove)
         {
@@ -1528,7 +1525,7 @@ namespace Server.Items
         }
 
 
-        public bool HandlesOnSkillUse { get { return (IsValid && m_SkillTrigger != null && m_SkillTrigger.Length > 0); } }
+        public bool HandlesOnSkillUse => (IsValid && m_SkillTrigger != null && m_SkillTrigger.Length > 0);
 
         public void OnSkillUse(Mobile m, Skill skill, bool success)
         {

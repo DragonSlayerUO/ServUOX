@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Evocaricus : VikingSword
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public Evocaricus()
             : base()
@@ -24,27 +24,9 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074309;
-            }
-        }// Evocaricus (Juggernaut Set)
-        public override SetItem SetID
-        {
-            get
-            {
-                return SetItem.Juggernaut;
-            }
-        }
-        public override int Pieces
-        {
-            get
-            {
-                return 2;
-            }
-        }
+        public override int LabelNumber => 1074309;// Evocaricus (Juggernaut Set)
+        public override SetItem SetID => SetItem.Juggernaut;
+        public override int Pieces => 2;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

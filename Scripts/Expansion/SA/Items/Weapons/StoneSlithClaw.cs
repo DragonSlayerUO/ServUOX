@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StoneSlithClaw : Cyclone
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public StoneSlithClaw()
         {
@@ -21,22 +21,10 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber { get { return 1112393; } }// Stone Slith Claw
+        public override int LabelNumber => 1112393; // Stone Slith Claw
 
-        public override int InitMinHits
-        {
-            get
-            {
-                return 255;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 255;
-            }
-        }
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
 
         public override void Serialize(GenericWriter writer)
         {

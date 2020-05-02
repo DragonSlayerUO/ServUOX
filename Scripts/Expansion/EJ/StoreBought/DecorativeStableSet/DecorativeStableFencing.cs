@@ -32,13 +32,7 @@ namespace Server.Items
         private FencingType _Type;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool CanFlip
-        {
-            get
-            {
-                return IDs[(int)_Type].Length > 2;
-            }
-        }
+        public bool CanFlip => IDs[(int)_Type].Length > 2;
 
         public bool Dye(Mobile from, DyeTub sender)
         {

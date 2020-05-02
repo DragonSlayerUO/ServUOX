@@ -18,14 +18,9 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Find Uzeraan.  Uzeraan will explain what you need to do next.
-                return 1046039;
-            }
-        }
+                1046039;
         public override void OnComplete()
         {
             if (this.System.From.Profession == 5) // paladin
@@ -43,18 +38,13 @@ namespace Server.Engines.Quests.Haven
             this.m_OldTithingPoints = -1;
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Go to the shrine inside of Uzeraan's Mansion, near the front doors and
-                * <a href = "?ForceTopic109">tithe</a> at least 500 gold.<BR><BR>
-                * 
-                * Return to Uzeraan when you are done.
-                */
-                return 1060386;
-            }
-        }
+* <a href = "?ForceTopic109">tithe</a> at least 500 gold.<BR><BR>
+* 
+* Return to Uzeraan when you are done.
+*/
+                1060386;
         public override void CheckProgress()
         {
             PlayerMobile pm = this.System.From;
@@ -80,14 +70,9 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Return to Uzeraan, now that you have enough tithing points to continue your quest.
-                return 1060387;
-            }
-        }
+                1060387;
         public override void OnComplete()
         {
             this.System.AddConversation(new UzeraanFirstTaskConversation());
@@ -106,13 +91,7 @@ namespace Server.Engines.Quests.Haven
             this.m_Step = step;
         }
 
-        public KillHordeMinionsStep Step
-        {
-            get
-            {
-                return this.m_Step;
-            }
-        }
+        public KillHordeMinionsStep Step => this.m_Step;
         public override object Message
         {
             get
@@ -264,18 +243,13 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* It's no use... The <I>Horde Minions</I> are too many.
-                * They are appearing out of nowhere.<BR><BR>
-                * 
-                * Return to Uzeraan and report your findings.
-                */
-                return 1049091;
-            }
-        }
+* They are appearing out of nowhere.<BR><BR>
+* 
+* Return to Uzeraan and report your findings.
+*/
+                1049091;
         public override void OnComplete()
         {
             this.System.AddConversation(new UzeraanReportConversation());
@@ -288,18 +262,13 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Prepare for battle and step onto the teleporter,
-                * located against the wall in the main hall of Uzeraan's mansion.<BR><BR>
-                * 
-                * Find Schmendrick within the mines.
-                */
-                return 1049120;
-            }
-        }
+* located against the wall in the main hall of Uzeraan's mansion.<BR><BR>
+* 
+* Find Schmendrick within the mines.
+*/
+                1049120;
         public override bool IgnoreYoungProtection(Mobile from)
         {
             // This restriction begins when this objective is completed, and continues until the quest is ended
@@ -321,16 +290,11 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Find Schmendrick's apprentice who is somewhere in the mining cave.
-                * The apprentice has the scroll of power needed by Uzeraan.
-                */
-                return 1049323;
-            }
-        }
+* The apprentice has the scroll of power needed by Uzeraan.
+*/
+                1049323;
         public override void OnComplete()
         {
             this.System.AddObjective(new ReturnScrollOfPowerObjective());
@@ -343,17 +307,12 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* You have obtained the scroll of power!  Find your way out of the cave.<BR><BR>
-                * 
-                * Hand the scroll to Uzeraan (drag and drop) once you arrive in his mansion.
-                */
-                return 1049324;
-            }
-        }
+* 
+* Hand the scroll to Uzeraan (drag and drop) once you arrive in his mansion.
+*/
+                1049324;
         public override void OnComplete()
         {
             this.System.AddConversation(new UzeraanScrollOfPowerConversation());
@@ -366,18 +325,13 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Find the Dryad in the woods of Haven and get a patch
-                * of fertile dirt from her.<BR><BR>
-                * 
-                * Use Uzeraan's teleporter to get there if necessary.
-                */
-                return 1049358;
-            }
-        }
+* of fertile dirt from her.<BR><BR>
+* 
+* Use Uzeraan's teleporter to get there if necessary.
+*/
+                1049358;
         public override void OnComplete()
         {
             this.System.AddConversation(new DryadConversation());
@@ -390,18 +344,13 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* You have acquired the <I>Fertile Dirt</I>!<BR><BR>
-                * 
-                * Return to the mansion (<a href = "?ForceTopic13">North-East</a>
-                * of the Dryad's Grove) and hand it to Uzeraan.
-                */
-                return 1049327;
-            }
-        }
+* 
+* Return to the mansion (<a href = "?ForceTopic13">North-East</a>
+* of the Dryad's Grove) and hand it to Uzeraan.
+*/
+                1049327;
         public override void OnComplete()
         {
             this.System.AddConversation(new UzeraanFertileDirtConversation());
@@ -415,18 +364,13 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Bring back a vial of blood.<BR><BR>
-                * 
-                * Follow the road leading north from the mansion and walk into the hut
-                * to find the chest that contains the vial
-                */
-                return 1049361;
-            }
-        }
+* 
+* Follow the road leading north from the mansion and walk into the hut
+* to find the chest that contains the vial
+*/
+                1049361;
         public override void CheckProgress()
         {
             PlayerMobile player = this.System.From;
@@ -476,17 +420,12 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* You have the vial of blood!<BR><BR>
-                * 
-                * Return to Uzeraan's mansion and hand him the vial.
-                */
-                return 1049332;
-            }
-        }
+* 
+* Return to Uzeraan's mansion and hand him the vial.
+*/
+                1049332;
         public override void OnComplete()
         {
             this.System.AddConversation(new UzeraanDaemonBloodConversation());
@@ -588,16 +527,11 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Head <a href = "?ForceTopic13">East</a> of here (or use the Horn of Retreat)
-                * to return to Uzeraan's Mansion and deliver the bone to Uzeraan.
-                */
-                return 1049334;
-            }
-        }
+* to return to Uzeraan's Mansion and deliver the bone to Uzeraan.
+*/
+                1049334;
         public override void OnComplete()
         {
             this.System.AddConversation(new UzeraanDaemonBoneConversation());
@@ -610,17 +544,12 @@ namespace Server.Engines.Quests.Haven
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Locate the Haven Bank (use the teleporter in Uzeraan's Mansion
-                * if necessary), which lies <a href = "?ForceTopic13">South-East</a>
-                * of Uzeraan's Mansion.  Once there, <a href="?ForceTopic86">cash your check</a>.
-                */
-                return 1049336;
-            }
-        }
+* if necessary), which lies <a href = "?ForceTopic13">South-East</a>
+* of Uzeraan's Mansion.  Once there, <a href="?ForceTopic86">cash your check</a>.
+*/
+                1049336;
         public override void OnComplete()
         {
             this.System.AddConversation(new BankerConversation());

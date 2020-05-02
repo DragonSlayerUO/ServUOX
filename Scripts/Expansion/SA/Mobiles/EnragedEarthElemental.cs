@@ -55,34 +55,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override double DispelDifficulty
-        {
-            get
-            {
-                return 117.5;
-            }
-        }
-        public override double DispelFocus
-        {
-            get
-            {
-                return 45.0;
-            }
-        }
-        public override bool BleedImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public override double DispelDifficulty => 117.5;
+        public override double DispelFocus => 45.0;
+        public override bool BleedImmunity => true;
+        public override int TreasureMapLevel => 1;
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.Average);

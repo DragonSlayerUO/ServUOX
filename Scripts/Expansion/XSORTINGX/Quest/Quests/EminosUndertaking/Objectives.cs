@@ -10,14 +10,9 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Your value as a Ninja must be proven. Find Daimyo Emino and accept the test he offers.
-                return 1063174;
-            }
-        }
+                1063174;
         public override void OnComplete()
         {
             this.System.AddConversation(new FindZoelConversation());
@@ -30,14 +25,9 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Find Elite Ninja Zoel immediately!
-                return 1063176;
-            }
-        }
+                1063176;
         public override void OnComplete()
         {
             this.System.AddConversation(new EnterCaveConversation());
@@ -50,14 +40,9 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Enter the cave and walk through it. You will be tested as you travel along the path.
-                return 1063179;
-            }
-        }
+                1063179;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(406, 1141, 0), 2))
@@ -88,14 +73,9 @@ namespace Server.Engines.Quests.Ninja
                 this.m_TaughtHowToUseSkills = value;
             }
         }
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Use your Ninja training to move invisibly past the magical guardians.
-                return 1063261;
-            }
-        }
+                1063261;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(412, 1123, 0), 3))
@@ -128,16 +108,11 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* The special tile is known as a teleporter.
-                * Step on the teleporter tile and you will be transported to a new location.
-                */
-                return 1063183;
-            }
-        }
+* Step on the teleporter tile and you will be transported to a new location.
+*/
+                1063183;
         public override void OnComplete()
         {
             this.System.AddConversation(new GiveZoelNoteConversation());
@@ -150,17 +125,12 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Bring the note to Elite Ninja Zoel and speak with him again. 
-                * He is near the cave entrance. You can hand the note to Zoel 
-                * by dragging it and dropping it on his body.
-                */
-                return 1063185;
-            }
-        }
+* He is near the cave entrance. You can hand the note to Zoel 
+* by dragging it and dropping it on his body.
+*/
+                1063185;
         public override void OnComplete()
         {
             this.System.AddConversation(new GainInnInformationConversation());
@@ -173,17 +143,12 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Take the Blue Teleporter Tile from Daimyo Emino's
-                * house to the Abandoned Inn. Quietly look around
-                * to gain information.
-                */
-                return 1063190;
-            }
-        }
+* house to the Abandoned Inn. Quietly look around
+* to gain information.
+*/
+                1063190;
         public override void CheckProgress()
         {
             Mobile from = this.System.From;
@@ -204,14 +169,9 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Go back through the blue teleporter and tell Daimyo Emino what you’ve overheard.
-                return 1063197;
-            }
-        }
+                1063197;
         public override void OnComplete()
         {
             this.System.AddConversation(new SearchForSwordConversation());
@@ -224,18 +184,13 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Take the white teleporter and check the chests for the sword. 
-                * Leave everything else behind. Avoid damage from traps you may 
-                * encounter. To use a potion, make sure at least one hand is 
-                * free and double click on the bottle.
-                */
-                return 1063200;
-            }
-        }
+* Leave everything else behind. Avoid damage from traps you may 
+* encounter. To use a potion, make sure at least one hand is 
+* free and double click on the bottle.
+*/
+                1063200;
         public override void OnComplete()
         {
             this.System.AddConversation(new HallwayWalkConversation());
@@ -260,17 +215,12 @@ namespace Server.Engines.Quests.Ninja
                 this.m_StolenTreasure = value;
             }
         }
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Walk through the hallway being careful 
-                * to avoid the traps. You may be able to 
-                * time the traps to avoid injury.
-                */
-                return 1063202;
-            }
-        }
+* to avoid the traps. You may be able to 
+* time the traps to avoid injury.
+*/
+                1063202;
         public override void OnComplete()
         {
             this.System.AddConversation(new ReturnSwordConversation());
@@ -297,14 +247,9 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Take the sword and bring it back to Daimyo Emino.
-                return 1063204;
-            }
-        }
+                1063204;
         public override void CheckProgress()
         {
             Mobile from = this.System.From;
@@ -325,21 +270,10 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // Kill three henchmen.
-                return 1063206;
-            }
-        }
-        public override int MaxProgress
-        {
-            get
-            {
-                return 3;
-            }
-        }
+                1063206;
+        public override int MaxProgress => 3;
         public override void RenderProgress(BaseQuestGump gump)
         {
             if (!this.Completed)
@@ -374,17 +308,12 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* You have proven your fighting skills. Bring the Sword to
-                * Daimyo Emino immediately. Be sure to follow the
-                * path back to the teleporter.
-                */
-                return 1063210;
-            }
-        }
+* Daimyo Emino immediately. Be sure to follow the
+* path back to the teleporter.
+*/
+                1063210;
         public override void OnComplete()
         {
         }

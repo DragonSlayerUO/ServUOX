@@ -32,7 +32,7 @@ namespace Server.Items
 
         public Timer DecayTimer { get; private set; }
 
-        public override bool RetainDeedHue { get { return true; } }
+        public override bool RetainDeedHue => true;
 
         public CauldronOfTransmutation()
         {
@@ -281,7 +281,7 @@ namespace Server.Items
 
     public class CauldronOfTransmutationDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new CauldronOfTransmutation(); } }
+        public override BaseAddon Addon => new CauldronOfTransmutation();
 
         public const int DecayPeriod = 24;
 

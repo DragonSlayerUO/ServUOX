@@ -25,13 +25,7 @@ namespace Server.Factions
             this.StartIncomeTimer();
         }
 
-        public static List<Town> Towns
-        {
-            get
-            {
-                return Reflector.Towns;
-            }
-        }
+        public static List<Town> Towns => Reflector.Towns;
         public TownDefinition Definition
         {
             get
@@ -121,13 +115,7 @@ namespace Server.Factions
                 this.m_State.LastTaxChange = value;
             }
         }
-        public bool TaxChangeReady
-        {
-            get
-            {
-                return (this.m_State.LastTaxChange + TaxChangePeriod) < DateTime.UtcNow;
-            }
-        }
+        public bool TaxChangeReady => (this.m_State.LastTaxChange + TaxChangePeriod) < DateTime.UtcNow;
         public int FinanceUpkeep
         {
             get
@@ -154,20 +142,8 @@ namespace Server.Factions
                 return upkeep;
             }
         }
-        public int DailyIncome
-        {
-            get
-            {
-                return (10000 * (100 + this.m_State.Tax)) / 100;
-            }
-        }
-        public int NetCashFlow
-        {
-            get
-            {
-                return this.DailyIncome - this.FinanceUpkeep - this.SheriffUpkeep;
-            }
-        }
+        public int DailyIncome => (10000 * (100 + this.m_State.Tax)) / 100;
+        public int NetCashFlow => this.DailyIncome - this.FinanceUpkeep - this.SheriffUpkeep;
         public TownMonolith Monolith
         {
             get

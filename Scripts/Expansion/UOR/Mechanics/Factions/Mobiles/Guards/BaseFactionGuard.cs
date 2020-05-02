@@ -46,13 +46,7 @@ namespace Server.Factions
         {
         }
 
-        public override bool BardImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool BardImmunity => true;
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
         public Faction Faction
         {
@@ -67,13 +61,7 @@ namespace Server.Factions
                 this.Register();
             }
         }
-        public Orders Orders
-        {
-            get
-            {
-                return this.m_Orders;
-            }
-        }
+        public Orders Orders => this.m_Orders;
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
         public Town Town
         {
@@ -89,27 +77,9 @@ namespace Server.Factions
             }
         }
         public abstract GuardAI GuardAI { get; }
-        public override TimeSpan ReacquireDelay
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(2.0);
-            }
-        }
-        public override bool ClickTitle
-        {
-            get
-            {
-                return false;
-            }
-        }
-        protected override BaseAI ForcedAI
-        {
-            get
-            {
-                return new FactionGuardAI(this);
-            }
-        }
+        public override TimeSpan ReacquireDelay => TimeSpan.FromSeconds(2.0);
+        public override bool ClickTitle => false;
+        protected override BaseAI ForcedAI => new FactionGuardAI(this);
         public void Register()
         {
             if (this.m_Town != null && this.m_Faction != null)
@@ -538,20 +508,8 @@ namespace Server.Factions
             this.m_Mount = new VirtualMount(this);
         }
 
-        public Mobile Rider
-        {
-            get
-            {
-                return this.m_Rider;
-            }
-        }
-        public IMount Mount
-        {
-            get
-            {
-                return this.m_Mount;
-            }
-        }
+        public Mobile Rider => this.m_Rider;
+        public IMount Mount => this.m_Mount;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

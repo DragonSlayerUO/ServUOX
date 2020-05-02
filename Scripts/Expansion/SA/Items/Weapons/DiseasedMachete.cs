@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DiseasedMachete : ElvenMachete
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public DiseasedMachete()
         {
@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073536;
-            }
-        }// Diseased Machete
+        public override int LabelNumber => 1073536;// Diseased Machete
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

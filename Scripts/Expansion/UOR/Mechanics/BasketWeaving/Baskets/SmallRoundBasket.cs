@@ -16,13 +16,7 @@ public class SmallRoundBasket : BaseContainer
     {
     }
 
-    public override int LabelNumber
-    {
-        get
-        {
-            return 1112298;
-        }
-    }// small round basket
+    public override int LabelNumber => 1112298;// small round basket
 
     public override void Serialize(GenericWriter writer)
     {

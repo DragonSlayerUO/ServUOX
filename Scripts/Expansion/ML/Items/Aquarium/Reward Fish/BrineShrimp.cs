@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074415;
-            }
-        }// Brine shrimp
+        public override int LabelNumber => 1074415;// Brine shrimp
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -17,33 +17,9 @@ namespace Server.Factions
             m_MaxWearables = maxWearables;
         }
 
-        public int Rank
-        {
-            get
-            {
-                return m_Rank;
-            }
-        }
-        public int Required
-        {
-            get
-            {
-                return m_Required;
-            }
-        }
-        public int MaxWearables
-        {
-            get
-            {
-                return m_MaxWearables;
-            }
-        }
-        public TextDefinition Title
-        {
-            get
-            {
-                return m_Title;
-            }
-        }
+        public int Rank => m_Rank;
+        public int Required => m_Required;
+        public int MaxWearables => m_MaxWearables;
+        public TextDefinition Title => m_Title;
     }
 }

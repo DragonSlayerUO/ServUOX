@@ -103,7 +103,7 @@ namespace Server.Engines.XmlSpawner2
 
         }
 
-        public override bool HandlesOnKilled { get { return true; } }
+        public override bool HandlesOnKilled => true;
 
         public override void OnKilled(Mobile killed, Mobile killer)
         {

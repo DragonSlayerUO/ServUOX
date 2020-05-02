@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class HuntmastersQuestRewardTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1158140); } } // Hunter
+        public override TextDefinition Title => new TextDefinition(1158140);  // Hunter
 
         [Constructable]
         public HuntmastersQuestRewardTitleDeed()
@@ -32,7 +32,7 @@ namespace Server.Items
 
     public class PaladinOfTrinsicRewardTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1158090); } } // Paladin of Trinsic
+        public override TextDefinition Title => new TextDefinition(1158090);  // Paladin of Trinsic
 
         [Constructable]
         public PaladinOfTrinsicRewardTitleDeed()
@@ -59,7 +59,7 @@ namespace Server.Items
 
     public class RightingWrongRewardTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1158161); } } // Warden of Wrong
+        public override TextDefinition Title => new TextDefinition(1158161);  // Warden of Wrong
 
         [Constructable]
         public RightingWrongRewardTitleDeed()
@@ -86,7 +86,7 @@ namespace Server.Items
 
     public class TreasureHunterRewardTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1158389); } } // Treasure Hunter
+        public override TextDefinition Title => new TextDefinition(1158389);  // Treasure Hunter
 
         [Constructable]
         public TreasureHunterRewardTitleDeed()
@@ -113,7 +113,7 @@ namespace Server.Items
 
     public class HeroOfMincRewardTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1158278); } } // Hero of Minoc
+        public override TextDefinition Title => new TextDefinition(1158278);  // Hero of Minoc
 
         [Constructable]
         public HeroOfMincRewardTitleDeed()
@@ -140,7 +140,7 @@ namespace Server.Items
 
     public class DespiseTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1158303); } } // The Battle of Wisps TODO: Correct cliloc
+        public override TextDefinition Title => new TextDefinition(1158303);  // The Battle of Wisps TODO: Correct cliloc
 
         [Constructable]
         public DespiseTitleDeed()
@@ -167,7 +167,7 @@ namespace Server.Items
 
     public class ExploringTheDeedTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1154505); } } // Salvager of the Deep
+        public override TextDefinition Title => new TextDefinition(1154505);  // Salvager of the Deep
 
         [Constructable]
         public ExploringTheDeedTitleDeed()

@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1076261;
-            }
-        }// Broken Chest of Drawers
+        public override int LabelNumber => 1076261;// Broken Chest of Drawers
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -51,13 +45,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new BrokenChestOfDrawersDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new BrokenChestOfDrawersDeed();
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -87,20 +75,8 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new BrokenChestOfDrawersAddon();
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1076261;
-            }
-        }// Broken Chest of Drawers
+        public override BaseAddon Addon => new BrokenChestOfDrawersAddon();
+        public override int LabelNumber => 1076261;// Broken Chest of Drawers
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

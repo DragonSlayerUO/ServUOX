@@ -58,8 +58,8 @@ namespace Server.Mobiles
             AddLoot(LootPack.Gems, Utility.Random(1, 3));
         }
 
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
-        public override Poison HitPoison { get { return Poison.Lethal; } }
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override Poison HitPoison => Poison.Lethal;
 
         public override int GetIdleSound()
         {

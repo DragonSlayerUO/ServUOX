@@ -28,7 +28,7 @@ namespace Server.Engines.XmlSpawner2
 
         private static List<XmlQuestPointsRewards> PointsRewardList = new List<XmlQuestPointsRewards>();
 
-        public static List<XmlQuestPointsRewards> RewardsList { get { return PointsRewardList; } }
+        public static List<XmlQuestPointsRewards> RewardsList => PointsRewardList;
 
         public XmlQuestPointsRewards(int minpoints, Type reward, string name, int cost, int id, int hue, int yoffset, object[] args)
         {

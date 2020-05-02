@@ -6,13 +6,7 @@ namespace Server.Items
     #region Reward Clothing
     public class ZooMemberThighBoots : ThighBoots
     {
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073221;
-            }
-        }// Britannia Royal Zoo Member
+        public override int LabelNumber => 1073221;// Britannia Royal Zoo Member
 
         [Constructable]
         public ZooMemberThighBoots()
@@ -170,21 +164,9 @@ namespace Server.Items
     [Flipable(0x2FC4, 0x317A)]
     public class ElvenBoots : BaseShoes
     {
-        public override CraftResource DefaultResource
-        {
-            get
-            {
-                return CraftResource.RegularLeather;
-            }
-        }
+        public override CraftResource DefaultResource => CraftResource.RegularLeather;
 
-        public override Race RequiredRace
-        {
-            get
-            {
-                return Race.Elf;
-            }
-        }
+        public override Race RequiredRace => Race.Elf;
 
         [Constructable]
         public ElvenBoots()
@@ -227,7 +209,7 @@ namespace Server.Items
     [Alterable(typeof(DefTailoring), typeof(LeatherTalons), true)]
     public class JesterShoes : BaseShoes
     {
-        public override int LabelNumber { get { return 1109617; } } // Jester Shoes
+        public override int LabelNumber => 1109617;  // Jester Shoes
 
         [Constructable]
         public JesterShoes()

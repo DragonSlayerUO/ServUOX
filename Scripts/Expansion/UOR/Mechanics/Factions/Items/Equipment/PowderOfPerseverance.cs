@@ -8,7 +8,7 @@ namespace Server.Factions
 {
     public class PowderOfPerseverance : Item, IFactionItem
     {
-        public override int LabelNumber { get { return 1094756; } } // Powder of Perseverance
+        public override int LabelNumber => 1094756;  // Powder of Perseverance
 
         #region Factions
         private FactionItem m_FactionState;

@@ -14,23 +14,12 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Re-animate the corpse of Maabus using your <a href="?ForceTopic112">Animate Dead</a>
-                * spell and question him about the Kronus rituals.
-                */
-                return 1060102;
-            }
-        }
-        public override QuestItemInfo[] Info
-        {
-            get
-            {
-                return m_Info;
-            }
-        }
+* spell and question him about the Kronus rituals.
+*/
+                1060102;
+        public override QuestItemInfo[] Info => m_Info;
         public override void OnComplete()
         {
             this.System.AddConversation(new MaabasConversation());
@@ -43,16 +32,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Take the teleporter in the corner of Maabus' tomb to
-                * the crystal cave where the calling scroll is kept.
-                */
-                return 1060104;
-            }
-        }
+* the crystal cave where the calling scroll is kept.
+*/
+                1060104;
         public override void OnComplete()
         {
             this.System.AddConversation(new HorusConversation());
@@ -65,16 +49,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Infiltrate the city of the Paladins and figure out a way into
-                * the Vault. See Mardoth for help with this objective.
-                */
-                return 1060106;
-            }
-        }
+* the Vault. See Mardoth for help with this objective.
+*/
+                1060106;
         public override void OnComplete()
         {
             this.System.AddConversation(new MardothVaultConversation());
@@ -87,16 +66,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Step onto the teleporter near Mardoth and follow the path
-                * of glowing runes to the tomb of Maabus.
-                */
-                return 1060124;
-            }
-        }
+* of glowing runes to the tomb of Maabus.
+*/
+                1060124;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(2024, 1240, -90), 3))
@@ -115,16 +89,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* This is the tomb of Maabus.  Enter within and find
-                * the corpse of the ancient necromancer.
-                */
-                return 1061142;
-            }
-        }
+* the corpse of the ancient necromancer.
+*/
+                1061142;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(2024, 1223, -90), 3))
@@ -143,16 +112,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Use the teleporter near Mardoth to be transported
-                * to the Paladin City of Light.
-                */
-                return 1060108;
-            }
-        }
+* to the Paladin City of Light.
+*/
+                1060108;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(1076, 519, -90), 5))
@@ -175,25 +139,14 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Follow the road paved with glowing runes to
-                * find the Vault of Secrets.  Be careful not
-                * to give yourself away as a Necromancer while
-                * in the city.
-                */
-                return 1060109;
-            }
-        }
-        public override QuestItemInfo[] Info
-        {
-            get
-            {
-                return m_Info;
-            }
-        }
+* find the Vault of Secrets.  Be careful not
+* to give yourself away as a Necromancer while
+* in the city.
+*/
+                1060109;
+        public override QuestItemInfo[] Info => m_Info;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(1072, 455, -90), 1))
@@ -212,14 +165,9 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 // <a href="?ForceTopic127">Summon your Horde Minion familiar</a> to fetch the scroll for you.
-                return 1060196;
-            }
-        }
+                1060196;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(1076, 450, -84), 5))
@@ -254,16 +202,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Double click your Horde Minion to open his pack and retrieve
-                * the Scroll of Abraxus that he looted for you.
-                */
-                return 1060199;
-            }
-        }
+* the Scroll of Abraxus that he looted for you.
+*/
+                1060199;
         public override void OnComplete()
         {
             this.System.AddConversation(new ReadAbraxusScrollConversation());
@@ -276,17 +219,12 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Find the Crystal Cave password by reading (double click)
-                * the golden scroll entitled "Scroll of Abraxus" that you
-                * got from your familiar..
-                */
-                return 1060125;
-            }
-        }
+* the golden scroll entitled "Scroll of Abraxus" that you
+* got from your familiar..
+*/
+                1060125;
         public override void OnComplete()
         {
             this.System.AddObjective(new ReturnToCrystalCaveObjective());
@@ -303,24 +241,13 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Now that you have the password, return to the Crystal Cave
-                * to speak with the guard there.  Use the teleporter outside
-                * of the vault to get there if necessary.
-                */
-                return 1060115;
-            }
-        }
-        public override QuestItemInfo[] Info
-        {
-            get
-            {
-                return m_Info;
-            }
-        }
+* to speak with the guard there.  Use the teleporter outside
+* of the vault to get there if necessary.
+*/
+                1060115;
+        public override QuestItemInfo[] Info => m_Info;
         public override void OnComplete()
         {
             this.System.AddObjective(new SpeakCavePasswordObjective());
@@ -333,17 +260,12 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Speak the secret word that you read in the scroll
-                * stolen from the Vault to Horus the guard, using
-                * his <a href="?ForceTopic90">context menu</a>.
-                */
-                return 1060117;
-            }
-        }
+* stolen from the Vault to Horus the guard, using
+* his <a href="?ForceTopic90">context menu</a>.
+*/
+                1060117;
         public override void OnComplete()
         {
             this.System.AddConversation(new SecondHorusConversation());
@@ -359,16 +281,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Enter the Crystal Cave and find the Scroll of Calling.
-                * The barrier will now allow you to pass.
-                */
-                return 1060119;
-            }
-        }
+* The barrier will now allow you to pass.
+*/
+                1060119;
         public override bool IgnoreYoungProtection(Mobile from)
         {
             return !this.m_SkitteringHoppersDisposed && from is SkitteringHopper;
@@ -427,16 +344,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* You have disposed of the creatures as Horus has asked.
-                * See him on your way out of the Crystal Cave to claim your reward.
-                */
-                return 1060126;
-            }
-        }
+* See him on your way out of the Crystal Cave to claim your reward.
+*/
+                1060126;
         public override void OnComplete()
         {
             this.System.AddConversation(new HorusRewardConversation());
@@ -449,16 +361,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* You have obtained the scroll of calling. See Mardoth
-                * for further instructions.
-                */
-                return 1060127;
-            }
-        }
+* for further instructions.
+*/
+                1060127;
         public override void OnComplete()
         {
             this.System.AddConversation(new MardothKronusConversation());
@@ -473,16 +380,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Follow the red lanterns to the Well of Tears where
-                * you will perform the calling of Kronus.
-                */
-                return 1060128;
-            }
-        }
+* you will perform the calling of Kronus.
+*/
+                1060128;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && m_WellOfTearsArea.Contains(this.System.From.Location))
@@ -517,17 +419,12 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Use the Scroll of Calling (double click) near the
-                * Well of Tears to charge the waters for the arrival
-                * of Kronus.
-                */
-                return 1060130;
-            }
-        }
+* Well of Tears to charge the waters for the arrival
+* of Kronus.
+*/
+                1060130;
     }
 
     public class FindMardothEndObjective : QuestObjective
@@ -591,17 +488,12 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* Use the enchanted sextant in your pack to locate
-                * the nearest bank.  Go there and speak with the
-                * Banker.
-                */
-                return 1060134;
-            }
-        }
+* the nearest bank.  Go there and speak with the
+* Banker.
+*/
+                1060134;
         public override void CheckProgress()
         {
             if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(2048, 1345, -84), 5))
@@ -620,16 +512,11 @@ namespace Server.Engines.Quests.Necro
         {
         }
 
-        public override object Message
-        {
-            get
-            {
+        public override object Message =>
                 /* You have arrived at the Bank. <a href="?ForceTopic38">Open your bank box</a>
-                * and then <a href="?ForceTopic86">cash the check</a> that Mardoth gave you.
-                */
-                return 1060644;
-            }
-        }
+* and then <a href="?ForceTopic86">cash the check</a> that Mardoth gave you.
+*/
+                1060644;
         public override void OnComplete()
         {
             this.System.AddConversation(new BankerConversation());

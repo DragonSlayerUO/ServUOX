@@ -7,25 +7,25 @@ namespace Server.Multis
 {
     public class TokunoGalleon : BaseGalleon
     {
-        public override int NorthID { get { return 0x30 + (DamageValue * 4); } }
-        public override int EastID { get { return 0x31 + (DamageValue * 4); } }
-        public override int SouthID { get { return 0x32 + (DamageValue * 4); } }
-        public override int WestID { get { return 0x33 + (DamageValue * 4); } }
+        public override int NorthID => 0x30 + (DamageValue * 4);
+        public override int EastID => 0x31 + (DamageValue * 4);
+        public override int SouthID => 0x32 + (DamageValue * 4);
+        public override int WestID => 0x33 + (DamageValue * 4);
 
-        public override int HoldDistance { get { return -5; } }
-        public override int CaptiveOffset { get { return 2; } }
-        public override int TillerManDistance { get { return -1; } }
-        public override int RuneOffset { get { return -3; } }
+        public override int HoldDistance => -5;
+        public override int CaptiveOffset => 2;
+        public override int TillerManDistance => -1;
+        public override int RuneOffset => -3;
 
-        public override int WheelDistance { get { return 7; } }
-        public override int MaxCannons { get { return 5; } }
+        public override int WheelDistance => 7;
+        public override int MaxCannons => 5;
 
-        public override double TurnDelay { get { return 3; } }
-        public override int MaxHits { get { return 100000; } }
+        public override double TurnDelay => 3;
+        public override int MaxHits => 100000;
 
-        public override int ZSurface { get { return 7; } }
+        public override int ZSurface => 7;
 
-        public override BaseDockedBoat DockedBoat { get { return new DockedTokunoGalleon(this); } }
+        public override BaseDockedBoat DockedBoat => new DockedTokunoGalleon(this);
 
         [Constructable]
         public TokunoGalleon() : this(Direction.North) { }
@@ -36,7 +36,7 @@ namespace Server.Multis
         {
         }
 
-        public override int[][] CannonTileIDs { get { return m_CannonTileIDs; } }
+        public override int[][] CannonTileIDs => m_CannonTileIDs;
         private int[][] m_CannonTileIDs = new int[][]
         {
             //                 -34    -4     -31    -4
@@ -56,7 +56,7 @@ namespace Server.Multis
             new int[] { 38519, 38485, 38481, 38450, 38446 }, //EAST  D2   
         };
 
-        public override int[][] FillerIDs { get { return m_FillerIDs; } }
+        public override int[][] FillerIDs => m_FillerIDs;
         private int[][] m_FillerIDs = new int[][]
         {
             /*//          BL     ML1    ML2    FL     F1     F2     F3     FR     MR2    MR1    BR
@@ -80,7 +80,7 @@ namespace Server.Multis
             new int[] { 35123, 35116, 35109, 35102, 35100, 35101, 35106, 35104, 35111, 35118, 35125 },  //EAST  D2*/
         };
 
-        public override int[][] HoldIDs { get { return m_HoldIDs; } }
+        public override int[][] HoldIDs => m_HoldIDs;
         private int[][] m_HoldIDs = new int[][]
         {
             //          BL +7  FL -1  FM -1  FR -7  BR  +1
@@ -100,7 +100,7 @@ namespace Server.Multis
             new int[] { 38428, 38435, 38433, 38426, 37367 },  //EAST D1
         };
 
-        public override int[][] HoldItemIDs { get { return m_HoldItemIDs; } }
+        public override int[][] HoldItemIDs => m_HoldItemIDs;
         private int[][] m_HoldItemIDs = new int[][]
         {
             new int[] { 36969 },
@@ -119,7 +119,7 @@ namespace Server.Multis
             new int[] { 38434 },
         };
 
-        public override int[][] WheelItemIDs { get { return m_WheelItemIDs; } }
+        public override int[][] WheelItemIDs => m_WheelItemIDs;
         private int[][] m_WheelItemIDs = new int[][]
         {
 
@@ -203,8 +203,8 @@ namespace Server.Multis
 
     public class TokunoGalleonDeed : BaseBoatDeed
     {
-        public override int LabelNumber { get { return 1116740; } }
-        public override BaseBoat Boat { get { return new TokunoGalleon(this.BoatDirection); } }
+        public override int LabelNumber => 1116740;
+        public override BaseBoat Boat => new TokunoGalleon(this.BoatDirection);
 
         [Constructable]
         public TokunoGalleonDeed()
@@ -234,8 +234,8 @@ namespace Server.Multis
 
     public class DockedTokunoGalleon : BaseDockedBoat
     {
-        public override int LabelNumber { get { return 1116749; } } //Tokuno Ship
-        public override BaseBoat Boat { get { return new TokunoGalleon(this.BoatDirection); } }
+        public override int LabelNumber => 1116749;  //Tokuno Ship
+        public override BaseBoat Boat => new TokunoGalleon(this.BoatDirection);
 
         public DockedTokunoGalleon(BaseBoat boat)
             : base(0x30, Point3D.Zero, boat)

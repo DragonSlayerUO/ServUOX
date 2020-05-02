@@ -19,20 +19,8 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
-        public override int LitSound
-        {
-            get
-            {
-                return 0;
-            }
-        }
-        public override int UnlitSound
-        {
-            get
-            {
-                return 0;
-            }
-        }
+        public override int LitSound => 0;
+        public override int UnlitSound => 0;
         public override void OnDoubleClick(Mobile from)
         {
             bool wasBurning = this.Burning;

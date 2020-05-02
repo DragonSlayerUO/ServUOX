@@ -84,10 +84,10 @@ namespace Server.Mobiles
             }
         }
 
-        public override bool CanBeParagon { get { return false; } }
-        public override bool InitialInnocent { get { return true; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
-        public override int TreasureMapLevel { get { return 5; } }
+        public override bool CanBeParagon => false;
+        public override bool InitialInnocent => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
+        public override int TreasureMapLevel => 5;
 
         public DupresSquire(Serial serial)
             : base(serial)

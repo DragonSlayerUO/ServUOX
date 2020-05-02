@@ -19,41 +19,11 @@ namespace Server.Factions
             m_CollectionBox = collectionBox;
         }
 
-        public Rectangle2D[] Area
-        {
-            get
-            {
-                return m_Area;
-            }
-        }
-        public Point3D JoinStone
-        {
-            get
-            {
-                return m_JoinStone;
-            }
-        }
-        public Point3D FactionStone
-        {
-            get
-            {
-                return m_FactionStone;
-            }
-        }
-        public Point3D[] Monoliths
-        {
-            get
-            {
-                return m_Monoliths;
-            }
-        }
+        public Rectangle2D[] Area => m_Area;
+        public Point3D JoinStone => m_JoinStone;
+        public Point3D FactionStone => m_FactionStone;
+        public Point3D[] Monoliths => m_Monoliths;
 
-        public Point3D CollectionBox
-        {
-            get
-            {
-                return m_CollectionBox;
-            }
-        }
+        public Point3D CollectionBox => m_CollectionBox;
     }
 }

@@ -12,7 +12,7 @@ namespace Server.Items
 
     public class CompassionVirtueTileAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new CompassionVirtueTileDeed(); } }
+        public override BaseAddonDeed Deed => new CompassionVirtueTileDeed();
 
         private CompassionTileType m_CompassionTileType;
 
@@ -58,8 +58,8 @@ namespace Server.Items
 
     public class CompassionVirtueTileDeed : BaseAddonDeed, IRewardOption
     {
-        public override BaseAddon Addon { get { return new CompassionVirtueTileAddon(m_CompassionTileType); } }
-        public override int LabelNumber { get { return 1080481; } } // Compassion Virtue Tile Deed
+        public override BaseAddon Addon => new CompassionVirtueTileAddon(m_CompassionTileType);
+        public override int LabelNumber => 1080481;  // Compassion Virtue Tile Deed
 
         private CompassionTileType m_CompassionTileType;
 

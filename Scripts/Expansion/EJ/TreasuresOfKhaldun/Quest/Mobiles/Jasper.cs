@@ -10,7 +10,7 @@ namespace Server.Engines.Khaldun
 {
     public class InspectorJasper : MondainQuester
     {
-        public override Type[] Quests { get { return null; } }
+        public override Type[] Quests => null;
 
         public static InspectorJasper TramInstance { get; set; }
 

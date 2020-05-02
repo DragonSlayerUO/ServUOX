@@ -60,7 +60,7 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-        public override bool CanBeParagon { get { return false; } }
+        public override bool CanBeParagon => false;
         public override void OnDeath(Container c)
         {
             base.OnDeath(c);
@@ -79,13 +79,7 @@ namespace Server.Mobiles
                 return true;
             }
         }*/
-        public override bool AllureImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool AllureImmunity => true;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 3);

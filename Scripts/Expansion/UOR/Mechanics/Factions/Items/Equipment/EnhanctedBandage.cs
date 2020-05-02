@@ -12,7 +12,7 @@ namespace Server.Factions
 {
     public class EnchantedBandage : Item, IFactionItem
     {
-        public override int LabelNumber { get { return 1094712; } } // Enchanted Bandage
+        public override int LabelNumber => 1094712;  // Enchanted Bandage
 
         #region Factions
         private FactionItem m_FactionState;

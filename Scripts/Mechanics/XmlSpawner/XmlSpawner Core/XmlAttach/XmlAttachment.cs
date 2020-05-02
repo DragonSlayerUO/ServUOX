@@ -136,14 +136,14 @@ namespace Server.Engines.XmlSpawner2
         // Public properties
         // ----------------------------------------------
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime CreationTime { get { return m_CreationTime; } }
+        public DateTime CreationTime => m_CreationTime;
 
-        public bool Deleted { get { return m_Deleted; } }
+        public bool Deleted => m_Deleted;
 
         public bool DoDelete { get { return false; } set { if (value == true) Delete(); } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int SerialValue { get { return m_Serial.Value; } }
+        public int SerialValue => m_Serial.Value;
 
         public ASerial Serial { get { return m_Serial; } set { m_Serial = value; } }
 
@@ -171,31 +171,28 @@ namespace Server.Engines.XmlSpawner2
             }
         }
 
-        public DateTime ExpirationEnd
-        {
-            get { return m_ExpirationEnd; }
-        }
+        public DateTime ExpirationEnd => m_ExpirationEnd;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool CanActivateInBackpack { get { return true; } }
+        public virtual bool CanActivateInBackpack => true;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool CanActivateEquipped { get { return true; } }
+        public virtual bool CanActivateEquipped => true;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool CanActivateInWorld { get { return true; } }
+        public virtual bool CanActivateInWorld => true;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool HandlesOnSpeech { get { return false; } }
+        public virtual bool HandlesOnSpeech => false;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool HandlesOnMovement { get { return false; } }
+        public virtual bool HandlesOnMovement => false;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool HandlesOnKill { get { return false; } }
+        public virtual bool HandlesOnKill => false;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool HandlesOnKilled { get { return false; } }
+        public virtual bool HandlesOnKilled => false;
 
         /*
 		[CommandProperty( AccessLevel.GameMaster )]
@@ -206,17 +203,17 @@ namespace Server.Engines.XmlSpawner2
         public virtual string Name { get { return m_Name; } set { m_Name = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual object Attached { get { return m_AttachedTo; } }
+        public virtual object Attached => m_AttachedTo;
 
         public virtual object AttachedTo { get { return m_AttachedTo; } set { m_AttachedTo = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual string AttachedBy { get { return m_AttachedBy; } }
+        public virtual string AttachedBy => m_AttachedBy;
 
         public virtual object OwnedBy { get { return m_OwnedBy; } set { m_OwnedBy = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual object Owner { get { return m_OwnedBy; } }
+        public virtual object Owner => m_OwnedBy;
 
         // ----------------------------------------------
         // Private methods

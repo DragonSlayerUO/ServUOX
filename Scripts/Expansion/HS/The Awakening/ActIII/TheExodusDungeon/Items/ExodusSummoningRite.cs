@@ -8,7 +8,7 @@ namespace Server.Items
 {
     public class ExodusSummoningRite : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1153498; } } // exodus summoning rite 
+        public override int LabelNumber => 1153498;  // exodus summoning rite 
 
         [Constructable]
         public ExodusSummoningRite() : base(0x2258)
@@ -18,8 +18,8 @@ namespace Server.Items
             LootType = LootType.Regular;
         }
 
-        public override int Lifespan { get { return 604800; } }
-        public override bool UseSeconds { get { return false; } }
+        public override int Lifespan => 604800;
+        public override bool UseSeconds => false;
 
         public ExodusSummoningRite(Serial serial) : base(serial)
         {

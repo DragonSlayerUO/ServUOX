@@ -44,34 +44,10 @@ namespace Server.Factions
             m_Faction = faction;
         }
 
-        public Item Item
-        {
-            get
-            {
-                return m_Item;
-            }
-        }
-        public Faction Faction
-        {
-            get
-            {
-                return m_Faction;
-            }
-        }
-        public DateTime Expiration
-        {
-            get
-            {
-                return m_Expiration;
-            }
-        }
-        public int MinRank
-        {
-            get
-            {
-                return m_MinRank;
-            }
-        }
+        public Item Item => m_Item;
+        public Faction Faction => m_Faction;
+        public DateTime Expiration => m_Expiration;
+        public int MinRank => m_MinRank;
         public bool HasExpired
         {
             get

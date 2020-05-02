@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TheNightReaper : RepeatingCrossbow
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public TheNightReaper()
         {
@@ -20,13 +20,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1072912;
-            }
-        }// The Night Reaper
+        public override int LabelNumber => 1072912;// The Night Reaper
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

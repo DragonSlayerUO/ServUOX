@@ -5,17 +5,17 @@ namespace Server.Items
 {
     public class KelpWovenLeggings : LeatherLegs
     {
-        public override bool IsArtifact { get { return true; } }
-        public override int LabelNumber { get { return 1149960; } }//Enchanted Kelp Woven Leggings
+        public override bool IsArtifact => true;
+        public override int LabelNumber => 1149960; //Enchanted Kelp Woven Leggings
 
-        public override int BasePhysicalResistance { get { return 5; } }
-        public override int BaseFireResistance { get { return 13; } }
-        public override int BaseColdResistance { get { return 12; } }
-        public override int BasePoisonResistance { get { return 8; } }
-        public override int BaseEnergyResistance { get { return 14; } }
+        public override int BasePhysicalResistance => 5;
+        public override int BaseFireResistance => 13;
+        public override int BaseColdResistance => 12;
+        public override int BasePoisonResistance => 8;
+        public override int BaseEnergyResistance => 14;
 
-        public override int InitMinHits { get { return 255; } }
-        public override int InitMaxHits { get { return 255; } }
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
 
         [Constructable]
         public KelpWovenLeggings()

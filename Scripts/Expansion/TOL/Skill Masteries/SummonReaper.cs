@@ -18,12 +18,12 @@ namespace Server.Spells.SkillMasteries
                 9061
             );
 
-        public override double RequiredSkill { get { return 90; } }
-        public override double UpKeep { get { return 0; } }
-        public override int RequiredMana { get { return 50; } }
-        public override bool PartyEffects { get { return false; } }
+        public override double RequiredSkill => 90;
+        public override double UpKeep => 0;
+        public override int RequiredMana => 50;
+        public override bool PartyEffects => false;
 
-        public override SkillName CastSkill { get { return SkillName.Spellweaving; } }
+        public override SkillName CastSkill => SkillName.Spellweaving;
 
         public SummonReaperSpell(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
@@ -86,8 +86,8 @@ namespace Server.Spells.SkillMasteries
     {
         private int m_DispelDifficulty;
 
-        public override double DispelDifficulty { get { return m_DispelDifficulty; } }
-        public override double DispelFocus { get { return 45.0; } }
+        public override double DispelDifficulty => m_DispelDifficulty;
+        public override double DispelFocus => 45.0;
 
         private long _NextAura;
 
@@ -146,9 +146,9 @@ namespace Server.Spells.SkillMasteries
             SetWeaponAbility(WeaponAbility.WhirlwindAttack);
         }
 
-        public override Poison PoisonImmunity { get { return Poison.Greater; } }
-        public override bool DisallowAllMoves { get { return true; } }
-        public override bool AlwaysMurderer { get { return true; } }
+        public override Poison PoisonImmunity => Poison.Greater;
+        public override bool DisallowAllMoves => true;
+        public override bool AlwaysMurderer => true;
 
         public override void OnThink()
         {

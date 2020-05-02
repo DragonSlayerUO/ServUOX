@@ -7,8 +7,8 @@ namespace Server.Engines.InstancedPeerless
 {
     public class StygianDragonPlatform : PeerlessPlatform
     {
-        public override Type KeyType { get { return typeof(DraconicOrb); } }
-        public override Type BossType { get { return typeof(StygianDragon); } }
+        public override Type KeyType => typeof(DraconicOrb);
+        public override Type BossType => typeof(StygianDragon);
 
         [Constructable]
         public StygianDragonPlatform()

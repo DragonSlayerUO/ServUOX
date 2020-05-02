@@ -28,13 +28,7 @@ namespace Server.Items
 
 
 
-        public override BaseAddonDeed Deed
-        {
-            get
-            {
-                return new tent_brownAddonDeed();
-            }
-        }
+        public override BaseAddonDeed Deed => new tent_brownAddonDeed();
 
         [Constructable]
         public tent_brownAddon()
@@ -160,13 +154,7 @@ namespace Server.Items
 
     public class tent_brownAddonDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon
-        {
-            get
-            {
-                return new tent_brownAddon();
-            }
-        }
+        public override BaseAddon Addon => new tent_brownAddon();
 
         [Constructable]
         public tent_brownAddonDeed()

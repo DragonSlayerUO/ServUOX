@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class WireSpool : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154428; } } // Wire Spool
+        public override int LabelNumber => 1154428;  // Wire Spool
 
         [Constructable]
         public WireSpool()
@@ -22,7 +22,7 @@ namespace Server.Items
             list.Add(1072351); // Quest Item
         }
 
-        public override int Lifespan { get { return 18000; } }
+        public override int Lifespan => 18000;
 
         public WireSpool(Serial serial)
             : base(serial)

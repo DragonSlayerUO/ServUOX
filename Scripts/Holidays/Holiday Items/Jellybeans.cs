@@ -22,13 +22,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1096932;
-            }
-        }/* jellybeans */
+        public override int LabelNumber => 1096932;/* jellybeans */
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

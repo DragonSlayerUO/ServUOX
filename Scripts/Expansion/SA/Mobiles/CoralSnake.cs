@@ -52,26 +52,14 @@ namespace Server.Mobiles
         {
         }
 
-        public override Poison PoisonImmunity
-        {
-            get { return Poison.Lesser; }
-        }
+        public override Poison PoisonImmunity => Poison.Lesser;
 
-        public override Poison HitPoison
-        {
-            get { return Poison.Deadly; }
-        }
+        public override Poison HitPoison => Poison.Deadly;
 
         //public override bool DeathAdderCharmable{ get{ return true; } }
-        public override int Meat
-        {
-            get { return 1; }
-        }
+        public override int Meat => 1;
 
-        public override FoodType FavoriteFood
-        {
-            get { return FoodType.Eggs; }
-        }
+        public override FoodType FavoriteFood => FoodType.Eggs;
 
         public override void Serialize(GenericWriter writer)
         {

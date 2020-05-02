@@ -174,7 +174,7 @@ namespace Server.Items
 
     public class MyrmidexIdol : Item
     {
-        public override int LabelNumber { get { return 1156823; } } // Idol of Zipactriotl
+        public override int LabelNumber => 1156823;  // Idol of Zipactriotl
 
         private static Point3D _Destination = new Point3D(896, 2304, 45);
 
@@ -223,7 +223,7 @@ namespace Server.Items
 
     public class StasisChamberPowerCore : Item
     {
-        public override int LabelNumber { get { return 1156623; } }
+        public override int LabelNumber => 1156623;
 
         [Constructable]
         public StasisChamberPowerCore()
@@ -250,7 +250,7 @@ namespace Server.Items
 
     public class StasisChamberActivator : Item
     {
-        public override int LabelNumber { get { return 1156624; } }
+        public override int LabelNumber => 1156624;
 
         [Constructable]
         public StasisChamberActivator()
@@ -278,7 +278,7 @@ namespace Server.Items
 
     public class StasisChamberRegulator : Item
     {
-        public override int LabelNumber { get { return 1156626; } }
+        public override int LabelNumber => 1156626;
 
         [Constructable]
         public StasisChamberRegulator()
@@ -306,7 +306,7 @@ namespace Server.Items
 
     public class StasisChamberStator : Item
     {
-        public override int LabelNumber { get { return 1156628; } }
+        public override int LabelNumber => 1156628;
 
         [Constructable]
         public StasisChamberStator()
@@ -334,7 +334,7 @@ namespace Server.Items
 
     public class BottledMyrmidexPheromone : Item
     {
-        public override int LabelNumber { get { return 1156620; } }
+        public override int LabelNumber => 1156620;
 
         [Constructable]
         public BottledMyrmidexPheromone()
@@ -362,7 +362,7 @@ namespace Server.Items
 
     public class BottleOfConcentratedInsecticide : Item
     {
-        public override int LabelNumber { get { return 1156617; } }
+        public override int LabelNumber => 1156617;
 
         [Constructable]
         public BottleOfConcentratedInsecticide()
@@ -390,7 +390,7 @@ namespace Server.Items
 
     public class MyrmidexPopulationReport : Item
     {
-        public override int LabelNumber { get { return 1156775; } }
+        public override int LabelNumber => 1156775;
 
         [Constructable]
         public MyrmidexPopulationReport()
@@ -419,7 +419,7 @@ namespace Server.Items
 
     public class UnabridgedAtlasOfEodon : Item
     {
-        public override int LabelNumber { get { return 1156721; } } // Unabridged Atlas of Eodon
+        public override int LabelNumber => 1156721;  // Unabridged Atlas of Eodon
 
         [Constructable]
         public UnabridgedAtlasOfEodon()

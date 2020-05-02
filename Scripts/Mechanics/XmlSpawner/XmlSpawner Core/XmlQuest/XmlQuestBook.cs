@@ -21,10 +21,7 @@ namespace Server.Items
     public class PlayerQuestBoard : XmlQuestBook
     {
 
-        public override bool IsDecoContainer
-        {
-            get { return false; }
-        }
+        public override bool IsDecoContainer => false;
 
         public PlayerQuestBoard(Serial serial) : base(serial)
         {

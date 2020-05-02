@@ -43,7 +43,7 @@ namespace Server.Items
 
     public class DefenderOfEodonTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Defender of Eodon"); } }
+        public override TextDefinition Title => new TextDefinition("Defender of Eodon");
 
         [Constructable]
         public DefenderOfEodonTitleDeed()
@@ -69,7 +69,7 @@ namespace Server.Items
 
     public class DefenderOfTheMyrmidexTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Defender of the Myrmidex"); } }
+        public override TextDefinition Title => new TextDefinition("Defender of the Myrmidex");
 
         [Constructable]
         public DefenderOfTheMyrmidexTitleDeed()
@@ -95,7 +95,7 @@ namespace Server.Items
 
     public class FlameOfTheJukariTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Flame of the Jukari"); } }
+        public override TextDefinition Title => new TextDefinition("Flame of the Jukari");
 
         [Constructable]
         public FlameOfTheJukariTitleDeed()
@@ -121,7 +121,7 @@ namespace Server.Items
 
     public class AmbusherOfTheKurakTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Ambusher of the Kurak"); } }
+        public override TextDefinition Title => new TextDefinition("Ambusher of the Kurak");
 
         [Constructable]
         public AmbusherOfTheKurakTitleDeed()
@@ -147,7 +147,7 @@ namespace Server.Items
 
     public class TrooperOfTheBarakoTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Trooper of the Barako"); } }
+        public override TextDefinition Title => new TextDefinition("Trooper of the Barako");
 
         [Constructable]
         public TrooperOfTheBarakoTitleDeed()
@@ -173,7 +173,7 @@ namespace Server.Items
 
     public class ThunderOfTheUraliTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Thunder of the Urali"); } }
+        public override TextDefinition Title => new TextDefinition("Thunder of the Urali");
 
         [Constructable]
         public ThunderOfTheUraliTitleDeed()
@@ -199,7 +199,7 @@ namespace Server.Items
 
     public class HerderOfTheSakkhraTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Herder of the Sakkhra"); } }
+        public override TextDefinition Title => new TextDefinition("Herder of the Sakkhra");
 
         [Constructable]
         public HerderOfTheSakkhraTitleDeed()
@@ -225,7 +225,7 @@ namespace Server.Items
 
     public class ColonizerOfTheBarrabTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition("Colonizer of the Barrab"); } }
+        public override TextDefinition Title => new TextDefinition("Colonizer of the Barrab");
 
         [Constructable]
         public ColonizerOfTheBarrabTitleDeed()

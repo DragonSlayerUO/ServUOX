@@ -31,20 +31,8 @@ namespace Server.Factions
             Faction,
             Town
         }
-        public static FactionPersistence Instance
-        {
-            get
-            {
-                return m_Instance;
-            }
-        }
-        public override string DefaultName
-        {
-            get
-            {
-                return "Faction Persistance - Internal";
-            }
-        }
+        public static FactionPersistence Instance => m_Instance;
+        public override string DefaultName => "Faction Persistance - Internal";
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

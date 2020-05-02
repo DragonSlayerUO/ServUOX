@@ -40,13 +40,7 @@ namespace Server.Factions
                 this.AssignName(this.m_Faction == null ? null : this.m_Faction.Definition.FactionStoneName);
             }
         }
-        public override string DefaultName
-        {
-            get
-            {
-                return "faction stone";
-            }
-        }
+        public override string DefaultName => "faction stone";
         public override void OnDoubleClick(Mobile from)
         {
             if (this.m_Faction == null)

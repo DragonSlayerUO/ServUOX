@@ -11,7 +11,7 @@ namespace Server.Items
         private Map m_MapDest;
         private Point3D m_LocDest;
 
-        public override int LabelNumber { get { return 1113495; } } // (Exit)
+        public override int LabelNumber => 1113495;  // (Exit)
 
         public override bool ForceShowProperties => true;
 

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CentaurCostume : BaseCostume
     {
-        public override string CreatureName { get { return "centaur"; } }
+        public override string CreatureName => "centaur";
 
         [Constructable]
         public CentaurCostume() : base()
@@ -13,13 +13,7 @@ namespace Server.Items
             this.CostumeBody = 101;
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1114235;
-            }
-        }// centaur costume
+        public override int LabelNumber => 1114235;// centaur costume
 
         public CentaurCostume(Serial serial)
             : base(serial)

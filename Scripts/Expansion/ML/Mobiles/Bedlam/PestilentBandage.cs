@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a pestilent bandage corpse")]
     public class PestilentBandage : BaseCreature
     {
-        public override double HealChance { get { return 1.0; } }
+        public override double HealChance => 1.0;
 
         [Constructable]
         public PestilentBandage()

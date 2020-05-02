@@ -34,7 +34,7 @@ namespace Server.Items
     {
         private MiniHouseType Type { get; set; }
 
-        public override int LabelNumber { get { return ((MiniHouseAddon)Addon).LabelNumber; } }
+        public override int LabelNumber => ((MiniHouseAddon)Addon).LabelNumber;
 
         public MiniHouseAddonComponent(int itemID)
             : base(itemID)
@@ -65,7 +65,7 @@ namespace Server.Items
 
     public class MiniHouseAddon : BaseAddon
     {
-        public override int LabelNumber { get { return MiniHouseInfo.GetInfo(m_Type).LabelNumber; } }
+        public override int LabelNumber => MiniHouseInfo.GetInfo(m_Type).LabelNumber;
 
         private MiniHouseType m_Type;
 
@@ -98,10 +98,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed
-        {
-            get { return new MiniHouseDeed(m_Type); }
-        }
+        public override BaseAddonDeed Deed => new MiniHouseDeed(m_Type);
 
         public void Construct()
         {
@@ -183,7 +180,7 @@ namespace Server.Items
             }
         }
 
-        public override BaseAddon Addon { get { return new MiniHouseAddon(m_Type); } }
+        public override BaseAddon Addon => new MiniHouseAddon(m_Type);
 
         [Constructable]
         public MiniHouseDeed()

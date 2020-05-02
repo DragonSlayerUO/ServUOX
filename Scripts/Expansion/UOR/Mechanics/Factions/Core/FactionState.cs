@@ -202,13 +202,7 @@ namespace Server.Factions
                 return false;
             }
         }
-        public bool IsAtrophyReady
-        {
-            get
-            {
-                return DateTime.UtcNow >= (m_LastAtrophy + TimeSpan.FromHours(47.0));
-            }
-        }
+        public bool IsAtrophyReady => DateTime.UtcNow >= (m_LastAtrophy + TimeSpan.FromHours(47.0));
         public List<FactionItem> FactionItems
         {
             get

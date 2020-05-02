@@ -15,7 +15,7 @@ namespace Server.Items
 
     public class GorgonLense : Item, ICraftable
     {
-        public override int LabelNumber { get { return 1112625; } } //  Gorgon Lense
+        public override int LabelNumber => 1112625;  //  Gorgon Lense
 
         private LenseType m_LenseType;
 
@@ -200,8 +200,8 @@ namespace Server.Items
 
     public class GorgonLenseWarningGump : BaseConfirmGump
     {
-        public override int TitleNumber { get { return 1112597; } } // Replace active Gorgon Lenses
-        public override int LabelNumber { get { return 1112598; } } // The remaining charges of the active lenses will be lost. Do you wish to proceed?
+        public override int TitleNumber => 1112597;  // Replace active Gorgon Lenses
+        public override int LabelNumber => 1112598;  // The remaining charges of the active lenses will be lost. Do you wish to proceed?
 
         private GorgonLense m_Lense;
         private Item m_Item;

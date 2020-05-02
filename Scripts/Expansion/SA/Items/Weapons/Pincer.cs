@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public class Pincer : BattleAxe
     {
-        public override bool IsArtifact { get { return true; } }
-        public override int LabelNumber { get { return 1154476; } } // Pincer
+        public override bool IsArtifact => true;
+        public override int LabelNumber => 1154476;  // Pincer
 
         [Constructable]
         public Pincer()
@@ -26,8 +26,8 @@ namespace Server.Items
             cold = nrgy = chaos = direct = pois = 0;
         }
 
-        public override int InitMinHits { get { return 255; } }
-        public override int InitMaxHits { get { return 255; } }
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
 
         public Pincer(Serial serial)
             : base(serial)
@@ -48,8 +48,8 @@ namespace Server.Items
 
     public class GargishPincer : GargishBattleAxe
     {
-        public override bool IsArtifact { get { return true; } }
-        public override int LabelNumber { get { return 1154476; } } // Pincer
+        public override bool IsArtifact => true;
+        public override int LabelNumber => 1154476;  // Pincer
 
         [Constructable]
         public GargishPincer()
@@ -70,8 +70,8 @@ namespace Server.Items
             cold = nrgy = chaos = direct = pois = 0;
         }
 
-        public override int InitMinHits { get { return 255; } }
-        public override int InitMaxHits { get { return 255; } }
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
 
         public GargishPincer(Serial serial)
             : base(serial)

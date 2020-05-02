@@ -23,13 +23,7 @@ namespace Server.Items
         {
         }
 
-        public override bool ForceShowProperties
-        {
-            get
-            {
-                return ObjectPropertyList.Enabled;
-            }
-        }
+        public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public Item Deed
         {
             get
@@ -53,13 +47,7 @@ namespace Server.Items
                 InvalidateProperties();
             }
         }
-        public bool FacingSouth
-        {
-            get
-            {
-                return (ItemID & 0x1) == 0;
-            }
-        }
+        public bool FacingSouth => (ItemID & 0x1) == 0;
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
@@ -147,13 +135,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1041007;
-            }
-        }// a banner deed
+        public override int LabelNumber => 1041007;// a banner deed
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsRewardItem
         {

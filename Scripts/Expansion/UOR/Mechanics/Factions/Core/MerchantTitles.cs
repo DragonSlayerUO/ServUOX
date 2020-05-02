@@ -28,41 +28,11 @@ namespace Server.Factions
             this.m_Assigned = assigned;
         }
 
-        public SkillName Skill
-        {
-            get
-            {
-                return this.m_Skill;
-            }
-        }
-        public double Requirement
-        {
-            get
-            {
-                return this.m_Requirement;
-            }
-        }
-        public TextDefinition Title
-        {
-            get
-            {
-                return this.m_Title;
-            }
-        }
-        public TextDefinition Label
-        {
-            get
-            {
-                return this.m_Label;
-            }
-        }
-        public TextDefinition Assigned
-        {
-            get
-            {
-                return this.m_Assigned;
-            }
-        }
+        public SkillName Skill => this.m_Skill;
+        public double Requirement => this.m_Requirement;
+        public TextDefinition Title => this.m_Title;
+        public TextDefinition Label => this.m_Label;
+        public TextDefinition Assigned => this.m_Assigned;
     }
 
     public class MerchantTitles
@@ -76,13 +46,7 @@ namespace Server.Factions
             new MerchantTitleInfo(SkillName.Fletching, 90.0,    new TextDefinition(1023022, "Bowyer"), new TextDefinition(1011472, "BOWYER"), new TextDefinition(1010125, "You now have the faction title of Bowyer")),
             new MerchantTitleInfo(SkillName.Tailoring, 90.0,    new TextDefinition(1022982, "Tailor"), new TextDefinition(1018300, "TAILOR"), new TextDefinition(1042162, "You now have the faction title of Tailor")),
         };
-        public static MerchantTitleInfo[] Info
-        {
-            get
-            {
-                return m_Info;
-            }
-        }
+        public static MerchantTitleInfo[] Info => m_Info;
         public static MerchantTitleInfo GetInfo(MerchantTitle title)
         {
             int idx = (int)title - 1;

@@ -15,20 +15,8 @@ namespace Server.Factions
         {
         }
 
-        public virtual int DefaultLabelNumber
-        {
-            get
-            {
-                return base.LabelNumber;
-            }
-        }
-        public new virtual string DefaultName
-        {
-            get
-            {
-                return null;
-            }
-        }
+        public virtual int DefaultLabelNumber => base.LabelNumber;
+        public new virtual string DefaultName => null;
         public override int LabelNumber
         {
             get

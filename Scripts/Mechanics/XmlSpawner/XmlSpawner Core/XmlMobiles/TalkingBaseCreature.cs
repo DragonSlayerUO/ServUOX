@@ -183,51 +183,20 @@ namespace Server.Mobiles
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TimeSpan RealTOD
-        {
-            get
-            {
-                return DateTime.UtcNow.TimeOfDay;
-            }
-        }
+        public TimeSpan RealTOD => DateTime.UtcNow.TimeOfDay;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int RealDay
-        {
-            get
-            {
-                return DateTime.UtcNow.Day;
-            }
-        }
+        public int RealDay => DateTime.UtcNow.Day;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int RealMonth
-        {
-            get
-            {
-                return DateTime.UtcNow.Month;
-            }
-        }
+        public int RealMonth => DateTime.UtcNow.Month;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DayOfWeek RealDayOfWeek
-        {
-            get
-            {
-                return DateTime.UtcNow.DayOfWeek;
-            }
-        }
+        public DayOfWeek RealDayOfWeek => DateTime.UtcNow.DayOfWeek;
 
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MoonPhase MoonPhase
-        {
-            get
-            {
-                return Clock.GetMoonPhase(this.Map, this.Location.X, this.Location.Y);
-            }
-
-        }
+        public MoonPhase MoonPhase => Clock.GetMoonPhase(this.Map, this.Location.X, this.Location.Y);
 
         [CommandProperty(AccessLevel.GameMaster)]
         public AccessLevel TriggerAccessLevel

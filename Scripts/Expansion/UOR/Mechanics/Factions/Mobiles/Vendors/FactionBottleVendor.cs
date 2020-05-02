@@ -19,13 +19,7 @@ namespace Server.Factions
         {
         }
 
-        public override VendorShoeType ShoeType
-        {
-            get
-            {
-                return Utility.RandomBool() ? VendorShoeType.Shoes : VendorShoeType.Sandals;
-            }
-        }
+        public override VendorShoeType ShoeType => Utility.RandomBool() ? VendorShoeType.Shoes : VendorShoeType.Sandals;
         public override void InitSBInfo()
         {
             this.SBInfos.Add(new SBFactionBottle());
@@ -61,20 +55,8 @@ namespace Server.Factions
         {
         }
 
-        public override IShopSellInfo SellInfo
-        {
-            get
-            {
-                return this.m_SellInfo;
-            }
-        }
-        public override List<GenericBuyInfo> BuyInfo
-        {
-            get
-            {
-                return this.m_BuyInfo;
-            }
-        }
+        public override IShopSellInfo SellInfo => this.m_SellInfo;
+        public override List<GenericBuyInfo> BuyInfo => this.m_BuyInfo;
 
         public class InternalBuyInfo : List<GenericBuyInfo>
         {

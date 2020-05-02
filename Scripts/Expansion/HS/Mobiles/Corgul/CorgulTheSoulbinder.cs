@@ -17,24 +17,24 @@ namespace Server.Mobiles
         private CorgulAltar m_Altar;
         private List<BaseCreature> m_Helpers = new List<BaseCreature>();
 
-        public override bool CanDamageBoats { get { return false; } }
-        public override bool TaintedLifeAura { get { return true; } }
-        public override int Meat { get { return 5; } }
-        public override double TreasureMapChance { get { return .25; } }
-        public override int TreasureMapLevel { get { return 7; } }
-        public override Poison PoisonImmunity { get { return Poison.Deadly; } }
+        public override bool CanDamageBoats => false;
+        public override bool TaintedLifeAura => true;
+        public override int Meat => 5;
+        public override double TreasureMapChance => .25;
+        public override int TreasureMapLevel => 7;
+        public override Poison PoisonImmunity => Poison.Deadly;
 
-        public override bool TeleportsTo { get { return true; } }
-        public override TimeSpan TeleportDuration { get { return TimeSpan.FromSeconds(Utility.RandomMinMax(10, 50)); } }
-        public override double TeleportProb { get { return 1.0; } }
-        public override bool TeleportsPets { get { return true; } }
+        public override bool TeleportsTo => true;
+        public override TimeSpan TeleportDuration => TimeSpan.FromSeconds(Utility.RandomMinMax(10, 50));
+        public override double TeleportProb => 1.0;
+        public override bool TeleportsPets => true;
 
-        public override Type[] UniqueList { get { return new Type[] { typeof(CorgulsEnchantedSash), typeof(CorgulsHandbookOnMysticism), typeof(CorgulsHandbookOnTheUndead) }; } }
-        public override Type[] SharedList { get { return new Type[] { typeof(HelmOfVengence), typeof(RingOfTheSoulbinder), typeof(RuneEngravedPegLeg), typeof(CullingBlade) }; } }
-        public override Type[] DecorativeList { get { return new Type[] { typeof(EnchantedBladeDeed), typeof(EnchantedVortexDeed) }; } }
+        public override Type[] UniqueList => new Type[] { typeof(CorgulsEnchantedSash), typeof(CorgulsHandbookOnMysticism), typeof(CorgulsHandbookOnTheUndead) };
+        public override Type[] SharedList => new Type[] { typeof(HelmOfVengence), typeof(RingOfTheSoulbinder), typeof(RuneEngravedPegLeg), typeof(CullingBlade) };
+        public override Type[] DecorativeList => new Type[] { typeof(EnchantedBladeDeed), typeof(EnchantedVortexDeed) };
 
-        public override bool NoGoodies { get { return true; } }
-        public override bool CanGivePowerscrolls { get { return false; } }
+        public override bool NoGoodies => true;
+        public override bool CanGivePowerscrolls => false;
 
         private readonly int _SpawnPerLoc = 15;
 
@@ -104,8 +104,8 @@ namespace Server.Mobiles
                 IsSoulbound = true;
         }
 
-        public double SharedChance { get { return Map != null && Map.Rules == MapRules.FeluccaRules ? .12 : .08; } }
-        public double DecorativeChance { get { return Map != null && Map.Rules == MapRules.FeluccaRules ? .40 : .25; } }
+        public double SharedChance => Map != null && Map.Rules == MapRules.FeluccaRules ? .12 : .08;
+        public double DecorativeChance => Map != null && Map.Rules == MapRules.FeluccaRules ? .40 : .25;
 
         public override bool OnBeforeDeath()
         {

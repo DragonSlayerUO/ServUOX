@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1029324;
-            }
-        }// bamboo
+        public override int LabelNumber => 1029324;// bamboo
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

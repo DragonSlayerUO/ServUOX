@@ -22,27 +22,9 @@ namespace Server.Items
         {
         }
 
-        public override SpellbookType SpellbookType
-        {
-            get
-            {
-                return SpellbookType.Necromancer;
-            }
-        }
-        public override int BookOffset
-        {
-            get
-            {
-                return 100;
-            }
-        }
-        public override int BookCount
-        {
-            get
-            {
-                return ((Core.SE) ? 17 : 16);
-            }
-        }
+        public override SpellbookType SpellbookType => SpellbookType.Necromancer;
+        public override int BookOffset => 100;
+        public override int BookCount => ((Core.SE) ? 17 : 16);
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

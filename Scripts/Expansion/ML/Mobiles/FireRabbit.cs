@@ -42,8 +42,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool IsScaryToPets { get { return true; } }
-        public override bool BardImmunity { get { return true; } }
+        public override bool IsScaryToPets => true;
+        public override bool BardImmunity => true;
 
         public override void OnDeath(Container c)
         {

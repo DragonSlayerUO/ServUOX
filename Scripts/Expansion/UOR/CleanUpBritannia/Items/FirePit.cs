@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class FirePitAddon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new FirePitDeed(); } }
+        public override BaseAddonDeed Deed => new FirePitDeed();
 
         [Constructable]
         public FirePitAddon()
@@ -35,8 +35,8 @@ namespace Server.Items
 
     public class FirePitDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new FirePitAddon(); } }
-        public override int LabelNumber { get { return 1080206; } } // Fire Pit
+        public override BaseAddon Addon => new FirePitAddon();
+        public override int LabelNumber => 1080206;  // Fire Pit
 
         [Constructable]
         public FirePitDeed()

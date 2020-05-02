@@ -9,7 +9,7 @@ namespace Server.Spells.Mysticism
 {
     public class MassSleepSpell : MysticSpell
     {
-        public override SpellCircle Circle { get { return SpellCircle.Fifth; } }
+        public override SpellCircle Circle => SpellCircle.Fifth;
 
         private static SpellInfo m_Info = new SpellInfo(
                 "Mass Sleep", "Vas Zu",

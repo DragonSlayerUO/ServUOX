@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class PutridHeart : Item
     {
-        public override int LabelNumber { get { return 1153424; } } // putrid heart
+        public override int LabelNumber => 1153424;  // putrid heart
 
         [Constructable]
         public PutridHeart()

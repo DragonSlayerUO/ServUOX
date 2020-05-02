@@ -21,13 +21,7 @@ namespace Server.Engines.Quests.Ninja
         {
         }
 
-        public override bool IsDecoContainer
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool IsDecoContainer => false;
         public override void OnDoubleClick(Mobile from)
         {
             PlayerMobile player = from as PlayerMobile;

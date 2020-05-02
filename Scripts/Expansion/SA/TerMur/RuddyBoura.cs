@@ -53,27 +53,18 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Meat
-        {
-            get { return 10; }
-        }
+        public override int Meat => 10;
 
-        public override int Hides
-        {
-            get { return 20; }
-        }
+        public override int Hides => 20;
 
-        public override int DragonBlood { get { return 8; } }
+        public override int DragonBlood => 8;
 
-        public override HideType HideType
-        {
-            get { return HideType.Spined; }
-        }
+        public override HideType HideType => HideType.Spined;
 
-        public override FoodType FavoriteFood { get { return FoodType.FruitsAndVegies; } }
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies;
 
-        public override int Fur { get { return GatheredFur ? 0 : 30; } }
-        public override FurType FurType { get { return FurType.LightBrown; } }
+        public override int Fur => GatheredFur ? 0 : 30;
+        public override FurType FurType => FurType.LightBrown;
 
         public bool Carve(Mobile from, Item item)
         {

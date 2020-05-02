@@ -919,13 +919,7 @@ namespace Server.Engines.XmlSpawner2
             this.Expiration = TimeSpan.FromMinutes(expiresin);
         }
 
-        public bool IsEmpty
-        {
-            get
-            {
-                return (this.m_Names == 0);
-            }
-        }
+        public bool IsEmpty => (this.m_Names == 0);
         // These are the various ways in which the message attachment can be constructed.
         // These can be called via the [addatt interface, via scripts, via the spawner ATTACH keyword
         // Other overloads could be defined to handle other types of arguments

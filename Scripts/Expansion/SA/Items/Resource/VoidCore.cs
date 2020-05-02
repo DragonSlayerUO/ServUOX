@@ -4,8 +4,8 @@ namespace Server.Items
 {
     public class VoidCore : Item, ICommodity
     {
-        public override int LabelNumber { get { return 1113334; } } // void core
-        public override double DefaultWeight { get { return 0.1; } }
+        public override int LabelNumber => 1113334;  // void core
+        public override double DefaultWeight => 0.1;
 
         [Constructable]
         public VoidCore()
@@ -26,8 +26,8 @@ namespace Server.Items
         {
         }
 
-        TextDefinition ICommodity.Description { get { return LabelNumber; } }
-        bool ICommodity.IsDeedable { get { return true; } }
+        TextDefinition ICommodity.Description => LabelNumber;
+        bool ICommodity.IsDeedable => true;
 
         public override void Serialize(GenericWriter writer)
         {

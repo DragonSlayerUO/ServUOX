@@ -24,7 +24,7 @@ namespace Server.Items
         {
         }
 
-        public override BaseAddonDeed Deed { get { return new CastlePaintingDeed(); } }
+        public override BaseAddonDeed Deed => new CastlePaintingDeed();
 
         public override void Serialize(GenericWriter writer)
         {
@@ -41,7 +41,7 @@ namespace Server.Items
 
     public class CastlePaintingDeed : BaseAddonDeed, IRewardOption
     {
-        public override int LabelNumber { get { return 1154184; } } // Castle Painting
+        public override int LabelNumber => 1154184;  // Castle Painting
 
         private DirectionType _Direction;
 
@@ -84,7 +84,7 @@ namespace Server.Items
                 base.OnDoubleClick(from);
         }
 
-        public override BaseAddon Addon { get { return new CastlePaintingAddon(_Direction); } }
+        public override BaseAddon Addon => new CastlePaintingAddon(_Direction);
 
         public override void Serialize(GenericWriter writer)
         {

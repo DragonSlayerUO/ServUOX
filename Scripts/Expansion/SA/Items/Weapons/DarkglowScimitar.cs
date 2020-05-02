@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DarkglowScimitar : RadiantScimitar
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public DarkglowScimitar()
         {
@@ -16,13 +16,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073542;
-            }
-        }// darkglow scimitar
+        public override int LabelNumber => 1073542;// darkglow scimitar
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

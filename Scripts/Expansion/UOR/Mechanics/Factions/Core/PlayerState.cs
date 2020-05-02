@@ -62,27 +62,9 @@ namespace Server.Factions
             Attach();
         }
 
-        public Mobile Mobile
-        {
-            get
-            {
-                return m_Mobile;
-            }
-        }
-        public Faction Faction
-        {
-            get
-            {
-                return m_Faction;
-            }
-        }
-        public List<PlayerState> Owner
-        {
-            get
-            {
-                return m_Owner;
-            }
-        }
+        public Mobile Mobile => m_Mobile;
+        public Faction Faction => m_Faction;
+        public List<PlayerState> Owner => m_Owner;
         public MerchantTitle MerchantTitle
         {
             get
@@ -119,13 +101,7 @@ namespace Server.Factions
                 Invalidate();
             }
         }
-        public List<SilverGivenEntry> SilverGiven
-        {
-            get
-            {
-                return m_SilverGiven;
-            }
-        }
+        public List<SilverGivenEntry> SilverGiven => m_SilverGiven;
         public int KillPoints
         {
             get
@@ -284,13 +260,7 @@ namespace Server.Factions
                 m_Leaving = value;
             }
         }
-        public bool IsLeaving
-        {
-            get
-            {
-                return (m_Leaving > DateTime.MinValue);
-            }
-        }
+        public bool IsLeaving => (m_Leaving > DateTime.MinValue);
         public bool IsActive
         {
             get

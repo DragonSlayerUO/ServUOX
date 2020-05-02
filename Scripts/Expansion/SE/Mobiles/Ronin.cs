@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a ronin corpse")]
     public class Ronin : BaseCreature
     {
-        public override bool ClickTitle { get { return false; } }
+        public override bool ClickTitle => false;
 
         private DateTime m_NextWeaponChange;
 
@@ -98,9 +98,9 @@ namespace Server.Mobiles
             AddLoot(LootPack.Gems, 2);
         }
 
-        public override bool AlwaysMurderer { get { return true; } }
-        public override bool BardImmunity { get { return true; } }
-        public override bool CanRummageCorpses { get { return true; } }
+        public override bool AlwaysMurderer => true;
+        public override bool BardImmunity => true;
+        public override bool CanRummageCorpses => true;
 
         public override double WeaponAbilityChance
         {

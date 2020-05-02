@@ -55,13 +55,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BleedImmunity
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool BleedImmunity => true;
 
         public override void GenerateLoot()
         {

@@ -74,7 +74,7 @@ namespace Server.Factions
             new Point3D(4264, 3707, 0)
         };
 
-        public override int LabelNumber { get { return 1094711; } } // Shrine Gem
+        public override int LabelNumber => 1094711;  // Shrine Gem
 
         #region Factions
         private FactionItem m_FactionState;

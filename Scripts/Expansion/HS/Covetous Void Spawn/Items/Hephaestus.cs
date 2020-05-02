@@ -7,8 +7,8 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(GargishHephaestus))]
     public class Hephaestus : HeaterShield
     {
-        public override int LabelNumber { get { return 1152909; } } // Hephaestus
-        public override bool IsArtifact { get { return true; } }
+        public override int LabelNumber => 1152909;  // Hephaestus
+        public override bool IsArtifact => true;
 
         [Constructable]
         public Hephaestus() : this(true)
@@ -61,8 +61,8 @@ namespace Server.Items
 
     public class GargishHephaestus : LargePlateShield
     {
-        public override int LabelNumber { get { return 1152909; } } // Hephaestus
-        public override bool IsArtifact { get { return true; } }
+        public override int LabelNumber => 1152909;  // Hephaestus
+        public override bool IsArtifact => true;
 
         [Constructable]
         public GargishHephaestus() : this(true)

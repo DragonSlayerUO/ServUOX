@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073510;
-            }
-        }// lightweight shortbow
+        public override int LabelNumber => 1073510;// lightweight shortbow
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -57,11 +57,11 @@ namespace Server.Engines.ResortAndCasino
     {
         public Dictionary<PlayerMobile, BaseDiceGame> Players { get; set; }
 
-        public override bool IsInvulnerable { get { return true; } }
-        public override bool IsActiveVendor { get { return false; } }
+        public override bool IsInvulnerable => true;
+        public override bool IsActiveVendor => false;
 
         private List<SBInfo> m_SBInfos = new List<SBInfo>();
-        protected override List<SBInfo> SBInfos { get { return m_SBInfos; } }
+        protected override List<SBInfo> SBInfos => m_SBInfos;
 
         public override void InitSBInfo()
         {
@@ -312,11 +312,11 @@ namespace Server.Engines.ResortAndCasino
 
     public class CasinoWaitress : BaseVendor
     {
-        public override bool IsActiveVendor { get { return false; } }
-        public override double GetMoveDelay { get { return (double)Utility.RandomMinMax(2, 6); } }
+        public override bool IsActiveVendor => false;
+        public override double GetMoveDelay => (double)Utility.RandomMinMax(2, 6);
 
         private List<SBInfo> m_SBInfos = new List<SBInfo>();
-        protected override List<SBInfo> SBInfos { get { return m_SBInfos; } }
+        protected override List<SBInfo> SBInfos => m_SBInfos;
 
         public Dictionary<Mobile, int> _Drinks { get; set; }
 

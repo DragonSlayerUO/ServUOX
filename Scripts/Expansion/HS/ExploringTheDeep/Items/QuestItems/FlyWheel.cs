@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FlyWheel : BaseDecayingItem
     {
-        public override int LabelNumber { get { return 1154427; } } // Flywheel
+        public override int LabelNumber => 1154427;  // Flywheel
 
         [Constructable]
         public FlyWheel()
@@ -22,7 +22,7 @@ namespace Server.Items
             list.Add(1072351); // Quest Item
         }
 
-        public override int Lifespan { get { return 18000; } }
+        public override int Lifespan => 18000;
 
         public FlyWheel(Serial serial)
             : base(serial)

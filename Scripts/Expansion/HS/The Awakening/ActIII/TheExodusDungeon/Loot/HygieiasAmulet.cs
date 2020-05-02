@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class HygieiasAmulet : GoldNecklace
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
 
         [Constructable]
         public HygieiasAmulet()
@@ -18,15 +18,9 @@ namespace Server.Items
         {
         }
 
-        public override bool CanFortify { get { return false; } }
+        public override bool CanFortify => false;
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1153524;
-            }
-        } // Hygieia's Amulet [Replica]
+        public override int LabelNumber => 1153524; // Hygieia's Amulet [Replica]
 
         public override void Serialize(GenericWriter writer)
         {

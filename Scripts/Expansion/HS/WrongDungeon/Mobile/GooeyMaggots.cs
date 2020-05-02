@@ -79,7 +79,7 @@ namespace Server.Mobiles
             }
         }
 
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+        public override Poison PoisonImmunity => Poison.Lethal;
 
         public override void Serialize(GenericWriter writer)
         {
@@ -99,7 +99,7 @@ namespace Server.Mobiles
 
     public class GooeyMaggotSlime : Item
     {
-        public override int LabelNumber { get { return 1015246; } } // Slime
+        public override int LabelNumber => 1015246;  // Slime
 
         [Constructable]
         public GooeyMaggotSlime()

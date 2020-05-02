@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class XenrrFishingPole : FishingPole
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
 
         public override bool OnEquip(Mobile from)
         {
@@ -61,7 +61,7 @@ namespace Server.Items
                 m.FixedParticles(0x3728, 1, 13, 5042, EffectLayer.Waist);
             }
         }
-        public override int LabelNumber { get { return 1095066; } }
+        public override int LabelNumber => 1095066;
 
         [Constructable]
         public XenrrFishingPole()

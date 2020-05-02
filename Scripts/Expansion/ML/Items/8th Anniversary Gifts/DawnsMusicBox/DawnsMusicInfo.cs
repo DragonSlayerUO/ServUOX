@@ -19,19 +19,7 @@ namespace Server.Items
             this.m_Rarity = rarity;
         }
 
-        public int Name
-        {
-            get
-            {
-                return this.m_Name;
-            }
-        }
-        public DawnsMusicRarity Rarity
-        {
-            get
-            {
-                return this.m_Rarity;
-            }
-        }
+        public int Name => this.m_Name;
+        public DawnsMusicRarity Rarity => this.m_Rarity;
     }
 }

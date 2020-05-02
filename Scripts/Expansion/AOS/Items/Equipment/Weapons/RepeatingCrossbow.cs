@@ -17,125 +17,23 @@ namespace Server.Items
         {
         }
 
-        public override int EffectID
-        {
-            get
-            {
-                return 0x1BFE;
-            }
-        }
-        public override Type AmmoType
-        {
-            get
-            {
-                return typeof(Bolt);
-            }
-        }
-        public override Item Ammo
-        {
-            get
-            {
-                return new Bolt();
-            }
-        }
-        public override WeaponAbility PrimaryAbility
-        {
-            get
-            {
-                return WeaponAbility.DoubleStrike;
-            }
-        }
-        public override WeaponAbility SecondaryAbility
-        {
-            get
-            {
-                return WeaponAbility.MovingShot;
-            }
-        }
-        public override int AosStrengthReq
-        {
-            get
-            {
-                return 30;
-            }
-        }
-        public override int AosMinDamage
-        {
-            get
-            {
-                return Core.ML ? 11 : 10;
-            }
-        }
-        public override int AosMaxDamage
-        {
-            get
-            {
-                return 15;
-            }
-        }
-        public override int AosSpeed
-        {
-            get
-            {
-                return 41;
-            }
-        }
-        public override float MlSpeed
-        {
-            get
-            {
-                return 2.75f;
-            }
-        }
-        public override int OldStrengthReq
-        {
-            get
-            {
-                return 30;
-            }
-        }
-        public override int OldMinDamage
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override int OldMaxDamage
-        {
-            get
-            {
-                return 12;
-            }
-        }
-        public override int OldSpeed
-        {
-            get
-            {
-                return 41;
-            }
-        }
-        public override int DefMaxRange
-        {
-            get
-            {
-                return 7;
-            }
-        }
-        public override int InitMinHits
-        {
-            get
-            {
-                return 31;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 80;
-            }
-        }
+        public override int EffectID => 0x1BFE;
+        public override Type AmmoType => typeof(Bolt);
+        public override Item Ammo => new Bolt();
+        public override WeaponAbility PrimaryAbility => WeaponAbility.DoubleStrike;
+        public override WeaponAbility SecondaryAbility => WeaponAbility.MovingShot;
+        public override int AosStrengthReq => 30;
+        public override int AosMinDamage => Core.ML ? 11 : 10;
+        public override int AosMaxDamage => 15;
+        public override int AosSpeed => 41;
+        public override float MlSpeed => 2.75f;
+        public override int OldStrengthReq => 30;
+        public override int OldMinDamage => 10;
+        public override int OldMaxDamage => 12;
+        public override int OldSpeed => 41;
+        public override int DefMaxRange => 7;
+        public override int InitMinHits => 31;
+        public override int InitMaxHits => 80;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

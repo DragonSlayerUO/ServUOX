@@ -54,7 +54,7 @@ namespace Server.Items
         public Mobile Owner { get { return m_Owner; } set { m_Owner = value; InvalidateProperties(); } }
 
         public override int LabelNumber { get { if (m_Owner == null) return 1096487; else return 0; } }
-        public override bool DisplaysContent { get { return false; } }
+        public override bool DisplaysContent => false;
 
         [Constructable]
         public LobsterTrap() : base(17615)
@@ -414,7 +414,7 @@ namespace Server.Items
             return true;
         }
 
-        public virtual int[] UseableTiles { get { return m_WaterTiles; } }
+        public virtual int[] UseableTiles => m_WaterTiles;
         private int[] m_WaterTiles = new int[]
         {
             //Deep Water

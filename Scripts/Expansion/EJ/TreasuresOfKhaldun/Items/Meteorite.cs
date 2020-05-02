@@ -31,7 +31,7 @@ namespace Server.Items
         }
 
 
-        public override int LabelNumber { get { return _Polished ? 1125446 : 1158640; } } // Polished/Rough Meteorite
+        public override int LabelNumber => _Polished ? 1125446 : 1158640;  // Polished/Rough Meteorite
 
         [Constructable]
         public Meteorite()

@@ -6,8 +6,8 @@ namespace Server.Mobiles
     public class RisingColossus : BaseCreature
     {
         private int m_DispelDifficulty;
-        public override double DispelDifficulty { get { return m_DispelDifficulty; } }
-        public override double DispelFocus { get { return 45.0; } }
+        public override double DispelDifficulty => m_DispelDifficulty;
+        public override double DispelFocus => 45.0;
 
         [Constructable]
         public RisingColossus(Mobile m, double baseskill, double boostskill)
@@ -61,13 +61,7 @@ namespace Server.Mobiles
             return (m.Int + m.Skills[SkillName.Magery].Value) / Math.Max(GetDistanceToSqrt(m), 1.0);
         }
 
-        public override bool AlwaysMurderer
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool AlwaysMurderer => true;
 
         public override int GetAttackSound()
         {
@@ -79,8 +73,8 @@ namespace Server.Mobiles
             return 0x629;
         }
 
-        public override bool BleedImmunity { get { return true; } }
-        public override Poison PoisonImmunity { get { return Poison.Lethal; } }
+        public override bool BleedImmunity => true;
+        public override Poison PoisonImmunity => Poison.Lethal;
 
         public RisingColossus(Serial serial) : base(serial)
         {

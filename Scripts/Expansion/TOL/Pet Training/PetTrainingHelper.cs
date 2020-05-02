@@ -116,9 +116,9 @@ namespace Server.Mobiles
 
     public static class PetTrainingHelper
     {
-        public static bool Enabled { get { return Core.TOL; } }
+        public static bool Enabled => Core.TOL;
 
-        public static List<TrainingPoint> TrainingPoints { get { return _TrainingPoints; } }
+        public static List<TrainingPoint> TrainingPoints => _TrainingPoints;
         public static List<TrainingPoint> _TrainingPoints;
 
         public static TrainingDefinition[] Definitions { get; private set; }
@@ -1449,7 +1449,7 @@ namespace Server.Mobiles
         /// Omit or make null to keep it from showing in the animal lore gump
         /// </summary>
 
-        public static TextDefinition[][] MagicalAbilityLocalizations { get { return _MagicalAbilityLocalizations; } }
+        public static TextDefinition[][] MagicalAbilityLocalizations => _MagicalAbilityLocalizations;
         private static TextDefinition[][] _MagicalAbilityLocalizations =
         {
             new TextDefinition[] { 1157559, 1157392 }, // piercing
@@ -1470,7 +1470,7 @@ namespace Server.Mobiles
             new TextDefinition[] { 1002106, 1157391 }  // magery
         };
 
-        public static TextDefinition[][] SpecialAbilityLocalizations { get { return _SpecialAbilityLocalizations; } }
+        public static TextDefinition[][] SpecialAbilityLocalizations => _SpecialAbilityLocalizations;
         private static TextDefinition[][] _SpecialAbilityLocalizations =
         {
             new TextDefinition[] { 1157412, 1157413 }, // Angry Fire
@@ -1499,7 +1499,7 @@ namespace Server.Mobiles
             new TextDefinition[] { 1153798, 0       }, // Blood Disease
         };
 
-        public static TextDefinition[][] AreaEffectLocalizations { get { return _AreaEffectLocalizations; } }
+        public static TextDefinition[][] AreaEffectLocalizations => _AreaEffectLocalizations;
         private static TextDefinition[][] _AreaEffectLocalizations =
         {
             new TextDefinition[] { 1157459, 1157460 }, // Aura of Energy
@@ -1511,7 +1511,7 @@ namespace Server.Mobiles
             new TextDefinition[] { 1157475, 1157476 }, // Poison Breath
         };
 
-        public static TextDefinition[][] WeaponAbilityLocalizations { get { return _WeaponAbilityLocalizations; } }
+        public static TextDefinition[][] WeaponAbilityLocalizations => _WeaponAbilityLocalizations;
         private static TextDefinition[][] _WeaponAbilityLocalizations =
         {
             new TextDefinition[] { 1028855, 1157436 }, // Nerve Strike

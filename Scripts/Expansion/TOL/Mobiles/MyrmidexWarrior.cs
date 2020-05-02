@@ -60,9 +60,9 @@ namespace Server.Mobiles
             return base.OnBeforeDeath();
         }
 
-        public override Poison HitPoison { get { return Poison.Deadly; } }
-        public override Poison PoisonImmunity { get { return Poison.Deadly; } }
-        public override int TreasureMapLevel { get { return 2; } }
+        public override Poison HitPoison => Poison.Deadly;
+        public override Poison PoisonImmunity => Poison.Deadly;
+        public override int TreasureMapLevel => 2;
 
         public override bool IsEnemy(Mobile m)
         {

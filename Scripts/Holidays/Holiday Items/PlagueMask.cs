@@ -15,13 +15,7 @@ namespace Server.Items.Holiday
         {
         }
 
-        public override string MaskName
-        {
-            get
-            {
-                return "Plague Mask";
-            }
-        }
+        public override string MaskName => "Plague Mask";
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

@@ -51,20 +51,8 @@ namespace Server.Ethics
             }
         }
 
-        public Ethic Ethic
-        {
-            get
-            {
-                return this.m_Ethic;
-            }
-        }
-        public Mobile Mobile
-        {
-            get
-            {
-                return this.m_Mobile;
-            }
-        }
+        public Ethic Ethic => this.m_Ethic;
+        public Mobile Mobile => this.m_Mobile;
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
         public int Power
         {

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RareSerpentEgg : PeerlessKey
     {
-        public override int LabelNumber { get { return 1112575; } } // a rare serpent egg
+        public override int LabelNumber => 1112575;  // a rare serpent egg
 
         [Constructable]
         public RareSerpentEgg()
@@ -16,7 +16,7 @@ namespace Server.Items
             Hue = Utility.RandomList(0x21, 0x4AC, 0x41C);
         }
 
-        public override int Lifespan { get { return 43200; } }
+        public override int Lifespan => 43200;
 
         public RareSerpentEgg(Serial serial)
             : base(serial)

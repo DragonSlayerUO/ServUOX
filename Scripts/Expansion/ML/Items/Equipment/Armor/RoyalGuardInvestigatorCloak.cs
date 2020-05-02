@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class RoyalGuardInvestigatorsCloak : Cloak
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public RoyalGuardInvestigatorsCloak()
             : base()
@@ -18,27 +18,9 @@ namespace Server.Items
         {
         }
 
-        public override int InitMinHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1112409;
-            }
-        }// Royal Guard Investigator's Cloak [Replica]
+        public override int InitMinHits => 150;
+        public override int InitMaxHits => 150;
+        public override int LabelNumber => 1112409;// Royal Guard Investigator's Cloak [Replica]
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);

@@ -80,7 +80,7 @@ namespace Server.Items
             }
         }
 
-        public override int LabelNumber { get { return 1071387; } } // Natural Hair Dye
+        public override int LabelNumber => 1071387;  // Natural Hair Dye
 
         public override void GetProperties(ObjectPropertyList list)
         {
@@ -120,7 +120,7 @@ namespace Server.Items
             Type = (HairDyeType)reader.ReadEncodedInt();
         }
 
-        public static HairDyeInfo[] Table { get { return m_Table; } }
+        public static HairDyeInfo[] Table => m_Table;
         private static HairDyeInfo[] m_Table =
         {
             // Hue, Label

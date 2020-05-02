@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class UnknownBardSkeleton : BaseContainer
     {
-        public override int DefaultGumpID { get { return 0x9; } }
+        public override int DefaultGumpID => 0x9;
 
         [Constructable]
         public UnknownBardSkeleton()
@@ -57,7 +57,7 @@ namespace Server.Items
 
     public class UnknownRogueSkeleton : BaseContainer
     {
-        public override int DefaultGumpID { get { return 0x9; } }
+        public override int DefaultGumpID => 0x9;
 
         [Constructable]
         public UnknownRogueSkeleton()
@@ -108,7 +108,7 @@ namespace Server.Items
 
     public class UnknownMageSkeleton : BaseContainer
     {
-        public override int DefaultGumpID { get { return 0x9; } }
+        public override int DefaultGumpID => 0x9;
 
         [Constructable]
         public UnknownMageSkeleton()

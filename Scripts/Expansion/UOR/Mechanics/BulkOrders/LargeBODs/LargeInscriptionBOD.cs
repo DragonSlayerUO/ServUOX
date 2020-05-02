@@ -5,7 +5,7 @@ namespace Server.Engines.BulkOrders
 {
     public class LargeInscriptionBOD : LargeBOD
     {
-        public override BODType BODType { get { return BODType.Inscription; } }
+        public override BODType BODType => BODType.Inscription;
 
         [Constructable]
         public LargeInscriptionBOD()

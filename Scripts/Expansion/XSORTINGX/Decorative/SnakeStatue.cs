@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SnakeStatue : Item
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
         [Constructable]
         public SnakeStatue()
             : base(0x25C2)
@@ -18,13 +18,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073194;
-            }
-        }// A Snake Contribution Statue from the Britannia Royal Zoo.
+        public override int LabelNumber => 1073194;// A Snake Contribution Statue from the Britannia Royal Zoo.
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);

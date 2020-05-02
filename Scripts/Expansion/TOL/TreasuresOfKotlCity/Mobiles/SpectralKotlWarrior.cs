@@ -65,8 +65,8 @@ namespace Server.Mobiles
             this.AddLoot(LootPack.Rich, 2);
         }
 
-        public override Poison HitPoison { get { return Poison.Deadly; } }
-        public override Poison PoisonImmunity { get { return Poison.Deadly; } }
+        public override Poison HitPoison => Poison.Deadly;
+        public override Poison PoisonImmunity => Poison.Deadly;
 
         public override bool IsEnemy(Mobile m)
         {

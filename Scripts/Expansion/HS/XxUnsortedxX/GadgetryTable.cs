@@ -225,7 +225,7 @@ namespace Server.Engines.VeteranRewards
 
     public class GadgetryTableAddonDeed : BaseAddonDeed, IRewardItem, IRewardOption
     {
-        public override int LabelNumber { get { return 1154583; } } // Deed for a Gadgetry Table
+        public override int LabelNumber => 1154583;  // Deed for a Gadgetry Table
 
         public override BaseAddon Addon
         {

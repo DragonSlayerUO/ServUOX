@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(41795, 41796)]
     public class SkullGnarledStaff : GnarledStaff
     {
-        public override int LabelNumber { get { return 1125819; } } // skull gnarled staff
+        public override int LabelNumber => 1125819;  // skull gnarled staff
 
         [Constructable]
         public SkullGnarledStaff()
@@ -38,9 +38,9 @@ namespace Server.Items
     [Flipable(41799, 41800)]
     public class GargishSkullGnarledStaff : GnarledStaff
     {
-        public override int LabelNumber { get { return 1125823; } } // gargish skull gnarled staff
-        public override Race RequiredRace { get { return Race.Gargoyle; } }
-        public override bool CanBeWornByGargoyles { get { return true; } }
+        public override int LabelNumber => 1125823;  // gargish skull gnarled staff
+        public override Race RequiredRace => Race.Gargoyle;
+        public override bool CanBeWornByGargoyles => true;
 
         [Constructable]
         public GargishSkullGnarledStaff()

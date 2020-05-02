@@ -91,7 +91,7 @@ namespace Server.Engines.XmlSpawner2
             m.SendMessage("You feel the life drain out of you!");
         }
 
-        public override bool HandlesOnMovement { get { return true; } }
+        public override bool HandlesOnMovement => true;
 
         public override void OnMovement(MovementEventArgs e)
         {

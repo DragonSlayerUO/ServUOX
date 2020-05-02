@@ -49,36 +49,12 @@ namespace Server.Mobiles
         {
         }
 
-        public override TribeType Tribe { get { return TribeType.Fey; } }
+        public override TribeType Tribe => TribeType.Fey;
 
-        public override OppositionGroup OppositionGroup
-        {
-            get
-            {
-                return OppositionGroup.FeyAndUndead;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 8;
-            }
-        }
-        public override HideType HideType
-        {
-            get
-            {
-                return HideType.Spined;
-            }
-        }
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
+        public override int Meat => 1;
+        public override int Hides => 8;
+        public override HideType HideType => HideType.Spined;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich);
