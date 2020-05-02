@@ -9,8 +9,8 @@ namespace Server.Items
         public AlbinoSquirrelImprisonedInCrystal()
             : base(0x1F1C)
         {
-            this.Weight = 1.0;
-            this.Hue = 0x482;
+            Weight = 1.0;
+            Hue = 0x482;
         }
 
         public AlbinoSquirrelImprisonedInCrystal(Serial serial)
@@ -44,7 +44,7 @@ namespace Server.Mobiles
         public AlbinoSquirrel()
             : base()
         {
-            this.Hue = 0x482;
+            Hue = 0x482;
         }
 
         public AlbinoSquirrel(Serial serial)

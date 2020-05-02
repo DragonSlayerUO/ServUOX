@@ -12,7 +12,7 @@ namespace Server.Items
         public ShrineMantra()
             : base(false)
         {
-            this.Hue = 2210;
+            Hue = 2210;
         }
 
         public ShrineMantra(Serial serial)

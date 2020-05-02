@@ -145,7 +145,7 @@ namespace Server.Engines.Events
         public PlayerBones(string name)
             : base(Utility.RandomMinMax(0x0ECA, 0x0ED2))
         {
-            this.Name = string.Format("{0}'s bones", name);
+            Name = string.Format("{0}'s bones", name);
 
             switch (Utility.Random(10))
             {

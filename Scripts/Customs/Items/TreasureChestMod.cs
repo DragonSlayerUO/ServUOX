@@ -9,8 +9,8 @@ namespace Server.Items
         public TreasureLevel1() : base(Utility.RandomList(0xE3C, 0xE3E, 0x9a9))
         {
             RequiredSkill = 52;
-            LockLevel = this.RequiredSkill - Utility.Random(1, 10);
-            MaxLockLevel = this.RequiredSkill;
+            LockLevel = RequiredSkill - Utility.Random(1, 10);
+            MaxLockLevel = RequiredSkill;
             TrapType = TrapType.MagicTrap;
             TrapPower = 1 * Utility.Random(1, 25);
 
@@ -55,8 +55,8 @@ namespace Server.Items
         public TreasureLevel1h() : base(Utility.RandomList(0xE3C, 0xE3E, 0x9a9))
         {
             RequiredSkill = 56;
-            LockLevel = this.RequiredSkill - Utility.Random(1, 10);
-            MaxLockLevel = this.RequiredSkill;
+            LockLevel = RequiredSkill - Utility.Random(1, 10);
+            MaxLockLevel = RequiredSkill;
             TrapType = TrapType.MagicTrap;
             TrapPower = 1 * Utility.Random(1, 25);
 
@@ -105,8 +105,8 @@ namespace Server.Items
         public TreasureLevel2() : base(Utility.RandomList(0xe3c, 0xE3E, 0x9a9, 0xe42, 0x9ab, 0xe40, 0xe7f, 0xe77))
         {
             RequiredSkill = 72;
-            LockLevel = this.RequiredSkill - Utility.Random(1, 10);
-            MaxLockLevel = this.RequiredSkill;
+            LockLevel = RequiredSkill - Utility.Random(1, 10);
+            MaxLockLevel = RequiredSkill;
             TrapType = TrapType.MagicTrap;
             TrapPower = 2 * Utility.Random(1, 25);
 
@@ -157,8 +157,8 @@ namespace Server.Items
         public TreasureLevel3() : base(Utility.RandomList(0x9ab, 0xe40, 0xe42))
         {
             RequiredSkill = 84;
-            LockLevel = this.RequiredSkill - Utility.Random(1, 10);
-            MaxLockLevel = this.RequiredSkill;
+            LockLevel = RequiredSkill - Utility.Random(1, 10);
+            MaxLockLevel = RequiredSkill;
             TrapType = TrapType.MagicTrap;
             TrapPower = 3 * Utility.Random(1, 25);
 
@@ -251,8 +251,8 @@ namespace Server.Items
         public TreasureLevel4() : base(Utility.RandomList(0xe40, 0xe42, 0x9ab))
         {
             RequiredSkill = 92;
-            LockLevel = this.RequiredSkill - Utility.Random(1, 10);
-            MaxLockLevel = this.RequiredSkill;
+            LockLevel = RequiredSkill - Utility.Random(1, 10);
+            MaxLockLevel = RequiredSkill;
             TrapType = TrapType.MagicTrap;
             TrapPower = 4 * Utility.Random(1, 25);
 

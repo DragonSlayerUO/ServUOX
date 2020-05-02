@@ -10,8 +10,8 @@ namespace Server.Items
         public GargoyleWoodenChest()
             : base(0x4025)
         {
-            this.Weight = 2.0;
-            this.GumpID = 0x42;
+            Weight = 2.0;
+            GumpID = 0x42;
         }
 
         public GargoyleWoodenChest(Serial serial)
@@ -32,8 +32,8 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            if (this.Weight == 15.0)
-                this.Weight = 2.0;
+            if (Weight == 15.0)
+                Weight = 2.0;
         }
     }
 }

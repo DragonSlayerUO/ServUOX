@@ -9,9 +9,9 @@ namespace Server.Engines.Quests.Samurai
         public HaochisKatanaGenerator()
             : base(0x1B7B)
         {
-            this.Visible = false;
-            this.Name = "Haochi's katana generator";
-            this.Movable = false;
+            Visible = false;
+            Name = "Haochi's katana generator";
+            Movable = false;
         }
 
         public HaochisKatanaGenerator(Serial serial)

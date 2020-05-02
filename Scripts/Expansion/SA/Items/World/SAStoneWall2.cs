@@ -8,10 +8,10 @@ namespace Server.Items
         public SAStoneWall2South()
             : base(88, 631)
         {
-            this.Name = "Stone Wall";
+            Name = "Stone Wall";
 
-            this.Level = ItemLevel.VeryEasy;
-            this.Movable = false;
+            Level = ItemLevel.VeryEasy;
+            Movable = false;
         }
 
         public SAStoneWall2South(Serial serial)
@@ -40,10 +40,10 @@ namespace Server.Items
         public SAStoneWall2East()
             : base(87, 636)
         {
-            this.Name = "Stone Wall";
+            Name = "Stone Wall";
 
-            this.Level = ItemLevel.VeryEasy;
-            this.Movable = false;
+            Level = ItemLevel.VeryEasy;
+            Movable = false;
         }
 
         public SAStoneWall2East(Serial serial)

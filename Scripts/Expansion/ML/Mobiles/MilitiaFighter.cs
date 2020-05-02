@@ -12,27 +12,27 @@ namespace Server.Engines.Quests.Haven
         public MilitiaFighter()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
-            this.InitStats(40, 30, 5);
-            this.Title = "the Militia Fighter";
+            InitStats(40, 30, 5);
+            Title = "the Militia Fighter";
 
-            this.SpeechHue = Utility.RandomDyedHue();
+            SpeechHue = Utility.RandomDyedHue();
 
-            this.Hue = Utility.RandomSkinHue();
+            Hue = Utility.RandomSkinHue();
 
-            this.Female = false;
-            this.Body = 0x190;
-            this.Name = NameList.RandomName("male");
+            Female = false;
+            Body = 0x190;
+            Name = NameList.RandomName("male");
 
             Utility.AssignRandomHair(this);
-            Utility.AssignRandomFacialHair(this, this.HairHue);
+            Utility.AssignRandomFacialHair(this, HairHue);
 
-            this.AddItem(new ThighBoots(0x1BB));
-            this.AddItem(new LeatherChest());
-            this.AddItem(new LeatherArms());
-            this.AddItem(new LeatherLegs());
-            this.AddItem(new LeatherCap());
-            this.AddItem(new LeatherGloves());
-            this.AddItem(new LeatherGorget());
+            AddItem(new ThighBoots(0x1BB));
+            AddItem(new LeatherChest());
+            AddItem(new LeatherArms());
+            AddItem(new LeatherLegs());
+            AddItem(new LeatherCap());
+            AddItem(new LeatherGloves());
+            AddItem(new LeatherGorget());
 
             Item weapon;
             switch (Utility.Random(6))
@@ -57,13 +57,13 @@ namespace Server.Engines.Quests.Haven
                     break;
             }
             weapon.Movable = false;
-            this.AddItem(weapon);
+            AddItem(weapon);
 
             Item shield = new BronzeShield();
             shield.Movable = false;
-            this.AddItem(shield);
+            AddItem(shield);
 
-            this.SetSkill(SkillName.Swords, 20.0);
+            SetSkill(SkillName.Swords, 20.0);
         }
 
         public MilitiaFighter(Serial serial)
@@ -83,7 +83,7 @@ namespace Server.Engines.Quests.Haven
 
                 Mobile master = bc.GetMaster();
                 if (master != null)
-                    return this.IsEnemy(master);
+                    return IsEnemy(master);
             }
 
             return m.Karma < 0;
@@ -118,10 +118,10 @@ namespace Server.Engines.Quests.Haven
 
         public override void AddNameProperty(ObjectPropertyList list)
         {
-            if (this.ItemID == 0x2006) // Corpse form
+            if (ItemID == 0x2006) // Corpse form
             {
                 list.Add("a human corpse");
-                list.Add(1049318, this.Name); // the remains of ~1_NAME~ the militia fighter
+                list.Add(1049318, Name); // the remains of ~1_NAME~ the militia fighter
             }
             else
             {
@@ -133,15 +133,15 @@ namespace Server.Engines.Quests.Haven
         {
             int hue = Notoriety.GetHue(Server.Misc.NotorietyHandlers.CorpseNotoriety(from, this));
 
-            if (this.ItemID == 0x2006) // Corpse form
-                from.Send(new MessageLocalized(this.Serial, this.ItemID, MessageType.Label, hue, 3, 1049318, "", this.Name)); // the remains of ~1_NAME~ the militia fighter
+            if (ItemID == 0x2006) // Corpse form
+                from.Send(new MessageLocalized(Serial, ItemID, MessageType.Label, hue, 3, 1049318, "", Name)); // the remains of ~1_NAME~ the militia fighter
             else
-                from.Send(new MessageLocalized(this.Serial, this.ItemID, MessageType.Label, hue, 3, 1049319, "", "")); // the remains of a militia fighter
+                from.Send(new MessageLocalized(Serial, ItemID, MessageType.Label, hue, 3, 1049319, "", "")); // the remains of a militia fighter
         }
 
         public override void Open(Mobile from, bool checkSelfLoot)
         {
-            if (from.InRange(this.GetWorldLocation(), 2))
+            if (from.InRange(GetWorldLocation(), 2))
             {
                 from.SendLocalizedMessage(1049661, "", 0x22); // Thinking about his sacrifice, you can't bring yourself to loot the body of this militia fighter.
             }

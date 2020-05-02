@@ -46,15 +46,15 @@ namespace Server.Mobiles
 
             switch (gender)
             {
-                case -1: this.Female = Utility.RandomBool(); break;
-                case 0: this.Female = false; break;
-                case 1: this.Female = true; break;
+                case -1: Female = Utility.RandomBool(); break;
+                case 0: Female = false; break;
+                case 1: Female = true; break;
             }
 
-            if (this.Female)
+            if (Female)
             {
-                this.Body = 0x191;
-                this.Name = NameList.RandomName("female");
+                Body = 0x191;
+                Name = NameList.RandomName("female");
                 Item hair = new Item(Utility.RandomList(0x203B, 0x203C, 0x203D, 0x2045, 0x204A, 0x2046, 0x2049));
                 hair.Hue = Utility.RandomHairHue();
                 hair.Layer = Layer.Hair;
@@ -92,8 +92,8 @@ namespace Server.Mobiles
             }
             else
             {
-                this.Body = 0x190;
-                this.Name = NameList.RandomName("male");
+                Body = 0x190;
+                Name = NameList.RandomName("male");
                 Item hair = new Item(Utility.RandomList(0x203B, 0x203C, 0x203D, 0x2044, 0x2045, 0x2047, 0x2048));
                 hair.Hue = Utility.RandomHairHue();
                 hair.Layer = Layer.Hair;

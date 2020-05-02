@@ -9,8 +9,8 @@ namespace Server.Items
         public BoilingCauldronAddon()
             : base(0x2068)
         {
-            this.AddComponent(new LocalizedContainerComponent(0xFAC, 1076267), 0, 0, 0);
-            this.AddComponent(new LocalizedContainerComponent(0x970, 1076267), 0, 0, 8);
+            AddComponent(new LocalizedContainerComponent(0xFAC, 1076267), 0, 0, 0);
+            AddComponent(new LocalizedContainerComponent(0x970, 1076267), 0, 0, 8);
         }
 
         public BoilingCauldronAddon(Serial serial)
@@ -43,7 +43,7 @@ namespace Server.Items
         public BoilingCauldronDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public BoilingCauldronDeed(Serial serial)

@@ -12,9 +12,9 @@ namespace Server.Factions
         public BaseMonolith(Town town, Faction faction)
             : base(0x1183)
         {
-            this.Movable = false;
-            this.Town = town;
-            this.Faction = faction;
+            Movable = false;
+            Town = town;
+            Faction = faction;
             m_Monoliths.Add(this);
         }
 
@@ -40,22 +40,22 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Sigil;
+                return m_Sigil;
             }
             set
             {
-                if (this.m_Sigil == value)
+                if (m_Sigil == value)
                     return;
 
-                this.m_Sigil = value;
+                m_Sigil = value;
 
-                if (this.m_Sigil != null && this.m_Sigil.LastMonolith != null && this.m_Sigil.LastMonolith != this && this.m_Sigil.LastMonolith.Sigil == this.m_Sigil)
-                    this.m_Sigil.LastMonolith.Sigil = null;
+                if (m_Sigil != null && m_Sigil.LastMonolith != null && m_Sigil.LastMonolith != this && m_Sigil.LastMonolith.Sigil == m_Sigil)
+                    m_Sigil.LastMonolith.Sigil = null;
 
-                if (this.m_Sigil != null)
-                    this.m_Sigil.LastMonolith = this;
+                if (m_Sigil != null)
+                    m_Sigil.LastMonolith = this;
 
-                this.UpdateSigil();
+                UpdateSigil();
             }
         }
         [CommandProperty(AccessLevel.Counselor, AccessLevel.Administrator)]
@@ -63,12 +63,12 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Town;
+                return m_Town;
             }
             set
             {
-                this.m_Town = value;
-                this.OnTownChanged();
+                m_Town = value;
+                OnTownChanged();
             }
         }
         [CommandProperty(AccessLevel.Counselor, AccessLevel.Administrator)]
@@ -76,32 +76,32 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Faction;
+                return m_Faction;
             }
             set
             {
-                this.m_Faction = value;
-                this.Hue = (this.m_Faction == null ? 0 : this.m_Faction.Definition.HuePrimary);
+                m_Faction = value;
+                Hue = (m_Faction == null ? 0 : m_Faction.Definition.HuePrimary);
             }
         }
         public override void OnLocationChange(Point3D oldLocation)
         {
             base.OnLocationChange(oldLocation);
-            this.UpdateSigil();
+            UpdateSigil();
         }
 
         public override void OnMapChange()
         {
             base.OnMapChange();
-            this.UpdateSigil();
+            UpdateSigil();
         }
 
         public virtual void UpdateSigil()
         {
-            if (this.m_Sigil == null || this.m_Sigil.Deleted)
+            if (m_Sigil == null || m_Sigil.Deleted)
                 return;
 
-            this.m_Sigil.MoveToWorld(new Point3D(this.X, this.Y, this.Z + 18), this.Map);
+            m_Sigil.MoveToWorld(new Point3D(X, Y, Z + 18), Map);
         }
 
         public virtual void OnTownChanged()
@@ -120,8 +120,8 @@ namespace Server.Factions
 
             writer.Write(0); // version
 
-            Town.WriteReference(writer, this.m_Town);
-            Faction.WriteReference(writer, this.m_Faction);
+            Town.WriteReference(writer, m_Town);
+            Faction.WriteReference(writer, m_Faction);
 
             writer.Write(m_Sigil);
         }
@@ -136,9 +136,9 @@ namespace Server.Factions
             {
                 case 0:
                     {
-                        this.Town = Town.ReadReference(reader);
-                        this.Faction = Faction.ReadReference(reader);
-                        this.m_Sigil = reader.ReadItem() as Sigil;
+                        Town = Town.ReadReference(reader);
+                        Faction = Faction.ReadReference(reader);
+                        m_Sigil = reader.ReadItem() as Sigil;
                         break;
                     }
             }

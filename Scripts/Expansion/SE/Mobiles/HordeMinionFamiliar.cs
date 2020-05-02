@@ -93,7 +93,7 @@ namespace Server.Mobiles
         {
             if (ControlMaster != null && QuestOverride)
             {
-                if (this.X == 1076 && this.Y == 450)
+                if (X == 1076 && Y == 450)
                 {
                     AIObject.MoveTo(ControlMaster, false, 1);
 

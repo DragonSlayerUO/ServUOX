@@ -9,7 +9,7 @@ namespace Server.Engines.Quests.Haven
         public QuestDaemonBone()
             : base(0xF80)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public QuestDaemonBone(Serial serial)

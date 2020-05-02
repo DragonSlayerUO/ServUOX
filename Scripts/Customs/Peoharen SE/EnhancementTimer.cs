@@ -84,20 +84,20 @@ namespace Server
                         att = (AosAttribute)AL[i];
                         Enhancement.SetValue(m_Mobile, att, (Enhancement.GetValue(m_Mobile, att) - number), m_Title);
                     }
-                    else if (this.AL[i] is AosWeaponAttribute)
+                    else if (AL[i] is AosWeaponAttribute)
                     {
                         weapon = (AosWeaponAttribute)AL[i];
                         Enhancement.SetValue(m_Mobile, weapon, (Enhancement.GetValue(m_Mobile, weapon) - number), m_Title);
                     }
-                    else if (this.AL[i] is AosArmorAttribute)
+                    else if (AL[i] is AosArmorAttribute)
                     {
                         armor = (AosArmorAttribute)AL[i];
-                        Enhancement.SetValue(m_Mobile, armor, (Enhancement.GetValue(this.m_Mobile, armor) - number), m_Title);
+                        Enhancement.SetValue(m_Mobile, armor, (Enhancement.GetValue(m_Mobile, armor) - number), m_Title);
                     }
-                    else if (this.AL[i] is SAAbsorptionAttribute)
+                    else if (AL[i] is SAAbsorptionAttribute)
                     {
                         absorb = (SAAbsorptionAttribute)AL[i];
-                        Enhancement.SetValue(m_Mobile, absorb, (Enhancement.GetValue(this.m_Mobile, absorb) - number), m_Title);
+                        Enhancement.SetValue(m_Mobile, absorb, (Enhancement.GetValue(m_Mobile, absorb) - number), m_Title);
                     }
                 }
             }

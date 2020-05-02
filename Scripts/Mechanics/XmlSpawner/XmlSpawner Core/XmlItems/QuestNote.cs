@@ -93,7 +93,7 @@ namespace Server.Items
             base.OnDoubleClick(from);
             from.CloseGump(typeof(XmlQuestStatusGump));
 
-            from.SendGump(new XmlQuestStatusGump(this, this.TitleString));
+            from.SendGump(new XmlQuestStatusGump(this, TitleString));
         }
     }
 
@@ -158,9 +158,9 @@ namespace Server.Items
             writer.Write(1); // version
 
             // Version 1
-            writer.Write(this.m_TextColor);
-            writer.Write(this.m_TitleColor);
-            writer.Write(this.m_size);
+            writer.Write(m_TextColor);
+            writer.Write(m_TitleColor);
+            writer.Write(m_size);
             // Version 0
             //writer.Write( this.m_NoteString );    // moved to the XmlQuestToken class in version 1
             //writer.Write( this.m_TitleString );   // moved to the XmlQuestToken class in version 1
@@ -175,18 +175,18 @@ namespace Server.Items
             {
                 case 1:
                     {
-                        this.m_TextColor = reader.ReadInt();
-                        this.m_TitleColor = reader.ReadInt();
-                        this.m_size = reader.ReadInt();
+                        m_TextColor = reader.ReadInt();
+                        m_TitleColor = reader.ReadInt();
+                        m_size = reader.ReadInt();
                     }
                     break;
                 case 0:
                     {
-                        this.NoteString = reader.ReadString();
-                        this.TitleString = reader.ReadString();
-                        this.m_TextColor = reader.ReadInt();
-                        this.m_TitleColor = reader.ReadInt();
-                        this.m_size = reader.ReadInt();
+                        NoteString = reader.ReadString();
+                        TitleString = reader.ReadString();
+                        m_TextColor = reader.ReadInt();
+                        m_TitleColor = reader.ReadInt();
+                        m_size = reader.ReadInt();
                     }
                     break;
             }

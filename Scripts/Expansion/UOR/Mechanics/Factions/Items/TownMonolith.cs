@@ -22,7 +22,7 @@ namespace Server.Factions
         public override int DefaultLabelNumber => 1041403;// A Faction Town Sigil Monolith
         public override void OnTownChanged()
         {
-            this.AssignName(this.Town == null ? null : this.Town.Definition.TownMonolithName);
+            AssignName(Town == null ? null : Town.Definition.TownMonolithName);
         }
 
         public override void Serialize(GenericWriter writer)

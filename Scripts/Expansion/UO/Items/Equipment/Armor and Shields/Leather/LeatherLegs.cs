@@ -11,7 +11,7 @@ namespace Server.Items
         public LeatherLegs()
             : base(0x13CB)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public LeatherLegs(Serial serial)

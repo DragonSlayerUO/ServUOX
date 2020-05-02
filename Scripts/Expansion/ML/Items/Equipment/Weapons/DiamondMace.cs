@@ -11,7 +11,7 @@ namespace Server.Items
         public DiamondMace()
             : base(0x2D24)
         {
-            this.Weight = 10.0;
+            Weight = 10.0;
         }
 
         public DiamondMace(Serial serial)

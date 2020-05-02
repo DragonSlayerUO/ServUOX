@@ -11,7 +11,7 @@ namespace Server.Items
         public AssassinSpike()
             : base(0x2D21)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public AssassinSpike(Serial serial)

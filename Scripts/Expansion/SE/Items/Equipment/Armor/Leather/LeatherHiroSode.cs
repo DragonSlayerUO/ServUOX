@@ -10,7 +10,7 @@ namespace Server.Items
         public LeatherHiroSode()
             : base(0x277E)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public LeatherHiroSode(Serial serial)

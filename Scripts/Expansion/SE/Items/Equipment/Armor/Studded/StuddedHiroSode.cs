@@ -8,7 +8,7 @@ namespace Server.Items
         public StuddedHiroSode()
             : base(0x277F)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public StuddedHiroSode(Serial serial)

@@ -9,7 +9,7 @@ namespace Server.Items
         public WingedHelm()
             : base(0x2B73)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public WingedHelm(Serial serial)

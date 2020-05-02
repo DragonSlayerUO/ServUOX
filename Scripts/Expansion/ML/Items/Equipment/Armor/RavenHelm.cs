@@ -9,7 +9,7 @@ namespace Server.Items
         public RavenHelm()
             : base(0x2B71)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public RavenHelm(Serial serial)

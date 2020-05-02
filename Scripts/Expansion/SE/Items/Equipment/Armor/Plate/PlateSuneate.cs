@@ -8,7 +8,7 @@ namespace Server.Items
         public PlateSuneate()
             : base(0x2788)
         {
-            this.Weight = 7.0;
+            Weight = 7.0;
         }
 
         public PlateSuneate(Serial serial)

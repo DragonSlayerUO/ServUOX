@@ -6,7 +6,7 @@ namespace Server.Ethics.Evil
     {
         public UnholyShield()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 20,
                 "Unholy Shield",
                 "Velgo K'blac",
@@ -25,7 +25,7 @@ namespace Server.Ethics.Evil
 
             from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x3B2, false, "You are now under the protection of an unholy shield.");
 
-            this.FinishInvoke(from);
+            FinishInvoke(from);
         }
     }
 }

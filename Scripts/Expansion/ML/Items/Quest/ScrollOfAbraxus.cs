@@ -10,7 +10,7 @@ namespace Server.Engines.Quests.Necro
         public ScrollOfAbraxus()
             : base(0x227B)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public ScrollOfAbraxus(Serial serial)
@@ -34,7 +34,7 @@ namespace Server.Engines.Quests.Necro
         {
             base.OnAdded(parent);
 
-            PlayerMobile pm = this.RootParent as PlayerMobile;
+            PlayerMobile pm = RootParent as PlayerMobile;
 
             if (pm != null)
             {
@@ -52,7 +52,7 @@ namespace Server.Engines.Quests.Necro
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.IsChildOf(from.Backpack))
+            if (IsChildOf(from.Backpack))
             {
                 from.SendGump(new ScrollOfAbraxusGump());
 
@@ -97,10 +97,10 @@ namespace Server.Engines.Quests.Necro
         public ScrollOfAbraxusGump()
             : base(150, 50)
         {
-            this.AddPage(0);
+            AddPage(0);
 
-            this.AddImage(0, 0, 1228);
-            this.AddImage(340, 255, 9005);
+            AddImage(0, 0, 1228);
+            AddImage(340, 255, 9005);
 
             /* Security at the Crystal Cave<BR><BR>
             * 
@@ -138,7 +138,7 @@ namespace Server.Engines.Quests.Necro
             * 
             * <I>- Frater Melkeer</I>
             */
-            this.AddHtmlLocalized(25, 36, 350, 210, 1060116, 1, false, true);
+            AddHtmlLocalized(25, 36, 350, 210, 1060116, 1, false, true);
         }
     }
 }

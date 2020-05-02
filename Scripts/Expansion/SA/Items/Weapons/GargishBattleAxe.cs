@@ -10,8 +10,8 @@ namespace Server.Items
         public GargishBattleAxe()
             : base(0x48B0)
         {
-            this.Weight = 4.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 4.0;
+            Layer = Layer.TwoHanded;
         }
 
         public GargishBattleAxe(Serial serial)

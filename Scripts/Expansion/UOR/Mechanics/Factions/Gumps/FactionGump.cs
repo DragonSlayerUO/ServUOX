@@ -18,7 +18,7 @@ namespace Server.Factions
 
         public int ToButtonID(int type, int index)
         {
-            return 1 + (index * this.ButtonTypes) + type;
+            return 1 + (index * ButtonTypes) + type;
         }
 
         public bool FromButtonID(int buttonID, out int type, out int index)
@@ -27,8 +27,8 @@ namespace Server.Factions
 
             if (offset >= 0)
             {
-                type = offset % this.ButtonTypes;
-                index = offset / this.ButtonTypes;
+                type = offset % ButtonTypes;
+                index = offset / ButtonTypes;
                 return true;
             }
             else
@@ -41,9 +41,9 @@ namespace Server.Factions
         public void AddHtmlText(int x, int y, int width, int height, TextDefinition text, bool back, bool scroll)
         {
             if (text != null && text.Number > 0)
-                this.AddHtmlLocalized(x, y, width, height, text.Number, back, scroll);
+                AddHtmlLocalized(x, y, width, height, text.Number, back, scroll);
             else if (text != null && text.String != null)
-                this.AddHtml(x, y, width, height, text.String, back, scroll);
+                AddHtml(x, y, width, height, text.String, back, scroll);
         }
     }
 }

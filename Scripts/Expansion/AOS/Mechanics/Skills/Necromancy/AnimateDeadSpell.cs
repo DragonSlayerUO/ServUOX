@@ -160,7 +160,7 @@ namespace Server.Spells.Necromancy
 
                 if (addon != null)
                 {
-                    PlayerMobile pm = this.Caster as PlayerMobile;
+                    PlayerMobile pm = Caster as PlayerMobile;
 
                     if (pm != null)
                     {
@@ -186,7 +186,7 @@ namespace Server.Spells.Necromancy
 
             if (c == null)
             {
-                this.Caster.SendLocalizedMessage(1061084); // You cannot animate that.
+                Caster.SendLocalizedMessage(1061084); // You cannot animate that.
             }
             else
             {

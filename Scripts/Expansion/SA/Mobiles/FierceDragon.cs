@@ -9,32 +9,32 @@ namespace Server.Engines.Quests.Samurai
         public FierceDragon()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
-            this.Name = "a fierce dragon";
-            this.Body = 103;
-            this.BaseSoundID = 362;
+            Name = "a fierce dragon";
+            Body = 103;
+            BaseSoundID = 362;
 
-            this.SetStr(6000, 6020);
-            this.SetDex(0);
-            this.SetInt(850, 870);
+            SetStr(6000, 6020);
+            SetDex(0);
+            SetInt(850, 870);
 
-            this.SetDamage(50, 80);
+            SetDamage(50, 80);
 
-            this.SetDamageType(ResistanceType.Fire, 100);
+            SetDamageType(ResistanceType.Fire, 100);
 
-            this.SetResistance(ResistanceType.Physical, 95, 98);
-            this.SetResistance(ResistanceType.Fire, 95, 98);
-            this.SetResistance(ResistanceType.Cold, 95, 98);
-            this.SetResistance(ResistanceType.Poison, 95, 98);
-            this.SetResistance(ResistanceType.Energy, 95, 98);
+            SetResistance(ResistanceType.Physical, 95, 98);
+            SetResistance(ResistanceType.Fire, 95, 98);
+            SetResistance(ResistanceType.Cold, 95, 98);
+            SetResistance(ResistanceType.Poison, 95, 98);
+            SetResistance(ResistanceType.Energy, 95, 98);
 
-            this.SetSkill(SkillName.Tactics, 120.0);
-            this.SetSkill(SkillName.Wrestling, 120.0);
-            this.SetSkill(SkillName.Magery, 120.0);
+            SetSkill(SkillName.Tactics, 120.0);
+            SetSkill(SkillName.Wrestling, 120.0);
+            SetSkill(SkillName.Magery, 120.0);
 
-            this.Fame = 15000;
-            this.Karma = 15000;
+            Fame = 15000;
+            Karma = 15000;
 
-            this.CantWalk = true;
+            CantWalk = true;
         }
 
         public FierceDragon(Serial serial)

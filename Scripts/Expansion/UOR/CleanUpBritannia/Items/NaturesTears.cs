@@ -7,9 +7,9 @@ namespace Server.Items
         [Constructable]
         public NaturesTears()
         {
-            this.Hue = 2075;
-            this.Weight = 5;
-            this.Slayer = SlayerName.Fey;
+            Hue = 2075;
+            Weight = 5;
+            Slayer = SlayerName.Fey;
 
             UsesRemaining = 450;
         }

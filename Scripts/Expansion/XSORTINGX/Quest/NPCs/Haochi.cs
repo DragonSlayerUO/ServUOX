@@ -20,28 +20,28 @@ namespace Server.Engines.Quests.Samurai
         public override int TalkNumber => -1;
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x8403;
+            Hue = 0x8403;
 
-            this.Female = false;
-            this.Body = 0x190;
-            this.Name = "Daimyo Haochi";
+            Female = false;
+            Body = 0x190;
+            Name = "Daimyo Haochi";
         }
 
         public override void InitOutfit()
         {
-            this.HairItemID = 0x204A;
-            this.HairHue = 0x901;
+            HairItemID = 0x204A;
+            HairHue = 0x901;
 
-            this.AddItem(new SamuraiTabi());
-            this.AddItem(new JinBaori());
+            AddItem(new SamuraiTabi());
+            AddItem(new JinBaori());
 
-            this.AddItem(new PlateHaidate());
-            this.AddItem(new StandardPlateKabuto());
-            this.AddItem(new PlateMempo());
-            this.AddItem(new PlateDo());
-            this.AddItem(new PlateHiroSode());
+            AddItem(new PlateHaidate());
+            AddItem(new StandardPlateKabuto());
+            AddItem(new PlateMempo());
+            AddItem(new PlateDo());
+            AddItem(new PlateHiroSode());
         }
 
         public override int GetAutoTalkRange(PlayerMobile pm)

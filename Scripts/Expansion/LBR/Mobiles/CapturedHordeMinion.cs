@@ -7,7 +7,7 @@ namespace Server.Mobiles
         [Constructable]
         public CapturedHordeMinion()
         {
-            this.FightMode = FightMode.None;
+            FightMode = FightMode.None;
         }
 
         public CapturedHordeMinion(Serial serial)

@@ -10,8 +10,8 @@ namespace Server.Items
         [Constructable]
         public OstardTopiary() : base(0x497D)
         {
-            this.Weight = 1.0;
-            this.Name = ("an ostard topiary");
+            Weight = 1.0;
+            Name = ("an ostard topiary");
         }
 
         public OstardTopiary(Serial serial) : base(serial)

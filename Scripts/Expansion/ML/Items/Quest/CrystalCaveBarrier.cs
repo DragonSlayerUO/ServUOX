@@ -9,7 +9,7 @@ namespace Server.Engines.Quests.Necro
         public CrystalCaveBarrier()
             : base(0x3967)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public CrystalCaveBarrier(Serial serial)

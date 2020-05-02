@@ -10,7 +10,7 @@ namespace Server.Items
         public GargishPike()
             : base(0x48C8)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public GargishPike(Serial serial)

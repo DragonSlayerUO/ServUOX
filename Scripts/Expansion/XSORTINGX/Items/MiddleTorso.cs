@@ -17,7 +17,7 @@ namespace Server.Items
         public JinBaori(int hue)
             : base(0x27A1, hue)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public JinBaori(Serial serial)
@@ -53,7 +53,7 @@ namespace Server.Items
         public GargishSash(int hue)
             : base(0x46B4, Layer.MiddleTorso, hue)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public GargishSash(Serial serial)

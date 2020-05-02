@@ -13,9 +13,9 @@ namespace Server.Items
         public ShipSign(int id, int cliloc)
             : base(0xBD2)
         {
-            this.ItemID = id;
-            this.m_Cliloc = cliloc;
-            this.Movable = false;
+            ItemID = id;
+            m_Cliloc = cliloc;
+            Movable = false;
         }
 
         public ShipSign(Serial serial)

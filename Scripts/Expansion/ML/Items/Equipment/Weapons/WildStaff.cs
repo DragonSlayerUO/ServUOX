@@ -9,7 +9,7 @@ namespace Server.Items
         public WildStaff()
             : base(0x2D25)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public WildStaff(Serial serial)

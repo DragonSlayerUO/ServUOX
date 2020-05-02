@@ -188,7 +188,7 @@ namespace Server.Mobiles
             {
                 case 1:
                     {
-                        this.BurstSac = reader.ReadBool();
+                        BurstSac = reader.ReadBool();
                         break;
                     }
             }

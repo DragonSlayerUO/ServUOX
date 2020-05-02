@@ -50,7 +50,7 @@ namespace Server.Items
                             reader.ReadInt();
                         }
 
-                        this.Weight = 2.0;
+                        Weight = 2.0;
 
                         break;
                     }

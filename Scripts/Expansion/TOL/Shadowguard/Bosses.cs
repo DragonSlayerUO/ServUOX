@@ -57,7 +57,7 @@ namespace Server.Engines.Shadowguard
         {
             if (IsLastBoss)
             {
-                this.AddLoot(LootPack.SuperBoss, 7);
+                AddLoot(LootPack.SuperBoss, 7);
             }
         }
 
@@ -134,7 +134,7 @@ namespace Server.Engines.Shadowguard
 
         private void DoGoldSpray(Map map)
         {
-            if (this.Map != null)
+            if (Map != null)
             {
                 for (int x = -12; x <= 12; ++x)
                 {
@@ -215,12 +215,12 @@ namespace Server.Engines.Shadowguard
             int max = MaxSummons;
             var map = Map;
 
-            ShadowguardEncounter inst = ShadowguardController.GetEncounter(this.Location, this.Map);
+            ShadowguardEncounter inst = ShadowguardController.GetEncounter(Location, Map);
 
             if (inst != null)
                 max += inst.PartySize() * 2;
 
-            if (map == null || this.SummonTypes == null || this.SummonTypes.Length == 0 || TotalSummons() > max)
+            if (map == null || SummonTypes == null || SummonTypes.Length == 0 || TotalSummons() > max)
                 return;
 
             int count = Utility.RandomList(1, 2, 2, 2, 3, 3, 4, 5);
@@ -250,7 +250,7 @@ namespace Server.Engines.Shadowguard
                 if (spawn != null)
                 {
                     spawn.MoveToWorld(p, map);
-                    spawn.Team = this.Team;
+                    spawn.Team = Team;
                     spawn.SummonMaster = this;
 
                     Timer.DelayCall(TimeSpan.FromSeconds(1), (o) =>
@@ -260,7 +260,7 @@ namespace Server.Engines.Shadowguard
                         if (s != null && s.Combatant != null)
                         {
                             if (!(s.Combatant is PlayerMobile) || !((PlayerMobile)s.Combatant).HonorActive)
-                                s.Combatant = this.Combatant;
+                                s.Combatant = Combatant;
                         }
 
                     }, spawn);
@@ -541,7 +541,7 @@ namespace Server.Engines.Shadowguard
                 int type = GetHighestDamageType(weapon, out highest);
                 int heal = (int)(damage * (highest / 100.0));
 
-                switch (this.Form)
+                switch (Form)
                 {
                     case Form.Human:
                         /*if(type == 0)
@@ -666,7 +666,7 @@ namespace Server.Engines.Shadowguard
             {
                 Mobile m = Combatant as Mobile;
 
-                if (InRange(m.Location, 10) && !InRange(m.Location, 2) && m.Alive && this.CanBeHarmful(m, false) && m.AccessLevel == AccessLevel.Player)
+                if (InRange(m.Location, 10) && !InRange(m.Location, 2) && m.Alive && CanBeHarmful(m, false) && m.AccessLevel == AccessLevel.Player)
                 {
                     if (_NextTeleport < DateTime.UtcNow)
                     {
@@ -769,7 +769,7 @@ namespace Server.Engines.Shadowguard
 
                     Timer.DelayCall(TimeSpan.FromSeconds(3), () =>
                     {
-                        DoNuke(this.Location);
+                        DoNuke(Location);
                     });
                 }
                 else if (_NextDismount < DateTime.UtcNow)
@@ -783,7 +783,7 @@ namespace Server.Engines.Shadowguard
 
         public void DoNuke(Point3D p)
         {
-            if (!this.Alive || this.Map == null)
+            if (!Alive || Map == null)
                 return;
 
             int range = 8;
@@ -791,7 +791,7 @@ namespace Server.Engines.Shadowguard
             //Flame Columns
             for (int i = 0; i < 2; i++)
             {
-                Server.Misc.Geometry.Circle2D(this.Location, this.Map, i, (pnt, map) =>
+                Server.Misc.Geometry.Circle2D(Location, Map, i, (pnt, map) =>
                     {
                         Effects.SendLocationParticles(EffectItem.Create(pnt, map, EffectItem.DefaultDuration), 0x3709, 10, 30, 5052);
                     });
@@ -800,10 +800,10 @@ namespace Server.Engines.Shadowguard
             //Flash then boom
             Timer.DelayCall(TimeSpan.FromSeconds(1.5), () =>
                 {
-                    if (this.Alive && this.Map != null)
+                    if (Alive && Map != null)
                     {
                         Packet flash = ScreenLightFlash.Instance;
-                        IPooledEnumerable e = this.Map.GetClientsInRange(p, (range * 4) + 5);
+                        IPooledEnumerable e = Map.GetClientsInRange(p, (range * 4) + 5);
 
                         foreach (NetState ns in e)
                         {
@@ -815,7 +815,7 @@ namespace Server.Engines.Shadowguard
 
                         for (int i = 0; i < range; i++)
                         {
-                            Server.Misc.Geometry.Circle2D(this.Location, this.Map, i, (pnt, map) =>
+                            Server.Misc.Geometry.Circle2D(Location, Map, i, (pnt, map) =>
                             {
                                 Effects.SendLocationEffect(pnt, map, 14000, 14, 10, Utility.RandomMinMax(2497, 2499), 2);
                             });
@@ -823,7 +823,7 @@ namespace Server.Engines.Shadowguard
                     }
                 });
 
-            IPooledEnumerable eable = this.GetMobilesInRange(range);
+            IPooledEnumerable eable = GetMobilesInRange(range);
 
             foreach (Mobile m in eable)
             {
@@ -861,13 +861,13 @@ namespace Server.Engines.Shadowguard
 
                     if (!map.CanSpawnMobile(x, y, map.GetAverageZ(x, y)))
                     {
-                        m.MoveToWorld(new Point3D(lastx, lasty, map.GetAverageZ(lastx, lasty)), this.Map);
+                        m.MoveToWorld(new Point3D(lastx, lasty, map.GetAverageZ(lastx, lasty)), Map);
                         break;
                     }
 
                     if (range >= 12 && (orx != x || ory != y))
                     {
-                        m.MoveToWorld(new Point3D(x, y, map.GetAverageZ(x, y)), this.Map);
+                        m.MoveToWorld(new Point3D(x, y, map.GetAverageZ(x, y)), Map);
                     }
                 }
 
@@ -877,8 +877,8 @@ namespace Server.Engines.Shadowguard
 
         public void DoDismount(Mobile m)
         {
-            this.MovingParticles(m, 0x36D4, 7, 0, false, true, 9502, 4019, 0x160);
-            this.PlaySound(0x15E);
+            MovingParticles(m, 0x36D4, 7, 0, false, true, 9502, 4019, 0x160);
+            PlaySound(0x15E);
 
             double range = m.GetDistanceToSqrt(this);
 
@@ -979,19 +979,19 @@ namespace Server.Engines.Shadowguard
         {
             base.OnThink();
 
-            if (Combatant == null || this.Backpack == null || _NextWeaponSwitch > DateTime.UtcNow)
+            if (Combatant == null || Backpack == null || _NextWeaponSwitch > DateTime.UtcNow)
                 return;
 
             BaseWeapon wep = Weapon as BaseWeapon;
 
             if ((wep is Fists || wep is BaseRanged) && InRange(Combatant.Location, 1) && 0.1 > Utility.RandomDouble())
             {
-                Item scimitar = this.Backpack.FindItemByType(typeof(Scimitar));
+                Item scimitar = Backpack.FindItemByType(typeof(Scimitar));
 
                 if (scimitar != null)
                 {
                     if (wep is BaseRanged)
-                        this.Backpack.DropItem(wep);
+                        Backpack.DropItem(wep);
 
                     SetWearable(scimitar);
 
@@ -1000,12 +1000,12 @@ namespace Server.Engines.Shadowguard
             }
             else if ((wep is Fists || !(wep is BaseRanged)) && !InRange(Combatant.Location, 1) && 0.1 > Utility.RandomDouble())
             {
-                Item yumi = this.Backpack.FindItemByType(typeof(Yumi));
+                Item yumi = Backpack.FindItemByType(typeof(Yumi));
 
                 if (yumi != null)
                 {
                     if (!(wep is Fists))
-                        this.Backpack.DropItem(wep);
+                        Backpack.DropItem(wep);
 
                     SetWearable(yumi);
 

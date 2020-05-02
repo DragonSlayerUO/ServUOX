@@ -9,7 +9,7 @@ namespace Server.Items
         public WoodlandGloves()
             : base(0x2B6A)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public WoodlandGloves(Serial serial)

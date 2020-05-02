@@ -8,7 +8,7 @@ namespace Server.Items
         public PeachTrunkAddon()
             : base()
         {
-            this.AddComponent(new LocalizedAddonComponent(0xD9C, 1076786), 0, 0, 0);
+            AddComponent(new LocalizedAddonComponent(0xD9C, 1076786), 0, 0, 0);
         }
 
         public PeachTrunkAddon(Serial serial)
@@ -38,7 +38,7 @@ namespace Server.Items
         public PeachTrunkDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public PeachTrunkDeed(Serial serial)

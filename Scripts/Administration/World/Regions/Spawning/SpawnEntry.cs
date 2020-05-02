@@ -124,7 +124,7 @@ namespace Server.Regions
 
         public Point3D RandomSpawnLocation(int spawnHeight, bool land, bool water)
         {
-            return this.m_Region.RandomSpawnLocation(spawnHeight, land, water, m_Home, m_Range);
+            return m_Region.RandomSpawnLocation(spawnHeight, land, water, m_Home, m_Range);
         }
 
         public void Start()
@@ -218,7 +218,7 @@ namespace Server.Regions
                     Add(spawnableEntity);
             }
 
-            this.m_Running = reader.ReadBool();
+            m_Running = reader.ReadBool();
 
             if (reader.ReadBool())
             {
@@ -234,7 +234,7 @@ namespace Server.Regions
                 }
             }
 
-            this.CheckTimer();
+            CheckTimer();
         }
 
         private static BaseRegion GetCommandData(CommandEventArgs args)
@@ -417,7 +417,7 @@ namespace Server.Regions
             {
                 if (m_SpawnTimer == null)
                 {
-                    TimeSpan time = this.RandomTime();
+                    TimeSpan time = RandomTime();
                     m_SpawnTimer = Timer.DelayCall(time, new TimerCallback(TimerCallback));
                     m_NextSpawn = DateTime.UtcNow + time;
                 }

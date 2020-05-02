@@ -8,10 +8,10 @@ namespace Server.Items
         public DaemonHelm()
             : base(0x1451)
         {
-            this.Hue = 0x648;
-            this.Weight = 3.0;
+            Hue = 0x648;
+            Weight = 3.0;
 
-            this.ArmorAttributes.SelfRepair = 1;
+            ArmorAttributes.SelfRepair = 1;
         }
 
         public DaemonHelm(Serial serial)
@@ -45,11 +45,11 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            if (this.Weight == 1.0)
-                this.Weight = 3.0;
+            if (Weight == 1.0)
+                Weight = 3.0;
 
-            if (this.ArmorAttributes.SelfRepair == 0)
-                this.ArmorAttributes.SelfRepair = 1;
+            if (ArmorAttributes.SelfRepair == 0)
+                ArmorAttributes.SelfRepair = 1;
         }
     }
 }

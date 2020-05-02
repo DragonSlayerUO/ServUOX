@@ -76,11 +76,11 @@ namespace Server.Items
 
             writer.Write(0); // version 
 
-            writer.Write(this.m_NoteString);
-            writer.Write(this.m_TitleString);
-            writer.Write(this.m_TextColor);
-            writer.Write(this.m_TitleColor);
-            writer.Write(this.m_size);
+            writer.Write(m_NoteString);
+            writer.Write(m_TitleString);
+            writer.Write(m_TextColor);
+            writer.Write(m_TitleColor);
+            writer.Write(m_size);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -92,11 +92,11 @@ namespace Server.Items
             {
                 case 0:
                     {
-                        this.m_NoteString = reader.ReadString();
-                        this.m_TitleString = reader.ReadString();
-                        this.m_TextColor = reader.ReadInt();
-                        this.m_TitleColor = reader.ReadInt();
-                        this.m_size = reader.ReadInt();
+                        m_NoteString = reader.ReadString();
+                        m_TitleString = reader.ReadString();
+                        m_TextColor = reader.ReadInt();
+                        m_TitleColor = reader.ReadInt();
+                        m_size = reader.ReadInt();
                     }
                     break;
             }

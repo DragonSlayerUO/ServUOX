@@ -9,7 +9,7 @@ namespace Server.Items
         public HideChest()
             : base(0x2B74)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public HideChest(Serial serial)

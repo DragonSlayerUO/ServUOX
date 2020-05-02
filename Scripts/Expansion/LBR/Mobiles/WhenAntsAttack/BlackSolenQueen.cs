@@ -87,7 +87,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich);
+            AddLoot(LootPack.Rich);
         }
 
         public override void OnGotMeleeAttack(Mobile attacker)

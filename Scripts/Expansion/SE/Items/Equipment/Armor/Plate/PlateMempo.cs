@@ -8,7 +8,7 @@ namespace Server.Items
         public PlateMempo()
             : base(0x2779)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public PlateMempo(Serial serial)

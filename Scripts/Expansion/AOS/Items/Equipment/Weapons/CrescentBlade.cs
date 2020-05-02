@@ -11,7 +11,7 @@ namespace Server.Items
         public CrescentBlade()
             : base(0x26C1)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public CrescentBlade(Serial serial)

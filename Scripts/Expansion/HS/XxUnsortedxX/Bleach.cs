@@ -8,7 +8,7 @@ namespace Server.Items
         public Bleach()
             : base(PigmentType.None)
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public Bleach(Serial serial)

@@ -85,7 +85,7 @@ namespace Server.Items
         public NewAquariumBook()
             : base(false)
         {
-            this.Hue = 0;
+            Hue = 0;
         }
 
         public NewAquariumBook(Serial serial)

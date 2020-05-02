@@ -37,7 +37,7 @@ namespace Server.Items
         public BrokenArmoireAddon()
             : base()
         {
-            this.AddComponent(new BrokenArmoireComponent(), 0, 0, 0);
+            AddComponent(new BrokenArmoireComponent(), 0, 0, 0);
         }
 
         public BrokenArmoireAddon(Serial serial)
@@ -67,7 +67,7 @@ namespace Server.Items
         public BrokenArmoireDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public BrokenArmoireDeed(Serial serial)

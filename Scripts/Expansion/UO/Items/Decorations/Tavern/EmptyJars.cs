@@ -8,8 +8,8 @@ namespace Server.Items
         public EmptyJar()
             : base(0x1005)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public EmptyJar(Serial serial)
@@ -38,8 +38,8 @@ namespace Server.Items
         public EmptyJars()
             : base(0xe44)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public EmptyJars(Serial serial)
@@ -68,8 +68,8 @@ namespace Server.Items
         public EmptyJars2()
             : base(0xe45)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public EmptyJars2(Serial serial)
@@ -98,8 +98,8 @@ namespace Server.Items
         public EmptyJars3()
             : base(0xe46)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public EmptyJars3(Serial serial)
@@ -128,8 +128,8 @@ namespace Server.Items
         public EmptyJars4()
             : base(0xe47)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public EmptyJars4(Serial serial)

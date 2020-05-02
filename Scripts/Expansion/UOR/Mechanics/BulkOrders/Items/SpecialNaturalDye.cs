@@ -41,12 +41,12 @@ namespace Server.Items
         {
             get
             {
-                return this.m_UsesRemaining;
+                return m_UsesRemaining;
             }
             set
             {
-                this.m_UsesRemaining = value;
-                this.InvalidateProperties();
+                m_UsesRemaining = value;
+                InvalidateProperties();
             }
         }
 
@@ -55,12 +55,12 @@ namespace Server.Items
         {
             get
             {
-                return this.m_BooksOnly;
+                return m_BooksOnly;
             }
             set
             {
-                this.m_BooksOnly = value;
-                this.InvalidateProperties();
+                m_BooksOnly = value;
+                InvalidateProperties();
             }
         }
 
@@ -83,9 +83,9 @@ namespace Server.Items
 
         public void ValidateHue()
         {
-            if (HueInfo.ContainsKey(this.DyeType))
+            if (HueInfo.ContainsKey(DyeType))
             {
-                Hue = HueInfo[this.DyeType].Item1;
+                Hue = HueInfo[DyeType].Item1;
             }
         }
 
@@ -102,7 +102,7 @@ namespace Server.Items
         {
             base.GetProperties(list);
 
-            list.Add(1060584, this.m_UsesRemaining.ToString()); // uses remaining: ~1_val~
+            list.Add(1060584, m_UsesRemaining.ToString()); // uses remaining: ~1_val~
 
             if (m_BooksOnly)
                 list.Add(1157205); // Spellbook Only Dye
@@ -110,17 +110,17 @@ namespace Server.Items
 
         public override void AddNameProperty(ObjectPropertyList list)
         {
-            if (this.DyeType == DyeType.None)
+            if (DyeType == DyeType.None)
             {
                 base.AddNameProperty(list);
             }
-            else if (this.Amount > 1)
+            else if (Amount > 1)
             {
-                list.Add(1113276, "{0}\t{1}", this.Amount, String.Format("#{0}", HueInfo[this.DyeType].Item2));  // ~1_AMOUNT~ ~2_COLOR~ natural dyes
+                list.Add(1113276, "{0}\t{1}", Amount, String.Format("#{0}", HueInfo[DyeType].Item2));  // ~1_AMOUNT~ ~2_COLOR~ natural dyes
             }
             else
             {
-                list.Add(1112137, String.Format("#{0}", HueInfo[this.DyeType].Item2));  // ~1_COLOR~ natural dye
+                list.Add(1112137, String.Format("#{0}", HueInfo[DyeType].Item2));  // ~1_COLOR~ natural dye
             }
         }
 
@@ -130,7 +130,7 @@ namespace Server.Items
 
             writer.Write(0); // version
 
-            writer.Write((int)this.m_DyeType);
+            writer.Write((int)m_DyeType);
             writer.Write(m_UsesRemaining);
             writer.Write(m_BooksOnly);
         }
@@ -141,9 +141,9 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            this.m_DyeType = (DyeType)reader.ReadInt();
-            this.m_UsesRemaining = reader.ReadInt();
-            this.m_BooksOnly = reader.ReadBool();
+            m_DyeType = (DyeType)reader.ReadInt();
+            m_UsesRemaining = reader.ReadInt();
+            m_BooksOnly = reader.ReadBool();
         }
 
         public override void OnDoubleClick(Mobile from)
@@ -159,12 +159,12 @@ namespace Server.Items
             public InternalTarget(SpecialNaturalDye item)
                 : base(1, false, TargetFlags.None)
             {
-                this.m_Item = item;
+                m_Item = item;
             }
 
             protected override void OnTarget(Mobile from, object targeted)
             {
-                if (this.m_Item.Deleted)
+                if (m_Item.Deleted)
                     return;
 
                 Item item = targeted as Item;
@@ -197,7 +197,7 @@ namespace Server.Items
 
                         if (!valid && FurnitureAttribute.Check(item))
                         {
-                            if (!from.InRange(this.m_Item.GetWorldLocation(), 1) || !from.InRange(item.GetWorldLocation(), 1))
+                            if (!from.InRange(m_Item.GetWorldLocation(), 1) || !from.InRange(item.GetWorldLocation(), 1))
                             {
                                 from.SendLocalizedMessage(500446); // That is too far away.
                                 return;
@@ -227,10 +227,10 @@ namespace Server.Items
                         item.Hue = m_Item.Hue;
                         from.PlaySound(0x23E);
 
-                        if (--this.m_Item.UsesRemaining > 0)
-                            this.m_Item.InvalidateProperties();
+                        if (--m_Item.UsesRemaining > 0)
+                            m_Item.InvalidateProperties();
                         else
-                            this.m_Item.Delete();
+                            m_Item.Delete();
 
                         return;
                     }

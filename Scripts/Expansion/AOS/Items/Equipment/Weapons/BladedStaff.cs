@@ -11,7 +11,7 @@ namespace Server.Items
         public BladedStaff()
             : base(0x26BD)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public BladedStaff(Serial serial)

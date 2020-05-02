@@ -10,16 +10,16 @@ namespace Server.Ethics
         private readonly TextDefinition m_Description;
         public PowerDefinition(int power, TextDefinition name, TextDefinition phrase, TextDefinition description)
         {
-            this.m_Power = power;
+            m_Power = power;
 
-            this.m_Name = name;
-            this.m_Phrase = phrase;
-            this.m_Description = description;
+            m_Name = name;
+            m_Phrase = phrase;
+            m_Description = description;
         }
 
-        public int Power => this.m_Power;
-        public TextDefinition Name => this.m_Name;
-        public TextDefinition Phrase => this.m_Phrase;
-        public TextDefinition Description => this.m_Description;
+        public int Power => m_Power;
+        public TextDefinition Name => m_Name;
+        public TextDefinition Phrase => m_Phrase;
+        public TextDefinition Description => m_Description;
     }
 }

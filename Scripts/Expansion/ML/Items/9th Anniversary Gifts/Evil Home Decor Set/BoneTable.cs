@@ -8,7 +8,7 @@ namespace Server.Items
         public BoneTableAddon()
             : base()
         {
-            this.AddComponent(new LocalizedAddonComponent(0x2A5C, 1074478), 0, 0, 0);
+            AddComponent(new LocalizedAddonComponent(0x2A5C, 1074478), 0, 0, 0);
         }
 
         public BoneTableAddon(Serial serial)
@@ -38,7 +38,7 @@ namespace Server.Items
         public BoneTableDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public BoneTableDeed(Serial serial)

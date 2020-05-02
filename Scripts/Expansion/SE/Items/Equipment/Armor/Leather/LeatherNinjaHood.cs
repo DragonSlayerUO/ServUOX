@@ -8,7 +8,7 @@ namespace Server.Items
         public LeatherNinjaHood()
             : base(0x278E)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public LeatherNinjaHood(Serial serial)

@@ -16,7 +16,7 @@ namespace Server.Items
         public MedusaSNestAddon()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)
-                this.AddComponent(new AddonComponent(m_AddOnSimpleComponents[i, 0]), m_AddOnSimpleComponents[i, 1], m_AddOnSimpleComponents[i, 2], m_AddOnSimpleComponents[i, 3]);
+                AddComponent(new AddonComponent(m_AddOnSimpleComponents[i, 0]), m_AddOnSimpleComponents[i, 1], m_AddOnSimpleComponents[i, 2], m_AddOnSimpleComponents[i, 3]);
         }
 
         public MedusaSNestAddon(Serial serial)
@@ -43,7 +43,7 @@ namespace Server.Items
         [Constructable]
         public MedusaSNestAddonDeed()
         {
-            this.Name = "MedusaSNest";
+            Name = "MedusaSNest";
         }
 
         public MedusaSNestAddonDeed(Serial serial)

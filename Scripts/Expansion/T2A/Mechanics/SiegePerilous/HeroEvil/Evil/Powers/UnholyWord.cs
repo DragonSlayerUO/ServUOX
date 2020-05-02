@@ -6,7 +6,7 @@ namespace Server.Ethics.Evil
     {
         public UnholyWord()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 100,
                 "Unholy Word",
                 "Velgo Oostrac",

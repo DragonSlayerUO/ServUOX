@@ -604,7 +604,7 @@ namespace Server.Engines.XmlSpawner2
             if (m_SearchList != null && m_SearchList.Count > 0)
             {
 
-                this.m_SearchList.Sort(new ListSorter(false));
+                m_SearchList.Sort(new ListSorter(false));
 
             }
         }
@@ -657,8 +657,8 @@ namespace Server.Engines.XmlSpawner2
 
         private XmlEditDialogGump Refresh(NetState state)
         {
-            XmlEditDialogGump g = new XmlEditDialogGump(this.m_From, false, this.m_Dialog, this.Selected,
-                this.DisplayFrom, this.SaveFilename, this.SelectAll, this.m_SelectionList, this.X, this.Y);
+            XmlEditDialogGump g = new XmlEditDialogGump(m_From, false, m_Dialog, Selected,
+                DisplayFrom, SaveFilename, SelectAll, m_SelectionList, X, Y);
             state.Mobile.SendGump(g);
             return g;
         }

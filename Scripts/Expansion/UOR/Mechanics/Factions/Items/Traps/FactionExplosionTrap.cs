@@ -33,7 +33,7 @@ namespace Server.Factions
         public override AllowedPlacing AllowedPlacing => AllowedPlacing.AnyFactionTown;
         public override void DoVisibleEffect()
         {
-            Effects.SendLocationEffect(this.GetWorldLocation(), this.Map, 0x36BD, 15, 10);
+            Effects.SendLocationEffect(GetWorldLocation(), Map, 0x36BD, 15, 10);
         }
 
         public override void DoAttackEffect(Mobile m)

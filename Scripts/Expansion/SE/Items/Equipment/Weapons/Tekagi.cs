@@ -11,8 +11,8 @@ namespace Server.Items
         public Tekagi()
             : base(0x27AB)
         {
-            this.Weight = 5.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 5.0;
+            Layer = Layer.TwoHanded;
         }
 
         public Tekagi(Serial serial)

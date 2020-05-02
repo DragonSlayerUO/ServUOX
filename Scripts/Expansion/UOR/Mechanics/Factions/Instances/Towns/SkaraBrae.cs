@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public SkaraBrae()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     6,
                     0x186F,

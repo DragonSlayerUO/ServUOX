@@ -14,7 +14,7 @@ namespace Server.Engines.XmlSpawner2
         [Attachable]
         public XmlPoison(int level)
         {
-            this.p_level = level;
+            p_level = level;
         }
 
         // when attached to a mobile, it should gain poison immunity and a poison
@@ -24,23 +24,23 @@ namespace Server.Engines.XmlSpawner2
         {
             get
             {
-                if (this.p_level < 1)
+                if (p_level < 1)
                 {
                     return Poison.Lesser;
                 }
-                else if (this.p_level == 1)
+                else if (p_level == 1)
                 {
                     return Poison.Regular;
                 }
-                else if (this.p_level == 2)
+                else if (p_level == 2)
                 {
                     return Poison.Greater;
                 }
-                else if (this.p_level == 3)
+                else if (p_level == 3)
                 {
                     return Poison.Deadly;
                 }
-                else if (this.p_level > 3)
+                else if (p_level > 3)
                 {
                     return Poison.Lethal;
                 }
@@ -54,23 +54,23 @@ namespace Server.Engines.XmlSpawner2
         {
             get
             {
-                if (this.p_level < 1)
+                if (p_level < 1)
                 {
                     return Poison.Lesser;
                 }
-                else if (this.p_level == 1)
+                else if (p_level == 1)
                 {
                     return Poison.Regular;
                 }
-                else if (this.p_level == 2)
+                else if (p_level == 2)
                 {
                     return Poison.Greater;
                 }
-                else if (this.p_level == 3)
+                else if (p_level == 3)
                 {
                     return Poison.Deadly;
                 }
-                else if (this.p_level > 3)
+                else if (p_level > 3)
                 {
                     return Poison.Lethal;
                 }
@@ -86,7 +86,7 @@ namespace Server.Engines.XmlSpawner2
 
             writer.Write(0);
             // version 0
-            writer.Write(this.p_level);
+            writer.Write(p_level);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -98,7 +98,7 @@ namespace Server.Engines.XmlSpawner2
             {
                 case 0:
                     // version 0
-                    this.p_level = reader.ReadInt();
+                    p_level = reader.ReadInt();
                     break;
             }
         }

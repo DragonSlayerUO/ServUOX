@@ -17,8 +17,8 @@ namespace Server.Factions
         public JoinStone(Faction faction)
             : base(0xEDC)
         {
-            this.Movable = false;
-            this.Faction = faction;
+            Movable = false;
+            Faction = faction;
         }
 
         public JoinStone(Serial serial)
@@ -31,28 +31,28 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Faction;
+                return m_Faction;
             }
             set
             {
-                this.m_Faction = value;
+                m_Faction = value;
 
-                this.Hue = (this.m_Faction == null ? 0 : this.m_Faction.Definition.HueJoin);
-                this.AssignName(this.m_Faction == null ? null : this.m_Faction.Definition.SignupName);
+                Hue = (m_Faction == null ? 0 : m_Faction.Definition.HueJoin);
+                AssignName(m_Faction == null ? null : m_Faction.Definition.SignupName);
             }
         }
         public override string DefaultName => "faction signup stone";
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.m_Faction == null)
+            if (m_Faction == null)
                 return;
 
-            if (!from.InRange(this.GetWorldLocation(), 2))
+            if (!from.InRange(GetWorldLocation(), 2))
                 from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
             else if (FactionGump.Exists(from))
                 from.SendLocalizedMessage(1042160); // You already have a faction menu open.
             else if (Faction.Find(from) == null && from is PlayerMobile)
-                from.SendGump(new JoinStoneGump((PlayerMobile)from, this.m_Faction));
+                from.SendGump(new JoinStoneGump((PlayerMobile)from, m_Faction));
         }
 
         public override void Serialize(GenericWriter writer)
@@ -61,7 +61,7 @@ namespace Server.Factions
 
             writer.Write(0); // version
 
-            Faction.WriteReference(writer, this.m_Faction);
+            Faction.WriteReference(writer, m_Faction);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -74,7 +74,7 @@ namespace Server.Factions
             {
                 case 0:
                     {
-                        this.Faction = Faction.ReadReference(reader);
+                        Faction = Faction.ReadReference(reader);
                         break;
                     }
             }

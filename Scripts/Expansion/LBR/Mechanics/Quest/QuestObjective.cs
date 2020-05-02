@@ -119,7 +119,7 @@ namespace Server.Engines.Quests
 
         public virtual bool GetKillEvent(BaseCreature creature, Container corpse)
         {
-            return !this.Completed;
+            return !Completed;
         }
 
         public virtual void OnKill(BaseCreature creature, Container corpse)

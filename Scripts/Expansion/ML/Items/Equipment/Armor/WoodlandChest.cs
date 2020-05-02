@@ -9,7 +9,7 @@ namespace Server.Items
         public WoodlandChest()
             : base(0x2B67)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public WoodlandChest(Serial serial)

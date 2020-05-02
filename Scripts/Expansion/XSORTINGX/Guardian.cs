@@ -9,44 +9,44 @@ namespace Server.Mobiles
         public Guardian()
             : base(AIType.AI_Archer, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
-            this.InitStats(100, 125, 25);
-            this.Title = "the guardian";
+            InitStats(100, 125, 25);
+            Title = "the guardian";
 
-            this.SpeechHue = Utility.RandomDyedHue();
+            SpeechHue = Utility.RandomDyedHue();
 
-            this.Hue = Utility.RandomSkinHue();
+            Hue = Utility.RandomSkinHue();
 
-            if (this.Female = Utility.RandomBool())
+            if (Female = Utility.RandomBool())
             {
-                this.Body = 0x191;
-                this.Name = NameList.RandomName("female");
+                Body = 0x191;
+                Name = NameList.RandomName("female");
             }
             else
             {
-                this.Body = 0x190;
-                this.Name = NameList.RandomName("male");
+                Body = 0x190;
+                Name = NameList.RandomName("male");
             }
 
             new ForestOstard().Rider = this;
 
             PlateChest chest = new PlateChest();
             chest.Hue = 0x966;
-            this.AddItem(chest);
+            AddItem(chest);
             PlateArms arms = new PlateArms();
             arms.Hue = 0x966;
-            this.AddItem(arms);
+            AddItem(arms);
             PlateGloves gloves = new PlateGloves();
             gloves.Hue = 0x966;
-            this.AddItem(gloves);
+            AddItem(gloves);
             PlateGorget gorget = new PlateGorget();
             gorget.Hue = 0x966;
-            this.AddItem(gorget);
+            AddItem(gorget);
             PlateLegs legs = new PlateLegs();
             legs.Hue = 0x966;
-            this.AddItem(legs);
+            AddItem(legs);
             PlateHelm helm = new PlateHelm();
             helm.Hue = 0x966;
-            this.AddItem(helm);
+            AddItem(helm);
 
             Bow bow = new Bow();
 
@@ -54,16 +54,16 @@ namespace Server.Mobiles
             bow.Crafter = this;
             bow.Quality = ItemQuality.Exceptional;
 
-            this.AddItem(bow);
+            AddItem(bow);
 
-            this.PackItem(new Arrow(250));
-            this.PackGold(250, 500);
+            PackItem(new Arrow(250));
+            PackGold(250, 500);
 
-            this.Skills[SkillName.Anatomy].Base = 120.0;
-            this.Skills[SkillName.Tactics].Base = 120.0;
-            this.Skills[SkillName.Archery].Base = 120.0;
-            this.Skills[SkillName.MagicResist].Base = 120.0;
-            this.Skills[SkillName.DetectHidden].Base = 100.0;
+            Skills[SkillName.Anatomy].Base = 120.0;
+            Skills[SkillName.Tactics].Base = 120.0;
+            Skills[SkillName.Archery].Base = 120.0;
+            Skills[SkillName.MagicResist].Base = 120.0;
+            Skills[SkillName.DetectHidden].Base = 100.0;
         }
 
         public Guardian(Serial serial)

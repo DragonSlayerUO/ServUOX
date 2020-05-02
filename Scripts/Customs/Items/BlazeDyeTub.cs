@@ -7,8 +7,8 @@ namespace Server.Items
         [Constructable]
         public BlazeDyeTub()
         {
-            this.Hue = this.DyedHue = 0x489;
-            this.Redyable = false;
+            Hue = DyedHue = 0x489;
+            Redyable = false;
         }
 
         public BlazeDyeTub(Serial serial)

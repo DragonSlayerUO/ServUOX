@@ -11,7 +11,7 @@ namespace Server.Items
         public BoneHarvester()
             : base(0x26BB)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public BoneHarvester(Serial serial)

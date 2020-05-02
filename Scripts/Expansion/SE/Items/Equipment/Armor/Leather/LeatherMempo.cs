@@ -8,7 +8,7 @@ namespace Server.Items
         public LeatherMempo()
             : base(0x277A)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public LeatherMempo(Serial serial)

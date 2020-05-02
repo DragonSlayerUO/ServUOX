@@ -9,7 +9,7 @@ namespace Server.Items
         public HideGorget()
             : base(0x2B76)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public HideGorget(Serial serial)
@@ -42,8 +42,8 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            if (this.Weight == 2.0)
-                this.Weight = 1.0;
+            if (Weight == 2.0)
+                Weight = 1.0;
         }
     }
 }

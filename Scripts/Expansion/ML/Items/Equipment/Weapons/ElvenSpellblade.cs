@@ -11,8 +11,8 @@ namespace Server.Items
         public ElvenSpellblade()
             : base(0x2D20)
         {
-            this.Weight = 5.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 5.0;
+            Layer = Layer.TwoHanded;
         }
 
         public ElvenSpellblade(Serial serial)

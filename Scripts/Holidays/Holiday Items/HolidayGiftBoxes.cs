@@ -48,7 +48,7 @@ namespace Server.Items
         public GiftBoxRectangle()
             : base(Utility.RandomBool() ? 0x46A5 : 0x46A6)
         {
-            this.Hue = GiftBoxHues.RandomGiftBoxHue;
+            Hue = GiftBoxHues.RandomGiftBoxHue;
         }
 
         public GiftBoxRectangle(Serial serial)
@@ -76,7 +76,7 @@ namespace Server.Items
         public GiftBoxCube()
             : base(0x46A2)
         {
-            this.Hue = GiftBoxHues.RandomGiftBoxHue;
+            Hue = GiftBoxHues.RandomGiftBoxHue;
         }
 
         public GiftBoxCube(Serial serial)
@@ -104,7 +104,7 @@ namespace Server.Items
         public GiftBoxCylinder()
             : base(0x46A3)
         {
-            this.Hue = GiftBoxHues.RandomGiftBoxHue;
+            Hue = GiftBoxHues.RandomGiftBoxHue;
         }
 
         public GiftBoxCylinder(Serial serial)
@@ -132,7 +132,7 @@ namespace Server.Items
         public GiftBoxOctogon()
             : base(0x46A4)
         {
-            this.Hue = GiftBoxHues.RandomGiftBoxHue;
+            Hue = GiftBoxHues.RandomGiftBoxHue;
         }
 
         public GiftBoxOctogon(Serial serial)
@@ -160,7 +160,7 @@ namespace Server.Items
         public GiftBoxAngel()
             : base(0x46A7)
         {
-            this.Hue = GiftBoxHues.RandomGiftBoxHue;
+            Hue = GiftBoxHues.RandomGiftBoxHue;
         }
 
         public GiftBoxAngel(Serial serial)
@@ -189,7 +189,7 @@ namespace Server.Items
         public GiftBoxNeon()
             : base(Utility.RandomBool() ? 0x232A : 0x232B)
         {
-            this.Hue = GiftBoxHues.RandomNeonBoxHue;
+            Hue = GiftBoxHues.RandomNeonBoxHue;
         }
 
         public GiftBoxNeon(Serial serial)

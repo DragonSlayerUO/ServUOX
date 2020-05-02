@@ -16,8 +16,8 @@ namespace Server.Items
         public ClothNinjaJacket(int hue)
             : base(0x2794, hue)
         {
-            this.Weight = 5.0;
-            this.Layer = Layer.InnerTorso;
+            Weight = 5.0;
+            Layer = Layer.InnerTorso;
         }
 
         public ClothNinjaJacket(Serial serial)
@@ -52,7 +52,7 @@ namespace Server.Items
         public ElvenShirt(int hue)
             : base(0x3175, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public ElvenShirt(Serial serial)
@@ -88,7 +88,7 @@ namespace Server.Items
         public ElvenDarkShirt(int hue)
             : base(0x3176, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public ElvenDarkShirt(Serial serial)
@@ -124,7 +124,7 @@ namespace Server.Items
         public GargishClothChest(int hue)
             : base(0x0406, Layer.InnerTorso, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public GargishClothChest(Serial serial)
@@ -141,9 +141,9 @@ namespace Server.Items
             if (parent is Mobile)
             {
                 if (((Mobile)parent).Female)
-                    this.ItemID = 0x0405;
+                    ItemID = 0x0405;
                 else
-                    this.ItemID = 0x0406;
+                    ItemID = 0x0406;
             }
         }
 
@@ -172,7 +172,7 @@ namespace Server.Items
         public FemaleGargishClothChest(int hue)
             : base(0x0405, Layer.InnerTorso, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public FemaleGargishClothChest(Serial serial)
@@ -207,7 +207,7 @@ namespace Server.Items
         public MaleGargishClothChest(int hue)
             : base(0x0406, Layer.InnerTorso, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public MaleGargishClothChest(Serial serial)

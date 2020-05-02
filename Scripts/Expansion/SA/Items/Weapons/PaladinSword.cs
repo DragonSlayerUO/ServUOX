@@ -9,7 +9,7 @@ namespace Server.Items
         public PaladinSword()
             : base(0x26CE)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public PaladinSword(Serial serial)

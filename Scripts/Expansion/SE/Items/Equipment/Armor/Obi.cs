@@ -15,7 +15,7 @@ namespace Server.Items
         public Obi(int hue)
             : base(0x27A0, hue)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public Obi(Serial serial)

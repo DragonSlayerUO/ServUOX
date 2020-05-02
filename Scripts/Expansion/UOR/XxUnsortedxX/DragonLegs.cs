@@ -9,7 +9,7 @@ namespace Server.Items
         public DragonLegs()
             : base(0x2647)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public DragonLegs(Serial serial)

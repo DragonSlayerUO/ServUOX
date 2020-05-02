@@ -83,7 +83,7 @@ namespace Server.Items
         {
             base.OnSingleClick(from);
 
-            this.LabelTo(from, 1094795, GetTitle()); // An alter service contract (~1_SKILL_NAME~)
+            LabelTo(from, 1094795, GetTitle()); // An alter service contract (~1_SKILL_NAME~)
         }
 
         public override void GetProperties(ObjectPropertyList list)

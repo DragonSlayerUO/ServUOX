@@ -20,22 +20,22 @@ namespace Server.Engines.Quests.Ninja
         public override int TalkNumber => -1;
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x83FE;
-            this.Female = true;
-            this.Body = 0x191;
-            this.Name = "Jedah Entille";
+            Hue = 0x83FE;
+            Female = true;
+            Body = 0x191;
+            Name = "Jedah Entille";
         }
 
         public override void InitOutfit()
         {
-            this.HairItemID = 0x203C;
-            this.HairHue = 0x6BE;
+            HairItemID = 0x203C;
+            HairHue = 0x6BE;
 
-            this.AddItem(new PlainDress(0x528));
-            this.AddItem(new ThighBoots());
-            this.AddItem(new FloppyHat());
+            AddItem(new PlainDress(0x528));
+            AddItem(new ThighBoots());
+            AddItem(new FloppyHat());
         }
 
         public override void OnTalk(PlayerMobile player, bool contextMenu)

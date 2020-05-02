@@ -37,7 +37,7 @@ namespace Server.Items
         public BrokenCoveredChairAddon()
             : base()
         {
-            this.AddComponent(new BrokenCoveredChairComponent(), 0, 0, 0);
+            AddComponent(new BrokenCoveredChairComponent(), 0, 0, 0);
         }
 
         public BrokenCoveredChairAddon(Serial serial)
@@ -67,7 +67,7 @@ namespace Server.Items
         public BrokenCoveredChairDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public BrokenCoveredChairDeed(Serial serial)

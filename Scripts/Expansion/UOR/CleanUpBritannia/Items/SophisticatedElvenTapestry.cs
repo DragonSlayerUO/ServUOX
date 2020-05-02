@@ -12,7 +12,7 @@ namespace Server.Items
         public SophisticatedElvenTapestry()
             : base(0x2D70)
         {
-            this.Weight = 1;
+            Weight = 1;
         }
 
         public override int LabelNumber => 1151222;// sophisticated elven tapestry

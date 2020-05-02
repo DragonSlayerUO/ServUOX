@@ -7,7 +7,7 @@ namespace Server.Ethics.Evil
     {
         public UnholySense()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 0,
                 "Unholy Sense",
                 "Drewrok Velgo",
@@ -85,7 +85,7 @@ namespace Server.Ethics.Evil
 
             from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x59, false, sb.ToString());
 
-            this.FinishInvoke(from);
+            FinishInvoke(from);
         }
     }
 }

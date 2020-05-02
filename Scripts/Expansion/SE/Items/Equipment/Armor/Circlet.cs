@@ -9,7 +9,7 @@ namespace Server.Items
         public Circlet()
             : base(0x2B6E)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public Circlet(Serial serial)

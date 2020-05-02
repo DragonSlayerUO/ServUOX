@@ -31,7 +31,7 @@ namespace Server.Items
         public override void OnDoubleClick(Mobile from)
         {
             from.AddToBackpack(new RewardScroll());
-            this.Delete();
+            Delete();
         }
 
         [Constructable]

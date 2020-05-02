@@ -8,7 +8,7 @@ namespace Server.Items
         public PlateHatsuburi()
             : base(0x2775)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public PlateHatsuburi(Serial serial)

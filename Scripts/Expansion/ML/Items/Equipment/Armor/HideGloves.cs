@@ -9,7 +9,7 @@ namespace Server.Items
         public HideGloves()
             : base(0x2B75)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public HideGloves(Serial serial)

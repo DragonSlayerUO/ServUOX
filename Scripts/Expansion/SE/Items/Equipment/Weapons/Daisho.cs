@@ -11,8 +11,8 @@ namespace Server.Items
         public Daisho()
             : base(0x27A9)
         {
-            this.Weight = 8.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 8.0;
+            Layer = Layer.TwoHanded;
         }
 
         public Daisho(Serial serial)

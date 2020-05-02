@@ -11,7 +11,7 @@ namespace Server.Items
         public Pike()
             : base(0x26BE)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public Pike(Serial serial)

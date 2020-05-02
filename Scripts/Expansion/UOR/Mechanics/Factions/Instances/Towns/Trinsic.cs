@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public Trinsic()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     1,
                     0x186A,

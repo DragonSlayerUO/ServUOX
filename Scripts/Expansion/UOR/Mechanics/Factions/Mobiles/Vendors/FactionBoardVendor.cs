@@ -10,8 +10,8 @@ namespace Server.Factions
         public FactionBoardVendor(Town town, Faction faction)
             : base(town, faction, "the LumberMan")// NOTE: title inconsistant, as OSI
         {
-            this.SetSkill(SkillName.Carpentry, 85.0, 100.0);
-            this.SetSkill(SkillName.Lumberjacking, 60.0, 83.0);
+            SetSkill(SkillName.Carpentry, 85.0, 100.0);
+            SetSkill(SkillName.Lumberjacking, 60.0, 83.0);
         }
 
         public FactionBoardVendor(Serial serial)
@@ -21,14 +21,14 @@ namespace Server.Factions
 
         public override void InitSBInfo()
         {
-            this.SBInfos.Add(new SBFactionBoard());
+            SBInfos.Add(new SBFactionBoard());
         }
 
         public override void InitOutfit()
         {
             base.InitOutfit();
 
-            this.AddItem(new HalfApron());
+            AddItem(new HalfApron());
         }
 
         public override void Serialize(GenericWriter writer)
@@ -54,15 +54,15 @@ namespace Server.Factions
         {
         }
 
-        public override IShopSellInfo SellInfo => this.m_SellInfo;
-        public override List<GenericBuyInfo> BuyInfo => this.m_BuyInfo;
+        public override IShopSellInfo SellInfo => m_SellInfo;
+        public override List<GenericBuyInfo> BuyInfo => m_BuyInfo;
 
         public class InternalBuyInfo : List<GenericBuyInfo>
         {
             public InternalBuyInfo()
             {
                 for (int i = 0; i < 5; ++i)
-                    this.Add(new GenericBuyInfo(typeof(Board), 3, 20, 0x1BD7, 0));
+                    Add(new GenericBuyInfo(typeof(Board), 3, 20, 0x1BD7, 0));
             }
         }
 

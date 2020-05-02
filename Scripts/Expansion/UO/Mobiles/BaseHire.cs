@@ -121,7 +121,7 @@ namespace Server.Mobiles
 
             if (Owner.Deleted)
             {
-                this.Say(1005653, 0x3B2);// Hmmm.  I seem to have lost my master.
+                Say(1005653, 0x3B2);// Hmmm.  I seem to have lost my master.
                 SetControlMaster(null);
                 return null;
             }
@@ -185,14 +185,14 @@ namespace Server.Mobiles
                         {
                             if (from.Followers + ControlSlots > from.FollowersMax)
                             {
-                                this.SayTo(from, 500896, 0x3B2); // I see you already have an escort.
+                                SayTo(from, 500896, 0x3B2); // I see you already have an escort.
                                 return false;
                             }
 
                             // Try to add the hireling as a follower
                             if (AddHire(from) == true)
                             {
-                                this.SayTo(from, 1043258, string.Format("{0}", item.Amount / m_Pay), 0x3B2);//"I thank thee for paying me. I will work for thee for ~1_NUMBER~ days.", (int)item.Amount / m_Pay );
+                                SayTo(from, 1043258, string.Format("{0}", item.Amount / m_Pay), 0x3B2);//"I thank thee for paying me. I will work for thee for ~1_NUMBER~ days.", (int)item.Amount / m_Pay );
                                 m_HoldGold += item.Amount;
                                 m_PayTimer = new PayTimer(this);
                                 m_PayTimer.Start();
@@ -210,17 +210,17 @@ namespace Server.Mobiles
                     }
                     else
                     {
-                        this.SayTo(from, 1043268, 0x3B2);// Tis crass of me, but I want gold
+                        SayTo(from, 1043268, 0x3B2);// Tis crass of me, but I want gold
                     }
                 }
                 else
                 {
-                    this.SayTo(from, 1042495, 0x3B2);// I have already been hired.
+                    SayTo(from, 1042495, 0x3B2);// I have already been hired.
                 }
             }
             else
             {
-                this.SayTo(from, 500200, 0x3B2);// I have no need for that.
+                SayTo(from, 500200, 0x3B2);// I have no need for that.
             }
 
             return base.OnDragDrop(from, item);
@@ -231,7 +231,7 @@ namespace Server.Mobiles
         #region [ OnSpeech ] 
         internal void SayHireCost()
         {
-            this.Say(1043256, string.Format("{0}", m_Pay), 0x3B2);// "I am available for hire for ~1_AMOUNT~ gold coins a day. If thou dost give me gold, I will work for thee."
+            Say(1043256, string.Format("{0}", m_Pay), 0x3B2);// "I am available for hire for ~1_AMOUNT~ gold coins a day. If thou dost give me gold, I will work for thee."
         }
 
         public override void OnSpeech(SpeechEventArgs e)
@@ -251,7 +251,7 @@ namespace Server.Mobiles
                     }
                     else
                     {
-                        this.Say(1042495, 0x3B2);// I have already been hired.
+                        Say(1042495, 0x3B2);// I have already been hired.
                     }
                 }
             }

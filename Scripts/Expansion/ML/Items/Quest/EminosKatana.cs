@@ -9,7 +9,7 @@ namespace Server.Engines.Quests.Ninja
         public EminosKatana()
             : base(0x13FF)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public EminosKatana(Serial serial)

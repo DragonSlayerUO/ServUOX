@@ -34,7 +34,7 @@ namespace Server.Engines.Quests.Zento
                 1049092;
         public override void OnRead()
         {
-            this.System.AddObjective(new FirstKillObjective());
+            System.AddObjective(new FirstKillObjective());
         }
     }
 
@@ -78,7 +78,7 @@ namespace Server.Engines.Quests.Zento
                 1063321;
         public override void OnRead()
         {
-            this.System.Complete();
+            System.Complete();
         }
     }
 }

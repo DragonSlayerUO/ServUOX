@@ -123,7 +123,7 @@ namespace Server.Engines.Quests.Necro
         {
             base.Accept();
 
-            this.AddConversation(new AcceptConversation());
+            AddConversation(new AcceptConversation());
         }
 
         public override bool IgnoreYoungProtection(Mobile from)

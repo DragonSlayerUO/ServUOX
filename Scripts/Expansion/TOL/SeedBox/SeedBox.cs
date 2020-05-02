@@ -61,7 +61,7 @@ namespace Server.Engines.Plants
 
         public override void OnDoubleClick(Mobile m)
         {
-            if (IsChildOf(m.Backpack) || (CheckAccessible(m) && m.InRange(this.GetWorldLocation(), 3)))
+            if (IsChildOf(m.Backpack) || (CheckAccessible(m) && m.InRange(GetWorldLocation(), 3)))
             {
                 if (m is PlayerMobile)
                     BaseGump.SendGump(new SeedBoxGump((PlayerMobile)m, this));

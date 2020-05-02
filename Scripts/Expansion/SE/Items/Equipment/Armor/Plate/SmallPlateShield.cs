@@ -10,7 +10,7 @@ namespace Server.Items
         public SmallPlateShield()
             : base(0x4202)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public SmallPlateShield(Serial serial)

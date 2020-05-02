@@ -14,9 +14,9 @@ namespace Server.Items
         public Bone(int amount)
             : base(0xf7e)
         {
-            this.Stackable = true;
-            this.Amount = amount;
-            this.Weight = 1.0;
+            Stackable = true;
+            Amount = amount;
+            Weight = 1.0;
         }
 
         public Bone(Serial serial)
@@ -24,7 +24,7 @@ namespace Server.Items
         {
         }
 
-        TextDefinition ICommodity.Description => this.LabelNumber;
+        TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
         public override void Serialize(GenericWriter writer)
         {

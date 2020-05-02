@@ -8,7 +8,7 @@ namespace Server.Items
         public StuddedSuneate()
             : base(0x27D2)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public StuddedSuneate(Serial serial)

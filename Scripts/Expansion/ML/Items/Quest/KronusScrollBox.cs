@@ -9,14 +9,14 @@ namespace Server.Engines.Quests.Necro
         [Constructable]
         public KronusScrollBox()
         {
-            this.ItemID = 0xE80;
-            this.Movable = false;
+            ItemID = 0xE80;
+            Movable = false;
 
             for (int i = 0; i < 40; i++)
             {
                 Item scroll = Loot.RandomScroll(0, 15, SpellbookType.Necromancer);
                 scroll.Movable = false;
-                this.DropItem(scroll);
+                DropItem(scroll);
             }
         }
 
@@ -29,7 +29,7 @@ namespace Server.Engines.Quests.Necro
         {
             PlayerMobile pm = from as PlayerMobile;
 
-            if (pm != null && pm.InRange(this.GetWorldLocation(), 2))
+            if (pm != null && pm.InRange(GetWorldLocation(), 2))
             {
                 QuestSystem qs = pm.Quest;
 

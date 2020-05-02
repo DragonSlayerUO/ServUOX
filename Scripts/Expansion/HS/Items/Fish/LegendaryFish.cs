@@ -11,7 +11,7 @@ namespace Server.Items
         public AbyssalDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public AbyssalDragonfish(Serial serial) : base(serial) { }
@@ -37,7 +37,7 @@ namespace Server.Items
         public BlackMarlin()
             : base(Utility.RandomMinMax(17156, 17157))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public BlackMarlin(Serial serial) : base(serial) { }
@@ -63,7 +63,7 @@ namespace Server.Items
         public BlueMarlin()
             : base(Utility.RandomMinMax(17156, 17157))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public BlueMarlin(Serial serial) : base(serial) { }
@@ -89,7 +89,7 @@ namespace Server.Items
         public DungeonPike()
             : base(Utility.RandomMinMax(17603, 17604))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public DungeonPike(Serial serial) : base(serial) { }
@@ -115,7 +115,7 @@ namespace Server.Items
         public GiantSamuraiFish()
             : base(Utility.RandomMinMax(17158, 17159))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public GiantSamuraiFish(Serial serial) : base(serial) { }
@@ -141,7 +141,7 @@ namespace Server.Items
         public GoldenTuna()
             : base(Utility.RandomMinMax(17154, 17155))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public GoldenTuna(Serial serial) : base(serial) { }
@@ -167,7 +167,7 @@ namespace Server.Items
         public Kingfish()
             : base(Utility.RandomMinMax(17158, 17159))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public Kingfish(Serial serial) : base(serial) { }
@@ -193,7 +193,7 @@ namespace Server.Items
         public LanternFish()
             : base(Utility.RandomMinMax(17605, 17606))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public LanternFish(Serial serial) : base(serial) { }
@@ -219,7 +219,7 @@ namespace Server.Items
         public RainbowFish()
             : base(Utility.RandomMinMax(17154, 17155))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public RainbowFish(Serial serial) : base(serial) { }
@@ -245,7 +245,7 @@ namespace Server.Items
         public SeekerFish()
             : base(Utility.RandomMinMax(17158, 17159))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public SeekerFish(Serial serial) : base(serial) { }
@@ -271,7 +271,7 @@ namespace Server.Items
         public SpringDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public SpringDragonfish(Serial serial) : base(serial) { }
@@ -297,7 +297,7 @@ namespace Server.Items
         public StoneFish()
             : base(Utility.RandomMinMax(17605, 17606))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public StoneFish(Serial serial) : base(serial) { }
@@ -323,7 +323,7 @@ namespace Server.Items
         public WinterDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public WinterDragonfish(Serial serial) : base(serial) { }
@@ -349,7 +349,7 @@ namespace Server.Items
         public ZombieFish()
             : base(Utility.RandomMinMax(17603, 17604))
         {
-            Hue = FishInfo.GetFishHue(this.GetType());
+            Hue = FishInfo.GetFishHue(GetType());
         }
 
         public ZombieFish(Serial serial) : base(serial) { }

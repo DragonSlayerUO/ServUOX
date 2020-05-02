@@ -27,7 +27,7 @@ namespace Server.Items
             _Charges = uses;
 
             Hue = 2419;
-            this.Weight = 15.0;
+            Weight = 15.0;
         }
 
         public override bool OnDragDrop(Mobile m, Item dropped)

@@ -112,7 +112,7 @@ namespace Server.Items
         public CrystalFieldTele()
             : base(0x3818)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public CrystalFieldTele(Serial serial)
@@ -132,7 +132,7 @@ namespace Server.Items
                     m.MoveToWorld(p, m.Map);
                 }
 
-                this.Delete();
+                Delete();
                 return false;
             }
             else

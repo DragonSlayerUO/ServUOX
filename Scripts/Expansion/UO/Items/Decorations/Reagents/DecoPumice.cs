@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoPumice()
             : base(0xF8B)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoPumice(Serial serial)

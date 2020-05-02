@@ -10,7 +10,7 @@ namespace Server.Items
         public LeatherHaidate()
             : base(0x278A)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public LeatherHaidate(Serial serial)

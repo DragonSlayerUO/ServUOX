@@ -15,7 +15,7 @@ namespace Server.Items
         public LeatherTalons(int hue)
             : base(0x41D8, hue)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public LeatherTalons(Serial serial)

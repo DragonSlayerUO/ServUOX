@@ -20,8 +20,8 @@ namespace Server.Factions
         public Silver(int amount)
             : base(0xEF0)
         {
-            this.Stackable = true;
-            this.Amount = amount;
+            Stackable = true;
+            Amount = amount;
         }
 
         public Silver(Serial serial)
@@ -32,9 +32,9 @@ namespace Server.Factions
         public override double DefaultWeight => 0.02;
         public override int GetDropSound()
         {
-            if (this.Amount <= 1)
+            if (Amount <= 1)
                 return 0x2E4;
-            else if (this.Amount <= 5)
+            else if (Amount <= 5)
                 return 0x2E5;
             else
                 return 0x2E6;

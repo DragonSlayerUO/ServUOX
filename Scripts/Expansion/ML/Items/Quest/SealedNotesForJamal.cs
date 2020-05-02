@@ -8,8 +8,8 @@ namespace Server.Items
         public SealedNotesForJamal()
             : base(0xEF9)
         {
-            this.LootType = LootType.Blessed;
-            this.Weight = 5;
+            LootType = LootType.Blessed;
+            Weight = 5;
         }
 
         public SealedNotesForJamal(Serial serial)

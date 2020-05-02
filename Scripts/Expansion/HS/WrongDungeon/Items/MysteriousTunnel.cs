@@ -19,7 +19,7 @@ namespace Server.Items
         public MysteriousTunnel()
             : base(0x1B71)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public MysteriousTunnel(Serial serial)
@@ -32,8 +32,8 @@ namespace Server.Items
             if (m is PlayerMobile)
             {
                 Point3D loc = PointDest;
-                m.MoveToWorld(loc, this.Map);
-                BaseCreature.TeleportPets(m, loc, this.Map);
+                m.MoveToWorld(loc, Map);
+                BaseCreature.TeleportPets(m, loc, Map);
 
                 return false;
             }
@@ -46,7 +46,7 @@ namespace Server.Items
             base.Serialize(writer);
             writer.Write(0); // version
 
-            writer.Write(this.m_PointDest);
+            writer.Write(m_PointDest);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -54,7 +54,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            this.m_PointDest = reader.ReadPoint3D();
+            m_PointDest = reader.ReadPoint3D();
         }
     }
 }

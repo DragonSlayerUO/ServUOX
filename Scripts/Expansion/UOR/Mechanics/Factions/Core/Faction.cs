@@ -110,11 +110,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_StrongholdRegion;
+                return m_StrongholdRegion;
             }
             set
             {
-                this.m_StrongholdRegion = value;
+                m_StrongholdRegion = value;
             }
         }
 
@@ -122,14 +122,14 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Definition;
+                return m_Definition;
             }
             set
             {
-                this.m_Definition = value;
+                m_Definition = value;
 
                 if (Settings.Enabled)
-                    this.m_StrongholdRegion = new StrongholdRegion(this);
+                    m_StrongholdRegion = new StrongholdRegion(this);
             }
         }
 
@@ -137,11 +137,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State;
+                return m_State;
             }
             set
             {
-                this.m_State = value;
+                m_State = value;
             }
         }
 
@@ -149,11 +149,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State.Election;
+                return m_State.Election;
             }
             set
             {
-                this.m_State.Election = value;
+                m_State.Election = value;
             }
         }
 
@@ -161,11 +161,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State.Commander;
+                return m_State.Commander;
             }
             set
             {
-                this.m_State.Commander = value;
+                m_State.Commander = value;
             }
         }
 
@@ -173,11 +173,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State.Tithe;
+                return m_State.Tithe;
             }
             set
             {
-                this.m_State.Tithe = value;
+                m_State.Tithe = value;
             }
         }
 
@@ -185,11 +185,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State.Silver;
+                return m_State.Silver;
             }
             set
             {
-                this.m_State.Silver = value;
+                m_State.Silver = value;
             }
         }
 
@@ -197,26 +197,26 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State.Members;
+                return m_State.Members;
             }
             set
             {
-                this.m_State.Members = value;
+                m_State.Members = value;
             }
         }
 
         public static readonly TimeSpan LeavePeriod = TimeSpan.FromDays(3.0);
 
-        public bool FactionMessageReady => this.m_State.FactionMessageReady;
+        public bool FactionMessageReady => m_State.FactionMessageReady;
 
         public void Broadcast(string text)
         {
-            this.Broadcast(0x3B2, text);
+            Broadcast(0x3B2, text);
         }
 
         public void Broadcast(int hue, string text)
         {
-            List<PlayerState> members = this.Members;
+            List<PlayerState> members = Members;
 
             for (int i = 0; i < members.Count; ++i)
                 members[i].Mobile.SendMessage(hue, text);
@@ -224,7 +224,7 @@ namespace Server.Factions
 
         public void Broadcast(int number)
         {
-            List<PlayerState> members = this.Members;
+            List<PlayerState> members = Members;
 
             for (int i = 0; i < members.Count; ++i)
                 members[i].Mobile.SendLocalizedMessage(number);
@@ -232,12 +232,12 @@ namespace Server.Factions
 
         public void Broadcast(string format, params object[] args)
         {
-            this.Broadcast(String.Format(format, args));
+            Broadcast(String.Format(format, args));
         }
 
         public void Broadcast(int hue, string format, params object[] args)
         {
-            this.Broadcast(hue, String.Format(format, args));
+            Broadcast(hue, String.Format(format, args));
         }
 
         public void BeginBroadcast(Mobile from)
@@ -249,9 +249,9 @@ namespace Server.Factions
         public void EndBroadcast(Mobile from, string text)
         {
             if (from.IsPlayer())
-                this.m_State.RegisterBroadcast();
+                m_State.RegisterBroadcast();
 
-            this.Broadcast(this.Definition.HueBroadcast, "{0} [Commander] {1} : {2}", from.Name, this.Definition.FriendlyName, text);
+            Broadcast(Definition.HueBroadcast, "{0} [Commander] {1} : {2}", from.Name, Definition.FriendlyName, text);
         }
 
         private class BroadcastPrompt : Prompt
@@ -260,12 +260,12 @@ namespace Server.Factions
 
             public BroadcastPrompt(Faction faction)
             {
-                this.m_Faction = faction;
+                m_Faction = faction;
             }
 
             public override void OnResponse(Mobile from, string text)
             {
-                this.m_Faction.EndBroadcast(from, text);
+                m_Faction.EndBroadcast(from, text);
             }
         }
 
@@ -368,9 +368,9 @@ namespace Server.Factions
 
         public virtual void AddMember(Mobile mob)
         {
-            this.Members.Insert(this.ZeroRankOffset, new PlayerState(mob, this, this.Members));
+            Members.Insert(ZeroRankOffset, new PlayerState(mob, this, Members));
 
-            mob.AddToBackpack(FactionItem.Imbue(new Robe(), this, false, this.Definition.HuePrimary));
+            mob.AddToBackpack(FactionItem.Imbue(new Robe(), this, false, Definition.HuePrimary));
             mob.SendLocalizedMessage(1010374); // You have been granted a robe which signifies your faction
 
             mob.InvalidateProperties();
@@ -431,26 +431,26 @@ namespace Server.Factions
 
         public void RemovePlayerState(PlayerState pl)
         {
-            if (pl == null || !this.Members.Contains(pl))
+            if (pl == null || !Members.Contains(pl))
                 return;
 
             int killPoints = pl.KillPoints;
 
             if (pl.RankIndex != -1)
             {
-                while ((pl.RankIndex + 1) < this.ZeroRankOffset)
+                while ((pl.RankIndex + 1) < ZeroRankOffset)
                 {
-                    PlayerState pNext = this.Members[pl.RankIndex + 1] as PlayerState;
-                    this.Members[pl.RankIndex + 1] = pl;
-                    this.Members[pl.RankIndex] = pNext;
+                    PlayerState pNext = Members[pl.RankIndex + 1] as PlayerState;
+                    Members[pl.RankIndex + 1] = pl;
+                    Members[pl.RankIndex] = pNext;
                     pl.RankIndex++;
                     pNext.RankIndex--;
                 }
 
-                this.ZeroRankOffset--;
+                ZeroRankOffset--;
             }
 
-            this.Members.Remove(pl);
+            Members.Remove(pl);
 
             PlayerMobile pm = (PlayerMobile)pl.Mobile;
             if (pm == null)
@@ -464,8 +464,8 @@ namespace Server.Factions
                 mob.InvalidateProperties();
                 mob.Delta(MobileDelta.Noto);
 
-                if (this.Election.IsCandidate(mob))
-                    this.Election.RemoveCandidate(mob);
+                if (Election.IsCandidate(mob))
+                    Election.RemoveCandidate(mob);
 
                 if (pl.Finance != null)
                     pl.Finance.Finance = null;
@@ -473,10 +473,10 @@ namespace Server.Factions
                 if (pl.Sheriff != null)
                     pl.Sheriff.Sheriff = null;
 
-                this.Election.RemoveVoter(mob);
+                Election.RemoveVoter(mob);
 
-                if (this.Commander == mob)
-                    this.Commander = null;
+                if (Commander == mob)
+                    Commander = null;
 
                 pm.ValidateEquipment();
             }
@@ -489,7 +489,7 @@ namespace Server.Factions
         {
             PlayerState pl = PlayerState.Find(mob);
 
-            if (pl == null || !this.Members.Contains(pl))
+            if (pl == null || !Members.Contains(pl))
                 return;
 
             int killPoints = pl.KillPoints;
@@ -506,19 +506,19 @@ namespace Server.Factions
 
             if (pl.RankIndex != -1)
             {
-                while ((pl.RankIndex + 1) < this.ZeroRankOffset)
+                while ((pl.RankIndex + 1) < ZeroRankOffset)
                 {
-                    PlayerState pNext = this.Members[pl.RankIndex + 1];
-                    this.Members[pl.RankIndex + 1] = pl;
-                    this.Members[pl.RankIndex] = pNext;
+                    PlayerState pNext = Members[pl.RankIndex + 1];
+                    Members[pl.RankIndex + 1] = pl;
+                    Members[pl.RankIndex] = pNext;
                     pl.RankIndex++;
                     pNext.RankIndex--;
                 }
 
-                this.ZeroRankOffset--;
+                ZeroRankOffset--;
             }
 
-            this.Members.Remove(pl);
+            Members.Remove(pl);
 
             if (mob is PlayerMobile)
                 ((PlayerMobile)mob).FactionPlayerState = null;
@@ -526,10 +526,10 @@ namespace Server.Factions
             mob.InvalidateProperties();
             mob.Delta(MobileDelta.Noto);
 
-            if (this.Election.IsCandidate(mob))
-                this.Election.RemoveCandidate(mob);
+            if (Election.IsCandidate(mob))
+                Election.RemoveCandidate(mob);
 
-            this.Election.RemoveVoter(mob);
+            Election.RemoveVoter(mob);
 
             if (pl.Finance != null)
                 pl.Finance.Finance = null;
@@ -537,8 +537,8 @@ namespace Server.Factions
             if (pl.Sheriff != null)
                 pl.Sheriff.Sheriff = null;
 
-            if (this.Commander == mob)
-                this.Commander = null;
+            if (Commander == mob)
+                Commander = null;
 
             if (mob is PlayerMobile)
                 ((PlayerMobile)mob).ValidateEquipment();
@@ -554,7 +554,7 @@ namespace Server.Factions
                 guild.RemoveMember(mob);
                 mob.SendLocalizedMessage(1042283); // You have been kicked out of your guild!  Young players may not remain in a guild which is allied with a faction.
             }
-            else if (this.AlreadyHasCharInFaction(mob))
+            else if (AlreadyHasCharInFaction(mob))
             {
                 guild.RemoveMember(mob);
                 mob.SendLocalizedMessage(1005281); // You have been kicked out of your guild due to factional overlap
@@ -566,14 +566,14 @@ namespace Server.Factions
             }
             else
             {
-                this.AddMember(mob);
-                mob.SendLocalizedMessage(1042756, true, " " + this.m_Definition.FriendlyName); // You are now joining a faction:
+                AddMember(mob);
+                mob.SendLocalizedMessage(1042756, true, " " + m_Definition.FriendlyName); // You are now joining a faction:
             }
         }
 
         public void JoinAlone(Mobile mob)
         {
-            this.AddMember(mob);
+            AddMember(mob);
             mob.SendLocalizedMessage(1005058); // You have joined the faction
         }
 
@@ -618,7 +618,7 @@ namespace Server.Factions
                 pm.SendLocalizedMessage(1010104); // You cannot join a faction as a young player
             else if (pl != null && pl.IsLeaving)
                 pm.SendLocalizedMessage(1005051); // You cannot use the faction stone until you have finished quitting your current faction
-            else if (this.AlreadyHasCharInFaction(pm))
+            else if (AlreadyHasCharInFaction(pm))
                 pm.SendLocalizedMessage(1005059); // You cannot join a faction because you already declared your allegiance with another character
             else if (IsFactionBanned(mob))
                 pm.SendLocalizedMessage(1005052); // You are currently banned from the faction system
@@ -634,7 +634,7 @@ namespace Server.Factions
                     pm.SendLocalizedMessage(1005056); // You cannot join a faction with active Wars
                 else if (Guild.NewGuildSystem && guild.Alliance != null)
                     pm.SendLocalizedMessage(1080454); // Your guild cannot join a faction while in alliance with non-factioned guilds.
-                else if (!this.CanHandleInflux(guild.Members.Count))
+                else if (!CanHandleInflux(guild.Members.Count))
                     pm.SendLocalizedMessage(1018031); // In the interest of faction stability, this faction declines to accept new members for now.
                 else
                 {
@@ -647,17 +647,17 @@ namespace Server.Factions
                         if (member == null)
                             continue;
 
-                        this.JoinGuilded(member, guild);
+                        JoinGuilded(member, guild);
                     }
                 }
             }
-            else if (!this.CanHandleInflux(1))
+            else if (!CanHandleInflux(1))
             {
                 pm.SendLocalizedMessage(1018031); // In the interest of faction stability, this faction declines to accept new members for now.
             }
             else
             {
-                this.JoinAlone(mob);
+                JoinAlone(mob);
             }
         }
 
@@ -666,22 +666,22 @@ namespace Server.Factions
             if (mob == null)
                 return false;
 
-            return (mob.AccessLevel >= AccessLevel.GameMaster || mob == this.Commander);
+            return (mob.AccessLevel >= AccessLevel.GameMaster || mob == Commander);
         }
 
         public Faction()
         {
-            this.m_State = new FactionState(this);
+            m_State = new FactionState(this);
         }
 
         public override string ToString()
         {
-            return this.m_Definition.FriendlyName;
+            return m_Definition.FriendlyName;
         }
 
         public int CompareTo(object obj)
         {
-            return this.m_Definition.Sort - ((Faction)obj).m_Definition.Sort;
+            return m_Definition.Sort - ((Faction)obj).m_Definition.Sort;
         }
 
         public static bool CheckLeaveTimer(Mobile mob)
@@ -1094,9 +1094,9 @@ namespace Server.Factions
             if (silver <= 0)
                 return 0;
 
-            int tithed = (silver * this.Tithe) / 100;
+            int tithed = (silver * Tithe) / 100;
 
-            this.Silver += tithed;
+            Silver += tithed;
 
             silver = silver - tithed;
 
@@ -1112,11 +1112,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State.Traps;
+                return m_State.Traps;
             }
             set
             {
-                this.m_State.Traps = value;
+                m_State.Traps = value;
             }
         }
 
@@ -1164,7 +1164,7 @@ namespace Server.Factions
             if (smallest == null)
                 return true; // sanity
 
-            if (StabilityFactor > 0 && (((this.Members.Count + influx) * 100) / StabilityFactor) > smallest.Members.Count)
+            if (StabilityFactor > 0 && (((Members.Count + influx) * 100) / StabilityFactor) > smallest.Members.Count)
                 return false;
 
             return true;
@@ -1453,33 +1453,33 @@ namespace Server.Factions
 
         public FactionKickCommand(FactionKickType kickType)
         {
-            this.m_KickType = kickType;
+            m_KickType = kickType;
 
-            this.AccessLevel = AccessLevel.GameMaster;
-            this.Supports = CommandSupport.AllMobiles;
-            this.ObjectTypes = ObjectTypes.Mobiles;
+            AccessLevel = AccessLevel.GameMaster;
+            Supports = CommandSupport.AllMobiles;
+            ObjectTypes = ObjectTypes.Mobiles;
 
-            switch (this.m_KickType)
+            switch (m_KickType)
             {
                 case FactionKickType.Kick:
                     {
-                        this.Commands = new string[] { "FactionKick" };
-                        this.Usage = "FactionKick";
-                        this.Description = "Kicks the targeted player out of his current faction. This does not prevent them from rejoining.";
+                        Commands = new string[] { "FactionKick" };
+                        Usage = "FactionKick";
+                        Description = "Kicks the targeted player out of his current faction. This does not prevent them from rejoining.";
                         break;
                     }
                 case FactionKickType.Ban:
                     {
-                        this.Commands = new string[] { "FactionBan" };
-                        this.Usage = "FactionBan";
-                        this.Description = "Bans the account of a targeted player from joining factions. All players on the account are removed from their current faction, if any.";
+                        Commands = new string[] { "FactionBan" };
+                        Usage = "FactionBan";
+                        Description = "Bans the account of a targeted player from joining factions. All players on the account are removed from their current faction, if any.";
                         break;
                     }
                 case FactionKickType.Unban:
                     {
-                        this.Commands = new string[] { "FactionUnban" };
-                        this.Usage = "FactionUnban";
-                        this.Description = "Unbans the account of a targeted player from joining factions.";
+                        Commands = new string[] { "FactionUnban" };
+                        Usage = "FactionUnban";
+                        Description = "Unbans the account of a targeted player from joining factions.";
                         break;
                     }
             }
@@ -1489,7 +1489,7 @@ namespace Server.Factions
         {
             Mobile mob = (Mobile)obj;
 
-            switch (this.m_KickType)
+            switch (m_KickType)
             {
                 case FactionKickType.Kick:
                     {
@@ -1499,11 +1499,11 @@ namespace Server.Factions
                         {
                             pl.Faction.RemoveMember(mob);
                             mob.SendMessage("You have been kicked from your faction.");
-                            this.AddResponse("They have been kicked from their faction.");
+                            AddResponse("They have been kicked from their faction.");
                         }
                         else
                         {
-                            this.LogFailure("They are not in a faction.");
+                            LogFailure("They are not in a faction.");
                         }
 
                         break;
@@ -1517,11 +1517,11 @@ namespace Server.Factions
                             if (acct.GetTag("FactionBanned") == null)
                             {
                                 acct.SetTag("FactionBanned", "true");
-                                this.AddResponse("The account has been banned from joining factions.");
+                                AddResponse("The account has been banned from joining factions.");
                             }
                             else
                             {
-                                this.AddResponse("The account is already banned from joining factions.");
+                                AddResponse("The account is already banned from joining factions.");
                             }
 
                             for (int i = 0; i < acct.Length; ++i)
@@ -1536,14 +1536,14 @@ namespace Server.Factions
                                     {
                                         pl.Faction.RemoveMember(mob);
                                         mob.SendMessage("You have been banned from factions.");
-                                        this.AddResponse("They have been banned from factions.");
+                                        AddResponse("They have been banned from factions.");
                                     }
                                 }
                             }
                         }
                         else
                         {
-                            this.LogFailure("They have no assigned account.");
+                            LogFailure("They have no assigned account.");
                         }
 
                         break;
@@ -1556,17 +1556,17 @@ namespace Server.Factions
                         {
                             if (acct.GetTag("FactionBanned") == null)
                             {
-                                this.AddResponse("The account is not already banned from joining factions.");
+                                AddResponse("The account is not already banned from joining factions.");
                             }
                             else
                             {
                                 acct.RemoveTag("FactionBanned");
-                                this.AddResponse("The account may now freely join factions.");
+                                AddResponse("The account may now freely join factions.");
                             }
                         }
                         else
                         {
-                            this.LogFailure("They have no assigned account.");
+                            LogFailure("They have no assigned account.");
                         }
 
                         break;

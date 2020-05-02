@@ -11,7 +11,7 @@ namespace Server.Items
         public Lance()
             : base(0x26C0)
         {
-            this.Weight = 12.0;
+            Weight = 12.0;
         }
 
         public Lance(Serial serial)

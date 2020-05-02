@@ -23,10 +23,10 @@ namespace Server.Engines.Quests.Haven
                 1046039;
         public override void OnComplete()
         {
-            if (this.System.From.Profession == 5) // paladin
-                this.System.AddConversation(new UzeraanTitheConversation());
+            if (System.From.Profession == 5) // paladin
+                System.AddConversation(new UzeraanTitheConversation());
             else
-                this.System.AddConversation(new UzeraanFirstTaskConversation());
+                System.AddConversation(new UzeraanFirstTaskConversation());
         }
     }
 
@@ -35,7 +35,7 @@ namespace Server.Engines.Quests.Haven
         private int m_OldTithingPoints;
         public TitheGoldObjective()
         {
-            this.m_OldTithingPoints = -1;
+            m_OldTithingPoints = -1;
         }
 
         public override object Message =>
@@ -47,20 +47,20 @@ namespace Server.Engines.Quests.Haven
                 1060386;
         public override void CheckProgress()
         {
-            PlayerMobile pm = this.System.From;
+            PlayerMobile pm = System.From;
             int curTithingPoints = pm.TithingPoints;
 
             if (curTithingPoints >= 500)
-                this.Complete();
-            else if (curTithingPoints > this.m_OldTithingPoints && this.m_OldTithingPoints >= 0)
+                Complete();
+            else if (curTithingPoints > m_OldTithingPoints && m_OldTithingPoints >= 0)
                 pm.SendLocalizedMessage(1060240, "", 0x41); // You must have at least 500 tithing points before you can continue in your quest.
 
-            this.m_OldTithingPoints = curTithingPoints;
+            m_OldTithingPoints = curTithingPoints;
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new FindUzeraanFirstTaskObjective());
+            System.AddObjective(new FindUzeraanFirstTaskObjective());
         }
     }
 
@@ -75,7 +75,7 @@ namespace Server.Engines.Quests.Haven
                 1060387;
         public override void OnComplete()
         {
-            this.System.AddConversation(new UzeraanFirstTaskConversation());
+            System.AddConversation(new UzeraanFirstTaskConversation());
         }
     }
 
@@ -88,15 +88,15 @@ namespace Server.Engines.Quests.Haven
 
         public KillHordeMinionsObjective(KillHordeMinionsStep step)
         {
-            this.m_Step = step;
+            m_Step = step;
         }
 
-        public KillHordeMinionsStep Step => this.m_Step;
+        public KillHordeMinionsStep Step => m_Step;
         public override object Message
         {
             get
             {
-                switch (this.m_Step)
+                switch (m_Step)
                 {
                     case KillHordeMinionsStep.First:
                         /* Find the mountain pass beyond the house which lies at the
@@ -123,9 +123,9 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.System.From.Profession == 5) // paladin
+                if (System.From.Profession == 5) // paladin
                 {
-                    switch (this.m_Step)
+                    switch (m_Step)
                     {
                         case KillHordeMinionsStep.First:
                             return 1;
@@ -145,7 +145,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.m_Step == KillHordeMinionsStep.LearnKarma && this.HasBeenRead)
+                if (m_Step == KillHordeMinionsStep.LearnKarma && HasBeenRead)
                     return true;
                 else
                     return base.Completed;
@@ -153,10 +153,10 @@ namespace Server.Engines.Quests.Haven
         }
         public override void RenderProgress(BaseQuestGump gump)
         {
-            if (!this.Completed)
+            if (!Completed)
             {
                 gump.AddHtmlObject(70, 260, 270, 100, 1049090, BaseQuestGump.Blue, false, false); // Horde Minions killed:
-                gump.AddLabel(70, 280, 0x64, this.CurProgress.ToString());
+                gump.AddLabel(70, 280, 0x64, CurProgress.ToString());
             }
             else
             {
@@ -166,7 +166,7 @@ namespace Server.Engines.Quests.Haven
 
         public override void OnRead()
         {
-            this.CheckCompletionStatus();
+            CheckCompletionStatus();
         }
 
         public override bool IgnoreYoungProtection(Mobile from)
@@ -182,43 +182,43 @@ namespace Server.Engines.Quests.Haven
         {
             if (creature is HordeMinion && corpse.Map == Map.Trammel && corpse.X >= 3314 && corpse.X <= 3814 && corpse.Y >= 2345 && corpse.Y <= 3095) // Haven island
             {
-                if (this.CurProgress == 0)
-                    this.System.From.Send(new DisplayHelpTopic(29, false)); // HEALING
+                if (CurProgress == 0)
+                    System.From.Send(new DisplayHelpTopic(29, false)); // HEALING
 
-                this.CurProgress++;
+                CurProgress++;
             }
         }
 
         public override void OnComplete()
         {
-            if (this.System.From.Profession == 5)
+            if (System.From.Profession == 5)
             {
-                switch (this.m_Step)
+                switch (m_Step)
                 {
                     case KillHordeMinionsStep.First:
                         {
                             QuestObjective obj = new KillHordeMinionsObjective(KillHordeMinionsStep.LearnKarma);
-                            this.System.AddObjective(obj);
-                            obj.CurProgress = this.CurProgress;
+                            System.AddObjective(obj);
+                            obj.CurProgress = CurProgress;
                             break;
                         }
                     case KillHordeMinionsStep.LearnKarma:
                         {
                             QuestObjective obj = new KillHordeMinionsObjective(KillHordeMinionsStep.Others);
-                            this.System.AddObjective(obj);
-                            obj.CurProgress = this.CurProgress;
+                            System.AddObjective(obj);
+                            obj.CurProgress = CurProgress;
                             break;
                         }
                     default:
                         {
-                            this.System.AddObjective(new FindUzeraanAboutReportObjective());
+                            System.AddObjective(new FindUzeraanAboutReportObjective());
                             break;
                         }
                 }
             }
             else
             {
-                this.System.AddObjective(new FindUzeraanAboutReportObjective());
+                System.AddObjective(new FindUzeraanAboutReportObjective());
             }
         }
 
@@ -226,14 +226,14 @@ namespace Server.Engines.Quests.Haven
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_Step = (KillHordeMinionsStep)reader.ReadEncodedInt();
+            m_Step = (KillHordeMinionsStep)reader.ReadEncodedInt();
         }
 
         public override void ChildSerialize(GenericWriter writer)
         {
             writer.WriteEncodedInt(0); // version
 
-            writer.WriteEncodedInt((int)this.m_Step);
+            writer.WriteEncodedInt((int)m_Step);
         }
     }
 
@@ -252,7 +252,7 @@ namespace Server.Engines.Quests.Haven
                 1049091;
         public override void OnComplete()
         {
-            this.System.AddConversation(new UzeraanReportConversation());
+            System.AddConversation(new UzeraanReportConversation());
         }
     }
 
@@ -272,7 +272,7 @@ namespace Server.Engines.Quests.Haven
         public override bool IgnoreYoungProtection(Mobile from)
         {
             // This restriction begins when this objective is completed, and continues until the quest is ended
-            if (this.Completed && from is RestlessSoul && from.Map == Map.Trammel && from.X >= 5199 && from.X <= 5271 && from.Y >= 1812 && from.Y <= 1865) // Schmendrick's cave
+            if (Completed && from is RestlessSoul && from.Map == Map.Trammel && from.X >= 5199 && from.X <= 5271 && from.Y >= 1812 && from.Y <= 1865) // Schmendrick's cave
                 return true;
 
             return false;
@@ -280,7 +280,7 @@ namespace Server.Engines.Quests.Haven
 
         public override void OnComplete()
         {
-            this.System.AddConversation(new SchmendrickConversation());
+            System.AddConversation(new SchmendrickConversation());
         }
     }
 
@@ -297,7 +297,7 @@ namespace Server.Engines.Quests.Haven
                 1049323;
         public override void OnComplete()
         {
-            this.System.AddObjective(new ReturnScrollOfPowerObjective());
+            System.AddObjective(new ReturnScrollOfPowerObjective());
         }
     }
 
@@ -315,7 +315,7 @@ namespace Server.Engines.Quests.Haven
                 1049324;
         public override void OnComplete()
         {
-            this.System.AddConversation(new UzeraanScrollOfPowerConversation());
+            System.AddConversation(new UzeraanScrollOfPowerConversation());
         }
     }
 
@@ -334,7 +334,7 @@ namespace Server.Engines.Quests.Haven
                 1049358;
         public override void OnComplete()
         {
-            this.System.AddConversation(new DryadConversation());
+            System.AddConversation(new DryadConversation());
         }
     }
 
@@ -353,7 +353,7 @@ namespace Server.Engines.Quests.Haven
                 1049327;
         public override void OnComplete()
         {
-            this.System.AddConversation(new UzeraanFertileDirtConversation());
+            System.AddConversation(new UzeraanFertileDirtConversation());
         }
     }
 
@@ -373,9 +373,9 @@ namespace Server.Engines.Quests.Haven
                 1049361;
         public override void CheckProgress()
         {
-            PlayerMobile player = this.System.From;
+            PlayerMobile player = System.From;
 
-            if (!this.m_Ambushed && player.Map == Map.Trammel && player.InRange(new Point3D(3456, 2558, 50), 30))
+            if (!m_Ambushed && player.Map == Map.Trammel && player.InRange(new Point3D(3456, 2558, 50), 30))
             {
                 int x = player.X - 1;
                 int y = player.Y - 2;
@@ -383,7 +383,7 @@ namespace Server.Engines.Quests.Haven
 
                 if (Map.Trammel.CanSpawnMobile(x, y, z))
                 {
-                    this.m_Ambushed = true;
+                    m_Ambushed = true;
 
                     player.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1049330); // You have been ambushed! Fight for your honor!!!
 
@@ -396,14 +396,14 @@ namespace Server.Engines.Quests.Haven
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new ReturnDaemonBloodObjective());
+            System.AddObjective(new ReturnDaemonBloodObjective());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_Ambushed = reader.ReadBool();
+            m_Ambushed = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -428,7 +428,7 @@ namespace Server.Engines.Quests.Haven
                 1049332;
         public override void OnComplete()
         {
-            this.System.AddConversation(new UzeraanDaemonBloodConversation());
+            System.AddConversation(new UzeraanDaemonBloodConversation());
         }
     }
 
@@ -443,18 +443,18 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                return this.m_CorpseWithBone;
+                return m_CorpseWithBone;
             }
             set
             {
-                this.m_CorpseWithBone = value;
+                m_CorpseWithBone = value;
             }
         }
         public override object Message
         {
             get
             {
-                if (this.System.From.Profession == 5)
+                if (System.From.Profession == 5)
                 {
                     /* Use your <a href="?ForceTopic108">Sacred Journey</a>
                     * ability on the rune to the <a href="?ForceTopic13">North</a>
@@ -474,7 +474,7 @@ namespace Server.Engines.Quests.Haven
         }
         public override void OnComplete()
         {
-            this.System.AddObjective(new ReturnDaemonBoneObjective());
+            System.AddObjective(new ReturnDaemonBoneObjective());
         }
 
         public override bool IgnoreYoungProtection(Mobile from)
@@ -491,7 +491,7 @@ namespace Server.Engines.Quests.Haven
             if (base.GetKillEvent(creature, corpse))
                 return true;
 
-            return UzeraanTurmoilQuest.HasLostDaemonBone(this.System.From);
+            return UzeraanTurmoilQuest.HasLostDaemonBone(System.From);
         }
 
         public override void OnKill(BaseCreature creature, Container corpse)
@@ -499,7 +499,7 @@ namespace Server.Engines.Quests.Haven
             if ((creature is Zombie || creature is Skeleton) && corpse.Map == Map.Trammel && corpse.X >= 3391 && corpse.X <= 3424 && corpse.Y >= 2639 && corpse.Y <= 2664) // Haven graveyard
             {
                 if (Utility.RandomDouble() < 0.25)
-                    this.m_CorpseWithBone = corpse;
+                    m_CorpseWithBone = corpse;
             }
         }
 
@@ -507,13 +507,13 @@ namespace Server.Engines.Quests.Haven
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_CorpseWithBone = (Container)reader.ReadItem();
+            m_CorpseWithBone = (Container)reader.ReadItem();
         }
 
         public override void ChildSerialize(GenericWriter writer)
         {
-            if (this.m_CorpseWithBone != null && this.m_CorpseWithBone.Deleted)
-                this.m_CorpseWithBone = null;
+            if (m_CorpseWithBone != null && m_CorpseWithBone.Deleted)
+                m_CorpseWithBone = null;
 
             writer.WriteEncodedInt(0); // version
 
@@ -534,7 +534,7 @@ namespace Server.Engines.Quests.Haven
                 1049334;
         public override void OnComplete()
         {
-            this.System.AddConversation(new UzeraanDaemonBoneConversation());
+            System.AddConversation(new UzeraanDaemonBoneConversation());
         }
     }
 
@@ -552,7 +552,7 @@ namespace Server.Engines.Quests.Haven
                 1049336;
         public override void OnComplete()
         {
-            this.System.AddConversation(new BankerConversation());
+            System.AddConversation(new BankerConversation());
         }
     }
 }

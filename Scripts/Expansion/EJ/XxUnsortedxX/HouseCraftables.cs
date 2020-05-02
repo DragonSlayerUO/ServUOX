@@ -154,7 +154,7 @@ namespace Server.Items
                 {
                     int id = list[i];
 
-                    if (this.ItemID == id)
+                    if (ItemID == id)
                     {
                         if (i >= list.Length - 1)
                         {
@@ -475,7 +475,7 @@ namespace Server.Items
         public CraftableHouseDoorDeed(DoorType type)
             : base(0x14F0)
         {
-            this.Type = type;
+            Type = type;
         }
 
         public CraftableHouseDoorDeed(Serial serial)
@@ -492,7 +492,7 @@ namespace Server.Items
             base.Serialize(writer);
 
             writer.Write(0);
-            writer.Write((int)this.Type);
+            writer.Write((int)Type);
             writer.Write((int)_Resource);
         }
 
@@ -501,7 +501,7 @@ namespace Server.Items
             base.Deserialize(reader);
 
             int version = reader.ReadInt();
-            this.Type = (DoorType)reader.ReadInt();
+            Type = (DoorType)reader.ReadInt();
             _Resource = (CraftResource)reader.ReadInt();
 
             Timer.DelayCall(TimeSpan.FromSeconds(30), () =>
@@ -514,10 +514,10 @@ namespace Server.Items
         {
             BaseDoor door;
 
-            if (this.Type < DoorType.LeftMetalDoor_S_In)
-                door = new CraftableStoneHouseDoor(this.Type, CraftableMetalHouseDoor.GetDoorFacing(this.Type));
+            if (Type < DoorType.LeftMetalDoor_S_In)
+                door = new CraftableStoneHouseDoor(Type, CraftableMetalHouseDoor.GetDoorFacing(Type));
             else
-                door = new CraftableMetalHouseDoor(this.Type, CraftableMetalHouseDoor.GetDoorFacing(this.Type));
+                door = new CraftableMetalHouseDoor(Type, CraftableMetalHouseDoor.GetDoorFacing(Type));
 
             if (door is IResource)
                 ((IResource)door).Resource = _Resource;
@@ -576,7 +576,7 @@ namespace Server.Items
         {
             get
             {
-                switch (this.Type)
+                switch (Type)
                 {
                     default:
                     case DoorType.LeftMetalDoor_S_In: return 1156080;
@@ -612,7 +612,7 @@ namespace Server.Items
         public CraftableMetalHouseDoor(DoorType type, DoorFacing facing)
             : base(facing)
         {
-            this.Type = type;
+            Type = type;
             Movable = true;
         }
 
@@ -804,7 +804,7 @@ namespace Server.Items
             base.Serialize(writer);
 
             writer.Write(1);
-            writer.Write((int)this.Type);
+            writer.Write((int)Type);
             writer.Write((int)_Resource);
         }
 
@@ -813,7 +813,7 @@ namespace Server.Items
             base.Deserialize(reader);
 
             int version = reader.ReadInt();
-            this.Type = (DoorType)reader.ReadInt();
+            Type = (DoorType)reader.ReadInt();
             _Resource = (CraftResource)reader.ReadInt();
 
             if (version == 0)
@@ -843,7 +843,7 @@ namespace Server.Items
         {
             get
             {
-                switch (this.Type)
+                switch (Type)
                 {
                     default:
                     case DoorType.StoneDoor_S_In: return 1156078;
@@ -875,7 +875,7 @@ namespace Server.Items
         public CraftableStoneHouseDoor(DoorType type, DoorFacing facing)
             : base(facing, 0x324 + (2 * (int)facing), 0x325 + (2 * (int)facing), 0xED, 0xF4, BaseDoor.GetOffset(facing))
         {
-            this.Type = type;
+            Type = type;
             Movable = true;
         }
 
@@ -1047,7 +1047,7 @@ namespace Server.Items
             base.Serialize(writer);
 
             writer.Write(1);
-            writer.Write((int)this.Type);
+            writer.Write((int)Type);
             writer.Write((int)_Resource);
         }
 
@@ -1056,7 +1056,7 @@ namespace Server.Items
             base.Deserialize(reader);
 
             int version = reader.ReadInt();
-            this.Type = (DoorType)reader.ReadInt();
+            Type = (DoorType)reader.ReadInt();
             _Resource = (CraftResource)reader.ReadInt();
 
             if (version == 0)

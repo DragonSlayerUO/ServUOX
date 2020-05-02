@@ -10,7 +10,7 @@ namespace Server.Items
         public GargishWarFork()
             : base(0x48BE)
         {
-            this.Weight = 9.0;
+            Weight = 9.0;
         }
 
         public GargishWarFork(Serial serial)

@@ -9,7 +9,7 @@ namespace Server.Engines.Quests.Haven
         public QuestFertileDirt()
             : base(0xF81)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public QuestFertileDirt(Serial serial)

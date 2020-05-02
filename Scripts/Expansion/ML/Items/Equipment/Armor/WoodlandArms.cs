@@ -9,7 +9,7 @@ namespace Server.Items
         public WoodlandArms()
             : base(0x2B6C)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public WoodlandArms(Serial serial)

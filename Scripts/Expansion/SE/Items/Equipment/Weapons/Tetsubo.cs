@@ -9,8 +9,8 @@ namespace Server.Items
         public Tetsubo()
             : base(0x27A6)
         {
-            this.Weight = 8.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 8.0;
+            Layer = Layer.TwoHanded;
         }
 
         public Tetsubo(Serial serial)

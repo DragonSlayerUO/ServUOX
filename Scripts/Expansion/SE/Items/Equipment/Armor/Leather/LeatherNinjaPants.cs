@@ -10,7 +10,7 @@ namespace Server.Items
         public LeatherNinjaPants()
             : base(0x2791)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public LeatherNinjaPants(Serial serial)

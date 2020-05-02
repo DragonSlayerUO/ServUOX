@@ -9,7 +9,7 @@ namespace Server.Engines.Quests.Haven
         public QuestDaemonBlood()
             : base(0xF7D)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public QuestDaemonBlood(Serial serial)

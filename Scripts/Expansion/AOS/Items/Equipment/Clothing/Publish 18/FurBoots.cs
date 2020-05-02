@@ -16,7 +16,7 @@ namespace Server.Items
         public FurBoots(int hue)
             : base(0x2307, hue)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public FurBoots(Serial serial)

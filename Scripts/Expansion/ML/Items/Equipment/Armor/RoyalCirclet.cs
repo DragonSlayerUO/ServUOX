@@ -9,7 +9,7 @@ namespace Server.Items
         public RoyalCirclet()
             : base(0x2B6F)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public RoyalCirclet(Serial serial)

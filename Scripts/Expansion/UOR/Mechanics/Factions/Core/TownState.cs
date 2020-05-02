@@ -14,7 +14,7 @@ namespace Server.Factions
         private DateTime m_LastIncome;
         public TownState(Town town)
         {
-            this.m_Town = town;
+            m_Town = town;
         }
 
         public TownState(GenericReader reader)
@@ -25,32 +25,32 @@ namespace Server.Factions
             {
                 case 3:
                     {
-                        this.m_LastIncome = reader.ReadDateTime();
+                        m_LastIncome = reader.ReadDateTime();
 
                         goto case 2;
                     }
                 case 2:
                     {
-                        this.m_Tax = reader.ReadEncodedInt();
-                        this.m_LastTaxChange = reader.ReadDateTime();
+                        m_Tax = reader.ReadEncodedInt();
+                        m_LastTaxChange = reader.ReadDateTime();
 
                         goto case 1;
                     }
                 case 1:
                     {
-                        this.m_Silver = reader.ReadEncodedInt();
+                        m_Silver = reader.ReadEncodedInt();
 
                         goto case 0;
                     }
                 case 0:
                     {
-                        this.m_Town = Town.ReadReference(reader);
-                        this.m_Owner = Faction.ReadReference(reader);
+                        m_Town = Town.ReadReference(reader);
+                        m_Owner = Faction.ReadReference(reader);
 
-                        this.m_Sheriff = reader.ReadMobile();
-                        this.m_Finance = reader.ReadMobile();
+                        m_Sheriff = reader.ReadMobile();
+                        m_Finance = reader.ReadMobile();
 
-                        this.m_Town.State = this;
+                        m_Town.State = this;
 
                         break;
                     }
@@ -61,48 +61,48 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Town;
+                return m_Town;
             }
             set
             {
-                this.m_Town = value;
+                m_Town = value;
             }
         }
         public Faction Owner
         {
             get
             {
-                return this.m_Owner;
+                return m_Owner;
             }
             set
             {
-                this.m_Owner = value;
+                m_Owner = value;
             }
         }
         public Mobile Sheriff
         {
             get
             {
-                return this.m_Sheriff;
+                return m_Sheriff;
             }
             set
             {
-                if (this.m_Sheriff != null)
+                if (m_Sheriff != null)
                 {
-                    PlayerState pl = PlayerState.Find(this.m_Sheriff);
+                    PlayerState pl = PlayerState.Find(m_Sheriff);
 
                     if (pl != null)
                         pl.Sheriff = null;
                 }
 
-                this.m_Sheriff = value;
+                m_Sheriff = value;
 
-                if (this.m_Sheriff != null)
+                if (m_Sheriff != null)
                 {
-                    PlayerState pl = PlayerState.Find(this.m_Sheriff);
+                    PlayerState pl = PlayerState.Find(m_Sheriff);
 
                     if (pl != null)
-                        pl.Sheriff = this.m_Town;
+                        pl.Sheriff = m_Town;
                 }
             }
         }
@@ -110,26 +110,26 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Finance;
+                return m_Finance;
             }
             set
             {
-                if (this.m_Finance != null)
+                if (m_Finance != null)
                 {
-                    PlayerState pl = PlayerState.Find(this.m_Finance);
+                    PlayerState pl = PlayerState.Find(m_Finance);
 
                     if (pl != null)
                         pl.Finance = null;
                 }
 
-                this.m_Finance = value;
+                m_Finance = value;
 
-                if (this.m_Finance != null)
+                if (m_Finance != null)
                 {
-                    PlayerState pl = PlayerState.Find(this.m_Finance);
+                    PlayerState pl = PlayerState.Find(m_Finance);
 
                     if (pl != null)
-                        pl.Finance = this.m_Town;
+                        pl.Finance = m_Town;
                 }
             }
         }
@@ -137,44 +137,44 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Silver;
+                return m_Silver;
             }
             set
             {
-                this.m_Silver = value;
+                m_Silver = value;
             }
         }
         public int Tax
         {
             get
             {
-                return this.m_Tax;
+                return m_Tax;
             }
             set
             {
-                this.m_Tax = value;
+                m_Tax = value;
             }
         }
         public DateTime LastTaxChange
         {
             get
             {
-                return this.m_LastTaxChange;
+                return m_LastTaxChange;
             }
             set
             {
-                this.m_LastTaxChange = value;
+                m_LastTaxChange = value;
             }
         }
         public DateTime LastIncome
         {
             get
             {
-                return this.m_LastIncome;
+                return m_LastIncome;
             }
             set
             {
-                this.m_LastIncome = value;
+                m_LastIncome = value;
             }
         }
         public void Serialize(GenericWriter writer)
@@ -188,8 +188,8 @@ namespace Server.Factions
 
             writer.WriteEncodedInt(m_Silver);
 
-            Town.WriteReference(writer, this.m_Town);
-            Faction.WriteReference(writer, this.m_Owner);
+            Town.WriteReference(writer, m_Town);
+            Faction.WriteReference(writer, m_Owner);
 
             writer.Write(m_Sheriff);
             writer.Write(m_Finance);

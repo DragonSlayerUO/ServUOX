@@ -10,7 +10,7 @@ namespace Server.Items
         public GlassStaff()
             : base(0x905)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public GlassStaff(Serial serial)

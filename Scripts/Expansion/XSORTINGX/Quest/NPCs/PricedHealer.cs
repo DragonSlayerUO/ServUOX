@@ -15,10 +15,10 @@ namespace Server.Mobiles
         [Constructable]
         public PricedHealer(int price)
         {
-            this.m_Price = price;
+            m_Price = price;
 
             if (!Core.AOS)
-                this.NameHue = 0x35;
+                NameHue = 0x35;
         }
 
         public PricedHealer(Serial serial)
@@ -31,11 +31,11 @@ namespace Server.Mobiles
         {
             get
             {
-                return this.m_Price;
+                return m_Price;
             }
             set
             {
-                this.m_Price = value;
+                m_Price = value;
             }
         }
         public override bool IsInvulnerable => true;
@@ -46,13 +46,13 @@ namespace Server.Mobiles
 
         public override void OfferResurrection(Mobile m)
         {
-            this.Direction = this.GetDirectionTo(m);
+            Direction = GetDirectionTo(m);
 
             m.PlaySound(0x214);
             m.FixedEffect(0x376A, 10, 16);
 
             m.CloseGump(typeof(ResurrectGump));
-            m.SendGump(new ResurrectGump(m, this, this.m_Price));
+            m.SendGump(new ResurrectGump(m, this, m_Price));
         }
 
         public override bool CheckResurrect(Mobile m)
@@ -79,7 +79,7 @@ namespace Server.Mobiles
             {
                 case 0:
                     {
-                        this.m_Price = reader.ReadInt();
+                        m_Price = reader.ReadInt();
                         break;
                     }
             }

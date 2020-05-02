@@ -8,8 +8,8 @@ namespace Server.Engines.Quests.Necro
         [Constructable]
         public DarkTidesHorn()
         {
-            this.DestLoc = new Point3D(2103, 1319, -68);
-            this.DestMap = Map.Malas;
+            DestLoc = new Point3D(2103, 1319, -68);
+            DestMap = Map.Malas;
         }
 
         public DarkTidesHorn(Serial serial)

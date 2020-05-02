@@ -11,8 +11,8 @@ namespace Server.Items
         public Sai()
             : base(0x27AF)
         {
-            this.Weight = 7.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 7.0;
+            Layer = Layer.TwoHanded;
         }
 
         public Sai(Serial serial)

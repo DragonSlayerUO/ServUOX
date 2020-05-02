@@ -9,17 +9,17 @@ namespace Server.Factions
         private readonly List<BaseFactionGuard> m_Guards;
         public GuardList(GuardDefinition definition)
         {
-            this.m_Definition = definition;
-            this.m_Guards = new List<BaseFactionGuard>();
+            m_Definition = definition;
+            m_Guards = new List<BaseFactionGuard>();
         }
 
-        public GuardDefinition Definition => this.m_Definition;
-        public List<BaseFactionGuard> Guards => this.m_Guards;
+        public GuardDefinition Definition => m_Definition;
+        public List<BaseFactionGuard> Guards => m_Guards;
         public BaseFactionGuard Construct()
         {
             try
             {
-                return Activator.CreateInstance(this.m_Definition.Type) as BaseFactionGuard;
+                return Activator.CreateInstance(m_Definition.Type) as BaseFactionGuard;
             }
             catch
             {

@@ -46,24 +46,24 @@ namespace Server.Factions
         private readonly TextDefinition m_Label;
         public VendorDefinition(Type type, int itemID, int price, int upkeep, int maximum, TextDefinition header, TextDefinition label)
         {
-            this.m_Type = type;
+            m_Type = type;
 
-            this.m_Price = price;
-            this.m_Upkeep = upkeep;
-            this.m_Maximum = maximum;
-            this.m_ItemID = itemID;
+            m_Price = price;
+            m_Upkeep = upkeep;
+            m_Maximum = maximum;
+            m_ItemID = itemID;
 
-            this.m_Header = header;
-            this.m_Label = label;
+            m_Header = header;
+            m_Label = label;
         }
 
         public static VendorDefinition[] Definitions => m_Definitions;
-        public Type Type => this.m_Type;
-        public int Price => this.m_Price;
-        public int Upkeep => this.m_Upkeep;
-        public int Maximum => this.m_Maximum;
-        public int ItemID => this.m_ItemID;
-        public TextDefinition Header => this.m_Header;
-        public TextDefinition Label => this.m_Label;
+        public Type Type => m_Type;
+        public int Price => m_Price;
+        public int Upkeep => m_Upkeep;
+        public int Maximum => m_Maximum;
+        public int ItemID => m_ItemID;
+        public TextDefinition Header => m_Header;
+        public TextDefinition Label => m_Label;
     }
 }

@@ -15,7 +15,7 @@ namespace Server.Engines.Quests.Samurai
                 1063026;
         public override void OnComplete()
         {
-            this.System.AddConversation(new FirstTrialIntroConversation());
+            System.AddConversation(new FirstTrialIntroConversation());
         }
     }
 
@@ -30,7 +30,7 @@ namespace Server.Engines.Quests.Samurai
                 1063030;
         public override void OnComplete()
         {
-            this.System.AddConversation(new FirstTrialKillConversation());
+            System.AddConversation(new FirstTrialKillConversation());
         }
     }
 
@@ -50,47 +50,47 @@ namespace Server.Engines.Quests.Samurai
         {
             if (creature is CursedSoul)
             {
-                if (this.m_CursedSoulsKilled == 0)
-                    this.System.AddConversation(new GainKarmaConversation(true));
+                if (m_CursedSoulsKilled == 0)
+                    System.AddConversation(new GainKarmaConversation(true));
 
-                this.m_CursedSoulsKilled++;
+                m_CursedSoulsKilled++;
 
                 // Cursed Souls killed:  ~1_COUNT~
-                this.System.From.SendLocalizedMessage(1063038, this.m_CursedSoulsKilled.ToString());
+                System.From.SendLocalizedMessage(1063038, m_CursedSoulsKilled.ToString());
             }
             else if (creature is YoungRonin)
             {
-                if (this.m_YoungRoninKilled == 0)
-                    this.System.AddConversation(new GainKarmaConversation(false));
+                if (m_YoungRoninKilled == 0)
+                    System.AddConversation(new GainKarmaConversation(false));
 
-                this.m_YoungRoninKilled++;
+                m_YoungRoninKilled++;
 
                 // Young Ronin killed:  ~1_COUNT~
-                this.System.From.SendLocalizedMessage(1063039, this.m_YoungRoninKilled.ToString());
+                System.From.SendLocalizedMessage(1063039, m_YoungRoninKilled.ToString());
             }
 
-            this.CurProgress = Math.Max(this.m_CursedSoulsKilled, this.m_YoungRoninKilled);
+            CurProgress = Math.Max(m_CursedSoulsKilled, m_YoungRoninKilled);
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new FirstTrialReturnObjective(this.m_CursedSoulsKilled > this.m_YoungRoninKilled));
+            System.AddObjective(new FirstTrialReturnObjective(m_CursedSoulsKilled > m_YoungRoninKilled));
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_CursedSoulsKilled = reader.ReadEncodedInt();
-            this.m_YoungRoninKilled = reader.ReadEncodedInt();
+            m_CursedSoulsKilled = reader.ReadEncodedInt();
+            m_YoungRoninKilled = reader.ReadEncodedInt();
         }
 
         public override void ChildSerialize(GenericWriter writer)
         {
             writer.WriteEncodedInt(0); // version
 
-            writer.WriteEncodedInt(this.m_CursedSoulsKilled);
-            writer.WriteEncodedInt(this.m_YoungRoninKilled);
+            writer.WriteEncodedInt(m_CursedSoulsKilled);
+            writer.WriteEncodedInt(m_YoungRoninKilled);
         }
     }
 
@@ -99,7 +99,7 @@ namespace Server.Engines.Quests.Samurai
         bool m_CursedSoul;
         public FirstTrialReturnObjective(bool cursedSoul)
         {
-            this.m_CursedSoul = cursedSoul;
+            m_CursedSoul = cursedSoul;
         }
 
         public FirstTrialReturnObjective()
@@ -111,14 +111,14 @@ namespace Server.Engines.Quests.Samurai
                 1063044;
         public override void OnComplete()
         {
-            this.System.AddConversation(new SecondTrialIntroConversation(this.m_CursedSoul));
+            System.AddConversation(new SecondTrialIntroConversation(m_CursedSoul));
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_CursedSoul = reader.ReadBool();
+            m_CursedSoul = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -140,7 +140,7 @@ namespace Server.Engines.Quests.Samurai
                 1063047;
         public override void OnComplete()
         {
-            this.System.AddConversation(new SecondTrialAttackConversation());
+            System.AddConversation(new SecondTrialAttackConversation());
         }
     }
 
@@ -160,7 +160,7 @@ namespace Server.Engines.Quests.Samurai
         private bool m_Dragon;
         public SecondTrialReturnObjective(bool dragon)
         {
-            this.m_Dragon = dragon;
+            m_Dragon = dragon;
         }
 
         public SecondTrialReturnObjective()
@@ -170,17 +170,17 @@ namespace Server.Engines.Quests.Samurai
         public override object Message =>
                 // The second trial is complete.  Return to Daimyo Haochi.
                 1063229;
-        public bool Dragon => this.m_Dragon;
+        public bool Dragon => m_Dragon;
         public override void OnComplete()
         {
-            this.System.AddConversation(new ThirdTrialIntroConversation(this.m_Dragon));
+            System.AddConversation(new ThirdTrialIntroConversation(m_Dragon));
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_Dragon = reader.ReadBool();
+            m_Dragon = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -204,7 +204,7 @@ namespace Server.Engines.Quests.Samurai
                 1063061;
         public override void OnComplete()
         {
-            this.System.AddConversation(new ThirdTrialKillConversation());
+            System.AddConversation(new ThirdTrialKillConversation());
         }
     }
 
@@ -223,12 +223,12 @@ namespace Server.Engines.Quests.Samurai
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is InjuredWolf)
-                this.Complete();
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new ThirdTrialReturnObjective());
+            System.AddObjective(new ThirdTrialReturnObjective());
         }
     }
 
@@ -243,7 +243,7 @@ namespace Server.Engines.Quests.Samurai
                 1063064;
         public override void OnComplete()
         {
-            this.System.AddConversation(new FourthTrialIntroConversation());
+            System.AddConversation(new FourthTrialIntroConversation());
         }
     }
 
@@ -258,7 +258,7 @@ namespace Server.Engines.Quests.Samurai
                 1063066;
         public override void OnComplete()
         {
-            this.System.AddConversation(new FourthTrialCatsConversation());
+            System.AddConversation(new FourthTrialCatsConversation());
         }
     }
 
@@ -277,8 +277,8 @@ namespace Server.Engines.Quests.Samurai
         {
             if (creature is DiseasedCat)
             {
-                this.Complete();
-                this.System.AddObjective(new FourthTrialReturnObjective(true));
+                Complete();
+                System.AddObjective(new FourthTrialReturnObjective(true));
             }
         }
     }
@@ -288,7 +288,7 @@ namespace Server.Engines.Quests.Samurai
         private bool m_KilledCat;
         public FourthTrialReturnObjective(bool killedCat)
         {
-            this.m_KilledCat = killedCat;
+            m_KilledCat = killedCat;
         }
 
         public FourthTrialReturnObjective()
@@ -298,17 +298,17 @@ namespace Server.Engines.Quests.Samurai
         public override object Message =>
                 // You have made your choice.  Return now to Daimyo Haochi.
                 1063242;
-        public bool KilledCat => this.m_KilledCat;
+        public bool KilledCat => m_KilledCat;
         public override void OnComplete()
         {
-            this.System.AddConversation(new FifthTrialIntroConversation(this.m_KilledCat));
+            System.AddConversation(new FifthTrialIntroConversation(m_KilledCat));
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_KilledCat = reader.ReadBool();
+            m_KilledCat = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -333,23 +333,23 @@ namespace Server.Engines.Quests.Samurai
         {
             get
             {
-                return this.m_StolenTreasure;
+                return m_StolenTreasure;
             }
             set
             {
-                this.m_StolenTreasure = value;
+                m_StolenTreasure = value;
             }
         }
         public override void OnComplete()
         {
-            this.System.AddConversation(new FifthTrialReturnConversation());
+            System.AddConversation(new FifthTrialReturnConversation());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_StolenTreasure = reader.ReadBool();
+            m_StolenTreasure = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -382,7 +382,7 @@ namespace Server.Engines.Quests.Samurai
                 1063078;
         public override void OnComplete()
         {
-            this.System.AddObjective(new SixthTrialReturnObjective());
+            System.AddObjective(new SixthTrialReturnObjective());
         }
     }
 
@@ -397,7 +397,7 @@ namespace Server.Engines.Quests.Samurai
                 1063252;
         public override void OnComplete()
         {
-            this.System.AddConversation(new SeventhTrialIntroConversation());
+            System.AddConversation(new SeventhTrialIntroConversation());
         }
     }
 
@@ -416,12 +416,12 @@ namespace Server.Engines.Quests.Samurai
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is YoungNinja)
-                this.CurProgress++;
+                CurProgress++;
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new SeventhTrialReturnObjective());
+            System.AddObjective(new SeventhTrialReturnObjective());
         }
     }
 
@@ -436,7 +436,7 @@ namespace Server.Engines.Quests.Samurai
                 1063253;
         public override void OnComplete()
         {
-            this.System.AddConversation(new EndConversation());
+            System.AddConversation(new EndConversation());
         }
     }
 }

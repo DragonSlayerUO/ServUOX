@@ -12,9 +12,9 @@ namespace Server.Items
         public KeypunchReader()
             : base()
         {
-            this.Weight = 0.0;
-            this.Hue = 2500;
-            this.Movable = false;
+            Weight = 0.0;
+            Hue = 2500;
+            Movable = false;
         }
 
         public KeypunchReader(Serial serial) : base(serial)
@@ -26,7 +26,7 @@ namespace Server.Items
             if (!base.OnDragDrop(from, dropped))
                 return false;
 
-            if (this.TotalItems >= 50)
+            if (TotalItems >= 50)
             {
                 CheckItems(from);
             }
@@ -44,7 +44,7 @@ namespace Server.Items
             if (!base.OnDragDropInto(from, item, p))
                 return false;
 
-            if (this.TotalItems >= 50)
+            if (TotalItems >= 50)
             {
                 CheckItems(from);
             }
@@ -59,7 +59,7 @@ namespace Server.Items
 
         public void CheckItems(Mobile m)
         {
-            List<Item> items = this.Items;
+            List<Item> items = Items;
 
             var punch = items.Where(x => x is PunchCard);
             var kit = items.Where(x => x is ExoticToolkit);
@@ -68,7 +68,7 @@ namespace Server.Items
             {
                 punch.ToList().ForEach(f => f.Delete());
 
-                this.DropItem(new NexusAddonDeed());
+                DropItem(new NexusAddonDeed());
                 m.SendLocalizedMessage(1152376); // As you feed the punch card into the machine it turns on! 
             }
         }

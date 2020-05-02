@@ -10,10 +10,10 @@ namespace Server.Engines.Quests.Ninja
         [Constructable]
         public EminosKatanaChest()
         {
-            this.Movable = false;
-            this.ItemID = 0xE42;
+            Movable = false;
+            ItemID = 0xE42;
 
-            this.GenerateTreasure();
+            GenerateTreasure();
         }
 
         public EminosKatanaChest(Serial serial)
@@ -26,7 +26,7 @@ namespace Server.Engines.Quests.Ninja
         {
             PlayerMobile player = from as PlayerMobile;
 
-            if (player != null && player.InRange(this.GetWorldLocation(), 2))
+            if (player != null && player.InRange(GetWorldLocation(), 2))
             {
                 QuestSystem qs = player.Quest;
 
@@ -52,7 +52,7 @@ namespace Server.Engines.Quests.Ninja
 
                             if (player.PlaceInBackpack(katana))
                             {
-                                this.GenerateTreasure();
+                                GenerateTreasure();
                                 obj.Complete();
                             }
                             else
@@ -130,21 +130,21 @@ namespace Server.Engines.Quests.Ninja
 
         private void GenerateTreasure()
         {
-            for (int i = this.Items.Count - 1; i >= 0; i--)
-                this.Items[i].Delete();
+            for (int i = Items.Count - 1; i >= 0; i--)
+                Items[i].Delete();
 
             for (int i = 0; i < 75; i++)
             {
                 switch (Utility.Random(3))
                 {
                     case 0:
-                        this.DropItem(new GoldBracelet());
+                        DropItem(new GoldBracelet());
                         break;
                     case 1:
-                        this.DropItem(new GoldRing());
+                        DropItem(new GoldRing());
                         break;
                     case 2:
-                        this.DropItem(Loot.RandomGem());
+                        DropItem(Loot.RandomGem());
                         break;
                 }
             }

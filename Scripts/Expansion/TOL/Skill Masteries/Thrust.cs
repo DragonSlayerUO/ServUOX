@@ -75,7 +75,7 @@ namespace Server.Spells.SkillMasteries
                 return false;
             }
 
-            ThrustSpell spell = GetSpell(Caster, this.GetType()) as ThrustSpell;
+            ThrustSpell spell = GetSpell(Caster, GetType()) as ThrustSpell;
 
             if (spell != null)
             {

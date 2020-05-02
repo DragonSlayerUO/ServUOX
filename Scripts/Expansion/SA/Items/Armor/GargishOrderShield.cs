@@ -12,7 +12,7 @@ namespace Server.Items
             : base(0x422A)
         {
             if (!Core.AOS)
-                this.LootType = LootType.Newbied;
+                LootType = LootType.Newbied;
             //Weight = 7.0;
         }
 
@@ -46,12 +46,12 @@ namespace Server.Items
 
         public override bool OnEquip(Mobile from)
         {
-            return this.Validate(from) && base.OnEquip(from);
+            return Validate(from) && base.OnEquip(from);
         }
 
         public override void OnSingleClick(Mobile from)
         {
-            if (this.Validate(this.Parent as Mobile))
+            if (Validate(Parent as Mobile))
                 base.OnSingleClick(from);
         }
 
@@ -65,7 +65,7 @@ namespace Server.Items
             if (g == null || g.Type != GuildType.Order)
             {
                 m.FixedEffect(0x3728, 10, 13);
-                this.Delete();
+                Delete();
 
                 return false;
             }

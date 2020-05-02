@@ -37,7 +37,7 @@ namespace Server.Items
         public BrokenChestOfDrawersAddon()
             : base()
         {
-            this.AddComponent(new BrokenChestOfDrawersComponent(), 0, 0, 0);
+            AddComponent(new BrokenChestOfDrawersComponent(), 0, 0, 0);
         }
 
         public BrokenChestOfDrawersAddon(Serial serial)
@@ -67,7 +67,7 @@ namespace Server.Items
         public BrokenChestOfDrawersDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public BrokenChestOfDrawersDeed(Serial serial)

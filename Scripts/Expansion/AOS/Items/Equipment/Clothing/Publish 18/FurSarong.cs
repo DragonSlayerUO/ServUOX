@@ -15,7 +15,7 @@ namespace Server.Items
         public FurSarong(int hue)
             : base(0x230C, hue)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public FurSarong(Serial serial)
@@ -36,8 +36,8 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            if (this.Weight == 4.0)
-                this.Weight = 3.0;
+            if (Weight == 4.0)
+                Weight = 3.0;
         }
     }
 }

@@ -10,9 +10,9 @@ namespace Server.Items
         public TribalPaint()
             : base(0x9EC)
         {
-            this.Hue = 2101;
-            this.Weight = 2.0;
-            this.Stackable = Core.ML;
+            Hue = 2101;
+            Weight = 2.0;
+            Stackable = Core.ML;
         }
 
         public TribalPaint(Serial serial)
@@ -23,7 +23,7 @@ namespace Server.Items
         public override int LabelNumber => 1040000;// savage kin paint
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.IsChildOf(from.Backpack))
+            if (IsChildOf(from.Backpack))
             {
                 if (Factions.Sigil.ExistsOn(from))
                 {
@@ -59,7 +59,7 @@ namespace Server.Items
 
                     from.SendLocalizedMessage(1042537); // You now bear the markings of the savage tribe.  Your body paint will last about a week or you can remove it with an oil cloth.
 
-                    this.Consume();
+                    Consume();
                 }
             }
             else

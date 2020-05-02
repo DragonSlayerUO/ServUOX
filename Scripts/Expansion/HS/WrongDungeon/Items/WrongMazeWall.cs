@@ -15,8 +15,8 @@ namespace Server.Items
 
         public override void OnSingleClick(Mobile from)
         {
-            if (this.Name != null)
-                from.Send(new AsciiMessage(Serial, ItemID, MessageType.Label, 0, 3, "", this.Name));
+            if (Name != null)
+                from.Send(new AsciiMessage(Serial, ItemID, MessageType.Label, 0, 3, "", Name));
             else
                 from.Send(new AsciiMessage(Serial, ItemID, MessageType.Label, 0, 3, "", "a dungeon wall"));
         }

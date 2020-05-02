@@ -9,7 +9,7 @@ namespace Server.Items
         public ElvenQuiver()
             : base()
         {
-            this.WeightReduction = 30;
+            WeightReduction = 30;
         }
 
         public ElvenQuiver(Serial serial)

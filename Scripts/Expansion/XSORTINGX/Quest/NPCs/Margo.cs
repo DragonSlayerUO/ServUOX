@@ -105,7 +105,7 @@ namespace Server.Items
             List<object> list = new List<object>();
             Item c;
 
-            switch (this.Tier)
+            switch (Tier)
             {
                 case 1:
                     // brush

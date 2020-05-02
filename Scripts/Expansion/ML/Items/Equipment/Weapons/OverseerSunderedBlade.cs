@@ -13,7 +13,7 @@ namespace Server.Items
             Attributes.WeaponSpeed = 35;
             Attributes.WeaponDamage = 45;
 
-            Hue = this.GetElementalDamageHue();
+            Hue = GetElementalDamageHue();
         }
 
         public OverseerSunderedBlade(Serial serial)

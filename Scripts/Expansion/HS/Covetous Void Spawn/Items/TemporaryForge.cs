@@ -62,8 +62,8 @@ namespace Server.Items
             }
             else
             {
-                Effects.SendLocationParticles(EffectItem.Create(this.Location, this.Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
-                Effects.PlaySound(this.Location, this.Map, 0x201);
+                Effects.SendLocationParticles(EffectItem.Create(Location, Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
+                Effects.PlaySound(Location, Map, 0x201);
             }
 
             Delete();
@@ -192,8 +192,8 @@ namespace Server.Items
             }
             else
             {
-                Effects.SendLocationParticles(EffectItem.Create(this.Location, this.Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
-                Effects.PlaySound(this.Location, this.Map, 0x201);
+                Effects.SendLocationParticles(EffectItem.Create(Location, Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
+                Effects.PlaySound(Location, Map, 0x201);
             }
 
             Delete();
@@ -266,13 +266,13 @@ namespace Server.Items
                                     IPoint3D point = (IPoint3D)targeted;
                                     Server.Spells.SpellHelper.GetSurfaceTop(ref point);
 
-                                    BaseAddon addon = this.Addon;
+                                    BaseAddon addon = Addon;
                                     addon.MoveToWorld(new Point3D(point), m.Map);
 
                                     if (addon is TemporaryForge)
                                         ((TemporaryForge)addon).Owner = from;
 
-                                    this.Delete();
+                                    Delete();
                                 }
                             }
                         }

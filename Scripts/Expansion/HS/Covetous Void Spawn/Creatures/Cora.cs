@@ -125,29 +125,29 @@ namespace Server.Mobiles
 
         private bool DoEffects(Direction d)
         {
-            int x = this.X;
-            int y = this.Y;
-            int z = this.Z;
+            int x = X;
+            int y = Y;
+            int z = Z;
             int range = 10;
             int offset = 8;
 
             switch (d)
             {
                 case Direction.North:
-                    x = this.X + Utility.RandomMinMax(-offset, offset);
-                    y = this.Y - range;
+                    x = X + Utility.RandomMinMax(-offset, offset);
+                    y = Y - range;
                     break;
                 case Direction.West:
-                    x = this.X - range;
-                    y = this.Y + Utility.RandomMinMax(-offset, offset);
+                    x = X - range;
+                    y = Y + Utility.RandomMinMax(-offset, offset);
                     break;
                 case Direction.South:
-                    x = this.X + Utility.RandomMinMax(-offset, offset);
-                    y = this.Y + range;
+                    x = X + Utility.RandomMinMax(-offset, offset);
+                    y = Y + range;
                     break;
                 case Direction.East:
-                    x = this.X + range;
-                    y = this.Y + Utility.RandomMinMax(-offset, offset);
+                    x = X + range;
+                    y = Y + Utility.RandomMinMax(-offset, offset);
                     break;
             }
 
@@ -161,10 +161,10 @@ namespace Server.Mobiles
                     case Direction.East: x -= i; break;
                 }
 
-                z = this.Map.GetAverageZ(x, y);
+                z = Map.GetAverageZ(x, y);
                 Point3D p = new Point3D(x, y, z);
 
-                if (Server.Spells.SpellHelper.AdjustField(ref p, this.Map, 12, false))/*this.Map.CanFit(x, y, z, 16, false, false, true))/*this.Map.CanSpawnMobile(x, y, z)*/
+                if (Server.Spells.SpellHelper.AdjustField(ref p, Map, 12, false))/*this.Map.CanFit(x, y, z, 16, false, false, true))/*this.Map.CanSpawnMobile(x, y, z)*/
                 {
                     MovementPath path = new MovementPath(this, p);
 
@@ -182,15 +182,15 @@ namespace Server.Mobiles
         private void DropCrack(MovementPath path)
         {
             int time = 10;
-            int x = this.X;
-            int y = this.Y;
+            int x = X;
+            int y = Y;
 
             for (int i = 0; i < path.Directions.Length; ++i)
             {
                 Movement.Movement.Offset(path.Directions[i], ref x, ref y);
-                IPoint3D p = new Point3D(x, y, this.Map.GetAverageZ(x, y)) as IPoint3D;
+                IPoint3D p = new Point3D(x, y, Map.GetAverageZ(x, y)) as IPoint3D;
 
-                Timer.DelayCall(TimeSpan.FromMilliseconds(time), new TimerStateCallback(ManaDrainEffects_Callback), new object[] { p, this.Map });
+                Timer.DelayCall(TimeSpan.FromMilliseconds(time), new TimerStateCallback(ManaDrainEffects_Callback), new object[] { p, Map });
 
                 time += 200;
             }
@@ -205,7 +205,7 @@ namespace Server.Mobiles
             var item = new ManaDrainItem(Utility.RandomList(6913, 6915, 6917, 6919), this);
             Spells.SpellHelper.GetSurfaceTop(ref p);
 
-            item.MoveToWorld(new Point3D(p), this.Map);
+            item.MoveToWorld(new Point3D(p), Map);
         }
 
         private class ManaDrainItem : Item
@@ -241,10 +241,10 @@ namespace Server.Mobiles
 
             public override void OnLocationChange(Point3D oldLocation)
             {
-                Static = new Static(this.ItemID + 1);
-                Static.MoveToWorld(this.Location, this.Map);
+                Static = new Static(ItemID + 1);
+                Static.MoveToWorld(Location, Map);
 
-                IPooledEnumerable eable = this.Map.GetMobilesInRange(this.Location, 0);
+                IPooledEnumerable eable = Map.GetMobilesInRange(Location, 0);
 
                 foreach (Mobile m in eable)
                 {

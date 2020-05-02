@@ -175,7 +175,7 @@ namespace Server.Regions
 
         protected override void Init()
         {
-            Mobile mob = (Mobile)Activator.CreateInstance(this.Type);
+            Mobile mob = (Mobile)Activator.CreateInstance(Type);
 
             m_Land = !mob.CantWalk;
             m_Water = mob.CanSwim;
@@ -319,7 +319,7 @@ namespace Server.Regions
             m_Name = name;
             m_Elements = elements;
 
-            this.m_TotalWeight = 0;
+            m_TotalWeight = 0;
             for (int i = 0; i < elements.Length; i++)
                 m_TotalWeight += elements[i].Weight;
         }

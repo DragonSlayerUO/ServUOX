@@ -202,16 +202,16 @@ namespace Server.Items
             // version 1
             writer.Write(m_LinkedItem);
             // version 0
-            writer.Write(this.m_LeverState);
-            writer.Write(this.m_LeverSound);
-            int ltype = (int)this.m_LeverType;
+            writer.Write(m_LeverState);
+            writer.Write(m_LeverSound);
+            int ltype = (int)m_LeverType;
             writer.Write(ltype);
-            writer.Write(this.m_TargetItem0);
-            writer.Write(this.m_TargetProperty0);
-            writer.Write(this.m_TargetItem1);
-            writer.Write(this.m_TargetProperty1);
-            writer.Write(this.m_TargetItem2);
-            writer.Write(this.m_TargetProperty2);
+            writer.Write(m_TargetItem0);
+            writer.Write(m_TargetProperty0);
+            writer.Write(m_TargetItem1);
+            writer.Write(m_TargetProperty1);
+            writer.Write(m_TargetItem2);
+            writer.Write(m_TargetProperty2);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -233,21 +233,21 @@ namespace Server.Items
                     }
                 case 0:
                     {
-                        this.m_LeverState = reader.ReadInt();
-                        this.m_LeverSound = reader.ReadInt();
+                        m_LeverState = reader.ReadInt();
+                        m_LeverSound = reader.ReadInt();
                         int ltype = reader.ReadInt();
                         switch (ltype)
                         {
-                            case (int)leverType.Two_State: this.m_LeverType = leverType.Two_State; break;
-                            case (int)leverType.Three_State: this.m_LeverType = leverType.Three_State; break;
+                            case (int)leverType.Two_State: m_LeverType = leverType.Two_State; break;
+                            case (int)leverType.Three_State: m_LeverType = leverType.Three_State; break;
 
                         }
-                        this.m_TargetItem0 = reader.ReadItem();
-                        this.m_TargetProperty0 = reader.ReadString();
-                        this.m_TargetItem1 = reader.ReadItem();
-                        this.m_TargetProperty1 = reader.ReadString();
-                        this.m_TargetItem2 = reader.ReadItem();
-                        this.m_TargetProperty2 = reader.ReadString();
+                        m_TargetItem0 = reader.ReadItem();
+                        m_TargetProperty0 = reader.ReadString();
+                        m_TargetItem1 = reader.ReadItem();
+                        m_TargetProperty1 = reader.ReadString();
+                        m_TargetItem2 = reader.ReadItem();
+                        m_TargetProperty2 = reader.ReadString();
                     }
                     break;
             }
@@ -256,25 +256,25 @@ namespace Server.Items
         public void SetLeverStatic()
         {
 
-            switch (this.Direction)
+            switch (Direction)
             {
                 case Direction.North:
                 case Direction.South:
                 case Direction.Right:
                 case Direction.Up:
                     if (m_LeverType == leverType.Two_State)
-                        this.ItemID = 0x108c + m_LeverState * 2;
+                        ItemID = 0x108c + m_LeverState * 2;
                     else
-                        this.ItemID = 0x108c + m_LeverState;
+                        ItemID = 0x108c + m_LeverState;
                     break;
                 case Direction.East:
                 case Direction.West:
                 case Direction.Left:
                 case Direction.Down:
                     if (m_LeverType == leverType.Two_State)
-                        this.ItemID = 0x1093 + m_LeverState * 2;
+                        ItemID = 0x1093 + m_LeverState * 2;
                     else
-                        this.ItemID = 0x1093 + m_LeverState;
+                        ItemID = 0x1093 + m_LeverState;
                     break;
                 default:
                     break;
@@ -518,16 +518,16 @@ namespace Server.Items
 
             writer.Write(2); // version
                                   // version 2
-            writer.Write(this.m_Disabled);
+            writer.Write(m_Disabled);
             // version 1
-            writer.Write(this.m_LinkedItem);
+            writer.Write(m_LinkedItem);
             // version 0
-            writer.Write(this.m_SwitchState);
-            writer.Write(this.m_SwitchSound);
-            writer.Write(this.m_TargetItem0);
-            writer.Write(this.m_TargetProperty0);
-            writer.Write(this.m_TargetItem1);
-            writer.Write(this.m_TargetProperty1);
+            writer.Write(m_SwitchState);
+            writer.Write(m_SwitchSound);
+            writer.Write(m_TargetItem0);
+            writer.Write(m_TargetProperty0);
+            writer.Write(m_TargetItem1);
+            writer.Write(m_TargetProperty1);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -549,12 +549,12 @@ namespace Server.Items
                     }
                 case 0:
                     {
-                        this.m_SwitchState = reader.ReadInt();
-                        this.m_SwitchSound = reader.ReadInt();
-                        this.m_TargetItem0 = reader.ReadItem();
-                        this.m_TargetProperty0 = reader.ReadString();
-                        this.m_TargetItem1 = reader.ReadItem();
-                        this.m_TargetProperty1 = reader.ReadString();
+                        m_SwitchState = reader.ReadInt();
+                        m_SwitchSound = reader.ReadInt();
+                        m_TargetItem0 = reader.ReadItem();
+                        m_TargetProperty0 = reader.ReadString();
+                        m_TargetItem1 = reader.ReadItem();
+                        m_TargetProperty1 = reader.ReadString();
                     }
                     break;
             }
@@ -563,22 +563,22 @@ namespace Server.Items
         public void SetSwitchStatic()
         {
 
-            switch (this.Direction)
+            switch (Direction)
             {
                 case Direction.North:
                 case Direction.South:
                 case Direction.Right:
                 case Direction.Up:
-                    this.ItemID = 0x108f + m_SwitchState;
+                    ItemID = 0x108f + m_SwitchState;
                     break;
                 case Direction.East:
                 case Direction.West:
                 case Direction.Left:
                 case Direction.Down:
-                    this.ItemID = 0x1091 + m_SwitchState;
+                    ItemID = 0x1091 + m_SwitchState;
                     break;
                 default:
-                    this.ItemID = 0x108f + m_SwitchState;
+                    ItemID = 0x108f + m_SwitchState;
                     break;
             }
         }
@@ -933,26 +933,26 @@ namespace Server.Items
 
             writer.Write(0); // version
 
-            writer.Write(this.m_Combination);
-            writer.Write(this.m_CombinationSound);
-            writer.Write(this.m_Digit0Object);
-            writer.Write(this.m_Digit0Property);
-            writer.Write(this.m_Digit1Object);
-            writer.Write(this.m_Digit1Property);
-            writer.Write(this.m_Digit2Object);
-            writer.Write(this.m_Digit2Property);
-            writer.Write(this.m_Digit3Object);
-            writer.Write(this.m_Digit3Property);
-            writer.Write(this.m_Digit4Object);
-            writer.Write(this.m_Digit4Property);
-            writer.Write(this.m_Digit5Object);
-            writer.Write(this.m_Digit5Property);
-            writer.Write(this.m_Digit6Object);
-            writer.Write(this.m_Digit6Property);
-            writer.Write(this.m_Digit7Object);
-            writer.Write(this.m_Digit7Property);
-            writer.Write(this.m_TargetItem);
-            writer.Write(this.m_TargetProperty);
+            writer.Write(m_Combination);
+            writer.Write(m_CombinationSound);
+            writer.Write(m_Digit0Object);
+            writer.Write(m_Digit0Property);
+            writer.Write(m_Digit1Object);
+            writer.Write(m_Digit1Property);
+            writer.Write(m_Digit2Object);
+            writer.Write(m_Digit2Property);
+            writer.Write(m_Digit3Object);
+            writer.Write(m_Digit3Property);
+            writer.Write(m_Digit4Object);
+            writer.Write(m_Digit4Property);
+            writer.Write(m_Digit5Object);
+            writer.Write(m_Digit5Property);
+            writer.Write(m_Digit6Object);
+            writer.Write(m_Digit6Property);
+            writer.Write(m_Digit7Object);
+            writer.Write(m_Digit7Property);
+            writer.Write(m_TargetItem);
+            writer.Write(m_TargetProperty);
 
         }
 
@@ -965,26 +965,26 @@ namespace Server.Items
             {
                 case 0:
                     {
-                        this.m_Combination = reader.ReadInt();
-                        this.m_CombinationSound = reader.ReadInt();
-                        this.m_Digit0Object = reader.ReadItem();
-                        this.m_Digit0Property = reader.ReadString();
-                        this.m_Digit1Object = reader.ReadItem();
-                        this.m_Digit1Property = reader.ReadString();
-                        this.m_Digit2Object = reader.ReadItem();
-                        this.m_Digit2Property = reader.ReadString();
-                        this.m_Digit3Object = reader.ReadItem();
-                        this.m_Digit3Property = reader.ReadString();
-                        this.m_Digit4Object = reader.ReadItem();
-                        this.m_Digit4Property = reader.ReadString();
-                        this.m_Digit5Object = reader.ReadItem();
-                        this.m_Digit5Property = reader.ReadString();
-                        this.m_Digit6Object = reader.ReadItem();
-                        this.m_Digit6Property = reader.ReadString();
-                        this.m_Digit7Object = reader.ReadItem();
-                        this.m_Digit7Property = reader.ReadString();
-                        this.m_TargetItem = reader.ReadItem();
-                        this.m_TargetProperty = reader.ReadString();
+                        m_Combination = reader.ReadInt();
+                        m_CombinationSound = reader.ReadInt();
+                        m_Digit0Object = reader.ReadItem();
+                        m_Digit0Property = reader.ReadString();
+                        m_Digit1Object = reader.ReadItem();
+                        m_Digit1Property = reader.ReadString();
+                        m_Digit2Object = reader.ReadItem();
+                        m_Digit2Property = reader.ReadString();
+                        m_Digit3Object = reader.ReadItem();
+                        m_Digit3Property = reader.ReadString();
+                        m_Digit4Object = reader.ReadItem();
+                        m_Digit4Property = reader.ReadString();
+                        m_Digit5Object = reader.ReadItem();
+                        m_Digit5Property = reader.ReadString();
+                        m_Digit6Object = reader.ReadItem();
+                        m_Digit6Property = reader.ReadString();
+                        m_Digit7Object = reader.ReadItem();
+                        m_Digit7Property = reader.ReadString();
+                        m_TargetItem = reader.ReadItem();
+                        m_TargetProperty = reader.ReadString();
 
                     }
                     break;

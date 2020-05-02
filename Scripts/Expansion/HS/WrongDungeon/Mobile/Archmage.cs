@@ -10,9 +10,9 @@ namespace Server.Mobiles
         public Archmage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
-            this.Name = NameList.RandomName("evil mage");
-            this.Title = "The Insane The Archmage";
-            this.Body = Utility.RandomList(125, 126);
+            Name = NameList.RandomName("evil mage");
+            Title = "The Insane The Archmage";
+            Body = Utility.RandomList(125, 126);
 
             PackItem(new Robe(Utility.RandomMetalHue()));
 

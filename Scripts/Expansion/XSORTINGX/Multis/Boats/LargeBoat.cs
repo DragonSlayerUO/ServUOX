@@ -48,7 +48,7 @@ namespace Server.Multis
     public class LargeBoatDeed : BaseBoatDeed
     {
         public override int LabelNumber => 1041209;  // large ship deed
-        public override BaseBoat Boat => new LargeBoat(this.BoatDirection);
+        public override BaseBoat Boat => new LargeBoat(BoatDirection);
 
         [Constructable]
         public LargeBoatDeed() : base(0x10, new Point3D(0, -1, 0))
@@ -77,7 +77,7 @@ namespace Server.Multis
     public class LargeDockedBoat : BaseDockedBoat
     {
         public override int LabelNumber => 1116745;  //Large Ship
-        public override BaseBoat Boat => new LargeBoat(this.BoatDirection);
+        public override BaseBoat Boat => new LargeBoat(BoatDirection);
 
         public LargeDockedBoat(BaseBoat boat) : base(0x10, new Point3D(0, -1, 0), boat)
         {

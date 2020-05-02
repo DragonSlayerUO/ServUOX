@@ -8,8 +8,8 @@ namespace Server.Items
         public BridesLetter()
             : base(0x14ED)
         {
-            this.LootType = LootType.Blessed;
-            this.Weight = 1.0;
+            LootType = LootType.Blessed;
+            Weight = 1.0;
         }
 
         public BridesLetter(Serial serial)

@@ -10,7 +10,7 @@ namespace Server.Items
         public PlateHaidate()
             : base(0x278D)
         {
-            this.Weight = 7.0;
+            Weight = 7.0;
         }
 
         public PlateHaidate(Serial serial)

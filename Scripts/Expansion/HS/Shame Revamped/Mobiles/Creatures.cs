@@ -68,7 +68,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 1);
+            AddLoot(LootPack.Rich, 1);
         }
 
         public MudPie(Serial serial)
@@ -142,7 +142,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.FilthyRich, 2);
+            AddLoot(LootPack.FilthyRich, 2);
         }
 
         public StoneElemental(Serial serial)
@@ -238,7 +238,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public CaveTroll(Serial serial)
@@ -310,7 +310,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public ClayGolem(Serial serial)
@@ -370,7 +370,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 1);
+            AddLoot(LootPack.Rich, 1);
         }
 
         public GreaterEarthElemental(Serial serial)
@@ -437,7 +437,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public MudElemental(Serial serial)
@@ -497,7 +497,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public GreaterAirElemental(Serial serial)
@@ -562,7 +562,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public MoltenEarthElemental(Serial serial)
@@ -646,7 +646,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public LesserFlameElemental(Serial serial)
@@ -718,7 +718,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public LesserWindElemental(Serial serial)
@@ -800,7 +800,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 3);
+            AddLoot(LootPack.Rich, 3);
         }
 
         public EternalGazer(Serial serial)
@@ -1008,7 +1008,7 @@ namespace Server.Mobiles
             AddItem(new Sandals());
 
             Utility.AssignRandomHair(this);
-            Hue = this.Race.RandomSkinHue();
+            Hue = Race.RandomSkinHue();
 
             Fame = 15000;
             Karma = -15000;
@@ -1095,7 +1095,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.FilthyRich, 2);
+            AddLoot(LootPack.FilthyRich, 2);
         }
 
         public CrazedMage(Serial serial)
@@ -1233,7 +1233,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public CorruptedMage(Serial serial)
@@ -1295,7 +1295,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public VileMage(Serial serial)
@@ -1403,11 +1403,11 @@ namespace Server.Mobiles
 
                 for (int i = 0; i < 25; i++)
                 {
-                    x = Utility.RandomMinMax(this.X - 1, this.X + 1);
-                    y = Utility.RandomMinMax(this.Y - 1, this.Y + 1);
-                    z = this.Map.GetAverageZ(x, y);
+                    x = Utility.RandomMinMax(X - 1, X + 1);
+                    y = Utility.RandomMinMax(Y - 1, Y + 1);
+                    z = Map.GetAverageZ(x, y);
 
-                    if (this.Map.CanSpawnMobile(x, y, z) && (x != this.X || y != this.Y))
+                    if (Map.CanSpawnMobile(x, y, z) && (x != X || y != Y))
                     {
                         p = new Point3D(x, y, z);
                         break;
@@ -1415,14 +1415,14 @@ namespace Server.Mobiles
                 }
 
                 if (p == Point3D.Zero)
-                    p = this.Location;
+                    p = Location;
 
                 Point3D from = m.Location;
 
                 Effects.SendLocationParticles(EffectItem.Create(from, m.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 2023);
                 Effects.SendLocationParticles(EffectItem.Create(p, m.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 5023);
 
-                m.MoveToWorld(p, this.Map);
+                m.MoveToWorld(p, Map);
 
                 m.PlaySound(0x1FE);
             }
@@ -1440,7 +1440,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.FilthyRich, 2);
+            AddLoot(LootPack.FilthyRich, 2);
         }
 
         public ChaosVortex(Serial serial)
@@ -1543,11 +1543,11 @@ namespace Server.Mobiles
 
                 for (int i = 0; i < 25; i++)
                 {
-                    x = Utility.RandomMinMax(this.X - 1, this.X + 1);
-                    y = Utility.RandomMinMax(this.Y - 1, this.Y + 1);
-                    z = this.Map.GetAverageZ(x, y);
+                    x = Utility.RandomMinMax(X - 1, X + 1);
+                    y = Utility.RandomMinMax(Y - 1, Y + 1);
+                    z = Map.GetAverageZ(x, y);
 
-                    if (this.Map.CanSpawnMobile(x, y, z) && (x != this.X || y != this.Y))
+                    if (Map.CanSpawnMobile(x, y, z) && (x != X || y != Y))
                     {
                         p = new Point3D(x, y, z);
                         break;
@@ -1555,14 +1555,14 @@ namespace Server.Mobiles
                 }
 
                 if (p == Point3D.Zero)
-                    p = this.Location;
+                    p = Location;
 
                 Point3D from = m.Location;
 
                 Effects.SendLocationParticles(EffectItem.Create(from, m.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 2023);
                 Effects.SendLocationParticles(EffectItem.Create(p, m.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 5023);
 
-                m.MoveToWorld(p, this.Map);
+                m.MoveToWorld(p, Map);
 
                 m.PlaySound(0x1FE);
             }
@@ -1583,7 +1583,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.UltraRich, 2);
+            AddLoot(LootPack.UltraRich, 2);
         }
 
         public UnboundEnergyVortex(Serial serial)
@@ -1670,8 +1670,8 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.FilthyRich, 2);
-            this.AddLoot(LootPack.HighScrolls, Utility.RandomMinMax(1, 8));
+            AddLoot(LootPack.FilthyRich, 2);
+            AddLoot(LootPack.HighScrolls, Utility.RandomMinMax(1, 8));
         }
 
         public DiseasedBloodElemental(Serial serial)
@@ -1727,7 +1727,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 1);
+            AddLoot(LootPack.Rich, 1);
         }
 
         public override void OnDeath(Container c)
@@ -1792,8 +1792,8 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.UltraRich, 1);
-            this.AddLoot(LootPack.FilthyRich, 1);
+            AddLoot(LootPack.UltraRich, 1);
+            AddLoot(LootPack.FilthyRich, 1);
         }
 
         public override void OnDeath(Container c)
@@ -1855,8 +1855,8 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.UltraRich, 1);
-            this.AddLoot(LootPack.FilthyRich, 1);
+            AddLoot(LootPack.UltraRich, 1);
+            AddLoot(LootPack.FilthyRich, 1);
         }
 
         public override void OnDeath(Container c)
@@ -1919,7 +1919,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 1);
+            AddLoot(LootPack.Rich, 1);
         }
 
         public ShameEarthElemental(Serial serial)

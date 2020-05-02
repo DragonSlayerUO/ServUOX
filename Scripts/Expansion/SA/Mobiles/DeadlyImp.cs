@@ -9,35 +9,35 @@ namespace Server.Engines.Quests.Samurai
         public DeadlyImp()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
-            this.Name = "a deadly imp";
-            this.Body = 74;
-            this.BaseSoundID = 422;
-            this.Hue = 0x66A;
+            Name = "a deadly imp";
+            Body = 74;
+            BaseSoundID = 422;
+            Hue = 0x66A;
 
-            this.SetStr(91, 115);
-            this.SetDex(61, 80);
-            this.SetInt(86, 105);
+            SetStr(91, 115);
+            SetDex(61, 80);
+            SetInt(86, 105);
 
-            this.SetHits(1000);
+            SetHits(1000);
 
-            this.SetDamage(50, 80);
+            SetDamage(50, 80);
 
-            this.SetDamageType(ResistanceType.Fire, 100);
+            SetDamageType(ResistanceType.Fire, 100);
 
-            this.SetResistance(ResistanceType.Physical, 95, 98);
-            this.SetResistance(ResistanceType.Fire, 95, 98);
-            this.SetResistance(ResistanceType.Cold, 95, 98);
-            this.SetResistance(ResistanceType.Poison, 95, 98);
-            this.SetResistance(ResistanceType.Energy, 95, 98);
+            SetResistance(ResistanceType.Physical, 95, 98);
+            SetResistance(ResistanceType.Fire, 95, 98);
+            SetResistance(ResistanceType.Cold, 95, 98);
+            SetResistance(ResistanceType.Poison, 95, 98);
+            SetResistance(ResistanceType.Energy, 95, 98);
 
-            this.SetSkill(SkillName.Magery, 120.0);
-            this.SetSkill(SkillName.Tactics, 120.0);
-            this.SetSkill(SkillName.Wrestling, 120.0);
+            SetSkill(SkillName.Magery, 120.0);
+            SetSkill(SkillName.Tactics, 120.0);
+            SetSkill(SkillName.Wrestling, 120.0);
 
-            this.Fame = 2500;
-            this.Karma = -2500;
+            Fame = 2500;
+            Karma = -2500;
 
-            this.CantWalk = true;
+            CantWalk = true;
         }
 
         public DeadlyImp(Serial serial)

@@ -9,42 +9,42 @@ namespace Server.Factions
         public FactionDeathKnight()
             : base("the death knight")
         {
-            this.GenerateBody(false, false);
-            this.Hue = 1;
+            GenerateBody(false, false);
+            Hue = 1;
 
-            this.SetStr(126, 150);
-            this.SetDex(61, 85);
-            this.SetInt(81, 95);
+            SetStr(126, 150);
+            SetDex(61, 85);
+            SetInt(81, 95);
 
-            this.SetDamageType(ResistanceType.Physical, 100);
+            SetDamageType(ResistanceType.Physical, 100);
 
-            this.SetResistance(ResistanceType.Physical, 30, 50);
-            this.SetResistance(ResistanceType.Fire, 30, 50);
-            this.SetResistance(ResistanceType.Cold, 30, 50);
-            this.SetResistance(ResistanceType.Energy, 30, 50);
-            this.SetResistance(ResistanceType.Poison, 30, 50);
+            SetResistance(ResistanceType.Physical, 30, 50);
+            SetResistance(ResistanceType.Fire, 30, 50);
+            SetResistance(ResistanceType.Cold, 30, 50);
+            SetResistance(ResistanceType.Energy, 30, 50);
+            SetResistance(ResistanceType.Poison, 30, 50);
 
-            this.VirtualArmor = 24;
+            VirtualArmor = 24;
 
-            this.SetSkill(SkillName.Swords, 100.0, 110.0);
-            this.SetSkill(SkillName.Wrestling, 100.0, 110.0);
-            this.SetSkill(SkillName.Tactics, 100.0, 110.0);
-            this.SetSkill(SkillName.MagicResist, 100.0, 110.0);
-            this.SetSkill(SkillName.Healing, 100.0, 110.0);
-            this.SetSkill(SkillName.Anatomy, 100.0, 110.0);
+            SetSkill(SkillName.Swords, 100.0, 110.0);
+            SetSkill(SkillName.Wrestling, 100.0, 110.0);
+            SetSkill(SkillName.Tactics, 100.0, 110.0);
+            SetSkill(SkillName.MagicResist, 100.0, 110.0);
+            SetSkill(SkillName.Healing, 100.0, 110.0);
+            SetSkill(SkillName.Anatomy, 100.0, 110.0);
 
-            this.SetSkill(SkillName.Magery, 100.0, 110.0);
-            this.SetSkill(SkillName.EvalInt, 100.0, 110.0);
-            this.SetSkill(SkillName.Meditation, 100.0, 110.0);
+            SetSkill(SkillName.Magery, 100.0, 110.0);
+            SetSkill(SkillName.EvalInt, 100.0, 110.0);
+            SetSkill(SkillName.Meditation, 100.0, 110.0);
 
             Item shroud = new Item(0x204E);
             shroud.Layer = Layer.OuterTorso;
 
-            this.AddItem(this.Immovable(this.Rehued(shroud, 1109)));
-            this.AddItem(this.Newbied(this.Rehued(new ExecutionersAxe(), 2211)));
+            AddItem(Immovable(Rehued(shroud, 1109)));
+            AddItem(Newbied(Rehued(new ExecutionersAxe(), 2211)));
 
-            this.PackItem(new Bandage(Utility.RandomMinMax(30, 40)));
-            this.PackStrongPotions(6, 12);
+            PackItem(new Bandage(Utility.RandomMinMax(30, 40)));
+            PackStrongPotions(6, 12);
         }
 
         public FactionDeathKnight(Serial serial)

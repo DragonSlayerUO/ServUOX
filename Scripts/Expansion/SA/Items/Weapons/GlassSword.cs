@@ -10,7 +10,7 @@ namespace Server.Items
         public GlassSword()
             : base(0x90C)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public GlassSword(Serial serial)

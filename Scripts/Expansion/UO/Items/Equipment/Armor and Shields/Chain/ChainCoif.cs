@@ -9,7 +9,7 @@ namespace Server.Items
         public ChainCoif()
             : base(0x13BB)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public ChainCoif(Serial serial)

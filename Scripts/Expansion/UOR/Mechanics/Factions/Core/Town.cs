@@ -19,10 +19,10 @@ namespace Server.Factions
         private List<GuardList> m_GuardLists;
         public Town()
         {
-            this.m_State = new TownState(this);
-            this.ConstructVendorLists();
-            this.ConstructGuardLists();
-            this.StartIncomeTimer();
+            m_State = new TownState(this);
+            ConstructVendorLists();
+            ConstructGuardLists();
+            StartIncomeTimer();
         }
 
         public static List<Town> Towns => Reflector.Towns;
@@ -30,97 +30,97 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Definition;
+                return m_Definition;
             }
             set
             {
-                this.m_Definition = value;
+                m_Definition = value;
             }
         }
         public TownState State
         {
             get
             {
-                return this.m_State;
+                return m_State;
             }
             set
             {
-                this.m_State = value;
-                this.ConstructGuardLists();
+                m_State = value;
+                ConstructGuardLists();
             }
         }
         public int Silver
         {
             get
             {
-                return this.m_State.Silver;
+                return m_State.Silver;
             }
             set
             {
-                this.m_State.Silver = value;
+                m_State.Silver = value;
             }
         }
         public Faction Owner
         {
             get
             {
-                return this.m_State.Owner;
+                return m_State.Owner;
             }
             set
             {
-                this.Capture(value);
+                Capture(value);
             }
         }
         public Mobile Sheriff
         {
             get
             {
-                return this.m_State.Sheriff;
+                return m_State.Sheriff;
             }
             set
             {
-                this.m_State.Sheriff = value;
+                m_State.Sheriff = value;
             }
         }
         public Mobile Finance
         {
             get
             {
-                return this.m_State.Finance;
+                return m_State.Finance;
             }
             set
             {
-                this.m_State.Finance = value;
+                m_State.Finance = value;
             }
         }
         public int Tax
         {
             get
             {
-                return this.m_State.Tax;
+                return m_State.Tax;
             }
             set
             {
-                this.m_State.Tax = value;
+                m_State.Tax = value;
             }
         }
         public DateTime LastTaxChange
         {
             get
             {
-                return this.m_State.LastTaxChange;
+                return m_State.LastTaxChange;
             }
             set
             {
-                this.m_State.LastTaxChange = value;
+                m_State.LastTaxChange = value;
             }
         }
-        public bool TaxChangeReady => (this.m_State.LastTaxChange + TaxChangePeriod) < DateTime.UtcNow;
+        public bool TaxChangeReady => (m_State.LastTaxChange + TaxChangePeriod) < DateTime.UtcNow;
         public int FinanceUpkeep
         {
             get
             {
-                List<VendorList> vendorLists = this.VendorLists;
+                List<VendorList> vendorLists = VendorLists;
                 int upkeep = 0;
 
                 for (int i = 0; i < vendorLists.Count; ++i)
@@ -133,7 +133,7 @@ namespace Server.Factions
         {
             get
             {
-                List<GuardList> guardLists = this.GuardLists;
+                List<GuardList> guardLists = GuardLists;
                 int upkeep = 0;
 
                 for (int i = 0; i < guardLists.Count; ++i)
@@ -142,8 +142,8 @@ namespace Server.Factions
                 return upkeep;
             }
         }
-        public int DailyIncome => (10000 * (100 + this.m_State.Tax)) / 100;
-        public int NetCashFlow => this.DailyIncome - this.FinanceUpkeep - this.SheriffUpkeep;
+        public int DailyIncome => (10000 * (100 + m_State.Tax)) / 100;
+        public int NetCashFlow => DailyIncome - FinanceUpkeep - SheriffUpkeep;
         public TownMonolith Monolith
         {
             get
@@ -168,33 +168,33 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_State.LastIncome;
+                return m_State.LastIncome;
             }
             set
             {
-                this.m_State.LastIncome = value;
+                m_State.LastIncome = value;
             }
         }
         public List<VendorList> VendorLists
         {
             get
             {
-                return this.m_VendorLists;
+                return m_VendorLists;
             }
             set
             {
-                this.m_VendorLists = value;
+                m_VendorLists = value;
             }
         }
         public List<GuardList> GuardLists
         {
             get
             {
-                return this.m_GuardLists;
+                return m_GuardLists;
             }
             set
             {
-                this.m_GuardLists = value;
+                m_GuardLists = value;
             }
         }
         public static Town FromRegion(Region reg)
@@ -277,8 +277,8 @@ namespace Server.Factions
 
         public void BeginOrderFiring(Mobile from)
         {
-            bool isFinance = this.IsFinance(from);
-            bool isSheriff = this.IsSheriff(from);
+            bool isFinance = IsFinance(from);
+            bool isSheriff = IsSheriff(from);
             string type = null;
 
             // NOTE: Messages not OSI-accurate, intentional
@@ -295,8 +295,8 @@ namespace Server.Factions
 
         public void EndOrderFiring(Mobile from, object obj)
         {
-            bool isFinance = this.IsFinance(from);
-            bool isSheriff = this.IsSheriff(from);
+            bool isFinance = IsFinance(from);
+            bool isSheriff = IsSheriff(from);
             string type = null;
 
             if (isFinance && isSheriff) // GM only
@@ -328,39 +328,39 @@ namespace Server.Factions
 
         public void StartIncomeTimer()
         {
-            if (this.m_IncomeTimer != null)
-                this.m_IncomeTimer.Stop();
+            if (m_IncomeTimer != null)
+                m_IncomeTimer.Stop();
 
-            this.m_IncomeTimer = Timer.DelayCall(TimeSpan.FromMinutes(1.0), TimeSpan.FromMinutes(1.0), new TimerCallback(CheckIncome));
+            m_IncomeTimer = Timer.DelayCall(TimeSpan.FromMinutes(1.0), TimeSpan.FromMinutes(1.0), new TimerCallback(CheckIncome));
         }
 
         public void StopIncomeTimer()
         {
-            if (this.m_IncomeTimer != null)
-                this.m_IncomeTimer.Stop();
+            if (m_IncomeTimer != null)
+                m_IncomeTimer.Stop();
 
-            this.m_IncomeTimer = null;
+            m_IncomeTimer = null;
         }
 
         public void CheckIncome()
         {
-            if ((this.LastIncome + IncomePeriod) > DateTime.UtcNow || this.Owner == null)
+            if ((LastIncome + IncomePeriod) > DateTime.UtcNow || Owner == null)
                 return;
 
-            this.ProcessIncome();
+            ProcessIncome();
         }
 
         public void ProcessIncome()
         {
-            this.LastIncome = DateTime.UtcNow;
+            LastIncome = DateTime.UtcNow;
 
-            int flow = this.NetCashFlow;
+            int flow = NetCashFlow;
 
-            if ((this.Silver + flow) < 0)
+            if ((Silver + flow) < 0)
             {
-                ArrayList toDelete = this.BuildFinanceList();
+                ArrayList toDelete = BuildFinanceList();
 
-                while ((this.Silver + flow) < 0 && toDelete.Count > 0)
+                while ((Silver + flow) < 0 && toDelete.Count > 0)
                 {
                     int index = Utility.Random(toDelete.Count);
                     Mobile mob = (Mobile)toDelete[index];
@@ -368,23 +368,23 @@ namespace Server.Factions
                     mob.Delete();
 
                     toDelete.RemoveAt(index);
-                    flow = this.NetCashFlow;
+                    flow = NetCashFlow;
                 }
             }
 
-            this.Silver += flow;
+            Silver += flow;
         }
 
         public ArrayList BuildFinanceList()
         {
             ArrayList list = new ArrayList();
 
-            List<VendorList> vendorLists = this.VendorLists;
+            List<VendorList> vendorLists = VendorLists;
 
             for (int i = 0; i < vendorLists.Count; ++i)
                 list.AddRange(vendorLists[i].Vendors);
 
-            List<GuardList> guardLists = this.GuardLists;
+            List<GuardList> guardLists = GuardLists;
 
             for (int i = 0; i < guardLists.Count; ++i)
                 list.AddRange(guardLists[i].Guards);
@@ -394,17 +394,17 @@ namespace Server.Factions
 
         public void ConstructGuardLists()
         {
-            GuardDefinition[] defs = (this.Owner == null ? new GuardDefinition[0] : this.Owner.Definition.Guards);
+            GuardDefinition[] defs = (Owner == null ? new GuardDefinition[0] : Owner.Definition.Guards);
 
-            this.m_GuardLists = new List<GuardList>();
+            m_GuardLists = new List<GuardList>();
 
             for (int i = 0; i < defs.Length; ++i)
-                this.m_GuardLists.Add(new GuardList(defs[i]));
+                m_GuardLists.Add(new GuardList(defs[i]));
         }
 
         public GuardList FindGuardList(Type type)
         {
-            List<GuardList> guardLists = this.GuardLists;
+            List<GuardList> guardLists = GuardLists;
 
             for (int i = 0; i < guardLists.Count; ++i)
             {
@@ -421,15 +421,15 @@ namespace Server.Factions
         {
             VendorDefinition[] defs = VendorDefinition.Definitions;
 
-            this.m_VendorLists = new List<VendorList>();
+            m_VendorLists = new List<VendorList>();
 
             for (int i = 0; i < defs.Length; ++i)
-                this.m_VendorLists.Add(new VendorList(defs[i]));
+                m_VendorLists.Add(new VendorList(defs[i]));
         }
 
         public VendorList FindVendorList(Type type)
         {
-            List<VendorList> vendorLists = this.VendorLists;
+            List<VendorList> vendorLists = VendorLists;
 
             for (int i = 0; i < vendorLists.Count; ++i)
             {
@@ -447,7 +447,7 @@ namespace Server.Factions
             if (guard == null)
                 return false;
 
-            GuardList guardList = this.FindGuardList(guard.GetType());
+            GuardList guardList = FindGuardList(guard.GetType());
 
             if (guardList == null)
                 return false;
@@ -461,7 +461,7 @@ namespace Server.Factions
             if (guard == null)
                 return false;
 
-            GuardList guardList = this.FindGuardList(guard.GetType());
+            GuardList guardList = FindGuardList(guard.GetType());
 
             if (guardList == null)
                 return false;
@@ -478,7 +478,7 @@ namespace Server.Factions
             if (vendor == null)
                 return false;
 
-            VendorList vendorList = this.FindVendorList(vendor.GetType());
+            VendorList vendorList = FindVendorList(vendor.GetType());
 
             if (vendorList == null)
                 return false;
@@ -492,7 +492,7 @@ namespace Server.Factions
             if (vendor == null)
                 return false;
 
-            VendorList vendorList = this.FindVendorList(vendor.GetType());
+            VendorList vendorList = FindVendorList(vendor.GetType());
 
             if (vendorList == null)
                 return false;
@@ -509,7 +509,7 @@ namespace Server.Factions
             if (mob == null || mob.Deleted)
                 return false;
 
-            return (mob.AccessLevel >= AccessLevel.GameMaster || mob == this.Sheriff);
+            return (mob.AccessLevel >= AccessLevel.GameMaster || mob == Sheriff);
         }
 
         public bool IsFinance(Mobile mob)
@@ -517,39 +517,39 @@ namespace Server.Factions
             if (mob == null || mob.Deleted)
                 return false;
 
-            return (mob.AccessLevel >= AccessLevel.GameMaster || mob == this.Finance);
+            return (mob.AccessLevel >= AccessLevel.GameMaster || mob == Finance);
         }
 
         public void Capture(Faction f)
         {
-            if (this.m_State.Owner == f)
+            if (m_State.Owner == f)
                 return;
 
-            if (this.m_State.Owner == null) // going from unowned to owned
+            if (m_State.Owner == null) // going from unowned to owned
             {
-                this.LastIncome = DateTime.UtcNow;
+                LastIncome = DateTime.UtcNow;
                 f.Silver += SilverCaptureBonus;
             }
             else if (f == null) // going from owned to unowned
             {
-                this.LastIncome = DateTime.MinValue;
+                LastIncome = DateTime.MinValue;
             }
             else // otherwise changing hands, income timer doesn't change
             {
                 f.Silver += SilverCaptureBonus;
             }
 
-            this.m_State.Owner = f;
+            m_State.Owner = f;
 
-            this.Sheriff = null;
-            this.Finance = null;
+            Sheriff = null;
+            Finance = null;
 
-            TownMonolith monolith = this.Monolith;
+            TownMonolith monolith = Monolith;
 
             if (monolith != null)
                 monolith.Faction = f;
 
-            List<VendorList> vendorLists = this.VendorLists;
+            List<VendorList> vendorLists = VendorLists;
 
             for (int i = 0; i < vendorLists.Count; ++i)
             {
@@ -560,7 +560,7 @@ namespace Server.Factions
                     vendors[j].Delete();
             }
 
-            List<GuardList> guardLists = this.GuardLists;
+            List<GuardList> guardLists = GuardLists;
 
             for (int i = 0; i < guardLists.Count; ++i)
             {
@@ -571,17 +571,17 @@ namespace Server.Factions
                     guards[j].Delete();
             }
 
-            this.ConstructGuardLists();
+            ConstructGuardLists();
         }
 
         public int CompareTo(object obj)
         {
-            return this.m_Definition.Sort - ((Town)obj).m_Definition.Sort;
+            return m_Definition.Sort - ((Town)obj).m_Definition.Sort;
         }
 
         public override string ToString()
         {
-            return this.m_Definition.FriendlyName;
+            return m_Definition.FriendlyName;
         }
     }
 }

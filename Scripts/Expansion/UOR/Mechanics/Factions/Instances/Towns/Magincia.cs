@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public Magincia()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     7,
                     0x1870,

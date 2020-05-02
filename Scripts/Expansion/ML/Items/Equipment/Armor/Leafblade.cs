@@ -11,7 +11,7 @@ namespace Server.Items
         public Leafblade()
             : base(0x2D22)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public Leafblade(Serial serial)

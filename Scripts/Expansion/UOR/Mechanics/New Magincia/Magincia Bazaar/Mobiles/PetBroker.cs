@@ -20,7 +20,7 @@ namespace Server.Engines.NewMagincia
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from.InRange(this.Location, 4) && Plot != null)
+            if (from.InRange(Location, 4) && Plot != null)
             {
                 if (Plot.Owner == from)
                 {

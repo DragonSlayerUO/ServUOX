@@ -11,7 +11,7 @@ namespace Server.Items
         public DoubleBladedStaff()
             : base(0x26BF)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public DoubleBladedStaff(Serial serial)

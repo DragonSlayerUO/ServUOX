@@ -17,11 +17,11 @@ namespace Server.Ethics
         protected PlayerCollection m_Players;
         public Ethic()
         {
-            this.m_Players = new PlayerCollection();
+            m_Players = new PlayerCollection();
         }
 
-        public EthicDefinition Definition => this.m_Definition;
-        public PlayerCollection Players => this.m_Players;
+        public EthicDefinition Definition => m_Definition;
+        public PlayerCollection Players => m_Players;
         public static Ethic Find(Item item)
         {
             if ((item.SavedFlags & 0x100) != 0)
@@ -228,10 +228,10 @@ namespace Server.Ethics
         {
             writer.WriteEncodedInt(0); // version
 
-            writer.WriteEncodedInt(this.m_Players.Count);
+            writer.WriteEncodedInt(m_Players.Count);
 
-            for (int i = 0; i < this.m_Players.Count; ++i)
-                this.m_Players[i].Serialize(writer);
+            for (int i = 0; i < m_Players.Count; ++i)
+                m_Players[i].Serialize(writer);
         }
     }
 }

@@ -13,30 +13,30 @@ namespace Server.Factions
         public HorseBreederGump(PlayerMobile from, Faction faction)
             : base(20, 30)
         {
-            this.m_From = from;
-            this.m_Faction = faction;
+            m_From = from;
+            m_Faction = faction;
 
-            this.AddPage(0);
+            AddPage(0);
 
-            this.AddBackground(0, 0, 320, 280, 5054);
-            this.AddBackground(10, 10, 300, 260, 3000);
+            AddBackground(0, 0, 320, 280, 5054);
+            AddBackground(10, 10, 300, 260, 3000);
 
-            this.AddHtmlText(20, 30, 300, 25, faction.Definition.Header, false, false);
+            AddHtmlText(20, 30, 300, 25, faction.Definition.Header, false, false);
 
-            this.AddHtmlLocalized(20, 60, 300, 25, 1018306, false, false); // Purchase a Faction War Horse
-            this.AddItem(70, 120, 0x3FFE);
+            AddHtmlLocalized(20, 60, 300, 25, 1018306, false, false); // Purchase a Faction War Horse
+            AddItem(70, 120, 0x3FFE);
 
-            this.AddItem(150, 120, 0xEF2);
-            this.AddLabel(190, 122, 0x3E3, FactionWarHorse.SilverPrice.ToString("N0")); // NOTE: Added 'N0'
+            AddItem(150, 120, 0xEF2);
+            AddLabel(190, 122, 0x3E3, FactionWarHorse.SilverPrice.ToString("N0")); // NOTE: Added 'N0'
 
-            this.AddItem(150, 150, 0xEEF);
-            this.AddLabel(190, 152, 0x3E3, FactionWarHorse.GoldPrice.ToString("N0")); // NOTE: Added 'N0'
+            AddItem(150, 150, 0xEEF);
+            AddLabel(190, 152, 0x3E3, FactionWarHorse.GoldPrice.ToString("N0")); // NOTE: Added 'N0'
 
-            this.AddHtmlLocalized(55, 210, 200, 25, 1011011, false, false); // CONTINUE
-            this.AddButton(20, 210, 4005, 4007, 1, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(55, 210, 200, 25, 1011011, false, false); // CONTINUE
+            AddButton(20, 210, 4005, 4007, 1, GumpButtonType.Reply, 0);
 
-            this.AddHtmlLocalized(55, 240, 200, 25, 1011012, false, false); // CANCEL
-            this.AddButton(20, 240, 4005, 4007, 0, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(55, 240, 200, 25, 1011012, false, false); // CANCEL
+            AddButton(20, 240, 4005, 4007, 0, GumpButtonType.Reply, 0);
         }
 
         public override void OnResponse(NetState sender, RelayInfo info)
@@ -44,17 +44,17 @@ namespace Server.Factions
             if (info.ButtonID != 1)
                 return;
 
-            if (Faction.Find(this.m_From) != this.m_Faction)
+            if (Faction.Find(m_From) != m_Faction)
                 return;
 
-            Container pack = this.m_From.Backpack;
+            Container pack = m_From.Backpack;
 
             if (pack == null)
                 return;
 
-            FactionWarHorse horse = new FactionWarHorse(this.m_Faction);
+            FactionWarHorse horse = new FactionWarHorse(m_Faction);
 
-            if ((this.m_From.Followers + horse.ControlSlots) > this.m_From.FollowersMax)
+            if ((m_From.Followers + horse.ControlSlots) > m_From.FollowersMax)
             {
                 // TODO: Message?
                 horse.Delete();
@@ -74,12 +74,12 @@ namespace Server.Factions
                 else if (pack.ConsumeTotal(typeof(Silver), FactionWarHorse.SilverPrice) && pack.ConsumeTotal(typeof(Gold), FactionWarHorse.GoldPrice))
                 {
                     horse.Controlled = true;
-                    horse.ControlMaster = this.m_From;
+                    horse.ControlMaster = m_From;
 
                     horse.ControlOrder = OrderType.Follow;
-                    horse.ControlTarget = this.m_From;
+                    horse.ControlTarget = m_From;
 
-                    horse.MoveToWorld(this.m_From.Location, this.m_From.Map);
+                    horse.MoveToWorld(m_From.Location, m_From.Map);
                 }
                 else
                 {

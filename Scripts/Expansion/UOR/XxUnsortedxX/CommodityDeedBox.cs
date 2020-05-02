@@ -12,8 +12,8 @@ namespace Server.Items
         public CommodityDeedBox()
             : base(0x9AA)
         {
-            this.Hue = 0x47;
-            this.Weight = 4.0;
+            Hue = 0x47;
+            Weight = 4.0;
         }
 
         public CommodityDeedBox(Serial serial)
@@ -28,12 +28,12 @@ namespace Server.Items
         {
             get
             {
-                return this.m_IsRewardItem;
+                return m_IsRewardItem;
             }
             set
             {
-                this.m_IsRewardItem = value;
-                this.InvalidateProperties();
+                m_IsRewardItem = value;
+                InvalidateProperties();
             }
         }
         public static CommodityDeedBox Find(Item deed)
@@ -50,7 +50,7 @@ namespace Server.Items
         {
             base.GetProperties(list);
 
-            if (this.m_IsRewardItem)
+            if (m_IsRewardItem)
                 list.Add(1076217); // 1st Year Veteran Reward		
         }
 
@@ -69,7 +69,7 @@ namespace Server.Items
 
             int version = reader.ReadEncodedInt();
 
-            this.m_IsRewardItem = reader.ReadBool();
+            m_IsRewardItem = reader.ReadBool();
         }
     }
 }

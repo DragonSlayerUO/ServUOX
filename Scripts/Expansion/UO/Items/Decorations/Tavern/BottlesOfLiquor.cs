@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoBottlesOfLiquor()
             : base(0x99E)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoBottlesOfLiquor(Serial serial)

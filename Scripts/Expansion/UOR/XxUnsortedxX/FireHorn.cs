@@ -14,8 +14,8 @@ namespace Server.Items
         public FireHorn()
             : base(0xFC7)
         {
-            this.Hue = 0x466;
-            this.Weight = 1.0;
+            Hue = 0x466;
+            Weight = 1.0;
         }
 
         public FireHorn(Serial serial)
@@ -26,7 +26,7 @@ namespace Server.Items
         public override int LabelNumber => 1060456;// fire horn
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.CheckUse(from))
+            if (CheckUse(from))
             {
                 from.SendLocalizedMessage(1049620); // Select an area to incinerate.
                 from.Target = new InternalTarget(this);
@@ -35,7 +35,7 @@ namespace Server.Items
 
         public void Use(Mobile from, IPoint3D loc)
         {
-            if (!this.CheckUse(from))
+            if (!CheckUse(from))
                 return;
 
             from.BeginAction(typeof(FireHorn));
@@ -130,7 +130,7 @@ namespace Server.Items
             if (Utility.RandomDouble() < breakChance)
             {
                 from.SendLocalizedMessage(1049619); // The fire horn crumbles in your hands.
-                this.Delete();
+                Delete();
             }
         }
 
@@ -158,10 +158,10 @@ namespace Server.Items
 
         private bool CheckUse(Mobile from)
         {
-            if (!this.IsAccessibleTo(from))
+            if (!IsAccessibleTo(from))
                 return false;
 
-            if (from.Map != this.Map || !from.InRange(this.GetWorldLocation(), 2))
+            if (from.Map != Map || !from.InRange(GetWorldLocation(), 2))
             {
                 from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
                 return false;
@@ -189,12 +189,12 @@ namespace Server.Items
             public InternalTarget(FireHorn horn)
                 : base(Core.AOS ? 3 : 2, true, TargetFlags.Harmful)
             {
-                this.m_Horn = horn;
+                m_Horn = horn;
             }
 
             protected override void OnTarget(Mobile from, object targeted)
             {
-                if (this.m_Horn.Deleted)
+                if (m_Horn.Deleted)
                     return;
 
                 IPoint3D loc;
@@ -203,7 +203,7 @@ namespace Server.Items
                 else
                     loc = targeted as IPoint3D;
 
-                this.m_Horn.Use(from, loc);
+                m_Horn.Use(from, loc);
             }
         }
     }

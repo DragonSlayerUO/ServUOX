@@ -7,7 +7,7 @@ namespace Server.Ethics.Evil
     {
         public BlightPower()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 15,
                 "Blight",
                 "Velgo Ontawl",
@@ -29,7 +29,7 @@ namespace Server.Ethics.Evil
             if (p == null)
                 return;
 
-            if (!this.CheckInvoke(from))
+            if (!CheckInvoke(from))
                 return;
 
             bool powerFunctioned = false;
@@ -68,7 +68,7 @@ namespace Server.Ethics.Evil
 
                 from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x3B2, false, "You curse the area.");
 
-                this.FinishInvoke(from);
+                FinishInvoke(from);
             }
             else
             {

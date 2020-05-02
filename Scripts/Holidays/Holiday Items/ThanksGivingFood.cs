@@ -33,10 +33,10 @@ namespace Server.Items
             : base(id)
         {
             Stackable = false;
-            this.Weight = 1.0;
+            Weight = 1.0;
 
             m_Pieces = Pieces;
-            this.FillFactor = m_Pieces;
+            FillFactor = m_Pieces;
         }
 
         public override void OnDoubleClick(Mobile from)
@@ -100,7 +100,7 @@ namespace Server.Items
             : base(19469)
         {
             Stackable = false;
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public override void OnChanged()
@@ -139,8 +139,8 @@ namespace Server.Items
             : base(19459)
         {
             Stackable = false;
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public SliceOfPie(Serial serial)
@@ -172,8 +172,8 @@ namespace Server.Items
             : base(19461)
         {
             Stackable = false;
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public MashedSweetPotatoes(Serial serial)
@@ -209,7 +209,7 @@ namespace Server.Items
             : base(19371)
         {
             Stackable = false;
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public BasketOfRolls(Serial serial)
@@ -240,8 +240,8 @@ namespace Server.Items
         public DinnerRoll()
             : base(2538)
         {
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public DinnerRoll(Serial serial)
@@ -293,7 +293,7 @@ namespace Server.Items
             : base(18824)
         {
             Stackable = false;
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public TurkeyPlatter(Serial serial)
@@ -324,8 +324,8 @@ namespace Server.Items
         public TurkeyDinner()
             : base(2479)
         {
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public TurkeyDinner(Serial serial)
@@ -357,8 +357,8 @@ namespace Server.Items
         public RoastDuck()
             : base(2487)
         {
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public RoastDuck(Serial serial)
@@ -390,8 +390,8 @@ namespace Server.Items
         public RoastTurkey()
             : base(2487)
         {
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public RoastTurkey(Serial serial)
@@ -423,8 +423,8 @@ namespace Server.Items
         public RoastChicken()
             : base(2487)
         {
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public RoastChicken(Serial serial)
@@ -455,8 +455,8 @@ namespace Server.Items
         public TurkeyLeg()
             : base(5640)
         {
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public TurkeyLeg(Serial serial)
@@ -487,8 +487,8 @@ namespace Server.Items
         public GibletGravey()
             : base(5634)
         {
-            this.Weight = 1.0;
-            this.FillFactor = 1;
+            Weight = 1.0;
+            FillFactor = 1;
         }
 
         public GibletGravey(Serial serial)

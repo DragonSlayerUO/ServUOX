@@ -10,8 +10,8 @@ namespace Server.Items
         public GargishTessen()
             : base(0x48CC)
         {
-            this.Weight = 6.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 6.0;
+            Layer = Layer.TwoHanded;
         }
 
         public GargishTessen(Serial serial)

@@ -103,9 +103,9 @@ namespace Server.Engines.Quests.Matriarch
                     }
                 }
             }
-            else if (SolenMatriarchQuest.IsFriend(player, this.RedSolen))
+            else if (SolenMatriarchQuest.IsFriend(player, RedSolen))
             {
-                QuestSystem newQuest = new SolenMatriarchQuest(player, this.RedSolen);
+                QuestSystem newQuest = new SolenMatriarchQuest(player, RedSolen);
 
                 if (player.Quest == null && QuestSystem.CanOfferQuest(player, typeof(SolenMatriarchQuest)))
                 {

@@ -1409,23 +1409,23 @@ namespace Server.Engines.XmlSpawner2
 
                         }
                         catch { }
-                        try { this.ProximityRange = int.Parse((string)dr["ProximityRange"]); }
+                        try { ProximityRange = int.Parse((string)dr["ProximityRange"]); }
                         catch { }
-                        try { this.ResetRange = int.Parse((string)dr["ResetRange"]); }
+                        try { ResetRange = int.Parse((string)dr["ResetRange"]); }
                         catch { }
-                        try { this.TriggerOnCarried = (string)dr["TriggerOnCarried"]; }
+                        try { TriggerOnCarried = (string)dr["TriggerOnCarried"]; }
                         catch { }
-                        try { this.NoTriggerOnCarried = (string)dr["NoTriggerOnCarried"]; }
+                        try { NoTriggerOnCarried = (string)dr["NoTriggerOnCarried"]; }
                         catch { }
-                        try { this.m_AllowGhostTriggering = bool.Parse((string)dr["AllowGhost"]); }
+                        try { m_AllowGhostTriggering = bool.Parse((string)dr["AllowGhost"]); }
                         catch { }
-                        try { this.m_SpeechPace = int.Parse((string)dr["SpeechPace"]); }
+                        try { m_SpeechPace = int.Parse((string)dr["SpeechPace"]); }
                         catch { }
-                        try { this.Running = bool.Parse((string)dr["Running"]); }
+                        try { Running = bool.Parse((string)dr["Running"]); }
                         catch { }
-                        try { this.ResetTime = TimeSpan.FromMinutes(double.Parse((string)dr["ResetTime"])); }
+                        try { ResetTime = TimeSpan.FromMinutes(double.Parse((string)dr["ResetTime"])); }
                         catch { }
-                        try { this.ConfigFile = (string)dr["ConfigFile"]; }
+                        try { ConfigFile = (string)dr["ConfigFile"]; }
                         catch { }
 
                         int entrycount = 0;

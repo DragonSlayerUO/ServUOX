@@ -116,7 +116,7 @@ namespace Server.Mobiles
             else if (TimeOnWayPoint != null && TimeOnWayPoint.Item1 == CurrentWayPoint && TimeOnWayPoint.Item2 < DateTime.UtcNow)
             {
                 if (CheckCanTeleport())
-                    MoveToWorld(CurrentWayPoint.Location, this.Map);
+                    MoveToWorld(CurrentWayPoint.Location, Map);
             }
             else if (TimeOnWayPoint != null && TimeOnWayPoint.Item1 != CurrentWayPoint)
             {
@@ -131,7 +131,7 @@ namespace Server.Mobiles
 
             bool canTeleport = true;
 
-            IPooledEnumerable eable = this.Map.GetMobilesInRange(this.Location, 10);
+            IPooledEnumerable eable = Map.GetMobilesInRange(Location, 10);
 
             foreach (Mobile m in eable)
             {
@@ -144,7 +144,7 @@ namespace Server.Mobiles
 
             if (canTeleport)
             {
-                eable = this.Map.GetItemsInRange(this.Location, 8);
+                eable = Map.GetItemsInRange(Location, 8);
 
                 foreach (Item item in eable)
                 {

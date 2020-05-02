@@ -10,15 +10,15 @@ namespace Server.Engines.Quests.Necro
         [Constructable]
         public MaabusCoffin()
         {
-            this.AddComponent(new MaabusCoffinComponent(0x1C2B, 0x1C2B), -1, -1, 0);
+            AddComponent(new MaabusCoffinComponent(0x1C2B, 0x1C2B), -1, -1, 0);
 
-            this.AddComponent(new MaabusCoffinComponent(0x1D16, 0x1C2C), 0, -1, 0);
-            this.AddComponent(new MaabusCoffinComponent(0x1D17, 0x1C2D), 1, -1, 0);
-            this.AddComponent(new MaabusCoffinComponent(0x1D51, 0x1C2E), 2, -1, 0);
+            AddComponent(new MaabusCoffinComponent(0x1D16, 0x1C2C), 0, -1, 0);
+            AddComponent(new MaabusCoffinComponent(0x1D17, 0x1C2D), 1, -1, 0);
+            AddComponent(new MaabusCoffinComponent(0x1D51, 0x1C2E), 2, -1, 0);
 
-            this.AddComponent(new MaabusCoffinComponent(0x1D4E, 0x1C2A), 0, 0, 0);
-            this.AddComponent(new MaabusCoffinComponent(0x1D4D, 0x1C29), 1, 0, 0);
-            this.AddComponent(new MaabusCoffinComponent(0x1D4C, 0x1C28), 2, 0, 0);
+            AddComponent(new MaabusCoffinComponent(0x1D4E, 0x1C2A), 0, 0, 0);
+            AddComponent(new MaabusCoffinComponent(0x1D4D, 0x1C29), 1, 0, 0);
+            AddComponent(new MaabusCoffinComponent(0x1D4C, 0x1C28), 2, 0, 0);
         }
 
         public MaabusCoffin(Serial serial)
@@ -27,59 +27,59 @@ namespace Server.Engines.Quests.Necro
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Maabus Maabus => this.m_Maabus;
+        public Maabus Maabus => m_Maabus;
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D SpawnLocation
         {
             get
             {
-                return this.m_SpawnLocation;
+                return m_SpawnLocation;
             }
             set
             {
-                this.m_SpawnLocation = value;
+                m_SpawnLocation = value;
             }
         }
         public void Awake(Mobile caller)
         {
-            if (this.m_Maabus != null || this.m_SpawnLocation == Point3D.Zero)
+            if (m_Maabus != null || m_SpawnLocation == Point3D.Zero)
                 return;
 
-            foreach (MaabusCoffinComponent c in this.Components)
+            foreach (MaabusCoffinComponent c in Components)
                 c.TurnToEmpty();
 
-            this.m_Maabus = new Maabus();
+            m_Maabus = new Maabus();
 
-            this.m_Maabus.Location = this.m_SpawnLocation;
-            this.m_Maabus.Map = this.Map;
+            m_Maabus.Location = m_SpawnLocation;
+            m_Maabus.Map = Map;
 
-            this.m_Maabus.Direction = this.m_Maabus.GetDirectionTo(caller);
+            m_Maabus.Direction = m_Maabus.GetDirectionTo(caller);
 
             Timer.DelayCall(TimeSpan.FromSeconds(7.5), new TimerCallback(BeginSleep));
         }
 
         public void BeginSleep()
         {
-            if (this.m_Maabus == null)
+            if (m_Maabus == null)
                 return;
 
-            Effects.PlaySound(this.m_Maabus.Location, this.m_Maabus.Map, 0x48E);
+            Effects.PlaySound(m_Maabus.Location, m_Maabus.Map, 0x48E);
 
             Timer.DelayCall(TimeSpan.FromSeconds(2.5), new TimerCallback(Sleep));
         }
 
         public void Sleep()
         {
-            if (this.m_Maabus == null)
+            if (m_Maabus == null)
                 return;
 
-            Effects.SendLocationParticles(EffectItem.Create(this.m_Maabus.Location, this.m_Maabus.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 0x7E7);
-            Effects.PlaySound(this.m_Maabus.Location, this.m_Maabus.Map, 0x1FE);
+            Effects.SendLocationParticles(EffectItem.Create(m_Maabus.Location, m_Maabus.Map, EffectItem.DefaultDuration), 0x3728, 10, 10, 0x7E7);
+            Effects.PlaySound(m_Maabus.Location, m_Maabus.Map, 0x1FE);
 
-            this.m_Maabus.Delete();
-            this.m_Maabus = null;
+            m_Maabus.Delete();
+            m_Maabus = null;
 
-            foreach (MaabusCoffinComponent c in this.Components)
+            foreach (MaabusCoffinComponent c in Components)
                 c.TurnToFull();
         }
 
@@ -99,10 +99,10 @@ namespace Server.Engines.Quests.Necro
 
             int version = reader.ReadInt();
 
-            this.m_Maabus = reader.ReadMobile() as Maabus;
-            this.m_SpawnLocation = reader.ReadPoint3D();
+            m_Maabus = reader.ReadMobile() as Maabus;
+            m_SpawnLocation = reader.ReadPoint3D();
 
-            this.Sleep();
+            Sleep();
         }
     }
 
@@ -118,8 +118,8 @@ namespace Server.Engines.Quests.Necro
         public MaabusCoffinComponent(int fullItemID, int emptyItemID)
             : base(fullItemID)
         {
-            this.m_FullItemID = fullItemID;
-            this.m_EmptyItemID = emptyItemID;
+            m_FullItemID = fullItemID;
+            m_EmptyItemID = emptyItemID;
         }
 
         public MaabusCoffinComponent(Serial serial)
@@ -132,22 +132,22 @@ namespace Server.Engines.Quests.Necro
         {
             get
             {
-                return this.Addon is MaabusCoffin ? ((MaabusCoffin)this.Addon).SpawnLocation : Point3D.Zero;
+                return Addon is MaabusCoffin ? ((MaabusCoffin)Addon).SpawnLocation : Point3D.Zero;
             }
             set
             {
-                if (this.Addon is MaabusCoffin)
-                    ((MaabusCoffin)this.Addon).SpawnLocation = value;
+                if (Addon is MaabusCoffin)
+                    ((MaabusCoffin)Addon).SpawnLocation = value;
             }
         }
         public void TurnToEmpty()
         {
-            this.ItemID = this.m_EmptyItemID;
+            ItemID = m_EmptyItemID;
         }
 
         public void TurnToFull()
         {
-            this.ItemID = this.m_FullItemID;
+            ItemID = m_FullItemID;
         }
 
         public override void Serialize(GenericWriter writer)
@@ -166,8 +166,8 @@ namespace Server.Engines.Quests.Necro
 
             int version = reader.ReadInt();
 
-            this.m_FullItemID = reader.ReadInt();
-            this.m_EmptyItemID = reader.ReadInt();
+            m_FullItemID = reader.ReadInt();
+            m_EmptyItemID = reader.ReadInt();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Server.Items
         public StuddedMempo()
             : base(0x279D)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public StuddedMempo(Serial serial)

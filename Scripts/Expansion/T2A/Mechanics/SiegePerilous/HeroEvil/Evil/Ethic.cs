@@ -7,7 +7,7 @@ namespace Server.Ethics.Evil
     {
         public EvilEthic()
         {
-            this.m_Definition = new EthicDefinition(
+            m_Definition = new EthicDefinition(
                 0x455,
                 "Evil", "(Evil)",
                 "I am evil incarnate",

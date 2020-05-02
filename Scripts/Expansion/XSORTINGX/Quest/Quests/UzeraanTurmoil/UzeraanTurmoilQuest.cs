@@ -84,7 +84,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                switch (this.From.Profession)
+                switch (From.Profession)
                 {
                     case 1:
                         return 0x15C9; // warrior
@@ -185,10 +185,10 @@ namespace Server.Engines.Quests.Haven
 
         public override void Slice()
         {
-            if (!this.m_HasLeftTheMansion && (this.From.Map != Map.Trammel || this.From.X < 3573 || this.From.X > 3611 || this.From.Y < 2568 || this.From.Y > 2606))
+            if (!m_HasLeftTheMansion && (From.Map != Map.Trammel || From.X < 3573 || From.X > 3611 || From.Y < 2568 || From.Y > 2606))
             {
-                this.m_HasLeftTheMansion = true;
-                this.AddConversation(new RadarConversation());
+                m_HasLeftTheMansion = true;
+                AddConversation(new RadarConversation());
             }
 
             base.Slice();
@@ -198,14 +198,14 @@ namespace Server.Engines.Quests.Haven
         {
             base.Accept();
 
-            this.AddConversation(new AcceptConversation());
+            AddConversation(new AcceptConversation());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_HasLeftTheMansion = reader.ReadBool();
+            m_HasLeftTheMansion = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)

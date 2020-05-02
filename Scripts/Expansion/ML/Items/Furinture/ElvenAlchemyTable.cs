@@ -10,7 +10,7 @@ namespace Server.Items
         public ElvenAlchemyTable()
             : base(0x2DD3)
         {
-            this.Weight = 15.0;
+            Weight = 15.0;
         }
 
         public ElvenAlchemyTable(Serial serial)

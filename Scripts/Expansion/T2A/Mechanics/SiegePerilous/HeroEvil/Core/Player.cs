@@ -19,16 +19,16 @@ namespace Server.Ethics
         private DateTime m_Shield;
         public Player(Ethic ethic, Mobile mobile)
         {
-            this.m_Ethic = ethic;
-            this.m_Mobile = mobile;
+            m_Ethic = ethic;
+            m_Mobile = mobile;
 
-            this.m_Power = 5;
-            this.m_History = 5;
+            m_Power = 5;
+            m_History = 5;
         }
 
         public Player(Ethic ethic, GenericReader reader)
         {
-            this.m_Ethic = ethic;
+            m_Ethic = ethic;
 
             int version = reader.ReadEncodedInt();
 
@@ -36,33 +36,33 @@ namespace Server.Ethics
             {
                 case 0:
                     {
-                        this.m_Mobile = reader.ReadMobile();
+                        m_Mobile = reader.ReadMobile();
 
-                        this.m_Power = reader.ReadEncodedInt();
-                        this.m_History = reader.ReadEncodedInt();
+                        m_Power = reader.ReadEncodedInt();
+                        m_History = reader.ReadEncodedInt();
 
-                        this.m_Steed = reader.ReadMobile();
-                        this.m_Familiar = reader.ReadMobile();
+                        m_Steed = reader.ReadMobile();
+                        m_Familiar = reader.ReadMobile();
 
-                        this.m_Shield = reader.ReadDeltaTime();
+                        m_Shield = reader.ReadDeltaTime();
 
                         break;
                     }
             }
         }
 
-        public Ethic Ethic => this.m_Ethic;
-        public Mobile Mobile => this.m_Mobile;
+        public Ethic Ethic => m_Ethic;
+        public Mobile Mobile => m_Mobile;
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
         public int Power
         {
             get
             {
-                return this.m_Power;
+                return m_Power;
             }
             set
             {
-                this.m_Power = value;
+                m_Power = value;
             }
         }
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
@@ -70,11 +70,11 @@ namespace Server.Ethics
         {
             get
             {
-                return this.m_History;
+                return m_History;
             }
             set
             {
-                this.m_History = value;
+                m_History = value;
             }
         }
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
@@ -82,11 +82,11 @@ namespace Server.Ethics
         {
             get
             {
-                return this.m_Steed;
+                return m_Steed;
             }
             set
             {
-                this.m_Steed = value;
+                m_Steed = value;
             }
         }
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
@@ -94,11 +94,11 @@ namespace Server.Ethics
         {
             get
             {
-                return this.m_Familiar;
+                return m_Familiar;
             }
             set
             {
-                this.m_Familiar = value;
+                m_Familiar = value;
             }
         }
         [CommandProperty(AccessLevel.GameMaster)]
@@ -106,13 +106,13 @@ namespace Server.Ethics
         {
             get
             {
-                if (this.m_Shield == DateTime.MinValue)
+                if (m_Shield == DateTime.MinValue)
                     return false;
 
-                if (DateTime.UtcNow < (this.m_Shield + TimeSpan.FromHours(1.0)))
+                if (DateTime.UtcNow < (m_Shield + TimeSpan.FromHours(1.0)))
                     return true;
 
-                this.FinishShield();
+                FinishShield();
                 return false;
             }
         }
@@ -151,49 +151,49 @@ namespace Server.Ethics
 
         public void BeginShield()
         {
-            this.m_Shield = DateTime.UtcNow;
+            m_Shield = DateTime.UtcNow;
         }
 
         public void FinishShield()
         {
-            this.m_Shield = DateTime.MinValue;
+            m_Shield = DateTime.MinValue;
         }
 
         public void CheckAttach()
         {
-            if (this.m_Ethic.IsEligible(this.m_Mobile))
-                this.Attach();
+            if (m_Ethic.IsEligible(m_Mobile))
+                Attach();
         }
 
         public void Attach()
         {
-            if (this.m_Mobile is PlayerMobile)
-                (this.m_Mobile as PlayerMobile).EthicPlayer = this;
+            if (m_Mobile is PlayerMobile)
+                (m_Mobile as PlayerMobile).EthicPlayer = this;
 
-            this.m_Ethic.Players.Add(this);
+            m_Ethic.Players.Add(this);
         }
 
         public void Detach()
         {
-            if (this.m_Mobile is PlayerMobile)
-                (this.m_Mobile as PlayerMobile).EthicPlayer = null;
+            if (m_Mobile is PlayerMobile)
+                (m_Mobile as PlayerMobile).EthicPlayer = null;
 
-            this.m_Ethic.Players.Remove(this);
+            m_Ethic.Players.Remove(this);
         }
 
         public void Serialize(GenericWriter writer)
         {
             writer.WriteEncodedInt(0); // version
 
-            writer.Write(this.m_Mobile);
+            writer.Write(m_Mobile);
 
-            writer.WriteEncodedInt(this.m_Power);
-            writer.WriteEncodedInt(this.m_History);
+            writer.WriteEncodedInt(m_Power);
+            writer.WriteEncodedInt(m_History);
 
-            writer.Write(this.m_Steed);
-            writer.Write(this.m_Familiar);
+            writer.Write(m_Steed);
+            writer.Write(m_Familiar);
 
-            writer.WriteDeltaTime(this.m_Shield);
+            writer.WriteDeltaTime(m_Shield);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Server.Items
             : base(BeverageType.Milk)
         {
             Hue = 0x3e5;
-            Quantity = this.MaxQuantity;
+            Quantity = MaxQuantity;
             ItemID = (Utility.RandomBool()) ? 0x09F0 : 0x09AD;
         }
 

@@ -8,7 +8,7 @@ namespace Server.Items
         public LeatherGorget()
             : base(0x13C7)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public LeatherGorget(Serial serial)

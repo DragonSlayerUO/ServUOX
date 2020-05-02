@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoNightshade()
             : base(0x18E7)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoNightshade(Serial serial)

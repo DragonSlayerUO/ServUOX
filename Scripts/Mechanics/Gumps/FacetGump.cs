@@ -15,77 +15,77 @@ namespace Server.Gumps
             int gumpY = 0;
             // bool initialState = false;
 
-            this.m_Owner = owner;
+            m_Owner = owner;
 
-            this.Closable = true;
-            this.Disposable = true;
-            this.Dragable = true;
-            this.Resizable = false;
+            Closable = true;
+            Disposable = true;
+            Dragable = true;
+            Resizable = false;
 
-            this.AddPage(0);
+            AddPage(0);
 
             gumpX = 0;
             gumpY = 0;
-            this.AddBackground(gumpX, gumpY, 150, 150, 0xA3C);
+            AddBackground(gumpX, gumpY, 150, 150, 0xA3C);
 
             gumpX = 30;
             gumpY = 10;
-            this.AddLabel(gumpX, gumpY, 965, "Felucca");
+            AddLabel(gumpX, gumpY, 965, "Felucca");
 
             gumpX = 30;
             gumpY = 30;
-            this.AddLabel(gumpX, gumpY, 965, "Trammel");
+            AddLabel(gumpX, gumpY, 965, "Trammel");
 
             gumpX = 30;
             gumpY = 50;
-            this.AddLabel(gumpX, gumpY, 965, "Ilshenar");
+            AddLabel(gumpX, gumpY, 965, "Ilshenar");
 
             gumpX = 30;
             gumpY = 70;
-            this.AddLabel(gumpX, gumpY, 965, "Malas");
+            AddLabel(gumpX, gumpY, 965, "Malas");
 
             gumpX = 30;
             gumpY = 90;
-            this.AddLabel(gumpX, gumpY, 965, "Tokuno");
+            AddLabel(gumpX, gumpY, 965, "Tokuno");
 
             gumpX = 30;
             gumpY = 110;
-            this.AddLabel(gumpX, gumpY, 965, "TerMur");
+            AddLabel(gumpX, gumpY, 965, "TerMur");
 
             gumpX = 10;
             gumpY = 10;
-            this.AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 1, GumpButtonType.Reply, 0);
+            AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 1, GumpButtonType.Reply, 0);
 
             gumpX = 10;
             gumpY = 30;
-            this.AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 2, GumpButtonType.Reply, 0);
+            AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 2, GumpButtonType.Reply, 0);
 
             gumpX = 10;
             gumpY = 50;
-            this.AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 3, GumpButtonType.Reply, 0);
+            AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 3, GumpButtonType.Reply, 0);
 
             gumpX = 10;
             gumpY = 70;
-            this.AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 4, GumpButtonType.Reply, 0);
+            AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 4, GumpButtonType.Reply, 0);
 
             gumpX = 10;
             gumpY = 90;
-            this.AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 5, GumpButtonType.Reply, 0);
+            AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 5, GumpButtonType.Reply, 0);
 
             gumpX = 10;
             gumpY = 110;
-            this.AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 6, GumpButtonType.Reply, 0);
+            AddButton(gumpX, gumpY, 0xA9A, 0xA9A, 6, GumpButtonType.Reply, 0);
         }
 
         public Mobile Owner
         {
             get
             {
-                return this.m_Owner;
+                return m_Owner;
             }
             set
             {
-                this.m_Owner = value;
+                m_Owner = value;
             }
         }
         public override void OnResponse(NetState state, RelayInfo info)

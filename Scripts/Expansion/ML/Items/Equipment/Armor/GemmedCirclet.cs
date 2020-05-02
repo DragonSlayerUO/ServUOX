@@ -9,7 +9,7 @@ namespace Server.Items
         public GemmedCirclet()
             : base(0x2B70)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public GemmedCirclet(Serial serial)

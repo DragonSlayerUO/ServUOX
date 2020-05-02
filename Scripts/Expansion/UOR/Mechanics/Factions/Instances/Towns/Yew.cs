@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public Yew()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     4,
                     0x186D,

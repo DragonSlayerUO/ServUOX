@@ -11,8 +11,8 @@ namespace Server.Mobiles
         public Glassblower()
             : base("the alchemist")
         {
-            this.SetSkill(SkillName.Alchemy, 85.0, 100.0);
-            this.SetSkill(SkillName.TasteID, 85.0, 100.0);
+            SetSkill(SkillName.Alchemy, 85.0, 100.0);
+            SetSkill(SkillName.TasteID, 85.0, 100.0);
         }
 
         public Glassblower(Serial serial)
@@ -21,11 +21,11 @@ namespace Server.Mobiles
         }
 
         public override NpcGuild NpcGuild => NpcGuild.MagesGuild;
-        protected override List<SBInfo> SBInfos => this.m_SBInfos;
+        protected override List<SBInfo> SBInfos => m_SBInfos;
         public override void InitSBInfo()
         {
-            this.m_SBInfos.Add(new SBGlassblower());
-            this.m_SBInfos.Add(new SBAlchemist(this));
+            m_SBInfos.Add(new SBGlassblower());
+            m_SBInfos.Add(new SBAlchemist(this));
         }
 
         public override void Serialize(GenericWriter writer)
@@ -41,8 +41,8 @@ namespace Server.Mobiles
 
             int version = reader.ReadInt();
 
-            if (this.Body == 0x2F2)
-                this.Body = 0x2F6;
+            if (Body == 0x2F2)
+                Body = 0x2F6;
         }
     }
 }

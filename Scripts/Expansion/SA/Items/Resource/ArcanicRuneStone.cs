@@ -14,8 +14,8 @@ namespace Server.Items
         public ArcanicRuneStone(int amount)
             : base(0x573C)
         {
-            this.Stackable = true;
-            this.Amount = amount;
+            Stackable = true;
+            Amount = amount;
         }
 
         public ArcanicRuneStone(Serial serial)

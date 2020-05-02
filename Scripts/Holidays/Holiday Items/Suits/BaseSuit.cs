@@ -8,13 +8,13 @@ namespace Server.Items
         public BaseSuit(AccessLevel level, int hue, int itemID)
             : base(itemID)
         {
-            this.Hue = hue;
-            this.Weight = 1.0;
-            this.Movable = false;
-            this.LootType = LootType.Newbied;
-            this.Layer = Layer.OuterTorso;
+            Hue = hue;
+            Weight = 1.0;
+            Movable = false;
+            LootType = LootType.Newbied;
+            Layer = Layer.OuterTorso;
 
-            this.m_AccessLevel = level;
+            m_AccessLevel = level;
         }
 
         public BaseSuit(Serial serial)
@@ -27,11 +27,11 @@ namespace Server.Items
         {
             get
             {
-                return this.m_AccessLevel;
+                return m_AccessLevel;
             }
             set
             {
-                this.m_AccessLevel = value;
+                m_AccessLevel = value;
             }
         }
         public override void Serialize(GenericWriter writer)
@@ -40,7 +40,7 @@ namespace Server.Items
 
             writer.Write(0); // version
 
-            writer.Write((int)this.m_AccessLevel);
+            writer.Write((int)m_AccessLevel);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -53,7 +53,7 @@ namespace Server.Items
             {
                 case 0:
                     {
-                        this.m_AccessLevel = (AccessLevel)reader.ReadInt();
+                        m_AccessLevel = (AccessLevel)reader.ReadInt();
                         break;
                     }
             }
@@ -61,11 +61,11 @@ namespace Server.Items
 
         public bool Validate()
         {
-            object root = this.RootParent;
+            object root = RootParent;
 
-            if (root is Mobile && ((Mobile)root).AccessLevel < this.m_AccessLevel)
+            if (root is Mobile && ((Mobile)root).AccessLevel < m_AccessLevel)
             {
-                this.Delete();
+                Delete();
                 return false;
             }
 
@@ -74,27 +74,27 @@ namespace Server.Items
 
         public override void OnSingleClick(Mobile from)
         {
-            if (this.Validate())
+            if (Validate())
                 base.OnSingleClick(from);
         }
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.Validate())
+            if (Validate())
                 base.OnDoubleClick(from);
         }
 
         public override bool VerifyMove(Mobile from)
         {
-            return (from.AccessLevel >= this.m_AccessLevel);
+            return (from.AccessLevel >= m_AccessLevel);
         }
 
         public override bool OnEquip(Mobile from)
         {
-            if (from.AccessLevel < this.m_AccessLevel)
+            if (from.AccessLevel < m_AccessLevel)
                 from.SendMessage("You may not wear this.");
 
-            return (from.AccessLevel >= this.m_AccessLevel);
+            return (from.AccessLevel >= m_AccessLevel);
         }
     }
 }

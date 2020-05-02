@@ -10,11 +10,11 @@ namespace Server.Items
         public MoonstoneGate(Point3D loc, Map map, Map targetMap, Mobile caster, int hue)
             : base(loc, targetMap)
         {
-            this.MoveToWorld(loc, map);
-            this.Dispellable = false;
-            this.Hue = hue;
+            MoveToWorld(loc, map);
+            Dispellable = false;
+            Hue = hue;
 
-            this.m_Caster = caster;
+            m_Caster = caster;
 
             new InternalTimer(this).Start();
 
@@ -31,10 +31,10 @@ namespace Server.Items
             if (SpellHelper.RestrictRedTravel && m.Murderer)
                 return;
 
-            Party casterParty = Party.Get(this.m_Caster);
+            Party casterParty = Party.Get(m_Caster);
             Party userParty = Party.Get(m);
 
-            if (m == this.m_Caster || (casterParty != null && userParty == casterParty))
+            if (m == m_Caster || (casterParty != null && userParty == casterParty))
                 base.CheckGate(m, range);
         }
 
@@ -43,10 +43,10 @@ namespace Server.Items
             if (m.Murderer)
                 return;
 
-            Party casterParty = Party.Get(this.m_Caster);
+            Party casterParty = Party.Get(m_Caster);
             Party userParty = Party.Get(m);
 
-            if (m == this.m_Caster || (casterParty != null && userParty == casterParty))
+            if (m == m_Caster || (casterParty != null && userParty == casterParty))
                 base.UseGate(m);
         }
 
@@ -63,7 +63,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            this.Delete();
+            Delete();
         }
 
         private class InternalTimer : Timer
@@ -72,13 +72,13 @@ namespace Server.Items
             public InternalTimer(Item item)
                 : base(TimeSpan.FromSeconds(30.0))
             {
-                this.m_Item = item;
-                this.Priority = TimerPriority.OneSecond;
+                m_Item = item;
+                Priority = TimerPriority.OneSecond;
             }
 
             protected override void OnTick()
             {
-                this.m_Item.Delete();
+                m_Item.Delete();
             }
         }
     }

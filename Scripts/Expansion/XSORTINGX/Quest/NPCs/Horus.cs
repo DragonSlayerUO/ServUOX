@@ -22,26 +22,26 @@ namespace Server.Engines.Quests.Necro
 
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x83F3;
-            this.Body = 0x190;
+            Hue = 0x83F3;
+            Body = 0x190;
 
-            this.Name = "Horus";
+            Name = "Horus";
         }
 
         public override void InitOutfit()
         {
-            this.AddItem(this.SetHue(new PlateLegs(), 0x849));
-            this.AddItem(this.SetHue(new PlateChest(), 0x849));
-            this.AddItem(this.SetHue(new PlateArms(), 0x849));
-            this.AddItem(this.SetHue(new PlateGloves(), 0x849));
-            this.AddItem(this.SetHue(new PlateGorget(), 0x849));
+            AddItem(SetHue(new PlateLegs(), 0x849));
+            AddItem(SetHue(new PlateChest(), 0x849));
+            AddItem(SetHue(new PlateArms(), 0x849));
+            AddItem(SetHue(new PlateGloves(), 0x849));
+            AddItem(SetHue(new PlateGorget(), 0x849));
 
-            this.AddItem(this.SetHue(new Bardiche(), 0x482));
+            AddItem(SetHue(new Bardiche(), 0x482));
 
-            this.AddItem(this.SetHue(new Boots(), 0x001));
-            this.AddItem(this.SetHue(new Cloak(), 0x482));
+            AddItem(SetHue(new Boots(), 0x001));
+            AddItem(SetHue(new Cloak(), 0x482));
 
             Utility.AssignRandomHair(this, false);
             Utility.AssignRandomFacialHair(this, false);
@@ -76,7 +76,7 @@ namespace Server.Engines.Quests.Necro
         {
             base.OnMovement(m, oldLocation);
 
-            if (this.InRange(m.Location, 2) && !this.InRange(oldLocation, 2) && m is PlayerMobile)
+            if (InRange(m.Location, 2) && !InRange(oldLocation, 2) && m is PlayerMobile)
             {
                 PlayerMobile pm = (PlayerMobile)m;
                 QuestSystem qs = pm.Quest;
@@ -179,17 +179,17 @@ namespace Server.Engines.Quests.Necro
             public SpeakPasswordEntry(Horus horus, PlayerMobile from, bool enabled)
                 : base(6193, 3)
             {
-                this.m_Horus = horus;
-                this.m_From = from;
+                m_Horus = horus;
+                m_From = from;
 
                 if (!enabled)
-                    this.Flags |= CMEFlags.Disabled;
+                    Flags |= CMEFlags.Disabled;
             }
 
             public override void OnClick()
             {
-                if (this.m_From.Alive)
-                    this.m_Horus.OnPasswordSpoken(this.m_From);
+                if (m_From.Alive)
+                    m_Horus.OnPasswordSpoken(m_From);
             }
         }
     }

@@ -91,20 +91,20 @@ namespace Server.Commands
         #region Mondain's Legacy
         private Item m_Constructed;
 
-        public Item Constructed => this.m_Constructed;
+        public Item Constructed => m_Constructed;
 
         public int ID
         {
             get
             {
-                for (int i = 0; i < this.m_Params.Length; ++i)
+                for (int i = 0; i < m_Params.Length; ++i)
                 {
-                    if (this.m_Params[i].StartsWith("ID"))
+                    if (m_Params[i].StartsWith("ID"))
                     {
-                        int indexOf = this.m_Params[i].IndexOf('=');
+                        int indexOf = m_Params[i].IndexOf('=');
 
                         if (indexOf >= 0)
-                            return Utility.ToInt32(this.m_Params[i].Substring(++indexOf));
+                            return Utility.ToInt32(m_Params[i].Substring(++indexOf));
                     }
                 }
 
@@ -141,19 +141,19 @@ namespace Server.Commands
                     item = new Static(m_ItemID);
                 }
                 #region Mondain's Legacy
-                else if (this.m_Type == typeof(SecretSwitch))
+                else if (m_Type == typeof(SecretSwitch))
                 {
                     int id = 0;
 
-                    for (int i = 0; i < this.m_Params.Length; ++i)
+                    for (int i = 0; i < m_Params.Length; ++i)
                     {
-                        if (this.m_Params[i].StartsWith("SecretWall"))
+                        if (m_Params[i].StartsWith("SecretWall"))
                         {
-                            int indexOf = this.m_Params[i].IndexOf('=');
+                            int indexOf = m_Params[i].IndexOf('=');
 
                             if (indexOf >= 0)
                             {
-                                id = Utility.ToInt32(this.m_Params[i].Substring(++indexOf));
+                                id = Utility.ToInt32(m_Params[i].Substring(++indexOf));
                                 break;
                             }
                         }
@@ -161,27 +161,27 @@ namespace Server.Commands
 
                     Item wall = Decorate.FindByID(id);
 
-                    item = new SecretSwitch(this.m_ItemID, wall as SecretWall);
+                    item = new SecretSwitch(m_ItemID, wall as SecretWall);
                 }
-                else if (this.m_Type == typeof(SecretWall))
+                else if (m_Type == typeof(SecretWall))
                 {
-                    SecretWall wall = new SecretWall(this.m_ItemID);
+                    SecretWall wall = new SecretWall(m_ItemID);
 
-                    for (int i = 0; i < this.m_Params.Length; ++i)
+                    for (int i = 0; i < m_Params.Length; ++i)
                     {
-                        if (this.m_Params[i].StartsWith("MapDest"))
+                        if (m_Params[i].StartsWith("MapDest"))
                         {
-                            int indexOf = this.m_Params[i].IndexOf('=');
+                            int indexOf = m_Params[i].IndexOf('=');
 
                             if (indexOf >= 0)
-                                wall.MapDest = Map.Parse(this.m_Params[i].Substring(++indexOf));
+                                wall.MapDest = Map.Parse(m_Params[i].Substring(++indexOf));
                         }
-                        else if (this.m_Params[i].StartsWith("PointDest"))
+                        else if (m_Params[i].StartsWith("PointDest"))
                         {
-                            int indexOf = this.m_Params[i].IndexOf('=');
+                            int indexOf = m_Params[i].IndexOf('=');
 
                             if (indexOf >= 0)
-                                wall.PointDest = Point3D.Parse(this.m_Params[i].Substring(++indexOf));
+                                wall.PointDest = Point3D.Parse(m_Params[i].Substring(++indexOf));
                         }
                     }
 
@@ -673,12 +673,12 @@ namespace Server.Commands
                         if (indexOf >= 0)
                             tp.Required = Utility.ToDouble(m_Params[i].Substring(++indexOf));
                     }
-                    else if (this.m_Params[i].StartsWith("MessageString"))
+                    else if (m_Params[i].StartsWith("MessageString"))
                     {
-                        int indexOf = this.m_Params[i].IndexOf('=');
+                        int indexOf = m_Params[i].IndexOf('=');
 
                         if (indexOf >= 0)
-                            tp.MessageString = this.m_Params[i].Substring(++indexOf);
+                            tp.MessageString = m_Params[i].Substring(++indexOf);
                     }
                     else if (m_Params[i].StartsWith("MessageNumber"))
                     {
@@ -706,7 +706,7 @@ namespace Server.Commands
                         int indexOf = m_Params[i].IndexOf('=');
 
                         if (indexOf >= 0)
-                            tp.Creatures = Utility.ToBoolean(this.m_Params[i].Substring(++indexOf));
+                            tp.Creatures = Utility.ToBoolean(m_Params[i].Substring(++indexOf));
                     }
                     else if (m_Params[i].StartsWith("SourceEffect"))
                     {
@@ -729,7 +729,7 @@ namespace Server.Commands
                         if (indexOf >= 0)
                             tp.SoundID = Utility.ToInt32(m_Params[i].Substring(++indexOf));
                     }
-                    else if (this.m_Params[i].StartsWith("Delay"))
+                    else if (m_Params[i].StartsWith("Delay"))
                     {
                         int indexOf = m_Params[i].IndexOf('=');
 
@@ -1088,10 +1088,10 @@ namespace Server.Commands
                 for (int j = 0; j < maps.Length; ++j)
                 {
                     if (item == null)
-                        item = this.Construct();
+                        item = Construct();
 
                     #region Mondain's Legacy
-                    this.m_Constructed = item;
+                    m_Constructed = item;
                     #endregion
 
                     if (item == null)

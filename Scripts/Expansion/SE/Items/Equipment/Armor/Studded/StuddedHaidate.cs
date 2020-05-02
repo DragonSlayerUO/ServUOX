@@ -8,7 +8,7 @@ namespace Server.Items
         public StuddedHaidate()
             : base(0x278B)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public StuddedHaidate(Serial serial)

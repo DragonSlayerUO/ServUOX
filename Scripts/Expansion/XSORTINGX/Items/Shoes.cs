@@ -63,7 +63,7 @@ namespace Server.Items
         public NinjaTabi(int hue)
             : base(0x2797, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public NinjaTabi(Serial serial)
@@ -100,7 +100,7 @@ namespace Server.Items
         public SamuraiTabi(int hue)
             : base(0x2796, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public SamuraiTabi(Serial serial)
@@ -137,7 +137,7 @@ namespace Server.Items
         public Waraji(int hue)
             : base(0x2796, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public Waraji(Serial serial)
@@ -178,7 +178,7 @@ namespace Server.Items
         public ElvenBoots(int hue)
             : base(0x2FC4, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public ElvenBoots(Serial serial)

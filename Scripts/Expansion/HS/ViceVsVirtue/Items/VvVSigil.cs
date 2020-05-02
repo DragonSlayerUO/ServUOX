@@ -114,7 +114,7 @@ namespace Server.Engines.VvV
 
         public virtual bool CheckPassiveDetect(Mobile m)
         {
-            if (m.InRange(this.Location, 4))
+            if (m.InRange(Location, 4))
             {
                 int skill = (int)m.Skills[SkillName.DetectHidden].Value;
 

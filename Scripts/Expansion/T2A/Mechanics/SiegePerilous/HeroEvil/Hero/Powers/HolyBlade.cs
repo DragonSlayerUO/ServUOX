@@ -6,7 +6,7 @@ namespace Server.Ethics.Hero
     {
         public HolyBlade()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 10,
                 "Holy Blade",
                 "Erstok Reyam",

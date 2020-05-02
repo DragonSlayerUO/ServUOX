@@ -10,7 +10,7 @@ namespace Server.Items
         public PlateHiroSode()
             : base(0x2780)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public PlateHiroSode(Serial serial)

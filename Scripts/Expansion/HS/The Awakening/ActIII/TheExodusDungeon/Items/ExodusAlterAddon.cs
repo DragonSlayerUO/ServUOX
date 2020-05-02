@@ -7,10 +7,10 @@ namespace Server.Items
         [Constructable]
         public ExodusAlterAddon()
         {
-            this.AddComponent(0x3F9, 0, 1, 5);
-            this.AddComponent(0x3FA, 1, 0, 5);
-            this.AddComponent(0x3F7, 0, 0, 5);
-            this.AddComponent(0x3F8, 1, 1, 5);
+            AddComponent(0x3F9, 0, 1, 5);
+            AddComponent(0x3FA, 1, 0, 5);
+            AddComponent(0x3F7, 0, 0, 5);
+            AddComponent(0x3F8, 1, 1, 5);
         }
 
         public void AddComponent(int id, int x, int y, int z)
@@ -18,7 +18,7 @@ namespace Server.Items
             AddonComponent ac = new AddonComponent(id);
 
             ac.Hue = 2702;
-            this.AddComponent(ac, x, y, z);
+            AddComponent(ac, x, y, z);
         }
 
         public ExodusAlterAddon(Serial serial) : base(serial)

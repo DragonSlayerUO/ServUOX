@@ -133,7 +133,7 @@ namespace Server.Items
 
         public override void OnSingleClick(Mobile from)
         {
-            this.LabelTo(from, "Fropoz's Journal");
+            LabelTo(from, "Fropoz's Journal");
         }
 
         public override void Serialize(GenericWriter writer)

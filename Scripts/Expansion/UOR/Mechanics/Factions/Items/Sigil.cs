@@ -38,11 +38,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_LastStolen;
+                return m_LastStolen;
             }
             set
             {
-                this.m_LastStolen = value;
+                m_LastStolen = value;
             }
         }
 
@@ -51,11 +51,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_GraceStart;
+                return m_GraceStart;
             }
             set
             {
-                this.m_GraceStart = value;
+                m_GraceStart = value;
             }
         }
 
@@ -64,11 +64,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_CorruptionStart;
+                return m_CorruptionStart;
             }
             set
             {
-                this.m_CorruptionStart = value;
+                m_CorruptionStart = value;
             }
         }
 
@@ -77,11 +77,11 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_PurificationStart;
+                return m_PurificationStart;
             }
             set
             {
-                this.m_PurificationStart = value;
+                m_PurificationStart = value;
             }
         }
 
@@ -90,12 +90,12 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Town;
+                return m_Town;
             }
             set
             {
-                this.m_Town = value;
-                this.Update();
+                m_Town = value;
+                Update();
             }
         }
 
@@ -104,12 +104,12 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Corrupted;
+                return m_Corrupted;
             }
             set
             {
-                this.m_Corrupted = value;
-                this.Update();
+                m_Corrupted = value;
+                Update();
             }
         }
 
@@ -118,12 +118,12 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Corrupting;
+                return m_Corrupting;
             }
             set
             {
-                this.m_Corrupting = value;
-                this.Update();
+                m_Corrupting = value;
+                Update();
             }
         }
 
@@ -132,52 +132,52 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_LastMonolith;
+                return m_LastMonolith;
             }
             set
             {
-                this.m_LastMonolith = value;
+                m_LastMonolith = value;
             }
         }
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsBeingCorrupted => (this.m_LastMonolith is StrongholdMonolith && this.m_LastMonolith.Faction == this.m_Corrupting && this.m_Corrupting != null);
+        public bool IsBeingCorrupted => (m_LastMonolith is StrongholdMonolith && m_LastMonolith.Faction == m_Corrupting && m_Corrupting != null);
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsCorrupted => (this.m_Corrupted != null);
+        public bool IsCorrupted => (m_Corrupted != null);
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsPurifying => (this.m_PurificationStart != DateTime.MinValue);
+        public bool IsPurifying => (m_PurificationStart != DateTime.MinValue);
 
         [CommandProperty(AccessLevel.Counselor)]
-        public bool IsCorrupting => (this.m_Corrupting != null && this.m_Corrupting != this.m_Corrupted);
+        public bool IsCorrupting => (m_Corrupting != null && m_Corrupting != m_Corrupted);
 
         public void Update()
         {
-            this.ItemID = (this.m_Town == null ? 0x1869 : this.m_Town.Definition.SigilID);
+            ItemID = (m_Town == null ? 0x1869 : m_Town.Definition.SigilID);
 
-            if (this.m_Town == null)
-                this.AssignName(null);
-            else if (this.IsCorrupted || this.IsPurifying)
-                this.AssignName(this.m_Town.Definition.CorruptedSigilName);
+            if (m_Town == null)
+                AssignName(null);
+            else if (IsCorrupted || IsPurifying)
+                AssignName(m_Town.Definition.CorruptedSigilName);
             else
-                this.AssignName(this.m_Town.Definition.SigilName);
+                AssignName(m_Town.Definition.SigilName);
 
-            this.InvalidateProperties();
+            InvalidateProperties();
         }
 
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
 
-            if (this.IsCorrupted)
-                TextDefinition.AddTo(list, this.m_Corrupted.Definition.SigilControl);
+            if (IsCorrupted)
+                TextDefinition.AddTo(list, m_Corrupted.Definition.SigilControl);
             else
                 list.Add(1042256); // This sigil is not corrupted.
 
-            if (this.IsCorrupting)
+            if (IsCorrupting)
                 list.Add(1042257); // This sigil is in the process of being corrupted.
-            else if (this.IsPurifying)
+            else if (IsPurifying)
                 list.Add(1042258); // This sigil has recently been corrupted, and is undergoing purification.
             else
                 list.Add(1042259); // This sigil is not in the process of being corrupted.
@@ -187,24 +187,24 @@ namespace Server.Factions
         {
             base.OnSingleClick(from);
 
-            if (this.IsCorrupted)
+            if (IsCorrupted)
             {
-                if (this.m_Corrupted.Definition.SigilControl.Number > 0)
-                    this.LabelTo(from, this.m_Corrupted.Definition.SigilControl.Number);
-                else if (this.m_Corrupted.Definition.SigilControl.String != null)
-                    this.LabelTo(from, this.m_Corrupted.Definition.SigilControl.String);
+                if (m_Corrupted.Definition.SigilControl.Number > 0)
+                    LabelTo(from, m_Corrupted.Definition.SigilControl.Number);
+                else if (m_Corrupted.Definition.SigilControl.String != null)
+                    LabelTo(from, m_Corrupted.Definition.SigilControl.String);
             }
             else
             {
-                this.LabelTo(from, 1042256); // This sigil is not corrupted.
+                LabelTo(from, 1042256); // This sigil is not corrupted.
             }
 
-            if (this.IsCorrupting)
-                this.LabelTo(from, 1042257); // This sigil is in the process of being corrupted.
-            else if (this.IsPurifying)
-                this.LabelTo(from, 1042258); // This sigil has been recently corrupted, and is undergoing purification.
+            if (IsCorrupting)
+                LabelTo(from, 1042257); // This sigil is in the process of being corrupted.
+            else if (IsPurifying)
+                LabelTo(from, 1042258); // This sigil has been recently corrupted, and is undergoing purification.
             else
-                this.LabelTo(from, 1042259); // This sigil is not in the process of being corrupted.
+                LabelTo(from, 1042259); // This sigil is not in the process of being corrupted.
         }
 
         public override bool CheckLift(Mobile from, Item item, ref LRReason reject)
@@ -228,7 +228,7 @@ namespace Server.Factions
         {
             base.OnAdded(parent);
 
-            Mobile mob = this.FindOwner(parent);
+            Mobile mob = FindOwner(parent);
 
             if (mob != null)
                 mob.SolidHueOverride = OwnershipHue;
@@ -238,7 +238,7 @@ namespace Server.Factions
         {
             base.OnRemoved(parent);
 
-            Mobile mob = this.FindOwner(parent);
+            Mobile mob = FindOwner(parent);
 
             if (mob != null)
                 mob.SolidHueOverride = -1;
@@ -247,15 +247,15 @@ namespace Server.Factions
         public Sigil(Town town)
             : base(0x1869)
         {
-            this.Movable = false;
-            this.Town = town;
+            Movable = false;
+            Town = town;
 
             m_Sigils.Add(this);
         }
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.IsChildOf(from.Backpack))
+            if (IsChildOf(from.Backpack))
             {
                 from.BeginTarget(1, false, Targeting.TargetFlags.None, new TargetCallback(Sigil_OnTarget));
                 from.SendLocalizedMessage(1042251); // Click on a sigil monolith or player
@@ -277,14 +277,14 @@ namespace Server.Factions
 
         private void BeginCorrupting(Faction faction)
         {
-            this.m_Corrupting = faction;
-            this.m_CorruptionStart = DateTime.UtcNow;
+            m_Corrupting = faction;
+            m_CorruptionStart = DateTime.UtcNow;
         }
 
         private void ClearCorrupting()
         {
-            this.m_Corrupting = null;
-            this.m_CorruptionStart = DateTime.MinValue;
+            m_Corrupting = null;
+            m_CorruptionStart = DateTime.MinValue;
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -292,10 +292,10 @@ namespace Server.Factions
         {
             get
             {
-                if (!this.IsBeingCorrupted)
+                if (!IsBeingCorrupted)
                     return TimeSpan.Zero;
 
-                TimeSpan ts = (this.m_CorruptionStart + CorruptionPeriod) - DateTime.UtcNow;
+                TimeSpan ts = (m_CorruptionStart + CorruptionPeriod) - DateTime.UtcNow;
 
                 if (ts < TimeSpan.Zero)
                     ts = TimeSpan.Zero;
@@ -306,7 +306,7 @@ namespace Server.Factions
 
         private void Sigil_OnTarget(Mobile from, object obj)
         {
-            if (this.Deleted || !this.IsChildOf(from.Backpack))
+            if (Deleted || !IsChildOf(from.Backpack))
                 return;
 
             #region Give To Mobile
@@ -350,39 +350,39 @@ namespace Server.Factions
 
                     if (m.Faction == null || m.Faction != Faction.Find(from))
                         from.SendLocalizedMessage(1042246); // You can't place that on an enemy monolith
-                    else if (m.Town == null || m.Town != this.m_Town)
+                    else if (m.Town == null || m.Town != m_Town)
                         from.SendLocalizedMessage(1042247); // That is not the correct faction monolith
                     else
                     {
                         m.Sigil = this;
 
                         Faction newController = m.Faction;
-                        Faction oldController = this.m_Corrupting;
+                        Faction oldController = m_Corrupting;
 
                         if (oldController == null)
                         {
-                            if (this.m_Corrupted != newController)
-                                this.BeginCorrupting(newController);
+                            if (m_Corrupted != newController)
+                                BeginCorrupting(newController);
                         }
-                        else if (this.m_GraceStart > DateTime.MinValue && (this.m_GraceStart + CorruptionGrace) < DateTime.UtcNow)
+                        else if (m_GraceStart > DateTime.MinValue && (m_GraceStart + CorruptionGrace) < DateTime.UtcNow)
                         {
-                            if (this.m_Corrupted != newController)
-                                this.BeginCorrupting(newController); // grace time over, reset period
+                            if (m_Corrupted != newController)
+                                BeginCorrupting(newController); // grace time over, reset period
                             else
-                                this.ClearCorrupting();
+                                ClearCorrupting();
 
-                            this.m_GraceStart = DateTime.MinValue;
+                            m_GraceStart = DateTime.MinValue;
                         }
                         else if (newController == oldController)
                         {
-                            this.m_GraceStart = DateTime.MinValue; // returned within grace period
+                            m_GraceStart = DateTime.MinValue; // returned within grace period
                         }
-                        else if (this.m_GraceStart == DateTime.MinValue)
+                        else if (m_GraceStart == DateTime.MinValue)
                         {
-                            this.m_GraceStart = DateTime.UtcNow;
+                            m_GraceStart = DateTime.UtcNow;
                         }
 
-                        this.m_PurificationStart = DateTime.MinValue;
+                        m_PurificationStart = DateTime.MinValue;
                     }
                 }
                 #endregion
@@ -391,20 +391,20 @@ namespace Server.Factions
                 {
                     TownMonolith m = (TownMonolith)obj;
 
-                    if (m.Town == null || m.Town != this.m_Town)
+                    if (m.Town == null || m.Town != m_Town)
                         from.SendLocalizedMessage(1042245); // This is not the correct town sigil monolith
-                    else if (this.m_Corrupted == null || this.m_Corrupted != Faction.Find(from))
+                    else if (m_Corrupted == null || m_Corrupted != Faction.Find(from))
                         from.SendLocalizedMessage(1042244); // Your faction did not corrupt this sigil.  Take it to your stronghold.
                     else
                     {
                         m.Sigil = this;
 
-                        this.m_Corrupting = null;
-                        this.m_PurificationStart = DateTime.UtcNow;
-                        this.m_CorruptionStart = DateTime.MinValue;
+                        m_Corrupting = null;
+                        m_PurificationStart = DateTime.UtcNow;
+                        m_CorruptionStart = DateTime.MinValue;
 
-                        this.m_Town.Capture(this.m_Corrupted);
-                        this.m_Corrupted = null;
+                        m_Town.Capture(m_Corrupted);
+                        m_Corrupted = null;
                     }
                 }
                 #endregion
@@ -414,7 +414,7 @@ namespace Server.Factions
                 from.SendLocalizedMessage(1005224);	//	You can't use the sigil on that 
             }
 
-            this.Update();
+            Update();
         }
 
         public Sigil(Serial serial)
@@ -429,16 +429,16 @@ namespace Server.Factions
 
             writer.Write(0); // version
 
-            Town.WriteReference(writer, this.m_Town);
-            Faction.WriteReference(writer, this.m_Corrupted);
-            Faction.WriteReference(writer, this.m_Corrupting);
+            Town.WriteReference(writer, m_Town);
+            Faction.WriteReference(writer, m_Corrupted);
+            Faction.WriteReference(writer, m_Corrupting);
 
             writer.Write(m_LastMonolith);
 
-            writer.Write(this.m_LastStolen);
-            writer.Write(this.m_GraceStart);
-            writer.Write(this.m_CorruptionStart);
-            writer.Write(this.m_PurificationStart);
+            writer.Write(m_LastStolen);
+            writer.Write(m_GraceStart);
+            writer.Write(m_CorruptionStart);
+            writer.Write(m_PurificationStart);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -451,20 +451,20 @@ namespace Server.Factions
             {
                 case 0:
                     {
-                        this.m_Town = Town.ReadReference(reader);
-                        this.m_Corrupted = Faction.ReadReference(reader);
-                        this.m_Corrupting = Faction.ReadReference(reader);
+                        m_Town = Town.ReadReference(reader);
+                        m_Corrupted = Faction.ReadReference(reader);
+                        m_Corrupting = Faction.ReadReference(reader);
 
-                        this.m_LastMonolith = reader.ReadItem() as BaseMonolith;
+                        m_LastMonolith = reader.ReadItem() as BaseMonolith;
 
-                        this.m_LastStolen = reader.ReadDateTime();
-                        this.m_GraceStart = reader.ReadDateTime();
-                        this.m_CorruptionStart = reader.ReadDateTime();
-                        this.m_PurificationStart = reader.ReadDateTime();
+                        m_LastStolen = reader.ReadDateTime();
+                        m_GraceStart = reader.ReadDateTime();
+                        m_CorruptionStart = reader.ReadDateTime();
+                        m_PurificationStart = reader.ReadDateTime();
 
-                        this.Update();
+                        Update();
 
-                        Mobile mob = this.RootParent as Mobile;
+                        Mobile mob = RootParent as Mobile;
 
                         if (mob != null)
                             mob.SolidHueOverride = OwnershipHue;
@@ -476,10 +476,10 @@ namespace Server.Factions
 
         public bool ReturnHome()
         {
-            BaseMonolith monolith = this.m_LastMonolith;
+            BaseMonolith monolith = m_LastMonolith;
 
-            if (monolith == null && this.m_Town != null)
-                monolith = this.m_Town.Monolith;
+            if (monolith == null && m_Town != null)
+                monolith = m_Town.Monolith;
 
             if (monolith != null && !monolith.Deleted)
                 monolith.Sigil = this;
@@ -491,7 +491,7 @@ namespace Server.Factions
         {
             base.OnParentDeleted(parent);
 
-            this.ReturnHome();
+            ReturnHome();
         }
 
         public override void OnAfterDelete()
@@ -503,7 +503,7 @@ namespace Server.Factions
 
         public override void Delete()
         {
-            if (this.ReturnHome())
+            if (ReturnHome())
                 return;
 
             base.Delete();

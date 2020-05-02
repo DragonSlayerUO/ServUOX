@@ -33,7 +33,7 @@ namespace Server.Spells.SkillMasteries
 
         public override bool CheckCast()
         {
-            HeightenedSensesSpell spell = GetSpell(Caster, this.GetType()) as HeightenedSensesSpell;
+            HeightenedSensesSpell spell = GetSpell(Caster, GetType()) as HeightenedSensesSpell;
 
             if (spell != null)
             {

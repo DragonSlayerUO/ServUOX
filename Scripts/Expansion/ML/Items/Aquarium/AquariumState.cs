@@ -36,17 +36,17 @@ namespace Server.Items
         {
             get
             {
-                return this.m_State;
+                return m_State;
             }
             set
             {
-                this.m_State = value;
+                m_State = value;
 
-                if (this.m_State < 0)
-                    this.m_State = 0;
+                if (m_State < 0)
+                    m_State = 0;
 
-                if (this.m_State > 4)
-                    this.m_State = 4;
+                if (m_State > 4)
+                    m_State = 4;
             }
         }
         [CommandProperty(AccessLevel.GameMaster)]
@@ -54,11 +54,11 @@ namespace Server.Items
         {
             get
             {
-                return this.m_Maintain;
+                return m_Maintain;
             }
             set
             {
-                this.m_Maintain = value;
+                m_Maintain = value;
             }
         }
         [CommandProperty(AccessLevel.GameMaster)]
@@ -66,11 +66,11 @@ namespace Server.Items
         {
             get
             {
-                return this.m_Improve;
+                return m_Improve;
             }
             set
             {
-                this.m_Improve = value;
+                m_Improve = value;
             }
         }
         [CommandProperty(AccessLevel.GameMaster)]
@@ -78,11 +78,11 @@ namespace Server.Items
         {
             get
             {
-                return this.m_Added;
+                return m_Added;
             }
             set
             {
-                this.m_Added = value;
+                m_Added = value;
             }
         }
         public override string ToString()
@@ -94,20 +94,20 @@ namespace Server.Items
         {
             writer.Write(0); // version
 
-            writer.Write(this.m_State);
-            writer.Write(this.m_Maintain);
-            writer.Write(this.m_Improve);
-            writer.Write(this.m_Added);
+            writer.Write(m_State);
+            writer.Write(m_Maintain);
+            writer.Write(m_Improve);
+            writer.Write(m_Added);
         }
 
         public virtual void Deserialize(GenericReader reader)
         {
             int version = reader.ReadInt();
 
-            this.m_State = reader.ReadInt();
-            this.m_Maintain = reader.ReadInt();
-            this.m_Improve = reader.ReadInt();
-            this.m_Added = reader.ReadInt();
+            m_State = reader.ReadInt();
+            m_Maintain = reader.ReadInt();
+            m_Improve = reader.ReadInt();
+            m_Added = reader.ReadInt();
         }
     }
 }

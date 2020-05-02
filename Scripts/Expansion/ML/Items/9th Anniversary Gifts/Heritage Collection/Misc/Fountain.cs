@@ -37,7 +37,7 @@ namespace Server.Items
         public FountainDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public FountainDeed(Serial serial)

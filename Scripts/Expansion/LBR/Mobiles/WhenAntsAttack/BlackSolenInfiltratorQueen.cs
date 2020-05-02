@@ -77,7 +77,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich);
+            AddLoot(LootPack.Rich);
         }
 
         public override bool IsEnemy(Mobile m)

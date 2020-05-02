@@ -10,7 +10,7 @@ namespace Server.Items
         public LeatherNinjaJacket()
             : base(0x2793)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public LeatherNinjaJacket(Serial serial)

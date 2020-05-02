@@ -10,7 +10,7 @@ namespace Server.Items
         public GargishAxe()
             : base(0x48B2)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public GargishAxe(Serial serial)

@@ -37,7 +37,7 @@ namespace Server.Spells.SkillMasteries
 
         public override void OnCast()
         {
-            BardSpell spell = SkillMasterySpell.GetSpell(Caster, this.GetType()) as BardSpell;
+            BardSpell spell = SkillMasterySpell.GetSpell(Caster, GetType()) as BardSpell;
 
             if (spell != null)
             {
@@ -64,7 +64,7 @@ namespace Server.Spells.SkillMasteries
             {
                 // TODO: Message?
             }
-            else if (BardSpell.HasHarmfulEffects(m, this.GetType()))
+            else if (BardSpell.HasHarmfulEffects(m, GetType()))
             {
                 Caster.SendLocalizedMessage(1115772); //Your target is already under the effect of this spellsong.
             }

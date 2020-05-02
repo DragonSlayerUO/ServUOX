@@ -21,31 +21,31 @@ namespace Server.Engines.Quests.Ninja
         public override int TalkNumber => -1;
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x83FE;
+            Hue = 0x83FE;
 
-            this.Female = false;
-            this.Body = 0x190;
-            this.Name = "Daimyo Emino";
+            Female = false;
+            Body = 0x190;
+            Name = "Daimyo Emino";
         }
 
         public override void InitOutfit()
         {
-            this.HairItemID = 0x203B;
-            this.HairHue = 0x901;
+            HairItemID = 0x203B;
+            HairHue = 0x901;
 
-            this.AddItem(new MaleKimono());
-            this.AddItem(new SamuraiTabi());
-            this.AddItem(new Bandana());
+            AddItem(new MaleKimono());
+            AddItem(new SamuraiTabi());
+            AddItem(new Bandana());
 
-            this.AddItem(new PlateHaidate());
-            this.AddItem(new PlateDo());
-            this.AddItem(new PlateHiroSode());
+            AddItem(new PlateHaidate());
+            AddItem(new PlateDo());
+            AddItem(new PlateHiroSode());
 
             Nunchaku nunchaku = new Nunchaku();
             nunchaku.Movable = false;
-            this.AddItem(nunchaku);
+            AddItem(nunchaku);
         }
 
         public override int GetAutoTalkRange(PlayerMobile pm)
@@ -191,7 +191,7 @@ namespace Server.Engines.Quests.Ninja
         {
             base.OnMovement(m, oldLocation);
 
-            if (!m.Frozen && !m.Alive && this.InRange(m, 4) && !this.InRange(oldLocation, 4) && this.InLOS(m))
+            if (!m.Frozen && !m.Alive && InRange(m, 4) && !InRange(oldLocation, 4) && InLOS(m))
             {
                 if (m.Map == null || !m.Map.CanFit(m.Location, 16, false, false))
                 {
@@ -199,7 +199,7 @@ namespace Server.Engines.Quests.Ninja
                 }
                 else
                 {
-                    this.Direction = this.GetDirectionTo(m);
+                    Direction = GetDirectionTo(m);
 
                     m.PlaySound(0x214);
                     m.FixedEffect(0x376A, 10, 16);

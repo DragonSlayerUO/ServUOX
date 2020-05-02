@@ -9,7 +9,7 @@ namespace Server.Items
         public Bokuto()
             : base(0x27A8)
         {
-            this.Weight = 7.0;
+            Weight = 7.0;
         }
 
         public Bokuto(Serial serial)

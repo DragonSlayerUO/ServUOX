@@ -94,7 +94,7 @@ namespace Server.Items
             toHeal = Math.Min(toHeal, diff);
 
             pm.Hits += toHeal;
-            this.Consume();
+            Consume();
 
             if (!SeedUsageList.ContainsKey(pm))
             {

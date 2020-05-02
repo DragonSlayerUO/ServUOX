@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoHorseDung()
             : base(0xF3B)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoHorseDung(Serial serial)

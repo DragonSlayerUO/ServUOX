@@ -37,8 +37,8 @@ namespace Server.Engines.ShameRevamped
 
         public void OnTrollKilled()
         {
-            this.Z -= 50;
-            this.Visible = false;
+            Z -= 50;
+            Visible = false;
 
             Timer.DelayCall(TimeSpan.FromMinutes(2), Reset);
 
@@ -147,7 +147,7 @@ namespace Server.Engines.ShameRevamped
             if (Troll != null)
                 Troll.Wall = this;
 
-            if (this.Location != StartSpot || Troll == null || Troll.Deleted || !Troll.Alive)
+            if (Location != StartSpot || Troll == null || Troll.Deleted || !Troll.Alive)
                 Reset();
 
             if (version == 2)

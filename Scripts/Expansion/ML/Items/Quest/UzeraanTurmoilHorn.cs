@@ -8,8 +8,8 @@ namespace Server.Engines.Quests.Haven
         [Constructable]
         public UzeraanTurmoilHorn()
         {
-            this.DestLoc = new Point3D(3597, 2582, 0);
-            this.DestMap = Map.Trammel;
+            DestLoc = new Point3D(3597, 2582, 0);
+            DestMap = Map.Trammel;
         }
 
         public UzeraanTurmoilHorn(Serial serial)

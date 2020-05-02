@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public Vesper()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     5,
                     0x186E,

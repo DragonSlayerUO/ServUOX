@@ -24,9 +24,9 @@ namespace Server.Items
         [Constructable]
         public BestialLegs() : base()
         {
-            this.Hue = 2010;
-            this.Weight = 4;
-            this.StrRequirement = 20;
+            Hue = 2010;
+            Weight = 4;
+            StrRequirement = 20;
         }
 
         public BestialLegs(Serial serial) : base(serial)
@@ -64,8 +64,8 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            if (this.Hue != 2010)
-                this.Hue = 2010;
+            if (Hue != 2010)
+                Hue = 2010;
         }
     }
 }

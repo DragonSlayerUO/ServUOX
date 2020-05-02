@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public Minoc()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     2,
                     0x186B,

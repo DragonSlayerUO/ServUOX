@@ -13,22 +13,22 @@ namespace Server.Gumps
 
         public override void OnResponse(NetState state, RelayInfo info)
         {
-            if (GuildGump.BadMember(this.m_Mobile, this.m_Guild))
+            if (GuildGump.BadMember(m_Mobile, m_Guild))
                 return;
 
             if (info.ButtonID == 1)
             {
-                GuildGump.EnsureClosed(this.m_Mobile);
-                this.m_Mobile.SendGump(new GuildGump(this.m_Mobile, this.m_Guild));
+                GuildGump.EnsureClosed(m_Mobile);
+                m_Mobile.SendGump(new GuildGump(m_Mobile, m_Guild));
             }
         }
 
         protected override void Design()
         {
-            this.AddHtmlLocalized(20, 10, 500, 35, 1013030, false, false); // <center> Candidates </center>
+            AddHtmlLocalized(20, 10, 500, 35, 1013030, false, false); // <center> Candidates </center>
 
-            this.AddButton(20, 400, 4005, 4007, 1, GumpButtonType.Reply, 0);
-            this.AddHtmlLocalized(55, 400, 300, 35, 1011120, false, false); // Return to the main menu.
+            AddButton(20, 400, 4005, 4007, 1, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(55, 400, 300, 35, 1011120, false, false); // Return to the main menu.
         }
     }
 }

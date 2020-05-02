@@ -175,12 +175,12 @@ namespace Server.Items
 
                 var tele = new InternalTeleporter(this, _Destination, _DestinationMap);
 
-                int x = this.X;
-                int y = this.Y;
-                int z = this.Z;
+                int x = X;
+                int y = Y;
+                int z = Z;
 
                 Movement.Movement.Offset(offset, ref x, ref y);
-                tele.MoveToWorld(new Point3D(x, y, z), this.Map);
+                tele.MoveToWorld(new Point3D(x, y, z), Map);
 
                 Teleporters.Add(tele);
             }
@@ -302,7 +302,7 @@ namespace Server.Items
                 return true;
             }
 
-            public override bool HandlesOnMovement => Master != null && Utility.InRange(Master.Location, Location, 1) && this.Map == Master.Map;
+            public override bool HandlesOnMovement => Master != null && Utility.InRange(Master.Location, Location, 1) && Map == Master.Map;
 
             public override void OnMovement(Mobile m, Point3D oldLocation)
             {

@@ -7,7 +7,7 @@ namespace Server.Items
         [Constructable]
         public HeavyOrnateAxe()
         {
-            this.Attributes.WeaponDamage = 8;
+            Attributes.WeaponDamage = 8;
         }
 
         public HeavyOrnateAxe(Serial serial)

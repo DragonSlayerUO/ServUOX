@@ -53,7 +53,7 @@ namespace Server.Items
         {
             get
             {
-                switch (this.PotionEffect)
+                switch (PotionEffect)
                 {
                     default:
                     case PotionEffect.Barrab: return 1156724;
@@ -96,7 +96,7 @@ namespace Server.Items
 
         public virtual bool CanDoEffects(Mobile m)
         {
-            if (IsUnderEffects(m, this.PotionEffect))
+            if (IsUnderEffects(m, PotionEffect))
             {
                 m.SendLocalizedMessage(502173); // You are already under a similar effect.
                 return false;
@@ -126,7 +126,7 @@ namespace Server.Items
 
         public void RemoveContext(Mobile m)
         {
-            EodonPotionContext context = GetContext(m, this.PotionEffect);
+            EodonPotionContext context = GetContext(m, PotionEffect);
 
             if (context != null)
                 RemoveContext(m, context);
@@ -134,7 +134,7 @@ namespace Server.Items
 
         public virtual void AddBuff(Mobile m)
         {
-            switch (this.PotionEffect)
+            switch (PotionEffect)
             {
                 case PotionEffect.Barrab:
                     BuffInfo.AddBuff(m, new BuffInfo(BuffIcon.BarrabHemolymphConcentrate, LabelNumber, 1156738, "100\t10\t10\t5")); break;
@@ -153,7 +153,7 @@ namespace Server.Items
 
         public virtual void RemoveBuff(Mobile m)
         {
-            switch (this.PotionEffect)
+            switch (PotionEffect)
             {
                 case PotionEffect.Barrab:
                     BuffInfo.RemoveBuff(m, BuffIcon.BarrabHemolymphConcentrate); break;
@@ -519,7 +519,7 @@ namespace Server.Items
 
         public override void OnTick(Mobile m)
         {
-            var context = GetContext(m, this.PotionEffect);
+            var context = GetContext(m, PotionEffect);
 
             if (context != null && context.StartTime + TimeSpan.FromMinutes(10) > DateTime.UtcNow)
             {
@@ -693,7 +693,7 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from.InRange(this.Location, 2))
+            if (from.InRange(Location, 2))
             {
                 var berry = new LavaBerry(1);
                 from.AddToBackpack(berry);
@@ -773,7 +773,7 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from.InRange(this.Location, 2))
+            if (from.InRange(Location, 2))
             {
                 var rm = new RiverMoss(1);
                 from.AddToBackpack(rm);
@@ -896,7 +896,7 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from.InRange(this.Location, 3))
+            if (from.InRange(Location, 3))
             {
                 Item corn;
 

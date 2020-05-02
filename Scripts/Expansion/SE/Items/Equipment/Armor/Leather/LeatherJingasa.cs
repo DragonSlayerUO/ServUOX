@@ -8,7 +8,7 @@ namespace Server.Items
         public LeatherJingasa()
             : base(0x2776)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public LeatherJingasa(Serial serial)

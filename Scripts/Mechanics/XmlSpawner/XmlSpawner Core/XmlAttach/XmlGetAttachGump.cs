@@ -399,12 +399,12 @@ namespace Server.Mobiles
             {
                 if (Sorttype)
                 {
-                    this.m_SearchList.Sort(new ListTypeSorter(Descendingsort));
+                    m_SearchList.Sort(new ListTypeSorter(Descendingsort));
                 }
                 else
                 if (Sortname)
                 {
-                    this.m_SearchList.Sort(new ListNameSorter(Descendingsort));
+                    m_SearchList.Sort(new ListNameSorter(Descendingsort));
                 }
             }
         }
@@ -466,12 +466,12 @@ namespace Server.Mobiles
 
         private void Refresh(NetState state)
         {
-            state.Mobile.SendGump(new XmlGetAttGump(this.m_From, this.m_TargetObject, false, this.Descendingsort,
-                this.Dosearchtype, this.Dosearchname, this.Dosearchage,
-                this.Searchtype, this.Searchname, this.Searchagedirection, this.Searchage,
-                this.m_SearchList, this.Selected, this.DisplayFrom,
-                this.Sorttype, this.Sortname,
-                this.SelectAll, this.m_SelectionList, this.X, this.Y));
+            state.Mobile.SendGump(new XmlGetAttGump(m_From, m_TargetObject, false, Descendingsort,
+                Dosearchtype, Dosearchname, Dosearchage,
+                Searchtype, Searchname, Searchagedirection, Searchage,
+                m_SearchList, Selected, DisplayFrom,
+                Sorttype, Sortname,
+                SelectAll, m_SelectionList, X, Y));
         }
 
 

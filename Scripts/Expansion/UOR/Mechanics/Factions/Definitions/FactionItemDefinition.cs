@@ -16,12 +16,12 @@ namespace Server.Factions
         private readonly Type m_VendorType;
         public FactionItemDefinition(int silverCost, Type vendorType)
         {
-            this.m_SilverCost = silverCost;
-            this.m_VendorType = vendorType;
+            m_SilverCost = silverCost;
+            m_VendorType = vendorType;
         }
 
-        public int SilverCost => this.m_SilverCost;
-        public Type VendorType => this.m_VendorType;
+        public int SilverCost => m_SilverCost;
+        public Type VendorType => m_VendorType;
         public static FactionItemDefinition Identify(Item item)
         {
             if (item is BaseArmor)

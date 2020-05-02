@@ -62,7 +62,7 @@ namespace Server.Mobiles
         public override bool IsInvulnerable => false;
         public override VendorShoeType ShoeType => VendorShoeType.Sandals;
         public virtual bool HealsYoungPlayers => true;
-        protected override List<SBInfo> SBInfos => this.m_SBInfos;
+        protected override List<SBInfo> SBInfos => m_SBInfos;
 
         public override void InitSBInfo()
         {

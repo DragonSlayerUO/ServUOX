@@ -74,7 +74,7 @@ namespace Server
                 repath = true;
             else if ((!m_Path.Success || goal != m_LastGoalLoc) && (m_LastPathTime + RepathDelay) <= DateTime.UtcNow)
                 repath = true;
-            else if (m_Path.Success && Check(this.m_From.Location, m_LastGoalLoc, 0))
+            else if (m_Path.Success && Check(m_From.Location, m_LastGoalLoc, 0))
                 repath = true;
 
             if (!repath)

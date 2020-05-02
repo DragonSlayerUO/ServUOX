@@ -10,7 +10,7 @@ namespace Server.Items
         public PlateDo()
             : base(0x277D)
         {
-            this.Weight = 10.0;
+            Weight = 10.0;
         }
 
         public PlateDo(Serial serial)

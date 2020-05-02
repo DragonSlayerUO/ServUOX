@@ -8,10 +8,10 @@ namespace Server.Items
         public DesCityWallSouth()
             : base(641, 631)
         {
-            this.Name = "Damaged Wall";
+            Name = "Damaged Wall";
 
-            this.Level = ItemLevel.VeryEasy;
-            this.Movable = false;
+            Level = ItemLevel.VeryEasy;
+            Movable = false;
         }
 
         public DesCityWallSouth(Serial serial)
@@ -40,10 +40,10 @@ namespace Server.Items
         public DesCityWallEast()
             : base(642, 636)
         {
-            this.Name = "Damaged Wall";
+            Name = "Damaged Wall";
 
-            this.Level = ItemLevel.VeryEasy;
-            this.Movable = false;
+            Level = ItemLevel.VeryEasy;
+            Movable = false;
         }
 
         public DesCityWallEast(Serial serial)

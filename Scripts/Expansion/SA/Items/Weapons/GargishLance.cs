@@ -10,7 +10,7 @@ namespace Server.Items
         public GargishLance()
             : base(0x48CA)
         {
-            this.Weight = 12.0;
+            Weight = 12.0;
         }
 
         public GargishLance(Serial serial)

@@ -79,7 +79,7 @@ namespace Server.Engines.Despise
 
         public override bool OnBeforeDeath(Mobile m)
         {
-            if (m is DespiseCreature && m.Region != null && m.Region.IsPartOf(this.GetType()))
+            if (m is DespiseCreature && m.Region != null && m.Region.IsPartOf(GetType()))
             {
                 DespiseCreature dc = (DespiseCreature)m;
 
@@ -301,7 +301,7 @@ namespace Server.Engines.Despise
                 int z = Map.Trammel.GetAverageZ(x, y);
                 Point3D p = new Point3D(x, y, z);
 
-                if (this.Map.CanSpawnMobile(p))
+                if (Map.CanSpawnMobile(p))
                 {
                     if (m.Corpse != null)
                         m.Corpse.MoveToWorld(p, Map.Trammel);

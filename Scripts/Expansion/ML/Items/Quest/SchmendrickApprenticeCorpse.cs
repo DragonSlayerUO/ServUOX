@@ -14,17 +14,17 @@ namespace Server.Engines.Quests.Haven
         public SchmendrickApprenticeCorpse()
             : base(GetOwner(), GetHair(), GetFacialHair(), GetEquipment())
         {
-            this.Direction = Direction.West;
+            Direction = Direction.West;
 
-            foreach (Item item in this.EquipItems)
+            foreach (Item item in EquipItems)
             {
-                this.DropItem(item);
+                DropItem(item);
             }
 
-            this.m_Lantern = new Lantern();
-            this.m_Lantern.Movable = false;
-            this.m_Lantern.Protected = true;
-            this.m_Lantern.Ignite();
+            m_Lantern = new Lantern();
+            m_Lantern.Movable = false;
+            m_Lantern.Protected = true;
+            m_Lantern.Ignite();
         }
 
         public SchmendrickApprenticeCorpse(Serial serial)
@@ -34,10 +34,10 @@ namespace Server.Engines.Quests.Haven
 
         public override void AddNameProperty(ObjectPropertyList list)
         {
-            if (this.ItemID == 0x2006) // Corpse form
+            if (ItemID == 0x2006) // Corpse form
             {
                 list.Add("a human corpse");
-                list.Add(1049144, this.Name); // the remains of ~1_NAME~ the apprentice
+                list.Add(1049144, Name); // the remains of ~1_NAME~ the apprentice
             }
             else
             {
@@ -49,15 +49,15 @@ namespace Server.Engines.Quests.Haven
         {
             int hue = Notoriety.GetHue(Server.Misc.NotorietyHandlers.CorpseNotoriety(from, this));
 
-            if (this.ItemID == 0x2006) // Corpse form
-                from.Send(new MessageLocalized(this.Serial, this.ItemID, MessageType.Label, hue, 3, 1049144, "", this.Name)); // the remains of ~1_NAME~ the apprentice
+            if (ItemID == 0x2006) // Corpse form
+                from.Send(new MessageLocalized(Serial, ItemID, MessageType.Label, hue, 3, 1049144, "", Name)); // the remains of ~1_NAME~ the apprentice
             else
-                from.Send(new MessageLocalized(this.Serial, this.ItemID, MessageType.Label, hue, 3, 1049145, "", "")); // the remains of a wizard's apprentice
+                from.Send(new MessageLocalized(Serial, ItemID, MessageType.Label, hue, 3, 1049145, "", "")); // the remains of a wizard's apprentice
         }
 
         public override void Open(Mobile from, bool checkSelfLoot)
         {
-            if (!from.InRange(this.GetWorldLocation(), 2))
+            if (!from.InRange(GetWorldLocation(), 2))
                 return;
 
             PlayerMobile player = from as PlayerMobile;
@@ -95,34 +95,34 @@ namespace Server.Engines.Quests.Haven
 
         public override void OnLocationChange(Point3D oldLoc)
         {
-            if (this.m_Lantern != null && !this.m_Lantern.Deleted)
-                this.m_Lantern.Location = new Point3D(this.X, this.Y + 1, this.Z);
+            if (m_Lantern != null && !m_Lantern.Deleted)
+                m_Lantern.Location = new Point3D(X, Y + 1, Z);
         }
 
         public override void OnMapChange()
         {
-            if (this.m_Lantern != null && !this.m_Lantern.Deleted)
-                this.m_Lantern.Map = this.Map;
+            if (m_Lantern != null && !m_Lantern.Deleted)
+                m_Lantern.Map = Map;
         }
 
         public override void OnAfterDelete()
         {
             base.OnAfterDelete();
 
-            if (this.m_Lantern != null && !this.m_Lantern.Deleted)
-                this.m_Lantern.Delete();
+            if (m_Lantern != null && !m_Lantern.Deleted)
+                m_Lantern.Delete();
         }
 
         public override void Serialize(GenericWriter writer)
         {
-            if (this.m_Lantern != null && this.m_Lantern.Deleted)
-                this.m_Lantern = null;
+            if (m_Lantern != null && m_Lantern.Deleted)
+                m_Lantern = null;
 
             base.Serialize(writer);
 
             writer.Write(0); // version
 
-            writer.Write(this.m_Lantern);
+            writer.Write(m_Lantern);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -131,7 +131,7 @@ namespace Server.Engines.Quests.Haven
 
             int version = reader.ReadInt();
 
-            this.m_Lantern = (Lantern)reader.ReadItem();
+            m_Lantern = (Lantern)reader.ReadItem();
         }
 
         private static Mobile GetOwner()

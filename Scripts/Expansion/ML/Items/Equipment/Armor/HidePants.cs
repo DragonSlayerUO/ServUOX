@@ -9,7 +9,7 @@ namespace Server.Items
         public HidePants()
             : base(0x2B78)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public HidePants(Serial serial)

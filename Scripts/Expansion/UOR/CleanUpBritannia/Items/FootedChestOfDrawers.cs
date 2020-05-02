@@ -13,7 +13,7 @@ namespace Server.Items
         public FootedChestOfDrawers()
             : base(0x0A30)
         {
-            this.Weight = 25.0;
+            Weight = 25.0;
         }
 
         public FootedChestOfDrawers(Serial serial)

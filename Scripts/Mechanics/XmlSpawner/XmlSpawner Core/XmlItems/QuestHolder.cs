@@ -47,7 +47,7 @@ namespace Server.Items
             base.OnDoubleClick(from);
             from.CloseGump(typeof(XmlQuestStatusGump));
 
-            from.SendGump(new XmlQuestStatusGump(this, this.TitleString));
+            from.SendGump(new XmlQuestStatusGump(this, TitleString));
         }
 
         public override void OnSnoop(Mobile from)
@@ -56,7 +56,7 @@ namespace Server.Items
             {
                 from.CloseGump(typeof(XmlQuestStatusGump));
 
-                from.SendGump(new XmlQuestStatusGump(this, this.TitleString));
+                from.SendGump(new XmlQuestStatusGump(this, TitleString));
             }
         }
 

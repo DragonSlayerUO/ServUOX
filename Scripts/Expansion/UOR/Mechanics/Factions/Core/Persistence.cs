@@ -11,7 +11,7 @@ namespace Server.Factions
         public FactionPersistence()
             : base(1)
         {
-            this.Movable = false;
+            Movable = false;
 
             if (m_Instance == null || m_Instance.Deleted)
                 m_Instance = this;

@@ -34,7 +34,7 @@ namespace Server.Engines.TreasuresOfKotlCity
         {
             Reset();
 
-            List<Item> contains = new List<Item>(this.Items);
+            List<Item> contains = new List<Item>(Items);
 
             foreach (var item in contains)
             {
@@ -73,7 +73,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
                     TreasureMapChest.GetRandomItemStat(out min, out max, 1.0);
 
-                    RunicReforging.GenerateRandomItem(item, null, Utility.RandomMinMax(min, max), 0, ReforgedPrefix.None, ReforgedSuffix.Kotl, this.Map);
+                    RunicReforging.GenerateRandomItem(item, null, Utility.RandomMinMax(min, max), 0, ReforgedPrefix.None, ReforgedSuffix.Kotl, Map);
 
                     DropItem(item);
                 }
@@ -127,7 +127,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public virtual bool CheckPassiveDetect(Mobile m)
         {
-            if (m.InRange(this.Location, 4))
+            if (m.InRange(Location, 4))
             {
                 int skill = (int)m.Skills[SkillName.DetectHidden].Value;
 

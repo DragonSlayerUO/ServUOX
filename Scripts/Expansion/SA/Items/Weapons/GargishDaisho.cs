@@ -10,8 +10,8 @@ namespace Server.Items
         public GargishDaisho()
             : base(0x48D0)
         {
-            this.Weight = 8.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 8.0;
+            Layer = Layer.TwoHanded;
         }
 
         public GargishDaisho(Serial serial)

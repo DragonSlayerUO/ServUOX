@@ -11,9 +11,9 @@ namespace Server.Items
         public NictitatingLens()
             : base()
         {
-            this.Hue = 1916;
-            this.Weight = 2.0;
-            this.LootType = LootType.Blessed;
+            Hue = 1916;
+            Weight = 2.0;
+            LootType = LootType.Blessed;
         }
 
         public override void OnDoubleClick(Mobile from)
@@ -65,9 +65,9 @@ namespace Server.Items
         public GargishNictitatingLens()
             : base()
         {
-            this.Hue = 1916;
-            this.Weight = 2.0;
-            this.LootType = LootType.Blessed;
+            Hue = 1916;
+            Weight = 2.0;
+            LootType = LootType.Blessed;
         }
 
         public override void OnDoubleClick(Mobile from)

@@ -11,20 +11,20 @@ namespace Server.Ethics
         private readonly Power[] m_Powers;
         public EthicDefinition(int primaryHue, TextDefinition title, TextDefinition adjunct, TextDefinition joinPhrase, Power[] powers)
         {
-            this.m_PrimaryHue = primaryHue;
+            m_PrimaryHue = primaryHue;
 
-            this.m_Title = title;
-            this.m_Adjunct = adjunct;
+            m_Title = title;
+            m_Adjunct = adjunct;
 
-            this.m_JoinPhrase = joinPhrase;
+            m_JoinPhrase = joinPhrase;
 
-            this.m_Powers = powers;
+            m_Powers = powers;
         }
 
-        public int PrimaryHue => this.m_PrimaryHue;
-        public TextDefinition Title => this.m_Title;
-        public TextDefinition Adjunct => this.m_Adjunct;
-        public TextDefinition JoinPhrase => this.m_JoinPhrase;
-        public Power[] Powers => this.m_Powers;
+        public int PrimaryHue => m_PrimaryHue;
+        public TextDefinition Title => m_Title;
+        public TextDefinition Adjunct => m_Adjunct;
+        public TextDefinition JoinPhrase => m_JoinPhrase;
+        public Power[] Powers => m_Powers;
     }
 }

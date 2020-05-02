@@ -11,10 +11,10 @@ namespace Server.Items
         public ShipLadder(Point3D point, Map map, int id)
             : base(0x08A6)
         {
-            this.ItemID = id;
-            this.m_PointDest = point;
-            this.m_Map = map;
-            this.Movable = false;
+            ItemID = id;
+            m_PointDest = point;
+            m_Map = map;
+            Movable = false;
         }
 
         public ShipLadder(Serial serial)
@@ -24,7 +24,7 @@ namespace Server.Items
 
         public override void OnDoubleClickDead(Mobile from)
         {
-            if (from.InRange(this.Location, 2))
+            if (from.InRange(Location, 2))
             {
                 Server.Mobiles.BaseCreature.TeleportPets(from, m_PointDest, from.Map);
                 from.MoveToWorld(m_PointDest, m_Map);
@@ -36,7 +36,7 @@ namespace Server.Items
             if (!from.Alive)
                 return;
 
-            if (from.InRange(this.Location, 2))
+            if (from.InRange(Location, 2))
             {
                 Server.Mobiles.BaseCreature.TeleportPets(from, m_PointDest, from.Map);
                 from.MoveToWorld(m_PointDest, m_Map);

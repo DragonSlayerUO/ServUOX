@@ -7,7 +7,7 @@ namespace Server.Ethics.Hero
     {
         public Bless()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 15,
                 "Bless",
                 "Erstok Ontawl",
@@ -29,7 +29,7 @@ namespace Server.Ethics.Hero
             if (p == null)
                 return;
 
-            if (!this.CheckInvoke(from))
+            if (!CheckInvoke(from))
                 return;
 
             bool powerFunctioned = false;
@@ -67,7 +67,7 @@ namespace Server.Ethics.Hero
 
                 from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x3B2, false, "You consecrate the area.");
 
-                this.FinishInvoke(from);
+                FinishInvoke(from);
             }
             else
             {

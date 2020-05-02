@@ -9,7 +9,7 @@ namespace Server.Items
         public ElvenCompositeLongbow()
             : base(0x2D1E)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public ElvenCompositeLongbow(Serial serial)

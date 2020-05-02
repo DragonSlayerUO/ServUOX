@@ -7,7 +7,7 @@ namespace Server.Ethics.Hero
     {
         public HolySense()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 0,
                 "Holy Sense",
                 "Drewrok Erstok",
@@ -85,7 +85,7 @@ namespace Server.Ethics.Hero
 
             from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x59, false, sb.ToString());
 
-            this.FinishInvoke(from);
+            FinishInvoke(from);
         }
     }
 }

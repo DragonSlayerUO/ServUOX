@@ -338,7 +338,7 @@ namespace Server.Items
             {
                 from.SendLocalizedMessage(1112478); //You hatch a battle chicken lizard!!
                 bc = new BattleChickenLizard();
-                bc.Hue = this.Hue;
+                bc.Hue = Hue;
             }
             else
             {

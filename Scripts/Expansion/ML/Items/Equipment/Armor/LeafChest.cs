@@ -11,7 +11,7 @@ namespace Server.Items
         public LeafChest()
             : base(0x2FC5)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public LeafChest(Serial serial)

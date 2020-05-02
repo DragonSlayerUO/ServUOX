@@ -79,7 +79,7 @@ namespace Server.Factions
                 return false;
             }
 
-            return faction == this.Faction;
+            return faction == Faction;
         }
 
         public FactionCollectionBox(Serial serial)
@@ -98,33 +98,33 @@ namespace Server.Factions
         {
             Donations.Add(new CollectionItem(typeof(Silver), 0xEF2, 1017384, 0x0, 1));
 
-            Rewards.Add(new FactionCollectionItem(typeof(StrongholdRune), 0x1F14, 1094700, 0, this.Faction, 150, 0));
-            Rewards.Add(new FactionCollectionItem(typeof(ShrineGem), 0x1EA7, 1094711, 0, this.Faction, 100, 0));
-            Rewards.Add(new FactionCollectionItem(typeof(SupernovaPotion), 3849, 1094718, 13, this.Faction, 100, 0));
-            Rewards.Add(new FactionCollectionItem(typeof(GreaterStaminaPotion), 3849, 1094764, 437, this.Faction, 50, 0));
-            Rewards.Add(new FactionCollectionItem(typeof(EnchantedBandage), 0xE21, 1094712, 0, this.Faction, 100, 0));
-            Rewards.Add(new FactionCollectionItem(typeof(PowderOfPerseverance), 4102, 1094712, 2419, this.Faction, 300, 0));
-            Rewards.Add(new FactionCollectionItem(typeof(MorphEarrings), 0x1087, 1094746, 0, this.Faction, 1000, 0));
+            Rewards.Add(new FactionCollectionItem(typeof(StrongholdRune), 0x1F14, 1094700, 0, Faction, 150, 0));
+            Rewards.Add(new FactionCollectionItem(typeof(ShrineGem), 0x1EA7, 1094711, 0, Faction, 100, 0));
+            Rewards.Add(new FactionCollectionItem(typeof(SupernovaPotion), 3849, 1094718, 13, Faction, 100, 0));
+            Rewards.Add(new FactionCollectionItem(typeof(GreaterStaminaPotion), 3849, 1094764, 437, Faction, 50, 0));
+            Rewards.Add(new FactionCollectionItem(typeof(EnchantedBandage), 0xE21, 1094712, 0, Faction, 100, 0));
+            Rewards.Add(new FactionCollectionItem(typeof(PowderOfPerseverance), 4102, 1094712, 2419, Faction, 300, 0));
+            Rewards.Add(new FactionCollectionItem(typeof(MorphEarrings), 0x1087, 1094746, 0, Faction, 1000, 0));
 
-            Rewards.Add(new FactionCollectionItem(typeof(PrimerOnArmsTalisman), 12121, 1094704, 0, this.Faction, 3000, 7));
-            Rewards.Add(new FactionCollectionItem(typeof(ClaininsSpellbook), 3834, 1094705, 0x84D, this.Faction, 4000, 9));
-            Rewards.Add(new FactionCollectionItem(typeof(CrimsonCincture), 5435, 1075043, 0x485, this.Faction, 2000, 4));
-            Rewards.Add(new FactionCollectionItem(typeof(CrystallineRing), 4234, 1075096, 1152, this.Faction, 4000, 9));
-            Rewards.Add(new FactionCollectionItem(typeof(HumanFeyLeggings), 5054, 1075041, 0, this.Faction, 1000, 1));
-            Rewards.Add(new FactionCollectionItem(typeof(FoldedSteelGlasses), 12216, 1073380, 1150, this.Faction, 4000, 9));
-            Rewards.Add(new FactionCollectionItem(typeof(HeartOfTheLion), 5141, 1070817, 1281, this.Faction, 2000, 4));
-            Rewards.Add(new FactionCollectionItem(typeof(HuntersHeaddress), 5447, 1061595, 1428, this.Faction, 2000, 4));
-            Rewards.Add(new FactionCollectionItem(typeof(KasaOfTheRajin), 10136, 1070969, 0, this.Faction, 1000, 1));
-            Rewards.Add(new FactionCollectionItem(typeof(MaceAndShieldGlasses), 12216, 1073381, 477, this.Faction, 5000, 10));
-            Rewards.Add(new FactionCollectionItem(typeof(VesperOrderShield), 7108, 1073258, 0, this.Faction, 4000, 9));
-            Rewards.Add(new FactionCollectionItem(typeof(OrnamentOfTheMagician), 4230, 1061105, 1364, this.Faction, 5000, 10));
-            Rewards.Add(new FactionCollectionItem(typeof(RingOfTheVile), 4234, 1061102, 1271, this.Faction, 2000, 4));
-            Rewards.Add(new FactionCollectionItem(typeof(RuneBeetleCarapace), 10109, 1070968, 0, this.Faction, 1000, 1));
-            Rewards.Add(new FactionCollectionItem(typeof(SpiritOfTheTotem), 5445, 1061599, 1109, this.Faction, 3000, 7));
-            Rewards.Add(new FactionCollectionItem(typeof(Stormgrip), 10130, 1070970, 0, this.Faction, 1000, 1));
-            Rewards.Add(new FactionCollectionItem(typeof(InquisitorsResolution), 5140, 1060206, 1266, this.Faction, 5000, 10));
-            Rewards.Add(new FactionCollectionItem(typeof(TomeOfLostKnowledge), 3834, 1070971, 1328, this.Faction, 3000, 7));
-            Rewards.Add(new FactionCollectionItem(typeof(WizardsCrystalGlasses), 4102, 1094756, 0, this.Faction, 3000, 7));
+            Rewards.Add(new FactionCollectionItem(typeof(PrimerOnArmsTalisman), 12121, 1094704, 0, Faction, 3000, 7));
+            Rewards.Add(new FactionCollectionItem(typeof(ClaininsSpellbook), 3834, 1094705, 0x84D, Faction, 4000, 9));
+            Rewards.Add(new FactionCollectionItem(typeof(CrimsonCincture), 5435, 1075043, 0x485, Faction, 2000, 4));
+            Rewards.Add(new FactionCollectionItem(typeof(CrystallineRing), 4234, 1075096, 1152, Faction, 4000, 9));
+            Rewards.Add(new FactionCollectionItem(typeof(HumanFeyLeggings), 5054, 1075041, 0, Faction, 1000, 1));
+            Rewards.Add(new FactionCollectionItem(typeof(FoldedSteelGlasses), 12216, 1073380, 1150, Faction, 4000, 9));
+            Rewards.Add(new FactionCollectionItem(typeof(HeartOfTheLion), 5141, 1070817, 1281, Faction, 2000, 4));
+            Rewards.Add(new FactionCollectionItem(typeof(HuntersHeaddress), 5447, 1061595, 1428, Faction, 2000, 4));
+            Rewards.Add(new FactionCollectionItem(typeof(KasaOfTheRajin), 10136, 1070969, 0, Faction, 1000, 1));
+            Rewards.Add(new FactionCollectionItem(typeof(MaceAndShieldGlasses), 12216, 1073381, 477, Faction, 5000, 10));
+            Rewards.Add(new FactionCollectionItem(typeof(VesperOrderShield), 7108, 1073258, 0, Faction, 4000, 9));
+            Rewards.Add(new FactionCollectionItem(typeof(OrnamentOfTheMagician), 4230, 1061105, 1364, Faction, 5000, 10));
+            Rewards.Add(new FactionCollectionItem(typeof(RingOfTheVile), 4234, 1061102, 1271, Faction, 2000, 4));
+            Rewards.Add(new FactionCollectionItem(typeof(RuneBeetleCarapace), 10109, 1070968, 0, Faction, 1000, 1));
+            Rewards.Add(new FactionCollectionItem(typeof(SpiritOfTheTotem), 5445, 1061599, 1109, Faction, 3000, 7));
+            Rewards.Add(new FactionCollectionItem(typeof(Stormgrip), 10130, 1070970, 0, Faction, 1000, 1));
+            Rewards.Add(new FactionCollectionItem(typeof(InquisitorsResolution), 5140, 1060206, 1266, Faction, 5000, 10));
+            Rewards.Add(new FactionCollectionItem(typeof(TomeOfLostKnowledge), 3834, 1070971, 1328, Faction, 3000, 7));
+            Rewards.Add(new FactionCollectionItem(typeof(WizardsCrystalGlasses), 4102, 1094756, 0, Faction, 3000, 7));
         }
 
         public override void IncreaseTier()

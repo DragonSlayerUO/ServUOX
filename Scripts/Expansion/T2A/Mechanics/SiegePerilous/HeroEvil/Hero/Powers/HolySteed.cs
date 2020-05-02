@@ -6,7 +6,7 @@ namespace Server.Ethics.Hero
     {
         public HolySteed()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 30,
                 "Holy Steed",
                 "Trubechs Yeliab",
@@ -36,7 +36,7 @@ namespace Server.Ethics.Hero
             {
                 from.Steed = steed;
 
-                this.FinishInvoke(from);
+                FinishInvoke(from);
             }
         }
     }

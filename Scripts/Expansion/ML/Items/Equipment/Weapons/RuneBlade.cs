@@ -11,8 +11,8 @@ namespace Server.Items
         public RuneBlade()
             : base(0x2D32)
         {
-            this.Weight = 7.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 7.0;
+            Layer = Layer.TwoHanded;
         }
 
         public RuneBlade(Serial serial)

@@ -10,7 +10,7 @@ namespace Server.Items
         [Constructable]
         public OniCostume() : base()
         {
-            this.CostumeBody = 241;
+            CostumeBody = 241;
         }
 
         public override int LabelNumber => 1114242;// oni costume

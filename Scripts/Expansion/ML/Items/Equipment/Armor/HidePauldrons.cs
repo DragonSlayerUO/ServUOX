@@ -9,7 +9,7 @@ namespace Server.Items
         public HidePauldrons()
             : base(0x2B77)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public HidePauldrons(Serial serial)

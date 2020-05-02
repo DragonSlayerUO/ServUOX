@@ -17,8 +17,8 @@ namespace Server.Factions
         public FactionStone(Faction faction)
             : base(0xEDC)
         {
-            this.Movable = false;
-            this.Faction = faction;
+            Movable = false;
+            Faction = faction;
         }
 
         public FactionStone(Serial serial)
@@ -31,22 +31,22 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Faction;
+                return m_Faction;
             }
             set
             {
-                this.m_Faction = value;
+                m_Faction = value;
 
-                this.AssignName(this.m_Faction == null ? null : this.m_Faction.Definition.FactionStoneName);
+                AssignName(m_Faction == null ? null : m_Faction.Definition.FactionStoneName);
             }
         }
         public override string DefaultName => "faction stone";
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.m_Faction == null)
+            if (m_Faction == null)
                 return;
 
-            if (!from.InRange(this.GetWorldLocation(), 2))
+            if (!from.InRange(GetWorldLocation(), 2))
             {
                 from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
             }
@@ -58,14 +58,14 @@ namespace Server.Factions
             {
                 Faction existingFaction = Faction.Find(from);
 
-                if (existingFaction == this.m_Faction || from.AccessLevel >= AccessLevel.GameMaster)
+                if (existingFaction == m_Faction || from.AccessLevel >= AccessLevel.GameMaster)
                 {
                     PlayerState pl = PlayerState.Find(from);
 
                     if (pl != null && pl.IsLeaving)
                         from.SendLocalizedMessage(1005051); // You cannot use the faction stone until you have finished quitting your current faction
                     else
-                        from.SendGump(new FactionStoneGump((PlayerMobile)from, this.m_Faction));
+                        from.SendGump(new FactionStoneGump((PlayerMobile)from, m_Faction));
                 }
                 else if (existingFaction != null)
                 {
@@ -74,7 +74,7 @@ namespace Server.Factions
                 }
                 else
                 {
-                    from.SendGump(new JoinStoneGump((PlayerMobile)from, this.m_Faction));
+                    from.SendGump(new JoinStoneGump((PlayerMobile)from, m_Faction));
                 }
             }
         }
@@ -85,7 +85,7 @@ namespace Server.Factions
 
             writer.Write(0); // version
 
-            Faction.WriteReference(writer, this.m_Faction);
+            Faction.WriteReference(writer, m_Faction);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -98,7 +98,7 @@ namespace Server.Factions
             {
                 case 0:
                     {
-                        this.Faction = Faction.ReadReference(reader);
+                        Faction = Faction.ReadReference(reader);
                         break;
                     }
             }

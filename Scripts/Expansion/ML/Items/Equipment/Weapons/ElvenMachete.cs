@@ -9,7 +9,7 @@ namespace Server.Items
         public ElvenMachete()
             : base(0x2D35)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public ElvenMachete(Serial serial)

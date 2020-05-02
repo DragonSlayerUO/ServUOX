@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoGoldIngots3()
             : base(0x1BED)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoGoldIngots3(Serial serial)

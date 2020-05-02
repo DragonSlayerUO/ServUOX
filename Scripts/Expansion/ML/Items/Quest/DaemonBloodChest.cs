@@ -9,7 +9,7 @@ namespace Server.Engines.Quests.Haven
         [Constructable]
         public DaemonBloodChest()
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DaemonBloodChest(Serial serial)
@@ -21,7 +21,7 @@ namespace Server.Engines.Quests.Haven
         {
             PlayerMobile player = from as PlayerMobile;
 
-            if (player != null && player.InRange(this.GetWorldLocation(), 2))
+            if (player != null && player.InRange(GetWorldLocation(), 2))
             {
                 QuestSystem qs = player.Quest;
 

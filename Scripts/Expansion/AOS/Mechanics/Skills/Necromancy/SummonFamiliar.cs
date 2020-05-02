@@ -30,7 +30,7 @@ namespace Server.Spells.Necromancy
 
         public override bool CheckCast()
         {
-            BaseCreature check = (BaseCreature)Table[this.Caster];
+            BaseCreature check = (BaseCreature)Table[Caster];
 
             if (check != null && !check.Deleted)
             {

@@ -34,7 +34,7 @@ namespace Server.Engines.Quests.Samurai
                 1049092;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindHaochiObjective());
+            System.AddObjective(new FindHaochiObjective());
         }
     }
 
@@ -92,7 +92,7 @@ namespace Server.Engines.Quests.Samurai
                 1063029;
         public override void OnRead()
         {
-            this.System.AddObjective(new FirstTrialIntroObjective());
+            System.AddObjective(new FirstTrialIntroObjective());
         }
     }
 
@@ -125,7 +125,7 @@ namespace Server.Engines.Quests.Samurai
                 1063031;
         public override void OnRead()
         {
-            this.System.AddObjective(new FirstTrialKillObjective());
+            System.AddObjective(new FirstTrialKillObjective());
         }
     }
 
@@ -134,7 +134,7 @@ namespace Server.Engines.Quests.Samurai
         private bool m_CursedSoul;
         public GainKarmaConversation(bool cursedSoul)
         {
-            this.m_CursedSoul = cursedSoul;
+            m_CursedSoul = cursedSoul;
         }
 
         public GainKarmaConversation()
@@ -145,7 +145,7 @@ namespace Server.Engines.Quests.Samurai
         {
             get
             {
-                if (this.m_CursedSoul)
+                if (m_CursedSoul)
                 {
                     // You have just gained some <a href="?ForceTopic45">Karma</a> for killing a Cursed Soul.
                     return 1063040;
@@ -162,7 +162,7 @@ namespace Server.Engines.Quests.Samurai
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_CursedSoul = reader.ReadBool();
+            m_CursedSoul = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -178,7 +178,7 @@ namespace Server.Engines.Quests.Samurai
         private bool m_CursedSoul;
         public SecondTrialIntroConversation(bool cursedSoul)
         {
-            this.m_CursedSoul = cursedSoul;
+            m_CursedSoul = cursedSoul;
         }
 
         public SecondTrialIntroConversation()
@@ -189,7 +189,7 @@ namespace Server.Engines.Quests.Samurai
         {
             get
             {
-                if (this.m_CursedSoul)
+                if (m_CursedSoul)
                 {
                     /* It is good that you rid the land of the Cursed Souls so they can
                     * be at peace in death. They had been cursed for doing what they
@@ -218,14 +218,14 @@ namespace Server.Engines.Quests.Samurai
         }
         public override void OnRead()
         {
-            this.System.AddObjective(new SecondTrialIntroObjective());
+            System.AddObjective(new SecondTrialIntroObjective());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_CursedSoul = reader.ReadBool();
+            m_CursedSoul = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -256,7 +256,7 @@ namespace Server.Engines.Quests.Samurai
                 1063057;
         public override void OnRead()
         {
-            this.System.AddObjective(new SecondTrialAttackObjective());
+            System.AddObjective(new SecondTrialAttackObjective());
         }
     }
 
@@ -265,7 +265,7 @@ namespace Server.Engines.Quests.Samurai
         private bool m_Dragon;
         public ThirdTrialIntroConversation(bool dragon)
         {
-            this.m_Dragon = dragon;
+            m_Dragon = dragon;
         }
 
         public ThirdTrialIntroConversation()
@@ -276,7 +276,7 @@ namespace Server.Engines.Quests.Samurai
         {
             get
             {
-                if (this.m_Dragon)
+                if (m_Dragon)
                 {
                     /* You faced the dragon knowing it would be your certain death.
                     * That is the courage of a Samurai. <BR><BR>
@@ -314,14 +314,14 @@ namespace Server.Engines.Quests.Samurai
         }
         public override void OnRead()
         {
-            this.System.AddObjective(new ThirdTrialIntroObjective());
+            System.AddObjective(new ThirdTrialIntroObjective());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_Dragon = reader.ReadBool();
+            m_Dragon = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -348,7 +348,7 @@ namespace Server.Engines.Quests.Samurai
                 1063062;
         public override void OnRead()
         {
-            this.System.AddObjective(new ThirdTrialKillObjective());
+            System.AddObjective(new ThirdTrialKillObjective());
         }
     }
 
@@ -373,7 +373,7 @@ namespace Server.Engines.Quests.Samurai
                 1063065;
         public override void OnRead()
         {
-            this.System.AddObjective(new FourthTrialIntroObjective());
+            System.AddObjective(new FourthTrialIntroObjective());
         }
     }
 
@@ -401,7 +401,7 @@ namespace Server.Engines.Quests.Samurai
                 1063067;
         public override void OnRead()
         {
-            this.System.AddObjective(new FourthTrialCatsObjective());
+            System.AddObjective(new FourthTrialCatsObjective());
         }
     }
 
@@ -410,7 +410,7 @@ namespace Server.Engines.Quests.Samurai
         private bool m_KilledCat;
         public FifthTrialIntroConversation(bool killedCat)
         {
-            this.m_KilledCat = killedCat;
+            m_KilledCat = killedCat;
         }
 
         public FifthTrialIntroConversation()
@@ -421,7 +421,7 @@ namespace Server.Engines.Quests.Samurai
         {
             get
             {
-                if (this.m_KilledCat)
+                if (m_KilledCat)
                 {
                     /* Respect comes from allowing another to make their own decisions.
                     * By denying the gypsy her animals, you negate the respect she is due.
@@ -456,14 +456,14 @@ namespace Server.Engines.Quests.Samurai
         }
         public override void OnRead()
         {
-            this.System.AddObjective(new FifthTrialIntroObjective());
+            System.AddObjective(new FifthTrialIntroObjective());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_KilledCat = reader.ReadBool();
+            m_KilledCat = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -492,7 +492,7 @@ namespace Server.Engines.Quests.Samurai
                 1063248;
         public override void OnRead()
         {
-            this.System.AddObjective(new FifthTrialReturnObjective());
+            System.AddObjective(new FifthTrialReturnObjective());
         }
     }
 
@@ -513,7 +513,7 @@ namespace Server.Engines.Quests.Samurai
         private bool m_StolenTreasure;
         public SixthTrialIntroConversation(bool stolenTreasure)
         {
-            this.m_StolenTreasure = stolenTreasure;
+            m_StolenTreasure = stolenTreasure;
         }
 
         public SixthTrialIntroConversation()
@@ -524,7 +524,7 @@ namespace Server.Engines.Quests.Samurai
         {
             get
             {
-                if (this.m_StolenTreasure)
+                if (m_StolenTreasure)
                 {
                     /* I thank you for returning this sword. However, you should admonished
                     * for also taking treasure that was not asked for nor given back.  <BR><BR>
@@ -555,14 +555,14 @@ namespace Server.Engines.Quests.Samurai
         }
         public override void OnRead()
         {
-            this.System.AddObjective(new SixthTrialIntroObjective());
+            System.AddObjective(new SixthTrialIntroObjective());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_StolenTreasure = reader.ReadBool();
+            m_StolenTreasure = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -592,7 +592,7 @@ namespace Server.Engines.Quests.Samurai
                 1063079;
         public override void OnRead()
         {
-            this.System.AddObjective(new SeventhTrialIntroObjective());
+            System.AddObjective(new SeventhTrialIntroObjective());
         }
     }
 
@@ -621,7 +621,7 @@ namespace Server.Engines.Quests.Samurai
                 1063125;
         public override void OnRead()
         {
-            this.System.Complete();
+            System.Complete();
         }
     }
 }

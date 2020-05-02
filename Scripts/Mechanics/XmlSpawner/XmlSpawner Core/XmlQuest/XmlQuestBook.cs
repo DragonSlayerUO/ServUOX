@@ -77,7 +77,7 @@ namespace Server.Items
         {
             get
             {
-                Item[] questitems = this.FindItemsByType(typeof(IXmlQuest));
+                Item[] questitems = FindItemsByType(typeof(IXmlQuest));
 
                 if (questitems == null || questitems.Length <= 0)
                     return false;
@@ -162,7 +162,7 @@ namespace Server.Items
             {
                 Owner.SendMessage(String.Format("{0} Quests invalidated - '{1}' removed", TotalItems, Name));
             }
-            this.Delete();
+            Delete();
         }
 
         public override void OnItemLifted(Mobile from, Item item)
@@ -276,8 +276,8 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            this.m_Owner = reader.ReadMobile() as PlayerMobile;
-            this.m_Locked = reader.ReadBool();
+            m_Owner = reader.ReadMobile() as PlayerMobile;
+            m_Locked = reader.ReadBool();
         }
     }
 }

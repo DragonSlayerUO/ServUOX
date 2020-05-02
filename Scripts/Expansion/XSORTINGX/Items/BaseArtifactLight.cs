@@ -22,7 +22,7 @@ namespace Server.Items
             base.GetProperties(list);
 
             if (ShowArtifactRarity)
-                list.Add(1061078, this.ArtifactRarity.ToString()); // artifact rarity ~1_val~
+                list.Add(1061078, ArtifactRarity.ToString()); // artifact rarity ~1_val~
         }
 
         public override void Serialize(GenericWriter writer)

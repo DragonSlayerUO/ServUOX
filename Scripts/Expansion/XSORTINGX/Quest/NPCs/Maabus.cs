@@ -16,8 +16,8 @@ namespace Server.Engines.Quests.Necro
 
         public override void InitBody()
         {
-            this.Body = 0x94;
-            this.Name = "Maabus";
+            Body = 0x94;
+            Name = "Maabus";
         }
 
         public override bool CanTalkTo(PlayerMobile to)

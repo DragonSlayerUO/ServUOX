@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoBrimstone()
             : base(0xF7F)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoBrimstone(Serial serial)

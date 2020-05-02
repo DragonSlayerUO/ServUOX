@@ -8,10 +8,10 @@ namespace Server.Mobiles
         [Constructable]
         public BrideGroom()
         {
-            if (this.Female)
-                this.Title = "the bride";
+            if (Female)
+                Title = "the bride";
             else
-                this.Title = "the groom";
+                Title = "the groom";
         }
 
         public BrideGroom(Serial serial)
@@ -23,29 +23,29 @@ namespace Server.Mobiles
         public override bool ClickTitle => false;// Do not display 'the groom' when single-clicking
         public override void InitOutfit()
         {
-            if (this.Female)
+            if (Female)
 
-                this.AddItem(new FancyDress());
+                AddItem(new FancyDress());
             else
-                this.AddItem(new FancyShirt());
+                AddItem(new FancyShirt());
 
             int lowHue = GetRandomHue();
 
-            this.AddItem(new LongPants(lowHue));
+            AddItem(new LongPants(lowHue));
 
-            if (this.Female)
-                this.AddItem(new Shoes(lowHue));
+            if (Female)
+                AddItem(new Shoes(lowHue));
             else
-                this.AddItem(new Boots(lowHue));
+                AddItem(new Boots(lowHue));
 
             if (Utility.RandomBool())
-                this.HairItemID = 0x203B;
+                HairItemID = 0x203B;
             else
-                this.HairItemID = 0x203C;
+                HairItemID = 0x203C;
 
-            this.HairHue = this.Race.RandomHairHue();
+            HairHue = Race.RandomHairHue();
 
-            this.PackGold(200, 250);
+            PackGold(200, 250);
         }
 
         public override void Serialize(GenericWriter writer)

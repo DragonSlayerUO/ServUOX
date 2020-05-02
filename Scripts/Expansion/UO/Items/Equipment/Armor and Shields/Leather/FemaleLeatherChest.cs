@@ -11,7 +11,7 @@ namespace Server.Items
         public FemaleLeatherChest()
             : base(0x1C06)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public FemaleLeatherChest(Serial serial)

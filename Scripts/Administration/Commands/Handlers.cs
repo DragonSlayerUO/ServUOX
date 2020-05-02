@@ -844,7 +844,7 @@ namespace Server.Commands
 
                     public override void OnCancel(NetState state)
                     {
-                        state.Mobile.SendMenu(new EquipMenu(state.Mobile, this.m_Mobile, ViewEqTarget.GetEquip(m_Mobile)));
+                        state.Mobile.SendMenu(new EquipMenu(state.Mobile, m_Mobile, ViewEqTarget.GetEquip(m_Mobile)));
                     }
 
                     public override void OnResponse(NetState state, int index)

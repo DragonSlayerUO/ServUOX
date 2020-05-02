@@ -10,7 +10,7 @@ namespace Server.Items
         public GargishGnarledStaff()
             : base(0x48B8)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public GargishGnarledStaff(Serial serial)

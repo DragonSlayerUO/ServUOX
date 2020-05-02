@@ -81,7 +81,7 @@ namespace Server.Mobiles
             }
 
             if (0.2 > Utility.RandomDouble())
-                this.PackItem(new BolaBall());
+                PackItem(new BolaBall());
         }
 
         public EnslavedGoblinMage(Serial serial)
@@ -102,7 +102,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Meager);
+            AddLoot(LootPack.Meager);
         }
 
         public override void Serialize(GenericWriter writer)

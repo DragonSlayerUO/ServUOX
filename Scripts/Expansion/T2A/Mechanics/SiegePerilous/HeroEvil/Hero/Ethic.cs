@@ -7,7 +7,7 @@ namespace Server.Ethics.Hero
     {
         public HeroEthic()
         {
-            this.m_Definition = new EthicDefinition(
+            m_Definition = new EthicDefinition(
                 0x482,
                 "Hero", "(Hero)",
                 "I will defend the virtues",

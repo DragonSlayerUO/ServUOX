@@ -7,7 +7,7 @@ namespace Server.Items
         [Constructable]
         public SerratedWarCleaver()
         {
-            this.Attributes.WeaponDamage = 7;
+            Attributes.WeaponDamage = 7;
         }
 
         public SerratedWarCleaver(Serial serial)

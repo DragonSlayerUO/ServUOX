@@ -16,7 +16,7 @@ namespace Server.Engines.Quests.Ninja
         [Constructable]
         public HiddenFigure()
         {
-            this.m_Message = Utility.RandomList(Messages);
+            m_Message = Utility.RandomList(Messages);
         }
 
         public HiddenFigure(Serial serial)
@@ -29,31 +29,31 @@ namespace Server.Engines.Quests.Ninja
         {
             get
             {
-                return this.m_Message;
+                return m_Message;
             }
             set
             {
-                this.m_Message = value;
+                m_Message = value;
             }
         }
         public override int TalkNumber => -1;
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = Utility.RandomSkinHue();
+            Hue = Utility.RandomSkinHue();
 
-            this.Female = Utility.RandomBool();
+            Female = Utility.RandomBool();
 
-            if (this.Female)
+            if (Female)
             {
-                this.Body = 0x191;
-                this.Name = NameList.RandomName("female");
+                Body = 0x191;
+                Name = NameList.RandomName("female");
             }
             else
             {
-                this.Body = 0x190;
-                this.Name = NameList.RandomName("male");
+                Body = 0x190;
+                Name = NameList.RandomName("male");
             }
         }
 
@@ -61,14 +61,14 @@ namespace Server.Engines.Quests.Ninja
         {
             Utility.AssignRandomHair(this);
 
-            this.AddItem(new TattsukeHakama(this.GetRandomHue()));
-            this.AddItem(new Kasa());
-            this.AddItem(new HakamaShita(this.GetRandomHue()));
+            AddItem(new TattsukeHakama(GetRandomHue()));
+            AddItem(new Kasa());
+            AddItem(new HakamaShita(GetRandomHue()));
 
             if (Utility.RandomBool())
-                this.AddItem(new Shoes(this.GetShoeHue()));
+                AddItem(new Shoes(GetShoeHue()));
             else
-                this.AddItem(new Sandals(this.GetShoeHue()));
+                AddItem(new Sandals(GetShoeHue()));
         }
 
         public override int GetAutoTalkRange(PlayerMobile pm)
@@ -78,7 +78,7 @@ namespace Server.Engines.Quests.Ninja
 
         public override void OnTalk(PlayerMobile player, bool contextMenu)
         {
-            this.PrivateOverheadMessage(MessageType.Regular, 0x3B2, this.m_Message, player.NetState);
+            PrivateOverheadMessage(MessageType.Regular, 0x3B2, m_Message, player.NetState);
         }
 
         public override void Serialize(GenericWriter writer)
@@ -96,7 +96,7 @@ namespace Server.Engines.Quests.Ninja
 
             int version = reader.ReadEncodedInt();
 
-            this.m_Message = reader.ReadInt();
+            m_Message = reader.ReadInt();
         }
     }
 }

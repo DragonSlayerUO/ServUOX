@@ -8,7 +8,7 @@ namespace Server.Items
         public YuccaTree()
             : base(0x0D37)
         {
-            this.Weight = 10;
+            Weight = 10;
         }
 
         public YuccaTree(Serial serial)

@@ -20,30 +20,30 @@ namespace Server.Engines.Quests.Haven
 
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x83F3;
+            Hue = 0x83F3;
 
-            this.Female = false;
-            this.Body = 0x190;
-            this.Name = "Uzeraan";
+            Female = false;
+            Body = 0x190;
+            Name = "Uzeraan";
         }
 
         public override void InitOutfit()
         {
-            this.AddItem(new Robe(0x4DD));
-            this.AddItem(new WizardsHat(0x8A5));
-            this.AddItem(new Shoes(0x8A5));
+            AddItem(new Robe(0x4DD));
+            AddItem(new WizardsHat(0x8A5));
+            AddItem(new Shoes(0x8A5));
 
-            this.HairItemID = 0x203C;
-            this.HairHue = 0x455;
+            HairItemID = 0x203C;
+            HairHue = 0x455;
 
-            this.FacialHairItemID = 0x203E;
-            this.FacialHairHue = 0x455;
+            FacialHairItemID = 0x203E;
+            FacialHairHue = 0x455;
 
             BlackStaff staff = new BlackStaff();
             staff.Movable = false;
-            this.AddItem(staff);
+            AddItem(staff);
         }
 
         public override int GetAutoTalkRange(PlayerMobile pm)
@@ -155,8 +155,8 @@ namespace Server.Engines.Quests.Haven
 
                                 if (obj != null && !obj.Completed)
                                 {
-                                    this.FocusTo(player);
-                                    this.SayTo(player, 1049378); // Hand me the scroll, if you have it.
+                                    FocusTo(player);
+                                    SayTo(player, 1049378); // Hand me the scroll, if you have it.
                                 }
                                 else
                                 {
@@ -164,8 +164,8 @@ namespace Server.Engines.Quests.Haven
 
                                     if (obj != null && !obj.Completed)
                                     {
-                                        this.FocusTo(player);
-                                        this.SayTo(player, 1049381); // Hand me the Fertile Dirt, if you have it.
+                                        FocusTo(player);
+                                        SayTo(player, 1049381); // Hand me the Fertile Dirt, if you have it.
                                     }
                                     else
                                     {
@@ -173,8 +173,8 @@ namespace Server.Engines.Quests.Haven
 
                                         if (obj != null && !obj.Completed)
                                         {
-                                            this.FocusTo(player);
-                                            this.SayTo(player, 1049379); // Hand me the Vial of Blood, if you have it.
+                                            FocusTo(player);
+                                            SayTo(player, 1049379); // Hand me the Vial of Blood, if you have it.
                                         }
                                         else
                                         {
@@ -182,12 +182,12 @@ namespace Server.Engines.Quests.Haven
 
                                             if (obj != null && !obj.Completed)
                                             {
-                                                this.FocusTo(player);
-                                                this.SayTo(player, 1049380); // Hand me the Daemon Bone, if you have it.
+                                                FocusTo(player);
+                                                SayTo(player, 1049380); // Hand me the Daemon Bone, if you have it.
                                             }
                                             else
                                             {
-                                                this.SayTo(player, 1049357); // I have nothing more for you at this time.
+                                                SayTo(player, 1049357); // I have nothing more for you at this time.
                                             }
                                         }
                                     }
@@ -217,12 +217,12 @@ namespace Server.Engines.Quests.Haven
 
                             if (horn.Charges < 10)
                             {
-                                this.SayTo(from, 1049384); // I have recharged the item for you.
+                                SayTo(from, 1049384); // I have recharged the item for you.
                                 horn.Charges = 10;
                             }
                             else
                             {
-                                this.SayTo(from, 1049385); // That doesn't need recharging yet.
+                                SayTo(from, 1049385); // That doesn't need recharging yet.
                             }
                         }
                         else
@@ -419,7 +419,7 @@ namespace Server.Engines.Quests.Haven
         {
             base.OnMovement(m, oldLocation);
 
-            if (m is PlayerMobile && !m.Frozen && !m.Alive && this.InRange(m, 4) && !this.InRange(oldLocation, 4) && this.InLOS(m))
+            if (m is PlayerMobile && !m.Frozen && !m.Alive && InRange(m, 4) && !InRange(oldLocation, 4) && InLOS(m))
             {
                 if (m.Map == null || !m.Map.CanFit(m.Location, 16, false, false))
                 {
@@ -427,7 +427,7 @@ namespace Server.Engines.Quests.Haven
                 }
                 else
                 {
-                    this.Direction = this.GetDirectionTo(m);
+                    Direction = GetDirectionTo(m);
 
                     m.PlaySound(0x214);
                     m.FixedEffect(0x376A, 10, 16);

@@ -42,8 +42,8 @@ namespace Server.Items
             {
                 case 0:
                     {
-                        this.Resistances.Poison = 0;
-                        this.Resistances.Energy = 0;
+                        Resistances.Poison = 0;
+                        Resistances.Energy = 0;
                         break;
                     }
             }

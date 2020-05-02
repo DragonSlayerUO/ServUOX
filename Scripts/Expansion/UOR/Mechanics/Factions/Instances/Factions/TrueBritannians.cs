@@ -9,7 +9,7 @@ namespace Server.Factions
         {
             m_Instance = this;
 
-            this.Definition =
+            Definition =
                 new FactionDefinition(
                     2,
                     1254, // dark purple

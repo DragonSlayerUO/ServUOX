@@ -8,7 +8,7 @@ namespace Server.Items
         public LeafGorget()
             : base(0x2FC7)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public LeafGorget(Serial serial)

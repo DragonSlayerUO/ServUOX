@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public Britain()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     0,
                     0x1869,

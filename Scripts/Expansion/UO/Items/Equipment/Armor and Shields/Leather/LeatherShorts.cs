@@ -11,7 +11,7 @@ namespace Server.Items
         public LeatherShorts()
             : base(0x1C00)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public LeatherShorts(Serial serial)

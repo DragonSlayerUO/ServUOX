@@ -99,7 +99,7 @@ namespace Server.Items
         public MaleGargishClothArms(int hue)
             : base(0x0404, Layer.Arms, hue)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public MaleGargishClothArms(Serial serial)

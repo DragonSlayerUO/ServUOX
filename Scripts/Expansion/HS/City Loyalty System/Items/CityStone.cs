@@ -155,7 +155,7 @@ namespace Server.Engines.CityLoyalty
                                         Boxes = new List<BallotBox>();
 
                                     Boxes.Add(box);
-                                    box.MoveToWorld(new Point3D(p), this.Map);
+                                    box.MoveToWorld(new Point3D(p), Map);
 
                                     m.SendMessage("{0} of {1} ballot boxes placed.", Boxes.Count.ToString(), CityLoyaltySystem.MaxBallotBoxes.ToString());
                                 }
@@ -197,7 +197,7 @@ namespace Server.Engines.CityLoyalty
 
         public bool CheckLocation(Mobile m, BallotBox box, IPoint3D p)
         {
-            Region r = Region.Find(new Point3D(p), this.Map);
+            Region r = Region.Find(new Point3D(p), Map);
 
             if (!r.IsPartOf(City.Definition.Region))
             {
@@ -205,7 +205,7 @@ namespace Server.Engines.CityLoyalty
                 return false;
             }
 
-            if (!box.DropToWorld(new Point3D(p), this.Map))
+            if (!box.DropToWorld(new Point3D(p), Map))
             {
                 m.SendMessage("You cannot place a ballot box there!");
                 return false;

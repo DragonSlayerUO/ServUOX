@@ -41,7 +41,7 @@ namespace Server.Mobiles
             AddItem(ApplyHue(new ThighBoots(), 0x47E));
             AddItem(ApplyHue(new BlackStaff(), 0x47E));
 
-            if (this.Female)
+            if (Female)
             {
                 AddItem(ApplyHue(new LeatherGloves(), 0x47E));
                 AddItem(ApplyHue(new GoldNecklace(), 0x47E));
@@ -52,7 +52,7 @@ namespace Server.Mobiles
                 AddItem(ApplyHue(new PlateGorget(), 0x47E));
             }
 
-            switch (Utility.Random(this.Female ? 2 : 1))
+            switch (Utility.Random(Female ? 2 : 1))
             {
                 case 0:
                     HairItemID = 0x203C;

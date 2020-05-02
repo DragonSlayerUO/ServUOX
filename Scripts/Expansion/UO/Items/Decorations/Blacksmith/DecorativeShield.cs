@@ -9,7 +9,7 @@ namespace Server.Items
         public DecorativeShield1()
             : base(0x156C)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield1(Serial serial)
@@ -39,7 +39,7 @@ namespace Server.Items
         public DecorativeShield2()
             : base(0x156E)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield2(Serial serial)
@@ -69,7 +69,7 @@ namespace Server.Items
         public DecorativeShield3()
             : base(0x1570)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield3(Serial serial)
@@ -99,7 +99,7 @@ namespace Server.Items
         public DecorativeShield4()
             : base(0x1572)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield4(Serial serial)
@@ -129,7 +129,7 @@ namespace Server.Items
         public DecorativeShield5()
             : base(0x1574)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield5(Serial serial)
@@ -159,7 +159,7 @@ namespace Server.Items
         public DecorativeShield6()
             : base(0x1576)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield6(Serial serial)
@@ -189,7 +189,7 @@ namespace Server.Items
         public DecorativeShield7()
             : base(0x1578)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield7(Serial serial)
@@ -219,7 +219,7 @@ namespace Server.Items
         public DecorativeShield8()
             : base(0x157A)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield8(Serial serial)
@@ -249,7 +249,7 @@ namespace Server.Items
         public DecorativeShield9()
             : base(0x157C)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield9(Serial serial)
@@ -279,7 +279,7 @@ namespace Server.Items
         public DecorativeShield10()
             : base(0x157E)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield10(Serial serial)
@@ -309,7 +309,7 @@ namespace Server.Items
         public DecorativeShield11()
             : base(0x1580)
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShield11(Serial serial)
@@ -339,7 +339,7 @@ namespace Server.Items
         public DecorativeShieldSword1North()
             : base(Utility.Random(0x1582, 2))
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShieldSword1North(Serial serial)
@@ -369,7 +369,7 @@ namespace Server.Items
         public DecorativeShieldSword1West()
             : base(Utility.Random(0x1634, 2))
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShieldSword1West(Serial serial)
@@ -399,7 +399,7 @@ namespace Server.Items
         public DecorativeShieldSword2North()
             : base(Utility.Random(0x1584, 2))
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShieldSword2North(Serial serial)
@@ -429,7 +429,7 @@ namespace Server.Items
         public DecorativeShieldSword2West()
             : base(Utility.Random(0x1636, 2))
         {
-            this.Movable = false;
+            Movable = false;
         }
 
         public DecorativeShieldSword2West(Serial serial)

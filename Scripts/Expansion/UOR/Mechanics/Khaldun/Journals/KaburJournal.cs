@@ -204,7 +204,7 @@ namespace Server.Items
 
         public override void OnSingleClick(Mobile from)
         {
-            this.LabelTo(from, "Khabur's Journal");
+            LabelTo(from, "Khabur's Journal");
         }
 
         public override void Serialize(GenericWriter writer)

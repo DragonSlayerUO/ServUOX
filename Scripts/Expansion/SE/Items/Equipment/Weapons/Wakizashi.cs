@@ -9,8 +9,8 @@ namespace Server.Items
         public Wakizashi()
             : base(0x27A4)
         {
-            this.Weight = 5.0;
-            this.Layer = Layer.OneHanded;
+            Weight = 5.0;
+            Layer = Layer.OneHanded;
         }
 
         public Wakizashi(Serial serial)

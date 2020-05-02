@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoObsidian()
             : base(0xF89)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoObsidian(Serial serial)

@@ -7,7 +7,7 @@ namespace Server.Ethics.Hero
     {
         public SummonFamiliar()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 5,
                 "Summon Familiar",
                 "Trubechs Vingir",
@@ -37,7 +37,7 @@ namespace Server.Ethics.Hero
             {
                 from.Familiar = familiar;
 
-                this.FinishInvoke(from);
+                FinishInvoke(from);
             }
         }
     }

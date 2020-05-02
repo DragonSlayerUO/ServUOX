@@ -10,8 +10,8 @@ namespace Server.Items
         public GargishTekagi()
             : base(0x48CE)
         {
-            this.Weight = 5.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 5.0;
+            Layer = Layer.TwoHanded;
         }
 
         public GargishTekagi(Serial serial)

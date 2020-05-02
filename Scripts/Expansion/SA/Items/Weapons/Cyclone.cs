@@ -8,8 +8,8 @@ namespace Server.Items
         public Cyclone()
             : base(0x901)
         {
-            this.Weight = 6.0;
-            this.Layer = Layer.OneHanded;
+            Weight = 6.0;
+            Layer = Layer.OneHanded;
         }
 
         public Cyclone(Serial serial)

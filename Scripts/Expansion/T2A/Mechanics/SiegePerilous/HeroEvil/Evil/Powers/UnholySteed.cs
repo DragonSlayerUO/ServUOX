@@ -6,7 +6,7 @@ namespace Server.Ethics.Evil
     {
         public UnholySteed()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 30,
                 "Unholy Steed",
                 "Trubechs Yeliab",
@@ -36,7 +36,7 @@ namespace Server.Ethics.Evil
             {
                 from.Steed = steed;
 
-                this.FinishInvoke(from);
+                FinishInvoke(from);
             }
         }
     }

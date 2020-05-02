@@ -39,9 +39,9 @@ namespace Server.Engines.Quests.Necro
 
             bag.DropItem(new DarkTidesHorn());
 
-            this.System.From.AddToBackpack(bag);
+            System.From.AddToBackpack(bag);
 
-            this.System.AddConversation(new ReanimateMaabusConversation());
+            System.AddConversation(new ReanimateMaabusConversation());
         }
     }
 
@@ -98,7 +98,7 @@ namespace Server.Engines.Quests.Necro
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindMaabusTombObjective());
+            System.AddObjective(new FindMaabusTombObjective());
         }
     }
 
@@ -141,7 +141,7 @@ namespace Server.Engines.Quests.Necro
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindCrystalCaveObjective());
+            System.AddObjective(new FindCrystalCaveObjective());
         }
     }
 
@@ -179,7 +179,7 @@ namespace Server.Engines.Quests.Necro
                 1060105;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindMardothAboutVaultObjective());
+            System.AddObjective(new FindMardothAboutVaultObjective());
         }
     }
 
@@ -212,7 +212,7 @@ namespace Server.Engines.Quests.Necro
                 1060107;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindCityOfLightObjective());
+            System.AddObjective(new FindCityOfLightObjective());
         }
     }
 
@@ -246,7 +246,7 @@ namespace Server.Engines.Quests.Necro
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new FetchAbraxusScrollObjective());
+            System.AddObjective(new FetchAbraxusScrollObjective());
         }
     }
 
@@ -271,7 +271,7 @@ namespace Server.Engines.Quests.Necro
                 1060114;
         public override void OnRead()
         {
-            this.System.AddObjective(new ReadAbraxusScrollObjective());
+            System.AddObjective(new ReadAbraxusScrollObjective());
         }
     }
 
@@ -303,7 +303,7 @@ namespace Server.Engines.Quests.Necro
                 1060118;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindCallingScrollObjective());
+            System.AddObjective(new FindCallingScrollObjective());
         }
     }
 
@@ -348,7 +348,7 @@ namespace Server.Engines.Quests.Necro
         private bool m_FromMardoth;
         public LostCallingScrollConversation(bool fromMardoth)
         {
-            this.m_FromMardoth = fromMardoth;
+            m_FromMardoth = fromMardoth;
         }
 
         // Serialization
@@ -360,7 +360,7 @@ namespace Server.Engines.Quests.Necro
         {
             get
             {
-                if (this.m_FromMardoth)
+                if (m_FromMardoth)
                 {
                     /* You return without the scroll of Calling?  I'm afraid that
                     * won't do.  You must return to the Crystal Cave and fetch
@@ -385,7 +385,7 @@ namespace Server.Engines.Quests.Necro
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_FromMardoth = reader.ReadBool();
+            m_FromMardoth = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -420,7 +420,7 @@ namespace Server.Engines.Quests.Necro
                 1060121;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindWellOfTearsObjective());
+            System.AddObjective(new FindWellOfTearsObjective());
         }
     }
 
@@ -457,7 +457,7 @@ namespace Server.Engines.Quests.Necro
                 1060133;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindBankObjective());
+            System.AddObjective(new FindBankObjective());
         }
     }
 
@@ -488,7 +488,7 @@ namespace Server.Engines.Quests.Necro
                 1060137;
         public override void OnRead()
         {
-            this.System.Complete();
+            System.Complete();
         }
     }
 

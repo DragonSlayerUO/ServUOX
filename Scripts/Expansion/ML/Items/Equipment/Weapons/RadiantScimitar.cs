@@ -9,7 +9,7 @@ namespace Server.Items
         public RadiantScimitar()
             : base(0x2D33)
         {
-            this.Weight = 9.0;
+            Weight = 9.0;
         }
 
         public RadiantScimitar(Serial serial)

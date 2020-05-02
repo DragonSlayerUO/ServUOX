@@ -72,7 +72,7 @@ namespace Server.Items
             InternalTimer t = new InternalTimer(pm, m_EffectType, m_EffectDuration);
             t.Start();
 
-            ThieveConsumableInfo info = new ThieveConsumableInfo(t, this.m_EffectType);
+            ThieveConsumableInfo info = new ThieveConsumableInfo(t, m_EffectType);
 
             if (EffectTable.ContainsKey(pm))
             {
@@ -80,7 +80,7 @@ namespace Server.Items
             }
 
             EffectTable.Add(pm, info);
-            this.Consume();
+            Consume();
         }
 
         protected static void RemoveEffect(PlayerMobile pm, ThieveConsumableEffect effectType)

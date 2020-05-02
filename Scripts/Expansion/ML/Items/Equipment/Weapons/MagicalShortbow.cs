@@ -9,7 +9,7 @@ namespace Server.Items
         public MagicalShortbow()
             : base(0x2D2B)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public MagicalShortbow(Serial serial)

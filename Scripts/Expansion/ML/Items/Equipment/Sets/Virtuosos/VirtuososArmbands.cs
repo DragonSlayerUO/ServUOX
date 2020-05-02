@@ -23,10 +23,10 @@ namespace Server.Items
         [Constructable]
         public VirtuososArmbands() : base()
         {
-            this.Hue = 1374;
-            this.Weight = 5;
-            this.StrRequirement = 80;
-            this.SetHue = 1374;
+            Hue = 1374;
+            Weight = 5;
+            StrRequirement = 80;
+            SetHue = 1374;
         }
 
         public VirtuososArmbands(Serial serial) : base(serial)

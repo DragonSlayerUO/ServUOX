@@ -152,7 +152,7 @@ namespace Server.Commands
 
         public Item Construct()
         {
-            if (this.m_Type == null)
+            if (m_Type == null)
                 return null;
 
             Item item;
@@ -215,7 +215,7 @@ namespace Server.Commands
                     else
                         item = new AnkhNorth(bloodied);
                 }
-                else if (this.m_Type == typeofMarkContainer)
+                else if (m_Type == typeofMarkContainer)
                 {
                     bool bone = false;
                     bool locked = false;
@@ -660,12 +660,12 @@ namespace Server.Commands
                         if (indexOf >= 0)
                             tp.MessageNumber = Utility.ToInt32(m_Params[i].Substring(++indexOf));
                     }
-                    else if (this.m_Params[i].StartsWith("PointDest"))
+                    else if (m_Params[i].StartsWith("PointDest"))
                     {
-                        int indexOf = this.m_Params[i].IndexOf('=');
+                        int indexOf = m_Params[i].IndexOf('=');
 
                         if (indexOf >= 0)
-                            tp.PointDest = Point3D.Parse(this.m_Params[i].Substring(++indexOf));
+                            tp.PointDest = Point3D.Parse(m_Params[i].Substring(++indexOf));
                     }
                     else if (m_Params[i].StartsWith("MapDest"))
                     {

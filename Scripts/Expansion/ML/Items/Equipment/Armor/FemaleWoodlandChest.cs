@@ -10,7 +10,7 @@ namespace Server.Items
         public FemaleElvenPlateChest()
             : base(0x2B6D)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public FemaleElvenPlateChest(Serial serial)

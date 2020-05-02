@@ -27,7 +27,7 @@ namespace Server.Items
         {
             if (m.Player)
             {
-                if (!m.InRange(this.Location, 2))
+                if (!m.InRange(Location, 2))
                     m.CloseGump(typeof(QuestRewardGump));
             }
         }

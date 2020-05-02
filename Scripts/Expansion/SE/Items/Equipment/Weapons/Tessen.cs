@@ -11,8 +11,8 @@ namespace Server.Items
         public Tessen()
             : base(0x27A3)
         {
-            this.Weight = 6.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 6.0;
+            Layer = Layer.TwoHanded;
         }
 
         public Tessen(Serial serial)

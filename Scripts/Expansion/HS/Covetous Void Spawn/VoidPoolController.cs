@@ -65,7 +65,7 @@ namespace Server.Engines.VoidPool
                 {
                     if (Region == null)
                     {
-                        Region = new VoidPoolRegion(this, this.Map);
+                        Region = new VoidPoolRegion(this, Map);
                         Region.Register();
                     }
 
@@ -222,7 +222,7 @@ namespace Server.Engines.VoidPool
                     SpawnWave();
                 }
 
-                IPooledEnumerable eable = this.Map.GetMobilesInBounds(PoolWalls);
+                IPooledEnumerable eable = Map.GetMobilesInBounds(PoolWalls);
                 foreach (Mobile m in eable)
                 {
                     if (!OnGoing)
@@ -252,9 +252,9 @@ namespace Server.Engines.VoidPool
                 {
                     int x = start.X + Utility.RandomMinMax(start.X - (StartPointVariance / 2), start.X + (StartPointVariance / 2));
                     int y = start.Y + Utility.RandomMinMax(start.Y - (StartPointVariance / 2), start.Y + (StartPointVariance / 2));
-                    int z = this.Map.GetAverageZ(x, y);
+                    int z = Map.GetAverageZ(x, y);
 
-                    if (this.Map.CanSpawnMobile(x, y, z))
+                    if (Map.CanSpawnMobile(x, y, z))
                     {
                         start = new Point3D(x, y, z);
                         break;
@@ -286,7 +286,7 @@ namespace Server.Engines.VoidPool
                     {
                         if (OnGoing)
                         {
-                            bc.MoveToWorld(start, this.Map);
+                            bc.MoveToWorld(start, Map);
                             bc.Home = EndPoint;
                             bc.RangeHome = 1;
 
@@ -326,7 +326,7 @@ namespace Server.Engines.VoidPool
 
         public WayPoint GetNearestWaypoint(Mobile m, int range = 15)
         {
-            IPooledEnumerable eable = this.Map.GetItemsInRange(m.Location, range);
+            IPooledEnumerable eable = Map.GetItemsInRange(m.Location, range);
 
             int closestRange = 15;
             WayPoint closest = null;
@@ -351,7 +351,7 @@ namespace Server.Engines.VoidPool
 
         public Item GetNearestVoidPoolWall(Mobile m)
         {
-            IPooledEnumerable eable = this.Map.GetItemsInRange(m.Location, 5);
+            IPooledEnumerable eable = Map.GetItemsInRange(m.Location, 5);
 
             int closestRange = 5;
             Item closest = null;
@@ -479,9 +479,9 @@ namespace Server.Engines.VoidPool
 
                     if (info.Creatures.Count == 0)
                     {
-                        foreach (Mobile m in info.Credit.Where(m => m.Region == this.Region && m is PlayerMobile))
+                        foreach (Mobile m in info.Credit.Where(m => m.Region == Region && m is PlayerMobile))
                         {
-                            double award = Math.Max(0, this.Map == Map.Felucca ? Stage * 2 : Stage);
+                            double award = Math.Max(0, Map == Map.Felucca ? Stage * 2 : Stage);
 
                             if (award > 0)
                             {
@@ -572,7 +572,7 @@ namespace Server.Engines.VoidPool
 
             foreach (var info in Waves.Where(i => i.Credit.Contains(from)))
             {
-                points += this.Map == Map.Felucca ? Stage * 2 : Stage;
+                points += Map == Map.Felucca ? Stage * 2 : Stage;
             }
 
             return points;

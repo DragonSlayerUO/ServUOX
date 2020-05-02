@@ -13,7 +13,7 @@ namespace Server.Gumps
 
         public override void OnResponse(NetState state, RelayInfo info)
         {
-            if (GuildGump.BadLeader(this.m_Mobile, this.m_Guild))
+            if (GuildGump.BadLeader(m_Mobile, m_Guild))
                 return;
 
             if (info.ButtonID == 1)
@@ -24,34 +24,34 @@ namespace Server.Gumps
                 {
                     int index = switches[0];
 
-                    if (index >= 0 && index < this.m_List.Count)
+                    if (index >= 0 && index < m_List.Count)
                     {
-                        Mobile m = this.m_List[index];
+                        Mobile m = m_List[index];
 
                         if (m != null && !m.Deleted)
                         {
-                            this.m_Mobile.SendLocalizedMessage(1013074); // New title (20 characters max):
-                            this.m_Mobile.Prompt = new GuildTitlePrompt(this.m_Mobile, m, this.m_Guild);
+                            m_Mobile.SendLocalizedMessage(1013074); // New title (20 characters max):
+                            m_Mobile.Prompt = new GuildTitlePrompt(m_Mobile, m, m_Guild);
                         }
                     }
                 }
             }
             else if (info.ButtonID == 2)
             {
-                GuildGump.EnsureClosed(this.m_Mobile);
-                this.m_Mobile.SendGump(new GuildmasterGump(this.m_Mobile, this.m_Guild));
+                GuildGump.EnsureClosed(m_Mobile);
+                m_Mobile.SendGump(new GuildmasterGump(m_Mobile, m_Guild));
             }
         }
 
         protected override void Design()
         {
-            this.AddHtmlLocalized(20, 10, 400, 35, 1011118, false, false); // Grant a title to another member.
+            AddHtmlLocalized(20, 10, 400, 35, 1011118, false, false); // Grant a title to another member.
 
-            this.AddButton(20, 400, 4005, 4007, 1, GumpButtonType.Reply, 0);
-            this.AddHtmlLocalized(55, 400, 245, 30, 1011127, false, false); // I dub thee...
+            AddButton(20, 400, 4005, 4007, 1, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(55, 400, 245, 30, 1011127, false, false); // I dub thee...
 
-            this.AddButton(300, 400, 4005, 4007, 2, GumpButtonType.Reply, 0);
-            this.AddHtmlLocalized(335, 400, 100, 35, 1011012, false, false); // CANCEL
+            AddButton(300, 400, 4005, 4007, 2, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(335, 400, 100, 35, 1011012, false, false); // CANCEL
         }
     }
 }

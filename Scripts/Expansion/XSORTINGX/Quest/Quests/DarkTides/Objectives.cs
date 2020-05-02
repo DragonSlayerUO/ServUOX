@@ -22,7 +22,7 @@ namespace Server.Engines.Quests.Necro
         public override QuestItemInfo[] Info => m_Info;
         public override void OnComplete()
         {
-            this.System.AddConversation(new MaabasConversation());
+            System.AddConversation(new MaabasConversation());
         }
     }
 
@@ -39,7 +39,7 @@ namespace Server.Engines.Quests.Necro
                 1060104;
         public override void OnComplete()
         {
-            this.System.AddConversation(new HorusConversation());
+            System.AddConversation(new HorusConversation());
         }
     }
 
@@ -56,7 +56,7 @@ namespace Server.Engines.Quests.Necro
                 1060106;
         public override void OnComplete()
         {
-            this.System.AddConversation(new MardothVaultConversation());
+            System.AddConversation(new MardothVaultConversation());
         }
     }
 
@@ -73,13 +73,13 @@ namespace Server.Engines.Quests.Necro
                 1060124;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(2024, 1240, -90), 3))
-                this.Complete();
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(2024, 1240, -90), 3))
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new FindMaabusCorpseObjective());
+            System.AddObjective(new FindMaabusCorpseObjective());
         }
     }
 
@@ -96,13 +96,13 @@ namespace Server.Engines.Quests.Necro
                 1061142;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(2024, 1223, -90), 3))
-                this.Complete();
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(2024, 1223, -90), 3))
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new AnimateMaabusCorpseObjective());
+            System.AddObjective(new AnimateMaabusCorpseObjective());
         }
     }
 
@@ -119,13 +119,13 @@ namespace Server.Engines.Quests.Necro
                 1060108;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(1076, 519, -90), 5))
-                this.Complete();
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(1076, 519, -90), 5))
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new FindVaultOfSecretsObjective());
+            System.AddObjective(new FindVaultOfSecretsObjective());
         }
     }
 
@@ -149,13 +149,13 @@ namespace Server.Engines.Quests.Necro
         public override QuestItemInfo[] Info => m_Info;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(1072, 455, -90), 1))
-                this.Complete();
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(1072, 455, -90), 1))
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddConversation(new VaultOfSecretsConversation());
+            System.AddConversation(new VaultOfSecretsConversation());
         }
     }
 
@@ -170,13 +170,13 @@ namespace Server.Engines.Quests.Necro
                 1060196;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(1076, 450, -84), 5))
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(1076, 450, -84), 5))
             {
-                HordeMinionFamiliar hmf = Spells.Necromancy.SummonFamiliarSpell.Table[this.System.From] as HordeMinionFamiliar;
+                HordeMinionFamiliar hmf = Spells.Necromancy.SummonFamiliarSpell.Table[System.From] as HordeMinionFamiliar;
 
-                if (hmf != null && hmf.InRange(this.System.From, 5) && !hmf.QuestOverride)
+                if (hmf != null && hmf.InRange(System.From, 5) && !hmf.QuestOverride)
                 {
-                    this.System.From.SendLocalizedMessage(1060113); // You instinctively will your familiar to fetch the scroll for you.
+                    System.From.SendLocalizedMessage(1060113); // You instinctively will your familiar to fetch the scroll for you.
                     //hmf.TargetLocation = new Point2D(1076, 450);
 
                     if (hmf.AIObject != null)
@@ -192,7 +192,7 @@ namespace Server.Engines.Quests.Necro
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new RetrieveAbraxusScrollObjective());
+            System.AddObjective(new RetrieveAbraxusScrollObjective());
         }
     }
 
@@ -209,7 +209,7 @@ namespace Server.Engines.Quests.Necro
                 1060199;
         public override void OnComplete()
         {
-            this.System.AddConversation(new ReadAbraxusScrollConversation());
+            System.AddConversation(new ReadAbraxusScrollConversation());
         }
     }
 
@@ -227,7 +227,7 @@ namespace Server.Engines.Quests.Necro
                 1060125;
         public override void OnComplete()
         {
-            this.System.AddObjective(new ReturnToCrystalCaveObjective());
+            System.AddObjective(new ReturnToCrystalCaveObjective());
         }
     }
 
@@ -250,7 +250,7 @@ namespace Server.Engines.Quests.Necro
         public override QuestItemInfo[] Info => m_Info;
         public override void OnComplete()
         {
-            this.System.AddObjective(new SpeakCavePasswordObjective());
+            System.AddObjective(new SpeakCavePasswordObjective());
         }
     }
 
@@ -268,7 +268,7 @@ namespace Server.Engines.Quests.Necro
                 1060117;
         public override void OnComplete()
         {
-            this.System.AddConversation(new SecondHorusConversation());
+            System.AddConversation(new SecondHorusConversation());
         }
     }
 
@@ -288,44 +288,44 @@ namespace Server.Engines.Quests.Necro
                 1060119;
         public override bool IgnoreYoungProtection(Mobile from)
         {
-            return !this.m_SkitteringHoppersDisposed && from is SkitteringHopper;
+            return !m_SkitteringHoppersDisposed && from is SkitteringHopper;
         }
 
         public override bool GetKillEvent(BaseCreature creature, Container corpse)
         {
-            return !this.m_SkitteringHoppersDisposed;
+            return !m_SkitteringHoppersDisposed;
         }
 
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is SkitteringHopper)
             {
-                if (!this.m_HealConversationShown)
+                if (!m_HealConversationShown)
                 {
-                    this.m_HealConversationShown = true;
-                    this.System.AddConversation(new HealConversation());
+                    m_HealConversationShown = true;
+                    System.AddConversation(new HealConversation());
                 }
 
-                if (++this.m_SkitteringHoppersKilled >= 5)
+                if (++m_SkitteringHoppersKilled >= 5)
                 {
-                    this.m_SkitteringHoppersDisposed = true;
-                    this.System.AddObjective(new FindHorusAboutRewardObjective());
+                    m_SkitteringHoppersDisposed = true;
+                    System.AddObjective(new FindHorusAboutRewardObjective());
                 }
             }
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new FindMardothAboutKronusObjective());
+            System.AddObjective(new FindMardothAboutKronusObjective());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_SkitteringHoppersKilled = reader.ReadEncodedInt();
-            this.m_HealConversationShown = reader.ReadBool();
-            this.m_SkitteringHoppersDisposed = reader.ReadBool();
+            m_SkitteringHoppersKilled = reader.ReadEncodedInt();
+            m_HealConversationShown = reader.ReadBool();
+            m_SkitteringHoppersDisposed = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -351,7 +351,7 @@ namespace Server.Engines.Quests.Necro
                 1060126;
         public override void OnComplete()
         {
-            this.System.AddConversation(new HorusRewardConversation());
+            System.AddConversation(new HorusRewardConversation());
         }
     }
 
@@ -368,7 +368,7 @@ namespace Server.Engines.Quests.Necro
                 1060127;
         public override void OnComplete()
         {
-            this.System.AddConversation(new MardothKronusConversation());
+            System.AddConversation(new MardothKronusConversation());
         }
     }
 
@@ -387,29 +387,29 @@ namespace Server.Engines.Quests.Necro
                 1060128;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && m_WellOfTearsArea.Contains(this.System.From.Location))
+            if (System.From.Map == Map.Malas && m_WellOfTearsArea.Contains(System.From.Location))
             {
-                if (DarkTidesQuest.HasLostCallingScroll(this.System.From))
+                if (DarkTidesQuest.HasLostCallingScroll(System.From))
                 {
-                    if (!this.m_Inside)
-                        this.System.AddConversation(new LostCallingScrollConversation(false));
+                    if (!m_Inside)
+                        System.AddConversation(new LostCallingScrollConversation(false));
                 }
                 else
                 {
-                    this.Complete();
+                    Complete();
                 }
 
-                this.m_Inside = true;
+                m_Inside = true;
             }
             else
             {
-                this.m_Inside = false;
+                m_Inside = false;
             }
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new UseCallingScrollObjective());
+            System.AddObjective(new UseCallingScrollObjective());
         }
     }
 
@@ -432,7 +432,7 @@ namespace Server.Engines.Quests.Necro
         private bool m_Victory;
         public FindMardothEndObjective(bool victory)
         {
-            this.m_Victory = victory;
+            m_Victory = victory;
         }
 
         // Serialization
@@ -444,7 +444,7 @@ namespace Server.Engines.Quests.Necro
         {
             get
             {
-                if (this.m_Victory)
+                if (m_Victory)
                 {
                     /* Victory! You have done as Mardoth has asked of you.
                     * Take as much of your foe's loot as you can carry
@@ -464,14 +464,14 @@ namespace Server.Engines.Quests.Necro
         }
         public override void OnComplete()
         {
-            this.System.AddConversation(new MardothEndConversation());
+            System.AddConversation(new MardothEndConversation());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_Victory = reader.ReadBool();
+            m_Victory = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -496,13 +496,13 @@ namespace Server.Engines.Quests.Necro
                 1060134;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(2048, 1345, -84), 5))
-                this.Complete();
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(2048, 1345, -84), 5))
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddObjective(new CashBankCheckObjective());
+            System.AddObjective(new CashBankCheckObjective());
         }
     }
 
@@ -519,7 +519,7 @@ namespace Server.Engines.Quests.Necro
                 1060644;
         public override void OnComplete()
         {
-            this.System.AddConversation(new BankerConversation());
+            System.AddConversation(new BankerConversation());
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Server.Items
         public LeatherDo()
             : base(0x27C6)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public LeatherDo(Serial serial)

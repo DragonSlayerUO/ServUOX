@@ -10,8 +10,8 @@ namespace Server.Engines.Quests.Samurai
         [Constructable]
         public HonorCandle()
         {
-            this.Movable = false;
-            this.Duration = LitDuration;
+            Movable = false;
+            Duration = LitDuration;
         }
 
         public HonorCandle(Serial serial)
@@ -23,11 +23,11 @@ namespace Server.Engines.Quests.Samurai
         public override int UnlitSound => 0;
         public override void OnDoubleClick(Mobile from)
         {
-            bool wasBurning = this.Burning;
+            bool wasBurning = Burning;
 
             base.OnDoubleClick(from);
 
-            if (!wasBurning && this.Burning)
+            if (!wasBurning && Burning)
             {
                 PlayerMobile player = from as PlayerMobile;
 
@@ -43,21 +43,21 @@ namespace Server.Engines.Quests.Samurai
                     if (obj != null && !obj.Completed)
                         obj.Complete();
 
-                    this.SendLocalizedMessageTo(from, 1063251); // You light a candle in honor.
+                    SendLocalizedMessageTo(from, 1063251); // You light a candle in honor.
                 }
             }
         }
 
         public override void Burn()
         {
-            this.Douse();
+            Douse();
         }
 
         public override void Douse()
         {
             base.Douse();
 
-            this.Duration = LitDuration;
+            Duration = LitDuration;
         }
 
         public override void Serialize(GenericWriter writer)

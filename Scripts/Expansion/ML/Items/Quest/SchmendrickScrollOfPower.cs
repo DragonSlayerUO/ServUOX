@@ -8,8 +8,8 @@ namespace Server.Engines.Quests.Haven
         public SchmendrickScrollOfPower()
             : base(0xE34)
         {
-            this.Weight = 1.0;
-            this.Hue = 0x34D;
+            Weight = 1.0;
+            Hue = 0x34D;
         }
 
         public SchmendrickScrollOfPower(Serial serial)

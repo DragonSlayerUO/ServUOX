@@ -17,7 +17,7 @@ namespace Server.Items
         public RecipeScroll(int recipeID)
             : base(0x2831)
         {
-            this.m_RecipeID = recipeID;
+            m_RecipeID = recipeID;
         }
 
         public RecipeScroll(Serial serial)
@@ -31,20 +31,20 @@ namespace Server.Items
         {
             get
             {
-                return this.m_RecipeID;
+                return m_RecipeID;
             }
             set
             {
-                this.m_RecipeID = value;
-                this.InvalidateProperties();
+                m_RecipeID = value;
+                InvalidateProperties();
             }
         }
         public Recipe Recipe
         {
             get
             {
-                if (Recipe.Recipes.ContainsKey(this.m_RecipeID))
-                    return Recipe.Recipes[this.m_RecipeID];
+                if (Recipe.Recipes.ContainsKey(m_RecipeID))
+                    return Recipe.Recipes[m_RecipeID];
 
                 return null;
             }
@@ -53,7 +53,7 @@ namespace Server.Items
         {
             base.GetProperties(list);
 
-            Recipe r = this.Recipe;
+            Recipe r = Recipe;
 
             if (r != null)
                 list.Add(1049644, r.TextDefinition.ToString()); // [~1_stuff~]
@@ -61,13 +61,13 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (!from.InRange(this.GetWorldLocation(), 2))
+            if (!from.InRange(GetWorldLocation(), 2))
             {
                 from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
                 return;
             }
 
-            Recipe r = this.Recipe;
+            Recipe r = Recipe;
 
             if (r != null && from is PlayerMobile)
             {
@@ -82,7 +82,7 @@ namespace Server.Items
                     {
                         pm.SendLocalizedMessage(1073451, r.TextDefinition.ToString()); // You have learned a new recipe: ~1_RECIPE~
                         pm.AcquireRecipe(r);
-                        this.Delete();
+                        Delete();
                     }
                     else
                     {
@@ -115,7 +115,7 @@ namespace Server.Items
             {
                 case 0:
                     {
-                        this.m_RecipeID = reader.ReadInt();
+                        m_RecipeID = reader.ReadInt();
 
                         break;
                     }

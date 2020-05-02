@@ -299,7 +299,7 @@ namespace Server.Misc
             string[] syllables = new string[syllableCount];
 
             for (int i = 0; i < syllableCount; ++i)
-                syllables[i] = this.GetRandomSyllable();
+                syllables[i] = GetRandomSyllable();
 
             return string.Concat(syllables);
         }
@@ -338,7 +338,7 @@ namespace Server.Misc
                 else
                     syllableCount = Utility.Random(1, 3);
 
-                string word = this.ConstructWord(syllableCount);
+                string word = ConstructWord(syllableCount);
 
                 sentance.Append(word);
 

@@ -8,8 +8,8 @@ namespace Server.Items
         public Redkeyfragment()
             : base(0x1012)
         {
-            this.Movable = false;
-            this.Hue = 0x8F;
+            Movable = false;
+            Hue = 0x8F;
         }
 
         public Redkeyfragment(Serial serial)

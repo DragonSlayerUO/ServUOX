@@ -12,8 +12,8 @@ namespace Server.Items
         public BaseReagent(int itemID, int amount)
             : base(itemID)
         {
-            this.Stackable = true;
-            this.Amount = amount;
+            Stackable = true;
+            Amount = amount;
         }
 
         public BaseReagent(Serial serial)

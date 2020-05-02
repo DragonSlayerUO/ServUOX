@@ -10,7 +10,7 @@ namespace Server.Items
         public GargishKatana()
             : base(0x48BA)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public GargishKatana(Serial serial)

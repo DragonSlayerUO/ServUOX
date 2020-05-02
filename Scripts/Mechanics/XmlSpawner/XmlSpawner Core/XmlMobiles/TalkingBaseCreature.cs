@@ -177,7 +177,7 @@ namespace Server.Mobiles
                 int hours;
                 int minutes;
 
-                Server.Items.Clock.GetTime(this.Map, this.Location.X, this.Location.Y, out hours, out minutes);
+                Server.Items.Clock.GetTime(Map, Location.X, Location.Y, out hours, out minutes);
                 return (new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, hours, minutes, 0).TimeOfDay);
             }
         }
@@ -196,7 +196,7 @@ namespace Server.Mobiles
 
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MoonPhase MoonPhase => Clock.GetMoonPhase(this.Map, this.Location.X, this.Location.Y);
+        public MoonPhase MoonPhase => Clock.GetMoonPhase(Map, Location.X, Location.Y);
 
         [CommandProperty(AccessLevel.GameMaster)]
         public AccessLevel TriggerAccessLevel

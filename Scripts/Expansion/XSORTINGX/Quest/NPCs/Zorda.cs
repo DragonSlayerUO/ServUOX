@@ -167,7 +167,7 @@ namespace Server.Items
             }
 
             if (list.Count > 0)
-                this.Tiers.Add(list);
+                Tiers.Add(list);
         }
 
         public override void Serialize(GenericWriter writer)

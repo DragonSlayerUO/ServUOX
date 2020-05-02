@@ -11,7 +11,7 @@ namespace Server.Targets
         public MoveTarget(object o)
             : base(-1, true, TargetFlags.None)
         {
-            this.m_Object = o;
+            m_Object = o;
         }
 
         protected override void OnTarget(Mobile from, object o)
@@ -20,7 +20,7 @@ namespace Server.Targets
 
             if (p != null)
             {
-                if (!BaseCommand.IsAccessible(from, this.m_Object))
+                if (!BaseCommand.IsAccessible(from, m_Object))
                 {
                     from.SendLocalizedMessage(500447); // That is not accessible.
                     return;
@@ -29,11 +29,11 @@ namespace Server.Targets
                 if (p is Item)
                     p = ((Item)p).GetWorldTop();
 
-                CommandLogging.WriteLine(from, "{0} {1} moving {2} to {3}", from.AccessLevel, CommandLogging.Format(from), CommandLogging.Format(this.m_Object), new Point3D(p));
+                CommandLogging.WriteLine(from, "{0} {1} moving {2} to {3}", from.AccessLevel, CommandLogging.Format(from), CommandLogging.Format(m_Object), new Point3D(p));
 
-                if (this.m_Object is Item)
+                if (m_Object is Item)
                 {
-                    Item item = (Item)this.m_Object;
+                    Item item = (Item)m_Object;
 
                     if (!item.Deleted)
                     {
@@ -45,9 +45,9 @@ namespace Server.Targets
                         from.SendLocalizedMessage(1154965); // Invalid item.
                     }
                 }
-                else if (this.m_Object is Mobile)
+                else if (m_Object is Mobile)
                 {
-                    Mobile m = (Mobile)this.m_Object;
+                    Mobile m = (Mobile)m_Object;
 
                     if (!m.Deleted)
                     {

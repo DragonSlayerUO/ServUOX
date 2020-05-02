@@ -14,7 +14,7 @@ namespace Server.Items
         public override bool ConsumeAmmo => false;
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker))
+            if (!Validate(attacker))
                 return;
 
             ClearCurrentAbility(attacker);

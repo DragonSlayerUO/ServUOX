@@ -148,13 +148,13 @@ namespace Server.Engines.Blackthorn
             {
                 newType = (InvasionType)Utility.Random(10);
             }
-            while (newType == this.InvasionType);
+            while (newType == InvasionType);
 
             do
             {
                 newCity = (City)Utility.Random(9);
             }
-            while (newCity == this.CurrentInvasion);
+            while (newCity == CurrentInvasion);
 
             CurrentInvasion = newCity;
             InvasionType = newType;
@@ -240,7 +240,7 @@ namespace Server.Engines.Blackthorn
             {
                 for (int i = 0; i < 25; i++)
                 {
-                    Point3D p = this.Map.GetRandomSpawnPoint(spawnrec);
+                    Point3D p = Map.GetRandomSpawnPoint(spawnrec);
                     bool exempt = false;
 
                     if (spawnrec.X == 6444 && spawnrec.Y == 2446)
@@ -249,9 +249,9 @@ namespace Server.Engines.Blackthorn
                         p.Z = -2;
                     }
 
-                    if (exempt || this.Map.CanFit(p.X, p.Y, p.Z, 16, false, false, true))
+                    if (exempt || Map.CanFit(p.X, p.Y, p.Z, 16, false, false, true))
                     {
-                        bc.MoveToWorld(p, this.Map);
+                        bc.MoveToWorld(p, Map);
                         bc.Home = Defs[CurrentInvasion].BeaconLoc;
                         bc.SeeksHome = true;
                         bc.RangeHome = Utility.RandomMinMax(5, 10);
@@ -346,10 +346,10 @@ namespace Server.Engines.Blackthorn
 
         private void DoMessage()
         {
-            if (this.Map == null)
+            if (Map == null)
                 return;
 
-            IPooledEnumerable eable = this.Map.GetMobilesInRange(Beacon.Location, 20);
+            IPooledEnumerable eable = Map.GetMobilesInRange(Beacon.Location, 20);
 
             foreach (Mobile m in eable)
             {

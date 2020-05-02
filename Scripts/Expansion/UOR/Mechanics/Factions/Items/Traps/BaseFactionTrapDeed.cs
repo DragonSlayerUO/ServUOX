@@ -15,22 +15,22 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Faction;
+                return m_Faction;
             }
             set
             {
-                this.m_Faction = value;
+                m_Faction = value;
 
-                if (this.m_Faction != null)
-                    this.Hue = this.m_Faction.Definition.HuePrimary;
+                if (m_Faction != null)
+                    Hue = m_Faction.Definition.HuePrimary;
             }
         }
 
         public BaseFactionTrapDeed(int itemID)
             : base(itemID)
         {
-            this.Weight = 1.0;
-            this.LootType = LootType.Blessed;
+            Weight = 1.0;
+            LootType = LootType.Blessed;
         }
 
         public BaseFactionTrapDeed(bool createdFromDeed)
@@ -47,7 +47,7 @@ namespace Server.Factions
         {
             try
             {
-                return Activator.CreateInstance(this.TrapType, new object[] { this.m_Faction, from }) as BaseFactionTrap;
+                return Activator.CreateInstance(TrapType, new object[] { m_Faction, from }) as BaseFactionTrap;
             }
             catch
             {
@@ -61,13 +61,13 @@ namespace Server.Factions
 
             if (faction == null)
                 from.SendLocalizedMessage(1010353, "", 0x23); // Only faction members may place faction traps
-            else if (faction != this.m_Faction)
+            else if (faction != m_Faction)
                 from.SendLocalizedMessage(1010354, "", 0x23); // You may only place faction traps created by your faction
             else if (faction.Traps.Count >= faction.MaximumTraps)
                 from.SendLocalizedMessage(1010358, "", 0x23); // Your faction already has the maximum number of traps placed
             else
             {
-                BaseFactionTrap trap = this.Construct(from);
+                BaseFactionTrap trap = Construct(from);
 
                 if (trap == null)
                     return;
@@ -84,7 +84,7 @@ namespace Server.Factions
                     from.SendLocalizedMessage(1010360); // You arm the trap and carefully hide it from view
                     trap.MoveToWorld(from.Location, from.Map);
                     faction.Traps.Add(trap);
-                    this.Delete();
+                    Delete();
                 }
             }
         }
@@ -95,7 +95,7 @@ namespace Server.Factions
 
             writer.Write(0); // version
 
-            Faction.WriteReference(writer, this.m_Faction);
+            Faction.WriteReference(writer, m_Faction);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -104,15 +104,15 @@ namespace Server.Factions
 
             int version = reader.ReadInt();
 
-            this.m_Faction = Faction.ReadReference(reader);
+            m_Faction = Faction.ReadReference(reader);
         }
 
         #region ICraftable Members
 
         public int OnCraft(int quality, bool makersMark, Mobile from, CraftSystem craftSystem, Type typeRes, ITool tool, CraftItem craftItem, int resHue)
         {
-            this.ItemID = 0x14F0;
-            this.Faction = Faction.Find(from);
+            ItemID = 0x14F0;
+            Faction = Faction.Find(from);
 
             return 1;
         }

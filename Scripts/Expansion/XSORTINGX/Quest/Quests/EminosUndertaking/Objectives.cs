@@ -15,7 +15,7 @@ namespace Server.Engines.Quests.Ninja
                 1063174;
         public override void OnComplete()
         {
-            this.System.AddConversation(new FindZoelConversation());
+            System.AddConversation(new FindZoelConversation());
         }
     }
 
@@ -30,7 +30,7 @@ namespace Server.Engines.Quests.Ninja
                 1063176;
         public override void OnComplete()
         {
-            this.System.AddConversation(new EnterCaveConversation());
+            System.AddConversation(new EnterCaveConversation());
         }
     }
 
@@ -45,13 +45,13 @@ namespace Server.Engines.Quests.Ninja
                 1063179;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(406, 1141, 0), 2))
-                this.Complete();
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(406, 1141, 0), 2))
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddConversation(new SneakPastGuardiansConversation());
+            System.AddConversation(new SneakPastGuardiansConversation());
         }
     }
 
@@ -66,11 +66,11 @@ namespace Server.Engines.Quests.Ninja
         {
             get
             {
-                return this.m_TaughtHowToUseSkills;
+                return m_TaughtHowToUseSkills;
             }
             set
             {
-                this.m_TaughtHowToUseSkills = value;
+                m_TaughtHowToUseSkills = value;
             }
         }
         public override object Message =>
@@ -78,20 +78,20 @@ namespace Server.Engines.Quests.Ninja
                 1063261;
         public override void CheckProgress()
         {
-            if (this.System.From.Map == Map.Malas && this.System.From.InRange(new Point3D(412, 1123, 0), 3))
-                this.Complete();
+            if (System.From.Map == Map.Malas && System.From.InRange(new Point3D(412, 1123, 0), 3))
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddConversation(new UseTeleporterConversation());
+            System.AddConversation(new UseTeleporterConversation());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_TaughtHowToUseSkills = reader.ReadBool();
+            m_TaughtHowToUseSkills = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -115,7 +115,7 @@ namespace Server.Engines.Quests.Ninja
                 1063183;
         public override void OnComplete()
         {
-            this.System.AddConversation(new GiveZoelNoteConversation());
+            System.AddConversation(new GiveZoelNoteConversation());
         }
     }
 
@@ -133,7 +133,7 @@ namespace Server.Engines.Quests.Ninja
                 1063185;
         public override void OnComplete()
         {
-            this.System.AddConversation(new GainInnInformationConversation());
+            System.AddConversation(new GainInnInformationConversation());
         }
     }
 
@@ -151,15 +151,15 @@ namespace Server.Engines.Quests.Ninja
                 1063190;
         public override void CheckProgress()
         {
-            Mobile from = this.System.From;
+            Mobile from = System.From;
 
             if (from.Map == Map.Malas && from.X > 399 && from.X < 408 && from.Y > 1091 && from.Y < 1099)
-                this.Complete();
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddConversation(new ReturnFromInnConversation());
+            System.AddConversation(new ReturnFromInnConversation());
         }
     }
 
@@ -174,7 +174,7 @@ namespace Server.Engines.Quests.Ninja
                 1063197;
         public override void OnComplete()
         {
-            this.System.AddConversation(new SearchForSwordConversation());
+            System.AddConversation(new SearchForSwordConversation());
         }
     }
 
@@ -193,7 +193,7 @@ namespace Server.Engines.Quests.Ninja
                 1063200;
         public override void OnComplete()
         {
-            this.System.AddConversation(new HallwayWalkConversation());
+            System.AddConversation(new HallwayWalkConversation());
         }
     }
 
@@ -208,11 +208,11 @@ namespace Server.Engines.Quests.Ninja
         {
             get
             {
-                return this.m_StolenTreasure;
+                return m_StolenTreasure;
             }
             set
             {
-                this.m_StolenTreasure = value;
+                m_StolenTreasure = value;
             }
         }
         public override object Message =>
@@ -223,14 +223,14 @@ namespace Server.Engines.Quests.Ninja
                 1063202;
         public override void OnComplete()
         {
-            this.System.AddConversation(new ReturnSwordConversation());
+            System.AddConversation(new ReturnSwordConversation());
         }
 
         public override void ChildDeserialize(GenericReader reader)
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_StolenTreasure = reader.ReadBool();
+            m_StolenTreasure = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -252,15 +252,15 @@ namespace Server.Engines.Quests.Ninja
                 1063204;
         public override void CheckProgress()
         {
-            Mobile from = this.System.From;
+            Mobile from = System.From;
 
             if (from.Map != Map.Malas || from.Y > 992)
-                this.Complete();
+                Complete();
         }
 
         public override void OnComplete()
         {
-            this.System.AddConversation(new SlayHenchmenConversation());
+            System.AddConversation(new SlayHenchmenConversation());
         }
     }
 
@@ -276,13 +276,13 @@ namespace Server.Engines.Quests.Ninja
         public override int MaxProgress => 3;
         public override void RenderProgress(BaseQuestGump gump)
         {
-            if (!this.Completed)
+            if (!Completed)
             {
                 // Henchmen killed:
                 gump.AddHtmlLocalized(70, 260, 270, 100, 1063207, BaseQuestGump.Blue, false, false);
-                gump.AddLabel(70, 280, 0x64, this.CurProgress.ToString());
+                gump.AddLabel(70, 280, 0x64, CurProgress.ToString());
                 gump.AddLabel(100, 280, 0x64, "/");
-                gump.AddLabel(130, 280, 0x64, this.MaxProgress.ToString());
+                gump.AddLabel(130, 280, 0x64, MaxProgress.ToString());
             }
             else
             {
@@ -293,12 +293,12 @@ namespace Server.Engines.Quests.Ninja
         public override void OnKill(BaseCreature creature, Container corpse)
         {
             if (creature is Henchman)
-                this.CurProgress++;
+                CurProgress++;
         }
 
         public override void OnComplete()
         {
-            this.System.AddConversation(new GiveEminoSwordConversation());
+            System.AddConversation(new GiveEminoSwordConversation());
         }
     }
 

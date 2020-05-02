@@ -93,11 +93,11 @@ namespace Server.Items
 
             writer.Write(0); // version 
 
-            writer.Write(this.m_SwitchSound);
-            writer.Write(this.m_TargetItem0);
-            writer.Write(this.m_TargetProperty0);
-            writer.Write(this.m_TargetItem1);
-            writer.Write(this.m_TargetProperty1);
+            writer.Write(m_SwitchSound);
+            writer.Write(m_TargetItem0);
+            writer.Write(m_TargetProperty0);
+            writer.Write(m_TargetItem1);
+            writer.Write(m_TargetProperty1);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -110,11 +110,11 @@ namespace Server.Items
                 case 0:
                     {
 
-                        this.m_SwitchSound = reader.ReadInt();
-                        this.m_TargetItem0 = reader.ReadItem();
-                        this.m_TargetProperty0 = reader.ReadString();
-                        this.m_TargetItem1 = reader.ReadItem();
-                        this.m_TargetProperty1 = reader.ReadString();
+                        m_SwitchSound = reader.ReadInt();
+                        m_TargetItem0 = reader.ReadItem();
+                        m_TargetProperty0 = reader.ReadString();
+                        m_TargetItem1 = reader.ReadItem();
+                        m_TargetProperty1 = reader.ReadString();
                     }
                     break;
             }
@@ -127,7 +127,7 @@ namespace Server.Items
 
         public bool CheckRange(Point3D loc, int range)
         {
-            return ((this.Z + 8) >= loc.Z && (loc.Z + 16) > this.Z)
+            return ((Z + 8) >= loc.Z && (loc.Z + 16) > Z)
                 && Utility.InRange(GetWorldLocation(), loc, range);
         }
 
@@ -146,7 +146,7 @@ namespace Server.Items
             {
                 if (CheckRange(m.Location, oldLocation, 0))
                     OnEnter(m);
-                else if (oldLocation == this.Location)
+                else if (oldLocation == Location)
                     OnExit(m);
             }
         }

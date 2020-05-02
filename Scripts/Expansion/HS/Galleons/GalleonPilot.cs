@@ -78,7 +78,7 @@ namespace Server.Mobiles
 
         public virtual void InitOutfit()
         {
-            if (Core.SE && this.Map == Map.Tokuno)
+            if (Core.SE && Map == Map.Tokuno)
             {
 
                 if (Utility.Random(2) == 0)

@@ -10,9 +10,9 @@ namespace Server.Engines.Quests.Samurai
         [Constructable]
         public HaochisTreasureChest()
         {
-            this.Movable = false;
+            Movable = false;
 
-            this.GenerateTreasure();
+            GenerateTreasure();
         }
 
         public HaochisTreasureChest(Serial serial)
@@ -87,21 +87,21 @@ namespace Server.Engines.Quests.Samurai
 
         private void GenerateTreasure()
         {
-            for (int i = this.Items.Count - 1; i >= 0; i--)
-                this.Items[i].Delete();
+            for (int i = Items.Count - 1; i >= 0; i--)
+                Items[i].Delete();
 
             for (int i = 0; i < 75; i++)
             {
                 switch (Utility.Random(3))
                 {
                     case 0:
-                        this.DropItem(new GoldBracelet());
+                        DropItem(new GoldBracelet());
                         break;
                     case 1:
-                        this.DropItem(new GoldRing());
+                        DropItem(new GoldRing());
                         break;
                     case 2:
-                        this.DropItem(Loot.RandomGem());
+                        DropItem(Loot.RandomGem());
                         break;
                 }
             }

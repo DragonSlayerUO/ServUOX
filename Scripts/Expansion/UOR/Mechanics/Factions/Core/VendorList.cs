@@ -9,17 +9,17 @@ namespace Server.Factions
         private readonly List<BaseFactionVendor> m_Vendors;
         public VendorList(VendorDefinition definition)
         {
-            this.m_Definition = definition;
-            this.m_Vendors = new List<BaseFactionVendor>();
+            m_Definition = definition;
+            m_Vendors = new List<BaseFactionVendor>();
         }
 
-        public VendorDefinition Definition => this.m_Definition;
-        public List<BaseFactionVendor> Vendors => this.m_Vendors;
+        public VendorDefinition Definition => m_Definition;
+        public List<BaseFactionVendor> Vendors => m_Vendors;
         public BaseFactionVendor Construct(Town town, Faction faction)
         {
             try
             {
-                return Activator.CreateInstance(this.m_Definition.Type, new object[] { town, faction }) as BaseFactionVendor;
+                return Activator.CreateInstance(m_Definition.Type, new object[] { town, faction }) as BaseFactionVendor;
             }
             catch
             {

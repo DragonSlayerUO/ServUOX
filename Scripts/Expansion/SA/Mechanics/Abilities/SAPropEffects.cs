@@ -231,12 +231,12 @@ namespace Server.Items
             double cd = 0; double pod = 0;
             double ed = 0; double dd = 0;
 
-            double k = (double)GetValue(DamageType.Kinetic, this.Mobile) / 100;
-            double f = (double)GetValue(DamageType.Fire, this.Mobile) / 100;
-            double c = (double)GetValue(DamageType.Cold, this.Mobile) / 100;
-            double p = (double)GetValue(DamageType.Poison, this.Mobile) / 100;
-            double e = (double)GetValue(DamageType.Energy, this.Mobile) / 100;
-            double a = (double)GetValue(DamageType.AllTypes, this.Mobile) / 100;
+            double k = (double)GetValue(DamageType.Kinetic, Mobile) / 100;
+            double f = (double)GetValue(DamageType.Fire, Mobile) / 100;
+            double c = (double)GetValue(DamageType.Cold, Mobile) / 100;
+            double p = (double)GetValue(DamageType.Poison, Mobile) / 100;
+            double e = (double)GetValue(DamageType.Energy, Mobile) / 100;
+            double a = (double)GetValue(DamageType.AllTypes, Mobile) / 100;
 
             if (phys > 0 && (k > 0 || a > 0))
             {

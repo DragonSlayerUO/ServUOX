@@ -21,18 +21,18 @@ namespace Server.Factions
         private readonly TextDefinition m_Assigned;
         public MerchantTitleInfo(SkillName skill, double requirement, TextDefinition title, TextDefinition label, TextDefinition assigned)
         {
-            this.m_Skill = skill;
-            this.m_Requirement = requirement;
-            this.m_Title = title;
-            this.m_Label = label;
-            this.m_Assigned = assigned;
+            m_Skill = skill;
+            m_Requirement = requirement;
+            m_Title = title;
+            m_Label = label;
+            m_Assigned = assigned;
         }
 
-        public SkillName Skill => this.m_Skill;
-        public double Requirement => this.m_Requirement;
-        public TextDefinition Title => this.m_Title;
-        public TextDefinition Label => this.m_Label;
-        public TextDefinition Assigned => this.m_Assigned;
+        public SkillName Skill => m_Skill;
+        public double Requirement => m_Requirement;
+        public TextDefinition Title => m_Title;
+        public TextDefinition Label => m_Label;
+        public TextDefinition Assigned => m_Assigned;
     }
 
     public class MerchantTitles

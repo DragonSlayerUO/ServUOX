@@ -239,41 +239,41 @@ namespace Server.Items
                     }
                 case 0:
                     {
-                        this.m_ReturnContainer = (Container)reader.ReadItem();
-                        this.m_RewardItem = reader.ReadItem();
-                        this.m_AutoReward = reader.ReadBool();
-                        this.m_CanSeeReward = reader.ReadBool();
-                        this.m_PlayerMade = reader.ReadBool();
-                        this.m_Creator = reader.ReadMobile() as PlayerMobile;
-                        this.m_Description1 = reader.ReadString();
-                        this.m_Description2 = reader.ReadString();
-                        this.m_Description3 = reader.ReadString();
-                        this.m_Description4 = reader.ReadString();
-                        this.m_Description5 = reader.ReadString();
-                        this.m_Owner = reader.ReadMobile() as PlayerMobile;
-                        this.m_RewardString = reader.ReadString();
-                        this.m_ConfigFile = reader.ReadString();
-                        this.m_NoteString = reader.ReadString();
-                        this.m_TitleString = reader.ReadString();
-                        this.m_PartyEnabled = reader.ReadBool();
-                        this.m_PartyRange = reader.ReadInt();
-                        this.m_State1 = reader.ReadString();
-                        this.m_State2 = reader.ReadString();
-                        this.m_State3 = reader.ReadString();
-                        this.m_State4 = reader.ReadString();
-                        this.m_State5 = reader.ReadString();
-                        this.Expiration = reader.ReadDouble();
-                        this.m_TimeCreated = reader.ReadDateTime();
-                        this.m_Objective1 = reader.ReadString();
-                        this.m_Objective2 = reader.ReadString();
-                        this.m_Objective3 = reader.ReadString();
-                        this.m_Objective4 = reader.ReadString();
-                        this.m_Objective5 = reader.ReadString();
-                        this.m_Completed1 = reader.ReadBool();
-                        this.m_Completed2 = reader.ReadBool();
-                        this.m_Completed3 = reader.ReadBool();
-                        this.m_Completed4 = reader.ReadBool();
-                        this.m_Completed5 = reader.ReadBool();
+                        m_ReturnContainer = (Container)reader.ReadItem();
+                        m_RewardItem = reader.ReadItem();
+                        m_AutoReward = reader.ReadBool();
+                        m_CanSeeReward = reader.ReadBool();
+                        m_PlayerMade = reader.ReadBool();
+                        m_Creator = reader.ReadMobile() as PlayerMobile;
+                        m_Description1 = reader.ReadString();
+                        m_Description2 = reader.ReadString();
+                        m_Description3 = reader.ReadString();
+                        m_Description4 = reader.ReadString();
+                        m_Description5 = reader.ReadString();
+                        m_Owner = reader.ReadMobile() as PlayerMobile;
+                        m_RewardString = reader.ReadString();
+                        m_ConfigFile = reader.ReadString();
+                        m_NoteString = reader.ReadString();
+                        m_TitleString = reader.ReadString();
+                        m_PartyEnabled = reader.ReadBool();
+                        m_PartyRange = reader.ReadInt();
+                        m_State1 = reader.ReadString();
+                        m_State2 = reader.ReadString();
+                        m_State3 = reader.ReadString();
+                        m_State4 = reader.ReadString();
+                        m_State5 = reader.ReadString();
+                        Expiration = reader.ReadDouble();
+                        m_TimeCreated = reader.ReadDateTime();
+                        m_Objective1 = reader.ReadString();
+                        m_Objective2 = reader.ReadString();
+                        m_Objective3 = reader.ReadString();
+                        m_Objective4 = reader.ReadString();
+                        m_Objective5 = reader.ReadString();
+                        m_Completed1 = reader.ReadBool();
+                        m_Completed2 = reader.ReadBool();
+                        m_Completed3 = reader.ReadBool();
+                        m_Completed4 = reader.ReadBool();
+                        m_Completed5 = reader.ReadBool();
                     }
                     break;
             }
@@ -383,7 +383,7 @@ namespace Server.Items
 
             if (ObjectPropertyList.Enabled)
             {
-                List<Item> items = this.Items;
+                List<Item> items = Items;
 
                 for (int i = 0; i < items.Count; ++i)
                     to.Send(items[i].OPLPacket);
@@ -401,7 +401,7 @@ namespace Server.Items
             }
             if (PlayerMade && Owner != null && !(RootParent is PlayerVendor))
             {
-                list.Add(1050044, "{0}\t{1}", this.TotalItems, this.TotalWeight); // ~1_COUNT~items,~2_WEIGHT~stones
+                list.Add(1050044, "{0}\t{1}", TotalItems, TotalWeight); // ~1_COUNT~items,~2_WEIGHT~stones
             }
 
             // add any playervendor price/description information
@@ -735,7 +735,7 @@ namespace Server.Items
                 double expiresin = Repeatable ? NextRepeatable.TotalMinutes : 0;
 
                 // then add an attachment indicating that it has already been done
-                XmlAttach.AttachTo(Owner, new XmlQuestAttachment(this.Name, expiresin));
+                XmlAttach.AttachTo(Owner, new XmlQuestAttachment(Name, expiresin));
             }
 
             // have quest points been enabled?
@@ -1537,7 +1537,7 @@ namespace Server.Items
             {
                 Owner.SendMessage(String.Format("Quest invalidated - '{0}' removed", Name));
             }
-            this.Delete();
+            Delete();
         }
 
         public void CheckRewardItem()
@@ -1559,7 +1559,7 @@ namespace Server.Items
 
         public void CheckAutoReward()
         {
-            if (!this.Deleted && AutoReward && IsCompleted && Owner != null &&
+            if (!Deleted && AutoReward && IsCompleted && Owner != null &&
                 ((RewardItem != null && !m_RewardItem.Deleted) || (RewardAttachment != null && !m_RewardAttachment.Deleted) || RewardAction != null))
             {
                 if (RewardItem != null)
@@ -1591,7 +1591,7 @@ namespace Server.Items
                 }
 
                 Owner.SendMessage(String.Format("{0} completed. You receive the quest reward!", Name));
-                this.Delete();
+                Delete();
             }
         }
 
@@ -1665,7 +1665,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Name = strEntry;
+                                Name = strEntry;
                             }
 
                             valid_entry = true;
@@ -1674,7 +1674,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.TitleString = strEntry;
+                                TitleString = strEntry;
                             }
 
                             valid_entry = true;
@@ -1683,7 +1683,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.NoteString = strEntry;
+                                NoteString = strEntry;
                             }
 
                             valid_entry = true;
@@ -1692,7 +1692,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.RewardString = strEntry;
+                                RewardString = strEntry;
                             }
 
                             valid_entry = true;
@@ -1701,7 +1701,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.AttachmentString = strEntry;
+                                AttachmentString = strEntry;
                             }
 
                             valid_entry = true;
@@ -1710,7 +1710,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Objective1 = strEntry;
+                                Objective1 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1719,7 +1719,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Objective2 = strEntry;
+                                Objective2 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1728,7 +1728,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Objective3 = strEntry;
+                                Objective3 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1737,7 +1737,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Objective4 = strEntry;
+                                Objective4 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1746,7 +1746,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Objective5 = strEntry;
+                                Objective5 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1755,7 +1755,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Description1 = strEntry;
+                                Description1 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1764,7 +1764,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Description2 = strEntry;
+                                Description2 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1773,7 +1773,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Description3 = strEntry;
+                                Description3 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1782,7 +1782,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Description4 = strEntry;
+                                Description4 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1791,7 +1791,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Description5 = strEntry;
+                                Description5 = strEntry;
                             }
 
                             valid_entry = true;
@@ -1800,7 +1800,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.PartyEnabled = boolEntry;
+                                PartyEnabled = boolEntry;
                             }
 
                             valid_entry = true;
@@ -1809,7 +1809,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.AutoReward = boolEntry;
+                                AutoReward = boolEntry;
                             }
 
                             valid_entry = true;
@@ -1818,7 +1818,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.CanSeeReward = boolEntry;
+                                CanSeeReward = boolEntry;
                             }
 
                             valid_entry = true;
@@ -1827,7 +1827,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.m_Repeatable = boolEntry;
+                                m_Repeatable = boolEntry;
                             }
 
                             valid_entry = true;
@@ -1836,7 +1836,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.m_NextRepeatable = timespanEntry;
+                                m_NextRepeatable = timespanEntry;
                             }
 
                             valid_entry = true;
@@ -1845,7 +1845,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.PlayerMade = boolEntry;
+                                PlayerMade = boolEntry;
                             }
 
                             valid_entry = true;
@@ -1854,7 +1854,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.PartyRange = intEntry;
+                                PartyRange = intEntry;
                             }
 
                             valid_entry = true;
@@ -1863,7 +1863,7 @@ namespace Server.Items
                             catch { valid_entry = false; }
                             if (valid_entry)
                             {
-                                this.Expiration = doubleEntry;
+                                Expiration = doubleEntry;
                             }
                         }
                     }

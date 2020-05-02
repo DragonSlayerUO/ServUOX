@@ -19,28 +19,28 @@ namespace Server.Engines.Quests.Haven
 
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = Utility.RandomSkinHue();
+            Hue = Utility.RandomSkinHue();
 
-            this.Female = false;
-            this.Body = 0x190;
-            this.Name = NameList.RandomName("male");
+            Female = false;
+            Body = 0x190;
+            Name = NameList.RandomName("male");
         }
 
         public override void InitOutfit()
         {
-            this.AddItem(new PlateChest());
-            this.AddItem(new PlateArms());
-            this.AddItem(new PlateGloves());
-            this.AddItem(new PlateLegs());
+            AddItem(new PlateChest());
+            AddItem(new PlateArms());
+            AddItem(new PlateGloves());
+            AddItem(new PlateLegs());
 
             Utility.AssignRandomHair(this);
-            Utility.AssignRandomFacialHair(this, this.HairHue);
+            Utility.AssignRandomFacialHair(this, HairHue);
 
             Bardiche weapon = new Bardiche();
             weapon.Movable = false;
-            this.AddItem(weapon);
+            AddItem(weapon);
         }
 
         public override int GetAutoTalkRange(PlayerMobile pm)
@@ -57,7 +57,7 @@ namespace Server.Engines.Quests.Haven
         {
             if (player.Quest == null && QuestSystem.CanOfferQuest(player, typeof(UzeraanTurmoilQuest)))
             {
-                this.Direction = this.GetDirectionTo(player);
+                Direction = GetDirectionTo(player);
 
                 new UzeraanTurmoilQuest(player).SendOffer();
             }

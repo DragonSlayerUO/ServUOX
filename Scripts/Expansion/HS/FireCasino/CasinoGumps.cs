@@ -46,7 +46,7 @@ namespace Server.Engines.ResortAndCasino
             long total = a == null ? 0 : (long)(a.TotalCurrency * Account.CurrencyThreshold);
             int chips = (int)PointsSystem.CasinoData.GetPoints(User);
 
-            switch (this.Section)
+            switch (Section)
             {
                 case Section.None:
                     int y = 50;
@@ -101,7 +101,7 @@ namespace Server.Engines.ResortAndCasino
 
             }
 
-            if (this.Section == Section.None)
+            if (Section == Section.None)
             {
                 AddButton(15, 195, 4005, 4007, 0, GumpButtonType.Reply, 0);
                 AddHtml(55, 193, 150, 16, Color("#FFFF00", "CLOSE"), false, false);
@@ -118,11 +118,11 @@ namespace Server.Engines.ResortAndCasino
             switch (info.ButtonID)
             {
                 case 1:
-                    this.Section = Section.Buying;
+                    Section = Section.Buying;
                     Refresh();
                     break;
                 case 2:
-                    this.Section = Section.Selling;
+                    Section = Section.Selling;
                     Refresh();
                     break;
                 case 3:
@@ -146,21 +146,21 @@ namespace Server.Engines.ResortAndCasino
                             }
                             else
                             {
-                                this.Section = Section.Error;
+                                Section = Section.Error;
                                 Message = 1153178; // Your bank does not have sufficient gold
                                 Refresh();
                             }
                         }
                         else
                         {
-                            this.Section = Section.Error;
+                            Section = Section.Error;
                             Message = 1153187; // You entered an invalid value
                             Refresh();
                         }
                     }
                     else
                     {
-                        this.Section = Section.Error;
+                        Section = Section.Error;
                         Message = 1153187; // You entered an invalid value
                         Refresh();
                     }
@@ -187,26 +187,26 @@ namespace Server.Engines.ResortAndCasino
                             }
                             else
                             {
-                                this.Section = Section.Error;
+                                Section = Section.Error;
                                 Message = 1153180; // You do not have enough casino chips
                                 Refresh();
                             }
                         }
                         else
                         {
-                            this.Section = Section.None;
+                            Section = Section.None;
                             Refresh();
                         }
                     }
                     else
                     {
-                        this.Section = Section.Error;
+                        Section = Section.Error;
                         Message = 1153187; // You entered an invalid value
                         Refresh();
                     }
                     break;
                 case 5:
-                    this.Section = Section.None;
+                    Section = Section.None;
                     Refresh();
                     break;
 
@@ -218,7 +218,7 @@ namespace Server.Engines.ResortAndCasino
             Entries.Clear();
             Entries.TrimExcess();
             AddGumpLayout();
-            User.CloseGump(this.GetType());
+            User.CloseGump(GetType());
             User.SendGump(this, false);
         }
 
@@ -348,7 +348,7 @@ namespace Server.Engines.ResortAndCasino
             Entries.Clear();
             Entries.TrimExcess();
             AddGumpLayout();
-            User.CloseGump(this.GetType());
+            User.CloseGump(GetType());
             User.SendGump(this, false);
         }
 

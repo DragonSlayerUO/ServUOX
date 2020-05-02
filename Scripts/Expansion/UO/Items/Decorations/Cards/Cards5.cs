@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoCards5()
             : base(0xE18)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoCards5(Serial serial)

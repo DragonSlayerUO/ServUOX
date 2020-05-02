@@ -9,7 +9,7 @@ namespace Server.Items
         public VultureHelm()
             : base(0x2B72)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public VultureHelm(Serial serial)

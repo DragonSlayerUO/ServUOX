@@ -35,10 +35,10 @@ namespace Server.Factions
         public BaseFactionGuard(string title)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
-            this.m_Orders = new Orders(this);
-            this.Title = title;
+            m_Orders = new Orders(this);
+            Title = title;
 
-            this.RangeHome = 6;
+            RangeHome = 6;
         }
 
         public BaseFactionGuard(Serial serial)
@@ -52,28 +52,28 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Faction;
+                return m_Faction;
             }
             set
             {
-                this.Unregister();
-                this.m_Faction = value;
-                this.Register();
+                Unregister();
+                m_Faction = value;
+                Register();
             }
         }
-        public Orders Orders => this.m_Orders;
+        public Orders Orders => m_Orders;
         [CommandProperty(AccessLevel.GameMaster, AccessLevel.Administrator)]
         public Town Town
         {
             get
             {
-                return this.m_Town;
+                return m_Town;
             }
             set
             {
-                this.Unregister();
-                this.m_Town = value;
-                this.Register();
+                Unregister();
+                m_Town = value;
+                Register();
             }
         }
         public abstract GuardAI GuardAI { get; }
@@ -82,19 +82,19 @@ namespace Server.Factions
         protected override BaseAI ForcedAI => new FactionGuardAI(this);
         public void Register()
         {
-            if (this.m_Town != null && this.m_Faction != null)
-                this.m_Town.RegisterGuard(this);
+            if (m_Town != null && m_Faction != null)
+                m_Town.RegisterGuard(this);
         }
 
         public void Unregister()
         {
-            if (this.m_Town != null)
-                this.m_Town.UnregisterGuard(this);
+            if (m_Town != null)
+                m_Town.UnregisterGuard(this);
         }
 
         public override bool IsEnemy(Mobile m)
         {
-            Faction ourFaction = this.m_Faction;
+            Faction ourFaction = m_Faction;
             Faction theirFaction = Faction.Find(m);
 
             if (theirFaction == null && m is BaseFactionGuard)
@@ -102,7 +102,7 @@ namespace Server.Factions
 
             if (ourFaction != null && theirFaction != null && ourFaction != theirFaction)
             {
-                ReactionType reactionType = this.Orders.GetReaction(theirFaction).Type;
+                ReactionType reactionType = Orders.GetReaction(theirFaction).Type;
 
                 if (reactionType == ReactionType.Attack)
                     return true;
@@ -131,9 +131,9 @@ namespace Server.Factions
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {
-            if (m.Player && m.Alive && this.InRange(m, 10) && !this.InRange(oldLocation, 10) && this.InLOS(m) && this.m_Orders.GetReaction(Faction.Find(m)).Type == ReactionType.Warn)
+            if (m.Player && m.Alive && InRange(m, 10) && !InRange(oldLocation, 10) && InLOS(m) && m_Orders.GetReaction(Faction.Find(m)).Type == ReactionType.Warn)
             {
-                this.Direction = this.GetDirectionTo(m);
+                Direction = GetDirectionTo(m);
 
                 string warning = null;
 
@@ -161,13 +161,13 @@ namespace Server.Factions
 
                 Faction faction = Faction.Find(m);
 
-                this.Say(warning, m.Name, faction == null ? "civilians" : faction.Definition.FriendlyName);
+                Say(warning, m.Name, faction == null ? "civilians" : faction.Definition.FriendlyName);
             }
         }
 
         public override bool HandlesOnSpeech(Mobile from)
         {
-            if (this.InRange(from, ListenRange))
+            if (InRange(from, ListenRange))
                 return true;
 
             return base.HandlesOnSpeech(from);
@@ -179,25 +179,25 @@ namespace Server.Factions
 
             Mobile from = e.Mobile;
 
-            if (!e.Handled && this.InRange(from, ListenRange) && from.Alive)
+            if (!e.Handled && InRange(from, ListenRange) && from.Alive)
             {
-                if (e.HasKeyword(0xE6) && (Insensitive.Equals(e.Speech, "orders") || this.WasNamed(e.Speech))) // *orders*
+                if (e.HasKeyword(0xE6) && (Insensitive.Equals(e.Speech, "orders") || WasNamed(e.Speech))) // *orders*
                 {
-                    if (this.m_Town == null || !this.m_Town.IsSheriff(from))
+                    if (m_Town == null || !m_Town.IsSheriff(from))
                     {
-                        this.Say(1042189); // I don't work for you!
+                        Say(1042189); // I don't work for you!
                     }
-                    else if (Town.FromRegion(this.Region) == this.m_Town)
+                    else if (Town.FromRegion(Region) == m_Town)
                     {
-                        this.Say(1042180); // Your orders, sire?
-                        this.m_OrdersEnd = DateTime.UtcNow + TimeSpan.FromSeconds(10.0);
+                        Say(1042180); // Your orders, sire?
+                        m_OrdersEnd = DateTime.UtcNow + TimeSpan.FromSeconds(10.0);
                     }
                 }
-                else if (DateTime.UtcNow < this.m_OrdersEnd)
+                else if (DateTime.UtcNow < m_OrdersEnd)
                 {
-                    if (this.m_Town != null && this.m_Town.IsSheriff(from) && Town.FromRegion(this.Region) == this.m_Town)
+                    if (m_Town != null && m_Town.IsSheriff(from) && Town.FromRegion(Region) == m_Town)
                     {
-                        this.m_OrdersEnd = DateTime.UtcNow + TimeSpan.FromSeconds(10.0);
+                        m_OrdersEnd = DateTime.UtcNow + TimeSpan.FromSeconds(10.0);
 
                         bool understood = true;
                         ReactionType newType = 0;
@@ -217,7 +217,7 @@ namespace Server.Factions
 
                             if (Insensitive.Contains(e.Speech, "civil"))
                             {
-                                this.ChangeReaction(null, newType);
+                                ChangeReaction(null, newType);
                                 understood = true;
                             }
 
@@ -227,35 +227,35 @@ namespace Server.Factions
                             {
                                 Faction faction = factions[i];
 
-                                if (faction != this.m_Faction && Insensitive.Contains(e.Speech, faction.Definition.Keyword))
+                                if (faction != m_Faction && Insensitive.Contains(e.Speech, faction.Definition.Keyword))
                                 {
-                                    this.ChangeReaction(faction, newType);
+                                    ChangeReaction(faction, newType);
                                     understood = true;
                                 }
                             }
                         }
                         else if (Insensitive.Contains(e.Speech, "patrol"))
                         {
-                            this.Home = this.Location;
-                            this.RangeHome = 6;
-                            this.Combatant = null;
-                            this.m_Orders.Movement = MovementType.Patrol;
-                            this.Say(1005146); // This spot looks like it needs protection!  I shall guard it with my life.
+                            Home = Location;
+                            RangeHome = 6;
+                            Combatant = null;
+                            m_Orders.Movement = MovementType.Patrol;
+                            Say(1005146); // This spot looks like it needs protection!  I shall guard it with my life.
                             understood = true;
                         }
                         else if (Insensitive.Contains(e.Speech, "follow"))
                         {
-                            this.Home = this.Location;
-                            this.RangeHome = 6;
-                            this.Combatant = null;
-                            this.m_Orders.Follow = from;
-                            this.m_Orders.Movement = MovementType.Follow;
-                            this.Say(1005144); // Yes, Sire.
+                            Home = Location;
+                            RangeHome = 6;
+                            Combatant = null;
+                            m_Orders.Follow = from;
+                            m_Orders.Movement = MovementType.Follow;
+                            Say(1005144); // Yes, Sire.
                             understood = true;
                         }
 
                         if (!understood)
-                            this.Say(1042183); // I'm sorry, I don't understand your orders...
+                            Say(1042183); // I'm sorry, I don't understand your orders...
                     }
                 }
             }
@@ -265,19 +265,19 @@ namespace Server.Factions
         {
             base.GetProperties(list);
 
-            if (this.m_Faction != null && this.Map == Faction.Facet)
-                list.Add(1060846, this.m_Faction.Definition.PropName); // Guard: ~1_val~
+            if (m_Faction != null && Map == Faction.Facet)
+                list.Add(1060846, m_Faction.Definition.PropName); // Guard: ~1_val~
         }
 
         public override void OnSingleClick(Mobile from)
         {
-            if (this.m_Faction != null && this.Map == Faction.Facet)
+            if (m_Faction != null && Map == Faction.Facet)
             {
-                string text = String.Concat("(Guard, ", this.m_Faction.Definition.FriendlyName, ")");
+                string text = String.Concat("(Guard, ", m_Faction.Definition.FriendlyName, ")");
 
-                int hue = (Faction.Find(from) == this.m_Faction ? 98 : 38);
+                int hue = (Faction.Find(from) == m_Faction ? 98 : 38);
 
-                this.PrivateOverheadMessage(MessageType.Label, hue, true, text, from.NetState);
+                PrivateOverheadMessage(MessageType.Label, hue, true, text, from.NetState);
             }
 
             base.OnSingleClick(from);
@@ -286,39 +286,39 @@ namespace Server.Factions
         public virtual void GenerateRandomHair()
         {
             Utility.AssignRandomHair(this);
-            Utility.AssignRandomFacialHair(this, this.HairHue);
+            Utility.AssignRandomFacialHair(this, HairHue);
         }
 
         public void PackStrongPotions(int min, int max)
         {
-            this.PackStrongPotions(Utility.RandomMinMax(min, max));
+            PackStrongPotions(Utility.RandomMinMax(min, max));
         }
 
         public void PackStrongPotions(int count)
         {
             for (int i = 0; i < count; ++i)
-                this.PackStrongPotion();
+                PackStrongPotion();
         }
 
         public void PackStrongPotion()
         {
-            this.PackItem(Loot.Construct(m_StrongPotions));
+            PackItem(Loot.Construct(m_StrongPotions));
         }
 
         public void PackWeakPotions(int min, int max)
         {
-            this.PackWeakPotions(Utility.RandomMinMax(min, max));
+            PackWeakPotions(Utility.RandomMinMax(min, max));
         }
 
         public void PackWeakPotions(int count)
         {
             for (int i = 0; i < count; ++i)
-                this.PackWeakPotion();
+                PackWeakPotion();
         }
 
         public void PackWeakPotion()
         {
-            this.PackItem(Loot.Construct(m_WeakPotions));
+            PackItem(Loot.Construct(m_WeakPotions));
         }
 
         public Item Immovable(Item item)
@@ -360,7 +360,7 @@ namespace Server.Factions
         public override void OnAfterDelete()
         {
             base.OnAfterDelete();
-            this.Unregister();
+            Unregister();
         }
 
         public override void OnDeath(Container c)
@@ -372,23 +372,23 @@ namespace Server.Factions
 
         public virtual void GenerateBody(bool isFemale, bool randomHair)
         {
-            this.Hue = Utility.RandomSkinHue();
+            Hue = Utility.RandomSkinHue();
 
             if (isFemale)
             {
-                this.Female = true;
-                this.Body = 401;
-                this.Name = NameList.RandomName("female");
+                Female = true;
+                Body = 401;
+                Name = NameList.RandomName("female");
             }
             else
             {
-                this.Female = false;
-                this.Body = 400;
-                this.Name = NameList.RandomName("male");
+                Female = false;
+                Body = 400;
+                Name = NameList.RandomName("male");
             }
 
             if (randomHair)
-                this.GenerateRandomHair();
+                GenerateRandomHair();
         }
 
         public override void Serialize(GenericWriter writer)
@@ -397,10 +397,10 @@ namespace Server.Factions
 
             writer.Write(0); // version
 
-            Faction.WriteReference(writer, this.m_Faction);
-            Town.WriteReference(writer, this.m_Town);
+            Faction.WriteReference(writer, m_Faction);
+            Town.WriteReference(writer, m_Town);
 
-            this.m_Orders.Serialize(writer);
+            m_Orders.Serialize(writer);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -409,9 +409,9 @@ namespace Server.Factions
 
             int version = reader.ReadInt();
 
-            this.m_Faction = Faction.ReadReference(reader);
-            this.m_Town = Town.ReadReference(reader);
-            this.m_Orders = new Orders(this, reader);
+            m_Faction = Faction.ReadReference(reader);
+            m_Town = Town.ReadReference(reader);
+            m_Orders = new Orders(this, reader);
 
             Timer.DelayCall(TimeSpan.Zero, new TimerCallback(Register));
         }
@@ -423,10 +423,10 @@ namespace Server.Factions
                 switch (type)
                 {
                     case ReactionType.Ignore:
-                        this.Say(1005179);
+                        Say(1005179);
                         break; // Civilians will now be ignored.
                     case ReactionType.Warn:
-                        this.Say(1005180);
+                        Say(1005180);
                         break; // Civilians will now be warned of their impending deaths.
                     case ReactionType.Attack:
                         return;
@@ -450,17 +450,17 @@ namespace Server.Factions
                 }
 
                 if (def != null && def.Number > 0)
-                    this.Say(def.Number);
+                    Say(def.Number);
                 else if (def != null && def.String != null)
-                    this.Say(def.String);
+                    Say(def.String);
             }
 
-            this.m_Orders.SetReaction(faction, type);
+            m_Orders.SetReaction(faction, type);
         }
 
         private bool WasNamed(string speech)
         {
-            string name = this.Name;
+            string name = Name;
 
             return (name != null && Insensitive.StartsWith(speech, name));
         }
@@ -471,14 +471,14 @@ namespace Server.Factions
         private readonly VirtualMountItem m_Item;
         public VirtualMount(VirtualMountItem item)
         {
-            this.m_Item = item;
+            m_Item = item;
         }
 
         public Mobile Rider
         {
             get
             {
-                return this.m_Item.Rider;
+                return m_Item.Rider;
             }
             set
             {
@@ -496,20 +496,20 @@ namespace Server.Factions
         public VirtualMountItem(Mobile mob)
             : base(0x3EA0)
         {
-            this.Layer = Layer.Mount;
+            Layer = Layer.Mount;
 
-            this.m_Rider = mob;
-            this.m_Mount = new VirtualMount(this);
+            m_Rider = mob;
+            m_Mount = new VirtualMount(this);
         }
 
         public VirtualMountItem(Serial serial)
             : base(serial)
         {
-            this.m_Mount = new VirtualMount(this);
+            m_Mount = new VirtualMount(this);
         }
 
-        public Mobile Rider => this.m_Rider;
-        public IMount Mount => this.m_Mount;
+        public Mobile Rider => m_Rider;
+        public IMount Mount => m_Mount;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -525,10 +525,10 @@ namespace Server.Factions
 
             int version = reader.ReadInt();
 
-            this.m_Rider = reader.ReadMobile();
+            m_Rider = reader.ReadMobile();
 
-            if (this.m_Rider == null)
-                this.Delete();
+            if (m_Rider == null)
+                Delete();
         }
     }
 }

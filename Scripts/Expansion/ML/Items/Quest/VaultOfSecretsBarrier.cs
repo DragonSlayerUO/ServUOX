@@ -9,8 +9,8 @@ namespace Server.Engines.Quests.Necro
         public VaultOfSecretsBarrier()
             : base(0x49E)
         {
-            this.Movable = false;
-            this.Visible = false;
+            Movable = false;
+            Visible = false;
         }
 
         public VaultOfSecretsBarrier(Serial serial)

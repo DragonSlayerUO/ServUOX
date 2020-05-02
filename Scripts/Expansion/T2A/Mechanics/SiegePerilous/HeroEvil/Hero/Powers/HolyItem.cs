@@ -7,7 +7,7 @@ namespace Server.Ethics.Hero
     {
         public HolyItem()
         {
-            this.m_Definition = new PowerDefinition(
+            m_Definition = new PowerDefinition(
                 5,
                 "Holy Item",
                 "Vidda K'balc",
@@ -48,7 +48,7 @@ namespace Server.Ethics.Hero
 
             if (canImbue)
             {
-                if (!this.CheckInvoke(from))
+                if (!CheckInvoke(from))
                     return;
 
                 item.Hue = Ethic.Hero.Definition.PrimaryHue;
@@ -57,7 +57,7 @@ namespace Server.Ethics.Hero
                 from.Mobile.FixedEffect(0x375A, 10, 20);
                 from.Mobile.PlaySound(0x209);
 
-                this.FinishInvoke(from);
+                FinishInvoke(from);
             }
             else
             {

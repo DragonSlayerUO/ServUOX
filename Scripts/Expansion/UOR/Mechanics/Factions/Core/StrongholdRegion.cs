@@ -10,20 +10,20 @@ namespace Server.Factions
         public StrongholdRegion(Faction faction)
             : base(faction.Definition.FriendlyName, Faction.Facet, Region.DefaultPriority, faction.Definition.Stronghold.Area)
         {
-            this.m_Faction = faction;
+            m_Faction = faction;
 
-            this.Register();
+            Register();
         }
 
         public Faction Faction
         {
             get
             {
-                return this.m_Faction;
+                return m_Faction;
             }
             set
             {
-                this.m_Faction = value;
+                m_Faction = value;
             }
         }
         public override bool OnMoveInto(Mobile m, Direction d, Point3D newLocation, Point3D oldLocation)
@@ -31,7 +31,7 @@ namespace Server.Factions
             if (!base.OnMoveInto(m, d, newLocation, oldLocation))
                 return false;
 
-            if (m.IsStaff() || this.Contains(oldLocation))
+            if (m.IsStaff() || Contains(oldLocation))
                 return true;
 
             return (Faction.Find(m, true, true) != null);

@@ -41,7 +41,7 @@ namespace Server.Items
         public override void OnAfterDuped(Item newItem)
         {
             if (newItem is GorgonLense)
-                ((GorgonLense)newItem).LenseType = this.LenseType;
+                ((GorgonLense)newItem).LenseType = LenseType;
 
             base.OnAfterDuped(newItem);
         }

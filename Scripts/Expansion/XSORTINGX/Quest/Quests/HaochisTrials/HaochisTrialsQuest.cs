@@ -103,15 +103,15 @@ namespace Server.Engines.Quests.Samurai
         {
             base.Accept();
 
-            this.AddConversation(new AcceptConversation());
+            AddConversation(new AcceptConversation());
         }
 
         public override void Slice()
         {
-            if (!this.m_SentRadarConversion && (this.From.Map != Map.Malas || this.From.X < 360 || this.From.X > 400 || this.From.Y < 760 || this.From.Y > 780))
+            if (!m_SentRadarConversion && (From.Map != Map.Malas || From.X < 360 || From.X > 400 || From.Y < 760 || From.Y > 780))
             {
-                this.m_SentRadarConversion = true;
-                this.AddConversation(new RadarConversation());
+                m_SentRadarConversion = true;
+                AddConversation(new RadarConversation());
             }
 
             base.Slice();
@@ -121,7 +121,7 @@ namespace Server.Engines.Quests.Samurai
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_SentRadarConversion = reader.ReadBool();
+            m_SentRadarConversion = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)

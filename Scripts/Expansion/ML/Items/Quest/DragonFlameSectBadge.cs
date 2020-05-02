@@ -8,7 +8,7 @@ namespace Server.Items
         public DragonFlameSectBadge()
             : base(0x23E)
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public DragonFlameSectBadge(Serial serial)

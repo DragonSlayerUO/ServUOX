@@ -14,7 +14,7 @@ namespace Server.Items
         public MysticBook(ulong content)
             : base(content, 0x2D9D)
         {
-            this.Layer = Layer.OneHanded;
+            Layer = Layer.OneHanded;
         }
 
         public MysticBook(Serial serial)

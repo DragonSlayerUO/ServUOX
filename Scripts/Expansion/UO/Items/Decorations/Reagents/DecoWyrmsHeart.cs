@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoWyrmsHeart()
             : base(0xF91)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoWyrmsHeart(Serial serial)

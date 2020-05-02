@@ -10,8 +10,8 @@ namespace Server.Factions
         public FactionBottleVendor(Town town, Faction faction)
             : base(town, faction, "the Bottle Seller")
         {
-            this.SetSkill(SkillName.Alchemy, 85.0, 100.0);
-            this.SetSkill(SkillName.TasteID, 65.0, 88.0);
+            SetSkill(SkillName.Alchemy, 85.0, 100.0);
+            SetSkill(SkillName.TasteID, 65.0, 88.0);
         }
 
         public FactionBottleVendor(Serial serial)
@@ -22,14 +22,14 @@ namespace Server.Factions
         public override VendorShoeType ShoeType => Utility.RandomBool() ? VendorShoeType.Shoes : VendorShoeType.Sandals;
         public override void InitSBInfo()
         {
-            this.SBInfos.Add(new SBFactionBottle());
+            SBInfos.Add(new SBFactionBottle());
         }
 
         public override void InitOutfit()
         {
             base.InitOutfit();
 
-            this.AddItem(new Robe(Utility.RandomPinkHue()));
+            AddItem(new Robe(Utility.RandomPinkHue()));
         }
 
         public override void Serialize(GenericWriter writer)
@@ -55,15 +55,15 @@ namespace Server.Factions
         {
         }
 
-        public override IShopSellInfo SellInfo => this.m_SellInfo;
-        public override List<GenericBuyInfo> BuyInfo => this.m_BuyInfo;
+        public override IShopSellInfo SellInfo => m_SellInfo;
+        public override List<GenericBuyInfo> BuyInfo => m_BuyInfo;
 
         public class InternalBuyInfo : List<GenericBuyInfo>
         {
             public InternalBuyInfo()
             {
                 for (int i = 0; i < 5; ++i)
-                    this.Add(new GenericBuyInfo(typeof(EmptyBottle), 5, 20, 0xF0E, 0));
+                    Add(new GenericBuyInfo(typeof(EmptyBottle), 5, 20, 0xF0E, 0));
             }
         }
 

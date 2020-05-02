@@ -34,7 +34,7 @@ namespace Server.Engines.Quests.Ninja
                 1049092;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindEminoBeginObjective());
+            System.AddObjective(new FindEminoBeginObjective());
         }
     }
 
@@ -63,7 +63,7 @@ namespace Server.Engines.Quests.Ninja
                 1063175;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindZoelObjective());
+            System.AddObjective(new FindZoelObjective());
         }
     }
 
@@ -116,7 +116,7 @@ namespace Server.Engines.Quests.Ninja
                 1063177;
         public override void OnRead()
         {
-            this.System.AddObjective(new EnterCaveObjective());
+            System.AddObjective(new EnterCaveObjective());
         }
     }
 
@@ -138,7 +138,7 @@ namespace Server.Engines.Quests.Ninja
                 1063180;
         public override void OnRead()
         {
-            this.System.AddObjective(new SneakPastGuardiansObjective());
+            System.AddObjective(new SneakPastGuardiansObjective());
         }
     }
 
@@ -179,7 +179,7 @@ namespace Server.Engines.Quests.Ninja
                 1063182;
         public override void OnRead()
         {
-            this.System.AddObjective(new UseTeleporterObjective());
+            System.AddObjective(new UseTeleporterObjective());
         }
     }
 
@@ -205,7 +205,7 @@ namespace Server.Engines.Quests.Ninja
                 1063184;
         public override void OnRead()
         {
-            this.System.AddObjective(new GiveZoelNoteObjective());
+            System.AddObjective(new GiveZoelNoteObjective());
         }
     }
 
@@ -254,7 +254,7 @@ namespace Server.Engines.Quests.Ninja
                 1063189;
         public override void OnRead()
         {
-            this.System.AddObjective(new GainInnInformationObjective());
+            System.AddObjective(new GainInnInformationObjective());
         }
     }
 
@@ -288,7 +288,7 @@ namespace Server.Engines.Quests.Ninja
                 1063196;
         public override void OnRead()
         {
-            this.System.AddObjective(new ReturnFromInnObjective());
+            System.AddObjective(new ReturnFromInnObjective());
         }
     }
 
@@ -334,7 +334,7 @@ namespace Server.Engines.Quests.Ninja
                 1063199;
         public override void OnRead()
         {
-            this.System.AddObjective(new SearchForSwordObjective());
+            System.AddObjective(new SearchForSwordObjective());
         }
     }
 
@@ -354,7 +354,7 @@ namespace Server.Engines.Quests.Ninja
                 1063201;
         public override void OnRead()
         {
-            this.System.AddObjective(new HallwayWalkObjective());
+            System.AddObjective(new HallwayWalkObjective());
         }
     }
 
@@ -375,7 +375,7 @@ namespace Server.Engines.Quests.Ninja
                 1063203;
         public override void OnRead()
         {
-            this.System.AddObjective(new ReturnSwordObjective());
+            System.AddObjective(new ReturnSwordObjective());
         }
     }
 
@@ -396,7 +396,7 @@ namespace Server.Engines.Quests.Ninja
                 1063205;
         public override void OnRead()
         {
-            this.System.AddObjective(new SlayHenchmenObjective());
+            System.AddObjective(new SlayHenchmenObjective());
         }
     }
 
@@ -426,7 +426,7 @@ namespace Server.Engines.Quests.Ninja
                 1063211;
         public override void OnRead()
         {
-            this.System.AddObjective(new GiveEminoSwordObjective());
+            System.AddObjective(new GiveEminoSwordObjective());
         }
     }
 
@@ -462,7 +462,7 @@ namespace Server.Engines.Quests.Ninja
                 1063216;
         public override void OnRead()
         {
-            this.System.Complete();
+            System.Complete();
         }
     }
 
@@ -482,7 +482,7 @@ namespace Server.Engines.Quests.Ninja
                 1063217;
         public override void OnRead()
         {
-            this.System.Complete();
+            System.Complete();
         }
     }
 }

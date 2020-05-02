@@ -11,8 +11,8 @@ namespace Server.Items
         public Kama()
             : base(0x27AD)
         {
-            this.Weight = 7.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 7.0;
+            Layer = Layer.TwoHanded;
         }
 
         public Kama(Serial serial)

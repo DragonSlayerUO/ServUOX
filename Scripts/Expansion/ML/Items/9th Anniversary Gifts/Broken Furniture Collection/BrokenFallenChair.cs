@@ -40,7 +40,7 @@ namespace Server.Items
         public BrokenFallenChairAddon()
             : base()
         {
-            this.AddComponent(new BrokenFallenChairComponent(), 0, 0, 0);
+            AddComponent(new BrokenFallenChairComponent(), 0, 0, 0);
         }
 
         public BrokenFallenChairAddon(Serial serial)
@@ -70,7 +70,7 @@ namespace Server.Items
         public BrokenFallenChairDeed()
             : base()
         {
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
         }
 
         public BrokenFallenChairDeed(Serial serial)

@@ -42,7 +42,7 @@ namespace Server.Items
             int version = reader.ReadEncodedInt();
 
             if (version == 0)
-                this.Weight = -1;
+                Weight = -1;
         }
     }
 }

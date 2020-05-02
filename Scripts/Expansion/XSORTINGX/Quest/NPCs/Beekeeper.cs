@@ -18,10 +18,10 @@ namespace Server.Mobiles
         }
 
         public override VendorShoeType ShoeType => VendorShoeType.Boots;
-        protected override List<SBInfo> SBInfos => this.m_SBInfos;
+        protected override List<SBInfo> SBInfos => m_SBInfos;
         public override void InitSBInfo()
         {
-            this.m_SBInfos.Add(new SBBeekeeper());
+            m_SBInfos.Add(new SBBeekeeper());
         }
 
         public override void Serialize(GenericWriter writer)

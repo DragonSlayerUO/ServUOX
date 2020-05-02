@@ -164,8 +164,8 @@ namespace Server.Engines.Quests
         {
             if (!(this is MondainQuester))
 
-                this.Name = "Kane";
-            this.Title = "the Master of Arms";
+                Name = "Kane";
+            Title = "the Master of Arms";
         }
 
         public Kane(Serial serial)

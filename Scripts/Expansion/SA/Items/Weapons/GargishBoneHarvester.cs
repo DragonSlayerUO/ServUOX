@@ -10,7 +10,7 @@ namespace Server.Items
         public GargishBoneHarvester()
             : base(0x48C6)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public GargishBoneHarvester(Serial serial)

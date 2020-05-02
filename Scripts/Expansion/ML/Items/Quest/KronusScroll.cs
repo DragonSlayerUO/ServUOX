@@ -35,7 +35,7 @@ namespace Server.Engines.Quests.Necro
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (!this.IsChildOf(from))
+            if (!IsChildOf(from))
                 return;
 
             PlayerMobile pm = from as PlayerMobile;
@@ -63,7 +63,7 @@ namespace Server.Engines.Quests.Necro
                             if (obj != null && !obj.Completed)
                                 obj.Complete();
 
-                            this.Delete();
+                            Delete();
                             new CallingTimer(pm).Start();
                         }
                         else
@@ -98,24 +98,24 @@ namespace Server.Engines.Quests.Necro
             public CallingTimer(PlayerMobile player)
                 : base(TimeSpan.Zero, TimeSpan.FromSeconds(1.0), 6)
             {
-                this.Priority = TimerPriority.TwentyFiveMS;
+                Priority = TimerPriority.TwentyFiveMS;
 
-                this.m_Player = player;
-                this.m_Step = 0;
+                m_Player = player;
+                m_Step = 0;
             }
 
             protected override void OnTick()
             {
-                if (this.m_Player.Deleted)
+                if (m_Player.Deleted)
                 {
-                    this.Stop();
+                    Stop();
                     return;
                 }
 
-                if (!this.m_Player.Mounted)
-                    this.m_Player.Animate(Utility.RandomBool() ? 16 : 17, 7, 1, true, false, 0);
+                if (!m_Player.Mounted)
+                    m_Player.Animate(Utility.RandomBool() ? 16 : 17, 7, 1, true, false, 0);
 
-                if (this.m_Step == 4)
+                if (m_Step == 4)
                 {
                     int baseX = KronusScroll.m_WellOfTearsArea.X;
                     int baseY = KronusScroll.m_WellOfTearsArea.Y;
@@ -123,8 +123,8 @@ namespace Server.Engines.Quests.Necro
                     int height = KronusScroll.m_WellOfTearsArea.Height;
                     Map map = KronusScroll.m_WellOfTearsMap;
 
-                    Effects.SendLocationParticles(EffectItem.Create(this.m_Player.Location, this.m_Player.Map, TimeSpan.FromSeconds(1.0)), 0, 0, 0, 0x13C4);
-                    Effects.PlaySound(this.m_Player.Location, this.m_Player.Map, 0x243);
+                    Effects.SendLocationParticles(EffectItem.Create(m_Player.Location, m_Player.Map, TimeSpan.FromSeconds(1.0)), 0, 0, 0, 0x13C4);
+                    Effects.PlaySound(m_Player.Location, m_Player.Map, 0x243);
 
                     for (int i = 0; i < 15; i++)
                     {
@@ -141,18 +141,18 @@ namespace Server.Engines.Quests.Necro
                     }
                 }
 
-                if (this.m_Step < 5)
+                if (m_Step < 5)
                 {
-                    this.m_Player.Frozen = true;
+                    m_Player.Frozen = true;
                 }
                 else // Cast completed
                 {
-                    this.m_Player.Frozen = false;
+                    m_Player.Frozen = false;
 
-                    SummonedPaladin.BeginSummon(this.m_Player);
+                    SummonedPaladin.BeginSummon(m_Player);
                 }
 
-                this.m_Step++;
+                m_Step++;
             }
         }
     }

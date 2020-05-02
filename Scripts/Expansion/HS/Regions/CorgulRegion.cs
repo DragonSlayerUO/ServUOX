@@ -61,7 +61,7 @@ namespace Server.Regions
                         if (t >= 10)
                         {
                             MarkerItem i = new MarkerItem(14089);
-                            i.MoveToWorld(new Point3D(x, y, 0), this.Map);
+                            i.MoveToWorld(new Point3D(x, y, 0), Map);
                             m_Markers.Add(i);
                             t = 0;
                         }
@@ -120,14 +120,14 @@ namespace Server.Regions
 
                 if (m is PlayerMobile || (m is BaseCreature && ((BaseCreature)m).Controlled || ((BaseCreature)m).Summoned))
                 {
-                    Point3D go = CorgulAltar.GetRandomPoint(CorgulAltar.LandKickLocation, this.Map);
-                    BaseCreature.TeleportPets(m, go, this.Map);
-                    m.MoveToWorld(go, this.Map);
+                    Point3D go = CorgulAltar.GetRandomPoint(CorgulAltar.LandKickLocation, Map);
+                    BaseCreature.TeleportPets(m, go, Map);
+                    m.MoveToWorld(go, Map);
                 }
 
             }
 
-            foreach (BaseBoat b in this.GetEnumeratedMultis().OfType<BaseBoat>())
+            foreach (BaseBoat b in GetEnumeratedMultis().OfType<BaseBoat>())
             {
                 if (b != null)
                     RemoveBoat(b);
@@ -161,7 +161,7 @@ namespace Server.Regions
                 int offsetY = ePnt.Y - boat.Y;
                 int offsetZ = map.GetAverageZ(ePnt.X, ePnt.Y) - boat.Z;
 
-                if (boat.CanFit(ePnt, this.Map, boat.ItemID))
+                if (boat.CanFit(ePnt, Map, boat.ItemID))
                 {
                     boat.Teleport(offsetX, offsetY, offsetZ);
 
@@ -185,7 +185,7 @@ namespace Server.Regions
                 int offsetY = ePnt.Y - boat.Y;
                 int offsetZ = ePnt.Z - boat.Z;
 
-                if (boat.CanFit(ePnt, this.Map, boat.ItemID))
+                if (boat.CanFit(ePnt, Map, boat.ItemID))
                 {
                     boat.Teleport(offsetX, offsetY, -5);
                     boat.SendMessageToAllOnBoard("A rough patch of sea has disoriented the crew!");

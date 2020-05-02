@@ -8,7 +8,7 @@ namespace Server.Mobiles
         [Constructable]
         public Messenger()
         {
-            this.Title = "the messenger";
+            Title = "the messenger";
         }
 
         public Messenger(Serial serial)
@@ -20,19 +20,19 @@ namespace Server.Mobiles
         public override bool ClickTitle => false;// Do not display 'the messenger' when single-clicking
         public override void InitOutfit()
         {
-            if (this.Female)
-                this.AddItem(new PlainDress());
+            if (Female)
+                AddItem(new PlainDress());
             else
-                this.AddItem(new Shirt(GetRandomHue()));
+                AddItem(new Shirt(GetRandomHue()));
 
             int lowHue = GetRandomHue();
 
-            this.AddItem(new ShortPants(lowHue));
+            AddItem(new ShortPants(lowHue));
 
-            if (this.Female)
-                this.AddItem(new Boots(lowHue));
+            if (Female)
+                AddItem(new Boots(lowHue));
             else
-                this.AddItem(new Shoes(lowHue));
+                AddItem(new Shoes(lowHue));
 
             //if ( !Female )
             //AddItem( new BodySash( lowHue ) );
@@ -45,20 +45,20 @@ namespace Server.Mobiles
             switch (Utility.Random(4))
             {
                 case 0:
-                    this.AddItem(new ShortHair(Utility.RandomHairHue()));
+                    AddItem(new ShortHair(Utility.RandomHairHue()));
                     break;
                 case 1:
-                    this.AddItem(new TwoPigTails(Utility.RandomHairHue()));
+                    AddItem(new TwoPigTails(Utility.RandomHairHue()));
                     break;
                 case 2:
-                    this.AddItem(new ReceedingHair(Utility.RandomHairHue()));
+                    AddItem(new ReceedingHair(Utility.RandomHairHue()));
                     break;
                 case 3:
-                    this.AddItem(new KrisnaHair(Utility.RandomHairHue()));
+                    AddItem(new KrisnaHair(Utility.RandomHairHue()));
                     break;
             }
 
-            this.PackGold(200, 250);
+            PackGold(200, 250);
         }
 
         public override void Serialize(GenericWriter writer)

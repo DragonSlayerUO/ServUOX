@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoRock2()
             : base(0x1363)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoRock2(Serial serial)

@@ -9,7 +9,7 @@ namespace Server.Items
         public ChainLegs()
             : base(0x13BE)
         {
-            this.Weight = 7.0;
+            Weight = 7.0;
         }
 
         public ChainLegs(Serial serial)

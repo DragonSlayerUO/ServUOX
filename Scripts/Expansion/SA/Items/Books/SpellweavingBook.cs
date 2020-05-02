@@ -14,9 +14,9 @@ namespace Server.Items
         public SpellweavingBook(ulong content)
             : base(content, 0x2D50)
         {
-            this.Hue = 0x8A2;
+            Hue = 0x8A2;
 
-            this.Layer = Layer.OneHanded;
+            Layer = Layer.OneHanded;
         }
 
         public SpellweavingBook(Serial serial)

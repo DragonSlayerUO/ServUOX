@@ -39,10 +39,10 @@ namespace Server.Mobiles
             VirtualArmor = 40;
 
             if (Core.ML && Utility.RandomDouble() < .33)
-                this.PackItem(Engines.Plants.Seed.RandomPeculiarSeed(1));
+                PackItem(Engines.Plants.Seed.RandomPeculiarSeed(1));
 
             if (0.1 > Utility.RandomDouble())
-                this.PackItem(new Items.RoastPig());
+                PackItem(new Items.RoastPig());
         }
 
         public Titan(Serial serial)

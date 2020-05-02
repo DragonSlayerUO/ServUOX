@@ -21,30 +21,30 @@ namespace Server.Engines.Quests.Ninja
         public override int TalkNumber => -1;
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x83FE;
+            Hue = 0x83FE;
 
-            this.Female = false;
-            this.Body = 0x190;
-            this.Name = "Elite Ninja Zoel";
+            Female = false;
+            Body = 0x190;
+            Name = "Elite Ninja Zoel";
         }
 
         public override void InitOutfit()
         {
-            this.HairItemID = 0x203B;
-            this.HairHue = 0x901;
+            HairItemID = 0x203B;
+            HairHue = 0x901;
 
-            this.AddItem(new HakamaShita(0x1));
-            this.AddItem(new NinjaTabi());
-            this.AddItem(new TattsukeHakama());
-            this.AddItem(new Bandana());
+            AddItem(new HakamaShita(0x1));
+            AddItem(new NinjaTabi());
+            AddItem(new TattsukeHakama());
+            AddItem(new Bandana());
 
-            this.AddItem(new LeatherNinjaBelt());
+            AddItem(new LeatherNinjaBelt());
 
             Tekagi tekagi = new Tekagi();
             tekagi.Movable = false;
-            this.AddItem(tekagi);
+            AddItem(tekagi);
         }
 
         public override int GetAutoTalkRange(PlayerMobile pm)
@@ -101,7 +101,7 @@ namespace Server.Engines.Quests.Ninja
         {
             base.OnMovement(m, oldLocation);
 
-            if (!m.Frozen && !m.Alive && this.InRange(m, 4) && !this.InRange(oldLocation, 4) && this.InLOS(m))
+            if (!m.Frozen && !m.Alive && InRange(m, 4) && !InRange(oldLocation, 4) && InLOS(m))
             {
                 if (m.Map == null || !m.Map.CanFit(m.Location, 16, false, false))
                 {
@@ -109,7 +109,7 @@ namespace Server.Engines.Quests.Ninja
                 }
                 else
                 {
-                    this.Direction = this.GetDirectionTo(m);
+                    Direction = GetDirectionTo(m);
 
                     m.PlaySound(0x214);
                     m.FixedEffect(0x376A, 10, 16);

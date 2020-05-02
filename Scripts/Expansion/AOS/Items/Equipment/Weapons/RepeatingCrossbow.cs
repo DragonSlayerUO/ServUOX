@@ -9,7 +9,7 @@ namespace Server.Items
         public RepeatingCrossbow()
             : base(0x26C3)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public RepeatingCrossbow(Serial serial)

@@ -8,13 +8,13 @@ namespace Server.Mobiles
         [Constructable]
         public EscortableMage()
         {
-            this.Title = "the mage";
+            Title = "the mage";
 
-            this.SetSkill(SkillName.EvalInt, 80.0, 100.0);
-            this.SetSkill(SkillName.Inscribe, 80.0, 100.0);
-            this.SetSkill(SkillName.Magery, 80.0, 100.0);
-            this.SetSkill(SkillName.Meditation, 80.0, 100.0);
-            this.SetSkill(SkillName.MagicResist, 80.0, 100.0);
+            SetSkill(SkillName.EvalInt, 80.0, 100.0);
+            SetSkill(SkillName.Inscribe, 80.0, 100.0);
+            SetSkill(SkillName.Magery, 80.0, 100.0);
+            SetSkill(SkillName.Meditation, 80.0, 100.0);
+            SetSkill(SkillName.MagicResist, 80.0, 100.0);
         }
 
         public EscortableMage(Serial serial)
@@ -26,20 +26,20 @@ namespace Server.Mobiles
         public override bool ClickTitle => false;// Do not display 'the mage' when single-clicking
         public override void InitOutfit()
         {
-            this.AddItem(new Robe(GetRandomHue()));
+            AddItem(new Robe(GetRandomHue()));
 
             int lowHue = GetRandomHue();
 
-            this.AddItem(new ShortPants(lowHue));
+            AddItem(new ShortPants(lowHue));
 
-            if (this.Female)
-                this.AddItem(new ThighBoots(lowHue));
+            if (Female)
+                AddItem(new ThighBoots(lowHue));
             else
-                this.AddItem(new Boots(lowHue));
+                AddItem(new Boots(lowHue));
 
             Utility.AssignRandomHair(this);
 
-            this.PackGold(200, 250);
+            PackGold(200, 250);
         }
 
         public override void Serialize(GenericWriter writer)

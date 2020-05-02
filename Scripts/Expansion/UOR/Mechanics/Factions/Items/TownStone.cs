@@ -16,8 +16,8 @@ namespace Server.Factions
         public TownStone(Town town)
             : base(0xEDE)
         {
-            this.Movable = false;
-            this.Town = town;
+            Movable = false;
+            Town = town;
         }
 
         public TownStone(Serial serial)
@@ -30,19 +30,19 @@ namespace Server.Factions
         {
             get
             {
-                return this.m_Town;
+                return m_Town;
             }
             set
             {
-                this.m_Town = value;
+                m_Town = value;
 
-                this.AssignName(this.m_Town == null ? null : this.m_Town.Definition.TownStoneName);
+                AssignName(m_Town == null ? null : m_Town.Definition.TownStoneName);
             }
         }
         public override string DefaultName => "faction town stone";
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.m_Town == null)
+            if (m_Town == null)
                 return;
 
             Faction faction = Faction.Find(from);
@@ -50,14 +50,14 @@ namespace Server.Factions
             if (faction == null && from.AccessLevel < AccessLevel.GameMaster)
                 return; // TODO: Message?
 
-            if (this.m_Town.Owner == null || (from.AccessLevel < AccessLevel.GameMaster && faction != this.m_Town.Owner))
+            if (m_Town.Owner == null || (from.AccessLevel < AccessLevel.GameMaster && faction != m_Town.Owner))
                 from.SendLocalizedMessage(1010332); // Your faction does not control this town
-            else if (!this.m_Town.Owner.IsCommander(from))
+            else if (!m_Town.Owner.IsCommander(from))
                 from.SendLocalizedMessage(1005242); // Only faction Leaders can use townstones
             else if (FactionGump.Exists(from))
                 from.SendLocalizedMessage(1042160); // You already have a faction menu open.
             else if (from is PlayerMobile)
-                from.SendGump(new TownStoneGump((PlayerMobile)from, this.m_Town.Owner, this.m_Town));
+                from.SendGump(new TownStoneGump((PlayerMobile)from, m_Town.Owner, m_Town));
         }
 
         public override void Serialize(GenericWriter writer)
@@ -66,7 +66,7 @@ namespace Server.Factions
 
             writer.Write(0); // version
 
-            Town.WriteReference(writer, this.m_Town);
+            Town.WriteReference(writer, m_Town);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -79,7 +79,7 @@ namespace Server.Factions
             {
                 case 0:
                     {
-                        this.Town = Town.ReadReference(reader);
+                        Town = Town.ReadReference(reader);
                         break;
                     }
             }

@@ -128,7 +128,7 @@ namespace Server.Engines.VeteranRewards
 
         private bool CheckRange(Mobile m)
         {
-            if (Components == null || m.Map != this.Map)
+            if (Components == null || m.Map != Map)
                 return false;
 
             foreach (AddonComponent c in Components)
@@ -207,8 +207,8 @@ namespace Server.Engines.VeteranRewards
 
             public override bool OnDragDrop(Mobile from, Item dropped)
             {
-                if (this.Addon is DaviesLockerAddon && (dropped is SOS || dropped is TreasureMap))
-                    ((DaviesLockerAddon)this.Addon).TryAddEntry(dropped as Item, from);
+                if (Addon is DaviesLockerAddon && (dropped is SOS || dropped is TreasureMap))
+                    ((DaviesLockerAddon)Addon).TryAddEntry(dropped as Item, from);
 
                 return false;
             }

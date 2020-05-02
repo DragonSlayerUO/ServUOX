@@ -20,12 +20,12 @@ namespace Server.Engines.Quests.Necro
 
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x8849;
-            this.Body = 0x190;
+            Hue = 0x8849;
+            Body = 0x190;
 
-            this.Name = "Mardoth";
+            Name = "Mardoth";
         }
 
         public override bool OnDragDrop(Mobile from, Item dropped)
@@ -46,12 +46,12 @@ namespace Server.Engines.Quests.Necro
 
                             if (horn.Charges < 10)
                             {
-                                this.SayTo(from, 1049384); // I have recharged the item for you.
+                                SayTo(from, 1049384); // I have recharged the item for you.
                                 horn.Charges = 10;
                             }
                             else
                             {
-                                this.SayTo(from, 1049385); // That doesn't need recharging yet.
+                                SayTo(from, 1049385); // That doesn't need recharging yet.
                             }
                         }
                         else
@@ -69,24 +69,24 @@ namespace Server.Engines.Quests.Necro
 
         public override void InitOutfit()
         {
-            this.AddItem(new Sandals(0x1));
-            this.AddItem(new Robe(0x66D));
-            this.AddItem(new BlackStaff());
-            this.AddItem(new WizardsHat(0x1));
+            AddItem(new Sandals(0x1));
+            AddItem(new Robe(0x66D));
+            AddItem(new BlackStaff());
+            AddItem(new WizardsHat(0x1));
 
-            this.FacialHairItemID = 0x2041;
-            this.FacialHairHue = 0x482;
+            FacialHairItemID = 0x2041;
+            FacialHairHue = 0x482;
 
-            this.HairItemID = 0x203C;
-            this.HairHue = 0x482;
+            HairItemID = 0x203C;
+            HairHue = 0x482;
 
             Item gloves = new BoneGloves();
             gloves.Hue = 0x66D;
-            this.AddItem(gloves);
+            AddItem(gloves);
 
             Item gorget = new PlateGorget();
             gorget.Hue = 0x1;
-            this.AddItem(gorget);
+            AddItem(gorget);
         }
 
         public override int GetAutoTalkRange(PlayerMobile m)
@@ -184,7 +184,7 @@ namespace Server.Engines.Quests.Necro
                             }
                             else if (contextMenu)
                             {
-                                this.FocusTo(player);
+                                FocusTo(player);
                                 player.SendLocalizedMessage(1061821); // Mardoth has nothing more for you at this time.
                             }
                         }
@@ -201,7 +201,7 @@ namespace Server.Engines.Quests.Necro
         {
             base.OnMovement(m, oldLocation);
 
-            if (m is PlayerMobile && !m.Frozen && !m.Alive && this.InRange(m, 4) && !this.InRange(oldLocation, 4) && this.InLOS(m))
+            if (m is PlayerMobile && !m.Frozen && !m.Alive && InRange(m, 4) && !InRange(oldLocation, 4) && InLOS(m))
             {
                 if (m.Map == null || !m.Map.CanFit(m.Location, 16, false, false))
                 {
@@ -209,7 +209,7 @@ namespace Server.Engines.Quests.Necro
                 }
                 else
                 {
-                    this.Direction = this.GetDirectionTo(m);
+                    Direction = GetDirectionTo(m);
 
                     m.PlaySound(0x214);
                     m.FixedEffect(0x376A, 10, 16);

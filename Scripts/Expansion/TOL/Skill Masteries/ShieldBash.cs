@@ -36,7 +36,7 @@ namespace Server.Spells.SkillMasteries
             if (!HasShield())
                 return false;
 
-            if (HasSpell(Caster, this.GetType()))
+            if (HasSpell(Caster, GetType()))
                 return false;
 
             return base.CheckCast();

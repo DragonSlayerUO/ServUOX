@@ -84,12 +84,12 @@ namespace Server.Mobiles
             base.OnGaveMeleeAttack(defender);
 
             if (0.2 >= Utility.RandomDouble())
-                this.Earthquake();
+                Earthquake();
         }
 
         public void Earthquake()
         {
-            Map map = this.Map;
+            Map map = Map;
 
             if (map == null)
                 return;
@@ -100,10 +100,10 @@ namespace Server.Mobiles
 
             foreach (Mobile m in eable)
             {
-                if (m == this || !this.CanBeHarmful(m))
+                if (m == this || !CanBeHarmful(m))
                     continue;
 
-                if (m is BaseCreature && (((BaseCreature)m).Controlled || ((BaseCreature)m).Summoned || ((BaseCreature)m).Team != this.Team))
+                if (m is BaseCreature && (((BaseCreature)m).Controlled || ((BaseCreature)m).Summoned || ((BaseCreature)m).Team != Team))
                     targets.Add(m);
                 else if (m.Player)
                     targets.Add(m);
@@ -111,7 +111,7 @@ namespace Server.Mobiles
 
             eable.Free();
 
-            this.PlaySound(0x2F3);
+            PlaySound(0x2F3);
 
             for (int i = 0; i < targets.Count; ++i)
             {
@@ -124,7 +124,7 @@ namespace Server.Mobiles
                 else if (damage > 75.0)
                     damage = 75.0;
 
-                this.DoHarmful(m);
+                DoHarmful(m);
 
                 AOS.Damage(m, this, (int)damage, 100, 0, 0, 0, 0);
 

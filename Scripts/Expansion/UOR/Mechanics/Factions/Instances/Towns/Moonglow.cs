@@ -6,7 +6,7 @@ namespace Server.Factions
     {
         public Moonglow()
         {
-            this.Definition =
+            Definition =
                 new TownDefinition(
                     3,
                     0x186C,

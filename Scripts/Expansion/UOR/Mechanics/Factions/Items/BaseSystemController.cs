@@ -21,31 +21,31 @@ namespace Server.Factions
         {
             get
             {
-                if (this.m_LabelNumber > 0)
-                    return this.m_LabelNumber;
+                if (m_LabelNumber > 0)
+                    return m_LabelNumber;
 
-                return this.DefaultLabelNumber;
+                return DefaultLabelNumber;
             }
         }
         public virtual void AssignName(TextDefinition name)
         {
             if (name != null && name.Number > 0)
             {
-                this.m_LabelNumber = name.Number;
-                this.Name = null;
+                m_LabelNumber = name.Number;
+                Name = null;
             }
             else if (name != null && name.String != null)
             {
-                this.m_LabelNumber = 0;
-                this.Name = name.String;
+                m_LabelNumber = 0;
+                Name = name.String;
             }
             else
             {
-                this.m_LabelNumber = 0;
-                this.Name = this.DefaultName;
+                m_LabelNumber = 0;
+                Name = DefaultName;
             }
 
-            this.InvalidateProperties();
+            InvalidateProperties();
         }
 
         public override void Serialize(GenericWriter writer)

@@ -95,7 +95,7 @@ namespace Server.Spells.Chivalry
                 }
             }
 
-            this.FinishSequence();
+            FinishSequence();
         }
 
         private class InternalTarget : Target

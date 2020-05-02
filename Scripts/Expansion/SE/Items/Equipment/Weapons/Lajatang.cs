@@ -11,8 +11,8 @@ namespace Server.Items
         public Lajatang()
             : base(0x27A7)
         {
-            this.Weight = 12.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 12.0;
+            Layer = Layer.TwoHanded;
         }
 
         public Lajatang(Serial serial)

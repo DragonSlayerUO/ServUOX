@@ -16,10 +16,10 @@ namespace Server.Items
         public GuildTeleporter(Item stone)
             : base(0x1869)
         {
-            this.Weight = 1.0;
-            this.LootType = LootType.Blessed;
+            Weight = 1.0;
+            LootType = LootType.Blessed;
 
-            this.m_Stone = stone;
+            m_Stone = stone;
         }
 
         public GuildTeleporter(Serial serial)
@@ -35,13 +35,13 @@ namespace Server.Items
 
             writer.Write(0); // version
 
-            writer.Write(this.m_Stone);
+            writer.Write(m_Stone);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            this.LootType = LootType.Blessed;
+            LootType = LootType.Blessed;
 
             int version = reader.ReadInt();
 
@@ -49,14 +49,14 @@ namespace Server.Items
             {
                 case 0:
                     {
-                        this.m_Stone = reader.ReadItem();
+                        m_Stone = reader.ReadItem();
 
                         break;
                     }
             }
 
-            if (this.Weight == 0.0)
-                this.Weight = 1.0;
+            if (Weight == 0.0)
+                Weight = 1.0;
         }
 
         public override void OnDoubleClick(Mobile from)
@@ -64,9 +64,9 @@ namespace Server.Items
             if (Guild.NewGuildSystem)
                 return;
 
-            Guildstone stone = this.m_Stone as Guildstone;
+            Guildstone stone = m_Stone as Guildstone;
 
-            if (!this.IsChildOf(from.Backpack))
+            if (!IsChildOf(from.Backpack))
             {
                 from.SendLocalizedMessage(1042001); // That must be in your pack for you to use it.
             }
@@ -92,8 +92,8 @@ namespace Server.Items
                 }
                 else
                 {
-                    this.m_Stone.MoveToWorld(from.Location, from.Map);
-                    this.Delete();
+                    m_Stone.MoveToWorld(from.Location, from.Map);
+                    Delete();
                     stone.Guild.Teleporter = null;
                 }
             }

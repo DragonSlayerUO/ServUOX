@@ -11,8 +11,8 @@ namespace Server.Items
         public OrnateAxe()
             : base(0x2D28)
         {
-            this.Weight = 12.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 12.0;
+            Layer = Layer.TwoHanded;
         }
 
         public OrnateAxe(Serial serial)

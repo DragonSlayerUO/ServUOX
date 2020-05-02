@@ -8,7 +8,7 @@ namespace Server.Items
         public TwilightLantern()
             : base()
         {
-            this.Hue = Utility.RandomBool() ? 142 : 947;
+            Hue = Utility.RandomBool() ? 142 : 947;
         }
 
         public TwilightLantern(Serial serial)

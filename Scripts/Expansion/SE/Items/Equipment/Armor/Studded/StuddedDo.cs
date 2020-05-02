@@ -8,7 +8,7 @@ namespace Server.Items
         public StuddedDo()
             : base(0x27C7)
         {
-            this.Weight = 8.0;
+            Weight = 8.0;
         }
 
         public StuddedDo(Serial serial)

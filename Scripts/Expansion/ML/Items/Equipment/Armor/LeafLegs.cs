@@ -11,7 +11,7 @@ namespace Server.Items
         public LeafLegs()
             : base(0x2FC9)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public LeafLegs(Serial serial)

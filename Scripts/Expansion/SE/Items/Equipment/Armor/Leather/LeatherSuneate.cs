@@ -10,7 +10,7 @@ namespace Server.Items
         public LeatherSuneate()
             : base(0x2786)
         {
-            this.Weight = 4.0;
+            Weight = 4.0;
         }
 
         public LeatherSuneate(Serial serial)

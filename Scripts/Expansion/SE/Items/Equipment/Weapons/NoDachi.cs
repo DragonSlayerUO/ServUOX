@@ -11,8 +11,8 @@ namespace Server.Items
         public NoDachi()
             : base(0x27A2)
         {
-            this.Weight = 10.0;
-            this.Layer = Layer.TwoHanded;
+            Weight = 10.0;
+            Layer = Layer.TwoHanded;
         }
 
         public NoDachi(Serial serial)

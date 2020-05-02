@@ -23,8 +23,8 @@ namespace Server.Factions.AI
         private ReactionType m_Type;
         public Reaction(Faction faction, ReactionType type)
         {
-            this.m_Faction = faction;
-            this.m_Type = type;
+            m_Faction = faction;
+            m_Type = type;
         }
 
         public Reaction(GenericReader reader)
@@ -35,32 +35,32 @@ namespace Server.Factions.AI
             {
                 case 0:
                     {
-                        this.m_Faction = Faction.ReadReference(reader);
-                        this.m_Type = (ReactionType)reader.ReadEncodedInt();
+                        m_Faction = Faction.ReadReference(reader);
+                        m_Type = (ReactionType)reader.ReadEncodedInt();
 
                         break;
                     }
             }
         }
 
-        public Faction Faction => this.m_Faction;
+        public Faction Faction => m_Faction;
         public ReactionType Type
         {
             get
             {
-                return this.m_Type;
+                return m_Type;
             }
             set
             {
-                this.m_Type = value;
+                m_Type = value;
             }
         }
         public void Serialize(GenericWriter writer)
         {
             writer.WriteEncodedInt(0); // version
 
-            Faction.WriteReference(writer, this.m_Faction);
-            writer.WriteEncodedInt((int)this.m_Type);
+            Faction.WriteReference(writer, m_Faction);
+            writer.WriteEncodedInt((int)m_Type);
         }
     }
 
@@ -72,14 +72,14 @@ namespace Server.Factions.AI
         private Mobile m_Follow;
         public Orders(BaseFactionGuard guard)
         {
-            this.m_Guard = guard;
-            this.m_Reactions = new List<Reaction>();
-            this.m_Movement = MovementType.Patrol;
+            m_Guard = guard;
+            m_Reactions = new List<Reaction>();
+            m_Movement = MovementType.Patrol;
         }
 
         public Orders(BaseFactionGuard guard, GenericReader reader)
         {
-            this.m_Guard = guard;
+            m_Guard = guard;
 
             int version = reader.ReadEncodedInt();
 
@@ -87,68 +87,68 @@ namespace Server.Factions.AI
             {
                 case 1:
                     {
-                        this.m_Follow = reader.ReadMobile();
+                        m_Follow = reader.ReadMobile();
                         goto case 0;
                     }
                 case 0:
                     {
                         int count = reader.ReadEncodedInt();
-                        this.m_Reactions = new List<Reaction>(count);
+                        m_Reactions = new List<Reaction>(count);
 
                         for (int i = 0; i < count; ++i)
-                            this.m_Reactions.Add(new Reaction(reader));
+                            m_Reactions.Add(new Reaction(reader));
 
-                        this.m_Movement = (MovementType)reader.ReadEncodedInt();
+                        m_Movement = (MovementType)reader.ReadEncodedInt();
 
                         break;
                     }
             }
         }
 
-        public BaseFactionGuard Guard => this.m_Guard;
+        public BaseFactionGuard Guard => m_Guard;
         public MovementType Movement
         {
             get
             {
-                return this.m_Movement;
+                return m_Movement;
             }
             set
             {
-                this.m_Movement = value;
+                m_Movement = value;
             }
         }
         public Mobile Follow
         {
             get
             {
-                return this.m_Follow;
+                return m_Follow;
             }
             set
             {
-                this.m_Follow = value;
+                m_Follow = value;
             }
         }
         public Reaction GetReaction(Faction faction)
         {
             Reaction reaction;
 
-            for (int i = 0; i < this.m_Reactions.Count; ++i)
+            for (int i = 0; i < m_Reactions.Count; ++i)
             {
-                reaction = this.m_Reactions[i];
+                reaction = m_Reactions[i];
 
                 if (reaction.Faction == faction)
                     return reaction;
             }
 
-            reaction = new Reaction(faction, (faction == null || faction == this.m_Guard.Faction) ? ReactionType.Ignore : ReactionType.Attack);
-            this.m_Reactions.Add(reaction);
+            reaction = new Reaction(faction, (faction == null || faction == m_Guard.Faction) ? ReactionType.Ignore : ReactionType.Attack);
+            m_Reactions.Add(reaction);
 
             return reaction;
         }
 
         public void SetReaction(Faction faction, ReactionType type)
         {
-            Reaction reaction = this.GetReaction(faction);
+            Reaction reaction = GetReaction(faction);
 
             reaction.Type = type;
         }
@@ -161,10 +161,10 @@ namespace Server.Factions.AI
 
             writer.WriteEncodedInt(m_Reactions.Count);
 
-            for (int i = 0; i < this.m_Reactions.Count; ++i)
-                this.m_Reactions[i].Serialize(writer);
+            for (int i = 0; i < m_Reactions.Count; ++i)
+                m_Reactions[i].Serialize(writer);
 
-            writer.WriteEncodedInt((int)this.m_Movement);
+            writer.WriteEncodedInt((int)m_Movement);
         }
     }
 }

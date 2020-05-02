@@ -8,7 +8,7 @@ namespace Server.Items
         public LightPlateJingasa()
             : base(0x2781)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public LightPlateJingasa(Serial serial)

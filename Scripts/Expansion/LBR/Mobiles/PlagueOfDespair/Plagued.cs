@@ -315,7 +315,7 @@ namespace Server.Mobiles
         {
             if (IsAccessibleTo(from))
             {
-                if (OpenedBy != null && this.Backpack != null)
+                if (OpenedBy != null && Backpack != null)
                     Backpack.DisplayTo(from);
                 else
                     PrivateOverheadMessage(MessageType.Regular, 0x3B2, 1071917, from.NetState); // * You attempt to tear open the amorphous flesh, but it resists *

@@ -8,8 +8,8 @@ namespace Server.Items
         public DecoBlackmoor()
             : base(0xF79)
         {
-            this.Movable = true;
-            this.Stackable = false;
+            Movable = true;
+            Stackable = false;
         }
 
         public DecoBlackmoor(Serial serial)

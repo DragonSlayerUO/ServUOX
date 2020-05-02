@@ -21,7 +21,7 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker))
+            if (!Validate(attacker))
                 return;
 
             ClearCurrentAbility(attacker);

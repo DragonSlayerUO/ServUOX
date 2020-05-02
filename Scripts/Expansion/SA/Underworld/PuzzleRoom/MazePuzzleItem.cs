@@ -95,7 +95,7 @@ namespace Server.Items
 
         public void ApplyShock(Mobile m, int tick)
         {
-            if (m == null || !m.Alive || this.Deleted)
+            if (m == null || !m.Alive || Deleted)
             {
                 if (m_DamageTimer != null)
                     m_DamageTimer.Stop();
@@ -142,7 +142,7 @@ namespace Server.Items
 
                 if (m_From == null || m_Item == null || !m_From.Alive || m_Item.Deleted)
                 {
-                    this.Stop();
+                    Stop();
                     return;
                 }
 
@@ -160,7 +160,7 @@ namespace Server.Items
                         delay = 6;
 
                     if (m_Tick >= 10)
-                        this.Stop();
+                        Stop();
                     else
                         m_NextDamage = DateTime.UtcNow + TimeSpan.FromSeconds(delay);
                 }

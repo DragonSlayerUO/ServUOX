@@ -206,7 +206,7 @@ namespace Server.Movement
                         if (considerLand && landCheck < landCenter && landCenter > ourZ && testTop > landZ)
                             continue;
 
-                        if (this.IsOk(m, ignoreDoors, ignoreSpellFields, ourZ, testTop, tiles, items))
+                        if (IsOk(m, ignoreDoors, ignoreSpellFields, ourZ, testTop, tiles, items))
                         {
                             newZ = ourZ;
                             moveIsOk = true;
@@ -267,7 +267,7 @@ namespace Server.Movement
                         if (considerLand && landCheck < landCenter && landCenter > ourZ && testTop > landZ)
                             continue;
 
-                        if (this.IsOk(m, ignoreDoors, ignoreSpellFields, ourZ, testTop, tiles, items))
+                        if (IsOk(m, ignoreDoors, ignoreSpellFields, ourZ, testTop, tiles, items))
                         {
                             newZ = ourZ;
                             moveIsOk = true;
@@ -296,7 +296,7 @@ namespace Server.Movement
                         shouldCheck = false;
                 }
 
-                if (shouldCheck && this.IsOk(m, ignoreDoors, ignoreSpellFields, ourZ, testTop, tiles, items))
+                if (shouldCheck && IsOk(m, ignoreDoors, ignoreSpellFields, ourZ, testTop, tiles, items))
                 {
                     newZ = ourZ;
                     moveIsOk = true;
@@ -310,7 +310,7 @@ namespace Server.Movement
                 {
                     Mobile mob = mobiles[i];
 
-                    if (mob != m && (mob.Z + 15) > newZ && (newZ + 15) > mob.Z && !this.CanMoveOver(m, mob))
+                    if (mob != m && (mob.Z + 15) > newZ && (newZ + 15) > mob.Z && !CanMoveOver(m, mob))
                         moveIsOk = false;
                 }
             }
@@ -352,10 +352,10 @@ namespace Server.Movement
 
             int startZ, startTop;
 
-            List<Item> itemsStart = this.m_Pools[0];
-            List<Item> itemsForward = this.m_Pools[1];
-            List<Item> itemsLeft = this.m_Pools[2];
-            List<Item> itemsRight = this.m_Pools[3];
+            List<Item> itemsStart = m_Pools[0];
+            List<Item> itemsForward = m_Pools[1];
+            List<Item> itemsLeft = m_Pools[2];
+            List<Item> itemsRight = m_Pools[3];
 
             bool ignoreMovableImpassables = IgnoreMovableImpassables;
             TileFlag reqFlags = ImpassableSurface;

@@ -9,7 +9,7 @@ namespace Server.Items
         public Nunchaku()
             : base(0x27AE)
         {
-            this.Weight = 5.0;
+            Weight = 5.0;
         }
 
         public Nunchaku(Serial serial)

@@ -27,7 +27,7 @@ namespace Server.Spells.Chivalry
 
         public override void OnCast()
         {
-            BaseWeapon weapon = this.Caster.Weapon as BaseWeapon;
+            BaseWeapon weapon = Caster.Weapon as BaseWeapon;
 
             if (Caster.Player && (weapon == null || weapon is Fists))
             {

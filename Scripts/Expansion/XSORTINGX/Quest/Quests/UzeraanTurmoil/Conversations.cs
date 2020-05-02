@@ -37,7 +37,7 @@ namespace Server.Engines.Quests.Haven
                 1049092;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindUzeraanBeginObjective());
+            System.AddObjective(new FindUzeraanBeginObjective());
         }
     }
 
@@ -91,7 +91,7 @@ namespace Server.Engines.Quests.Haven
                 1060209;
         public override void OnRead()
         {
-            this.System.AddObjective(new TitheGoldObjective());
+            System.AddObjective(new TitheGoldObjective());
         }
     }
 
@@ -109,7 +109,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.System.From.Profession == 1) // warrior
+                if (System.From.Profession == 1) // warrior
                 {
                     /* <I>Uzeraan greets you as you approach...</I><BR><BR>
                     * 
@@ -139,7 +139,7 @@ namespace Server.Engines.Quests.Haven
                     */
                     return 1049088;
                 }
-                else if (this.System.From.Profession == 2) // magician
+                else if (System.From.Profession == 2) // magician
                 {
                     /* <I>Uzeraan greets you as you approach...</I><BR><BR>
                     * 
@@ -202,7 +202,7 @@ namespace Server.Engines.Quests.Haven
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new KillHordeMinionsObjective());
+            System.AddObjective(new KillHordeMinionsObjective());
         }
     }
 
@@ -221,7 +221,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.System.From.Profession == 2) // magician
+                if (System.From.Profession == 2) // magician
                 {
                     /* <I>You give your report to Uzeraan and after a while, he begins to
                     * speak...</I><BR><BR>
@@ -289,7 +289,7 @@ namespace Server.Engines.Quests.Haven
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindSchmendrickObjective());
+            System.AddObjective(new FindSchmendrickObjective());
         }
     }
 
@@ -307,7 +307,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.System.From.Profession == 5) // paladin
+                if (System.From.Profession == 5) // paladin
                 {
                     /* <I>Schmendrick barely pays you any attention as you approach him.
                     * His mind seems to be occupied with something else. You explain to him that
@@ -362,7 +362,7 @@ namespace Server.Engines.Quests.Haven
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindApprenticeObjective());
+            System.AddObjective(new FindApprenticeObjective());
         }
     }
 
@@ -416,7 +416,7 @@ namespace Server.Engines.Quests.Haven
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new FindDryadObjective());
+            System.AddObjective(new FindDryadObjective());
         }
     }
 
@@ -444,7 +444,7 @@ namespace Server.Engines.Quests.Haven
                 1049326;
         public override void OnRead()
         {
-            this.System.AddObjective(new ReturnFertileDirtObjective());
+            System.AddObjective(new ReturnFertileDirtObjective());
         }
     }
 
@@ -463,7 +463,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.System.From.Profession == 2) // magician
+                if (System.From.Profession == 2) // magician
                 {
                     /* <I>Uzeraan takes the dirt from you and smiles...<BR><BR></I>
                     * 
@@ -515,7 +515,7 @@ namespace Server.Engines.Quests.Haven
         public override QuestItemInfo[] Info => m_Info;
         public override void OnRead()
         {
-            this.System.AddObjective(new GetDaemonBloodObjective());
+            System.AddObjective(new GetDaemonBloodObjective());
         }
     }
 
@@ -538,7 +538,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.System.From.Profession == 2) // magician
+                if (System.From.Profession == 2) // magician
                 {
                     //return 1049389; // localized message is bugged
                     return "<I>You hand Uzeraan the Vial of Blood, which he hastily accepts...</I><BR>" +
@@ -585,7 +585,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.System.From.Profession == 5) // paladin
+                if (System.From.Profession == 5) // paladin
                     return m_InfoPaladin;
                 else
                     return m_Info;
@@ -593,7 +593,7 @@ namespace Server.Engines.Quests.Haven
         }
         public override void OnRead()
         {
-            this.System.AddObjective(new GetDaemonBoneObjective());
+            System.AddObjective(new GetDaemonBoneObjective());
         }
     }
 
@@ -628,7 +628,7 @@ namespace Server.Engines.Quests.Haven
                 1049335;
         public override void OnRead()
         {
-            this.System.AddObjective(new CashBankCheckObjective());
+            System.AddObjective(new CashBankCheckObjective());
         }
     }
 
@@ -659,7 +659,7 @@ namespace Server.Engines.Quests.Haven
                 1060137;
         public override void OnRead()
         {
-            this.System.Complete();
+            System.Complete();
         }
     }
 
@@ -687,7 +687,7 @@ namespace Server.Engines.Quests.Haven
         private bool m_FromUzeraan;
         public LostScrollOfPowerConversation(bool fromUzeraan)
         {
-            this.m_FromUzeraan = fromUzeraan;
+            m_FromUzeraan = fromUzeraan;
         }
 
         public LostScrollOfPowerConversation()
@@ -698,7 +698,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.m_FromUzeraan)
+                if (m_FromUzeraan)
                 {
                     /* You return without the scroll???<BR><BR>
                     * 
@@ -727,7 +727,7 @@ namespace Server.Engines.Quests.Haven
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_FromUzeraan = reader.ReadBool();
+            m_FromUzeraan = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)
@@ -743,7 +743,7 @@ namespace Server.Engines.Quests.Haven
         private bool m_FromUzeraan;
         public LostFertileDirtConversation(bool fromUzeraan)
         {
-            this.m_FromUzeraan = fromUzeraan;
+            m_FromUzeraan = fromUzeraan;
         }
 
         public LostFertileDirtConversation()
@@ -754,7 +754,7 @@ namespace Server.Engines.Quests.Haven
         {
             get
             {
-                if (this.m_FromUzeraan)
+                if (m_FromUzeraan)
                 {
                     /* You return without <I>Fertile Dirt</I>?  It is imperative that we
                     * get all of the ingredients friend.<BR><BR>
@@ -791,7 +791,7 @@ namespace Server.Engines.Quests.Haven
         {
             int version = reader.ReadEncodedInt();
 
-            this.m_FromUzeraan = reader.ReadBool();
+            m_FromUzeraan = reader.ReadBool();
         }
 
         public override void ChildSerialize(GenericWriter writer)

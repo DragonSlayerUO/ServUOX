@@ -34,7 +34,7 @@ namespace Server.Spells.Ninjitsu
 
         public override void OnUse(Mobile from)
         {
-            if (!this.Validate(from))
+            if (!Validate(from))
                 return;
 
             KiAttackInfo info = new KiAttackInfo(from);
@@ -75,7 +75,7 @@ namespace Server.Spells.Ninjitsu
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             if (GetBonus(attacker) == 0.0)
@@ -90,7 +90,7 @@ namespace Server.Spells.Ninjitsu
                 attacker.SendLocalizedMessage(1063100); // Your quick flight to your target causes extra damage as you strike!
                 defender.FixedParticles(0x37BE, 1, 5, 0x26BD, 0, 0x1, EffectLayer.Waist);
 
-                this.CheckGain(attacker);
+                CheckGain(attacker);
             }
 
             ClearCurrentMove(attacker);
@@ -129,8 +129,8 @@ namespace Server.Spells.Ninjitsu
             public Timer m_Timer;
             public KiAttackInfo(Mobile m)
             {
-                this.m_Mobile = m;
-                this.m_Location = m.Location;
+                m_Mobile = m;
+                m_Location = m.Location;
             }
         }
     }

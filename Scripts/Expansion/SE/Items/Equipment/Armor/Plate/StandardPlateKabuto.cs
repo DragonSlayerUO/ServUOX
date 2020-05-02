@@ -8,7 +8,7 @@ namespace Server.Items
         public StandardPlateKabuto()
             : base(0x2789)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public StandardPlateKabuto(Serial serial)

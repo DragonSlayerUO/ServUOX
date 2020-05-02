@@ -20,24 +20,24 @@ namespace Server.Engines.Quests.Samurai
         public override int TalkNumber => -1;
         public override void InitBody()
         {
-            this.InitStats(100, 100, 25);
+            InitStats(100, 100, 25);
 
-            this.Hue = 0x83FF;
+            Hue = 0x83FF;
 
-            this.Female = true;
-            this.Body = 0x191;
-            this.Name = "Disheveled Relnia";
+            Female = true;
+            Body = 0x191;
+            Name = "Disheveled Relnia";
         }
 
         public override void InitOutfit()
         {
-            this.HairItemID = 0x203C;
-            this.HairHue = 0x654;
+            HairItemID = 0x203C;
+            HairHue = 0x654;
 
-            this.AddItem(new ThighBoots(0x901));
-            this.AddItem(new FancyShirt(0x5F3));
-            this.AddItem(new SkullCap(0x6A7));
-            this.AddItem(new Skirt(0x544));
+            AddItem(new ThighBoots(0x901));
+            AddItem(new FancyShirt(0x5F3));
+            AddItem(new SkullCap(0x6A7));
+            AddItem(new Skirt(0x544));
         }
 
         public override void OnTalk(PlayerMobile player, bool contextMenu)
@@ -65,7 +65,7 @@ namespace Server.Engines.Quests.Samurai
                             obj.Complete();
                             qs.AddObjective(new FourthTrialReturnObjective(false));
 
-                            this.SayTo(from, 1063241); // I thank thee.  This gold will be a great help to me and mine!
+                            SayTo(from, 1063241); // I thank thee.  This gold will be a great help to me and mine!
 
                             gold.Consume(); // Intentional difference from OSI: don't take all the gold of poor newbies!
                             return gold.Deleted;

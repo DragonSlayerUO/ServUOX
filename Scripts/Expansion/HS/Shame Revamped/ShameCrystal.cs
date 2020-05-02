@@ -27,7 +27,7 @@ namespace Server.Items
         {
             if (IsChildOf(from.Backpack))
             {
-                PointsSystem.ShameCrystals.AwardPoints(from, this.Amount);
+                PointsSystem.ShameCrystals.AwardPoints(from, Amount);
                 Delete();
             }
         }

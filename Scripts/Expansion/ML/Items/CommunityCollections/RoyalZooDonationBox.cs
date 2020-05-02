@@ -33,7 +33,7 @@ namespace Server.Items
             Donations.Add(new CollectionItem(typeof(Gold), 0xEEF, 1073116, 0x0, 0.06666));
 
             if (!Core.TOL)
-                this.Donations.Add(new CollectionItem(typeof(BankCheck), 0x14F0, 1075013, 0x34, 0.06666));
+                Donations.Add(new CollectionItem(typeof(BankCheck), 0x14F0, 1075013, 0x34, 0.06666));
 
             Donations.Add(new CollectionItem(typeof(DireWolf), 0x25D0, 1073118, 0x0, 30.0));
             Donations.Add(new CollectionItem(typeof(TimberWolf), 0x25D3, 1073118, 0x0, 30.0));
@@ -147,11 +147,11 @@ namespace Server.Items
             BaseCreature c;
 
             // haven't got a clue if levels are OSI
-            switch (this.Tier)
+            switch (Tier)
             {
                 case 1:
                     c = new Crane();
-                    c.MoveToWorld(new Point3D(4500, 1382, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4500, 1382, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -159,31 +159,31 @@ namespace Server.Items
                     break;
                 case 2:
                     c = new DireWolf();
-                    c.MoveToWorld(new Point3D(4494, 1370, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4494, 1370, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new DireWolf();
-                    c.MoveToWorld(new Point3D(4494, 1360, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4494, 1360, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new WhiteWolf();
-                    c.MoveToWorld(new Point3D(4491, 1366, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4491, 1366, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new WhiteWolf();
-                    c.MoveToWorld(new Point3D(4497, 1366, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4497, 1366, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new GreyWolf();
-                    c.MoveToWorld(new Point3D(4497, 1366, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4497, 1366, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -191,19 +191,19 @@ namespace Server.Items
                     break;
                 case 3:
                     c = new Quagmire();
-                    c.MoveToWorld(new Point3D(4483, 1392, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4483, 1392, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new BogThing();
-                    c.MoveToWorld(new Point3D(4486, 1385, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4486, 1385, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new PlagueBeast();
-                    c.MoveToWorld(new Point3D(4486, 1379, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4486, 1379, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -211,13 +211,13 @@ namespace Server.Items
                     break;
                 case 4:
                     c = new PolarBear();
-                    c.MoveToWorld(new Point3D(4513, 1395, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4513, 1395, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new PolarBear();
-                    c.MoveToWorld(new Point3D(4508, 1393, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4508, 1393, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -225,7 +225,7 @@ namespace Server.Items
                     break;
                 case 5:
                     c = new Yamandon();
-                    c.MoveToWorld(new Point3D(4498, 1393, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4498, 1393, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -233,7 +233,7 @@ namespace Server.Items
                     break;
                 case 6:
                     c = new Changeling();
-                    c.MoveToWorld(new Point3D(4518, 1358, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4518, 1358, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -241,7 +241,7 @@ namespace Server.Items
                     break;
                 case 7:
                     c = new Wyvern();
-                    c.MoveToWorld(new Point3D(4512, 1381, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4512, 1381, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -249,13 +249,13 @@ namespace Server.Items
                     break;
                 case 8:
                     c = new Dragon();
-                    c.MoveToWorld(new Point3D(4511, 1372, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4511, 1372, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
 
                     c = new Drake();
-                    c.MoveToWorld(new Point3D(4516, 1371, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4516, 1371, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -263,7 +263,7 @@ namespace Server.Items
                     break;
                 case 9:
                     c = new Reptalon();
-                    c.MoveToWorld(new Point3D(4530, 1387, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4530, 1387, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -271,7 +271,7 @@ namespace Server.Items
                     break;
                 case 10:
                     c = new SilverSteed();
-                    c.MoveToWorld(new Point3D(4506, 1358, 23), this.Map);
+                    c.MoveToWorld(new Point3D(4506, 1358, 23), Map);
                     c.Blessed = true;
                     c.Tamable = false;
                     list.Add(c);
@@ -287,7 +287,7 @@ namespace Server.Items
             }
 
             if (list.Count > 0)
-                this.Tiers.Add(list);
+                Tiers.Add(list);
         }
 
         public override void Serialize(GenericWriter writer)

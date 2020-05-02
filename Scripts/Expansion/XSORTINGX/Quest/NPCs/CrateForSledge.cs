@@ -8,8 +8,8 @@ namespace Server.Items
         public CrateForSledge()
             : base(0x1FFF)
         {
-            this.Weight = 5.0;
-            this.LootType = LootType.Blessed;
+            Weight = 5.0;
+            LootType = LootType.Blessed;
         }
 
         public CrateForSledge(Serial serial)

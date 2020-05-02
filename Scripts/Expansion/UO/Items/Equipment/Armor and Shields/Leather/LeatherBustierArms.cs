@@ -11,7 +11,7 @@ namespace Server.Items
         public LeatherBustierArms()
             : base(0x1C0A)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public LeatherBustierArms(Serial serial)

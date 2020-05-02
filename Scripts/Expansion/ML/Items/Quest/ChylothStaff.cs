@@ -8,7 +8,7 @@ namespace Server.Engines.Quests.Doom
         [Constructable]
         public ChylothStaff()
         {
-            this.Hue = 0x482;
+            Hue = 0x482;
         }
 
         public ChylothStaff(Serial serial)

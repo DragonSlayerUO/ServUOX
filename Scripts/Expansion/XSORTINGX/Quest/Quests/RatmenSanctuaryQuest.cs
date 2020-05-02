@@ -31,7 +31,7 @@ namespace Server.Engines.Quests
         {
             AddObjective(new SlayObjective(typeof(Ratman), "Ratmen", 15, "Sanctuary"));
 
-            this.AddReward(new BaseReward(typeof(TrinketBag), 1072341));
+            AddReward(new BaseReward(typeof(TrinketBag), 1072341));
         }
 
         public override void Serialize(GenericWriter writer)
@@ -75,7 +75,7 @@ namespace Server.Engines.Quests
         {
             AddObjective(new SlayObjective(typeof(RatmanArcher), "Ratmen Archers", 10, "Sanctuary"));
 
-            this.AddReward(new BaseReward(typeof(TrinketBag), 1072341));
+            AddReward(new BaseReward(typeof(TrinketBag), 1072341));
         }
 
         public override void Serialize(GenericWriter writer)
@@ -100,9 +100,9 @@ namespace Server.Engines.Quests
         public TokenOfLoveQuest()
             : base()
         {
-            this.AddObjective(new ObtainObjective(typeof(StolenRing), "A ring engraved: 'Beloved Ciala'", 1, 0x1F09));
+            AddObjective(new ObtainObjective(typeof(StolenRing), "A ring engraved: 'Beloved Ciala'", 1, 0x1F09));
 
-            this.AddReward(new BaseReward(typeof(TreasureBag), 1072583));
+            AddReward(new BaseReward(typeof(TreasureBag), 1072583));
         }
 
         /* Token of Love */

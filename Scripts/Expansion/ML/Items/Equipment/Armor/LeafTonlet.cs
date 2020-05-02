@@ -11,7 +11,7 @@ namespace Server.Items
         public LeafTonlet()
             : base(0x2FCA)
         {
-            this.Weight = 2.0;
+            Weight = 2.0;
         }
 
         public LeafTonlet(Serial serial)

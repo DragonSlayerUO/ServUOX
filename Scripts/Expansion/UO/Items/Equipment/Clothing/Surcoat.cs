@@ -13,7 +13,7 @@ namespace Server.Items
         public Surcoat(int hue)
             : base(0x1FFD, hue)
         {
-            this.Weight = 6.0;
+            Weight = 6.0;
         }
 
         public Surcoat(Serial serial)
@@ -34,8 +34,8 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            if (this.Weight == 3.0)
-                this.Weight = 6.0;
+            if (Weight == 3.0)
+                Weight = 6.0;
         }
     }
 }
