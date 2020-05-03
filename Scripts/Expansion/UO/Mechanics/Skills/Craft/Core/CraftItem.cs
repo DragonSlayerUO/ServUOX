@@ -450,7 +450,10 @@ namespace Server.Engines.Craft
             { typeof(BarbedLeather), typeof(BarbedHides) },
         };
 
-        private static Type[] m_NeverColorTable = new[] { typeof(OrcHelm) };
+        private static Type[] m_NeverColorTable = new[]
+        {
+            typeof(OrcHelm),typeof(DeerMask), typeof(BearMask), typeof(TribalMask), typeof(HornedTribalMask)
+        };
         #endregion
 
         public bool IsMarkable(Type type)
@@ -473,6 +476,18 @@ namespace Server.Engines.Craft
 
         public static bool RetainsColor(Type type)
         {
+            bool neverColor = false;
+
+            for (int i = 0; !neverColor && i < m_NeverColorTable.Length; ++i)
+            {
+                neverColor = type == m_NeverColorTable[i] || type.IsSubclassOf(m_NeverColorTable[i]);
+            }
+
+            if (neverColor)
+            {
+                return false;
+            }
+
             bool inItemTable = false;
 
             for (int i = 0; !inItemTable && i < m_ColoredItemTable.Length; ++i)
@@ -490,7 +505,14 @@ namespace Server.Engines.Craft
                 return true;
             }
 
-            bool inItemTable = false, inResourceTable = false;
+            bool inItemTable = RetainsColor(type);
+
+            if (!inItemTable)
+            {
+                return false;
+            }
+
+            bool inResourceTable = false;
 
             for (int i = 0; !inItemTable && i < m_ColoredItemTable.Length; ++i)
             {
