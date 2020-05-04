@@ -131,6 +131,8 @@
     <Compile Include="Expansion\ML\Items\Necromancer\VampiricEmbraceScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\WitherScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\WraithFormScroll.cs" />
+    <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicKnight.cs" />
+    <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicMage.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Bracelet\GoldBracelet.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Bracelet\SilverBracelet.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Earrings\GoldEarrings.cs" />
@@ -1443,7 +1445,6 @@
     <Compile Include="Expansion\ML\Items\Quest\EminosKatana.cs" />
     <Compile Include="Expansion\ML\Items\Quest\EminosKatanaChest.cs" />
     <Compile Include="Expansion\ML\Items\Quest\EnchantedPaints.cs" />
-    <Compile Include="Expansion\ML\Items\Quest\FoolishGold.cs" />
     <Compile Include="Expansion\ML\Items\Quest\GamanHorn.cs" />
     <Compile Include="Expansion\ML\Items\Quest\GaramonsBook.cs" />
     <Compile Include="Expansion\ML\Items\Quest\GaramonsBook1.cs" />
