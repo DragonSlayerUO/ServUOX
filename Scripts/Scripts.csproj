@@ -68,6 +68,13 @@
     <Compile Include="Expansion\EJ\StoreBought\DecorativeStableSet\DecorativeStableFencing.cs" />
     <Compile Include="Expansion\EJ\StoreBought\DecorativeStableSet\DecorativeStableSet.cs" />
     <Compile Include="Expansion\EJ\StoreBought\MetalLadder2.cs" />
+    <Compile Include="Expansion\HS\Items\17th Anniversary\17thAnniversaryBag.cs" />
+    <Compile Include="Expansion\HS\Items\17th Anniversary\BarHandTowl.cs" />
+    <Compile Include="Expansion\HS\Items\17th Anniversary\BaseBarSink.cs" />
+    <Compile Include="Expansion\HS\Items\17th Anniversary\MarbelBar.cs" />
+    <Compile Include="Expansion\HS\Items\17th Anniversary\MarbelBarContainer.cs" />
+    <Compile Include="Expansion\HS\Items\17th Anniversary\MarbleBarSink1.cs" />
+    <Compile Include="Expansion\HS\Items\17th Anniversary\MarbleBarSink2.cs" />
     <Compile Include="Expansion\HS\Items\Publish 68.3 Items\13th Anniversary Gifts\LargeGrandfatherClock.cs" />
     <Compile Include="Expansion\HS\Items\Publish 68.3 Items\13th Anniversary Gifts\WhiteGrandfatherClock.cs" />
     <Compile Include="Expansion\HS\Items\Publish 68.3 Items\13th Anniversary Gifts\SmallGrandfatherClock.cs" />
@@ -102,12 +109,12 @@
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenWorker.cs" />
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\SolenHelper.cs" />
     <Compile Include="Expansion\ML\Items\Furinture\MLChairs.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\HotCocoaMug.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\PulledPorkSandwich.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\PulledPorkPlatter.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\CookableSausage.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\HotDog.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\Hamburger.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\HotCocoaMug.cs" />
+    <Compile Include="Expansion\HS\Items\PulledPorkSandwich.cs" />
+    <Compile Include="Expansion\HS\Items\PulledPorkPlatter.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\CookableSausage.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\HotDog.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\Hamburger.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\AnimateDeadScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\BloodOathScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\CorpseSkinScroll.cs" />
@@ -249,7 +256,7 @@
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Vegetables\Cabbage.cs" />
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Vegetables\Lettuce.cs" />
     <Compile Include="Expansion\SE\Items\Food and Drinks\BasketOfGreenTeaMug.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\CoffeeMug.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\CoffeeMug.cs" />
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Beverages\CeramicMug.cs" />
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Beverages\Goblet.cs" />
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Beverages\GlassMug.cs" />
@@ -891,7 +898,7 @@
     <Compile Include="Expansion\SA\Items\12th Anniversary Gifts\CodexOfVirtue.cs" />
     <Compile Include="Expansion\ML\Items\9th Anniversary Gifts\Heritage Collection\BuffetTable.cs" />
     <Compile Include="Expansion\TOL\XxUnsortedxX\FormalDiningTable.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\GadgetryTable.cs" />
+    <Compile Include="Expansion\HS\Items\GadgetryTable.cs" />
     <Compile Include="Expansion\EJ\StoreBought\DecorativeKitchenSet.cs" />
     <Compile Include="Expansion\HS\Items\Consumables\EmbroideryTool.cs" />
     <Compile Include="Expansion\TOL\Damageable\Beacon.cs" />
@@ -982,18 +989,18 @@
     <Compile Include="Expansion\EJ\StoreBought\SquirrelMailbox.cs" />
     <Compile Include="Expansion\EJ\StoreBought\StoreSingingBall.cs" />
     <Compile Include="Expansion\EJ\StoreBought\WineRack.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\SteamPoweredBeverageMaker.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\ClawFootTub.cs" />
+    <Compile Include="Expansion\HS\Items\SteamPoweredBeverageMaker.cs" />
+    <Compile Include="Holidays\Holiday Items\ClawFootTub.cs" />
     <Compile Include="Expansion\SA\Items\Furniture\GreenMarbleFireplace.cs" />
     <Compile Include="Expansion\SA\Items\Furniture\GoldMarbleFireplace.cs" />
     <Compile Include="Expansion\HS\Items\Craft Addons\AlchemyStation.cs" />
     <Compile Include="Expansion\HS\Items\Craft Addons\BBQSmoker.cs" />
     <Compile Include="Expansion\HS\Items\Craft Addons\WritingDesk.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\EnormousVenusFlytrap.cs" />
+    <Compile Include="Expansion\HS\Items\16th Anniversary\EnormousVenusFlytrap.cs" />
     <Compile Include="Expansion\TOL\XxUnsortedxX\KoiPond.cs" />
     <Compile Include="Expansion\UO\Items\Addons\BlueMarbleFireplace.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\PicnicBlanket.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\RoastingPigOnASpit.cs" />
+    <Compile Include="Expansion\HS\Items\PicnicBlanket.cs" />
+    <Compile Include="Expansion\HS\Items\RoastingPigOnASpit.cs" />
     <Compile Include="Expansion\EJ\XxUnsortedxX\SheepStatue.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\Harpsichord.cs" />
     <Compile Include="Customs\Items\VendorMallAddon.cs" />
@@ -1047,7 +1054,7 @@
     <Compile Include="Expansion\ML\Items\Addons\FancyLoveseatSouth.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\Eodon\MyrmidexThreat\Items\GeoffreyCampAddon.cs" />
     <Compile Include="Expansion\UO\Items\Addons\HitchingPost.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\GardenShed.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\GardenShed.cs" />
     <Compile Include="Expansion\ML\Items\Addons\FancyWoodenShelfEast.cs" />
     <Compile Include="Expansion\UO\Items\Addons\PlainWoodenShelfEast.cs" />
     <Compile Include="Expansion\ML\Items\Addons\FancyWoodenShelfSouth.cs" />
@@ -1259,8 +1266,8 @@
     <Compile Include="Expansion\SA\Items\Food and Drinks\IrresistiblyTastyTreat.cs" />
     <Compile Include="Expansion\HS\Items\Consumables\SkinTingeingTincture.cs" />
     <Compile Include="Expansion\AOS\Items\Promotions\SoulstonePromotionalTokens.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\TastyTreat.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\ShipsStrongbox.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\TastyTreat.cs" />
+    <Compile Include="Expansion\HS\Items\ShipsStrongbox.cs" />
     <Compile Include="Expansion\SA\Items\Containers\AllegiancePouch.cs" />
     <Compile Include="Expansion\UO\Items\Decorations\Bridle.cs" />
     <Compile Include="Expansion\UO\Items\Decorations\DecorativeCarpet.cs" />
@@ -1404,7 +1411,7 @@
     <Compile Include="Expansion\SA\Items\World\ChickenLizardEgg.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\CoralTheOwl.cs" />
     <Compile Include="Expansion\TOL\XxUnsortedxX\DragonTurtleEgg.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\EtherealRetouchingTool.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\EtherealRetouchingTool.cs" />
     <Compile Include="Expansion\SA\Items\World\GoblinFloorTrap.cs" />
     <Compile Include="Expansion\EJ\XxUnsortedxX\HouseCraftables.cs" />
     <Compile Include="Expansion\SA\Items\World\Incubator.cs" />
@@ -1412,7 +1419,7 @@
     <Compile Include="Expansion\TOL\SeedBox\SeedBox.cs" />
     <Compile Include="Expansion\TOL\SeedBox\SeedBoxGump.cs" />
     <Compile Include="Expansion\TOL\SeedBox\SeedEntry.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\WallSafe.cs" />
+    <Compile Include="Expansion\HS\Items\WallSafe.cs" />
     <Compile Include="Expansion\ML\Items\Teleporters\BlightedGroveTeleporters.cs" />
     <Compile Include="Expansion\SE\Items\Teleporters\BlueNinjaQuestTeleporter.cs" />
     <Compile Include="Expansion\ML\Items\Teleporters\CrystalTeleporter.cs" />
@@ -1627,9 +1634,9 @@
     <Compile Include="Expansion\HS\Items\Gothic Theme Pack\ChestOfSending.cs" />
     <Compile Include="Expansion\SA\Items\World\ForgedMetalOfArtifacts.cs" />
     <Compile Include="Expansion\UOTD\XxUnsortedxX\GreaterBraceletOfBinding.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\MetallicLeatherDyeTub.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\MetallicDyeTub.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\MetallicClothDyeTub.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\MetallicLeatherDyeTub.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\MetallicDyeTub.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\MetallicClothDyeTub.cs" />
     <Compile Include="Expansion\EJ\StoreBought\PenOfWisdom.cs" />
     <Compile Include="Expansion\EJ\StoreBought\PetBondingPotion.cs" />
     <Compile Include="Expansion\UOR\XxUnsortedxX\RunicMalletAndChisel.cs" />
@@ -1947,7 +1954,7 @@
     <Compile Include="Expansion\ML\Items\SpecialLoot\Parrot.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\ParrotWafer.cs">
+    <Compile Include="Expansion\HS\Items\Food and Drinks\ParrotWafer.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Mobiles\PetParrot.cs">
@@ -3188,7 +3195,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Gretchen.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BagOfJewels.cs" />
     <Compile Include="Expansion\ML\Items\Quest\DeBoorShield.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\GobletOfCelebration.cs" />
+    <Compile Include="Expansion\HS\Items\GobletOfCelebration.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\HonorOfDeBoorsQuest.cs" />
     <Compile Include="Expansion\SA\Items\Books\BookOfCircles.cs" />
     <Compile Include="Expansion\SA\Mobiles\GargoyleGuardian.cs" />
@@ -3223,9 +3230,9 @@
     <Compile Include="Expansion\HS\Mechanics\The Awakening\ActIII\TheExodusDungeon\Generate.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\UnusualGoods.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BouraSkin.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofAgapiteConversion.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofGoldConversion.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofMetalConversion.cs" />
+    <Compile Include="Expansion\HS\Items\TheAwaking\ElixirofAgapiteConversion.cs" />
+    <Compile Include="Expansion\HS\Items\TheAwaking\ElixirofGoldConversion.cs" />
+    <Compile Include="Expansion\HS\Items\TheAwaking\ElixirofMetalConversion.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PileofInspectedAgapiteIngots.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PileofInspectedBronzeIngots.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PileofInspectedCopperIngots.cs" />
@@ -3237,9 +3244,9 @@
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\JourneyToTheAthenaeumIsleQuest.cs" />
     <Compile Include="Expansion\SA\TerMur\Athenaeum Isle\MinionOfScelestus.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Zhah.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofValoriteConversion.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\ElixirofVeriteConversion.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\InfusedAlchemistsGem.cs" />
+    <Compile Include="Expansion\HS\Items\TheAwaking\ElixirofValoriteConversion.cs" />
+    <Compile Include="Expansion\HS\Items\TheAwaking\ElixirofVeriteConversion.cs" />
+    <Compile Include="Expansion\HS\Items\InfusedAlchemistsGem.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\InfusedGlassStave.cs" />
     <Compile Include="Expansion\ML\Items\Quest\InspectedKegofGreaterPoison.cs" />
     <Compile Include="Expansion\ML\Items\Quest\InspectedKegofTotalRefreshment.cs" />
@@ -3247,7 +3254,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\PileofInspectedVeriteIngots.cs" />
     <Compile Include="Expansion\AOS\Mechanics\Quests\Items\TreefellowWood.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\UndeadGargoyleMedallions.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\VialofArmorEssence.cs" />
+    <Compile Include="Expansion\HS\Items\VialofArmorEssence.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Zosilem.cs" />
     <Compile Include="Expansion\ML\Items\Quest\MudPuppy.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Xenrr.cs" />
@@ -3340,7 +3347,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Norton.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sadrah.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Sarakki.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\Bleach.cs" />
+    <Compile Include="Expansion\HS\Items\Bleach.cs" />
     <Compile Include="Expansion\ML\Items\Quest\BridesLetter.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PortraitOfTheBride.cs" />
     <Compile Include="Expansion\ML\Items\Quest\PrismaticAmber.cs" />
@@ -3370,7 +3377,7 @@
     <Compile Include="Expansion\ML\Items\Quest\HagApprenticeCorpse.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\HagCauldron.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\WitchApprentice\HagStew.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\HangoverCure.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\HangoverCure.cs" />
     <Compile Include="Expansion\ML\Items\Quest\MagicFlute.cs" />
     <Compile Include="Expansion\ML\Items\Quest\MoonfireBrew.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Blackheart.cs" />
@@ -3514,7 +3521,7 @@
     <Compile Include="Expansion\AOS\Mechanics\Doom\GaryRoom.cs" />
     <Compile Include="Expansion\AOS\Mechanics\Doom\GuardianRoom.cs" />
     <Compile Include="Expansion\T2A\Mechanics\SiegePerilous\HeroEvil\Core\Persistence.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\Generate.cs" />
+    <Compile Include="Expansion\HS\Mechanics\Generate.cs" />
     <Compile Include="Expansion\HS\Mechanics\Gumps\BaseShipGump.cs" />
     <Compile Include="Expansion\HS\Mechanics\Gumps\BountyBoard.cs" />
     <Compile Include="Expansion\HS\Mechanics\Gumps\CannonGump.cs" />
@@ -3577,7 +3584,7 @@
     <Compile Include="Expansion\HS\Items\SmugglersCache.cs" />
     <Compile Include="Expansion\HS\Items\SmugglersLiquor.cs" />
     <Compile Include="Expansion\HS\Items\SOS Artifacts\YellowPolkaDotBikini.cs" />
-    <Compile Include="Expansion\HS\Items\WhiteClothDyeTub.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\WhiteClothDyeTub.cs" />
     <Compile Include="Expansion\HS\Mobiles\BaseSeaChampion.cs" />
     <Compile Include="Expansion\HS\Mobiles\Charybdis.cs" />
     <Compile Include="Expansion\HS\Mobiles\Corgul\BoundSoul.cs" />
@@ -3614,7 +3621,7 @@
     <Compile Include="Expansion\HS\Items\Galleons\TokunoGalleon.cs" />
     <Compile Include="Expansion\HS\Mechanics\Network\PacketHandlers.cs" />
     <Compile Include="Expansion\HS\Mechanics\Network\Packets.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\Persistence.cs" />
+    <Compile Include="Expansion\HS\Mechanics\Persistence.cs" />
     <Compile Include="Expansion\HS\Quests\ProfessionalBountyQuest\BountyQuestObjective.cs" />
     <Compile Include="Expansion\HS\Quests\ProfessionalBountyQuest\Items\BindingPole.cs" />
     <Compile Include="Expansion\HS\Quests\ProfessionalBountyQuest\Items\BindingRope.cs" />
@@ -3834,7 +3841,7 @@
     <Compile Include="Expansion\UO\Items\World\SerpentPillarAddon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\ShrineOfWisdomAddon.cs">
+    <Compile Include="Expansion\HS\Items\ShrineOfWisdomAddon.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\LBR\Items\SHTeleporter.cs">
@@ -5113,7 +5120,7 @@
     <Compile Include="Expansion\UO\Items\Craft and Component\MusicStand.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\Obelisk.cs">
+    <Compile Include="Expansion\HS\Items\Obelisk.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SE\Items\Decorative\Screens.cs">
@@ -6132,58 +6139,58 @@
     <Compile Include="Expansion\UO\Items\Equipment\Armor and Shields\Shields\WoodenShield.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegFrenchBread.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Common\BegFrenchBread.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegWaterPitcher.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Common\BegWaterPitcher.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegCheeseWedge.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Uncommon\BegCheeseWedge.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegDates.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Uncommon\BegDates.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\BegLantern.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Common\BegLantern.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\LiquorPitcher.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Uncommon\BegLiquorPitcher.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegPizza.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Uncommon\BegPizza.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\BegShirt.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Uncommon\BegShirt.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegStew.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Uncommon\BegStew.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\BegBedRoll.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegBedRoll.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegCookies.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegCookies.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegFishSteak.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegFishSteak.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegFishingPole.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegFishingPole.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\AOS\Items\Equipment\Clothing\Publish 18\FlowerGarland.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegFlowerGarland.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\Items\Consumables\BegSake.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegSake.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegTurnip.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegTurnip.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegWine.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\Rare\BegWine.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\BegWinePitcher.cs">
+    <Compile Include="Expansion\HS\Items\HeartWoodBegging\BegWinePitcher.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Craft and Component\Carpentry Craftables\AnvilForge.cs">
@@ -6633,7 +6640,7 @@
     <Compile Include="Expansion\UOR\XxUnsortedxX\FireHorn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\RecipeScroll.cs">
+    <Compile Include="Expansion\ML\Items\RecipeScroll.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UOR\XxUnsortedxX\RepairDeed.cs">
@@ -7197,7 +7204,7 @@
     <Compile Include="Holidays\Holiday Items\WristWatch.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\HouseRaffleDeed.cs">
+    <Compile Include="Expansion\HS\Items\HouseRaffleDeed.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Mechanics\Gumps\HouseRaffleManagementGump.cs">
@@ -7879,7 +7886,7 @@
     <Compile Include="Expansion\SA\Items\Clothing\AntiqueWeddingDress.cs" />
     <Compile Include="Expansion\XSORTINGX\Decorative\CoffinPiece.cs" />
     <Compile Include="Expansion\XSORTINGX\Decorative\CreepingVine.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\GrapeBunch.cs" />
+    <Compile Include="Expansion\HS\Items\Food and Drinks\GrapeBunch.cs" />
     <Compile Include="Expansion\XSORTINGX\Decorative\GrapeVine.cs" />
     <Compile Include="Expansion\HS\Items\Publish 68.3 Items\Message in a Bottle Revamp\KelpWovenLeggings.cs" />
     <Compile Include="Expansion\XSORTINGX\Decorative\LargeFishingNet.cs" />
@@ -9411,7 +9418,7 @@
     <Compile Include="Expansion\UO\Mechanics\Skills\Craft\DefTinkering.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\DespiseAnkh.cs">
+    <Compile Include="Expansion\HS\Items\DespiseDungeon\DespiseAnkh.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\HS\Items\DespiseDungeon\DespiseArtifacts.cs">
@@ -9423,7 +9430,7 @@
     <Compile Include="Expansion\ML\Items\Quest\PutridHeart.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\XxUnsortedxX\DespiseTeleporter.cs">
+    <Compile Include="Expansion\HS\Items\DespiseDungeon\DespiseTeleporter.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\HS\Mobiles\DespiseDungeon\DespiseBosses.cs">
@@ -10375,11 +10382,11 @@
     <Compile Include="Expansion\EJ\Vendor Searching\VendorSearchGump.cs" />
     <Compile Include="Expansion\EJ\Vendor Searching\VendorSearchMap.cs" />
     <Compile Include="Mechanics\Teleporters\Teleporters.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\CorruptedCrystalPortal.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\CorruptedCrystalPortalGump.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\CorruptedCrystalPortal.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\CorruptedCrystalPortalGump.cs" />
     <Compile Include="Expansion\ML\Items\CrystalPortals\CrystalPortal.cs" />
     <Compile Include="Expansion\ML\Items\CrystalPortals\CrystalPortalGump.cs" />
-    <Compile Include="Expansion\HS\XxUnsortedxX\DaviesLocker.cs" />
+    <Compile Include="Expansion\HS\Items\VetRewards\DaviesLocker.cs" />
     <Compile Include="Expansion\UOR\VeteranRewards\StatRewardGump.cs" />
     <Compile Include="Expansion\HS\Mechanics\ViceVsVirtue\CityInfo.cs" />
     <Compile Include="Expansion\HS\Mechanics\ViceVsVirtue\GuildStats.cs" />
