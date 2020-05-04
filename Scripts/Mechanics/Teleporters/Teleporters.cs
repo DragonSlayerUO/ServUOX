@@ -23,6 +23,7 @@ namespace Server
             //    Console.WriteLine("Loading Fraz's Teleporter System");
             LoadPaths();
 
+            CommandSystem.Register("TeleLoad", AccessLevel.Player, new CommandEventHandler(TeleLoad_OnCommand));
             //    CommandSystem.Register("TeleMenu", AccessLevel.Administrator, new CommandEventHandler(TeleMenu_OnCommand)); // Next Version - Fraz
             CommandSystem.Register("TeleGlow", AccessLevel.Player, new CommandEventHandler(TeleGlow_OnCommand));
 
@@ -47,6 +48,14 @@ namespace Server
             Mobile from = e.Mobile;
         }
         */
+
+        [Usage("TeleLoad")]
+        [Description("Fresh loading of teleporter data.")]
+        public static void TeleLoad_OnCommand(CommandEventArgs e)
+        {
+            Mobile from = e.Mobile;
+            LoadPaths();
+        }
 
         private static void LoadPaths()
         {
@@ -340,13 +349,11 @@ namespace Server
 
         public static bool IsTeleporting(Mobile m, Direction d)
         {
-            int newZ;
             Point3D oldLocation = m.Location;
             int x = oldLocation.X, y = oldLocation.Y;
-            int oldX = x, oldY = y;
             int oldZ = oldLocation.Z;
 
-            if (m.CheckMovement(d, out newZ))
+            if (m.CheckMovement(d, out int newZ))
             {
                 switch (d & Direction.Mask)
                 {
@@ -383,8 +390,7 @@ namespace Server
 
             Point4D Telespot = new Point4D(x, y, newZ, m.Map.MapID);
 
-            Teleport Teleport1;
-            if (m_TeleportersD1.TryGetValue(Telespot, out Teleport1))
+            if (m_TeleportersD1.TryGetValue(Telespot, out Teleport Teleport1))
             {
                 if (Teleport1.OnMoveOver(m))
                 {
@@ -393,8 +399,7 @@ namespace Server
             }
             else
             {
-                Teleport Teleport2;
-                if (m_TeleportersD2.TryGetValue(Telespot, out Teleport2))
+                if (m_TeleportersD2.TryGetValue(Telespot, out Teleport Teleport2))
                 {
                     if (Teleport2.OnMoveOverReturn(m))
                     {
@@ -630,9 +635,8 @@ namespace Server
             List<Mobile> list = new List<Mobile>();
             foreach (Mobile current in master.GetMobilesInRange(3))
             {
-                if (current is BaseCreature)
+                if (current is BaseCreature pet)
                 {
-                    BaseCreature pet = (BaseCreature)current;
                     if ((!onlyBonded || pet.IsBonded) && pet.Controlled && pet.ControlMaster == master && IsControlOrderWithMe(pet))
                     {
                         list.Add(current);
