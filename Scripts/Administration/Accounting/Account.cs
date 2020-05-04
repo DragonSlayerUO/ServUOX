@@ -5,7 +5,6 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
-
 using Server.Commands;
 using Server.Items;
 using Server.Misc;
@@ -440,10 +439,8 @@ namespace Server.Accounting
                     return false;
                 }
 
-                DateTime banTime;
-                TimeSpan banDuration;
 
-                if (!GetBanTags(out banTime, out banDuration) || banDuration == TimeSpan.MaxValue ||
+                if (!GetBanTags(out DateTime banTime, out TimeSpan banDuration) || banDuration == TimeSpan.MaxValue ||
                     DateTime.UtcNow < (banTime + banDuration))
                 {
                     return true;
@@ -876,9 +873,8 @@ namespace Server.Accounting
 
                 foreach (XmlElement ip in addressList.GetElementsByTagName("ip").Cast<XmlElement>().Where(ip => count < list.Length))
                 {
-                    IPAddress address;
 
-                    if (!IPAddress.TryParse(Utility.GetText(ip, null), out address))
+                    if (!IPAddress.TryParse(Utility.GetText(ip, null), out IPAddress address))
                     {
                         continue;
                     }
@@ -1810,21 +1806,13 @@ namespace Server.Accounting
 
         public bool HasGoldBalance(double amount)
         {
-            long gold;
-            double totalGold;
-
-            GetGoldBalance(out gold, out totalGold);
-
+            GetGoldBalance(out long gold, out double totalGold);
             return amount <= totalGold;
         }
 
         public bool HasPlatBalance(double amount)
         {
-            long plat;
-            double totalPlat;
-
-            GetPlatBalance(out plat, out totalPlat);
-
+            GetPlatBalance(out long plat, out double totalPlat);
             return amount <= totalPlat;
         }
         #endregion
