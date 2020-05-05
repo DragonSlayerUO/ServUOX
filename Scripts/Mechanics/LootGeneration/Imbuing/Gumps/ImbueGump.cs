@@ -1,8 +1,8 @@
+using Server.Items;
+using Server.Mobiles;
+using Server.SkillHandlers;
 using System;
 using System.Linq;
-using Server.Mobiles;
-using Server.Items;
-using Server.SkillHandlers;
 
 namespace Server.Gumps
 {
@@ -37,7 +37,9 @@ namespace Server.Gumps
 
         public override void AddGumpLayout()
         {
-            if (!Imbuing.CheckSoulForge(User, 2, out double bonus))
+            double bonus = 0.0;
+
+            if (!Imbuing.CheckSoulForge(User, 2, out bonus))
                 return;
 
             ImbuingContext context = Imbuing.GetContext(User);
@@ -61,7 +63,7 @@ namespace Server.Gumps
                 m_Value = maxInt;
             }
 
-            double currentIntensity = Math.Floor((m_Value / (double)maxInt) * 100);
+            double currentIntensity = Math.Floor((m_Value / (double)maxInt) * m_Info.Weight);
 
             // Set context
             context.LastImbued = m_Item;
@@ -74,7 +76,7 @@ namespace Server.Gumps
             m_TotalProps = Imbuing.GetTotalMods(m_Item, m_ID);
 
             if (maxInt <= 1)
-                currentIntensity = 100;
+                currentIntensity = m_Info.Weight;
 
             int propWeight = (int)Math.Floor((weight / (double)maxInt) * m_Value);
 
@@ -177,7 +179,7 @@ namespace Server.Gumps
                 }
                 else if (maxInt <= 8 || m_ID == 21 || m_ID == 17)                 // - Show Property Value as just Number ( i.e [Mana Regen 2] )
                 {
-                    AddLabel(256, 370, IceHue, string.Format("{0}", m_Value));      // - Show Property Value as % ( i.e [Hit Fireball 25%] )
+                    AddLabel(m_Value > 9 ? 252 : 256, 370, IceHue, string.Format("{0}", m_Value));      // - Show Property Value as % ( i.e [Hit Fireball 25%] )
                 }
                 else
                 {
@@ -197,7 +199,7 @@ namespace Server.Gumps
                         }
                     }
 
-                    AddLabel(256, 370, IceHue, string.Format("{0}%", val));
+                    AddLabel(val > 9 ? 252 : 256, 370, IceHue, string.Format("{0}%", val));
                 }
 
                 // Buttons
@@ -326,7 +328,7 @@ namespace Server.Gumps
 
                 case 10099: // Back
                     {
-                        SendGump(new ImbueSelectGump(User, context.LastImbued));
+                        BaseGump.SendGump(new ImbueSelectGump(User, context.LastImbued));
                         break;
                     }
                 case 10100:  // Imbue the Item

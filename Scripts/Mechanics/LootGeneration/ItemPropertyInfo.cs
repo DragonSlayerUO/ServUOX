@@ -2,10 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using Server;
-using Server.SkillHandlers;
-using Server.Mobiles;
-
 namespace Server.Items
 {
     public enum ItemType
@@ -128,7 +124,7 @@ namespace Server.Items
 
             if (categories != null)
             {
-                foreach (var cat in categories)
+                foreach (PropInfo cat in categories)
                 {
                     if (PropCategories[(int)cat.ItemType] == null)
                     {
@@ -136,7 +132,7 @@ namespace Server.Items
                     }
                     else
                     {
-                        throw new ArgumentException(string.Format("Property Category {0} already exists for {1}!", cat.ItemType.ToString(), attribute.ToString()));
+                        throw new ArgumentException(String.Format("Property Category {0} already exists for {1}!", cat.ItemType.ToString(), attribute.ToString()));
                     }
                 }
             }
@@ -214,11 +210,11 @@ namespace Server.Items
 
             if (item != null)
             {
-                var localization = item.LabelNumber;
+                int localization = item.LabelNumber;
 
                 if (localization <= 0)
                 {
-                    var label = item.Name ?? string.Empty;
+                    string label = item.Name ?? String.Empty;
 
                     LocBuffer[type] = label;
                     item.Delete();
@@ -246,10 +242,10 @@ namespace Server.Items
         {
             // i = runic, r = reforg, l = loot
             // 1 = melee, 2 = ranged, 3 = armor, 4 = sheild, 5 = hat, 6 = jewels
-            Register(1, new ItemPropertyInfo(AosAttribute.DefendChance, 1075620, 110, typeof(RelicFragment), typeof(Tourmaline), typeof(EssenceSingularity), 1, 1, 15, 1111947,
+            Register(1, new ItemPropertyInfo(AosAttribute.DefendChance, 1075620, 110, typeof(RelicFragment), typeof(Tourmaline), typeof(BrilliantAmber), 1, 1, 15, 1111947,
                 new PropInfo(1, 15, 15, new int[] { 20 }), new PropInfo(2, 25, 25, new int[] { 30, 35 }), new PropInfo(3, 0, 5), new PropInfo(4, 15, 15, new int[] { 20 }), new PropInfo(5, 0, 5), new PropInfo(6, 15, 15, new int[] { 20 })));
 
-            Register(2, new ItemPropertyInfo(AosAttribute.AttackChance, 1075616, 130, typeof(EnchantedEssence), typeof(Tourmaline), typeof(EssencePrecision), 1, 1, 15, 1111958,
+            Register(2, new ItemPropertyInfo(AosAttribute.AttackChance, 1075616, 130, typeof(RelicFragment), typeof(Amber), typeof(LuminescentFungi), 1, 1, 15, 1111958,
                 new PropInfo(1, 15, 15, new int[] { 20 }), new PropInfo(2, 25, 25, new int[] { 30, 35 }), new PropInfo(3, 0, 5), new PropInfo(4, 15, 15, new int[] { 20 }), new PropInfo(5, 0, 5), new PropInfo(6, 15, 15, new int[] { 20 })));
 
             Register(3, new ItemPropertyInfo(AosAttribute.RegenHits, 1075627, 100, typeof(EnchantedEssence), typeof(Tourmaline), typeof(SeedOfRenewal), 1, 1, 2, 1111994,
@@ -396,8 +392,8 @@ namespace Server.Items
             Register(55, new ItemPropertyInfo(AosElementAttribute.Energy, 1061162, 100, typeof(MagicalResidue), typeof(Amethyst), typeof(BouraPelt), 1, 1, 15, 1112008,
                 new PropInfo(1, 10, 100, 100), new PropInfo(2, 10, 100, 100), new PropInfo(3, 15, 15, new int[] { 20, 25, 30 }), new PropInfo(4, 15, 15), new PropInfo(5, 15, 15, new int[] { 20, 25, 30 }), new PropInfo(6, 15, 15, new int[] { 20 })));
 
-            Register(60, new ItemPropertyInfo("WeaponVelocity", 1080416, 130, typeof(RelicFragment), typeof(Tourmaline), typeof(EssenceDirection), 1, 2, 50, 1112048,
-                new PropInfo(1, 50, 50), new PropInfo(2, 50, 50)));
+            Register(60, new ItemPropertyInfo("WeaponVelocity", 1080416, 140, typeof(RelicFragment), typeof(Tourmaline), typeof(EssenceDirection), 1, 2, 50, 1112048,
+                new PropInfo(2, 50, 50)));
 
             Register(61, new ItemPropertyInfo(AosAttribute.BalancedWeapon, 1072792, 150, typeof(RelicFragment), typeof(Amber), typeof(EssenceBalance), 0, 1, 1, 1112047,
                 new PropInfo(1, 1, 1), new PropInfo(2, 1, 1)));
@@ -582,7 +578,7 @@ namespace Server.Items
         {
             if (Table.ContainsKey(id))
             {
-                throw new ArgumentException(string.Format("ID Already Exists: {0}", id));
+                throw new ArgumentException(String.Format("ID Already Exists: {0}", id));
             }
             else
             {
@@ -598,7 +594,7 @@ namespace Server.Items
 
         public bool CanImbue(ItemType type)
         {
-            var info = GetItemTypeInfo(type);
+            PropInfo info = GetItemTypeInfo(type);
 
             if (info != null && info.StandardMax > 0)
             {
@@ -610,7 +606,7 @@ namespace Server.Items
 
         public static ItemPropertyInfo GetInfo(object attribute)
         {
-            var id = GetID(attribute);
+            int id = GetID(attribute);
 
             if (Table.ContainsKey(id))
             {
@@ -660,7 +656,7 @@ namespace Server.Items
             return GetMaxIntensity(item, GetID(attribute), false);
         }
 
-        private static int[] _ForceUseNewTable = { 12 };
+        private static readonly int[] _ForceUseNewTable = { 12, 1, 2 };
 
         /// <summary>
         /// Maximum intensity in regards to imbuing weight calculation. Some items may be over this 'cap'
@@ -673,12 +669,12 @@ namespace Server.Items
         {
             if (Table.ContainsKey(id))
             {
-                var info = Table[id].GetItemTypeInfo(GetItemType(item));
+                PropInfo info = Table[id].GetItemTypeInfo(GetItemType(item));
 
                 // First, we try to get the max intensity from the PropInfo. If null or we're getting an intensity for imbuing purpopses, we go to the default MaxIntenity
                 if (info == null || (imbuing && !_ForceUseNewTable.Any(i => i == id)))
                 {
-                    if (Core.SA && item is BaseWeapon && (id == 25 || id == 27))
+                    if (item is BaseWeapon && (id == 25 || id == 27))
                     {
                         return GetSpecialMaxIntensity((BaseWeapon)item);
                     }
@@ -687,7 +683,7 @@ namespace Server.Items
                 }
                 else
                 {
-                    if (Core.SA && item is BaseWeapon && (id == 25 || id == 27))
+                    if (item is BaseWeapon && (id == 25 || id == 27))
                     {
                         return GetSpecialMaxIntensity((BaseWeapon)item);
                     }
@@ -703,7 +699,7 @@ namespace Server.Items
         {
             if (Table.ContainsKey(id))
             {
-                var info = Table[id].GetItemTypeInfo(GetItemType(item));
+                PropInfo info = Table[id].GetItemTypeInfo(GetItemType(item));
 
                 if (info != null && info.PowerfulLootRange != null && info.PowerfulLootRange.Length > 0)
                 {
@@ -716,7 +712,7 @@ namespace Server.Items
 
         public static int GetSpecialMaxIntensity(BaseWeapon wep)
         {
-            int max = (int)(wep.MlSpeed * 2500 / (100 + wep.Attributes.WeaponSpeed));
+            int max = (int)(wep.Speed * 2500 / (100 + wep.Attributes.WeaponSpeed));
 
             if (wep is BaseRanged)
             {
@@ -772,7 +768,7 @@ namespace Server.Items
         {
             if (Table.ContainsKey(id))
             {
-                var info = Table[id].GetItemTypeInfo(GetItemType(item));
+                PropInfo info = Table[id].GetItemTypeInfo(GetItemType(item));
 
                 if (info != null && info.Scale >= 0)
                 {
@@ -804,7 +800,7 @@ namespace Server.Items
 
         public static int GetTotalWeight(Item item, object attribute, int value)
         {
-            var info = GetInfo(attribute);
+            ItemPropertyInfo info = GetInfo(attribute);
             int max = GetMaxIntensity(item, attribute);
 
             if (info != null && max > 0)
@@ -872,9 +868,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(AosAttribute attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is AosAttribute && (AosAttribute)info.Attribute == attr)
                     return kvp.Key;
@@ -885,9 +881,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(AosWeaponAttribute attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is AosWeaponAttribute && (AosWeaponAttribute)info.Attribute == attr)
                     return kvp.Key;
@@ -898,9 +894,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(ExtendedWeaponAttribute attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is ExtendedWeaponAttribute && (ExtendedWeaponAttribute)info.Attribute == attr)
                     return kvp.Key;
@@ -911,9 +907,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(SAAbsorptionAttribute attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is SAAbsorptionAttribute && (SAAbsorptionAttribute)info.Attribute == attr)
                     return kvp.Key;
@@ -924,9 +920,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(AosArmorAttribute attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is AosArmorAttribute && (AosArmorAttribute)info.Attribute == attr)
                     return kvp.Key;
@@ -937,9 +933,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(SkillName attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is SkillName && (SkillName)info.Attribute == attr)
                     return kvp.Key;
@@ -950,9 +946,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(SlayerName attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is SlayerName && (SlayerName)info.Attribute == attr)
                     return kvp.Key;
@@ -963,9 +959,9 @@ namespace Server.Items
 
         public static int GetIDForAttribute(TalismanSlayerName attr)
         {
-            foreach (var kvp in Table)
+            foreach (KeyValuePair<int, ItemPropertyInfo> kvp in Table)
             {
-                var info = kvp.Value;
+                ItemPropertyInfo info = kvp.Value;
 
                 if (info.Attribute is TalismanSlayerName && (TalismanSlayerName)info.Attribute == attr)
                     return kvp.Key;
@@ -996,12 +992,27 @@ namespace Server.Items
             if (str == "SearingWeapon")
                 return 62;
 
+            if (str == "Slayer")
+                return 101;
+
+            if (str == "ElementalDamage")
+                return 51;
+
+            if (str == "HitSpell")
+                return 37;
+
+            if (str == "HitArea")
+                return 30;
+
+            if (str == "RandomEater")
+                return 208;
+
             return -1;
         }
 
         public static List<int> LookupLootTable(Item item)
         {
-            var type = GetItemType(item);
+            ItemType type = GetItemType(item);
 
             if (type != ItemType.Invalid)
             {
@@ -1013,25 +1024,25 @@ namespace Server.Items
 
         public static void BuildLootTables()
         {
-            foreach (var i in Enum.GetValues(typeof(ItemType)))
+            foreach (object i in Enum.GetValues(typeof(ItemType)))
             {
-                var type = (ItemType)i;
+                ItemType type = (ItemType)i;
 
                 if (type == ItemType.Invalid)
                 {
                     continue;
                 }
 
-                var list = new List<int>();
+                List<int> list = new List<int>();
 
-                foreach (var prop in Table.Values)
+                foreach (ItemPropertyInfo prop in Table.Values)
                 {
                     if (prop.Attribute is SlayerName || prop.Attribute is SkillName)
                     {
                         continue;
                     }
 
-                    var info = prop.GetItemTypeInfo(type);
+                    PropInfo info = prop.GetItemTypeInfo(type);
 
                     if (info != null)
                     {
@@ -1095,11 +1106,11 @@ namespace Server.Items
 
         public static bool ValidateProperty(Item item, int id, bool reforged)
         {
-            var info = GetInfo(id);
+            ItemPropertyInfo info = GetInfo(id);
 
             if (info != null)
             {
-                var typeInfo = info.GetItemTypeInfo(GetItemType(item));
+                PropInfo typeInfo = info.GetItemTypeInfo(GetItemType(item));
 
                 if (typeInfo != null)
                 {
