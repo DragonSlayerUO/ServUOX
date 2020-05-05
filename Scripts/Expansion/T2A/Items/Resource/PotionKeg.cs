@@ -6,6 +6,7 @@ namespace Server.Items
     {
         private PotionEffect m_Type;
         private int m_Held;
+
         [Constructable]
         public PotionKeg()
             : base(0x1940)
@@ -21,10 +22,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int Held
         {
-            get
-            {
-                return m_Held;
-            }
+            get => m_Held;
             set
             {
                 if (m_Held != value)
@@ -38,10 +36,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public PotionEffect Type
         {
-            get
-            {
-                return m_Type;
-            }
+            get => m_Type;
             set
             {
                 m_Type = value;
@@ -84,8 +79,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(1); // version
+            writer.Write(1);
 
             writer.Write((int)m_Type);
             writer.Write(m_Held);
@@ -227,9 +221,8 @@ namespace Server.Items
 
         public override bool OnDragDrop(Mobile from, Item item)
         {
-            if (item is BasePotion)
+            if (item is BasePotion pot)
             {
-                BasePotion pot = (BasePotion)item;
                 int toHold = Math.Min(100 - m_Held, pot.Amount);
 
                 if (pot.PotionEffect == PotionEffect.Darkglow || pot.PotionEffect == PotionEffect.Parasitic)

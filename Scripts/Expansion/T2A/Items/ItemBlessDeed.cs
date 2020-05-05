@@ -1,4 +1,3 @@
-using System;
 using Server.Targeting;
 
 namespace Server.Items
@@ -17,10 +16,8 @@ namespace Server.Items
             if (m_Deed.Deleted || m_Deed.RootParent != from)
                 return;
 
-            if (target is Item)
+            if (target is Item item)
             {
-                Item item = (Item)target;
-
                 if (item.RootParent != from) // Make sure its in their pack or they are wearing it
                     from.SendLocalizedMessage(500508); // You may only bless objects that you are carrying.
                 else if (item.Stackable == true)
@@ -71,18 +68,17 @@ namespace Server.Items
 
         public override string DefaultName => "a item bless deed";
         public override bool DisplayLootType => Core.ML;
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             LootType = LootType.Blessed;
         }

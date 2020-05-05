@@ -200,6 +200,15 @@ namespace Server.Ethics
         }
 
         public abstract bool IsEligible(Mobile mob);
+        
+        public virtual void Serialize(GenericWriter writer)
+        {
+            writer.WriteEncodedInt(0);
+            writer.WriteEncodedInt(m_Players.Count);
+
+            for (int i = 0; i < m_Players.Count; ++i)
+                m_Players[i].Serialize(writer);
+        }
 
         public virtual void Deserialize(GenericReader reader)
         {
@@ -222,16 +231,6 @@ namespace Server.Ethics
                         break;
                     }
             }
-        }
-
-        public virtual void Serialize(GenericWriter writer)
-        {
-            writer.WriteEncodedInt(0); // version
-
-            writer.WriteEncodedInt(m_Players.Count);
-
-            for (int i = 0; i < m_Players.Count; ++i)
-                m_Players[i].Serialize(writer);
         }
     }
 }

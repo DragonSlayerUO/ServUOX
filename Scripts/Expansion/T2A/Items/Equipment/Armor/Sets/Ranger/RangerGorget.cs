@@ -33,6 +33,7 @@ namespace Server.Items
         public override ArmorMaterialType MaterialType => ArmorMaterialType.Studded;
         public override CraftResource DefaultResource => CraftResource.RegularLeather;
         public override int LabelNumber => 1041495;// studded gorget, ranger armor
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -42,7 +43,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

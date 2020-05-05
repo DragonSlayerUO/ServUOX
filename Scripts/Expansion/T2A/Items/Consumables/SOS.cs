@@ -96,11 +96,9 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(4); // version
+            writer.Write(4);
 
             writer.Write(m_Level);
-
             writer.Write(TargetMap);
             writer.Write(m_TargetLocation);
             writer.Write(MessageIndex);
@@ -359,22 +357,18 @@ namespace Server.Items
 
         private class MessageEntry
         {
-            private readonly int m_Width;
-            private readonly int m_Height;
-            private readonly int m_Message;
-
-            public int Width => m_Width;
-            public int Height => m_Height;
-            public int Message => m_Message;
+            public int Width { get; }
+            public int Height { get; }
+            public int Message { get; }
 
             public MessageEntry(int width, int height, int message)
             {
-                m_Width = width;
-                m_Height = height;
-                m_Message = message;
+                Width = width;
+                Height = height;
+                Message = message;
             }
 
-            private static readonly MessageEntry[] m_Entries = new MessageEntry[]
+            public static MessageEntry[] Entries { get; } = new MessageEntry[]
             {
                 new MessageEntry(280, 180, 1153540),
                 new MessageEntry(280, 215, 1153546),
@@ -391,8 +385,6 @@ namespace Server.Items
                 new MessageEntry(280, 250, 1153542),
                 new MessageEntry(280, 250, 1153550),
             };
-
-            public static MessageEntry[] Entries => m_Entries;
         }
     }
 }

@@ -29,25 +29,23 @@ namespace Server.Ethics
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
+            writer.Write(0);
 
-            writer.Write(0); // version
-
-            for (int i = 0; i < Ethics.Ethic.Ethics.Length; ++i)
-                Ethics.Ethic.Ethics[i].Serialize(writer);
+            for (int i = 0; i < Ethic.Ethics.Length; ++i)
+                Ethic.Ethics[i].Serialize(writer);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
 
             switch (version)
             {
                 case 0:
                     {
-                        for (int i = 0; i < Ethics.Ethic.Ethics.Length; ++i)
-                            Ethics.Ethic.Ethics[i].Deserialize(reader);
+                        for (int i = 0; i < Ethic.Ethics.Length; ++i)
+                            Ethic.Ethics[i].Deserialize(reader);
 
                         break;
                     }

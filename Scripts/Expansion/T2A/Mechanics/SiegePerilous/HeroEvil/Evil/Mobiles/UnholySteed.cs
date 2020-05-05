@@ -1,4 +1,3 @@
-using System;
 using Server.Ethics;
 
 namespace Server.Mobiles
@@ -51,6 +50,7 @@ namespace Server.Mobiles
         public override bool IsDispellable => false;
         public override bool IsBondable => false;
         public override FoodType FavoriteFood => FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
+
         public override string ApplyNameSuffix(string suffix)
         {
             if (suffix.Length == 0)
@@ -72,15 +72,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

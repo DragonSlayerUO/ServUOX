@@ -1,4 +1,3 @@
-using System;
 using Server.Factions;
 
 namespace Server.Ethics.Evil
@@ -27,7 +26,6 @@ namespace Server.Ethics.Evil
         public override bool IsEligible(Mobile mob)
         {
             Faction fac = Faction.Find(mob);
-
             return (fac is Minax || fac is Shadowlords);
         }
     }

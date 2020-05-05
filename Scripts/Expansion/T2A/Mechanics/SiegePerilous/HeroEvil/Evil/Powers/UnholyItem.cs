@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Ethics.Evil
@@ -24,23 +23,21 @@ namespace Server.Ethics.Evil
         {
             Player from = state as Player;
 
-            Item item = obj as Item;
-
-            if (item == null)
+            if (!(obj is Item item))
             {
-                from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x3B2, false, "You may not imbue that.");
+                from.Mobile.LocalOverheadMessage(Network.MessageType.Regular, 0x3B2, false, "You may not imbue that.");
                 return;
             }
 
             if (item.Parent != from.Mobile)
             {
-                from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x3B2, false, "You may only imbue items you are wearing.");
+                from.Mobile.LocalOverheadMessage(Network.MessageType.Regular, 0x3B2, false, "You may only imbue items you are wearing.");
                 return;
             }
 
             if ((item.SavedFlags & 0x300) != 0)
             {
-                from.Mobile.LocalOverheadMessage(Server.Network.MessageType.Regular, 0x3B2, false, "That has already beem imbued.");
+                from.Mobile.LocalOverheadMessage(Network.MessageType.Regular, 0x3B2, false, "That has already beem imbued.");
                 return;
             }
 

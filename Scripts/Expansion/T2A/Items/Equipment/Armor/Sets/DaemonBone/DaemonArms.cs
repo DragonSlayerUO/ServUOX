@@ -33,10 +33,10 @@ namespace Server.Items
         public override ArmorMaterialType MaterialType => ArmorMaterialType.Bone;
         public override CraftResource DefaultResource => CraftResource.RegularLeather;
         public override int LabelNumber => 1041371;// daemon bone arms
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0);
 
             if (Weight == 1.0)
@@ -48,8 +48,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             if (ArmorAttributes.SelfRepair == 0)
             {

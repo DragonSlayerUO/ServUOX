@@ -35,8 +35,6 @@ namespace Server.Items
             0x1797, 0x179C
         };
 
-        private bool m_InUse;
-
         [Constructable]
         public SpecialFishingNet()
             : base(0x0DCA)
@@ -59,13 +57,12 @@ namespace Server.Items
         }
 
         public override int LabelNumber => 1041079;// a special fishing net
+
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool InUse
-        {
-            get => m_InUse;
-            set => m_InUse = value;
-        }
+        public bool InUse { get; set; }
+
         public virtual bool RequireDeepWater => true;
+
         public static bool FullValidation(Map map, int x, int y)
         {
             bool valid = ValidateDeepWater(map, x, y);
@@ -89,24 +86,21 @@ namespace Server.Items
                     valid = false;
                 }
             }
-
             return valid;
         }
 
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
-
             AddNetProperties(list);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
+            writer.Write(1);
 
-            writer.Write(1); // version
-
-            writer.Write(m_InUse);
+            writer.Write(InUse);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -119,9 +113,9 @@ namespace Server.Items
             {
                 case 1:
                     {
-                        m_InUse = reader.ReadBool();
+                        InUse = reader.ReadBool();
 
-                        if (m_InUse)
+                        if (InUse)
                         {
                             Delete();
                         }
@@ -135,7 +129,7 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (m_InUse)
+            if (InUse)
             {
                 from.SendLocalizedMessage(1010483); // Someone is already using that net!
             }
@@ -152,7 +146,7 @@ namespace Server.Items
 
         public void OnTarget(Mobile from, object obj)
         {
-            if (Deleted || m_InUse)
+            if (Deleted || InUse)
             {
                 return;
             }
@@ -192,7 +186,7 @@ namespace Server.Items
                     }
                 }
 
-                m_InUse = true;
+                InUse = true;
                 Movable = false;
                 MoveToWorld(p, map);
 

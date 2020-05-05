@@ -31,14 +31,17 @@ namespace Server.Items
         }
 
         public override int LabelNumber => 1041080;// a message in a bottle
+
         [CommandProperty(AccessLevel.GameMaster)]
         public Map TargetMap { get; set; }
+
         [CommandProperty(AccessLevel.GameMaster)]
         public int Level
         {
             get => m_Level;
             set => m_Level = Math.Max(1, Math.Min(value, 4));
         }
+
         public static int GetRandomLevel()
         {
             if (Core.AOS && 10 == Utility.RandomMinMax(1, 25))
@@ -52,11 +55,9 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(3);
 
             writer.Write(m_Level);
-
             writer.Write(TargetMap);
         }
 

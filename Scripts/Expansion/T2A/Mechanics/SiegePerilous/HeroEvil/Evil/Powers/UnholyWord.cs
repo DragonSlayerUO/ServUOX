@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Ethics.Evil
 {
     public sealed class UnholyWord : Power
