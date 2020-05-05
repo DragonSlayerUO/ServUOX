@@ -125,9 +125,9 @@ namespace Server.Engines.Doom
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public UInt16 MyKey { get; set; }
+        public ushort MyKey { get; set; }
         [CommandProperty(AccessLevel.GameMaster)]
-        public UInt16 TheirKey { get; set; }
+        public ushort TheirKey { get; set; }
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Enabled { get; set; }
         public Mobile Successful { get; private set; }
@@ -407,7 +407,7 @@ namespace Server.Engines.Doom
             Successful = null;
         }
 
-        public virtual void LeverPulled(UInt16 code)
+        public virtual void LeverPulled(ushort code)
         {
             int Correct = 0;
             Mobile m_Player;

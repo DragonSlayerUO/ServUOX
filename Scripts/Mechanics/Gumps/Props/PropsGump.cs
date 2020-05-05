@@ -88,8 +88,8 @@ namespace Server.Gumps
         private static readonly Type _TypeOfCustomEnum = typeof(CustomEnumAttribute);
         private static readonly Type _TypeOfIDynamicEnum = typeof(IDynamicEnum);
         private static readonly Type _TypeOfEnum = typeof(Enum);
-        private static readonly Type _TypeOfBool = typeof(Boolean);
-        private static readonly Type _TypeOfString = typeof(String);
+        private static readonly Type _TypeOfBool = typeof(bool);
+        private static readonly Type _TypeOfString = typeof(string);
         private static readonly Type _TypeOfText = typeof(TextDefinition);
         private static readonly Type _TypeOfPoison = typeof(Poison);
         private static readonly Type _TypeOfMap = typeof(Map);
@@ -101,12 +101,12 @@ namespace Server.Gumps
         private static readonly Type _TypeofAccount = typeof(IAccount);
         private static readonly Type _TypeOfCPA = typeof(CPA);
         private static readonly Type _TypeOfObject = typeof(object);
-        private static readonly Type[] _TypeOfReal = { typeof(Single), typeof(Double) };
+        private static readonly Type[] _TypeOfReal = { typeof(float), typeof(double) };
 
         private static readonly Type[] _TypeOfNumeric =
         {
-            typeof(Byte), typeof(Int16), typeof(Int32), typeof(Int64), typeof(SByte), typeof(UInt16), typeof(UInt32),
-            typeof(UInt64)
+            typeof(byte), typeof(short), typeof(int), typeof(long), typeof(sbyte), typeof(ushort), typeof(uint),
+            typeof(ulong)
         };
 
         private readonly Mobile m_Mobile;
@@ -195,7 +195,7 @@ namespace Server.Gumps
             }
             catch (Exception e)
             {
-                return String.Format("!{0}!", e.GetType());
+                return string.Format("!{0}!", e.GetType());
             }
         }
 
@@ -208,7 +208,7 @@ namespace Server.Gumps
 
             if (o is string)
             {
-                return String.Format("\"{0}\"", o);
+                return string.Format("\"{0}\"", o);
             }
 
             if (o is bool)
@@ -218,7 +218,7 @@ namespace Server.Gumps
 
             if (o is char)
             {
-                return String.Format("0x{0:X} '{1}'", (int)(char)o, (char)o);
+                return string.Format("0x{0:X} '{1}'", (int)(char)o, (char)o);
             }
 
             if (o is Serial)
@@ -229,13 +229,13 @@ namespace Server.Gumps
                 {
                     if (s.IsItem)
                     {
-                        return String.Format("(I) 0x{0:X}", s.Value);
+                        return string.Format("(I) 0x{0:X}", s.Value);
                     }
 
-                    return String.Format("(M) 0x{0:X}", s.Value);
+                    return string.Format("(M) 0x{0:X}", s.Value);
                 }
 
-                return String.Format("(?) 0x{0:X}", s.Value);
+                return string.Format("(?) 0x{0:X}", s.Value);
             }
             /*
 			if (o is CustomSerial)
@@ -252,17 +252,17 @@ namespace Server.Gumps
             */
             if (o is byte || o is sbyte || o is short || o is ushort || o is int || o is uint || o is long || o is ulong)
             {
-                return String.Format("{0} (0x{0:X})", o);
+                return string.Format("{0} (0x{0:X})", o);
             }
 
             if (o is Mobile)
             {
-                return String.Format("(M) 0x{0:X} \"{1}\"", ((Mobile)o).Serial.Value, ((Mobile)o).Name);
+                return string.Format("(M) 0x{0:X} \"{1}\"", ((Mobile)o).Serial.Value, ((Mobile)o).Name);
             }
 
             if (o is Item)
             {
-                return String.Format("(I) 0x{0:X} \"{1}\"", ((Item)o).Serial.Value, ((Item)o).Name);
+                return string.Format("(I) 0x{0:X} \"{1}\"", ((Item)o).Serial.Value, ((Item)o).Name);
             }
 
             if (o is Type)
@@ -284,7 +284,7 @@ namespace Server.Gumps
                     return c.Name;
                 }
 
-                return String.Format("#{0:X6}", c.ToArgb() & 0x00FFFFFF);
+                return string.Format("#{0:X6}", c.ToArgb() & 0x00FFFFFF);
             }
 
             if (o is TextDefinition)
@@ -347,7 +347,7 @@ namespace Server.Gumps
 
                 int val;
 
-                if (Int32.TryParse(s, out val))
+                if (int.TryParse(s, out val))
                 {
                     return Color.FromArgb(val);
                 }
@@ -358,7 +358,7 @@ namespace Server.Gumps
                 {
                     int r, g, b;
 
-                    if (Int32.TryParse(rgb[0], out r) && Int32.TryParse(rgb[1], out g) && Int32.TryParse(rgb[2], out b))
+                    if (int.TryParse(rgb[0], out r) && int.TryParse(rgb[1], out g) && int.TryParse(rgb[2], out b))
                     {
                         return Color.FromArgb(r, g, b);
                     }
@@ -606,7 +606,7 @@ namespace Server.Gumps
 
             if (o is string)
             {
-                return String.Format("\"{0}\"", o);
+                return string.Format("\"{0}\"", o);
             }
 
             if (o is bool)
@@ -616,7 +616,7 @@ namespace Server.Gumps
 
             if (o is char)
             {
-                return String.Format("0x{0:X} '{1}'", (int)(char)o, (char)o);
+                return string.Format("0x{0:X} '{1}'", (int)(char)o, (char)o);
             }
 
             if (o is Serial)
@@ -627,16 +627,16 @@ namespace Server.Gumps
                 {
                     if (s.IsItem)
                     {
-                        return String.Format("(I) 0x{0:X}", s.Value);
+                        return string.Format("(I) 0x{0:X}", s.Value);
                     }
 
                     if (s.IsMobile)
                     {
-                        return String.Format("(M) 0x{0:X}", s.Value);
+                        return string.Format("(M) 0x{0:X}", s.Value);
                     }
                 }
 
-                return String.Format("(?) 0x{0:X}", s.Value);
+                return string.Format("(?) 0x{0:X}", s.Value);
             }
             /*
 			if (o is CustomSerial)
@@ -653,17 +653,17 @@ namespace Server.Gumps
             */
             if (o is byte || o is sbyte || o is short || o is ushort || o is int || o is uint || o is long || o is ulong)
             {
-                return String.Format("{0} (0x{0:X})", o);
+                return string.Format("{0} (0x{0:X})", o);
             }
 
             if (o is Mobile)
             {
-                return String.Format("(M) 0x{0:X} \"{1}\"", ((Mobile)o).Serial.Value, ((Mobile)o).Name);
+                return string.Format("(M) 0x{0:X} \"{1}\"", ((Mobile)o).Serial.Value, ((Mobile)o).Name);
             }
 
             if (o is Item)
             {
-                return String.Format("(I) 0x{0:X} \"{1}\"", ((Item)o).Serial.Value, ((Item)o).Name);
+                return string.Format("(I) 0x{0:X} \"{1}\"", ((Item)o).Serial.Value, ((Item)o).Name);
             }
 
             if (o is Type)
@@ -685,7 +685,7 @@ namespace Server.Gumps
                     return c.Name;
                 }
 
-                return String.Format("#{0:X6}", c.ToArgb() & 0x00FFFFFF);
+                return string.Format("#{0:X6}", c.ToArgb() & 0x00FFFFFF);
             }
 
             return o.ToString();
@@ -763,7 +763,7 @@ namespace Server.Gumps
                     y,
                     emptyWidth,
                     EntryHeight,
-                    String.Format("<BASEFONT COLOR=#FAFAFA><CENTER>{0}</CENTER></BASEFONT>", m_Type.Name),
+                    string.Format("<BASEFONT COLOR=#FAFAFA><CENTER>{0}</CENTER></BASEFONT>", m_Type.Name),
                     false,
                     false);
             }
@@ -980,7 +980,7 @@ namespace Server.Gumps
                 var a = (PropertyInfo)x;
                 var b = (PropertyInfo)y;
 
-                return String.Compare(a.Name, b.Name, StringComparison.Ordinal);
+                return string.Compare(a.Name, b.Name, StringComparison.Ordinal);
             }
         }
 

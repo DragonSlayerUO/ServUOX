@@ -1,13 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-
-using Server;
 using Server.Items;
-using Server.Misc;
 using Server.Mobiles;
-using Server.Network;
-using Server.Engines.CannedEvil;
 using Server.Engines.SeasonalEvents;
 using Server.Engines.Points;
 
@@ -17,15 +10,13 @@ namespace Server.Misc
     {
         public static bool Enabled => SeasonalEventSystem.IsActive(EventType.VirtueArtifacts);
 
-        private static Type[] m_VirtueArtifacts = new Type[]
+        public static Type[] Artifacts { get; } = new Type[]
             {
                 typeof( KatrinasCrook ), typeof( JaanasStaff ), typeof( DragonsEnd ), typeof( AnkhPendant ),
                 typeof( SentinelsGuard ), typeof( LordBlackthornsExemplar ), typeof( MapOfTheKnownWorld ), typeof( TenthAnniversarySculpture ),
                 typeof( CompassionArms ), typeof( JusticeBreastplate ), typeof( ValorGauntlets ), typeof( HonestyGorget ),
                 typeof( SpiritualityHelm ), typeof( HonorLegs ), typeof( SacrificeSollerets )
             };
-
-        public static Type[] Artifacts => m_VirtueArtifacts;
 
         public override PointsType Loyalty => PointsType.VAS;
         public override TextDefinition Name => m_Name;
@@ -46,7 +37,7 @@ namespace Server.Misc
             if (m is BaseCreature && ((BaseCreature)m).IsChampionSpawn)
                 return false;
 
-            if (r.IsPartOf<Server.Regions.HouseRegion>() || Server.Multis.BaseBoat.FindBoatAt(m, m.Map) != null)
+            if (r.IsPartOf<Server.Regions.HouseRegion>() || Multis.BaseBoat.FindBoatAt(m, m.Map) != null)
                 return false;
 
             return (r.IsPartOf("Covetous") || r.IsPartOf("Deceit") || r.IsPartOf("Despise") || r.IsPartOf("Destard") ||
@@ -64,10 +55,7 @@ namespace Server.Misc
 
         public override void ProcessKill(Mobile victim, Mobile killer)
         {
-            PlayerMobile pm = killer as PlayerMobile;
-            BaseCreature bc = victim as BaseCreature;
-
-            if (!Enabled || pm == null || bc == null || !CheckLocation(bc) || !CheckLocation(pm) || !killer.InRange(victim, 18) || !killer.Alive || bc.GivenSpecialArtifact)
+            if (!Enabled || !(killer is PlayerMobile pm) || !(victim is BaseCreature bc) || !CheckLocation(bc) || !CheckLocation(pm) || !killer.InRange(victim, 18) || !killer.Alive || bc.GivenSpecialArtifact)
                 return;
 
             if (bc.Controlled || bc.Owners.Count > 0 || bc.Fame <= 0)
@@ -86,11 +74,10 @@ namespace Server.Misc
 
             if (chance > roll)
             {
-                Item i = null;
-
+                Item i;
                 try
                 {
-                    i = Activator.CreateInstance(m_VirtueArtifacts[Utility.Random(m_VirtueArtifacts.Length)]) as Item;
+                    i = Activator.CreateInstance(Artifacts[Utility.Random(Artifacts.Length)]) as Item;
                 }
                 catch
                 {

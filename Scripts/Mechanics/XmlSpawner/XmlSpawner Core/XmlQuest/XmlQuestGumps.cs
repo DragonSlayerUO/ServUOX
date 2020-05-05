@@ -40,18 +40,18 @@ namespace Server.Gumps
 
             if (item is XmlQuestBook)
             {
-                AddLabel(20, 190, 33, String.Format("Delete this questbook?"));
-                AddLabel(20, 210, 33, String.Format("{0} quest(s) will be lost.", item.TotalItems));
+                AddLabel(20, 190, 33, string.Format("Delete this questbook?"));
+                AddLabel(20, 210, 33, string.Format("{0} quest(s) will be lost.", item.TotalItems));
                 AddLabel(20, 230, 53, item.Name);
             }
             else if (item is IXmlQuest)
             {
-                AddLabel(20, 210, 33, String.Format("Delete this quest?"));
+                AddLabel(20, 210, 33, string.Format("Delete this quest?"));
                 AddLabel(20, 230, 53, item.Name);
             }
             else
             {
-                AddLabel(20, 210, 33, String.Format("Delete this item?"));
+                AddLabel(20, 210, 33, string.Format("Delete this item?"));
                 AddLabel(20, 230, 53, item.Name);
             }
             AddRadio(35, 255, 9721, 9724, false, 1); // accept/yes radio
@@ -106,7 +106,7 @@ namespace Server.Gumps
     {
         public static string Color(string text, string color)
         {
-            return String.Format("<BASEFONT COLOR=#{0}>{1}</BASEFONT>", color, text);
+            return string.Format("<BASEFONT COLOR=#{0}>{1}</BASEFONT>", color, text);
         }
         private int m_gumptype;
         private object m_invoker;
@@ -142,7 +142,7 @@ namespace Server.Gumps
             {
                 try
                 {
-                    string colorstring = String.Format("{0:X}", color);
+                    string colorstring = string.Format("{0:X}", color);
                     AddHtml(x, y, width, height, XmlSimpleGump.Color(text, colorstring), background, scrollbar);
                 }
                 catch { }
@@ -568,7 +568,7 @@ namespace Server.Gumps
 
                 if (info.ButtonID == 0)
                 {
-                    m_gumpcallback(from, m_invoker, String.Empty);
+                    m_gumpcallback(from, m_invoker, string.Empty);
 
                 }
                 else
@@ -631,9 +631,9 @@ namespace Server.Gumps
                             break;
                         case 5:
 
-                            string buttonresponse = String.Empty;
-                            string radioresponse = String.Empty;
-                            string textresponse = String.Empty;
+                            string buttonresponse = string.Empty;
+                            string radioresponse = string.Empty;
+                            string textresponse = string.Empty;
 
                             if (info.ButtonID >= 1000)
                             {

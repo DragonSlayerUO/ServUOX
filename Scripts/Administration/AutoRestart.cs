@@ -134,7 +134,7 @@ namespace Server.Misc
 
         private static void TimedShutdown(bool restart)
         {
-            World.Broadcast(0x22, true, String.Format("The server will be going down in about {0} seconds!", RestartDelay.TotalSeconds.ToString()));
+            World.Broadcast(0x22, true, string.Format("The server will be going down in about {0} seconds!", RestartDelay.TotalSeconds.ToString()));
             Timer.DelayCall(RestartDelay, rest =>
                 {
                     Core.Kill(rest);

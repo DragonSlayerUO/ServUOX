@@ -374,7 +374,7 @@ namespace Server.Engines.XmlSpawner2
 
         public override string OnIdentify(Mobile from)
         {
-            return String.Format("Quest Points Status:\nTotal Quest Points = {0}\nTotal Quests Completed = {1}\nQuest Credits Available = {2}", Points, QuestsCompleted, Credits);
+            return string.Format("Quest Points Status:\nTotal Quest Points = {0}\nTotal Quests Completed = {1}\nQuest Credits Available = {2}", Points, QuestsCompleted, Credits);
         }
     }
 }

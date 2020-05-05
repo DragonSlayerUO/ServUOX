@@ -14,14 +14,14 @@ namespace Server.Engines.XmlSpawner2
         [Attachable]
         public XmlIsEnemy()
         {
-            Test = String.Empty;
+            Test = string.Empty;
         }
 
         [Attachable]
         public XmlIsEnemy(string name)
         {
             Name = name;
-            Test = String.Empty;
+            Test = string.Empty;
         }
 
         [Attachable]
@@ -98,11 +98,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{0}: IsEnemy '{1}' expires in {2} mins", Name, Test, Expiration.TotalMinutes);
+                return string.Format("{0}: IsEnemy '{1}' expires in {2} mins", Name, Test, Expiration.TotalMinutes);
             }
             else
             {
-                return String.Format("{0}: IsEnemy '{1}'", Name, Test);
+                return string.Format("{0}: IsEnemy '{1}'", Name, Test);
             }
         }
     }

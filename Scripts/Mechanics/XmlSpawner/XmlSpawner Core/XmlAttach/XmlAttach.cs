@@ -245,7 +245,7 @@ namespace Server.Engines.XmlSpawner2
 
                             if (o == null)
                             {
-                                AddResponse(String.Format("Unable to construct {0} with specified args", attachtype.Name));
+                                AddResponse(string.Format("Unable to construct {0} with specified args", attachtype.Name));
                                 break;
                             }
 
@@ -253,26 +253,26 @@ namespace Server.Engines.XmlSpawner2
                             {
                                 if (list.Count < 10)
                                 {
-                                    AddResponse(String.Format("Added {0} to {1}", attachtype.Name, list[i]));
+                                    AddResponse(string.Format("Added {0} to {1}", attachtype.Name, list[i]));
                                 }
                                 count++;
                             }
                             else
-                                LogFailure(String.Format("Attachment {0} not added to {1}", attachtype.Name, list[i]));
+                                LogFailure(string.Format("Attachment {0} not added to {1}", attachtype.Name, list[i]));
 
                         }
                         if (count > 0)
                         {
-                            AddResponse(String.Format("Attachment {0} has been added [{1}]", attachtype.Name, count));
+                            AddResponse(string.Format("Attachment {0} has been added [{1}]", attachtype.Name, count));
                         }
                         else
                         {
-                            AddResponse(String.Format("Attachment {0} not added", attachtype.Name));
+                            AddResponse(string.Format("Attachment {0} not added", attachtype.Name));
                         }
                     }
                     else
                     {
-                        AddResponse(String.Format("Invalid attachment type {0}", e.Arguments[0]));
+                        AddResponse(string.Format("Invalid attachment type {0}", e.Arguments[0]));
                     }
                 }
             }
@@ -324,7 +324,7 @@ namespace Server.Engines.XmlSpawner2
                                     a.Delete();
                                     if (list.Count < 10)
                                     {
-                                        AddResponse(String.Format("Deleted {0} from {1}", attachtype.Name, list[i]));
+                                        AddResponse(string.Format("Deleted {0} from {1}", attachtype.Name, list[i]));
                                     }
                                     count++;
                                 }
@@ -333,16 +333,16 @@ namespace Server.Engines.XmlSpawner2
 
                         if (count > 0)
                         {
-                            AddResponse(String.Format("Attachment {0} has been deleted [{1}]", attachtype.Name, count));
+                            AddResponse(string.Format("Attachment {0} has been deleted [{1}]", attachtype.Name, count));
                         }
                         else
                         {
-                            AddResponse(String.Format("Attachment {0} not deleted", attachtype.Name));
+                            AddResponse(string.Format("Attachment {0} not deleted", attachtype.Name));
                         }
                     }
                     else
                     {
-                        AddResponse(String.Format("Invalid attachment type {0}", e.Arguments[0]));
+                        AddResponse(string.Format("Invalid attachment type {0}", e.Arguments[0]));
                     }
                 }
             }
@@ -686,7 +686,7 @@ namespace Server.Engines.XmlSpawner2
                     }
                     catch
                     {
-                        ErrorReporter.GenerateErrorReport(String.Format("\nError deserializing {0} serialno {1}. Attachments save file corrupted. Attachment load aborted.\n",
+                        ErrorReporter.GenerateErrorReport(string.Format("\nError deserializing {0} serialno {1}. Attachments save file corrupted. Attachment load aborted.\n",
                         valuetype, serialno.Value));
                         return;
                     }
@@ -1700,7 +1700,7 @@ namespace Server.Engines.XmlSpawner2
                 {
                     string pmsg = p.OnIdentify(from);
                     if (pmsg != null)
-                        msg += String.Format("\n{0}\n", pmsg);
+                        msg += string.Format("\n{0}\n", pmsg);
                 }
             }
             if (msg != null)
@@ -2581,7 +2581,7 @@ namespace Server.Engines.XmlSpawner2
                 try
                 {
                     string timeStamp = GetTimeStamp();
-                    string fileName = String.Format("Attachment Error {0}.log", timeStamp);
+                    string fileName = string.Format("Attachment Error {0}.log", timeStamp);
 
                     string root = GetRoot();
                     string filePath = Combine(root, fileName);
@@ -2627,7 +2627,7 @@ namespace Server.Engines.XmlSpawner2
             {
                 DateTime now = DateTime.UtcNow;
 
-                return String.Format("{0}-{1}-{2}-{3}-{4}-{5}",
+                return string.Format("{0}-{1}-{2}-{3}-{4}-{5}",
                     now.Day,
                     now.Month,
                     now.Year,

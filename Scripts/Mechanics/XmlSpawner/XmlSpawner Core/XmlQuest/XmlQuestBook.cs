@@ -160,7 +160,7 @@ namespace Server.Items
 
             if (Owner != null)
             {
-                Owner.SendMessage(String.Format("{0} Quests invalidated - '{1}' removed", TotalItems, Name));
+                Owner.SendMessage(string.Format("{0} Quests invalidated - '{1}' removed", TotalItems, Name));
             }
             Delete();
         }

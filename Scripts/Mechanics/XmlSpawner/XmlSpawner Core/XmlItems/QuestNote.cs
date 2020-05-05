@@ -206,7 +206,7 @@ namespace Server.Items
 
         public static string HtmlFormat(string text, int color)
         {
-            return String.Format("<BASEFONT COLOR=#{0}>{1}</BASEFONT>", color, text);
+            return string.Format("<BASEFONT COLOR=#{0}>{1}</BASEFONT>", color, text);
         }
 
         public QuestNoteGump(OriginalQuestNote note) : base(0, 0)

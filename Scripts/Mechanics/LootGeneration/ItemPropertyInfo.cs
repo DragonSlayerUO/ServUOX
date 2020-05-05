@@ -136,7 +136,7 @@ namespace Server.Items
                     }
                     else
                     {
-                        throw new ArgumentException(String.Format("Property Category {0} already exists for {1}!", cat.ItemType.ToString(), attribute.ToString()));
+                        throw new ArgumentException(string.Format("Property Category {0} already exists for {1}!", cat.ItemType.ToString(), attribute.ToString()));
                     }
                 }
             }
@@ -218,7 +218,7 @@ namespace Server.Items
 
                 if (localization <= 0)
                 {
-                    var label = item.Name ?? String.Empty;
+                    var label = item.Name ?? string.Empty;
 
                     LocBuffer[type] = label;
                     item.Delete();
@@ -582,7 +582,7 @@ namespace Server.Items
         {
             if (Table.ContainsKey(id))
             {
-                throw new ArgumentException(String.Format("ID Already Exists: {0}", id));
+                throw new ArgumentException(string.Format("ID Already Exists: {0}", id));
             }
             else
             {

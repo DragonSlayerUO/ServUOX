@@ -149,16 +149,16 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                msg = String.Format("Lightning Damage {0} expires in {1} mins", m_Damage, Expiration.TotalMinutes);
+                msg = string.Format("Lightning Damage {0} expires in {1} mins", m_Damage, Expiration.TotalMinutes);
             }
             else
             {
-                msg = String.Format("Lightning Damage {0}", m_Damage);
+                msg = string.Format("Lightning Damage {0}", m_Damage);
             }
 
             if (Refractory > TimeSpan.Zero)
             {
-                return String.Format("{0} - {1} secs between uses", msg, Refractory.TotalSeconds);
+                return string.Format("{0} - {1} secs between uses", msg, Refractory.TotalSeconds);
             }
             else
                 return msg;

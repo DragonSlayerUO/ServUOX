@@ -178,7 +178,7 @@ namespace Server.Spells.Seventh
 
                             m_Timers[Caster] = t;
 
-                            BuffInfo.AddBuff(Caster, new BuffInfo(BuffIcon.Polymorph, 1075824, 1075823, t.Delay, Caster, String.Format("{0}\t{1}", GetArticleCliloc(m_NewBody), GetFormCliloc(m_NewBody))));
+                            BuffInfo.AddBuff(Caster, new BuffInfo(BuffIcon.Polymorph, 1075824, 1075823, t.Delay, Caster, string.Format("{0}\t{1}", GetArticleCliloc(m_NewBody), GetFormCliloc(m_NewBody))));
 
                             t.Start();
                         }

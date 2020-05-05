@@ -51,7 +51,7 @@ namespace Server.Gumps
 
             AddHtml(40, 20, 350, 50, "Rewards Available for Purchase with QuestPoints Credits", false, false);
             int qcredits = XmlQuestPoints.GetCredits(from);
-            AddLabel(400, 20, 0, String.Format("Available Credits: {0}", qcredits));
+            AddLabel(400, 20, 0, string.Format("Available Credits: {0}", qcredits));
             int qpoints = XmlQuestPoints.GetPoints(from);
 
             //AddButton( 30, height - 35, 0xFB7, 0xFB9, 0, GumpButtonType.Reply, 0 );
@@ -60,7 +60,7 @@ namespace Server.Gumps
             // put the page buttons in the lower right corner
             if (Rewards != null && Rewards.Count > 0)
             {
-                AddLabel(width - 165, height - 35, 0, String.Format("Page: {0}/{1}", viewpage + 1, Rewards.Count / maxItemsPerPage + 1));
+                AddLabel(width - 165, height - 35, 0, string.Format("Page: {0}/{1}", viewpage + 1, Rewards.Count / maxItemsPerPage + 1));
 
                 // page up and down buttons
                 AddButton(width - 55, height - 35, 0x15E0, 0x15E4, 13, GumpButtonType.Reply, 0);

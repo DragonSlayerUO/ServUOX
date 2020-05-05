@@ -141,7 +141,7 @@ namespace Server.Misc
             {
                 if (value < 0 || value > skill.Cap)
                 {
-                    @from.SendMessage(String.Format("Your skill in {0} is capped at {1:F1}.", skill.Info.Name, skill.Cap));
+                    @from.SendMessage(string.Format("Your skill in {0} is capped at {1:F1}.", skill.Info.Name, skill.Cap));
                 }
                 else
                 {
@@ -339,9 +339,9 @@ namespace Server.Misc
             cont.Hue = 0x480;
             cont.Name = "Spell Casting Stuff";
 
-            PlaceItemIn(cont, 45, 105, new Spellbook(UInt64.MaxValue));
-            PlaceItemIn(cont, 65, 105, new NecromancerSpellbook((UInt64)0xFFFF));
-            PlaceItemIn(cont, 85, 105, new BookOfChivalry((UInt64)0x3FF));
+            PlaceItemIn(cont, 45, 105, new Spellbook(ulong.MaxValue));
+            PlaceItemIn(cont, 65, 105, new NecromancerSpellbook((ulong)0xFFFF));
+            PlaceItemIn(cont, 85, 105, new BookOfChivalry((ulong)0x3FF));
             PlaceItemIn(cont, 105, 105, new BookOfBushido());	//Default ctor = full
             PlaceItemIn(cont, 125, 105, new BookOfNinjitsu()); //Default ctor = full
 

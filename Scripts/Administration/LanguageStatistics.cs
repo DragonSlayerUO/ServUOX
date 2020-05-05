@@ -228,7 +228,7 @@ namespace Server.Misc
                     }
                 }
 
-                writer.WriteLine(String.Format("Language statistics. Numbers show how many {0} use the specified language.", CountAccounts ? "accounts" : "playermobile"));
+                writer.WriteLine(string.Format("Language statistics. Numbers show how many {0} use the specified language.", CountAccounts ? "accounts" : "playermobile"));
                 writer.WriteLine("====================================================================================================");
                 writer.WriteLine();
 

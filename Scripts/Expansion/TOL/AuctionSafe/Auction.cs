@@ -199,9 +199,9 @@ namespace Server.Engines.Auction
                     if (AuctionItem.Name != null)
                         name = AuctionItem.Name;
                     else
-                        name = String.Format("#{0}", AuctionItem.LabelNumber.ToString());
+                        name = string.Format("#{0}", AuctionItem.LabelNumber.ToString());
 
-                    var message = new NewMaginciaMessage(null, new TextDefinition(1156427), String.Format("{0}\t{1}\t{2}",
+                    var message = new NewMaginciaMessage(null, new TextDefinition(1156427), string.Format("{0}\t{1}\t{2}",
                                                             name,
                                                             CurrentPlatBid.ToString("N0", CultureInfo.GetCultureInfo("en-US")),
                                                             CurrentGoldBid.ToString("N0", CultureInfo.GetCultureInfo("en-US"))));
@@ -298,9 +298,9 @@ namespace Server.Engines.Auction
                 if (AuctionItem.Name != null)
                     name = AuctionItem.Name;
                 else
-                    name = String.Format("#{0}", AuctionItem.LabelNumber.ToString());
+                    name = string.Format("#{0}", AuctionItem.LabelNumber.ToString());
 
-                NewMaginciaMessage message = new NewMaginciaMessage(null, new TextDefinition(1156426), TimeSpan.FromHours(24), String.Format("{0}\t{1}\t{2}",
+                NewMaginciaMessage message = new NewMaginciaMessage(null, new TextDefinition(1156426), TimeSpan.FromHours(24), string.Format("{0}\t{1}\t{2}",
                                                         name,
                                                         CurrentPlatBid.ToString("N0", CultureInfo.GetCultureInfo("en-US")),
                                                         CurrentGoldBid.ToString("N0", CultureInfo.GetCultureInfo("en-US"))));
@@ -318,7 +318,7 @@ namespace Server.Engines.Auction
                 if (b != null)
                     b.DepositGold(HighestBid.CurrentBid);
 
-                message = new NewMaginciaMessage(null, new TextDefinition(1156428), TimeSpan.FromHours(24), String.Format("{0}\t{1}\t{2}",
+                message = new NewMaginciaMessage(null, new TextDefinition(1156428), TimeSpan.FromHours(24), string.Format("{0}\t{1}\t{2}",
                                                         name,
                                                         CurrentPlatBid.ToString("N0", CultureInfo.GetCultureInfo("en-US")),
                                                         CurrentGoldBid.ToString("N0", CultureInfo.GetCultureInfo("en-US"))));
@@ -359,9 +359,9 @@ namespace Server.Engines.Auction
                     if (item.Name != null)
                         name = item.Name;
                     else
-                        name = String.Format("#{0}", item.LabelNumber.ToString());
+                        name = string.Format("#{0}", item.LabelNumber.ToString());
 
-                    var mes = new NewMaginciaMessage(null, new TextDefinition(1156454), String.Format("{0}\t{1}\t{2}",
+                    var mes = new NewMaginciaMessage(null, new TextDefinition(1156454), string.Format("{0}\t{1}\t{2}",
                                                                 CurrentPlatBid.ToString("N0", CultureInfo.GetCultureInfo("en-US")),
                                                                 CurrentGoldBid.ToString("N0", CultureInfo.GetCultureInfo("en-US")),
                                                                 name));
@@ -400,7 +400,7 @@ namespace Server.Engines.Auction
 
                     if (AuctionItem.LabelNumber != 0)
                     {
-                        m.SendLocalizedMessage(1156322, String.Format("#{0}", AuctionItem.LabelNumber)); // A reward of ~1_ITEM~ has been placed in your bank.
+                        m.SendLocalizedMessage(1156322, string.Format("#{0}", AuctionItem.LabelNumber)); // A reward of ~1_ITEM~ has been placed in your bank.
                     }
                     else
                     {
@@ -411,7 +411,7 @@ namespace Server.Engines.Auction
                 {
                     if (AuctionItem.LabelNumber != 0)
                     {
-                        m.SendLocalizedMessage(1152339, String.Format("#{0}", AuctionItem.LabelNumber)); // A reward of ~1_ITEM~ has been placed in your backpack.
+                        m.SendLocalizedMessage(1152339, string.Format("#{0}", AuctionItem.LabelNumber)); // A reward of ~1_ITEM~ has been placed in your backpack.
                     }
                     else
                     {

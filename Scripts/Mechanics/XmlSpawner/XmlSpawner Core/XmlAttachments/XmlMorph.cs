@@ -118,16 +118,16 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                msg = String.Format("Morph to {0} expires in {1} mins", m_MorphID, Expiration.TotalMinutes);
+                msg = string.Format("Morph to {0} expires in {1} mins", m_MorphID, Expiration.TotalMinutes);
             }
             else
             {
-                msg = String.Format("Morph to {0} duration {1} mins", m_MorphID, m_Duration.TotalMinutes);
+                msg = string.Format("Morph to {0} duration {1} mins", m_MorphID, m_Duration.TotalMinutes);
             }
 
             if (ActivationWord != null)
             {
-                return String.Format("{0} activated by '{1}'", msg, ActivationWord);
+                return string.Format("{0} activated by '{1}'", msg, ActivationWord);
             }
             else
             {

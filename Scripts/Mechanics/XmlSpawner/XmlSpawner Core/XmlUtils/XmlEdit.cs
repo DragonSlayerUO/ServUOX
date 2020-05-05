@@ -110,7 +110,7 @@ namespace Server.Engines.XmlSpawner2
                 AddPage(0);
                 AddBackground(10, 200, 200, 130, 5054);
 
-                AddLabel(20, 210, 68, String.Format("Add an XmlDialog to target?"));
+                AddLabel(20, 210, 68, string.Format("Add an XmlDialog to target?"));
 
                 string name = null;
                 if (targeted is Item)
@@ -127,7 +127,7 @@ namespace Server.Engines.XmlSpawner2
                 {
                     name = targeted.GetType().Name;
                 }
-                AddLabel(20, 230, 0, String.Format("{0}", name));
+                AddLabel(20, 230, 0, string.Format("{0}", name));
 
                 AddRadio(35, 255, 9721, 9724, false, 1); // accept/yes radio
                 AddRadio(135, 255, 9721, 9724, true, 2); // decline/no radio
@@ -543,10 +543,10 @@ namespace Server.Engines.XmlSpawner2
             // display the item list
             if (m_SearchList != null)
             {
-                AddLabel(495, y, 68, String.Format("{0} Entries", m_SearchList.Count));
+                AddLabel(495, y, 68, string.Format("{0} Entries", m_SearchList.Count));
                 int last = DisplayFrom + MaxEntries < m_SearchList.Count ? DisplayFrom + MaxEntries : m_SearchList.Count;
                 if (last > 0)
-                    AddLabel(595, y, 68, String.Format("Displaying {0}-{1}", DisplayFrom, last - 1));
+                    AddLabel(595, y, 68, string.Format("Displaying {0}-{1}", DisplayFrom, last - 1));
             }
 
             y = height - 25;
@@ -644,7 +644,7 @@ namespace Server.Engines.XmlSpawner2
             if (System.IO.Directory.Exists(XmlDialog.DefsDir) && filename != null && !filename.StartsWith("/") && !filename.StartsWith("\\"))
             {
                 // put it in the defaults directory if it exists
-                dirname = String.Format("{0}/{1}", XmlDialog.DefsDir, filename);
+                dirname = string.Format("{0}/{1}", XmlDialog.DefsDir, filename);
             }
             else
             {
@@ -1122,8 +1122,8 @@ namespace Server.Engines.XmlSpawner2
                                 entry = (XmlDialog.SpeechEntry)m_SearchList[Selected + DisplayFrom];
                             }
 
-                            string text = String.Empty;
-                            string title = String.Empty;
+                            string text = string.Empty;
+                            string title = string.Empty;
                             switch (textid)
                             {
                                 case 0: // text
@@ -1170,7 +1170,7 @@ namespace Server.Engines.XmlSpawner2
                             args[4] = DisplayFrom;
                             args[5] = SaveFilename;
 
-                            XmlTextEntryBook book = new XmlTextEntryBook(0, String.Empty, m_Dialog.Name, 20, true, new XmlTextEntryBookCallback(ProcessXmlEditBookEntry), args);
+                            XmlTextEntryBook book = new XmlTextEntryBook(0, string.Empty, m_Dialog.Name, 20, true, new XmlTextEntryBookCallback(ProcessXmlEditBookEntry), args);
 
                             if (m_Dialog.m_TextEntryBook == null)
                             {
@@ -1240,7 +1240,7 @@ namespace Server.Engines.XmlSpawner2
                     }
                 }
 
-                AddLabel(20, 225, 33, String.Format("Delete {0} entries?", count));
+                AddLabel(20, 225, 33, string.Format("Delete {0} entries?", count));
                 AddRadio(35, 255, 9721, 9724, false, 1); // accept/yes radio
                 AddRadio(135, 255, 9721, 9724, true, 2); // decline/no radio
                 AddHtmlLocalized(72, 255, 200, 30, 1049016, 0x7fff, false, false); // Yes

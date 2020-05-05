@@ -51,11 +51,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("Freeze expires in {1} secs", Expiration.TotalSeconds);
+                return string.Format("Freeze expires in {1} secs", Expiration.TotalSeconds);
             }
             else
             {
-                return String.Format("Frozen");
+                return string.Format("Frozen");
             }
         }
 

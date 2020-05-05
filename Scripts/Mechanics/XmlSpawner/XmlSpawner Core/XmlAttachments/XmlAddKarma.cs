@@ -91,7 +91,7 @@ namespace Server.Engines.XmlSpawner2
         public override string OnIdentify(Mobile from)
         {
 
-            return String.Format("{0} Karma", Value);
+            return string.Format("{0} Karma", Value);
 
         }
     }

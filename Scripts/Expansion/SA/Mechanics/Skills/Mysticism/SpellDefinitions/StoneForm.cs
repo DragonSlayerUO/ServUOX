@@ -69,7 +69,7 @@ namespace Server.Spells.Mysticism
                 m.SendSpeedControl(SpeedControlType.WalkSpeed);
             }
 
-            string args = String.Format("{0}\t{1}\t{2}\t{3}\t{4}", "-10", "-2", GetResBonus(m).ToString(), GetMaxResistance(m).ToString(), GetDamBonus(m).ToString());
+            string args = string.Format("{0}\t{1}\t{2}\t{3}\t{4}", "-10", "-2", GetResBonus(m).ToString(), GetMaxResistance(m).ToString(), GetDamBonus(m).ToString());
             BuffInfo.AddBuff(m, new BuffInfo(BuffIcon.StoneForm, 1080145, 1080146, args));
             BuffInfo.AddBuff(m, new BuffInfo(BuffIcon.PoisonImmunity, 1153785, 1153814));
         }

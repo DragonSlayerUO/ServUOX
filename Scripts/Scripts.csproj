@@ -50,6 +50,7 @@
     <Compile Include="Administration\World\Regions\Spawning\SpawnDefinition.cs" />
     <Compile Include="Administration\World\Regions\Spawning\SpawnEntry.cs" />
     <Compile Include="Administration\World\Regions\Spawning\SpawnPersistence.cs" />
+    <Compile Include="Customs\Items\BagOfMysticReagents.cs" />
     <Compile Include="Expansion\AOS\Items\Equipment\Clothing\Publish 18\GildedDress.cs" />
     <Compile Include="Expansion\AOS\Items\Equipment\Clothing\Publish 18\FurSarong.cs" />
     <Compile Include="Expansion\AOS\Items\Equipment\Clothing\Publish 18\FurCape.cs" />
@@ -1148,7 +1149,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mannequin\Property\WeaponAttributeProperty.cs" />
     <Compile Include="Expansion\HS\Items\Galleons\GalleonItem.cs" />
     <Compile Include="Expansion\EJ\Forsaken Foes\Mobile\MiningCooperativeMerchant.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CommissionPlayerVendor.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CommissionPlayerVendors.cs" />
     <Compile Include="Expansion\XSORTINGX\Multis\ContestHouses.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\The Ritual\Items.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\The Ritual\Mobiles.cs" />
@@ -1629,7 +1630,7 @@
     <Compile Include="Expansion\UO\Items\World\BaseWaterContainer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Items\Equipment\Weapons\BaseWeapon.cs">
+    <Compile Include="Expansion\UO\Items\Equipment\Weapons\BaseWeapons.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\HS\Items\Gothic Theme Pack\ChestOfSending.cs" />
@@ -2880,7 +2881,7 @@
     <Compile Include="Expansion\UO\Mobiles\NPCs\Cook.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Corey.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CrateForSledge.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CustomHairstylist.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\CustomHairstylists.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Daelas.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Darius.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\DenthesJournal.cs" />

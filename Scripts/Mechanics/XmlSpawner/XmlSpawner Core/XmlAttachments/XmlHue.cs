@@ -67,11 +67,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("Hue {0} expires in {1} mins", m_Hue, Expiration.TotalMinutes);
+                return string.Format("Hue {0} expires in {1} mins", m_Hue, Expiration.TotalMinutes);
             }
             else
             {
-                return String.Format("Hue {0}", m_Hue);
+                return string.Format("Hue {0}", m_Hue);
             }
         }
 

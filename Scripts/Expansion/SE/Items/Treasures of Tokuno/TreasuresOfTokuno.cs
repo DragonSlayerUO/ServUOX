@@ -43,32 +43,8 @@ namespace Server.Misc
             typeof(LeurociansMempoOfFortune), typeof(LesserPigmentsOfTokuno), typeof(MetalPigmentsOfTokuno), typeof(ChestOfHeirlooms)
         };
 
-        private static TreasuresOfTokunoEra _DropEra = TreasuresOfTokunoEra.None;
-        private static TreasuresOfTokunoEra _RewardEra = TreasuresOfTokunoEra.ToTOne;
-
-        public static TreasuresOfTokunoEra DropEra
-        {
-            get
-            {
-                return _DropEra;
-            }
-            set
-            {
-                _DropEra = value;
-            }
-        }
-
-        public static TreasuresOfTokunoEra RewardEra
-        {
-            get
-            {
-                return _RewardEra;
-            }
-            set
-            {
-                _RewardEra = value;
-            }
-        }
+        public static TreasuresOfTokunoEra DropEra { get; set; } = TreasuresOfTokunoEra.None;
+        public static TreasuresOfTokunoEra RewardEra { get; set; } = TreasuresOfTokunoEra.ToTOne;
 
         private static readonly Type[][] m_LesserArtifacts = new Type[][]
         {
@@ -214,8 +190,7 @@ namespace Server.Misc
 
             if (chance > Utility.RandomDouble())
             {
-                Item i = null;
-
+                Item i;
                 try
                 {
                     i = Activator.CreateInstance(m_LesserArtifacts[(int)DropEra - 1][Utility.Random(m_LesserArtifacts[(int)DropEra - 1].Length)]) as Item;
@@ -271,8 +246,7 @@ namespace Server.Misc
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         public class TOTEntry : PointsEntry
@@ -288,7 +262,6 @@ namespace Server.Misc
             {
                 writer.Write(1);
                 base.Serialize(writer);
-
                 writer.Write(TurnIns);
             }
 
@@ -330,8 +303,10 @@ namespace Server.Mobiles
             AddItem(new Backpack());
             AddItem(new Kamishimo(0x483));
 
-            Item item = new LightPlateJingasa();
-            item.Hue = 0x711;
+            Item item = new LightPlateJingasa
+            {
+                Hue = 0x711
+            };
 
             AddItem(item);
         }
@@ -354,15 +329,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         public override bool CanBeDamaged()
@@ -395,7 +368,7 @@ namespace Server.Mobiles
                         if (turnIns == 0)
                             SayTo(pm, 1071013); // Bring me 10 of the lost treasures of Tokuno and I will reward you with a valuable item.
                         else
-                            SayTo(pm, 1070981, String.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
+                            SayTo(pm, 1070981, string.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
 
                         ArrayList buttons = ToTTurnInGump.FindRedeemableItems(pm);
 
@@ -424,24 +397,12 @@ namespace Server.Gumps
 {
     public class ItemTileButtonInfo : ImageTileButtonInfo
     {
-        private Item m_Item;
-
-        public Item Item
-        {
-            get
-            {
-                return m_Item;
-            }
-            set
-            {
-                m_Item = value;
-            }
-        }
+        public Item Item { get; set; }
 
         public ItemTileButtonInfo(Item i)
             : base(i.ItemID, i.Hue, ((i.Name == null || i.Name.Length <= 0) ? (TextDefinition)i.LabelNumber : (TextDefinition)i.Name))
         {
-            m_Item = i;
+            Item = i;
         }
     }
 
@@ -490,11 +451,9 @@ namespace Server.Gumps
 
         public override void HandleButtonResponse(NetState sender, int adjustedButton, ImageTileButtonInfo buttonInfo)
         {
-            PlayerMobile pm = sender.Mobile as PlayerMobile;
-
             Item item = ((ItemTileButtonInfo)buttonInfo).Item;
 
-            if (!(pm != null && item.IsChildOf(pm.Backpack) && pm.InRange(m_Collector.Location, 7)))
+            if (!(sender.Mobile is PlayerMobile pm && item.IsChildOf(pm.Backpack) && pm.InRange(m_Collector.Location, 7)))
                 return;
 
             item.Delete();
@@ -513,7 +472,7 @@ namespace Server.Gumps
             }
             else
             {
-                m_Collector.SayTo(pm, 1070981, String.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
+                m_Collector.SayTo(pm, 1070981, string.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
 
                 ArrayList buttons = FindRedeemableItems(pm);
 
@@ -526,9 +485,7 @@ namespace Server.Gumps
 
         public override void HandleCancel(NetState sender)
         {
-            PlayerMobile pm = sender.Mobile as PlayerMobile;
-
-            if (pm == null || !pm.InRange(m_Collector.Location, 7))
+            if (!(sender.Mobile is PlayerMobile pm) || !pm.InRange(m_Collector.Location, 7))
                 return;
 
             var turnIns = PointsSystem.TreasuresOfTokuno.GetTurnIns(pm);
@@ -536,7 +493,7 @@ namespace Server.Gumps
             if (turnIns == 0)
                 m_Collector.SayTo(pm, 1071013); // Bring me 10 of the lost treasures of Tokuno and I will reward you with a valuable item.
             else if (turnIns < TreasuresOfTokuno.ItemsPerReward)	//This case should ALWAYS be true with this gump, jsut a sanity check
-                m_Collector.SayTo(pm, 1070981, String.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
+                m_Collector.SayTo(pm, 1070981, string.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
             else
                 m_Collector.SayTo(pm, 1070982); // When you wish to choose your reward, you have but to approach me again.
         }
@@ -549,14 +506,12 @@ namespace Server.Gumps
     {
         public class TypeTileButtonInfo : ImageTileButtonInfo
         {
-            private readonly Type m_Type;
-
-            public Type Type => m_Type;
+            public Type Type { get; }
 
             public TypeTileButtonInfo(Type type, int itemID, int hue, TextDefinition label, int localizedToolTip)
                 : base(itemID, hue, label, localizedToolTip)
             {
-                m_Type = type;
+                Type = type;
             }
 
             public TypeTileButtonInfo(Type type, int itemID, TextDefinition label)
@@ -572,25 +527,12 @@ namespace Server.Gumps
 
         public class PigmentsTileButtonInfo : ImageTileButtonInfo
         {
-            private PigmentType m_Pigment;
-
-            public PigmentType Pigment
-            {
-                get
-                {
-                    return m_Pigment;
-                }
-
-                set
-                {
-                    m_Pigment = value;
-                }
-            }
+            public PigmentType Pigment { get; set; }
 
             public PigmentsTileButtonInfo(PigmentType p)
                 : base(0xEFF, PigmentsOfTokuno.GetInfo(p)[0], PigmentsOfTokuno.GetInfo(p)[1])
             {
-                m_Pigment = p;
+                Pigment = p;
             }
         }
 
@@ -747,7 +689,7 @@ namespace Server.Gumps
             if (pm.AddToBackpack(item))
             {
                 PointsSystem.TreasuresOfTokuno.RemoveTurnIns(pm, TreasuresOfTokuno.ItemsPerReward);
-                m_Collector.SayTo(pm, 1070984, (item.Name == null || item.Name.Length <= 0) ? String.Format("#{0}", item.LabelNumber) : item.Name); // You have earned the gratitude of the Empire. I have placed the ~1_OBJTYPE~ in your backpack.
+                m_Collector.SayTo(pm, 1070984, (item.Name == null || item.Name.Length <= 0) ? string.Format("#{0}", item.LabelNumber) : item.Name); // You have earned the gratitude of the Empire. I have placed the ~1_OBJTYPE~ in your backpack.
             }
             else
             {
@@ -759,9 +701,7 @@ namespace Server.Gumps
 
         public override void HandleCancel(NetState sender)
         {
-            PlayerMobile pm = sender.Mobile as PlayerMobile;
-
-            if (pm == null || !pm.InRange(m_Collector.Location, 7))
+            if (!(sender.Mobile is PlayerMobile pm) || !pm.InRange(m_Collector.Location, 7))
                 return;
 
             var turnIns = PointsSystem.TreasuresOfTokuno.GetTurnIns(pm);
@@ -769,7 +709,7 @@ namespace Server.Gumps
             if (turnIns == 0)
                 m_Collector.SayTo(pm, 1071013); // Bring me 10 of the lost treasures of Tokuno and I will reward you with a valuable item.
             else if (turnIns < TreasuresOfTokuno.ItemsPerReward)	//This and above case should ALWAYS be FALSE with this gump, jsut a sanity check
-                m_Collector.SayTo(pm, 1070981, String.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
+                m_Collector.SayTo(pm, 1070981, string.Format("{0}\t{1}", turnIns, TreasuresOfTokuno.ItemsPerReward)); // You have turned in ~1_COUNT~ minor artifacts. Turn in ~2_NUM~ to receive a reward.
             else
                 m_Collector.SayTo(pm, 1070982); // When you wish to choose your reward, you have but to approach me again.
         }

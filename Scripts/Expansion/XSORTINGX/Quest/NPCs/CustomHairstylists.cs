@@ -1,11 +1,8 @@
-#region References
 using System;
 using System.Collections.Generic;
-
 using Server.Gumps;
 using Server.Items;
 using Server.Network;
-#endregion
 
 namespace Server.Mobiles
 {
@@ -149,51 +146,42 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
     public class HairstylistBuyInfo
     {
-        private readonly int m_Title;
-        private readonly string m_TitleString;
-        private readonly int m_Price;
-        private readonly bool m_FacialHair;
-        private readonly Type m_GumpType;
-        private readonly object[] m_GumpArgs;
-
         public HairstylistBuyInfo(int title, int price, bool facialHair, Type gumpType, object[] args)
         {
-            m_Title = title;
-            m_Price = price;
-            m_FacialHair = facialHair;
-            m_GumpType = gumpType;
-            m_GumpArgs = args;
+            Title = title;
+            Price = price;
+            FacialHair = facialHair;
+            GumpType = gumpType;
+            GumpArgs = args;
         }
 
         public HairstylistBuyInfo(string title, int price, bool facialHair, Type gumpType, object[] args)
         {
-            m_TitleString = title;
-            m_Price = price;
-            m_FacialHair = facialHair;
-            m_GumpType = gumpType;
-            m_GumpArgs = args;
+            TitleString = title;
+            Price = price;
+            FacialHair = facialHair;
+            GumpType = gumpType;
+            GumpArgs = args;
         }
 
-        public int Title => m_Title;
-        public string TitleString => m_TitleString;
-        public int Price => m_Price;
-        public bool FacialHair => m_FacialHair;
-        public Type GumpType => m_GumpType;
-        public object[] GumpArgs => m_GumpArgs;
+        public int Title { get; }
+        public string TitleString { get; }
+        public int Price { get; }
+        public bool FacialHair { get; }
+        public Type GumpType { get; }
+        public object[] GumpArgs { get; }
     }
 
     public class HairstylistBuyGump : Gump
@@ -332,29 +320,26 @@ namespace Server.Mobiles
             new ChangeHairHueEntry("*****", 1118, 16), new ChangeHairHueEntry("*****", 1134, 16)
         };
 
-        private readonly string m_Name;
-        private readonly int[] m_Hues;
-
         public ChangeHairHueEntry(string name, int[] hues)
         {
-            m_Name = name;
-            m_Hues = hues;
+            Name = name;
+            Hues = hues;
         }
 
         public ChangeHairHueEntry(string name, int start, int count)
         {
-            m_Name = name;
+            Name = name;
 
-            m_Hues = new int[count];
+            Hues = new int[count];
 
             for (int i = 0; i < count; ++i)
             {
-                m_Hues[i] = start + i;
+                Hues[i] = start + i;
             }
         }
 
-        public string Name => m_Name;
-        public int[] Hues => m_Hues;
+        public string Name { get; }
+        public int[] Hues { get; }
     }
 
     public class ChangeHairHueGump : Gump
@@ -447,11 +432,11 @@ namespace Server.Mobiles
                                 {
                                     m_From.HairHue = hue;
                                 }
-
+                                
                                 if (m_FacialHair)
                                 {
-                                    m_From.FacialHairHue = hue;
-                                }
+                                    m_From.FacialHairHue = hue; 
+                                }                              
                             }
                             else
                             {
@@ -551,18 +536,12 @@ namespace Server.Mobiles
             new ChangeHairstyleEntry( 0, 0, 0, 0 )
         };
 
-        private int m_ItemID_Male;
-        private int m_ItemID_Female;
-        private int m_GumpID_Male;
-        private int m_GumpID_Female;
-        private int m_X, m_Y;
-
-        public int ItemID_Male => m_ItemID_Male;
-        public int ItemID_Female => m_ItemID_Female;
-        public int GumpID_Male => m_GumpID_Male;
-        public int GumpID_Female => m_GumpID_Female;
-        public int X => m_X;
-        public int Y => m_Y;
+        public int ItemID_Male { get; }
+        public int ItemID_Female { get; }
+        public int GumpID_Male { get; }
+        public int GumpID_Female { get; }
+        public int X { get; }
+        public int Y { get; }
 
         public ChangeHairstyleEntry(int gumpID, int x, int y, int itemID)
             : this(gumpID, gumpID, x, y, itemID, itemID)
@@ -571,12 +550,12 @@ namespace Server.Mobiles
 
         public ChangeHairstyleEntry(int gumpID_Female, int gumpID_Male, int x, int y, int itemID_Female, int itemID_Male)
         {
-            m_GumpID_Male = gumpID_Male;
-            m_GumpID_Female = gumpID_Female;
-            m_X = x;
-            m_Y = y;
-            m_ItemID_Male = itemID_Male;
-            m_ItemID_Female = itemID_Female;
+            GumpID_Male = gumpID_Male;
+            GumpID_Female = gumpID_Female;
+            X = x;
+            Y = y;
+            ItemID_Male = itemID_Male;
+            ItemID_Female = itemID_Female;
         }
     }
 
@@ -761,11 +740,6 @@ namespace Server.Mobiles
                                         if (m_FacialHair)
                                         {
                                             m_From.FacialHairItemID = itemID;
-
-                                            if (itemID != 0)
-                                            {
-                                                m_From.FacialHairHue = m_From.HairHue;
-                                            }
                                         }
                                         else
                                         {

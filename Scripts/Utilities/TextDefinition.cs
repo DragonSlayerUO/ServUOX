@@ -96,7 +96,7 @@ namespace Server
             else if (def.String != null)
             {
                 if (stringColor >= 0)
-                    g.AddHtml(x, y, width, height, String.Format("<BASEFONT COLOR=#{0:X6}>{1}</BASEFONT>", stringColor, def.String), back, scroll);
+                    g.AddHtml(x, y, width, height, string.Format("<BASEFONT COLOR=#{0:X6}>{1}</BASEFONT>", stringColor, def.String), back, scroll);
                 else
                     g.AddHtml(x, y, width, height, def.String, back, scroll);
             }

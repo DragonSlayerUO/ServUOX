@@ -398,7 +398,7 @@ namespace Server.Spells
 
         public static int GetBuffOffset(Mobile m, StatType type)
         {
-            string name = String.Format("[Magic] {0} Buff", type);
+            string name = string.Format("[Magic] {0} Buff", type);
 
             StatMod mod = m.GetStatMod(name);
 

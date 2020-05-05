@@ -233,11 +233,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{2}: Item {0} expires in {1} mins", SavedItem, Expiration.TotalMinutes, Name);
+                return string.Format("{2}: Item {0} expires in {1} mins", SavedItem, Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("{1}: Item {0}", SavedItem, Name);
+                return string.Format("{1}: Item {0}", SavedItem, Name);
             }
         }
     }

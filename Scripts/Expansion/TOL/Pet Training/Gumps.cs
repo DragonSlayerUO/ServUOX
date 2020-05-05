@@ -404,7 +404,7 @@ namespace Server.Mobiles
 
                                     if (skill)
                                     {
-                                        AddHtml(180, y, 75, 18, String.Format("<div align=right>{0:F1}</div>", Creature.Skills[(SkillName)profile.Advancements[i]].Cap), false, false);
+                                        AddHtml(180, y, 75, 18, string.Format("<div align=right>{0:F1}</div>", Creature.Skills[(SkillName)profile.Advancements[i]].Cap), false, false);
                                     }
                                 }
                                 else if (loc[0].String != null)
@@ -551,7 +551,7 @@ namespace Server.Mobiles
             if (c.Skills[name].Base < 10.0)
                 return "<div align=right>---</div>";
 
-            return String.Format("<div align=right>{0:F1}/{1}</div>", c.Skills[name].Value, c.Skills[name].Cap);
+            return string.Format("<div align=right>{0:F1}/{1}</div>", c.Skills[name].Value, c.Skills[name].Cap);
         }
 
         private static string FormatAttributes(int cur, int max)
@@ -573,10 +573,10 @@ namespace Server.Mobiles
 
             if (percentage)
             {
-                return String.Format("<div align=right>{0:F1}%</div>", val);
+                return string.Format("<div align=right>{0:F1}%</div>", val);
             }
 
-            return String.Format("<div align=right>{0:F1}</div>", val);
+            return string.Format("<div align=right>{0:F1}</div>", val);
         }
 
         public static string FormatElement(int val, string color)
@@ -584,15 +584,15 @@ namespace Server.Mobiles
             if (color == null)
             {
                 if (val <= 0)
-                    return String.Format("<div align=right>---</div>");
+                    return string.Format("<div align=right>---</div>");
 
-                return String.Format("<div align=right>{0}%</div>", val);
+                return string.Format("<div align=right>{0}%</div>", val);
             }
 
             if (val <= 0)
-                return String.Format("<BASEFONT COLOR={0}><div align=right>---</div>", color);
+                return string.Format("<BASEFONT COLOR={0}><div align=right>---</div>", color);
 
-            return String.Format("<BASEFONT COLOR={1}><div align=right>{0}%</div>", val, color);
+            return string.Format("<BASEFONT COLOR={1}><div align=right>{0}%</div>", val, color);
         }
 
         public static string FormatDamage(int min, int max)
@@ -602,7 +602,7 @@ namespace Server.Mobiles
 
         public string FormatPetSlots(int min, int max)
         {
-            return String.Format("<BASEFONT COLOR=#57412F>{0} => {1}", min.ToString(), max.ToString());
+            return string.Format("<BASEFONT COLOR=#57412F>{0} => {1}", min.ToString(), max.ToString());
         }
     }
 
@@ -697,7 +697,7 @@ namespace Server.Mobiles
         {
             AddBackground(0, 0, 454, 240, 0x24A4);
 
-            AddHtmlLocalized(0, 12, 454, 16, CenterLoc, String.Format("#{0}", _Title.ToString()), 0xF424E5, false, false);
+            AddHtmlLocalized(0, 12, 454, 16, CenterLoc, string.Format("#{0}", _Title.ToString()), 0xF424E5, false, false);
             AddHtmlLocalized(55, 65, 344, 80, _Body, C32216(0x8B0000), false, false);
 
             AddECHandleInput();
@@ -1415,14 +1415,14 @@ namespace Server.Mobiles
                     case 200: cliloc = 1049642; break;
                 }
 
-                AddHtmlLocalized(45, 225, 225, 60, cliloc, String.Format("#{0}", TrainingPoint.Name.Number), 0, false, false);
+                AddHtmlLocalized(45, 225, 225, 60, cliloc, string.Format("#{0}", TrainingPoint.Name.Number), 0, false, false);
             }
 
             AddHtmlLocalized(305, 225, 145, 18, 1157490, false, false); // Avail. Training Points:
             AddLabel(455, 225, avail <= 0 ? 0x26 : 0, avail.ToString());
 
             AddHtmlLocalized(305, 245, 145, 18, 1113646, false, false); // Total Property Weight:
-            AddLabel(455, 245, 0, String.Format("{0}/{1}", ((int)(Value * weight)).ToString(), (max * weight).ToString()));
+            AddLabel(455, 245, 0, string.Format("{0}/{1}", ((int)(Value * weight)).ToString(), (max * weight).ToString()));
 
             if (TrainingPoint.Name.Number > 0)
                 AddHtmlLocalized(305, 265, 145, 18, TrainingPoint.Name.Number, false, false);
@@ -1814,7 +1814,7 @@ namespace Server.Mobiles
                 var value = entry.TrainPoint is SkillName ? entry.Value + 1000 : entry.Value;
 
                 AddLabel(460, y, entry.Value == 0 ? 0x27 : 0, value.ToString());
-                AddLabel(510, y, entry.Cost == 0 ? 0x27 : 0, String.Format("-{0}", entry.Cost));
+                AddLabel(510, y, entry.Cost == 0 ? 0x27 : 0, string.Format("-{0}", entry.Cost));
 
                 total += entry.Cost;
                 y += 22;

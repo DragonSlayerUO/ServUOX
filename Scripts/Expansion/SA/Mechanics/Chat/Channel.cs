@@ -114,7 +114,7 @@ namespace Server.Engines.Chat
         {
             foreach (var user in m_Users)
             {
-                ChatSystem.SendCommandTo(to.Mobile, ChatCommand.AddUserToChannel, user.GetColorCharacter() + user.Username, String.Format("{{{0}}}", Name));
+                ChatSystem.SendCommandTo(to.Mobile, ChatCommand.AddUserToChannel, user.GetColorCharacter() + user.Username, string.Format("{{{0}}}", Name));
             }
         }
 

@@ -67,7 +67,7 @@ namespace Server.Engines.NewMagincia
             if (fees < 0)
             {
                 int owed = fees * -1;
-                SayTo(from, String.Format("It looks like you owe {0}gp as back fees. How much would you like to pay now?", owed.ToString("###,###,###")));
+                SayTo(from, string.Format("It looks like you owe {0}gp as back fees. How much would you like to pay now?", owed.ToString("###,###,###")));
                 from.Prompt = new BackfeePrompt(this, entry);
                 return;
             }
@@ -203,7 +203,7 @@ namespace Server.Engines.NewMagincia
                     }
                     else
                     {
-                        SayTo(from, String.Format("Thank you! You have a remaining balance of {0}gp as backfees!", newAmount * -1));
+                        SayTo(from, string.Format("Thank you! You have a remaining balance of {0}gp as backfees!", newAmount * -1));
                     }
                 }
                 else

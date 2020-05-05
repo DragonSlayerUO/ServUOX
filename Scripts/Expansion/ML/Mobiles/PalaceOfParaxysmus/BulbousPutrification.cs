@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a bulbous putrification corpse")]
@@ -36,6 +34,11 @@ namespace Server.Mobiles
             SetSkill(SkillName.MagicResist, 55.5, 64.1);
             SetSkill(SkillName.Anatomy, 110.0);
             SetSkill(SkillName.Poisoning, 80.0);
+
+            Fame = 5000;
+            Karma = -5000;
+
+            VirtualArmor = 28;
         }
 
         public BulbousPutrification(Serial serial)
@@ -45,6 +48,7 @@ namespace Server.Mobiles
 
         public override Poison PoisonImmunity => Poison.Lethal;
         public override Poison HitPoison => Poison.Lethal;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.AosFilthyRich, 5);
@@ -53,15 +57,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

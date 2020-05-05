@@ -256,8 +256,8 @@ namespace Server.Factions
         public int GetStatMod(Mobile mob, StatType type)
         {
             int offset = 0;
-            StatMod buff = mob.GetStatMod(String.Format("[Magic] {0} Buff", type));
-            StatMod curse = mob.GetStatMod(String.Format("[Magic] {0} Curse", type));
+            StatMod buff = mob.GetStatMod(string.Format("[Magic] {0} Buff", type));
+            StatMod curse = mob.GetStatMod(string.Format("[Magic] {0} Curse", type));
 
             if (buff != null)
                 offset += buff.Offset;

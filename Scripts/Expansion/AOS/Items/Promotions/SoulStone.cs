@@ -174,7 +174,7 @@ namespace Server.Items
             string name = LastUserName;
 
             if (name == null)
-                name = String.Format("#{0}", 1074235); // Unknown
+                name = string.Format("#{0}", 1074235); // Unknown
 
             list.Add(1041602, "{0}", name); // Owner: ~1_val~
         }
@@ -930,7 +930,7 @@ namespace Server.Items
 
         public override void OnSkillTransfered(Mobile from)
         {
-            if (String.IsNullOrEmpty(Account))
+            if (string.IsNullOrEmpty(Account))
             {
                 Account = from.Account.Username;
             }

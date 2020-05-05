@@ -128,11 +128,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Charges > 0)
             {
-                msg = String.Format("Sound #{0} : {1} secs between uses - {2} charges left", SoundValue, Refractory.TotalSeconds, Charges);
+                msg = string.Format("Sound #{0} : {1} secs between uses - {2} charges left", SoundValue, Refractory.TotalSeconds, Charges);
             }
             else
             {
-                msg = String.Format("Sound #{0} : {1} secs between uses", SoundValue, Refractory.TotalSeconds);
+                msg = string.Format("Sound #{0} : {1} secs between uses", SoundValue, Refractory.TotalSeconds);
             }
 
             if (ActivationWord == null)
@@ -141,7 +141,7 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                return String.Format("{0} : trigger on '{1}'", msg, ActivationWord);
+                return string.Format("{0} : trigger on '{1}'", msg, ActivationWord);
             }
 
         }

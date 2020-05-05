@@ -73,11 +73,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{2}: Date {0} expires in {1} mins", Date, Expiration.TotalMinutes, Name);
+                return string.Format("{2}: Date {0} expires in {1} mins", Date, Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("{1}: Date {0}", Date, Name);
+                return string.Format("{1}: Date {0}", Date, Name);
             }
         }
     }

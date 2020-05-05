@@ -213,7 +213,7 @@ namespace Server.Commands
                     return;
                 }
                 else
-                    e.Mobile.SendMessage(String.Format("Command '{0}' not found!", arg));
+                    e.Mobile.SendMessage(string.Format("Command '{0}' not found!", arg));
             }
 
             e.Mobile.SendGump(new CommandListGump(0, e.Mobile, null));

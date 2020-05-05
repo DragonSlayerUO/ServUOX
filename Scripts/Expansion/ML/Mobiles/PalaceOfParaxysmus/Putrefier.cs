@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 using System.Collections.Generic;
 
@@ -44,10 +43,7 @@ namespace Server.Mobiles
             Fame = 24000;
             Karma = -24000;
 
-            for (int i = 0; i < Utility.RandomMinMax(0, 2); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
+            VirtualArmor = 30;
         }
 
         public Putrefier(Serial serial)
@@ -55,32 +51,36 @@ namespace Server.Mobiles
         {
         }
 
-        public override void OnDeath(Container c)
+        public override void OnDeath(Container CorpseLoot)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(0, 2); i++)
+            {
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
-            c.DropItem(new SpleenOfThePutrefier());
+            CorpseLoot.DropItem(new SpleenOfThePutrefier());
 
             if (Utility.RandomDouble() < 0.6)
-                c.DropItem(new ParrotItem());
+                CorpseLoot.DropItem(new ParrotItem());
 
             if (Paragon.ChestChance > Utility.RandomDouble())
-                c.DropItem(new ParagonChest(Name, 5));
+                CorpseLoot.DropItem(new ParagonChest(Name, 5));
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override bool GivesMLMinorArtifact => true;
-        public override Poison HitPoison => Poison.Deadly;// Becomes Lethal with Paragon bonus   
+        public override Poison HitPoison => Poison.Deadly;// Becomes Lethal with Paragon bonus
+        
         public override void OnDamagedBySpell(Mobile attacker)
         {
             base.OnDamagedBySpell(attacker);
-
             DoCounter(attacker);
         }
 
         public override void OnGotMeleeAttack(Mobile attacker)
         {
             base.OnGotMeleeAttack(attacker);
-
             DoCounter(attacker);
         }
 
@@ -153,15 +153,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

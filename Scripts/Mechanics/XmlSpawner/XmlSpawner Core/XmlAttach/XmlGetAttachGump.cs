@@ -233,7 +233,7 @@ namespace Server.Mobiles
             {
                 tnamestr = ((Mobile)targeted).Name;
             }
-            AddLabel(2, 0, 0x33, String.Format("Attachments on {0} : {1}", targeted.GetType().Name, tnamestr));
+            AddLabel(2, 0, 0x33, string.Format("Attachments on {0} : {1}", targeted.GetType().Name, tnamestr));
 
             // add the Sort button
             AddButton(5, 450, 0xFAB, 0xFAD, 700, GumpButtonType.Reply, 0);
@@ -291,8 +291,8 @@ namespace Server.Mobiles
             // display the item list
             if (m_SearchList != null)
             {
-                AddLabel(320, 425, 68, String.Format("Found {0} attachments", m_SearchList.Count));
-                AddLabel(500, 425, 68, String.Format("Displaying {0}-{1}", DisplayFrom,
+                AddLabel(320, 425, 68, string.Format("Found {0} attachments", m_SearchList.Count));
+                AddLabel(500, 425, 68, string.Format("Displaying {0}-{1}", DisplayFrom,
                     (DisplayFrom + MaxEntries < m_SearchList.Count ? DisplayFrom + MaxEntries : m_SearchList.Count)));
             }
 
@@ -436,9 +436,9 @@ namespace Server.Mobiles
                     ystr = arglist[arglist.Length - 1];
                 }
                 if (Dsort)
-                    return String.Compare(ystr, xstr, true);
+                    return string.Compare(ystr, xstr, true);
                 else
-                    return String.Compare(xstr, ystr, true);
+                    return string.Compare(xstr, ystr, true);
             }
         }
 
@@ -458,9 +458,9 @@ namespace Server.Mobiles
                 xstr = x.Name;
                 ystr = y.Name;
                 if (Dsort)
-                    return String.Compare(ystr, xstr, true);
+                    return string.Compare(ystr, xstr, true);
                 else
-                    return String.Compare(xstr, ystr, true);
+                    return string.Compare(xstr, ystr, true);
             }
         }
 
@@ -702,7 +702,7 @@ namespace Server.Mobiles
                     }
                 }
 
-                AddLabel(20, 225, 33, String.Format("Delete {0} attachments?", count));
+                AddLabel(20, 225, 33, string.Format("Delete {0} attachments?", count));
                 AddRadio(35, 255, 9721, 9724, false, 1); // accept/yes radio
                 AddRadio(135, 255, 9721, 9724, true, 2); // decline/no radio
                 AddHtmlLocalized(72, 255, 200, 30, 1049016, 0x7fff, false, false); // Yes

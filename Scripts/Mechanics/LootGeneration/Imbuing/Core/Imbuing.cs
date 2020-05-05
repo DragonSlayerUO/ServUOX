@@ -1,13 +1,10 @@
 using System;
-using Server;
 using Server.Targeting;
 using Server.Mobiles;
 using Server.Network;
 using Server.Items;
 using Server.Gumps;
-using System.Collections;
 using System.Collections.Generic;
-using Server.ContextMenus;
 using Server.Commands;
 using Server.Factions;
 using Server.Engines.Craft;
@@ -23,6 +20,8 @@ namespace Server.SkillHandlers
 
             CommandSystem.Register("GetTotalWeight", AccessLevel.GameMaster, new CommandEventHandler(GetTotalWeight_OnCommand));
             CommandSystem.Register("GetTotalMods", AccessLevel.GameMaster, new CommandEventHandler(GetTotalMods_OnCommand));
+
+            EventSink.Login += new LoginEventHandler(OnLogin);
         }
 
         private static void OnLogin(LoginEventArgs e)
@@ -31,8 +30,7 @@ namespace Server.SkillHandlers
                 e.Mobile.EndAction(typeof(Imbuing));
         }
 
-        private static Dictionary<Mobile, ImbuingContext> m_ContextTable = new Dictionary<Mobile, ImbuingContext>();
-        public static Dictionary<Mobile, ImbuingContext> ContextTable => m_ContextTable;
+        public static Dictionary<Mobile, ImbuingContext> ContextTable { get; } = new Dictionary<Mobile, ImbuingContext>();
 
         public static TimeSpan OnUse(Mobile from)
         {
@@ -52,19 +50,19 @@ namespace Server.SkillHandlers
 
         public static ImbuingContext GetContext(Mobile m)
         {
-            if (!m_ContextTable.ContainsKey(m))
+            if (!ContextTable.ContainsKey(m))
             {
                 ImbuingContext context = new ImbuingContext(m);
-                m_ContextTable[m] = context;
+                ContextTable[m] = context;
                 return context;
             }
 
-            return m_ContextTable[m];
+            return ContextTable[m];
         }
 
         public static void AddContext(Mobile from, ImbuingContext context)
         {
-            m_ContextTable[from] = context;
+            ContextTable[from] = context;
         }
 
         public static bool CanImbueItem(Mobile from, Item item)
@@ -291,9 +289,7 @@ namespace Server.SkillHandlers
 
         public static int GetQualityBonus(Item item)
         {
-            IQuality quality = item as IQuality;
-
-            if (quality != null)
+            if (item is IQuality quality)
             {
                 if (quality.Quality == ItemQuality.Exceptional)
                     return 20;
@@ -314,12 +310,10 @@ namespace Server.SkillHandlers
         /// <param name="value">value for id</param>
         public static void TryImbueItem(Mobile from, Item i, int id, int value)
         {
-            double bonus = 0.0;
-
-            if (!CheckSoulForge(from, 2, out bonus))
+            if (!CheckSoulForge(from, 2, out double bonus))
                 return;
 
-            ImbuingContext context = Imbuing.GetContext(from);
+            ImbuingContext context = GetContext(from);
 
             context.LastImbued = i;
             context.Imbue_Mod = id;
@@ -417,10 +411,8 @@ namespace Server.SkillHandlers
             from.SendLocalizedMessage(1079775); // You successfully imbue the item!
             from.PlaySound(0x1EB);
 
-            if (item is BaseWeapon)
+            if (item is BaseWeapon wep)
             {
-                var wep = (BaseWeapon)item;
-
                 // New property replaces the old one, so lets set them all to 0
                 if (id >= 30 && id <= 34)
                 {
@@ -467,10 +459,8 @@ namespace Server.SkillHandlers
             // removes nom-imbued Imbuing value, which changes the way the items total weight is calculated
             if (id >= 51 && id <= 55)
             {
-                if (item is BaseArmor)
+                if (item is BaseArmor arm)
                 {
-                    var arm = (BaseArmor)item;
-
                     switch (id)
                     {
                         case 51: arm.PhysNonImbuing = 0; break;
@@ -480,10 +470,8 @@ namespace Server.SkillHandlers
                         case 55: arm.EnergyNonImbuing = 0; break;
                     }
                 }
-                else if (item is BaseClothing)
+                else if (item is BaseClothing hat)
                 {
-                    var hat = (BaseClothing)item;
-
                     switch (id)
                     {
                         case 51: hat.PhysNonImbuing = 0; break;
@@ -495,10 +483,8 @@ namespace Server.SkillHandlers
                 }
             }
 
-            if (item is IImbuableEquipement)
+            if (item is IImbuableEquipement imbuable)
             {
-                var imbuable = (IImbuableEquipement)item;
-
                 imbuable.OnAfterImbued(from, id, value);
                 imbuable.TimesImbued++;
             }
@@ -741,9 +727,7 @@ namespace Server.SkillHandlers
 
         public static bool UnravelItem(Mobile from, Item item, bool message = true)
         {
-            double bonus = 0.0;
-
-            if (!CheckSoulForge(from, 2, out bonus))
+            if (!CheckSoulForge(from, 2, out double bonus))
                 return false;
 
             int weight = GetTotalWeight(item, -1, false, true);
@@ -873,9 +857,7 @@ namespace Server.SkillHandlers
         {
             int maxWeight = 450;
 
-            IQuality quality = item as IQuality;
-
-            if (quality != null && quality.Quality == ItemQuality.Exceptional)
+            if (item is IQuality quality && quality.Quality == ItemQuality.Exceptional)
                 maxWeight += 50;
 
             if (item is BaseWeapon)
@@ -970,7 +952,7 @@ namespace Server.SkillHandlers
             {
                 int ids = GetTotalMods((Item)targeted);
 
-                ((Item)targeted).LabelTo(from, String.Format("Total Mods: {0}", ids.ToString()));
+                ((Item)targeted).LabelTo(from, string.Format("Total Mods: {0}", ids.ToString()));
             }
             else
                 from.SendMessage("That is not an item!");
@@ -1315,11 +1297,11 @@ namespace Server.SkillHandlers
             if (targeted is Item)
             {
                 int w = GetTotalWeight((Item)targeted, -1, false, true);
-                ((Item)targeted).LabelTo(from, String.Format("Imbuing Weight: {0}", w.ToString()));
+                ((Item)targeted).LabelTo(from, string.Format("Imbuing Weight: {0}", w.ToString()));
                 w = GetTotalWeight((Item)targeted, -1, false, false);
-                ((Item)targeted).LabelTo(from, String.Format("Loot Weight: {0}", w.ToString()));
+                ((Item)targeted).LabelTo(from, string.Format("Loot Weight: {0}", w.ToString()));
                 w = GetTotalWeight((Item)targeted, -1, true, true);
-                ((Item)targeted).LabelTo(from, String.Format("True Weight: {0}", w.ToString()));
+                ((Item)targeted).LabelTo(from, string.Format("True Weight: {0}", w.ToString()));
             }
             else
                 from.SendMessage("That is not an item!");
@@ -1587,8 +1569,7 @@ namespace Server.SkillHandlers
             return (int)weight;
         }
 
-        public static SkillName[] PossibleSkills => m_PossibleSkills;
-        private static SkillName[] m_PossibleSkills = new SkillName[]
+        public static SkillName[] PossibleSkills { get; } = new SkillName[]
             {
                 SkillName.Swords,
                 SkillName.Fencing,
@@ -1661,14 +1642,12 @@ namespace Server.SkillHandlers
 
         public static bool CheckSoulForge(Mobile from, int range, bool message)
         {
-            double bonus;
-            return CheckSoulForge(from, range, message, false, out bonus);
+            return CheckSoulForge(from, range, message, false, out double bonus);
         }
 
         public static bool CheckSoulForge(Mobile from, int range, bool message, bool checkqueen)
         {
-            double bonus;
-            return CheckSoulForge(from, range, message, checkqueen, out bonus);
+            return CheckSoulForge(from, range, message, checkqueen, out double bonus);
         }
 
         public static bool CheckSoulForge(Mobile from, int range, bool message, bool checkqueen, out double bonus)
@@ -1709,7 +1688,7 @@ namespace Server.SkillHandlers
             {
                 if (from.Region != null && from.Region.IsPartOf("Queen's Palace"))
                 {
-                    if (!Server.Engines.Points.PointsSystem.QueensLoyalty.IsNoble(from))
+                    if (!Engines.Points.PointsSystem.QueensLoyalty.IsNoble(from))
                     {
                         if (message)
                         {
@@ -1732,30 +1711,23 @@ namespace Server.SkillHandlers
             return true;
         }
 
-        public static Type[] IngredTypes => m_IngredTypes;
-        private static Type[] m_IngredTypes = new Type[]
+        public static Type[] IngredTypes { get; } = new Type[]
         {
             typeof(MagicalResidue),     typeof(EnchantedEssence),       typeof(RelicFragment),
-
-            typeof(SeedOfRenewal),        typeof(ChagaMushroom),          typeof(CrystalShards),
+            typeof(SeedOfRenewal),      typeof(ChagaMushroom),          typeof(CrystalShards),
             typeof(BottleIchor),        typeof(ReflectiveWolfEye),      typeof(FaeryDust),
             typeof(BouraPelt),          typeof(SilverSnakeSkin),        typeof(ArcanicRuneStone),
             typeof(SlithTongue),        typeof(VoidOrb),                typeof(RaptorTeeth),
             typeof(SpiderCarapace),     typeof(DaemonClaw),             typeof(VialOfVitriol),
             typeof(GoblinBlood),        typeof(LavaSerpentCrust),       typeof(UndyingFlesh),
             typeof(CrushedGlass),       typeof(CrystallineBlackrock),   typeof(PowderedIron),
-            typeof(ElvenFletching),     typeof(DelicateScales),
-
-            typeof(EssenceSingularity), typeof(EssenceBalance),       typeof(EssencePassion),
-            typeof(EssenceDirection),   typeof(EssencePrecision),       typeof(EssenceControl),
-            typeof(EssenceDiligence),   typeof(EssenceAchievement),     typeof(EssenceFeeling),
-            typeof(EssenceOrder),
-
-            typeof(ParasiticPlant),   typeof(LuminescentFungi),
-            typeof(FireRuby),           typeof(WhitePearl),             typeof(BlueDiamond),
-            typeof(Turquoise)
+            typeof(ElvenFletching),     typeof(DelicateScales),         typeof(EssenceSingularity),
+            typeof(EssenceBalance),     typeof(EssencePassion),         typeof(EssenceDirection),
+            typeof(EssencePrecision),   typeof(EssenceControl),         typeof(EssenceDiligence),
+            typeof(EssenceAchievement), typeof(EssenceFeeling),         typeof(EssenceOrder),
+            typeof(ParasiticPlant),     typeof(LuminescentFungi),       typeof(FireRuby),
+            typeof(WhitePearl),         typeof(BlueDiamond),            typeof(Turquoise)
         };
-
 
         public static bool IsInNonImbueList(Type itemType)
         {
@@ -1777,10 +1749,8 @@ namespace Server.SkillHandlers
         {
             object attr = ItemPropertyInfo.GetAttribute(id);
 
-            if (item is BaseWeapon)
+            if (item is BaseWeapon w)
             {
-                BaseWeapon w = (BaseWeapon)item;
-
                 if (id == 16 && w.Attributes.SpellChanneling > 0)
                     return w.Attributes[AosAttribute.CastSpeed] + 1;
 
@@ -1805,10 +1775,8 @@ namespace Server.SkillHandlers
                 else if (id == 62)
                     return w.SearingWeapon ? 1 : 0;
 
-                else if (attr is AosElementAttribute)
+                else if (attr is AosElementAttribute ele)
                 {
-                    AosElementAttribute ele = (AosElementAttribute)attr;
-
                     switch (ele)
                     {
                         case AosElementAttribute.Physical: return w.WeaponAttributes.ResistPhysicalBonus;
@@ -1819,10 +1787,8 @@ namespace Server.SkillHandlers
                     }
                 }
             }
-            else if (item is BaseArmor)
+            else if (item is BaseArmor a)
             {
-                BaseArmor a = (BaseArmor)item;
-
                 if (a is BaseShield && id == 16 && a.Attributes.SpellChanneling > 0)
                     return a.Attributes[AosAttribute.CastSpeed] + 1;
 
@@ -1835,11 +1801,9 @@ namespace Server.SkillHandlers
                 else if (attr is SAAbsorptionAttribute)
                     return a.AbsorptionAttributes[(SAAbsorptionAttribute)attr];
 
-                else if (attr is AosElementAttribute)
+                else if (attr is AosElementAttribute ele)
                 {
-                    AosElementAttribute ele = (AosElementAttribute)attr;
-                    var value = 0;
-
+                    int value = 0;
                     switch (ele)
                     {
                         case AosElementAttribute.Physical: value = a.PhysicalBonus; break;
@@ -1849,16 +1813,11 @@ namespace Server.SkillHandlers
                         case AosElementAttribute.Energy: value = a.EnergyBonus; break;
                     }
 
-                    if (value > 0)
-                    {
-                        return value;
-                    }
+                    if (value > 0) return value;
                 }
             }
-            else if (item is BaseClothing)
+            else if (item is BaseClothing c)
             {
-                BaseClothing c = (BaseClothing)item;
-
                 if (attr is AosAttribute)
                     return c.Attributes[(AosAttribute)attr];
 

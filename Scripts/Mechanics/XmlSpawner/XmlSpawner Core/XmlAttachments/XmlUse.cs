@@ -277,7 +277,7 @@ namespace Server.Engines.XmlSpawner2
         {
             if (status_str != null && mob != null && !mob.Deleted && mob is PlayerMobile && mob.AccessLevel > AccessLevel.Player)
             {
-                mob.SendMessage(33, String.Format("{0}:{1}", Name, status_str));
+                mob.SendMessage(33, string.Format("{0}:{1}", Name, status_str));
             }
         }
 

@@ -74,11 +74,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("Quest '{2}' Completed {0} expires in {1} mins", Date, Expiration.TotalMinutes, Name);
+                return string.Format("Quest '{2}' Completed {0} expires in {1} mins", Date, Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("Quest '{1}' Completed {0}", Date, Name);
+                return string.Format("Quest '{1}' Completed {0}", Date, Name);
             }
         }
     }

@@ -823,7 +823,7 @@ namespace Server.Engines.XmlSpawner2
                                 }
                                 else
                                 {
-                                    ReportError(from, String.Format("Bad regular expression: {0} ", status_str));
+                                    ReportError(from, string.Format("Bad regular expression: {0} ", status_str));
                                 }
                             }
                         }
@@ -977,7 +977,7 @@ namespace Server.Engines.XmlSpawner2
         {
             if (status_str != null && mob != null && !mob.Deleted && mob is PlayerMobile && mob.AccessLevel > AccessLevel.Player)
             {
-                mob.SendMessage(33, String.Format("{0}:{1}", AttachedTo.GetType().Name, status_str));
+                mob.SendMessage(33, string.Format("{0}:{1}", AttachedTo.GetType().Name, status_str));
             }
         }
 
@@ -1152,7 +1152,7 @@ namespace Server.Engines.XmlSpawner2
                     // dont know why emote doesnt work, but we'll just do it manually
                     if (CurrentEntry.SpeechStyle == MessageType.Emote)
                     {
-                        text = String.Format("*{0}*", text);
+                        text = string.Format("*{0}*", text);
                     }
 
                     // items cannot produce actual speech
@@ -1334,19 +1334,19 @@ namespace Server.Engines.XmlSpawner2
             if (System.IO.Directory.Exists(DefsDir) == true)
             {
                 // look for it in the defaults directory
-                dirname = String.Format("{0}/{1}.npc", DefsDir, filename);
+                dirname = string.Format("{0}/{1}.npc", DefsDir, filename);
 
                 // Check if the file exists
                 if (System.IO.File.Exists(dirname) == false)
                 {
                     // didnt find it so just look in the main install dir
-                    dirname = String.Format("{0}.npc", filename);
+                    dirname = string.Format("{0}.npc", filename);
                 }
             }
             else
             {
                 // look in the main installation dir
-                dirname = String.Format("{0}.npc", filename);
+                dirname = string.Format("{0}.npc", filename);
             }
 
             // Check if the file exists
@@ -1603,12 +1603,12 @@ namespace Server.Engines.XmlSpawner2
             if (System.IO.Directory.Exists(DefsDir) == true)
             {
                 // put it in the defaults directory if it exists
-                dirname = String.Format("{0}/{1}.npc", DefsDir, filename);
+                dirname = string.Format("{0}/{1}.npc", DefsDir, filename);
             }
             else
             {
                 // otherwise just put it in the main installation dir
-                dirname = String.Format("{0}.npc", filename);
+                dirname = string.Format("{0}.npc", filename);
             }
 
             // check to see if the file already exists
@@ -1685,8 +1685,8 @@ namespace Server.Engines.XmlSpawner2
                 AddPage(0);
                 AddBackground(10, 200, 200, 130, 5054);
 
-                AddLabel(20, 210, 33, String.Format("{0} exists.", filename));
-                AddLabel(20, 230, 33, String.Format("Overwrite?", filename));
+                AddLabel(20, 210, 33, string.Format("{0} exists.", filename));
+                AddLabel(20, 230, 33, string.Format("Overwrite?", filename));
                 AddRadio(35, 255, 9721, 9724, false, 1); // accept/yes radio
                 AddRadio(135, 255, 9721, 9724, true, 2); // decline/no radio
                 AddHtmlLocalized(72, 255, 200, 30, 1049016, 0x7fff, false, false); // Yes

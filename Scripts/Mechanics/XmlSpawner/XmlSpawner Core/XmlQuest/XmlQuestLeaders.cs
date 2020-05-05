@@ -665,18 +665,18 @@ namespace Server.Engines.XmlSpawner2
                         catch { }
 
                         xloc = 23;
-                        AddLabel(xloc, y, 0, r.Quester.Name ?? String.Empty);
+                        AddLabel(xloc, y, 0, r.Quester.Name ?? string.Empty);
                         xloc += 177;
-                        AddLabel(xloc, y, 0, guildname ?? String.Empty);
+                        AddLabel(xloc, y, 0, guildname ?? string.Empty);
 #if (FACTIONS)
                         xloc += 35;
-                        AddLabelCropped(xloc, y, 60, 21, 0, factionname ?? String.Empty);
+                        AddLabelCropped(xloc, y, 60, 21, 0, factionname ?? string.Empty);
                         xloc += 15;
 #endif
                         xloc += 50;
                         AddLabel(xloc, y, 0, a.Points.ToString());
                         xloc += 50;
-                        AddLabel(xloc, y, 0, quests ?? String.Empty);
+                        AddLabel(xloc, y, 0, quests ?? string.Empty);
                         xloc += 50;
                         //AddLabel( xloc, y, 0, "" );
                         xloc += 70;
@@ -685,11 +685,11 @@ namespace Server.Engines.XmlSpawner2
                         string label = null;
 
                         if (days > 0)
-                            label += String.Format("{0} days ", days);
+                            label += string.Format("{0} days ", days);
                         if (hours > 0)
-                            label += String.Format("{0} hours ", hours);
+                            label += string.Format("{0} hours ", hours);
                         if (mins > 0)
-                            label += String.Format("{0} mins", mins);
+                            label += string.Format("{0} mins", mins);
 
                         if (label == null)
                         {
@@ -700,7 +700,7 @@ namespace Server.Engines.XmlSpawner2
                         int deltahue = 0;
                         if (a.DeltaRank > 0)
                         {
-                            deltalabel = String.Format("+{0}", a.DeltaRank);
+                            deltalabel = string.Format("+{0}", a.DeltaRank);
                             deltahue = 68;
                         }
                         else if (a.DeltaRank < 0)

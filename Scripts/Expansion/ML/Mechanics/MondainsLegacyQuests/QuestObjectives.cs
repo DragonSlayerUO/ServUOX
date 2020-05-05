@@ -219,7 +219,7 @@ namespace Server.Engines.Quests
                 m_Region = QuestHelper.FindRegion(region);
 
                 if (m_Region == null)
-                    Console.WriteLine(String.Format("Invalid region name ('{0}') in '{1}' objective!", region, GetType()));
+                    Console.WriteLine(string.Format("Invalid region name ('{0}') in '{1}' objective!", region, GetType()));
             }
         }
 
@@ -667,7 +667,7 @@ namespace Server.Engines.Quests
             Label = label;
 
             if (Region == null)
-                Console.WriteLine(String.Format("Invalid region name ('{0}') in '{1}' objective!", region, GetType()));
+                Console.WriteLine(string.Format("Invalid region name ('{0}') in '{1}' objective!", region, GetType()));
         }
 
         public override void OnCompleted()
@@ -719,7 +719,7 @@ namespace Server.Engines.Quests
                 m_Leave = leaveRegion;
 
                 if (m_Region == null)
-                    Console.WriteLine(String.Format("Invalid region name ('{0}') in '{1}' objective!", region, GetType()));
+                    Console.WriteLine(string.Format("Invalid region name ('{0}') in '{1}' objective!", region, GetType()));
             }
         }
 

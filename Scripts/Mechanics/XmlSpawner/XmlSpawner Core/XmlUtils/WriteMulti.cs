@@ -115,7 +115,7 @@ namespace Server.Engines.XmlSpawner2
             if (System.IO.Directory.Exists(XmlSpawner.XmlSpawnDir) && filename != null && !filename.StartsWith("/") && !filename.StartsWith("\\"))
             {
                 // put it in the defaults directory if it exists
-                dirname = String.Format("{0}/{1}", XmlSpawner.XmlSpawnDir, filename);
+                dirname = string.Format("{0}/{1}", XmlSpawner.XmlSpawnDir, filename);
             }
             else
             {

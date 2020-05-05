@@ -47,7 +47,7 @@ namespace Server.Engines.SeasonalEvents
                 {
                     DateTime end = new DateTime(DateTime.Now.Year, entry.MonthStart, entry.DayStart, 0, 0, 0) + TimeSpan.FromDays(entry.Duration);
 
-                    AddLabel(275, y, hue, String.Format("{0}/{1} - {2}/{3}", entry.MonthStart.ToString(), entry.DayStart.ToString(), end.Month.ToString(), end.Day.ToString()));
+                    AddLabel(275, y, hue, string.Format("{0}/{1} - {2}/{3}", entry.MonthStart.ToString(), entry.DayStart.ToString(), end.Month.ToString(), end.Day.ToString()));
                 }
 
                 AddButton(450, y, 4029, 4030, i + 10, GumpButtonType.Reply, 0);

@@ -131,11 +131,11 @@ namespace Server.Engines.XmlSpawner2
                 {
                     m_Identified = true;
                 }
-                return String.Format("activated by {0} : skill {1} mod of {2} when equipped", m_Word, m_Skill, m_Value);
+                return string.Format("activated by {0} : skill {1} mod of {2} when equipped", m_Word, m_Skill, m_Value);
             }
             else
             {
-                return String.Format("activated by {0} : skill {1} mod of {2} lasting {3} mins", m_Word, m_Skill, m_Value, m_Duration.TotalMinutes);
+                return string.Format("activated by {0} : skill {1} mod of {2} lasting {3} mins", m_Word, m_Skill, m_Value, m_Duration.TotalMinutes);
             }
         }
 

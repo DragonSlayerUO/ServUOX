@@ -140,7 +140,7 @@ namespace Server.Engines.Craft
                 }
             }
 
-            string args = String.Format("{0}\t{1}", made.ToString(), total.ToString());
+            string args = string.Format("{0}\t{1}", made.ToString(), total.ToString());
 
             AddHtmlLocalized(270, 468, 150, 18, 1079443, args, LabelColor, false, false); //~1_DONE~/~2_TOTAL~ COMPLETED
             #endregion
@@ -158,7 +158,7 @@ namespace Server.Engines.Craft
             }
             else if (notice is string)
             {
-                AddHtml(170, 295, 350, 40, String.Format("<BASEFONT COLOR=#{0:X6}>{1}</BASEFONT>", FontColor, notice), false, false);
+                AddHtml(170, 295, 350, 40, string.Format("<BASEFONT COLOR=#{0:X6}>{1}</BASEFONT>", FontColor, notice), false, false);
             }
 
             // If the system has more than one resource
@@ -216,7 +216,7 @@ namespace Server.Engines.Craft
                 }
                 else
                 {
-                    AddLabel(50, 362, LabelHue, (context.DoNotColor ? "*" : "") + String.Format("{0} ({1} Available)", nameString, resourceCount));
+                    AddLabel(50, 362, LabelHue, (context.DoNotColor ? "*" : "") + string.Format("{0} ({1} Available)", nameString, resourceCount));
                 }
             }
 
@@ -259,7 +259,7 @@ namespace Server.Engines.Craft
                 }
                 else
                 {
-                    AddLabel(50, 385, LabelHue, String.Format("{0} ({1} Available)", nameString, resourceCount));
+                    AddLabel(50, 385, LabelHue, string.Format("{0} ({1} Available)", nameString, resourceCount));
                 }
             }
 

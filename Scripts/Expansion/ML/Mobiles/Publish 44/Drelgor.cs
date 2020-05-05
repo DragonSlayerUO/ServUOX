@@ -1,13 +1,6 @@
-
 using System;
-using Server;
-using System.Collections;
-using System.Collections.Generic;
 using Server.Items;
-using Server.Misc;
-using Server.Regions;
 using Server.Network;
-using Server.Targeting;
 
 namespace Server.Mobiles
 {
@@ -51,28 +44,33 @@ namespace Server.Mobiles
             Karma = -3600;
 
             VirtualArmor = 40;
+        }
 
-            PackItem(new Scimitar());
-            PackItem(new WoodenShield());
+        public override void OnDeath(Container CorpseLoot)
+        {
+            CorpseLoot.DropItem(new Scimitar());
+            CorpseLoot.DropItem(new WoodenShield());
 
             switch (Utility.Random(5))
             {
                 case 0:
-                    PackItem(new BoneArms());
+                    CorpseLoot.DropItem(new BoneArms());
                     break;
                 case 1:
-                    PackItem(new BoneChest());
+                    CorpseLoot.DropItem(new BoneChest());
                     break;
                 case 2:
-                    PackItem(new BoneGloves());
+                    CorpseLoot.DropItem(new BoneGloves());
                     break;
                 case 3:
-                    PackItem(new BoneLegs());
+                    CorpseLoot.DropItem(new BoneLegs());
                     break;
                 case 4:
-                    PackItem(new BoneHelm());
+                    CorpseLoot.DropItem(new BoneHelm());
                     break;
             }
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()
@@ -143,7 +141,8 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
+
             init = reader.ReadBool();
             m_NextMsgTime = reader.ReadDateTime();
         }

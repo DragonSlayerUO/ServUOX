@@ -552,8 +552,8 @@ namespace Server.Engines.VeteranRewards
 
             int start = page * perPage;
 
-            AddHtmlLocalized(40, 428, 200, 20, 1153560, String.Format("{0}\t{1}", m_List.Count, "500"), Blue, false, false); // Maps: ~1_NUM~ of ~2_MAX~
-            AddHtmlLocalized(40, 450, 200, 20, 1153561, String.Format("{0}\t{1}", (page + 1).ToString(), (totalPages).ToString()), Blue, false, false); // Page ~1_CUR~ of ~2_MAX~
+            AddHtmlLocalized(40, 428, 200, 20, 1153560, string.Format("{0}\t{1}", m_List.Count, "500"), Blue, false, false); // Maps: ~1_NUM~ of ~2_MAX~
+            AddHtmlLocalized(40, 450, 200, 20, 1153561, string.Format("{0}\t{1}", (page + 1).ToString(), (totalPages).ToString()), Blue, false, false); // Page ~1_CUR~ of ~2_MAX~
 
             AddHtmlLocalized(380, 427, 72, 20, 1153553, Yellow, false, false); // <DIV ALIGN="CENTER">ADD MAPS</DIV>
             AddButton(340, 428, 4011, 4013, 1, GumpButtonType.Reply, 0);
@@ -577,11 +577,11 @@ namespace Server.Engines.VeteranRewards
                 if (addon.CanUse(from))
                     AddButton(45, y + 3, 1209, 1210, 5 + i, GumpButtonType.Reply, 0);
 
-                AddHtml(80, y, 100, 20, String.Format("<basefont color=yellow>{0}", GetFacet(entry)), false, false);
+                AddHtml(80, y, 100, 20, string.Format("<basefont color=yellow>{0}", GetFacet(entry)), false, false);
 
                 if (TreasureMapInfo.NewSystem && entry is TreasureMapEntry)
                 {
-                    AddHtmlLocalized(175, y, 220, 20, 1060847, String.Format("{0}\t{1}", "#" + GetPackage((TreasureMapEntry)entry), "#" + GetLevel((TreasureMapEntry)entry)), Yellow, false, false);
+                    AddHtmlLocalized(175, y, 220, 20, 1060847, string.Format("{0}\t{1}", "#" + GetPackage((TreasureMapEntry)entry), "#" + GetLevel((TreasureMapEntry)entry)), Yellow, false, false);
                 }
                 else
                 {
@@ -591,7 +591,7 @@ namespace Server.Engines.VeteranRewards
                 if ((entry is TreasureMapEntry && ((TreasureMapEntry)entry).Decoder == null) || (entry is SOSEntry && !((SOSEntry)entry).Opened))
                     AddHtmlLocalized(370, y, 100, 20, 1153569, Yellow, false, false); // Unknown
                 else
-                    AddHtmlLocalized(370, y, 100, 20, 1060847, String.Format("{0}\t{1}", entry.Location.X.ToString(), entry.Location.Y.ToString()), Yellow, false, false); // ~1_val~ ~2_val~
+                    AddHtmlLocalized(370, y, 100, 20, 1060847, string.Format("{0}\t{1}", entry.Location.X.ToString(), entry.Location.Y.ToString()), Yellow, false, false); // ~1_val~ ~2_val~
 
                 AddHtmlLocalized(475, y, 100, 20, GetStatus(entry), Yellow, false, false);
 

@@ -140,7 +140,7 @@ namespace Server.Engines.Craft
                 case Expansion.TOL:
                     return 1155876; // * Requires the "Time of Legends" expansion.
                 default:
-                    return String.Format("* Requires the \"{0}\" expansion", ExpansionInfo.GetInfo(expansion).Name);
+                    return string.Format("* Requires the \"{0}\" expansion", ExpansionInfo.GetInfo(expansion).Name);
             }
         }
 
@@ -155,7 +155,7 @@ namespace Server.Engines.Craft
                 case ThemePack.Gothic:
                     return 1150650; // * Requires the "Gothic" theme pack
                 default:
-                    return String.Format("Requires the \"{0}\" theme pack.", null);
+                    return string.Format("Requires the \"{0}\" theme pack.", null);
             }
         }
 
@@ -198,7 +198,7 @@ namespace Server.Engines.Craft
                 }
 
                 AddHtmlLocalized(170, 132 + (i * 20), 200, 18, AosSkillBonuses.GetLabel(skill.SkillToMake), LabelColor, false, false);
-                AddLabel(430, 132 + (i * 20), LabelHue, String.Format("{0:F1}", minSkill));
+                AddLabel(430, 132 + (i * 20), LabelHue, string.Format("{0:F1}", minSkill));
             }
 
             CraftSubResCol res = (m_CraftItem.UseSubRes2 ? m_CraftSystem.CraftSubRes2 : m_CraftSystem.CraftSubRes);

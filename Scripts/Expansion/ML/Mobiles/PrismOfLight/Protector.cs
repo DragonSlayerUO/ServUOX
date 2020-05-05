@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -43,16 +42,19 @@ namespace Server.Mobiles
             Fame = 10000;
             Karma = -10000;
 
-            Item boots = new ThighBoots();
-            boots.Movable = false;
-            boots.Hue = Utility.Random(2);
-
-            Item shroud = new Item(0x204E);
-            shroud.Layer = Layer.OuterTorso;
-            shroud.Movable = false;
-            shroud.Hue = Utility.Random(2);
-
+            Item boots = new ThighBoots
+            {
+                Movable = false,
+                Hue = Utility.Random(2)
+            };
             AddItem(boots);
+
+            Item shroud = new Item(0x204E)
+            {
+                Layer = Layer.OuterTorso,
+                Movable = false,
+                Hue = Utility.Random(2)
+            }; 
             AddItem(shroud);
         }
 
@@ -64,6 +66,7 @@ namespace Server.Mobiles
         public override bool AlwaysMurderer => true;
         public override bool PropertyTitle => false;
         public override bool ShowFameTitle => false;
+
         public override void GenerateLoot(bool spawning)
         {
             if (spawning)
@@ -89,15 +92,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

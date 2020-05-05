@@ -87,7 +87,7 @@ namespace Server.Spells.Ninjitsu
 
             m_Table[defender] = info;
 
-            BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.DeathStrike, 1075645, TimeSpan.FromSeconds(5.0), defender, String.Format("{0}", damageBonus)));
+            BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.DeathStrike, 1075645, TimeSpan.FromSeconds(5.0), defender, string.Format("{0}", damageBonus)));
 
             CheckGain(attacker);
         }

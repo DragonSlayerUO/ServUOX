@@ -335,7 +335,7 @@ namespace Server.Gumps
 
                 bool created = CreateWorldData.CreateTable.ContainsKey(entry.CheckID) && CreateWorldData.CreateTable[entry.CheckID];
 
-                AddLabel(20, y + 1, created ? 200 : 338, String.Format("{0} {1}", entry.Name, created ? "[created]" : "[not created]"));
+                AddLabel(20, y + 1, created ? 200 : 338, string.Format("{0} {1}", entry.Name, created ? "[created]" : "[not created]"));
                 AddCheck(210, y - 2, 210, 211, m_Type == CreateWorld.GumpType.Create ? !created : created, entry.CheckID);
 
                 y += 25;

@@ -61,7 +61,7 @@ namespace Server.Items
                     else
                     {
                         // fill up the remaining lines
-                        lines[i] = String.Empty;
+                        lines[i] = string.Empty;
                     }
                 }
 
@@ -76,7 +76,7 @@ namespace Server.Items
                 if (Pages[j].Lines.Length > 0)
                     for (int i = 0; i < Pages[j].Lines.Length; i++)
                     {
-                        Pages[j].Lines[i] = String.Empty;
+                        Pages[j].Lines[i] = string.Empty;
                     }
             }
         }
@@ -179,7 +179,7 @@ namespace Server.Items
         public static void ContentChange(NetState state, PacketReader pvSrc)
         {
             // need to deal with actual books
-            string entryText = String.Empty;
+            string entryText = string.Empty;
             Mobile from = state.Mobile;
 
             int serial = pvSrc.ReadInt32();

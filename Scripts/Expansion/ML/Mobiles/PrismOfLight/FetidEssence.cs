@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -39,13 +38,8 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 81.0, 84.6);
             SetSkill(SkillName.Wrestling, 81.3, 83.9);
 
-            Fame = 3700;  // Guessed
-            Karma = -3700;  // Guessed
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
+            Fame = 3700;
+            Karma = -3700;
 
             SetAreaEffect(AreaEffect.EssenceOfDisease);
         }
@@ -57,35 +51,27 @@ namespace Server.Mobiles
 
         public override Poison HitPoison => Poison.Deadly;
         public override Poison PoisonImmunity => Poison.Deadly;
-        public override void GenerateLoot() // Need to verify
+
+        public override void OnDeath(Container CorpseLoot)
+        {
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
+
+            base.OnDeath(CorpseLoot);
+        }
+
+        public override void GenerateLoot() 
         {
             AddLoot(LootPack.FilthyRich);
         }
 
-        public override int GetAngerSound()
-        {
-            return 0x56d;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x56b;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x56c;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x56c;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x56e;
-        }
+        public override int GetAngerSound() { return 0x56D; }
+        public override int GetIdleSound() { return 0x56B; }
+        public override int GetAttackSound() { return 0x56C; }
+        public override int GetHurtSound() { return 0x56C; }
+        public override int GetDeathSound() { return 0x56E; }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -96,7 +82,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

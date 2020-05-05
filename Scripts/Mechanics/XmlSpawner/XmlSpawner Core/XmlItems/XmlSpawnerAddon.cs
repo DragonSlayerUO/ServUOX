@@ -168,7 +168,7 @@ namespace Server.Engines.XmlSpawner2
 
                             if (itemid < 0 || badformat)
                             {
-                                status_str = String.Format("Error line {0}", linenumber);
+                                status_str = string.Format("Error line {0}", linenumber);
                                 break;
                             }
 

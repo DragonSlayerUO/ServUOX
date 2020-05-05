@@ -96,7 +96,7 @@ namespace Server.Engines.CityLoyalty
                 minister.SayTo(
                     from,
                     1158790,
-                    String.Format("{0}\t{1}",
+                    string.Format("{0}\t{1}",
                     WorldLocationInfo.GetLocationString(p, map),
                     Sextant.GetCoords(p, map)), 1150);
                 // Take notice! The vile Krampus has been spotted near ~2_where~ at ~1_coords~!  New Trade Orders are suspended until Krampus has been defeated!

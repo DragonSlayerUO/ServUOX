@@ -1564,12 +1564,12 @@ namespace Server.Mobiles
                         else if (m_Mobile.CanFriend(to))
                         {
                             // ~1_NAME~ will now accept movement commands from ~2_NAME~.
-                            from.SendLocalizedMessage(1049676, String.Format("{0}\t{1}", m_Mobile.Name, to.Name));
+                            from.SendLocalizedMessage(1049676, string.Format("{0}\t{1}", m_Mobile.Name, to.Name));
 
                             /* ~1_NAME~ has granted you the ability to give orders to their pet ~2_PET_NAME~.
                             * This creature will now consider you as a friend.
                             */
-                            to.SendLocalizedMessage(1043246, String.Format("{0}\t{1}", from.Name, m_Mobile.Name));
+                            to.SendLocalizedMessage(1043246, string.Format("{0}\t{1}", from.Name, m_Mobile.Name));
 
                             m_Mobile.AddPetFriend(to);
 
@@ -1603,12 +1603,12 @@ namespace Server.Mobiles
             else
             {
                 // ~1_NAME~ will no longer accept movement commands from ~2_NAME~.
-                from.SendLocalizedMessage(1070951, String.Format("{0}\t{1}", m_Mobile.Name, to.Name));
+                from.SendLocalizedMessage(1070951, string.Format("{0}\t{1}", m_Mobile.Name, to.Name));
 
                 /* ~1_NAME~ has no longer granted you the ability to give orders to their pet ~2_PET_NAME~.
                 * This creature will no longer consider you as a friend.
                 */
-                to.SendLocalizedMessage(1070952, String.Format("{0}\t{1}", from.Name, m_Mobile.Name));
+                to.SendLocalizedMessage(1070952, string.Format("{0}\t{1}", from.Name, m_Mobile.Name));
 
                 m_Mobile.RemovePetFriend(to);
             }

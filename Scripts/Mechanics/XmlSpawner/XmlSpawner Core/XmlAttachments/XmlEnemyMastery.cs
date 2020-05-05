@@ -81,7 +81,7 @@ namespace Server.Engines.XmlSpawner2
             {
                 Mobile m = AttachedTo as Mobile;
                 Effects.PlaySound(m, m.Map, 516);
-                m.SendMessage(String.Format("You gain the power of Enemy Mastery over {0}", Enemy));
+                m.SendMessage(string.Format("You gain the power of Enemy Mastery over {0}", Enemy));
             }
         }
 
@@ -115,7 +115,7 @@ namespace Server.Engines.XmlSpawner2
                 if (!m.Deleted)
                 {
                     Effects.PlaySound(m, m.Map, 958);
-                    m.SendMessage(String.Format("Your power of Enemy Mastery over {0} fades..", Enemy));
+                    m.SendMessage(string.Format("Your power of Enemy Mastery over {0} fades..", Enemy));
                 }
             }
         }
@@ -148,11 +148,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                msg = String.Format("Enemy Mastery : +{3}% damage vs {0}, {1}%, hitchance expires in {2} mins", m_Enemy, Chance, Expiration.TotalMinutes, PercentIncrease);
+                msg = string.Format("Enemy Mastery : +{3}% damage vs {0}, {1}%, hitchance expires in {2} mins", m_Enemy, Chance, Expiration.TotalMinutes, PercentIncrease);
             }
             else
             {
-                msg = String.Format("Enemy Mastery : +{2}% damage vs {0}, {1}% hitchance", m_Enemy, Chance, PercentIncrease);
+                msg = string.Format("Enemy Mastery : +{2}% damage vs {0}, {1}% hitchance", m_Enemy, Chance, PercentIncrease);
             }
 
             return msg;

@@ -601,7 +601,7 @@ namespace Server.Mobiles
                         35 + (i * 20),
                         275,
                         18,
-                        String.Format("<BASEFONT COLOR=#C6C6EF>{0}</BASEFONT>", pet.Name),
+                        string.Format("<BASEFONT COLOR=#C6C6EF>{0}</BASEFONT>", pet.Name),
                         false,
                         false);
                 }

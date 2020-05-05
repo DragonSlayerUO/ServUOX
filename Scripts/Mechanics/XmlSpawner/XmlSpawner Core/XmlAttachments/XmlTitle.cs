@@ -17,7 +17,7 @@ namespace Server.Engines.XmlSpawner2
         public XmlTitle(string name)
         {
             Name = name;
-            Title = String.Empty;
+            Title = string.Empty;
         }
 
         [Attachable]
@@ -139,11 +139,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{2}: Title {0} expires in {1} mins", Title, Expiration.TotalMinutes, Name);
+                return string.Format("{2}: Title {0} expires in {1} mins", Title, Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("{1}: Title {0}", Title, Name);
+                return string.Format("{1}: Title {0}", Title, Name);
             }
         }
     }

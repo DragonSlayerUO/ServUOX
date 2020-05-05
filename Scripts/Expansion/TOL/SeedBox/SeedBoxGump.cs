@@ -29,7 +29,7 @@ namespace Server.Engines.Plants
             int start = (Page - 1) * 20;
             int index = 0;
 
-            AddHtmlLocalized(100, 345, 300, 20, 1151850, String.Format("{0}\t{1}", Page.ToString(), Pages.ToString()), 0xFFFF, false, false);
+            AddHtmlLocalized(100, 345, 300, 20, 1151850, string.Format("{0}\t{1}", Page.ToString(), Pages.ToString()), 0xFFFF, false, false);
 
             if (Page > 1)
             {

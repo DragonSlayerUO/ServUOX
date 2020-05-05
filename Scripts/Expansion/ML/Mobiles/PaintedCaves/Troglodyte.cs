@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -41,15 +40,7 @@ namespace Server.Mobiles
             Fame = 5000;
             Karma = -5000;
 
-            VirtualArmor = 28; // Don't know what it should be
-
-            PackItem(new Bandage(5));  // How many?
-            PackItem(new Ribs());
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
+            VirtualArmor = 28;
         }
 
         public Troglodyte(Serial serial)
@@ -59,17 +50,25 @@ namespace Server.Mobiles
 
         public override int TreasureMapLevel => 2;
 
+        public override void OnDeath(Container CorpseLoot)
+        {
+            if (Utility.RandomDouble() < 0.1)
+                CorpseLoot.DropItem(new PrimitiveFetish());
+
+            CorpseLoot.DropItem(new Bandage(5));
+            CorpseLoot.DropItem(new Ribs());
+
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
+
+            base.OnDeath(CorpseLoot);
+        }
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich);  // Need to verify
-        }
-
-        public override void OnDeath(Container c)
-        {
-            base.OnDeath(c);
-
-            if (Utility.RandomDouble() < 0.1)
-                c.DropItem(new PrimitiveFetish());
         }
 
         public override void Serialize(GenericWriter writer)
@@ -81,7 +80,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

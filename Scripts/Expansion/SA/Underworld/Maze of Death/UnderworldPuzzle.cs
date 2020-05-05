@@ -513,7 +513,7 @@ namespace Server.Items
             AddButton(125, 87 + (row * 35), 2648, 2648, 6, GumpButtonType.Reply, 0); //Down
 
             AddHtmlLocalized(65, 295, 130, 16, 1150180, false, false); // Command Functions: 
-            AddLabel(200, 295, 0, String.Format("{0}/{1}", m_Item.Attempts, m_Solution.MaxAttempts));
+            AddLabel(200, 295, 0, string.Format("{0}/{1}", m_Item.Attempts, m_Solution.MaxAttempts));
 
             if (from.Skills[SkillName.Lockpicking].Base >= 100.0)
             {

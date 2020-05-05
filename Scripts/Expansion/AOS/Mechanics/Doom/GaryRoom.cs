@@ -509,7 +509,7 @@ namespace Server.Engines.Doom
 
         public void Roll(int roll)
         {
-            PublicOverheadMessage(MessageType.Regular, 0x3B2, false, String.Format("- {0} -", (roll + 1).ToString()));
+            PublicOverheadMessage(MessageType.Regular, 0x3B2, false, string.Format("- {0} -", (roll + 1).ToString()));
         }
 
         public Sapphired20(Serial serial)

@@ -185,7 +185,7 @@ namespace Server.Items
                 }
                 else
                 {
-                    PublicOverheadMessage(MessageType.Regular, 0x3B2, 1042683, String.Format("{0}\t{1}", se.Total, se.Count));
+                    PublicOverheadMessage(MessageType.Regular, 0x3B2, 1042683, string.Format("{0}\t{1}", se.Total, se.Count));
                 }
 
                 return;

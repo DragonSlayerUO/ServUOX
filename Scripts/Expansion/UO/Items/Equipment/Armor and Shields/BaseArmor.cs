@@ -1547,7 +1547,7 @@ namespace Server.Items
             SaveFlag flags = SaveFlag.None;
 
             SetSaveFlag(ref flags, SaveFlag.xWeaponAttributes, !m_AosWeaponAttributes.IsEmpty);
-            SetSaveFlag(ref flags, SaveFlag.EngravedText, !String.IsNullOrEmpty(_EngravedText));
+            SetSaveFlag(ref flags, SaveFlag.EngravedText, !string.IsNullOrEmpty(_EngravedText));
             SetSaveFlag(ref flags, SaveFlag.TalismanProtection, !m_TalismanProtection.IsEmpty);
             SetSaveFlag(ref flags, SaveFlag.NegativeAttributes, !m_NegativeAttributes.IsEmpty);
             SetSaveFlag(ref flags, SaveFlag.Attributes, !m_AosAttributes.IsEmpty);

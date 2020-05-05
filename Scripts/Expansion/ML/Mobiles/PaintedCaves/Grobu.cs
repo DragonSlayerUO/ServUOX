@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -9,7 +8,6 @@ namespace Server.Mobiles
         [Constructable]
         public Grobu()
         {
-
             Name = "Grobu";
             Hue = 0x455;
 
@@ -42,11 +40,6 @@ namespace Server.Mobiles
             Karma = 1000;
 
             Tamable = false;
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
         }
 
         public Grobu(Serial serial)
@@ -54,11 +47,17 @@ namespace Server.Mobiles
         {
         }
         public override bool CanBeParagon => false;
-        public override void OnDeath(Container c)
-        {
-            base.OnDeath(c);
 
-            c.DropItem(new GrobusFur());
+        public override void OnDeath(Container CorpseLoot)
+        {
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
+
+            CorpseLoot.DropItem(new GrobusFur());
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()
@@ -69,15 +68,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -565,7 +565,7 @@ namespace Server.Engines.Quests
                         Quest.Owner.SendSound(Quest.UpdateSound);
 
                         if (CurProgress <= MaxProgress)
-                            Quest.Owner.SendLocalizedMessage(1156795, String.Format("{0}\t{1}\t{2}", CurProgress.ToString(), MaxProgress.ToString(), "Chuckles' Luck")); // [Quest Event: Getting Even] You have won ~1_count~ of ~2_req~ games of ~3_game~!
+                            Quest.Owner.SendLocalizedMessage(1156795, string.Format("{0}\t{1}\t{2}", CurProgress.ToString(), MaxProgress.ToString(), "Chuckles' Luck")); // [Quest Event: Getting Even] You have won ~1_count~ of ~2_req~ games of ~3_game~!
 
                     }
                     else if (t == typeof(HiMiddleLow))
@@ -574,7 +574,7 @@ namespace Server.Engines.Quests
                         Quest.Owner.SendSound(Quest.UpdateSound);
 
                         if (CurProgress <= MaxProgress)
-                            Quest.Owner.SendLocalizedMessage(1156795, String.Format("{0}\t{1}\t{2}", CurProgress.ToString(), MaxProgress.ToString(), "Hi-Middle-Low")); // [Quest Event: Getting Even] You have won ~1_count~ of ~2_req~ games of ~3_game~!
+                            Quest.Owner.SendLocalizedMessage(1156795, string.Format("{0}\t{1}\t{2}", CurProgress.ToString(), MaxProgress.ToString(), "Hi-Middle-Low")); // [Quest Event: Getting Even] You have won ~1_count~ of ~2_req~ games of ~3_game~!
 
                     }
                     else if (t == typeof(DiceRider))
@@ -583,7 +583,7 @@ namespace Server.Engines.Quests
                         Quest.Owner.SendSound(Quest.UpdateSound);
 
                         if (CurProgress <= MaxProgress)
-                            Quest.Owner.SendLocalizedMessage(1156795, String.Format("{0}\t{1}\t{2}", CurProgress.ToString(), MaxProgress.ToString(), "Dice Rider")); // [Quest Event: Getting Even] You have won ~1_count~ of ~2_req~ games of ~3_game~!
+                            Quest.Owner.SendLocalizedMessage(1156795, string.Format("{0}\t{1}\t{2}", CurProgress.ToString(), MaxProgress.ToString(), "Dice Rider")); // [Quest Event: Getting Even] You have won ~1_count~ of ~2_req~ games of ~3_game~!
 
                     }
 

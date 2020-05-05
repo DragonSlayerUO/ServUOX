@@ -1416,16 +1416,16 @@ namespace Server.Items
 
                     if (days > 0)
                     {
-                        return String.Format("Expires in {0} days {1} hrs", days, hours);
+                        return string.Format("Expires in {0} days {1} hrs", days, hours);
                     }
                     else
                         if (hours > 0)
                     {
-                        return String.Format("Expires in {0} hrs {1} mins", hours, minutes);
+                        return string.Format("Expires in {0} hrs {1} mins", hours, minutes);
                     }
                     else
                     {
-                        return String.Format("Expires in {0} mins {1} secs", minutes, seconds);
+                        return string.Format("Expires in {0} mins {1} secs", minutes, seconds);
                     }
                 }
             }
@@ -1535,7 +1535,7 @@ namespace Server.Items
             //LootType = LootType.Regular;
             if (Owner != null)
             {
-                Owner.SendMessage(String.Format("Quest invalidated - '{0}' removed", Name));
+                Owner.SendMessage(string.Format("Quest invalidated - '{0}' removed", Name));
             }
             Delete();
         }
@@ -1590,7 +1590,7 @@ namespace Server.Items
                     BaseXmlSpawner.ExecuteActions(Owner, Owner, RewardAction);
                 }
 
-                Owner.SendMessage(String.Format("{0} completed. You receive the quest reward!", Name));
+                Owner.SendMessage(string.Format("{0} completed. You receive the quest reward!", Name));
                 Delete();
             }
         }
@@ -1623,7 +1623,7 @@ namespace Server.Items
 
                 if (fs == null)
                 {
-                    Status = String.Format("Unable to open {0} for loading", filename);
+                    Status = string.Format("Unable to open {0} for loading", filename);
                     return;
                 }
 

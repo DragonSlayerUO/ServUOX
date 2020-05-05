@@ -517,7 +517,7 @@ namespace Server.Mobiles
 
             if (sys != null)
             {
-                return String.Format("Citizenship: {0}", sys.City.ToString());
+                return string.Format("Citizenship: {0}", sys.City.ToString());
             }
 
             return base.ToString();

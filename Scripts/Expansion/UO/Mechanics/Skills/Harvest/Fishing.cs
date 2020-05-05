@@ -689,14 +689,14 @@ namespace Server.Engines.Harvest
                     }
                     else
                     {
-                        from.SendLocalizedMessage(1043297, String.Format("#{0}", item.LabelNumber));
+                        from.SendLocalizedMessage(1043297, string.Format("#{0}", item.LabelNumber));
                     }
 
                     return;
                 }
                 else if (item.LabelNumber > 0)
                 {
-                    from.SendLocalizedMessage(1043297, String.Format("#{0}", item.LabelNumber));
+                    from.SendLocalizedMessage(1043297, string.Format("#{0}", item.LabelNumber));
                     return;
                 }
                 else

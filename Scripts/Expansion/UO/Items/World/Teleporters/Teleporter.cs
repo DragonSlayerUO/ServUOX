@@ -300,7 +300,7 @@ namespace Server.Items
             m.SendMessage(
                 "Teleporting in {0:#,0.##} second{1}",
                 m_Delay.TotalSeconds,
-                m_Delay.TotalSeconds != 1 ? "s" : String.Empty);
+                m_Delay.TotalSeconds != 1 ? "s" : string.Empty);
 
             Timer.DelayCall(m_Delay, DelayedTeleportCallback, m);
         }
@@ -785,16 +785,16 @@ namespace Server.Items
             if (ts.TotalHours >= 1)
             {
                 int h = (int)Math.Round(ts.TotalHours);
-                return String.Format("{0} hour{1}", h, (h == 1) ? "" : "s");
+                return string.Format("{0} hour{1}", h, (h == 1) ? "" : "s");
             }
             else if (ts.TotalMinutes >= 1)
             {
                 int m = (int)Math.Round(ts.TotalMinutes);
-                return String.Format("{0} minute{1}", m, (m == 1) ? "" : "s");
+                return string.Format("{0} minute{1}", m, (m == 1) ? "" : "s");
             }
 
             int s = Math.Max((int)Math.Round(ts.TotalSeconds), 0);
-            return String.Format("{0} second{1}", s, (s == 1) ? "" : "s");
+            return string.Format("{0} second{1}", s, (s == 1) ? "" : "s");
         }
 
         public override void StartTeleport(Mobile m)

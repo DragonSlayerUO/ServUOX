@@ -12,7 +12,9 @@ namespace Server.Mobiles
             "dook dook",
             "dook dook dook!"
         };
+
         private bool m_CanTalk;
+
         [Constructable]
         public Ferret()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
@@ -54,6 +56,7 @@ namespace Server.Mobiles
 
         public override int Meat => 1;
         public override FoodType FavoriteFood => FoodType.Fish;
+
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {
             if (m is Ferret && m.InRange(this, 3) && m.Alive)
@@ -86,15 +89,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             m_CanTalk = true;
         }

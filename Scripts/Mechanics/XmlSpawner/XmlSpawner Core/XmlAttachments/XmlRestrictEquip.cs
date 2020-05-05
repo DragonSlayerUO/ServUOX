@@ -18,14 +18,14 @@ namespace Server.Engines.XmlSpawner2
         [Attachable]
         public XmlRestrictEquip()
         {
-            Test = String.Empty;
+            Test = string.Empty;
         }
 
         [Attachable]
         public XmlRestrictEquip(string name)
         {
             Name = name;
-            Test = String.Empty;
+            Test = string.Empty;
         }
 
         [Attachable]
@@ -147,11 +147,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{0}: RestrictEquip '{1}' expires in {2} mins", Name, Test, Expiration.TotalMinutes);
+                return string.Format("{0}: RestrictEquip '{1}' expires in {2} mins", Name, Test, Expiration.TotalMinutes);
             }
             else
             {
-                return String.Format("{0}: RestrictEquip '{1}'", Name, Test);
+                return string.Format("{0}: RestrictEquip '{1}'", Name, Test);
             }
         }
     }

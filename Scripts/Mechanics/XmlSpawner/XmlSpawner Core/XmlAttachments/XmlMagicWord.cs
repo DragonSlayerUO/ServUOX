@@ -116,16 +116,16 @@ namespace Server.Engines.XmlSpawner2
 
             if (Refractory > TimeSpan.Zero)
             {
-                msg = String.Format("{0} lasting {1} secs : {2} secs between uses", Word, Duration.TotalSeconds, Refractory.TotalSeconds);
+                msg = string.Format("{0} lasting {1} secs : {2} secs between uses", Word, Duration.TotalSeconds, Refractory.TotalSeconds);
             }
             else
             {
-                msg = String.Format("{0} lasting {1} secs", Word, Duration.TotalSeconds);
+                msg = string.Format("{0} lasting {1} secs", Word, Duration.TotalSeconds);
             }
 
             if (Charges > 0)
             {
-                return String.Format("{0} : {1} charge(s) remaining", msg, Charges);
+                return string.Format("{0} : {1} charge(s) remaining", msg, Charges);
             }
             else
             {

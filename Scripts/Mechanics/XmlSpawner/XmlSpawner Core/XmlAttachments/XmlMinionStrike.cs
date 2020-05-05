@@ -196,16 +196,16 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                msg = String.Format("Minion : {0} {1}% chance expires in {2} mins", m_Minion, Chance, Expiration.TotalMinutes);
+                msg = string.Format("Minion : {0} {1}% chance expires in {2} mins", m_Minion, Chance, Expiration.TotalMinutes);
             }
             else
             {
-                msg = String.Format("Minion : {0}", m_Minion);
+                msg = string.Format("Minion : {0}", m_Minion);
             }
 
             if (Refractory > TimeSpan.Zero)
             {
-                return String.Format("{0} : {1} secs between uses", msg, Refractory.TotalSeconds);
+                return string.Format("{0} : {1} secs between uses", msg, Refractory.TotalSeconds);
             }
             else
                 return msg;

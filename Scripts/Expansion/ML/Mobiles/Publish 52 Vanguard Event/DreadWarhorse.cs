@@ -1,6 +1,3 @@
-using System;
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("a dread warhorse corpse")]
@@ -64,6 +61,7 @@ namespace Server.Mobiles
         public override HideType HideType => HideType.Barbed;
         public override FoodType FavoriteFood => FoodType.Meat;
         public override bool CanAngerOnTame => true;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich);
@@ -83,14 +81,12 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(1); // version
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
 
             if (version == 0)

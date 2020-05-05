@@ -16,7 +16,7 @@ namespace Server.Gumps
     {
         public static string Color(string text, string color)
         {
-            return String.Format("<BASEFONT COLOR=#{0}>{1}</BASEFONT>", color, text);
+            return string.Format("<BASEFONT COLOR=#{0}>{1}</BASEFONT>", color, text);
         }
 
 
@@ -150,17 +150,17 @@ namespace Server.Gumps
 
                     // report the kill task objective status
                     if (descriptionstr != null)
-                        text = String.Format("{0} ({1} left)", descriptionstr, remaining);
+                        text = string.Format("{0} ({1} left)", descriptionstr, remaining);
                     else
                     {
                         if (name != null)
                         {
                             if (type == null) type = "mob";
 
-                            text = String.Format("Kill {0} {1}(s) named {2} ({3} left)", targetcount, type, name, remaining);
+                            text = string.Format("Kill {0} {1}(s) named {2} ({3} left)", targetcount, type, name, remaining);
                         }
                         else
-                            text = String.Format("Kill {0} {1}(s) ({2} left)", targetcount, type, remaining);
+                            text = string.Format("Kill {0} {1}(s) ({2} left)", targetcount, type, remaining);
                     }
                 }
                 else
@@ -182,7 +182,7 @@ namespace Server.Gumps
                     if (descriptionstr != null)
                         text = descriptionstr;
                     else
-                        text = String.Format("Escort {0}", name);
+                        text = string.Format("Escort {0}", name);
                 }
                 else
                         if (foundcollect)
@@ -201,17 +201,17 @@ namespace Server.Gumps
 
                     // report the collect task objective status
                     if (descriptionstr != null)
-                        text = String.Format("{0} ({1} left)", descriptionstr, remaining);
+                        text = string.Format("{0} ({1} left)", descriptionstr, remaining);
                     else
                     {
                         if (name != null)
                         {
                             if (type == null) type = "mob";
 
-                            text = String.Format("Collect {0} {1}(s) named {2} ({3} left)", targetcount, type, name, remaining);
+                            text = string.Format("Collect {0} {1}(s) named {2} ({3} left)", targetcount, type, name, remaining);
                         }
                         else
-                            text = String.Format("Collect {0} {1}(s) ({2} left)", targetcount, type, remaining);
+                            text = string.Format("Collect {0} {1}(s) ({2} left)", targetcount, type, remaining);
                     }
                 }
                 else
@@ -232,17 +232,17 @@ namespace Server.Gumps
 
                     // report the collect task objective status
                     if (descriptionstr != null)
-                        text = String.Format("{0} ({1} left)", descriptionstr, remaining);
+                        text = string.Format("{0} ({1} left)", descriptionstr, remaining);
                     else
                     {
                         if (name != null)
                         {
                             if (type == null) type = "item";
 
-                            text = String.Format("Give {0} {1}(s) named {2} to {3} ({4} left)", targetcount, type, name, mobname, remaining);
+                            text = string.Format("Give {0} {1}(s) named {2} to {3} ({4} left)", targetcount, type, name, mobname, remaining);
                         }
                         else
-                            text = String.Format("Give {0} {1}(s) to {2} ({3} left)", targetcount, type, mobname, remaining);
+                            text = string.Format("Give {0} {1}(s) to {2} ({3} left)", targetcount, type, mobname, remaining);
                     }
                 }
                 else
@@ -396,21 +396,21 @@ namespace Server.Gumps
 
                     if (questitem.RewardItem.Amount > 1)
                     {
-                        AddLabel(230, 356, 55, String.Format("Reward: {0} ({1})", questitem.RewardItem.GetType().Name,
+                        AddLabel(230, 356, 55, string.Format("Reward: {0} ({1})", questitem.RewardItem.GetType().Name,
                             questitem.RewardItem.Amount));
-                        AddLabel(230, 373, 55, String.Format("Weight: {0}", questitem.RewardItem.Weight * questitem.RewardItem.Amount));
+                        AddLabel(230, 373, 55, string.Format("Weight: {0}", questitem.RewardItem.Weight * questitem.RewardItem.Amount));
                     }
                     else
                         if (questitem.RewardItem is Container)
                     {
-                        AddLabel(230, 356, 55, String.Format("Reward: {0} ({1} items)", questitem.RewardItem.GetType().Name,
+                        AddLabel(230, 356, 55, string.Format("Reward: {0} ({1} items)", questitem.RewardItem.GetType().Name,
                             questitem.RewardItem.TotalItems));
-                        AddLabel(230, 373, 55, String.Format("Weight: {0}", questitem.RewardItem.TotalWeight + questitem.RewardItem.Weight));
+                        AddLabel(230, 373, 55, string.Format("Weight: {0}", questitem.RewardItem.TotalWeight + questitem.RewardItem.Weight));
                     }
                     else
                     {
-                        AddLabel(230, 356, 55, String.Format("Reward: {0}", questitem.RewardItem.GetType().Name));
-                        AddLabel(230, 373, 55, String.Format("Weight: {0}", questitem.RewardItem.Weight));
+                        AddLabel(230, 356, 55, string.Format("Reward: {0}", questitem.RewardItem.GetType().Name));
+                        AddLabel(230, 373, 55, string.Format("Weight: {0}", questitem.RewardItem.Weight));
                     }
                     AddImageTiled(330, 373, 81, 40, 200);
                     AddItem(340, 376, questitem.RewardItem.ItemID);
@@ -418,7 +418,7 @@ namespace Server.Gumps
                 }
                 if (questitem.RewardAttachment != null && !questitem.RewardAttachment.Deleted)
                 {
-                    AddLabel(230, 339, 55, String.Format("Bonus: {0}", questitem.RewardAttachment.GetType().Name));
+                    AddLabel(230, 339, 55, string.Format("Bonus: {0}", questitem.RewardAttachment.GetType().Name));
                 }
 
                 if ((questitem.RewardItem != null && !questitem.RewardItem.Deleted) || (questitem.RewardAttachment != null && !questitem.RewardAttachment.Deleted))
@@ -454,7 +454,7 @@ namespace Server.Gumps
                         List<XmlAttachment> a = XmlAttach.FindAttachments(questitem.Owner, typeof(XmlQuestAttachment), questitem.Name);
                         if (a != null && a.Count > 0)
                         {
-                            AddLabel(100, 392, 33, String.Format("Repeatable in {0}", a[0].Expiration));
+                            AddLabel(100, 392, 33, string.Format("Repeatable in {0}", a[0].Expiration));
                         }
                         else
                         {
@@ -469,14 +469,14 @@ namespace Server.Gumps
                 }
                 if (XmlQuest.QuestPointsEnabled)
                 {
-                    AddHtml(250, 40, 200, 30, XmlSimpleGump.Color(String.Format("Difficulty Level {0}", questitem.Difficulty), "00FF42"), false, false);
+                    AddHtml(250, 40, 200, 30, XmlSimpleGump.Color(string.Format("Difficulty Level {0}", questitem.Difficulty), "00FF42"), false, false);
                 }
                 if (questitem.PartyEnabled)
                 {
                     AddHtml(250, 55, 200, 30, XmlSimpleGump.Color("Party Quest", "00FF42"), false, false);
                     if (questitem.PartyRange >= 0)
                     {
-                        AddHtml(250, 70, 200, 30, XmlSimpleGump.Color(String.Format("Party Range {0}", questitem.PartyRange), "00FF42"), false, false);
+                        AddHtml(250, 70, 200, 30, XmlSimpleGump.Color(string.Format("Party Range {0}", questitem.PartyRange), "00FF42"), false, false);
                     }
                     else
                     {

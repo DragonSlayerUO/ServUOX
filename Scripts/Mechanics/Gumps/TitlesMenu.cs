@@ -378,7 +378,7 @@ namespace Server.Gumps
 
                     if (info.Harrower > 0)
                     {
-                        AddHtml(260, y, 245, 16, Color("#FFFFFF", String.Format(": {0} of Evil", Titles.HarrowerTitles[Math.Min(Titles.HarrowerTitles.Length, info.Harrower) - 1])), false, false);
+                        AddHtml(260, y, 245, 16, Color("#FFFFFF", string.Format(": {0} of Evil", Titles.HarrowerTitles[Math.Min(Titles.HarrowerTitles.Length, info.Harrower) - 1])), false, false);
                         AddCallbackButton(225, y, 4005, 4007, 295, GumpButtonType.Reply, 0, b =>
                         {
                             TitleSelected = 295;
@@ -407,7 +407,7 @@ namespace Server.Gumps
 
                         ChampionSpawnInfo champInfo = ChampionSpawnInfo.GetInfo((ChampionSpawnType)i);
 
-                        AddHtml(260, y + (index * 22), 245, 16, Color("#FFFFFF", String.Format(": {0} of the {1}", champInfo.LevelNames[Math.Min(offset, champInfo.LevelNames.Length) - 1], champInfo.Name)), false, false);
+                        AddHtml(260, y + (index * 22), 245, 16, Color("#FFFFFF", string.Format(": {0} of the {1}", champInfo.LevelNames[Math.Min(offset, champInfo.LevelNames.Length) - 1], champInfo.Name)), false, false);
                         AddCallbackButton(225, y + (index * 22), 4005, 4007, i + 251, GumpButtonType.Reply, 0, b =>
                         {
                             TitleSelected = b.ButtonID - 251;
@@ -570,7 +570,7 @@ namespace Server.Gumps
             {
                 if (!ShowingDescription || TitleSelected == -1)
                 {
-                    AddHtml(260, 70, 160, 16, Color("#FFFFFF", String.Format("[{0}]", g.Abbreviation)), false, false);
+                    AddHtml(260, 70, 160, 16, Color("#FFFFFF", string.Format("[{0}]", g.Abbreviation)), false, false);
                     AddCallbackButton(225, 70, 4005, 4007, 397, GumpButtonType.Reply, 0, b =>
                         {
                             ShowingDescription = true;
@@ -583,7 +583,7 @@ namespace Server.Gumps
                     AddHtmlLocalized(225, 65, 270, 140, 1115040, 0xFFFF, false, false); // This is your guild's abbreviation.
                     AddHtmlLocalized(225, 220, 160, 16, 1115028, 0xFFFF, false, false); // Overhead Name
 
-                    AddHtml(275, 240, 245, 16, Color("#FFFFFF", String.Format("[{0}]", g.Abbreviation)), false, false);
+                    AddHtml(275, 240, 245, 16, Color("#FFFFFF", string.Format("[{0}]", g.Abbreviation)), false, false);
                     AddHtmlLocalized(225, 275, 200, 16, 1115035, 0xFFFF, false, false); // Do you wish to apply this title?
 
                     AddHtmlLocalized(480, 275, 80, 16, 1011046, 0xFFFF, false, false); // APPLY
@@ -784,7 +784,7 @@ namespace Server.Gumps
             {
                 if (!ShowingDescription || TitleSelected == -1)
                 {
-                    AddHtml(260, 70, 245, 16, Color("#FFFFFF", String.Format("{0}, {1}", Utility.FixHtml(User.GuildTitle), Utility.FixHtml(guild.Name))), false, false);
+                    AddHtml(260, 70, 245, 16, Color("#FFFFFF", string.Format("{0}, {1}", Utility.FixHtml(User.GuildTitle), Utility.FixHtml(guild.Name))), false, false);
                     AddCallbackButton(225, 70, 4005, 4007, 500, GumpButtonType.Reply, 0, b =>
                     {
                         TitleSelected = 1;
@@ -796,7 +796,7 @@ namespace Server.Gumps
                 {
                     AddHtmlLocalized(225, 70, 270, 140, 1115039, 0xFFFF, false, false); // This is a custom guild title assigned by your guild leader.
                     AddHtmlLocalized(225, 220, 160, 16, 1115029, 0xFFFF, false, false); // Subtitle
-                    AddHtml(275, 240, 245, 16, Color("#FFFFFF", String.Format("{0}, {1}", Utility.FixHtml(User.GuildTitle), Utility.FixHtml(guild.Name))), false, false);
+                    AddHtml(275, 240, 245, 16, Color("#FFFFFF", string.Format("{0}, {1}", Utility.FixHtml(User.GuildTitle), Utility.FixHtml(guild.Name))), false, false);
 
                     AddHtmlLocalized(225, 275, 200, 16, 1115035, 0xFFFF, false, false); // Do you wish to apply this title?
 
@@ -1019,7 +1019,7 @@ namespace Server.Gumps
                 v = info.Harrower;
 
                 if (v > 0)
-                    str = String.Format(": {0} of Evil", Titles.HarrowerTitles[Math.Min(Titles.HarrowerTitles.Length, info.Harrower) - 1]);
+                    str = string.Format(": {0} of Evil", Titles.HarrowerTitles[Math.Min(Titles.HarrowerTitles.Length, info.Harrower) - 1]);
             }
             else
             {
@@ -1035,7 +1035,7 @@ namespace Server.Gumps
 
                 if (offset > 0)
                 {
-                    str = String.Format(": {0} of the {1}", champInfo.LevelNames[Math.Min(offset, champInfo.LevelNames.Length) - 1], champInfo.Name);
+                    str = string.Format(": {0} of the {1}", champInfo.LevelNames[Math.Min(offset, champInfo.LevelNames.Length) - 1], champInfo.Name);
                 }
             }
 
@@ -1165,7 +1165,7 @@ namespace Server.Gumps
 
         private string Color(string color, string str)
         {
-            return String.Format("<basefont color={0}>{1}", color, str);
+            return string.Format("<basefont color={0}>{1}", color, str);
         }
     }
 }

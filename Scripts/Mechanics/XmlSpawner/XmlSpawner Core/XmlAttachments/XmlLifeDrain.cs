@@ -148,16 +148,16 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                msg = String.Format("Life drain {0} expires in {1} mins", m_Drain, Expiration.TotalMinutes);
+                msg = string.Format("Life drain {0} expires in {1} mins", m_Drain, Expiration.TotalMinutes);
             }
             else
             {
-                msg = String.Format("Life drain {0}", m_Drain);
+                msg = string.Format("Life drain {0}", m_Drain);
             }
 
             if (Refractory > TimeSpan.Zero)
             {
-                return String.Format("{0} : {1} secs between uses", msg, Refractory.TotalSeconds);
+                return string.Format("{0} : {1} secs between uses", msg, Refractory.TotalSeconds);
             }
             else
                 return msg;

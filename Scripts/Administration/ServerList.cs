@@ -212,7 +212,7 @@ namespace Server.Misc
             string data;
             Match match;
 
-            foreach (var service in services.Where(s => !String.IsNullOrWhiteSpace(s)))
+            foreach (var service in services.Where(s => !string.IsNullOrWhiteSpace(s)))
             {
                 try
                 {

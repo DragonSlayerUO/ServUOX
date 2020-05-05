@@ -26,7 +26,7 @@ namespace Server.Engines.XmlSpawner2
         public XmlLocalVariable(string name)
         {
             Name = name;
-            Data = String.Empty;
+            Data = string.Empty;
         }
 
         [Attachable]
@@ -70,11 +70,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{2} = {0} : expires in {1} mins", Data, Expiration.TotalMinutes, Name);
+                return string.Format("{2} = {0} : expires in {1} mins", Data, Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("{1} = {0}", Data, Name);
+                return string.Format("{1} = {0}", Data, Name);
             }
         }
     }

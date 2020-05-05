@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -69,6 +68,7 @@ namespace Server.Mobiles
         public override FoodType FavoriteFood => FoodType.Meat;
         public override bool CanAngerOnTame => true;
         public override bool CanFly => true;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich, 4);
@@ -84,7 +84,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

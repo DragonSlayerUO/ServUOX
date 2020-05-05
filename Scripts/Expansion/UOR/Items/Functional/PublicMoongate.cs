@@ -286,7 +286,7 @@ namespace Server.Items
         public TextDefinition Desc { get; private set; }
 
         public PMEntry(Point3D loc, int number)
-            : this(loc, number, String.Empty)
+            : this(loc, number, string.Empty)
         { }
 
         public PMEntry(Point3D loc, int number, TextDefinition desc)

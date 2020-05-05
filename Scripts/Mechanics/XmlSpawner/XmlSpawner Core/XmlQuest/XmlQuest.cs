@@ -633,7 +633,7 @@ namespace Server.Items
 
                 int collected = current + added;
 
-                newstatestr = String.Format("{0}", collected);
+                newstatestr = string.Format("{0}", collected);
 
                 if (collected >= targetcount)
                 {
@@ -911,7 +911,7 @@ namespace Server.Items
 
                 int collected = current + added;
 
-                newstatestr = String.Format("{0}", collected);
+                newstatestr = string.Format("{0}", collected);
 
                 if (collected >= targetcount)
                 {
@@ -981,7 +981,7 @@ namespace Server.Items
                 int.TryParse(statestr, out current);
 
                 int killed = current + 1;
-                newstatestr = String.Format("{0}", killed);
+                newstatestr = string.Format("{0}", killed);
 
                 if (killed >= targetcount)
                 {
@@ -1144,7 +1144,7 @@ namespace Server.Items
             {
                 // check the mobname, allow for empty names to match any escort
 
-                if (m_escorted != null && !m_escorted.Deleted && (arglist[1] == m_escorted.Name || (arglist[1] == null || arglist[1] == String.Empty)) && checkprop)
+                if (m_escorted != null && !m_escorted.Deleted && (arglist[1] == m_escorted.Name || (arglist[1] == null || arglist[1] == string.Empty)) && checkprop)
                 {
                     // found a match
                     found = true;
@@ -1170,7 +1170,7 @@ namespace Server.Items
 
                 int escorted = current + 1;
 
-                newstatestr = String.Format("{0}", escorted);
+                newstatestr = string.Format("{0}", escorted);
 
                 if (escorted >= targetcount)
                 {
@@ -1381,7 +1381,7 @@ namespace Server.Items
 
                 int visited = current + 1;
 
-                newstatestr = String.Format("{0}", visited);
+                newstatestr = string.Format("{0}", visited);
 
                 if (visited >= targetcount)
                 {

@@ -18,7 +18,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace Server.Items
 {
     public interface ISlayer
@@ -29,6 +28,83 @@ namespace Server.Items
 
     public abstract class BaseWeapon : Item, IWeapon, IFactionItem, IUsesRemaining, ICraftable, ISlayer, IDurability, ISetItem, IVvVItem, IOwnerRestricted, IResource, IArtifact, ICombatEquipment, IEngravable, IQuality
     {
+        public BaseWeapon(int itemID)
+            : base(itemID)
+        {
+            Layer = (Layer)ItemData.Quality;
+
+            m_Quality = ItemQuality.Normal;
+            m_StrReq = -1;
+            m_DexReq = -1;
+            m_IntReq = -1;
+            m_MinDamage = -1;
+            m_MaxDamage = -1;
+            m_HitSound = -1;
+            m_MissSound = -1;
+            m_Speed = -1;
+            m_MaxRange = -1;
+            m_Skill = (SkillName)(-1);
+            m_Type = (WeaponType)(-1);
+            m_Animation = (WeaponAnimation)(-1);
+
+            if (Core.AOS)
+            {
+                m_Hits = m_MaxHits = Utility.RandomMinMax(InitMinHits, InitMaxHits);
+            }
+            else
+            {
+                m_Hits = m_MaxHits = Utility.RandomMinMax(OldInitMinHits, OldInitMaxHits);
+            }
+
+            m_Resource = CraftResource.Iron;
+
+            m_AosAttributes = new AosAttributes(this);
+            m_AosWeaponAttributes = new AosWeaponAttributes(this);
+            m_AosSkillBonuses = new AosSkillBonuses(this);
+            m_AosElementDamages = new AosElementAttributes(this);
+            m_NegativeAttributes = new NegativeAttributes(this);
+            m_ExtendedWeaponAttributes = new ExtendedWeaponAttributes(this);
+
+            #region Stygian Abyss
+            m_SAAbsorptionAttributes = new SAAbsorptionAttributes(this);
+            #endregion
+
+            #region Mondain's Legacy Sets
+            m_SetAttributes = new AosAttributes(this);
+            m_SetSkillBonuses = new AosSkillBonuses(this);
+            #endregion
+
+            m_AosSkillBonuses = new AosSkillBonuses(this);
+
+            if (this is ITool)
+            {
+                m_UsesRemaining = Utility.RandomMinMax(25, 75);
+            }
+            else
+            {
+                m_UsesRemaining = 150;
+            }
+        }
+
+        public BaseWeapon(Serial serial)
+            : base(serial)
+        { }
+
+        /*
+        * The attributes defined below default to -1.
+        * If the value is -1, the corresponding virtual 'Aos/Old' property is used.
+        * If not, the attribute value itself is used. Here's the list:
+        *  - MinDamage
+        *  - MaxDamage
+        *  - Speed
+        *  - HitSound
+        *  - MissSound
+        *  - StrRequirement, DexRequirement, IntRequirement
+        *  - WeaponType
+        *  - WeaponAnimation
+        *  - MaxRange
+        */
+
         #region Damage Helpers
         public static BaseWeapon GetDamageOutput(Mobile wielder, out int min, out int max)
         {
@@ -107,19 +183,6 @@ namespace Server.Items
         }
         #endregion
 
-        private string m_EngravedText;
-
-        [CommandProperty(AccessLevel.GameMaster)]
-        public string EngravedText
-        {
-            get => m_EngravedText;
-            set
-            {
-                m_EngravedText = value;
-                InvalidateProperties();
-            }
-        }
-
         #region Factions
         private FactionItem m_FactionState;
 
@@ -170,46 +233,6 @@ namespace Server.Items
             return 100;
         }
         #endregion
-
-        private bool _VvVItem;
-        private Mobile _Owner;
-        private string _OwnerName;
-
-        [CommandProperty(AccessLevel.GameMaster)]
-        public bool IsVvVItem
-        {
-            get => _VvVItem;
-            set { _VvVItem = value; InvalidateProperties(); }
-        }
-
-        [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile Owner
-        {
-            get => _Owner;
-            set { _Owner = value; if (_Owner != null) { _OwnerName = _Owner.Name; } InvalidateProperties(); }
-        }
-
-        public virtual string OwnerName
-        {
-            get => _OwnerName;
-            set { _OwnerName = value; InvalidateProperties(); }
-        }
-
-        /* Weapon internals work differently now (Mar 13 2003)
-        *
-        * The attributes defined below default to -1.
-        * If the value is -1, the corresponding virtual 'Aos/Old' property is used.
-        * If not, the attribute value itself is used. Here's the list:
-        *  - MinDamage
-        *  - MaxDamage
-        *  - Speed
-        *  - HitSound
-        *  - MissSound
-        *  - StrRequirement, DexRequirement, IntRequirement
-        *  - WeaponType
-        *  - WeaponAnimation
-        *  - MaxRange
-        */
 
         #region Var declarations
         // Instance values. These values are unique to each weapon.
@@ -719,7 +742,6 @@ namespace Server.Items
 
         public Mobile FocusWeilder { get; set; }
         public Mobile EnchantedWeilder { get; set; }
-
         public int LastParryChance { get; set; }
 
         #region Stygian Abyss
@@ -789,7 +811,6 @@ namespace Server.Items
         }
 
         #region Runic Reforging
-
         [CommandProperty(AccessLevel.GameMaster)]
         public ItemPower ItemPower
         {
@@ -813,6 +834,41 @@ namespace Server.Items
         #endregion
         #endregion
 
+        private string m_EngravedText;
+        [CommandProperty(AccessLevel.GameMaster)]
+        public string EngravedText
+        {
+            get => m_EngravedText;
+            set
+            {
+                m_EngravedText = value;
+                InvalidateProperties();
+            }
+        }
+
+        private bool _VvVItem;
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool IsVvVItem
+        {
+            get => _VvVItem;
+            set { _VvVItem = value; InvalidateProperties(); }
+        }
+
+        private Mobile _Owner;
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Mobile Owner
+        {
+            get => _Owner;
+            set { _Owner = value; if (_Owner != null) { _OwnerName = _Owner.Name; } InvalidateProperties(); }
+        }
+
+        private string _OwnerName;
+        public virtual string OwnerName
+        {
+            get => _OwnerName;
+            set { _OwnerName = value; InvalidateProperties(); }
+        }
+                              
         public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
         {
             base.GetContextMenuEntries(from, list);
@@ -831,7 +887,6 @@ namespace Server.Items
         public override void OnAfterDuped(Item newItem)
         {
             base.OnAfterDuped(newItem);
-
 
             if (!(newItem is BaseWeapon weap))
             {
@@ -1028,7 +1083,6 @@ namespace Server.Items
         }
 
         public virtual Race RequiredRace => null;
-        //On OSI, there are no weapons with race requirements, this is for custom stuff
 
         #region SA
         public virtual bool CanBeWornByGargoyles => false;
@@ -2060,7 +2114,6 @@ namespace Server.Items
                 armorItem = defender.ChestArmor;
             }
 
-
             if (armorItem is IWearableDurability armor)
             {
                 damage = armor.OnHit(this, damage);
@@ -2111,7 +2164,6 @@ namespace Server.Items
             {
                 return 0;
             }
-
 
             if (!(attacker is BaseCreature bc) || bc.PackInstinct == PackInstinct.None || (!bc.Controlled && !bc.Summoned))
             {
@@ -2416,10 +2468,6 @@ namespace Server.Items
             }
 
             #region Damage Multipliers
-            /*
-            * The following damage bonuses multiply damage by a factor.
-            * Capped at x3 (300%).
-            */
             int percentageBonus = 0;
 
             if (a != null)
@@ -3082,49 +3130,18 @@ namespace Server.Items
 
         public Direction GetOppositeDir(Direction d)
         {
-            Direction direction = Direction.Down;
-
-            if (d == Direction.West)
+            switch (d)
             {
-                direction = Direction.East;
+                default: return Direction.Mask;
+                case Direction.West: return Direction.East;
+                case Direction.East: return Direction.West;
+                case Direction.North: return Direction.South;
+                case Direction.South: return Direction.North;
+                case Direction.Right: return Direction.Left;
+                case Direction.Left: return Direction.Right;
+                case Direction.Up: return Direction.Down;
+                case Direction.Down: return Direction.Up;
             }
-
-            if (d == Direction.East)
-            {
-                direction = Direction.West;
-            }
-
-            if (d == Direction.North)
-            {
-                direction = Direction.South;
-            }
-
-            if (d == Direction.South)
-            {
-                direction = Direction.North;
-            }
-
-            if (d == Direction.Right)
-            {
-                direction = Direction.Left;
-            }
-
-            if (d == Direction.Left)
-            {
-                direction = Direction.Right;
-            }
-
-            if (d == Direction.Up)
-            {
-                direction = Direction.Down;
-            }
-
-            if (d == Direction.Down)
-            {
-                direction = Direction.Up;
-            }
-
-            return direction;
         }
 
         public virtual double GetAosSpellDamage(Mobile attacker, Mobile defender, int bonus, int dice, int sides)
@@ -3345,14 +3362,14 @@ namespace Server.Items
             TimeSpan duration = TimeSpan.FromSeconds(30);
 
             defender.AddStatMod(
-                new StatMod(StatType.Str, String.Format("[Magic] {0} Curse", StatType.Str), -10, duration));
+                new StatMod(StatType.Str, string.Format("[Magic] {0} Curse", StatType.Str), -10, duration));
             defender.AddStatMod(
-                new StatMod(StatType.Dex, String.Format("[Magic] {0} Curse", StatType.Dex), -10, duration));
+                new StatMod(StatType.Dex, string.Format("[Magic] {0} Curse", StatType.Dex), -10, duration));
             defender.AddStatMod(
-                new StatMod(StatType.Int, String.Format("[Magic] {0} Curse", StatType.Int), -10, duration));
+                new StatMod(StatType.Int, string.Format("[Magic] {0} Curse", StatType.Int), -10, duration));
 
             int percentage = -10; //(int)(SpellHelper.GetOffsetScalar(Caster, m, true) * 100);
-            string args = String.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", percentage, percentage, percentage, 10, 10, 10, 10);
+            string args = string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", percentage, percentage, percentage, 10, 10, 10, 10);
 
             Server.Spells.Fourth.CurseSpell.AddEffect(defender, duration, 10, 10, 10);
             BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.Curse, 1075835, 1075836, duration, defender, args));
@@ -3726,7 +3743,6 @@ namespace Server.Items
 
         public virtual double GetBaseDamage(Mobile attacker)
         {
-
             GetBaseDamageRange(attacker, out int min, out int max);
 
             int damage = Utility.RandomMinMax(min, max);
@@ -4187,8 +4203,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(19); // version
+            writer.Write(19);
 
             // Version 19 - Removes m_SearingWeapon as its handled as a socket now
             // Version 18 - removed VvV Item (handled in VvV System) and BlockRepair (Handled as negative attribute)
@@ -4334,7 +4349,7 @@ namespace Server.Items
             SetSaveFlag(ref flags, SaveFlag.SkillBonuses, !m_AosSkillBonuses.IsEmpty);
             SetSaveFlag(ref flags, SaveFlag.Slayer2, m_Slayer2 != SlayerName.None);
             SetSaveFlag(ref flags, SaveFlag.ElementalDamages, !m_AosElementDamages.IsEmpty);
-            SetSaveFlag(ref flags, SaveFlag.EngravedText, !String.IsNullOrEmpty(m_EngravedText));
+            SetSaveFlag(ref flags, SaveFlag.EngravedText, !string.IsNullOrEmpty(m_EngravedText));
             SetSaveFlag(ref flags, SaveFlag.xAbsorptionAttributes, !m_SAAbsorptionAttributes.IsEmpty);
             SetSaveFlag(ref flags, SaveFlag.xNegativeAttributes, !m_NegativeAttributes.IsEmpty);
             SetSaveFlag(ref flags, SaveFlag.Altered, m_Altered);
@@ -5272,78 +5287,15 @@ namespace Server.Items
             }
         }
         #endregion
-
-        public BaseWeapon(int itemID)
-            : base(itemID)
-        {
-            Layer = (Layer)ItemData.Quality;
-
-            m_Quality = ItemQuality.Normal;
-            m_StrReq = -1;
-            m_DexReq = -1;
-            m_IntReq = -1;
-            m_MinDamage = -1;
-            m_MaxDamage = -1;
-            m_HitSound = -1;
-            m_MissSound = -1;
-            m_Speed = -1;
-            m_MaxRange = -1;
-            m_Skill = (SkillName)(-1);
-            m_Type = (WeaponType)(-1);
-            m_Animation = (WeaponAnimation)(-1);
-
-            if (Core.AOS)
-            {
-                m_Hits = m_MaxHits = Utility.RandomMinMax(InitMinHits, InitMaxHits);
-            }
-            else
-            {
-                m_Hits = m_MaxHits = Utility.RandomMinMax(OldInitMinHits, OldInitMaxHits);
-            }
-
-            m_Resource = CraftResource.Iron;
-
-            m_AosAttributes = new AosAttributes(this);
-            m_AosWeaponAttributes = new AosWeaponAttributes(this);
-            m_AosSkillBonuses = new AosSkillBonuses(this);
-            m_AosElementDamages = new AosElementAttributes(this);
-            m_NegativeAttributes = new NegativeAttributes(this);
-            m_ExtendedWeaponAttributes = new ExtendedWeaponAttributes(this);
-
-            #region Stygian Abyss
-            m_SAAbsorptionAttributes = new SAAbsorptionAttributes(this);
-            #endregion
-
-            #region Mondain's Legacy Sets
-            m_SetAttributes = new AosAttributes(this);
-            m_SetSkillBonuses = new AosSkillBonuses(this);
-            #endregion
-
-            m_AosSkillBonuses = new AosSkillBonuses(this);
-
-            if (this is ITool)
-            {
-                m_UsesRemaining = Utility.RandomMinMax(25, 75);
-            }
-            else
-            {
-                m_UsesRemaining = 150;
-            }
-        }
-
-        public BaseWeapon(Serial serial)
-            : base(serial)
-        { }
-
+                
         private string GetNameString()
         {
             string name = Name;
 
             if (name == null)
             {
-                name = String.Format("#{0}", LabelNumber);
+                name = string.Format("#{0}", LabelNumber);
             }
-
             return name;
         }
 
@@ -5487,11 +5439,11 @@ namespace Server.Items
 
                     if (m_ReforgedSuffix == ReforgedSuffix.None)
                     {
-                        list.Add(1151757, String.Format("#{0}\t{1}", prefix, GetNameString())); // ~1_PREFIX~ ~2_ITEM~
+                        list.Add(1151757, string.Format("#{0}\t{1}", prefix, GetNameString())); // ~1_PREFIX~ ~2_ITEM~
                     }
                     else
                     {
-                        list.Add(1151756, String.Format("#{0}\t{1}\t#{2}", prefix, GetNameString(), RunicReforging.GetSuffixName(m_ReforgedSuffix))); // ~1_PREFIX~ ~2_ITEM~ of ~3_SUFFIX~
+                        list.Add(1151756, string.Format("#{0}\t{1}\t#{2}", prefix, GetNameString(), RunicReforging.GetSuffixName(m_ReforgedSuffix))); // ~1_PREFIX~ ~2_ITEM~ of ~3_SUFFIX~
                     }
                 }
                 else if (m_ReforgedSuffix != ReforgedSuffix.None)
@@ -5506,7 +5458,7 @@ namespace Server.Items
             #region High Seas
             else if (SearingWeapon)
             {
-                list.Add(1151318, String.Format("#{0}", LabelNumber));
+                list.Add(1151318, string.Format("#{0}", LabelNumber));
             }
             #endregion
             else if (Name == null)
@@ -5531,7 +5483,7 @@ namespace Server.Items
             * method and engraving tool, to make it perm cleaned up.
             */
 
-            if (!String.IsNullOrEmpty(m_EngravedText))
+            if (!string.IsNullOrEmpty(m_EngravedText))
             {
                 list.Add(1062613, Utility.FixHtml(m_EngravedText));
             }
@@ -5557,7 +5509,6 @@ namespace Server.Items
                 {
                     return true;
                 }
-
                 return base.DisplayWeight;
             }
         }

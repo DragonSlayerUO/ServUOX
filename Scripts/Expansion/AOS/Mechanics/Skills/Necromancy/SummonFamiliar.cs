@@ -154,7 +154,7 @@ namespace Server.Spells.Necromancy
                 else if (necro < entry.ReqNecromancy || spirit < entry.ReqSpiritSpeak)
                 {
                     // That familiar requires ~1_NECROMANCY~ Necromancy and ~2_SPIRIT~ Spirit Speak.
-                    m_From.SendLocalizedMessage(1061606, String.Format("{0:F1}\t{1:F1}", entry.ReqNecromancy, entry.ReqSpiritSpeak));
+                    m_From.SendLocalizedMessage(1061606, string.Format("{0:F1}\t{1:F1}", entry.ReqNecromancy, entry.ReqSpiritSpeak));
 
                     m_From.CloseGump(typeof(SummonFamiliarGump));
                     m_From.SendGump(new SummonFamiliarGump(m_From, SummonFamiliarSpell.Entries, m_Spell));

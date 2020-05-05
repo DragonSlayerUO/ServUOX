@@ -743,7 +743,7 @@ namespace Server.Mobiles
                             m_SpawnObjects.Add(new XmlSpawner.SpawnObject(str, 1));
                         }
                         else
-                            status_str = String.Format("{0} is not a valid type name.", str);
+                            status_str = string.Format("{0} is not a valid type name.", str);
                     }
                     InvalidateProperties();
                 }
@@ -2374,7 +2374,7 @@ namespace Server.Mobiles
 
                 if (fs == null)
                 {
-                    status_str = String.Format("Unable to open {0} for loading", filename);
+                    status_str = string.Format("Unable to open {0} for loading", filename);
                     return;
                 }
 
@@ -5185,7 +5185,7 @@ namespace Server.Mobiles
                     Guid SpawnId = Guid.NewGuid();
 
                     // and give it a name based on the spawner count and file
-                    string spawnername = String.Format("{0}#{1}", Path.GetFileNameWithoutExtension(filename), spawnercount);
+                    string spawnername = string.Format("{0}#{1}", Path.GetFileNameWithoutExtension(filename), spawnercount);
 
                     // Create the new xml spawner
                     XmlSpawner spawner = new XmlSpawner(SpawnId, x, y, 0, 0, spawnername, totalmaxcount,
@@ -5446,7 +5446,7 @@ namespace Server.Mobiles
                     Guid SpawnId = Guid.NewGuid();
 
                     // and give it a name based on the spawner count and file
-                    string spawnername = String.Format("{0}#{1}", Path.GetFileNameWithoutExtension(filename), spawnercount);
+                    string spawnername = string.Format("{0}#{1}", Path.GetFileNameWithoutExtension(filename), spawnercount);
 
                     // Create the new xml spawner
                     XmlSpawner spawner = new XmlSpawner(SpawnId, x, y, 0, 0, spawnername, maxcount,
@@ -6120,7 +6120,7 @@ namespace Server.Mobiles
                         if (loadnew)
                         {
                             // append the new id to the name
-                            SpawnName = String.Format("{0}-{1}", SpawnName, newloadid);
+                            SpawnName = string.Format("{0}-{1}", SpawnName, newloadid);
                         }
 
                         // Check if there is any spawner name criteria specified on the load
@@ -6742,7 +6742,7 @@ namespace Server.Mobiles
                                 // if this is a new load then assume that it will be referring to another newly loaded object so append the newloadid
                                 if (loadnew)
                                 {
-                                    string tmpsetObjectName = String.Format("{0}-{1}", namestr, newloadid);
+                                    string tmpsetObjectName = string.Format("{0}-{1}", namestr, newloadid);
                                     OldSpawner.m_SetPropertyItem = BaseXmlSpawner.FindItemByName(null, tmpsetObjectName, typestr);
                                 }
                                 // if this fails then try the original
@@ -6789,7 +6789,7 @@ namespace Server.Mobiles
                                 // if this is a new load then assume that it will be referring to another newly loaded object so append the newloadid
                                 if (loadnew)
                                 {
-                                    string tmptriggerObjectName = String.Format("{0}-{1}", namestr, newloadid);
+                                    string tmptriggerObjectName = string.Format("{0}-{1}", namestr, newloadid);
                                     OldSpawner.m_ObjectPropertyItem = BaseXmlSpawner.FindItemByName(null, tmptriggerObjectName, typestr);
                                 }
                                 // if this fails then try the original
@@ -6866,7 +6866,7 @@ namespace Server.Mobiles
             if (System.IO.Directory.Exists(XmlSpawnDir) == true)
             {
                 // get it from the defaults directory if it exists
-                dirname = String.Format("{0}/{1}", XmlSpawnDir, filename);
+                dirname = string.Format("{0}/{1}", XmlSpawnDir, filename);
                 found = System.IO.File.Exists(dirname) || System.IO.Directory.Exists(dirname);
             }
 
@@ -6888,7 +6888,7 @@ namespace Server.Mobiles
             if (System.IO.Directory.Exists(XmlMultiDir) == true)
             {
                 // get it from the defaults directory if it exists
-                dirname = String.Format("{0}/{1}", XmlMultiDir, filename);
+                dirname = string.Format("{0}/{1}", XmlMultiDir, filename);
                 found = System.IO.File.Exists(dirname) || System.IO.Directory.Exists(dirname);
             }
 
@@ -7127,7 +7127,7 @@ namespace Server.Mobiles
             if (System.IO.Directory.Exists(XmlSpawner.XmlSpawnDir) && filename != null && !filename.StartsWith("/") && !filename.StartsWith("\\"))
             {
                 // put it in the defaults directory if it exists
-                dirname = String.Format("{0}/{1}", XmlSpawnDir, filename);
+                dirname = string.Format("{0}/{1}", XmlSpawnDir, filename);
             }
             else
             {
@@ -7171,7 +7171,7 @@ namespace Server.Mobiles
             if (System.IO.Directory.Exists(XmlSpawner.XmlSpawnDir) && filename != null && !filename.StartsWith("/") && !filename.StartsWith("\\"))
             {
                 // put it in the defaults directory if it exists
-                dirname = String.Format("{0}/{1}", XmlSpawnDir, filename);
+                dirname = string.Format("{0}/{1}", XmlSpawnDir, filename);
             }
             else
             {
@@ -7441,13 +7441,13 @@ namespace Server.Mobiles
                 dr["ProximityTriggerSound"] = sp.m_ProximityTriggerSound;
                 dr["ProximityTriggerMessage"] = sp.m_ProximityTriggerMessage;
                 if (sp.m_ObjectPropertyItem != null && !sp.m_ObjectPropertyItem.Deleted)
-                    dr["ObjectPropertyItemName"] = String.Format("{0},{1}", sp.m_ObjectPropertyItem.Name,
+                    dr["ObjectPropertyItemName"] = string.Format("{0},{1}", sp.m_ObjectPropertyItem.Name,
                         sp.m_ObjectPropertyItem.GetType().Name);
                 else
                     dr["ObjectPropertyItemName"] = null;
                 dr["ObjectPropertyName"] = sp.m_ObjectPropertyName;
                 if (sp.m_SetPropertyItem != null && !sp.m_SetPropertyItem.Deleted)
-                    dr["SetPropertyItemName"] = String.Format("{0},{1}", sp.m_SetPropertyItem.Name,
+                    dr["SetPropertyItemName"] = string.Format("{0},{1}", sp.m_SetPropertyItem.Name,
                         sp.m_SetPropertyItem.GetType().Name);
                 else
                     dr["SetPropertyItemName"] = null;
@@ -7481,7 +7481,7 @@ namespace Server.Mobiles
                     }
                     else
                     {
-                        waystr = String.Format("SERIAL,{0}", sp.m_WayPoint.Serial);
+                        waystr = string.Format("SERIAL,{0}", sp.m_WayPoint.Serial);
                     }
                 }
                 dr["WayPoint"] = waystr;
@@ -9167,7 +9167,7 @@ namespace Server.Mobiles
                     }
                     else
                     {
-                        substitutedtypeName = String.Empty;
+                        substitutedtypeName = string.Empty;
                     }
                 }
 
@@ -12212,7 +12212,7 @@ namespace Server.Mobiles
                     {
                         m_Name = reader.ReadString();
                         // backward compatibility with old name storage
-                        if (m_Name != null && m_Name != String.Empty) Name = m_Name;
+                        if (m_Name != null && m_Name != string.Empty) Name = m_Name;
                         m_X = reader.ReadInt();
                         m_Y = reader.ReadInt();
                         m_Width = reader.ReadInt();

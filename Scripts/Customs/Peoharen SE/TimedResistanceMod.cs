@@ -41,7 +41,7 @@ namespace Server
         {
             public Mobile m_Mobile;
             public ResistanceMod[] m_Mods;
-            public String m_Name;
+            public string m_Name;
             public ResistanceModTimer(Mobile m, string name, ResistanceMod[] mods, TimeSpan duration)
                 : base(duration)
             {

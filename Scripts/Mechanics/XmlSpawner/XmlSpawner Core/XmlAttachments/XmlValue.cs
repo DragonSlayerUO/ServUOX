@@ -63,11 +63,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{2}: Value {0} expires in {1} mins", Value, Expiration.TotalMinutes, Name);
+                return string.Format("{2}: Value {0} expires in {1} mins", Value, Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("{1}: Value {0}", Value, Name);
+                return string.Format("{1}: Value {0}", Value, Name);
             }
         }
     }

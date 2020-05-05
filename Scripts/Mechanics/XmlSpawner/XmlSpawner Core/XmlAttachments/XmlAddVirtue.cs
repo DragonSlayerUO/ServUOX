@@ -139,7 +139,7 @@ namespace Server.Engines.XmlSpawner2
         public override string OnIdentify(Mobile from)
         {
 
-            return String.Format("{0} {1} Virtue points", Value, Virtue);
+            return string.Format("{0} {1} Virtue points", Value, Virtue);
 
         }
     }

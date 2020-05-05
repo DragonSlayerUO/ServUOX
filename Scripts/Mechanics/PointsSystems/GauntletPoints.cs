@@ -1,10 +1,6 @@
 using System;
-using System.Collections.Generic;
-
-using Server;
 using Server.Items;
 using Server.Mobiles;
-using Server.Engines.Quests;
 
 namespace Server.Engines.Points
 {
@@ -33,13 +29,10 @@ namespace Server.Engines.Points
 
         public override void ProcessKill(Mobile victim, Mobile killer)
         {
-            PlayerMobile pm = killer as PlayerMobile;
-            BaseCreature bc = victim as BaseCreature;
-
             if (!Core.AOS)
                 return;
 
-            if (pm == null || bc == null || bc.NoKillAwards || !pm.Alive)
+            if (!(killer is PlayerMobile pm) || !(victim is BaseCreature bc) || bc.NoKillAwards || !pm.Alive)
                 return;
 
             //Make sure its a boss we killed!!
@@ -60,13 +53,12 @@ namespace Server.Engines.Points
 
             if (chance > roll)
             {
-                Item i = null;
-
+                Item i;
                 if (Core.TOL)
                 {
-                    int ran = Utility.Random(m_RewardTable.Length + 1);
+                    int ran = Utility.Random(RewardTable.Length + 1);
 
-                    if (ran >= m_RewardTable.Length)
+                    if (ran >= RewardTable.Length)
                     {
                         i = Loot.RandomArmorOrShieldOrWeaponOrJewelry(LootPackEntry.IsInTokuno(killer), LootPackEntry.IsMondain(killer), LootPackEntry.IsStygian(killer));
                         RunicReforging.GenerateRandomArtifactItem(i, luck, Utility.RandomMinMax(800, 1200));
@@ -79,7 +71,7 @@ namespace Server.Engines.Points
                     }
                     else
                     {
-                        Type[] list = m_RewardTable[ran];
+                        Type[] list = RewardTable[ran];
                         Type t = list.Length == 1 ? list[0] : list[Utility.Random(list.Length)];
 
                         i = Activator.CreateInstance(t) as Item;
@@ -87,7 +79,7 @@ namespace Server.Engines.Points
                 }
                 else
                 {
-                    i = Activator.CreateInstance(m_DoomArtifact[Utility.Random(m_DoomArtifact.Length)]) as Item;
+                    i = Activator.CreateInstance(DoomArtifact[Utility.Random(DoomArtifact.Length)]) as Item;
                 }
 
                 if (i != null)
@@ -112,8 +104,7 @@ namespace Server.Engines.Points
             }
         }
 
-        public static Type[] DoomArtifact => m_DoomArtifact;
-        private static Type[] m_DoomArtifact = new Type[]
+        public static Type[] DoomArtifact { get; } = new Type[]
         {
             typeof(LegacyOfTheDreadLord),       typeof(TheTaskmaster),              typeof(TheDragonSlayer),
             typeof(ArmorOfFortune),             typeof(GauntletsOfNobility),        typeof(HelmOfInsight),
@@ -128,8 +119,7 @@ namespace Server.Engines.Points
             typeof(HatOfTheMagi),               typeof(HuntersHeaddress),           typeof(SpiritOfTheTotem)
         };
 
-        public static Type[][] RewardTable => m_RewardTable;
-        private static Type[][] m_RewardTable = new Type[][]
+        public static Type[][] RewardTable { get; } = new Type[][]
         {
             new Type[] { typeof(HatOfTheMagi) },            new Type[] { typeof(StaffOfTheMagi) },      new Type[] { typeof(OrnamentOfTheMagician) },
             new Type[] { typeof(ShadowDancerLeggings) },    new Type[] {typeof(RingOfTheElements) },    new Type[] { typeof(GauntletsOfNobility) },
@@ -157,15 +147,13 @@ namespace Server.Engines.Points
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -573,7 +573,7 @@ namespace Server.Mobiles
             // Add sequential spawn state
             if (m_Spawner.SequentialSpawn >= 0)
             {
-                AddLabel(15, 365, 33, String.Format("{0}", m_Spawner.SequentialSpawn));
+                AddLabel(15, 365, 33, string.Format("{0}", m_Spawner.SequentialSpawn));
             }
 
             // Add Current / Max count labels
@@ -644,7 +644,7 @@ namespace Server.Mobiles
             {
                 if (page != i / MaxEntriesPerPage) continue;
 
-                string str = String.Empty;
+                string str = string.Empty;
                 int texthue = 0;
                 int background = 0xBBC;
 
@@ -899,7 +899,7 @@ namespace Server.Mobiles
                                 SpawnObjects.Add(new XmlSpawner.SpawnObject(from, m_Spawner, str, 0));
                             }
                             else
-                                m_Spawner.status_str = String.Format("{0} is not a valid type name.", str);
+                                m_Spawner.status_str = string.Format("{0} is not a valid type name.", str);
                             //from.SendMessage( "{0} is not a valid type name.", str );
                         }
 
@@ -1454,15 +1454,15 @@ namespace Server.Mobiles
                             args[4] = m_ShowGump;
                             args[5] = page;
 
-                            XmlTextEntryBook book = new XmlTextEntryBook(0, String.Empty, m_Spawner.Name, 20, true, new XmlTextEntryBookCallback(ProcessSpawnerBookEntry), args);
+                            XmlTextEntryBook book = new XmlTextEntryBook(0, string.Empty, m_Spawner.Name, 20, true, new XmlTextEntryBookCallback(ProcessSpawnerBookEntry), args);
 
                             m_Spawner.m_TextEntryBook.Add(book);
 
-                            book.Title = String.Format("Entry {0}", index);
+                            book.Title = string.Format("Entry {0}", index);
                             book.Author = m_Spawner.Name;
 
                             // fill the contents of the book with the current text entry data
-                            string text = String.Empty;
+                            string text = string.Empty;
                             if (m_Spawner.SpawnObjects != null && index < m_Spawner.SpawnObjects.Length)
                             {
                                 text = m_Spawner.SpawnObjects[index].TypeName;

@@ -303,7 +303,7 @@ namespace Server.Engines.XmlSpawner2
             if (from == null || from.AccessLevel < AccessLevel.Counselor)
                 return null;
 
-            string msg = String.Format("Animation #{0},{1} : {2} secs between uses", AnimationValue, FrameCount, Refractory.TotalSeconds);
+            string msg = string.Format("Animation #{0},{1} : {2} secs between uses", AnimationValue, FrameCount, Refractory.TotalSeconds);
 
             if (ActivationWord == null)
             {
@@ -311,7 +311,7 @@ namespace Server.Engines.XmlSpawner2
             }
             else
             {
-                return String.Format("{0} : trigger on '{1}'", msg, ActivationWord);
+                return string.Format("{0} : trigger on '{1}'", msg, ActivationWord);
             }
         }
 

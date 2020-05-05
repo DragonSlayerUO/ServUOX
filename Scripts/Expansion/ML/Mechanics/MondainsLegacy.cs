@@ -18,16 +18,16 @@ namespace Server
 
     public static class MondainsLegacy
     {
-        private static readonly Type[] m_Artifacts = new Type[]
-        {
+        public static Type[] Artifacts { get; } = new Type[]
+{
             typeof(AegisOfGrace), typeof(BladeDance), typeof(BloodwoodSpirit), typeof(Bonesmasher),
             typeof(Boomstick), typeof(BrightsightLenses), typeof(FeyLeggings), typeof(FleshRipper),
             typeof(HelmOfSwiftness), typeof(PadsOfTheCuSidhe), typeof(QuiverOfRage), typeof(QuiverOfElements),
             typeof(RaedsGlory), typeof(RighteousAnger), typeof(RobeOfTheEclipse), typeof(RobeOfTheEquinox),
             typeof(SoulSeeker), typeof(TalonBite), typeof(TotemOfVoid), typeof(WildfireBow),
             typeof(Windsong)
-        };
-        // true - dungeon is enabled, false - dungeon is disabled
+};
+
         private static bool m_PalaceOfParoxysmus;
         private static bool m_TwistedWeald;
         private static bool m_BlightedGrove;
@@ -41,150 +41,73 @@ namespace Server
         private static bool m_MedusasLair;
         private static bool m_Spellweaving;
         private static bool m_PublicDonations;
+
         public static bool PalaceOfParoxysmus
         {
-            get
-            {
-                return m_PalaceOfParoxysmus;
-            }
-            set
-            {
-                m_PalaceOfParoxysmus = value;
-            }
+            get => m_PalaceOfParoxysmus;
+            set => m_PalaceOfParoxysmus = value;
         }
         public static bool TwistedWeald
         {
-            get
-            {
-                return m_TwistedWeald;
-            }
-            set
-            {
-                m_TwistedWeald = value;
-            }
+            get => m_TwistedWeald;
+            set => m_TwistedWeald = value;
         }
         public static bool BlightedGrove
         {
-            get
-            {
-                return m_BlightedGrove;
-            }
-            set
-            {
-                m_BlightedGrove = value;
-            }
+            get => m_BlightedGrove;
+            set => m_BlightedGrove = value;
         }
         public static bool Bedlam
         {
-            get
-            {
-                return m_Bedlam;
-            }
-            set
-            {
-                m_Bedlam = value;
-            }
+            get => m_Bedlam;
+            set => m_Bedlam = value;
         }
         public static bool PrismOfLight
         {
-            get
-            {
-                return m_PrismOfLight;
-            }
-            set
-            {
-                m_PrismOfLight = value;
-            }
+            get => m_PrismOfLight;
+            set => m_PrismOfLight = value;
         }
         public static bool Citadel
         {
-            get
-            {
-                return m_Citadel;
-            }
-            set
-            {
-                m_Citadel = value;
-            }
+            get => m_Citadel;
+            set => m_Citadel = value;
         }
         public static bool PaintedCaves
         {
-            get
-            {
-                return m_PaintedCaves;
-            }
-            set
-            {
-                m_PaintedCaves = value;
-            }
+            get => m_PaintedCaves;
+            set => m_PaintedCaves = value;
         }
         public static bool Labyrinth
         {
-            get
-            {
-                return m_Labyrinth;
-            }
-            set
-            {
-                m_Labyrinth = value;
-            }
+            get => m_Labyrinth;
+            set => m_Labyrinth = value;
         }
         public static bool Sanctuary
         {
-            get
-            {
-                return m_Sanctuary;
-            }
-            set
-            {
-                m_Sanctuary = value;
-            }
+            get => m_Sanctuary;
+            set => m_Sanctuary = value;
         }
         public static bool StygianDragonLair
         {
-            get
-            {
-                return m_StygianDragonLair;
-            }
-            set
-            {
-                m_StygianDragonLair = value;
-            }
+            get => m_StygianDragonLair;
+            set => m_StygianDragonLair = value;
         }
         public static bool MedusasLair
         {
-            get
-            {
-                return m_MedusasLair;
-            }
-            set
-            {
-                m_MedusasLair = value;
-            }
+            get => m_MedusasLair;
+            set => m_MedusasLair = value;
         }
         public static bool Spellweaving
         {
-            get
-            {
-                return m_Spellweaving;
-            }
-            set
-            {
-                m_Spellweaving = value;
-            }
+            get => m_Spellweaving;
+            set => m_Spellweaving = value;
         }
         public static bool PublicDonations
         {
-            get
-            {
-                return m_PublicDonations;
-            }
-            set
-            {
-                m_PublicDonations = value;
-            }
+            get => m_PublicDonations;
+            set => m_PublicDonations = value;
         }
-        public static Type[] Artifacts => m_Artifacts;
+
         public static void Initialize()
         {
             EventSink.OnKilledBy += OnKilledBy;
@@ -342,12 +265,11 @@ namespace Server
 
         public static void OnKilledBy(OnKilledByEventArgs e)
         {
-            BaseCreature killed = e.Killed as BaseCreature;
             Mobile killer = e.KilledBy;
 
-            if (killed != null && killer != null && killer.Alive && killed.GivesMLMinorArtifact && CheckArtifactChance(killer, killed))
+            if (e.Killed is BaseCreature killed && killer != null && killer.Alive && killed.GivesMLMinorArtifact && CheckArtifactChance(killer, killed))
             {
-                MondainsLegacy.GiveArtifactTo(killer);
+                GiveArtifactTo(killer);
             }
         }
 
@@ -361,9 +283,7 @@ namespace Server
 
         public static void GiveArtifactTo(Mobile m)
         {
-            Item item = Activator.CreateInstance(m_Artifacts[Utility.Random(m_Artifacts.Length)]) as Item;
-
-            if (item == null)
+            if (!(Activator.CreateInstance(Artifacts[Utility.Random(Artifacts.Length)]) is Item item))
                 return;
 
             m.PlaySound(0x5B4);
@@ -387,7 +307,7 @@ namespace Server
 
         public static void DropPeerlessMinor(Container peerlessCorpse)
         {
-            Item item = Activator.CreateInstance(m_Artifacts[Utility.Random(m_Artifacts.Length)]) as Item;
+            Item item = Activator.CreateInstance(Artifacts[Utility.Random(Artifacts.Length)]) as Item;
 
             if (item is ICanBeElfOrHuman)
                 ((ICanBeElfOrHuman)item).ElfOnly = false;

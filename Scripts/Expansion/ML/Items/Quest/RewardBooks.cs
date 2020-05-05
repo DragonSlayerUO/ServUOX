@@ -105,7 +105,7 @@ namespace Server.Items
 
         public static RewardBookType RandomType()
         {
-            var list = BookContents.Where(strList => !String.IsNullOrEmpty(strList[2])).ToList();
+            var list = BookContents.Where(strList => !string.IsNullOrEmpty(strList[2])).ToList();
 
             var ran = Utility.Random(list.Count);
             ColUtility.Free(list);

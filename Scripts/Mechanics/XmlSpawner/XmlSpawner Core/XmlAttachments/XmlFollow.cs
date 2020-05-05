@@ -106,11 +106,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("Following {0} at Distance {1} expires in {2} mins", b.SummonMaster, Distance, Expiration.TotalMinutes);
+                return string.Format("Following {0} at Distance {1} expires in {2} mins", b.SummonMaster, Distance, Expiration.TotalMinutes);
             }
             else
             {
-                return String.Format("Following {0} at Distance {1}", b.SummonMaster, Distance);
+                return string.Format("Following {0} at Distance {1}", b.SummonMaster, Distance);
             }
         }
     }

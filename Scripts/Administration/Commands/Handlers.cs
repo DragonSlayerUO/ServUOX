@@ -407,7 +407,7 @@ namespace Server.Commands
         [Description("Broadcasts a message to all online staff.")]
         public static void StaffMessage_OnCommand(CommandEventArgs e)
         {
-            BroadcastMessage(AccessLevel.Counselor, e.Mobile.SpeechHue, String.Format("[{0}] {1}", e.Mobile.Name, e.ArgString));
+            BroadcastMessage(AccessLevel.Counselor, e.Mobile.SpeechHue, string.Format("[{0}] {1}", e.Mobile.Name, e.ArgString));
         }
 
         [Usage("BCast <text>")]
@@ -415,7 +415,7 @@ namespace Server.Commands
         [Description("Broadcasts a message to everyone online.")]
         public static void BroadcastMessage_OnCommand(CommandEventArgs e)
         {
-            BroadcastMessage(AccessLevel.Player, 0x482, String.Format("Staff message from {0}:", e.Mobile.Name));
+            BroadcastMessage(AccessLevel.Player, 0x482, string.Format("Staff message from {0}:", e.Mobile.Name));
             BroadcastMessage(AccessLevel.Player, 0x482, e.ArgString);
         }
 
@@ -806,7 +806,7 @@ namespace Server.Commands
                 {
                     Item item = m.Items[i];
 
-                    entries[i] = new ItemListEntry(String.Format("{0}: {1}", item.Layer, item.GetType().Name), item.ItemID, item.Hue);
+                    entries[i] = new ItemListEntry(string.Format("{0}: {1}", item.Layer, item.GetType().Name), item.ItemID, item.Hue);
                 }
 
                 return entries;

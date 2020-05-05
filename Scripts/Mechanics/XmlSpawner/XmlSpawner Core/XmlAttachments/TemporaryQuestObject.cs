@@ -105,11 +105,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{1} expires in {0} mins", Expiration.TotalMinutes, Name);
+                return string.Format("{1} expires in {0} mins", Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("{1}: QuestOwner {0}", QuestOwner, Name);
+                return string.Format("{1}: QuestOwner {0}", QuestOwner, Name);
             }
         }
     }

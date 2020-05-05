@@ -108,11 +108,11 @@ namespace Server.Engines.XmlSpawner2
 
             if (Expiration > TimeSpan.Zero)
             {
-                return String.Format("{2}: Weapon ability {0} expires in {1} mins", Ability, Expiration.TotalMinutes, Name);
+                return string.Format("{2}: Weapon ability {0} expires in {1} mins", Ability, Expiration.TotalMinutes, Name);
             }
             else
             {
-                return String.Format("{1}: Weapon ability {0}", Ability, Name);
+                return string.Format("{1}: Weapon ability {0}", Ability, Name);
             }
         }
     }
