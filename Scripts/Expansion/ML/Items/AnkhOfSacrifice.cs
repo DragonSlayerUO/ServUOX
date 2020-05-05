@@ -22,6 +22,7 @@ namespace Server.Items
 
         public override bool ForceShowProperties => ObjectPropertyList.Enabled;
         public override int LabelNumber => 1027772;// Ankh of Sacrifice
+
         public static void Resurrect(PlayerMobile m, AnkhOfSacrificeAddon ankh)
         {
             if (m == null)
