@@ -538,14 +538,6 @@ namespace Server
                 UnsafeNativeMethods.SetConsoleCtrlHandler(m_ConsoleEventHandler, true);
             }
 
-#if NETFX_30
-            dotnet = "3.0";
-#endif
-
-#if NETFX_35
-            dotnet = "3.5";
-#endif
-
 #if NETFX_40
             dotnet = "4.0";
 #endif
@@ -680,10 +672,7 @@ namespace Server
                     NetState.FlushAll();
                     NetState.ProcessDisposedQueue();
 
-                    if (Slice != null)
-                    {
-                        Slice();
-                    }
+                    Slice?.Invoke();
 
                     if (sample++ % sampleInterval != 0)
                     {
