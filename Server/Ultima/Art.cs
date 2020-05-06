@@ -33,8 +33,8 @@ namespace Ultima
 
         static Art()
         {
-            m_Cache = new Bitmap[0xFFFF];
-            m_Removed = new bool[0xFFFF];
+            m_Cache = new Bitmap[0x14000];
+            m_Removed = new bool[0x14000];
         }
 
         public static int GetMaxItemID()
@@ -87,8 +87,8 @@ namespace Ultima
         {
             m_FileIndex = new FileIndex(
                 "Artidx.mul", "Art.mul", "artLegacyMUL.uop", 0x10000 /*0x13FDC*/, 4, ".tga", 0x13FDC, false);
-            m_Cache = new Bitmap[0xFFFF];
-            m_Removed = new bool[0xFFFF];
+            m_Cache = new Bitmap[0x14000];
+            m_Removed = new bool[0x14000];
             m_patched.Clear();
             Modified = false;
         }
@@ -172,10 +172,7 @@ namespace Ultima
                 return true;
             }
 
-            int length, extra;
-            bool patched;
-            Stream stream = m_FileIndex.Seek(index, out length, out extra, out patched);
-
+            Stream stream = m_FileIndex.Seek(index, out int length, out int extra, out bool patched);
             if (stream == null)
             {
                 return false;
@@ -215,10 +212,7 @@ namespace Ultima
                 return true;
             }
 
-            int length, extra;
-            bool patched;
-
-            return m_FileIndex.Valid(index, out length, out extra, out patched);
+            return m_FileIndex.Valid(index, out int length, out int extra, out bool patched);
         }
 
         /// <summary>
@@ -228,8 +222,7 @@ namespace Ultima
         /// <returns></returns>
         public static Bitmap GetLand(int index)
         {
-            bool patched;
-            return GetLand(index, out patched);
+            return GetLand(index, out bool patched);
         }
 
         /// <summary>
@@ -259,8 +252,7 @@ namespace Ultima
                 return m_Cache[index];
             }
 
-            int length, extra;
-            Stream stream = m_FileIndex.Seek(index, out length, out extra, out patched);
+            Stream stream = m_FileIndex.Seek(index, out int length, out int extra, out patched);
             if (stream == null)
             {
                 return null;
@@ -284,9 +276,7 @@ namespace Ultima
         {
             index &= 0x3FFF;
 
-            int length, extra;
-            bool patched;
-            Stream stream = m_FileIndex.Seek(index, out length, out extra, out patched);
+            Stream stream = m_FileIndex.Seek(index, out int length, out int extra, out bool patched);
             if (stream == null)
             {
                 return null;
@@ -304,8 +294,7 @@ namespace Ultima
         /// <returns></returns>
         public static Bitmap GetStatic(int index, bool checkmaxid = true)
         {
-            bool patched;
-            return GetStatic(index, out patched, checkmaxid);
+            return GetStatic(index, out bool patched, checkmaxid);
         }
 
         /// <summary>
@@ -337,8 +326,7 @@ namespace Ultima
                 return m_Cache[index];
             }
 
-            int length, extra;
-            Stream stream = m_FileIndex.Seek(index, out length, out extra, out patched);
+            Stream stream = m_FileIndex.Seek(index, out int length, out int extra, out patched);
             if (stream == null)
             {
                 return null;
@@ -363,9 +351,7 @@ namespace Ultima
             index = GetLegalItemID(index);
             index += 0x4000;
 
-            int length, extra;
-            bool patched;
-            Stream stream = m_FileIndex.Seek(index, out length, out extra, out patched);
+            Stream stream = m_FileIndex.Seek(index, out int length, out int extra, out bool patched);
             if (stream == null)
             {
                 return null;
@@ -616,8 +602,7 @@ namespace Ultima
                             var ms = new MemoryStream();
                             bmp.Save(ms, ImageFormat.Bmp);
                             byte[] checksum = sha.ComputeHash(ms.ToArray());
-                            CheckSums sum;
-                            if (compareSaveImagesLand(checksum, out sum))
+                            if (compareSaveImagesLand(checksum, out CheckSums sum))
                             {
                                 binidx.Write(sum.pos); //lookup
                                 binidx.Write(sum.length);
@@ -678,8 +663,7 @@ namespace Ultima
                             var ms = new MemoryStream();
                             bmp.Save(ms, ImageFormat.Bmp);
                             byte[] checksum = sha.ComputeHash(ms.ToArray());
-                            CheckSums sum;
-                            if (compareSaveImagesStatic(checksum, out sum))
+                            if (compareSaveImagesStatic(checksum, out CheckSums sum))
                             {
                                 binidx.Write(sum.pos); //lookup
                                 binidx.Write(sum.length);

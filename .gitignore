@@ -35,5 +35,6 @@
 *.md
 
 !/Data/*
-!/bin/rosyln/*
+/bin/roslyn/
+!/bin/roslyn/*
 _config.yml

@@ -192,14 +192,19 @@ namespace Server.Misc
 
             for (int i = 0; i < amount; i++)
             {
-                var gc = GetGainChance(from, skill, (value - minSkill) / (maxSkill - minSkill), value) / 10;
+            //    var gc = GetGainChance(from, skill, (value - minSkill) / (maxSkill - minSkill), value) / 10;
+
+                double chance = (value - minSkill) / (maxSkill - minSkill);
+                double gc = GetGainChance(from, skill, chance, Utility.Random(100) <= (int)(chance * 100)) / (value / 4);
 
                 if (AllowGain(from, skill, new Point2D(from.Location.X / LocationSize, from.Location.Y / LocationSize)))
                 {
-                    if (from.Alive && (skill.Base < 10.0 || Utility.RandomDouble() <= gc || CheckGGS(from, skill)))
+                    if (from.Alive && (skill.Base + (value - skill.Value) < 10.0 || Utility.RandomDouble() <= gc || CheckGGS(from, skill)))
                     {
                         gains++;
                         value += 0.1;
+
+                        UpdateGGS(from, skill);
                     }
                 }
 
@@ -232,8 +237,8 @@ namespace Server.Misc
 
             return gc;
         }
-        #endregion
-
+        #endregion               
+        
         public static bool CheckSkill(Mobile from, Skill skill, object obj, double chance)
         {
             if (from.Skills.Cap == 0)

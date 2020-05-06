@@ -331,7 +331,7 @@ namespace Server.SkillHandlers
             else
             {
                 int maxWeight = GetMaxWeight(i);
-                context.Imbue_IWmax = maxWeight;
+                //context.Imbue_IWmax = maxWeight;
 
                 int trueWeight = GetTotalWeight(i, id, true, true);
                 int imbuingWeight = GetTotalWeight(i, id, false, true);
