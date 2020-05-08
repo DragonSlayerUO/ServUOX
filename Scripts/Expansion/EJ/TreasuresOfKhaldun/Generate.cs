@@ -1,14 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-
-using Server;
 using Server.Engines.CannedEvil;
 using Server.Items;
 using Server.Mobiles;
-using Server.Gumps;
 using Server.Engines.Points;
-using Server.Engines.Quests;
 
 namespace Server.Engines.Khaldun
 {

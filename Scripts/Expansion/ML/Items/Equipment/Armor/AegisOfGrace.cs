@@ -1,12 +1,7 @@
-using System;
-
 namespace Server.Items
 {
     public class AegisOfGrace : DragonHelm
     {
-        public override int LabelNumber => 1075047;  // Aegis of Grace
-        public override bool IsArtifact => true;
-
         [Constructable]
         public AegisOfGrace()
         {
@@ -19,7 +14,6 @@ namespace Server.Items
                 ItemID = 0x2B6E;
                 Weight = 2.0;
                 StrRequirement = 10;
-
                 MeditationAllowance = ArmorMeditationAllowance.All;
             }
         }
@@ -29,6 +23,8 @@ namespace Server.Items
         {
         }
 
+        public override int LabelNumber => 1075047;  // Aegis of Grace
+        public override bool IsArtifact => true;
         public override int BasePhysicalResistance => 10;
         public override int BaseFireResistance => 9;
         public override int BaseColdResistance => 7;
@@ -44,7 +40,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.WriteEncodedInt(1); // version
+            writer.WriteEncodedInt(1);
         }
 
         public override void Deserialize(GenericReader reader)

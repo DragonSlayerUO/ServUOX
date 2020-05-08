@@ -47,7 +47,8 @@ namespace Server.Engines.Plants
         public override double DefaultWeight => 10.0;
 
         [Constructable]
-        public SeedBox() : base(19288)
+        public SeedBox()
+            : base(19288)
         {
             Entries = new List<SeedEntry>();
             LootType = LootType.Blessed;

@@ -93,6 +93,14 @@ namespace Server.Items
                         item = new SkeletonPortrait(); break;
                     case 2:
                         item = new LichPainting(); break;
+                    case 3:
+                        item = new RelicOfHydros(); break;
+                    case 4:
+                        item = new RelicOfLithos(); break;
+                    case 5:
+                        item = new RelicOfPyros(); break;
+                    case 6:
+                        item = new RelicOfStratos(); break;
                 }
 
                 DropItem(item);
@@ -104,9 +112,7 @@ namespace Server.Items
 
                 if (item != null)
                 {
-                    int min, max;
-
-                    TreasureMapChest.GetRandomItemStat(out min, out max, 1.0);
+                    TreasureMapChest.GetRandomItemStat(out int min, out int max, 1.0);
 
                     RunicReforging.GenerateRandomItem(item, null, Utility.RandomMinMax(min, max), 0, ReforgedPrefix.None, ReforgedSuffix.Khaldun, Map);
 
@@ -186,7 +192,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
 
             TryDelayedLock();
         }
@@ -194,7 +200,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             TryDelayedLock();
         }

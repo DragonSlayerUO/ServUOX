@@ -69,6 +69,7 @@ namespace Server.Engines.Despise
                     }
                 }
             }
+            base.OnKilledBy(mob);
         }
 
         public override void AlterMeleeDamageTo(Mobile to, ref int damage)

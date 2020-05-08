@@ -1,10 +1,9 @@
-using Server;
-using System;
 using Server.Items;
 using Server.Mobiles;
+using Server.Network;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Server.Network;
 
 namespace Server.Engines.Shadowguard
 {
@@ -47,7 +46,7 @@ namespace Server.Engines.Shadowguard
             SetDex(250);
 
             Fame = 32000;
-            Karma = -32000;
+            Karma = -32000; 
         }
 
         public override Poison PoisonImmunity => Poison.Lethal;
@@ -151,8 +150,8 @@ namespace Server.Engines.Shadowguard
 
         private class GoodiesTimer : Timer
         {
-            private Map m_Map;
-            private int m_X, m_Y;
+            private readonly Map m_Map;
+            private readonly int m_X, m_Y;
 
             public GoodiesTimer(Map map, int x, int y)
                 : base(TimeSpan.FromSeconds(Utility.RandomDouble() * 10.0))
@@ -213,7 +212,7 @@ namespace Server.Engines.Shadowguard
         public virtual void Summon()
         {
             int max = MaxSummons;
-            var map = Map;
+            Map map = Map;
 
             ShadowguardEncounter inst = ShadowguardController.GetEncounter(Location, Map);
 
@@ -336,26 +335,27 @@ namespace Server.Engines.Shadowguard
     public enum Form
     {
         Human = 0x190,
+        Earth = 14,
         Fire = 15,
         Cold = 163,
-        Poison = 162,
-        Energy = 164
+        Poison = 158,
+        Energy = 220
     }
 
     public class Anon : ShadowguardBoss
     {
         public override Type[] SummonTypes => _SummonTypes;
-        private Type[] _SummonTypes = new Type[] { typeof(ElderGazer), typeof(EvilMage), typeof(Wisp) };
+        private readonly Type[] _SummonTypes = new Type[] { typeof(ElderGazer), typeof(EvilMage), typeof(Wisp) };
 
         private DateTime _LastChange;
         private Form _Form;
 
-        public bool CanChange => _LastChange + TimeSpan.FromSeconds(Utility.RandomMinMax(75, 90)) < DateTime.UtcNow;
+        public bool CanChange => _LastChange + TimeSpan.FromSeconds(Utility.RandomMinMax(20, 35)) < DateTime.UtcNow;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Form Form
         {
-            get { return _Form; }
+            get => _Form;
             set
             {
                 Form old = _Form;
@@ -408,25 +408,35 @@ namespace Server.Engines.Shadowguard
             SetWearable(new GnarledStaff(), 1320);
             SetWearable(new LeatherGloves(), 1320);
 
-            _LastChange = DateTime.UtcNow;
+            _LastChange = DateTime.MinValue;
         }
 
         public override void OnThink()
         {
             base.OnThink();
 
-            if (Form != Form.Human && _LastChange + TimeSpan.FromSeconds(60) < DateTime.UtcNow)
+            if (Form != Form.Human && _LastChange + TimeSpan.FromSeconds(45) < DateTime.UtcNow)
                 Form = Form.Human;
         }
 
         private void SetHighResistance(ResistanceType type)
         {
-            //SetResistance(ResistanceType.Physical, type == ResistanceType.Physical ? 80 : 50, type == ResistanceType.Physical ? 90 : 60);
+            SetResistance(ResistanceType.Physical, type == ResistanceType.Physical ? 80 : 50, type == ResistanceType.Physical ? 90 : 60);
             SetResistance(ResistanceType.Fire, type == ResistanceType.Fire ? 80 : 50, type == ResistanceType.Fire ? 90 : 60);
             SetResistance(ResistanceType.Cold, type == ResistanceType.Cold ? 80 : 50, type == ResistanceType.Cold ? 90 : 60);
             SetResistance(ResistanceType.Poison, type == ResistanceType.Poison ? 80 : 50, type == ResistanceType.Poison ? 90 : 60);
             SetResistance(ResistanceType.Energy, type == ResistanceType.Energy ? 80 : 50, type == ResistanceType.Energy ? 90 : 60);
         }
+
+        private void SetBaseResistances()
+        {
+            SetResistance(ResistanceType.Physical, 50, 60);
+            SetResistance(ResistanceType.Fire, 50, 60);
+            SetResistance(ResistanceType.Cold, 50, 60);
+            SetResistance(ResistanceType.Poison, 50, 60);
+            SetResistance(ResistanceType.Energy, 50, 60);
+        }
+
 
         public void InvalidateForm()
         {
@@ -437,6 +447,14 @@ namespace Server.Engines.Shadowguard
                     {
                         Body = (int)Form.Human;
                         HueMod = -1;
+                        SetBaseResistances();
+                    }
+                    break;
+                case Form.Earth:
+                    if (Body != (int)Form.Earth)
+                    {
+                        Body = (int)Form.Earth;
+                        HueMod = 0;
                         SetHighResistance(ResistanceType.Physical);
                     }
                     break;
@@ -468,16 +486,20 @@ namespace Server.Engines.Shadowguard
                     if (Body != (int)Form.Energy)
                     {
                         Body = (int)Form.Energy;
-                        HueMod = 0;
+                        HueMod = 0x76;
                         SetHighResistance(ResistanceType.Energy);
                     }
                     break;
             }
         }
 
+
         public override void OnGotMeleeAttack(Mobile m)
         {
             base.OnGotMeleeAttack(m);
+
+            if (_LastChange == DateTime.MinValue)
+                _LastChange = DateTime.UtcNow;
 
             if (CanChange)
                 CheckChange(m);
@@ -485,28 +507,33 @@ namespace Server.Engines.Shadowguard
 
         public void CheckChange(Mobile m)
         {
-            BaseWeapon weapon = m.Weapon as BaseWeapon;
-
-            int highest;
-            int type = GetHighestDamageType(weapon, out highest);
-
-            if (weapon != null)
+            if (Form != Form.Human)
             {
-                switch (type)
+                Form = Form.Human;
+            }
+            else
+            {
+                BaseWeapon weapon = m.Weapon as BaseWeapon;
+
+                int type = GetHighestDamageType(m, weapon, out int highest);
+
+                if (weapon != null)
                 {
-                    case 0: if (Form != Form.Human) Form = Form.Human; break;
-                    case 1: if (Form != Form.Fire) Form = Form.Fire; break;
-                    case 2: if (Form != Form.Cold) Form = Form.Cold; break;
-                    case 3: if (Form != Form.Poison) Form = Form.Poison; break;
-                    case 4: if (Form != Form.Energy) Form = Form.Energy; break;
+                    switch (type)
+                    {
+                        case 0: if (Form != Form.Earth) Form = Form.Earth; break;
+                        case 1: if (Form != Form.Fire) Form = Form.Fire; break;
+                        case 2: if (Form != Form.Cold) Form = Form.Cold; break;
+                        case 3: if (Form != Form.Poison) Form = Form.Poison; break;
+                        case 4: if (Form != Form.Energy) Form = Form.Energy; break;
+                    }
                 }
             }
         }
 
-        private int GetHighestDamageType(BaseWeapon weapon, out int highest)
+        private int GetHighestDamageType(Mobile m, BaseWeapon weapon, out int highest)
         {
-            int phys, fire, cold, pois, nrgy, chaos, direct;
-            weapon.GetDamageTypes(null, out phys, out fire, out cold, out pois, out nrgy, out chaos, out direct);
+            weapon.GetDamageTypes(m, out int phys, out int fire, out int cold, out int pois, out int nrgy, out int chaos, out int direct);
 
             int type = 0;
             highest = phys;
@@ -523,9 +550,7 @@ namespace Server.Engines.Shadowguard
         {
             base.AlterMeleeDamageFrom(m, ref damage);
 
-            BaseWeapon weapon = m.Weapon as BaseWeapon;
-
-            if (weapon != null)
+            if (m.Weapon is BaseWeapon weapon)
             {
                 SlayerEntry slayer = SlayerGroup.GetEntryByName(weapon.Slayer);
 
@@ -537,8 +562,7 @@ namespace Server.Engines.Shadowguard
                         damage *= 3;
                 }
 
-                int highest;
-                int type = GetHighestDamageType(weapon, out highest);
+                int type = GetHighestDamageType(m, weapon, out int highest);
                 int heal = (int)(damage * (highest / 100.0));
 
                 switch (Form)
@@ -549,6 +573,13 @@ namespace Server.Engines.Shadowguard
 							damage -= heal;
 							Hits = Math.Min(Hits + heal, HitsMax);
 						}*/
+                        break;
+                    case Form.Earth:
+                        if (type == 0)
+                        {
+                            damage -= heal;
+                            Hits = Math.Min(Hits + heal, HitsMax);
+                        }
                         break;
                     case Form.Fire:
                         if (type == 1)
@@ -595,7 +626,7 @@ namespace Server.Engines.Shadowguard
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             _LastChange = DateTime.UtcNow;
         }
@@ -604,7 +635,7 @@ namespace Server.Engines.Shadowguard
     public class Juonar : ShadowguardBoss
     {
         public override Type[] SummonTypes => _SummonTypes;
-        private Type[] _SummonTypes = new Type[] { typeof(SkeletalDragon), typeof(LichLord), typeof(WailingBanshee), typeof(FleshGolem) };
+        private readonly Type[] _SummonTypes = new Type[] { typeof(SkeletalDragon), typeof(LichLord), typeof(WailingBanshee), typeof(FleshGolem) };
 
         public override bool CanDiscord => true;
         public override bool PlayInstrumentSound => false;
@@ -693,7 +724,7 @@ namespace Server.Engines.Shadowguard
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             _NextTeleport = DateTime.UtcNow;
         }
@@ -702,7 +733,7 @@ namespace Server.Engines.Shadowguard
     public class Virtuebane : ShadowguardBoss
     {
         public override Type[] SummonTypes => _SummonTypes;
-        private Type[] _SummonTypes = new Type[] { typeof(MinotaurCaptain), typeof(Daemon), typeof(Titan) };
+        private readonly Type[] _SummonTypes = new Type[] { typeof(MinotaurCaptain), typeof(Daemon), typeof(Titan) };
 
         public override bool BardImmunity => true;
 
@@ -791,37 +822,37 @@ namespace Server.Engines.Shadowguard
             //Flame Columns
             for (int i = 0; i < 2; i++)
             {
-                Server.Misc.Geometry.Circle2D(Location, Map, i, (pnt, map) =>
-                    {
-                        Effects.SendLocationParticles(EffectItem.Create(pnt, map, EffectItem.DefaultDuration), 0x3709, 10, 30, 5052);
-                    });
+                Misc.Geometry.Circle2D(Location, Map, i, (pnt, map) =>
+                {
+                    Effects.SendLocationParticles(EffectItem.Create(pnt, map, EffectItem.DefaultDuration), 0x3709, 10, 30, 5052);
+                });
             }
 
             //Flash then boom
             Timer.DelayCall(TimeSpan.FromSeconds(1.5), () =>
+            {
+                if (Alive && Map != null)
                 {
-                    if (Alive && Map != null)
+                    Packet flash = ScreenLightFlash.Instance;
+                    IPooledEnumerable e = Map.GetClientsInRange(p, (range * 4) + 5);
+
+                    foreach (NetState ns in e)
                     {
-                        Packet flash = ScreenLightFlash.Instance;
-                        IPooledEnumerable e = Map.GetClientsInRange(p, (range * 4) + 5);
-
-                        foreach (NetState ns in e)
-                        {
-                            if (ns.Mobile != null)
-                                ns.Mobile.Send(flash);
-                        }
-
-                        e.Free();
-
-                        for (int i = 0; i < range; i++)
-                        {
-                            Server.Misc.Geometry.Circle2D(Location, Map, i, (pnt, map) =>
-                            {
-                                Effects.SendLocationEffect(pnt, map, 14000, 14, 10, Utility.RandomMinMax(2497, 2499), 2);
-                            });
-                        }
+                        if (ns.Mobile != null)
+                            ns.Mobile.Send(flash);
                     }
-                });
+
+                    e.Free();
+
+                    for (int i = 0; i < range; i++)
+                    {
+                        Misc.Geometry.Circle2D(Location, Map, i, (pnt, map) =>
+                        {
+                            Effects.SendLocationEffect(pnt, map, 14000, 14, 10, Utility.RandomMinMax(2497, 2499), 2);
+                        });
+                    }
+                }
+            });
 
             IPooledEnumerable eable = GetMobilesInRange(range);
 
@@ -836,10 +867,9 @@ namespace Server.Engines.Shadowguard
 
         private void DoDamage_Callback(object o)
         {
-            Mobile m = o as Mobile;
             Map map = Map;
 
-            if (m != null && map != null)
+            if (o is Mobile m && map != null)
             {
                 DoHarmful(m);
                 AOS.Damage(m, this, Utility.RandomMinMax(100, 150), 50, 50, 0, 0, 0);
@@ -915,14 +945,14 @@ namespace Server.Engines.Shadowguard
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
     public class Ozymandias : ShadowguardBoss
     {
         public override Type[] SummonTypes => _SummonTypes;
-        private Type[] _SummonTypes = new Type[] { typeof(LesserHiryu), typeof(EliteNinja), typeof(TsukiWolf) };
+        private readonly Type[] _SummonTypes = new Type[] { typeof(LesserHiryu), typeof(EliteNinja), typeof(TsukiWolf) };
 
         public override double WeaponAbilityChance => 0.4;
 
@@ -961,13 +991,13 @@ namespace Server.Engines.Shadowguard
             SetWearable(new Waraji());
             SetWearable(new BoneArms());
 
-            var scimitar = new Scimitar();
+            Scimitar scimitar = new Scimitar();
             scimitar.Movable = false;
 
             PackItem(scimitar);
             PackItem(new Arrow(25));
 
-            var hiryu = new LesserHiryu();
+            LesserHiryu hiryu = new LesserHiryu();
             hiryu.Rider = this;
 
             SetWeaponAbility(WeaponAbility.Dismount);
@@ -1027,7 +1057,7 @@ namespace Server.Engines.Shadowguard
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

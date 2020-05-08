@@ -72,6 +72,7 @@
     <Compile Include="Expansion\EJ\StoreBought\DecorativeStableSet\DecorativeStableFencing.cs" />
     <Compile Include="Expansion\EJ\StoreBought\DecorativeStableSet\DecorativeStableSet.cs" />
     <Compile Include="Expansion\EJ\StoreBought\MetalLadder2.cs" />
+    <Compile Include="Expansion\EJ\TreasuresOfKhaldun\Items\KhaldunRareRelics.cs" />
     <Compile Include="Expansion\HS\Items\17th Anniversary\17thAnniversaryBag.cs" />
     <Compile Include="Expansion\HS\Items\17th Anniversary\BarHandTowl.cs" />
     <Compile Include="Expansion\HS\Items\17th Anniversary\BaseBarSink.cs" />
