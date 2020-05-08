@@ -90,7 +90,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Churchill()
-            : base("Churchill", "The Mace Fighting Instructor")
+            : base("Churchill", "the Mace Fighting Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

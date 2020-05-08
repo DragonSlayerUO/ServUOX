@@ -88,7 +88,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Mithneral()
-            : base("Mithneral", "The Evaluating Intelligence Instructor")
+            : base("Mithneral", "the Evaluating Intelligence Instructor")
         {
             SetSkill(SkillName.EvalInt, 120.0, 120.0);
             SetSkill(SkillName.Inscribe, 120.0, 120.0);

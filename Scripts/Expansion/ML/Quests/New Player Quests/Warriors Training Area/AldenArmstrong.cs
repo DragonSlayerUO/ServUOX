@@ -93,7 +93,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public AldenArmstrong()
-            : base("Alden Armstrong", "The Tactics Instructor")
+            : base("Alden Armstrong", "the Tactics Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

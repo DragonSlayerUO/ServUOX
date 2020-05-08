@@ -88,7 +88,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Walker()
-            : base("Walker", "The Tracking Instructor")
+            : base("Walker", "the Tracking Instructor")
         {
             SetSkill(SkillName.Hiding, 120.0, 120.0);
             SetSkill(SkillName.Tactics, 120.0, 120.0);

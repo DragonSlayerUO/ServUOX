@@ -93,7 +93,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Gustar()
-            : base("Gustar", "The Meditation Instructor")
+            : base("Gustar", "the Meditation Instructor")
         {
             SetSkill(SkillName.EvalInt, 120.0, 120.0);
             SetSkill(SkillName.Inscribe, 120.0, 120.0);

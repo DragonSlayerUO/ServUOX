@@ -88,7 +88,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Jun()
-            : base("Jun", "The Stealth Instructor")
+            : base("Jun", "the Stealth Instructor")
         {
             SetSkill(SkillName.Hiding, 120.0, 120.0);
             SetSkill(SkillName.Tactics, 120.0, 120.0);

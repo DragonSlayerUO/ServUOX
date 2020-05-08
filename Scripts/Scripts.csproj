@@ -135,6 +135,7 @@
     <Compile Include="Expansion\ML\Items\Necromancer\VampiricEmbraceScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\WitherScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\WraithFormScroll.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\SirHelper.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicKnight.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicMage.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Bracelet\GoldBracelet.cs" />
@@ -2808,13 +2809,13 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Abbein.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Acob.cs" />
     <Compile Include="Expansion\UO\Mobiles\NPCs\Actor.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aelorn.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Guild Hall\Aelorn.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aeluva.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Aernya.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ahie.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AlbertaGiacco.cs" />
     <Compile Include="Expansion\UO\Mobiles\NPCs\Alchemist.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AldenArmstrong.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Training Area\AldenArmstrong.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\New Haven Magery School\Alefian.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Alejaha.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\AlelleTheAborist.cs" />
@@ -2874,7 +2875,7 @@
     <Compile Include="Expansion\UO\Mobiles\NPCs\Carpenter.cs" />
     <Compile Include="Expansion\UO\Mobiles\NPCs\ChaosGuard.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\Ninja Dojo\Chiyo.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Churchill.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Training Area\Churchill.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ciala.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Cillitha.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Clehin.cs" />
@@ -2888,7 +2889,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Daelas.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Darius.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\DenthesJournal.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Dimethro.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Guild Hall\Dimethro.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Drithen.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Egwexem.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\ElwoodMcCarrin.cs" />
@@ -2960,7 +2961,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jelrice.cs" />
     <Compile Include="Expansion\UO\Mobiles\NPCs\Jeweler.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\New Haven Magery School\Jillian.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jockles.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Training Area\Jockles.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Jothan.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Joy.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\Ninja Dojo\Jun.cs" />
@@ -2991,8 +2992,8 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Minter.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\New Haven Magery School\Mithneral.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Monk.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Morganna.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mulcivikh.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Necromancers Guild Hall\Morganna.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Necromancers Guild Hall\Mulcivikh.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Mystic.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Naxatillor.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Necromancer.cs" />
@@ -3018,10 +3019,10 @@
     <Compile Include="Expansion\UO\Mobiles\NPCs\RangerGuildmaster.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\RealEstateBroker.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Rebinil.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Recaro.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Training Area\Recaro.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Relnia.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\RentedVendor.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Robyn.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Training Area\Robyn.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Ryal.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\Ninja Dojo\Ryuichi.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Salaenih.cs" />
@@ -3056,7 +3057,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\TinkerGuildmaster.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\TomasONeerlan.cs" />
     <Compile Include="Expansion\UO\Mobiles\NPCs\TownCrier.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\TylAriadne.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Warriors Training Area\TylAriadne.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Tyleelor.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Unoelil.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Vagabond.cs" />
@@ -3315,8 +3316,8 @@
     <Compile Include="Expansion\ML\Quests\Virture Quests\Spirituality\Szandor.cs" />
     <Compile Include="Expansion\ML\Quests\Virture Quests\Spirituality\AemaethQuests.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Andric.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Asandos.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Clairesse.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Gentle Rest\Asandos.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\Finely Woven\Clairesse.cs" />
     <Compile Include="Expansion\ML\Quests\Virture Quests\Sacrifice\AlchemistsBandage.cs" />
     <Compile Include="Expansion\ML\Items\Quest\AndrosGratitude.cs" />
     <Compile Include="Expansion\ML\Quests\Virture Quests\Sacrifice\DreadSpiderSilk.cs" />
@@ -3337,7 +3338,7 @@
     <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Verity.cs" />
     <Compile Include="Expansion\XSORTINGX\Quest\Quests\FriendsOfTheLibrary.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\Mountains\Gervis.cs" />
-    <Compile Include="Expansion\XSORTINGX\Quest\NPCs\Hargrove.cs" />
+    <Compile Include="Expansion\ML\Quests\New Player Quests\The West Mill\Hargrove.cs" />
     <Compile Include="Expansion\ML\Quests\Virture Quests\Honesty\ReginasLetter.cs" />
     <Compile Include="Expansion\ML\Quests\Virture Quests\Honesty\ReginasRing.cs" />
     <Compile Include="Expansion\ML\Items\Quest\TransparentHeart.cs" />

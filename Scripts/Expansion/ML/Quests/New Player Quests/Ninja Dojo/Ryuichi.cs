@@ -94,7 +94,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Ryuichi()
-            : base("Ryuichi", "The Ninjitsu Instructor")
+            : base("Ryuichi", "the Ninjitsu Instructor")
         {
             SetSkill(SkillName.Hiding, 120.0, 120.0);
             SetSkill(SkillName.Tracking, 120.0, 120.0);

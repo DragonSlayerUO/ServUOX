@@ -92,7 +92,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public AndreasVesalius()
-            : base("Andreas Vesalius", "The Anatomy Instructor")
+            : base("Andreas Vesalius", "the Anatomy Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

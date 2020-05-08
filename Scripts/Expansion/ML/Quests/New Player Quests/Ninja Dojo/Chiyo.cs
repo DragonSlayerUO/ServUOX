@@ -86,7 +86,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Chiyo()
-            : base("Chiyo", "The Hiding Instructor")
+            : base("Chiyo", "the Hiding Instructor")
         {
             SetSkill(SkillName.Hiding, 120.0, 120.0);
             SetSkill(SkillName.Tracking, 120.0, 120.0);

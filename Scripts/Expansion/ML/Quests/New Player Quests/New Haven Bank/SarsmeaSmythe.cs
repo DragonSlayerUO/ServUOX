@@ -93,7 +93,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public SarsmeaSmythe()
-            : base("Sarsmea Smythe", "The Focus Instructor")
+            : base("Sarsmea Smythe", "the Focus Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

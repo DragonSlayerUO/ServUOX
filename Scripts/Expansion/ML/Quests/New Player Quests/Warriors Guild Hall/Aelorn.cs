@@ -90,7 +90,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Aelorn()
-            : base("Aelorn", "The Chivalry Instructor")
+            : base("Aelorn", "the Chivalry Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.MagicResist, 120.0, 120.0);

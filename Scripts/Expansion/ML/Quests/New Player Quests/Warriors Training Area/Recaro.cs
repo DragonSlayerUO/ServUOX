@@ -90,7 +90,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Recaro()
-            : base("Recaro", "The Fencer Instructor")
+            : base("Recaro", "the Fencer Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

@@ -91,7 +91,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public TylAriadne()
-            : base("Tyl Ariadne", "The Parrying Instructor")
+            : base("Tyl Ariadne", "the Parrying Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

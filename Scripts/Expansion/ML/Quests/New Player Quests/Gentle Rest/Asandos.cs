@@ -3,29 +3,31 @@ using Server.Items;
 
 namespace Server.Engines.Quests
 {
-    public class ChopChopOnTheDoubleQuest : BaseQuest
+    public class BakersDozenQuest : BaseQuest
     {
-        public ChopChopOnTheDoubleQuest()
+        public BakersDozenQuest()
             : base()
         {
-            AddObjective(new ObtainObjective(typeof(Log), "log", 60, 0x1BDD));
+            AddObjective(new ObtainObjective(typeof(CookieMix), "Cookie Mix", 5, 0x103F));
 
-            AddReward(new BaseReward(typeof(LumberjacksSatchel), 1074282)); // Craftsman's Satchel
+            AddReward(new BaseReward(typeof(ChefsSatchel), 1074282)); // Craftsman's Satchel
         }
 
-        public override TimeSpan RestartDelay => TimeSpan.FromMinutes(3);
-        /* Chop Chop, On The Double! */
-        public override object Title => 1075537;
-        /* That's right, move it! I need sixty logs on the double, and they need to be freshly cut! If you can get them to 
-        me fast I'll have your payment in your hands before you have the scent of pine out from beneath your nostrils. Just 
-        get a sharp axe and hack away at some of the trees in the land and your lumberjacking skill will rise in no time. */
-        public override object Description => 1075538;
-        /* Or perhaps you'd rather not. */
-        public override object Refuse => 1072981;
+        /* Baker's Dozen */
+        public override object Title => 1075478;
+        /* You there! Do you know much about the ways of cooking? If you help me out, I'll show you a thing or two about 
+        how it's done. Bring me some cookie mix, about 5 batches will do it, and I will reward you. Although, I don't 
+        think you can buy it, you can make some in a snap! First get a rolling pin or frying pan or even a flour sifter. 
+        Then you mix one pinch of flour with some water and you've got some dough! Take that dough and add one dollop of 
+        honey and you've got sweet dough. add one more drop of honey and you've got cookie mix. See? Nothing to it! Now 
+        get to work! */
+        public override object Description => 1075479;
+        /* Argh, I absolutely must have more of these 'cookies!' Come back if you change your mind. */
+        public override object Refuse => 1075480;
         /* You're not quite done yet.  Get back to work! */
         public override object Uncomplete => 1072271;
-        /* Ahhh! The smell of fresh cut lumber. And look at you, all strong and proud, as if you had done an honest days work! */
-        public override object Complete => 1075539;
+        /* Thank you! I haven't been this excited about food in months! */
+        public override object Complete => 1075481;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -41,22 +43,22 @@ namespace Server.Engines.Quests
         }
     }
 
-    public class Hargrove : MondainQuester
+    public class Asandos : MondainQuester
     {
         [Constructable]
-        public Hargrove()
-            : base("Hargrove", "the lumberjack")
+        public Asandos()
+            : base("Asandos", "the Chef")
         {
         }
 
-        public Hargrove(Serial serial)
+        public Asandos(Serial serial)
             : base(serial)
         {
         }
 
         public override Type[] Quests => new Type[]
                 {
-                    typeof(ChopChopOnTheDoubleQuest)
+                    typeof(BakersDozenQuest)
                 };
         public override void InitBody()
         {
@@ -67,24 +69,18 @@ namespace Server.Engines.Quests
             Race = Race.Human;
 
             Hue = 0x83FF;
-            HairItemID = 0x203C;
-            HairHue = 0x0;
+            HairItemID = 0x2044;
+            HairHue = 0x1;
         }
 
         public override void InitOutfit()
         {
             AddItem(new Backpack());
-            AddItem(new BattleAxe());
             AddItem(new Boots(0x901));
-            AddItem(new StuddedLegs());
-            AddItem(new Shirt(0x288));
-            AddItem(new Bandana(0x20));
-
-            Item item;
-
-            item = new PlateGloves();
-            item.Hue = 0x21E;
-            AddItem(item);
+            AddItem(new ShortPants());
+            AddItem(new Shirt());
+            AddItem(new Cap());
+            AddItem(new HalfApron(0x28));
         }
 
         public override void Serialize(GenericWriter writer)
@@ -102,19 +98,19 @@ namespace Server.Engines.Quests
         }
     }
 
-    public class LumberjacksSatchel : Backpack
+    public class ChefsSatchel : Backpack
     {
         [Constructable]
-        public LumberjacksSatchel()
+        public ChefsSatchel()
             : base()
         {
             Hue = BaseReward.SatchelHue();
 
-            AddItem(new Gold(15));
-            AddItem(new Hatchet());
+            AddItem(new SackFlour());
+            AddItem(new Skillet());
         }
 
-        public LumberjacksSatchel(Serial serial)
+        public ChefsSatchel(Serial serial)
             : base(serial)
         {
         }

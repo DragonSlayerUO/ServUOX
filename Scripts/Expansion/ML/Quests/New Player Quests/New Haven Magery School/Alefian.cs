@@ -101,7 +101,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Alefian()
-            : base("Alefian", "The Resisting Spells Instructor")
+            : base("Alefian", "the Resisting Spells Instructor")
         {
             SetSkill(SkillName.EvalInt, 120.0, 120.0);
             SetSkill(SkillName.Inscribe, 120.0, 120.0);

@@ -94,7 +94,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Jockles()
-            : base("Jockles", "The Swordsmanship Instructor")
+            : base("Jockles", "the Swordsmanship Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

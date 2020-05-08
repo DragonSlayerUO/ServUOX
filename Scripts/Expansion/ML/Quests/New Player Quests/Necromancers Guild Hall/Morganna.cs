@@ -93,7 +93,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Morganna()
-            : base("Morganna", "The Spirit Speak Instructor")
+            : base("Morganna", "the Spirit Speak Instructor")
         {
             SetSkill(SkillName.Magery, 120.0, 120.0);
             SetSkill(SkillName.MagicResist, 120.0, 120.0);

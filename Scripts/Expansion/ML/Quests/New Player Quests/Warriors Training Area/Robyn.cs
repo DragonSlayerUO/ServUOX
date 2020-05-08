@@ -94,7 +94,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Robyn()
-            : base("Robyn", "The Archer Instructor")
+            : base("Robyn", "the Archer Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

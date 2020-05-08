@@ -99,7 +99,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Jillian()
-            : base("Jillian", "The Inscription Instructor")
+            : base("Jillian", "the Inscription Instructor")
         {
             SetSkill(SkillName.EvalInt, 120.0, 120.0);
             SetSkill(SkillName.Inscribe, 120.0, 120.0);

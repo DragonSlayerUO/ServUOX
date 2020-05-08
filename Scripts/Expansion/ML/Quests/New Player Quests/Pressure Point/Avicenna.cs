@@ -94,7 +94,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Avicenna()
-            : base("Avicenna", "The Healing Instructor")
+            : base("Avicenna", "the Healing Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

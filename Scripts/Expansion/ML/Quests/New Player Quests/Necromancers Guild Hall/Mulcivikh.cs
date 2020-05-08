@@ -91,7 +91,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Mulcivikh()
-            : base("Mulcivikh", "The Necromancy Instructor")
+            : base("Mulcivikh", "the Necromancy Instructor")
         {
             SetSkill(SkillName.Magery, 120.0, 120.0);
             SetSkill(SkillName.MagicResist, 120.0, 120.0);

@@ -51,14 +51,12 @@ namespace Server.Engines.Quests
 
         public override bool CanOffer()
         {
-            #region Scroll of Alacrity
             PlayerMobile pm = Owner as PlayerMobile;
             if (pm.AcceleratedStart > DateTime.UtcNow)
             {
                 Owner.SendLocalizedMessage(1077951); // You are already under the effect of an accelerated skillgain scroll.
                 return false;
             }
-            #endregion
             else
                 return Owner.Skills.Bushido.Base < 50;
         }
@@ -99,7 +97,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Hamato()
-            : base("Hamato", "The Bushido Instructor")
+            : base("Hamato", "the Bushido Instructor")
         {
             SetSkill(SkillName.Anatomy, 120.0, 120.0);
             SetSkill(SkillName.Parry, 120.0, 120.0);

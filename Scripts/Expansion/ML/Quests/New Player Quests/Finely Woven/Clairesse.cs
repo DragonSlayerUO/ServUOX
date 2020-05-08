@@ -8,7 +8,7 @@ namespace Server.Engines.Quests
         public StitchInTimeQuest()
             : base()
         {
-            AddObjective(new ObtainObjective(typeof(FancyDress), "fancy dress", 1, 0x1EFF));
+            AddObjective(new ObtainObjective(typeof(FancyDress), "Fancy Dress", 1, 0x1EFF));
 
             AddReward(new BaseReward(typeof(OldRing), 1075524)); // an old ring
             AddReward(new BaseReward(typeof(OldNecklace), 1075525)); // an old necklace
@@ -34,14 +34,13 @@ namespace Server.Engines.Quests
         {
             base.Serialize(writer);
 
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -49,7 +48,7 @@ namespace Server.Engines.Quests
     {
         [Constructable]
         public Clairesse()
-            : base("Clairesse", "the servant")
+            : base("Clairesse", "the Servant")
         {
         }
 
@@ -86,14 +85,13 @@ namespace Server.Engines.Quests
         {
             base.Serialize(writer);
 
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -115,15 +113,13 @@ namespace Server.Engines.Quests
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -146,14 +142,13 @@ namespace Server.Engines.Quests
         {
             base.Serialize(writer);
 
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

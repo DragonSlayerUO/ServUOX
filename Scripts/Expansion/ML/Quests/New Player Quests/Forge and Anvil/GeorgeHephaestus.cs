@@ -40,22 +40,20 @@ namespace Server.Engines.Quests
         {
             AddObjective(new ApprenticeObjective(SkillName.Blacksmith, 50, "Gorge's Shop", 1077733, 1077734));
 
-            // 1077733 By using George’s forge and anvil, he is able to give you advice as you create blacksmithing items. This helps you hone your Blacksmithing skill a bit faster than normal.
-            // 1077734 You’re not using George’s forge and anvil any longer, and he cannot give you advice. Your Blacksmithing learning potential is no longer enhanced. 
+            // 1077733 By using Georgeâ€™s forge and anvil, he is able to give you advice as you create blacksmithing items. This helps you hone your Blacksmithing skill a bit faster than normal.
+            // 1077734 Youâ€™re not using Georgeâ€™s forge and anvil any longer, and he cannot give you advice. Your Blacksmithing learning potential is no longer enhanced. 
 
             AddReward(new BaseReward(typeof(HammerOfHephaestus), 1077740));
         }
 
         public override bool CanOffer()
         {
-            #region Scroll of Alacrity
             PlayerMobile pm = Owner as PlayerMobile;
             if (pm.AcceleratedStart > DateTime.UtcNow)
             {
                 Owner.SendLocalizedMessage(1077951); // You are already under the effect of an accelerated skillgain scroll.
                 return false;
             }
-            #endregion
             else
                 return Owner.Skills.Blacksmith.Base < 50;
         }
@@ -70,7 +68,7 @@ namespace Server.Engines.Quests
         {
             base.Serialize(writer);
 
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -95,7 +93,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public GeorgeHephaestus()
-            : base("George Hephaestus", "The Blacksmith Instructor")
+            : base("George Hephaestus", "the Blacksmith Instructor")
         {
             SetSkill(SkillName.ArmsLore, 120.0, 120.0);
             SetSkill(SkillName.Blacksmith, 120.0, 120.0);

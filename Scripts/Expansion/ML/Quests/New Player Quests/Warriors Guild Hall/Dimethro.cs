@@ -88,7 +88,7 @@ namespace Server.Engines.Quests
 
         [Constructable]
         public Dimethro()
-            : base("Dimethro", "The Wrestling Instructor")
+            : base("Dimethro", "the Wrestling Instructor")
         {
             SetSkill(SkillName.EvalInt, 120.0, 120.0);
             SetSkill(SkillName.Inscribe, 120.0, 120.0);
