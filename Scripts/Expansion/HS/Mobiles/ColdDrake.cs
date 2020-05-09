@@ -48,7 +48,7 @@ namespace Server.Mobiles
             ControlSlots = 3;
             MinTameSkill = 96.0;
 
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
 
             for (int i = 0; i <= 1; i++)
             {

@@ -45,7 +45,7 @@ namespace Server.Mobiles
             Karma = -5000;
 
             VirtualArmor = 50;
-            PackNecroReg(15, 25);
+            PackItem(Loot.PackNecroReg(15, 25));
         }
 
         public DarkGuardian(Serial serial)

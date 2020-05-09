@@ -48,8 +48,8 @@ namespace Server.Mobiles
 
             VirtualArmor = 44;
 
-            PackReg(5, 15);
-            PackNecroReg(5, 15);
+            PackItem(Loot.PackReg(5, 15));
+            PackItem(Loot.PackNecroReg(5, 15));
         }
 
         public OphidianArchmage(Serial serial)
@@ -206,7 +206,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 30;
 
-            PackReg(10);
+            PackItem(Loot.PackReg(10));
 
             switch (Utility.Random(6))
             {

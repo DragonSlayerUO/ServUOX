@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -44,45 +42,46 @@ namespace Server.Mobiles
             Karma = 0;
 
             VirtualArmor = 28; // Don't know what it should be
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
         }
-
-        public override TribeType Tribe => TribeType.Fey;
-
-        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
-        public override void GenerateLoot()
-        {
-            AddLoot(LootPack.MlRich);
-            AddLoot(LootPack.MedScrolls);
-        }
-
-        public override bool CanDiscord => true;
-        public override bool CanPeace => true;
-        public override bool CanProvoke => true;
-
-        public override int Meat => 1;
 
         public Satyr(Serial serial)
             : base(serial)
         {
         }
 
+        public override TribeType Tribe => TribeType.Fey;
+        public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
+        public override bool CanDiscord => true;
+        public override bool CanPeace => true;
+        public override bool CanProvoke => true;
+        public override int Meat => 1;
+
+        public override void OnDeath(Container CorpseLoot)
+        {
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
+
+            base.OnDeath(CorpseLoot);
+        }
+
+        public override void GenerateLoot()
+        {
+            AddLoot(LootPack.MlRich);
+            AddLoot(LootPack.MedScrolls);
+        }
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

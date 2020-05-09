@@ -56,8 +56,8 @@ namespace Server.Mobiles
             m_Timer = new DrainTimer(this);
             m_Timer.Start();
 
-            PackReg(50);
-            PackNecroReg(15, 75);
+            PackItem(Loot.PackReg(50));
+            PackItem(Loot.PackNecroReg(15, 75));
 
             switch (Utility.Random(3))
             {

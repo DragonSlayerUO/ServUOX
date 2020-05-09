@@ -39,9 +39,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Wrestling, 50.0);
 
             Fame = 500;
-            Karma = -500;
-
-            PackBodyPartOrBones();
+            Karma = -500;            
 
             SetSpecialAbility(SpecialAbility.BloodDisease);
         }
@@ -60,6 +58,12 @@ namespace Server.Mobiles
         public override int Meat => 2;
         public override MeatType MeatType => MeatType.Rotworm;
         public override FoodType FavoriteFood => FoodType.Fish;
+
+        public override void OnDeath(Container CorpseLoot)
+        {
+            CorpseLoot.DropItem(Loot.PackBodyPartOrBones());
+            base.OnDeath(CorpseLoot);
+        }
 
         public override void GenerateLoot()
         {

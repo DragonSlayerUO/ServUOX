@@ -68,6 +68,7 @@ namespace Server.Mobiles
         public override int Meat => 1;
         public override int Hides => 8;
         public override HideType HideType => HideType.Spined;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 2);
@@ -86,10 +87,11 @@ namespace Server.Mobiles
 
             for (int i = 0; i < newPixies; ++i)
             {
-                Pixie pixie = new Pixie();
-
-                pixie.Team = Team;
-                pixie.FightMode = FightMode.Closest;
+                Pixie pixie = new Pixie
+                {
+                    Team = Team,
+                    FightMode = FightMode.Closest
+                };
 
                 bool validLocation = false;
                 Point3D loc = Location;
@@ -143,8 +145,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -61,7 +61,7 @@ namespace Server.Mobiles
             else
                 CorpseLoot.DropItem(new Log(10));
 
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
 
             CorpseLoot.DropItem(new Engines.Plants.Seed());
             CorpseLoot.DropItem(new Engines.Plants.Seed());

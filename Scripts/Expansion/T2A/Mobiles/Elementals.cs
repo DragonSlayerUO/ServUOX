@@ -135,7 +135,7 @@ namespace Server.Mobiles
             VirtualArmor = 40;
 
             PackItem(new BlackPearl());
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
 
             SetAreaEffect(AreaEffect.AuraDamage);
         }

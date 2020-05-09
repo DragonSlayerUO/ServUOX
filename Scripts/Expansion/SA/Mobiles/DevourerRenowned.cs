@@ -47,7 +47,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 44;
 
-            PackNecroReg(24, 45);
+            PackItem(Loot.PackNecroReg(24, 45));
         }
 
         public DevourerRenowned(Serial serial)

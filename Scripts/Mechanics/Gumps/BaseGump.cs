@@ -430,11 +430,6 @@ namespace Server.Gumps
             AddTooltip(title, text, System.Drawing.Color.Empty, System.Drawing.Color.Empty);
         }
 
-        public void AddTooltip(int cliloc, string args)
-        {
-            AddTooltip(new int[] { cliloc }, new string[] { args ?? string.Empty });
-        }
-
         public void AddTooltip(int cliloc, string format, params string[] args)
         {
             AddTooltip(cliloc, string.Format(format, args));
@@ -459,7 +454,12 @@ namespace Server.Gumps
 
             AddTooltip(clilocs, args);
         }
-
+        /*
+        public void AddTooltip(int cliloc, string args)
+        {
+            AddTooltip(new int[] { cliloc }, new string[] { args ?? string.Empty });
+        }
+        */
         public void AddTooltip(int[] clilocs, string[] args)
         {
             var dictionary = new Dictionary<int, string>();

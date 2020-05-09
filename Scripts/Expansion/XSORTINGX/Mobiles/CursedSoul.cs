@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 using Server.Mobiles;
 
@@ -35,7 +34,7 @@ namespace Server.Engines.Quests.Samurai
             Fame = 200;
             Karma = -200;
 
-            PackBodyPartOrBones();
+            VirtualArmor = 12;
         }
 
         public CursedSoul(Serial serial)
@@ -43,18 +42,22 @@ namespace Server.Engines.Quests.Samurai
         {
         }
 
+        public override void OnDeath(Container CorpseLoot)
+        {
+            CorpseLoot.DropItem(Loot.PackBodyPartOrBones());
+            base.OnDeath(CorpseLoot);
+        }
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.WriteEncodedInt(0); // version
+            writer.WriteEncodedInt(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadEncodedInt();
+            _ = reader.ReadEncodedInt();
         }
     }
 }

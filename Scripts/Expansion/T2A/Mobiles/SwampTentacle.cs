@@ -55,7 +55,7 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container CorpseLoot)
         {
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
             base.OnDeath(CorpseLoot);
         }
 

@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -54,6 +53,7 @@ namespace Server.Mobiles
         public override FoodType FavoriteFood => FoodType.Meat;
         public override Poison PoisonImmunity => Poison.Deadly;
         public override Poison HitPoison => Poison.Deadly;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Average);
@@ -68,7 +68,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

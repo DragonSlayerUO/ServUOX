@@ -1,22 +1,13 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-
-using Server;
 using Server.Items;
-using Server.Misc;
 using Server.Spells;
-using Server.Spells.Third;
-using Server.Spells.Sixth;
-using Server.Targeting;
 
 namespace Server.Mobiles
 {
     [CorpseName("a dread horns corpse")]
     public class DreadHorn : BasePeerless
     {
-        public virtual int StrikingRange => 12;
-
         [Constructable]
         public DreadHorn() : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -52,22 +43,65 @@ namespace Server.Mobiles
             SetSkill(SkillName.Meditation, 110.0);
             SetSkill(SkillName.Spellweaving, 120.0);
 
-            // TODO 1-3 spellweaving scroll
-
             Fame = 32000;
             Karma = -32000;
-
-            PackResources(8);
-            PackTalismans(5);
 
             m_Change = DateTime.UtcNow;
             m_Stomp = DateTime.UtcNow;
             m_Teleport = DateTime.UtcNow;
 
+            PackResources(8);
+            PackTalismans(5);
+        }
+
+        public DreadHorn(Serial serial) : base(serial)
+        {
+        }
+
+        public virtual int StrikingRange => 12;
+
+        public override int Hides => 10;
+        public override HideType HideType => HideType.Regular;
+        public override int Meat => 5;
+        public override MeatType MeatType => MeatType.Ribs;
+        public override bool GivesMLMinorArtifact => true;
+        public override bool Unprovokable => true;
+        public override Poison PoisonImmunity => Poison.Deadly;
+        public override Poison HitPoison => Poison.Lethal;
+        public override int TreasureMapLevel => 5;
+
+        public override void OnDeath(Container CorpseLoot)
+        {
+            // TODO 1-3 spellweaving scroll
             for (int i = 0; i < Utility.RandomMinMax(1, 3); i++)
             {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
             }
+
+            CorpseLoot.DropItem(new DreadHornMane());
+
+            if (Utility.RandomDouble() < 0.6)
+                CorpseLoot.DropItem(new TaintedMushroom());
+
+            if (Utility.RandomDouble() < 0.6)
+                CorpseLoot.DropItem(new ParrotItem());
+
+            if (Utility.RandomDouble() < 0.5)
+                CorpseLoot.DropItem(new MangledHeadOfDreadhorn());
+
+            if (Utility.RandomDouble() < 0.5)
+                CorpseLoot.DropItem(new HornOfTheDreadhorn());
+
+            if (Utility.RandomDouble() < 0.05)
+                CorpseLoot.DropItem(new PristineDreadHorn());
+
+            if (Utility.RandomDouble() < 0.05)
+                CorpseLoot.DropItem(new DreadFlute());
+
+            if (Utility.RandomDouble() < 0.05)
+                CorpseLoot.DropItem(new DreadsRevenge());
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()
@@ -77,6 +111,10 @@ namespace Server.Mobiles
             AddLoot(LootPack.MedScrolls, 4);
             AddLoot(LootPack.HighScrolls, 4);
         }
+
+        private DateTime m_Change;
+        private DateTime m_Stomp;
+        private DateTime m_Teleport;
 
         public override void OnThink()
         {
@@ -94,72 +132,6 @@ namespace Server.Mobiles
                     Teleport();
             }
         }
-
-        public override void OnDeath(Container c)
-        {
-            base.OnDeath(c);
-
-            c.DropItem(new DreadHornMane());
-
-            if (Utility.RandomDouble() < 0.6)
-                c.DropItem(new TaintedMushroom());
-
-            if (Utility.RandomDouble() < 0.6)
-                c.DropItem(new ParrotItem());
-
-            if (Utility.RandomDouble() < 0.5)
-                c.DropItem(new MangledHeadOfDreadhorn());
-
-            if (Utility.RandomDouble() < 0.5)
-                c.DropItem(new HornOfTheDreadhorn());
-
-            if (Utility.RandomDouble() < 0.05)
-                c.DropItem(new PristineDreadHorn());
-
-            if (Utility.RandomDouble() < 0.05)
-                c.DropItem(new DreadFlute());
-
-            if (Utility.RandomDouble() < 0.05)
-                c.DropItem(new DreadsRevenge());
-        }
-
-        public override int Hides => 10;
-        public override HideType HideType => HideType.Regular;
-
-        public override int Meat => 5;
-        public override MeatType MeatType => MeatType.Ribs;
-
-        public override bool GivesMLMinorArtifact => true;
-        public override bool Unprovokable => true;
-        public override Poison PoisonImmunity => Poison.Deadly;
-        public override Poison HitPoison => Poison.Lethal;
-        public override int TreasureMapLevel => 5;
-
-        public DreadHorn(Serial serial) : base(serial)
-        {
-        }
-
-        public override void Serialize(GenericWriter writer)
-        {
-            base.Serialize(writer);
-
-            writer.Write(0); // version
-        }
-
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-
-            int version = reader.ReadInt();
-
-            m_Change = DateTime.UtcNow;
-            m_Stomp = DateTime.UtcNow;
-            m_Teleport = DateTime.UtcNow;
-        }
-
-        private DateTime m_Change;
-        private DateTime m_Stomp;
-        private DateTime m_Teleport;
 
         private void Teleport()
         {
@@ -236,7 +208,7 @@ namespace Server.Mobiles
             if (best != null)
             {
                 // teleport
-                best.Location = BasePeerless.GetSpawnPosition(Location, Map, 1);
+                best.Location = GetSpawnPosition(Location, Map, 1);
                 best.FixedParticles(0x376A, 9, 32, 0x13AF, EffectLayer.Waist);
                 best.PlaySound(0x1FE);
 
@@ -294,6 +266,22 @@ namespace Server.Mobiles
                 return null;
 
             return agro;
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            _ = reader.ReadInt();
+
+            m_Change = DateTime.UtcNow;
+            m_Stomp = DateTime.UtcNow;
+            m_Teleport = DateTime.UtcNow;
         }
     }
 }

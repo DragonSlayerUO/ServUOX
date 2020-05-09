@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -39,13 +38,8 @@ namespace Server.Mobiles
             Fame = 18000;
             Karma = -18000;
 
-            PackReg(3);
-            PackNecroReg(1, 10);
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
+            PackItem(Loot.PackReg(3));
+            PackItem(Loot.PackNecroReg(1, 10));
         }
 
         public MasterMikael(Serial serial)
@@ -53,15 +47,21 @@ namespace Server.Mobiles
         {
         }
         public override bool CanBeParagon => false;
+
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             if (Utility.RandomDouble() < 0.15)
                 c.DropItem(new DisintegratingThesisNotes());
 
             if (Utility.RandomDouble() < 0.1)
                 c.DropItem(new ParrotItem());
+
+            base.OnDeath(c);
         }
 
         /*public override bool GivesMLMinorArtifact
@@ -70,7 +70,9 @@ namespace Server.Mobiles
             {
                 return true;
             }
-        }*/
+        }
+        */
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 2);
@@ -82,15 +84,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

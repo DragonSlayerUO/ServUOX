@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a squirrel corpse")]
@@ -44,18 +42,17 @@ namespace Server.Mobiles
 
         public override int Meat => 1;
         public override FoodType FavoriteFood => FoodType.FruitsAndVegies;
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

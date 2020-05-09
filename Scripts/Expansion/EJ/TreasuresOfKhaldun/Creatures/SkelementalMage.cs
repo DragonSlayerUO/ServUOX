@@ -82,8 +82,10 @@ namespace Server.Mobiles
             Karma = -3000;
 
             VirtualArmor = 38;
-            PackReg(3);
-            PackNecroReg(3, 10);
+
+            PackItem(Loot.PackReg(3));
+            PackItem(Loot.PackNecroReg(3, 10));
+
             PackItem(new Bone());
         }
 
@@ -123,7 +125,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

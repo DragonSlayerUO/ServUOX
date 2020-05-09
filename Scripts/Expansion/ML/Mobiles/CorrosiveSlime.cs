@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -53,11 +52,13 @@ namespace Server.Mobiles
         public override Poison PoisonImmunity => Poison.Regular;
         public override Poison HitPoison => Poison.Regular;
         public override FoodType FavoriteFood => FoodType.Fish;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Poor);
             AddLoot(LootPack.Gems);
         }
+
         public override void OnDeath(Container c)
         {
             if (!Controlled && Map != null && Map != Map.TerMur && Utility.Random(10) == 0)

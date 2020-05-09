@@ -286,7 +286,7 @@ namespace Server.Mobiles
             AddItem(new BoneLegs());
             AddItem(new DeerMask());
 
-            PackReg(10, 15);
+            PackItem(Loot.PackReg(10, 15));
         }
 
         public SavageShaman(Serial serial)

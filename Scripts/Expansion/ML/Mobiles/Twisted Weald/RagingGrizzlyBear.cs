@@ -50,18 +50,17 @@ namespace Server.Mobiles
         public override int Meat => 4;
         public override int Hides => 32;
         public override PackInstinct PackInstinct => PackInstinct.Bear;
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

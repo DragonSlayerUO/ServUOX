@@ -1,5 +1,3 @@
-
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -40,20 +38,21 @@ namespace Server.Mobiles
 
             Tamable = false;
 
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
-
             SetSpecialAbility(SpecialAbility.Rage);
         }
         public override bool CanBeParagon => false;
+
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             if (Utility.RandomDouble() < 0.3)
                 c.DropItem(new GnawsFang());
+
+            base.OnDeath(c);
         }
 
         public Gnaw(Serial serial)
@@ -63,6 +62,7 @@ namespace Server.Mobiles
 
         public override int Hides => 28;
         public override int Meat => 4;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich, 2);
@@ -71,15 +71,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

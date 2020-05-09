@@ -446,7 +446,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 30;
 
-            PackReg(6);
+            PackItem(Loot.PackReg(6));
         }
 
         public OrcishMage(Serial serial)

@@ -1,6 +1,5 @@
-using System;
-using System.Collections;
 using Server.Items;
+using System.Collections;
 
 namespace Server.Mobiles
 {
@@ -54,12 +53,6 @@ namespace Server.Mobiles
             Fame = 8500;
             Karma = -8500;
 
-
-            if (Core.ML && Utility.RandomDouble() < .33)
-                PackItem(Engines.Plants.Seed.RandomPeculiarSeed(1));
-
-            PackBodyPartOrBones();
-
             Tamable = true;
             ControlSlots = 3;
             MinTameSkill = 96.0;
@@ -73,35 +66,25 @@ namespace Server.Mobiles
         }
 
         public override bool CanAngerOnTame => true;
-
         public override int TreasureMapLevel => 3;
         public override int Meat => 4;
         public override int Hides => 25;
         public override FoodType FavoriteFood => FoodType.Meat;
 
-        public override int GetAngerSound()
-        {
-            return 0x52D;
-        }
+        public override int GetAngerSound() { return 0x52D; }
+        public override int GetIdleSound() { return 0x52C; }
+        public override int GetAttackSound() { return 0x52B; }
+        public override int GetHurtSound() { return 0x52E; }
+        public override int GetDeathSound() { return 0x52A; }
 
-        public override int GetIdleSound()
+        public override void OnDeath(Container CorpseLoot)
         {
-            return 0x52C;
-        }
+            CorpseLoot.DropItem(Loot.PackBodyPartOrBones());
+            
+            if (Core.ML && Utility.RandomDouble() < .33)
+                CorpseLoot.DropItem(Engines.Plants.Seed.RandomPeculiarSeed(1));
 
-        public override int GetAttackSound()
-        {
-            return 0x52B;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x52E;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x52A;
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()
@@ -112,15 +95,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

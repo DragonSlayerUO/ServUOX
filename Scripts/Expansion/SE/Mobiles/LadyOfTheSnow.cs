@@ -42,7 +42,7 @@ namespace Server.Mobiles
             Fame = 15200;
             Karma = -15200;
 
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
             PackItem(new Necklace());
 
             if (0.25 > Utility.RandomDouble())

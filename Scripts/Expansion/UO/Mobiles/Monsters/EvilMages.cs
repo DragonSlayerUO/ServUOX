@@ -57,7 +57,7 @@ namespace Server.Mobiles
             Karma = -2500;
 
             VirtualArmor = 16;
-            PackReg(6);
+            PackItem(Loot.PackReg(6));
         }
 
         public override int GetDeathSound()
@@ -171,7 +171,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 16;
 
-            PackReg(23);
+            PackItem(Loot.PackReg(23));
         }
 
         public override int GetDeathSound()

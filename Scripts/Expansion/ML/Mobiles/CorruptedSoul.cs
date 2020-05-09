@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     public class CorruptedSoul : BaseCreature
@@ -34,7 +32,8 @@ namespace Server.Mobiles
 
             Fame = 5000;
             Karma = -5000;
-            // VirtualArmor = 6; Not sure
+
+            VirtualArmor = 6;
         }
 
         public CorruptedSoul(Serial serial)
@@ -83,7 +82,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

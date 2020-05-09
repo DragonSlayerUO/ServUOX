@@ -5516,88 +5516,6 @@ namespace Server.Mobiles
             PackItem(gem);
         }
 
-        public void PackNecroReg(int min, int max)
-        {
-            PackNecroReg(Utility.RandomMinMax(min, max));
-        }
-
-        public void PackNecroReg(int amount)
-        {
-            for (int i = 0; i < amount; ++i)
-            {
-                PackNecroReg();
-            }
-        }
-
-        public void PackNecroReg()
-        {
-            if (!Core.AOS)
-            {
-                return;
-            }
-
-            PackItem(Loot.RandomNecromancyReagent());
-        }
-
-        public void PackReg(int min, int max)
-        {
-            PackReg(Utility.RandomMinMax(min, max));
-        }
-
-        public void PackReg(int amount)
-        {
-            if (amount <= 0)
-            {
-                return;
-            }
-
-            Item reg = Loot.RandomReagent();
-
-            reg.Amount = amount;
-
-            PackItem(reg);
-        }
-
-        public void PackBodyPart()
-        {
-            switch (Utility.Random(5))
-            {
-                case 0: PackItem(new LeftArm()); break;
-                case 1: PackItem(new RightArm()); break;
-                case 2: PackItem(new Torso()); break;
-                case 3: PackItem(new RightLeg()); break;
-                case 4: PackItem(new LeftLeg()); break;
-            }
-        }
-
-        public void PackBones()
-        {
-            switch (Utility.Random(6))
-            {
-                case 0: PackItem(new Bone()); break;
-                case 1: PackItem(new RibCage()); break;
-                case 2: PackItem(new RibCage()); break;
-                case 3: PackItem(new BonePile()); break;
-                case 4: PackItem(new BonePile()); break;
-                case 5: PackItem(new BonePile()); break;
-            }
-        }
-
-        public void PackBodyPartOrBones()
-        {
-            switch (Utility.Random(8))
-            {
-                case 0: PackItem(new LeftArm()); break;
-                case 1: PackItem(new RightArm()); break;
-                case 2: PackItem(new Torso()); break;
-                case 3: PackItem(new RightLeg()); break;
-                case 4: PackItem(new LeftLeg()); break;
-                case 5: PackItem(new Bone()); break;
-                case 6: PackItem(new RibCage()); break;
-                case 7: PackItem(new BonePile()); break;
-            }
-        }
-
         public void PackItem(Item item)
         {
             if (Summoned || item == null)
@@ -5614,9 +5532,10 @@ namespace Server.Mobiles
 
             if (pack == null)
             {
-                pack = new Backpack();
-
-                pack.Movable = false;
+                pack = new Backpack
+                {
+                    Movable = false
+                };
 
                 AddItem(pack);
             }

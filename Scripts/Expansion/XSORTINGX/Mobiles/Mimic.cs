@@ -40,7 +40,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 98.5);
             SetSkill(SkillName.Wrestling, 92.2);
 
-            PackReg(20);
+            PackItem(Loot.PackReg(20));
         }
 
         public Mimic(Serial serial)

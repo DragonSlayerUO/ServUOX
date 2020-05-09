@@ -44,16 +44,18 @@ namespace Server.Mobiles
 
             SetSpecialAbility(SpecialAbility.AngryFire);
         }
+
         public override bool CanBeParagon => false;
-        public override void OnDeath(Container c)
+
+        public override void OnDeath(Container CorpseLoot)
         {
-            base.OnDeath(c);
+            base.OnDeath(CorpseLoot);
 
             if (Utility.RandomDouble() < 0.25)
-                c.DropItem(new IrksBrain());
+                CorpseLoot.DropItem(new IrksBrain());
 
             if (Utility.RandomDouble() < 0.025)
-                c.DropItem(new PaladinGloves());
+                CorpseLoot.DropItem(new PaladinGloves());
         }
 
         public Irk(Serial serial)
@@ -72,15 +74,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

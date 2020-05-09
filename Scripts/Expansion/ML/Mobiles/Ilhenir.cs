@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Server.Engines.CannedEvil;
 using Server.Items;
@@ -58,12 +57,7 @@ namespace Server.Mobiles
             for (int i = 0; i < Utility.RandomMinMax(1, 3); i++)
             {
                 PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
-
-            if (Core.ML)
-            {
-                PackTalismans(5);
-            }
+            } 
 
             PackGold(2000, 2500);
 
@@ -91,12 +85,25 @@ namespace Server.Mobiles
         public override Poison PoisonImmunity => Poison.Lethal;
         public override int TreasureMapLevel => 5;
 
-        public virtual void PackTalismans(int amount)
+        public virtual void PackTalismans(Container CorpseLoot, int amount)
         {
             int count = Utility.Random(amount);
 
             for (int i = 0; i < count; i++)
                 PackItem(new RandomTalisman());
+        }
+
+        public override void OnDeath(Container CorpseLoot) 
+        {
+            if (Core.ML)
+            {
+                PackTalismans(CorpseLoot, 5);
+            }
+
+            if (Utility.RandomDouble() < 0.5)
+                CorpseLoot.DropItem(new AnimalPheromone());
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()
@@ -113,42 +120,11 @@ namespace Server.Mobiles
             base.OnDamage(amount, from, willKill);
         }
 
-        public override int GetAngerSound()
-        {
-            return 0x581;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x582;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x580;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x583;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x584;
-        }
-
-        public override void Serialize(GenericWriter writer)
-        {
-            base.Serialize(writer);
-            writer.Write(0); // version
-        }
-
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-            int version = reader.ReadInt();
-        }
+        public override int GetAngerSound() { return 0x581; }
+        public override int GetIdleSound() { return 0x582; }
+        public override int GetAttackSound() { return 0x580; }
+        public override int GetHurtSound() { return 0x583; }
+        public override int GetDeathSound() { return 0x584; }
 
         public virtual void DropOoze()
         {
@@ -187,11 +163,22 @@ namespace Server.Mobiles
                     ((PlayerMobile)Combatant).SendLocalizedMessage(1072072); // A poisonous gas seeps out of your enemy's skin!
             }
         }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            _ = reader.ReadInt();
+        }
     }
 
     public class StainedOoze : Item
     {
-        private bool m_Corrosive;
         private Timer m_Timer;
         private int m_Ticks;
 
@@ -208,7 +195,7 @@ namespace Server.Mobiles
             Movable = false;
             Hue = 0x95;
 
-            m_Corrosive = corrosive;
+            Corrosive = corrosive;
             m_Timer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(1), OnTick);
             m_Ticks = 0;
         }
@@ -219,17 +206,8 @@ namespace Server.Mobiles
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Corrosive
-        {
-            get
-            {
-                return m_Corrosive;
-            }
-            set
-            {
-                m_Corrosive = value;
-            }
-        }
+        public bool Corrosive { get; set; }
+
         public override void OnAfterDelete()
         {
             if (m_Timer != null)
@@ -241,7 +219,7 @@ namespace Server.Mobiles
 
         public void Damage(Mobile m)
         {
-            if (m_Corrosive)
+            if (Corrosive)
             {
                 List<Item> items = m.Items;
                 bool damaged = false;
@@ -270,9 +248,9 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
 
-            writer.Write(m_Corrosive);
+            writer.Write(Corrosive);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -280,7 +258,7 @@ namespace Server.Mobiles
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            m_Corrosive = reader.ReadBool();
+            Corrosive = reader.ReadBool();
 
             m_Timer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(1), OnTick);
             m_Ticks = (ItemID == 0x122A) ? 0 : 30;

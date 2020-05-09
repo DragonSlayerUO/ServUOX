@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -39,14 +38,9 @@ namespace Server.Mobiles
             Fame = 18000;
             Karma = -18000;
 
-            PackReg(7);
-            PackReg(7);
-            PackReg(8);
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
+            PackItem(Loot.PackReg(7));
+            PackItem(Loot.PackReg(7));
+            PackItem(Loot.PackReg(8));
         }
 
         public MasterJonath(Serial serial)
@@ -54,15 +48,21 @@ namespace Server.Mobiles
         {
         }
         public override bool CanBeParagon => false;
+
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             if (Utility.RandomDouble() < 0.05)
                 c.DropItem(new ParrotItem());
 
             if (Utility.RandomDouble() < 0.15)
                 c.DropItem(new DisintegratingThesisNotes());
+
+            base.OnDeath(c);
         }
 
         public override int TreasureMapLevel => 5;
@@ -77,15 +77,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

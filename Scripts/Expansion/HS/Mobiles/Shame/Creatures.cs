@@ -1,8 +1,5 @@
 using System;
-using Server;
 using Server.Items;
-using Server.Engines.PartySystem;
-using Server.Network;
 using System.Collections.Generic;
 using Server.Engines.ShameRevamped;
 
@@ -47,7 +44,8 @@ namespace Server.Mobiles
             Fame = 500;
             Karma = -500;
 
-            PackReg(1, 2);
+            PackItem(Loot.PackReg(1, 2));
+
             PackGem(1, 2);
 
             PackItem(new ExecutionersCap());
@@ -85,7 +83,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -121,7 +119,8 @@ namespace Server.Mobiles
             Fame = 4000;
             Karma = -4000;
 
-            PackReg(1, 2);
+            PackItem(Loot.PackReg(1, 2));
+
             PackGem(1, 2);
 
             PackItem(new Granite());
@@ -159,7 +158,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -255,7 +254,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -327,7 +326,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -387,7 +386,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -454,7 +453,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -514,7 +513,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -579,7 +578,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -663,7 +662,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -735,7 +734,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -817,7 +816,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -858,7 +857,7 @@ namespace Server.Mobiles
             AddItem(new Robe(1156));
             AddItem(new Sandals());
 
-            PackReg(31);
+            PackItem(Loot.PackReg(31));
 
             Utility.AssignRandomHair(this);
 
@@ -967,7 +966,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1112,7 +1111,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1250,7 +1249,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1312,7 +1311,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1457,7 +1456,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1600,7 +1599,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1642,15 +1641,20 @@ namespace Server.Mobiles
             SetSkill(SkillName.DetectHidden, 80.0);
             SetSkill(SkillName.Parry, 90.0, 100.0);
 
-            PackReg(7, 11);
+            PackItem(Loot.PackReg(7, 11));
 
-            int scrolls = Utility.RandomMinMax(4, 6);
+            // int scrolls = Utility.RandomMinMax(4, 6);
 
             Fame = 8500;
             Karma = -8500;
 
             SetWeaponAbility(WeaponAbility.BleedAttack);
             SetSpecialAbility(SpecialAbility.LifeLeech);
+        }
+
+        public DiseasedBloodElemental(Serial serial)
+            : base(serial)
+        {
         }
 
         public override bool AutoDispel => true;
@@ -1674,11 +1678,6 @@ namespace Server.Mobiles
             AddLoot(LootPack.HighScrolls, Utility.RandomMinMax(1, 8));
         }
 
-        public DiseasedBloodElemental(Serial serial)
-            : base(serial)
-        {
-        }
-
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -1688,7 +1687,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1752,7 +1751,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1818,7 +1817,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1881,7 +1880,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -1936,7 +1935,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

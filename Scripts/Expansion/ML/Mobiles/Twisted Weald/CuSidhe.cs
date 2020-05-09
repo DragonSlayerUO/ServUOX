@@ -83,6 +83,7 @@ namespace Server.Mobiles
         public override bool StatLossAfterTame => true;
         public override int Hides => 10;
         public override int Meat => 3;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.AosFilthyRich, 5);
@@ -128,42 +129,21 @@ namespace Server.Mobiles
             base.OnDoubleClick(from);
         }
 
-        public override int GetIdleSound()
-        {
-            return 0x577;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x576;
-        }
-
-        public override int GetAngerSound()
-        {
-            return 0x578;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x576;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x579;
-        }
+        public override int GetIdleSound() { return 0x577; }
+        public override int GetAttackSound() { return 0x576; }
+        public override int GetAngerSound() { return 0x578; }
+        public override int GetHurtSound() { return 0x576; }
+        public override int GetDeathSound() { return 0x579; }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(3); // version
+            writer.Write(3);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
 
             if (version < 3 && Controlled && RawStr >= 1200 && ControlSlots == ControlSlotsMin)

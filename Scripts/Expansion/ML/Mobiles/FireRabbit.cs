@@ -45,12 +45,12 @@ namespace Server.Mobiles
         public override bool IsScaryToPets => true;
         public override bool BardImmunity => true;
 
-        public override void OnDeath(Container c)
+        public override void OnDeath(Container CorpseLoot)
         {
-            base.OnDeath(c);
-
             if (Utility.RandomDouble() < 0.5)
-                c.DropItem(new AnimalPheromone());
+                CorpseLoot.DropItem(new AnimalPheromone());
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()
@@ -62,15 +62,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

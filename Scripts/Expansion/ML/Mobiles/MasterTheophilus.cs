@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -44,14 +43,9 @@ namespace Server.Mobiles
             AddItem(new Shoes(0x537));
             AddItem(new Robe(0x452));
 
-            PackReg(7);
-            PackReg(7);
-            PackReg(8);
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
+            PackItem(Loot.PackReg(7));
+            PackItem(Loot.PackReg(7));
+            PackItem(Loot.PackReg(8));
 
             SetWeaponAbility(WeaponAbility.ParalyzingBlow);
         }
@@ -61,15 +55,21 @@ namespace Server.Mobiles
         {
         }
         public override bool CanBeParagon => false;
+
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             if (Utility.RandomDouble() < 0.15)
                 c.DropItem(new DisintegratingThesisNotes());
 
             if (Paragon.ChestChance > Utility.RandomDouble())
                 c.DropItem(new ParagonChest(Name, 5));
+
+            base.OnDeath(c);
         }
 
         /*public override bool GivesMLMinorArtifact
@@ -78,8 +78,11 @@ namespace Server.Mobiles
             {
                 return true;
             }
-        }*/
+        }
+        */
+
         public override bool AllureImmunity => true;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 3);
@@ -90,15 +93,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

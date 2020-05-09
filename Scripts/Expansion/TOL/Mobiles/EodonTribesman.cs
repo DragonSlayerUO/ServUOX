@@ -428,7 +428,8 @@ namespace Server.Mobiles
             RangeFight = 7;
 
             PackGold(60, 70);
-            PackReg(1, 3);
+
+            PackItem(Loot.PackReg(1, 3));
 
             Bandage b = new Bandage();
             b.Amount = Utility.RandomMinMax(3, 5);

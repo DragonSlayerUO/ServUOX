@@ -129,15 +129,21 @@ namespace Server.Mobiles
         public override int Hides => 15;
         public override HideType HideType => HideType.Spined;
 
+        public override void OnDeath(Container CorpseLoot)
+        {
+            CorpseLoot.DropItem(Loot.PackBodyPartOrBones());
+
+            CorpseLoot.DropItem(Loot.RandomArmorOrShieldOrWeapon());
+
+            if (0.025 > Utility.RandomDouble())
+                CorpseLoot.DropItem(new GlacialStaff());
+
+            base.OnDeath(CorpseLoot);
+        }
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Meager);
-            PackItem(Loot.RandomArmorOrShieldOrWeapon());
-
-            PackBodyPartOrBones();
-
-            if (0.025 > Utility.RandomDouble())
-                PackItem(new GlacialStaff());
         }
 
         public override void Serialize(GenericWriter writer)

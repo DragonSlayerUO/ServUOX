@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -54,17 +53,18 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
-
             if (Utility.RandomDouble() < 0.75)
                 c.DropItem(new CrystallineFragments());
 
             if (Utility.RandomDouble() < 0.07)
                 c.DropItem(new PiecesOfCrystal());
+
+            base.OnDeath(c);
         }
 
         public override int Feathers => 100;
         public override int TreasureMapLevel => 5;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich, 4);
@@ -128,43 +128,22 @@ namespace Server.Mobiles
             }
         }
 
-        public override int GetAttackSound()
-        {
-            return 0x2F6;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x2F7;
-        }
-
-        public override int GetAngerSound()
-        {
-            return 0x2F8;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x2F9;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x2FA;
-        }
+        public override int GetAttackSound() { return 0x2F6; }
+        public override int GetDeathSound() { return 0x2F7; }
+        public override int GetAngerSound() { return 0x2F8; }
+        public override int GetHurtSound() { return 0x2F9; }
+        public override int GetIdleSound() { return 0x2FA; }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

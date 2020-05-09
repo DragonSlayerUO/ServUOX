@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -46,11 +45,6 @@ namespace Server.Mobiles
 
             PackResources(8);
             PackTalismans(5);
-
-            for (int i = 0; i < Utility.RandomMinMax(1, 6); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
         }
 
         public override void GenerateLoot()
@@ -63,7 +57,10 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(1, 6); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             c.DropItem(new CapturedEssence());
             c.DropItem(new ShimmeringCrystals());
@@ -92,6 +89,8 @@ namespace Server.Mobiles
 
             if (Utility.RandomDouble() < 0.025)
                 c.DropItem(new CrystallineRing());
+
+            base.OnDeath(c);
         }
 
         public override bool AutoDispel => true;
@@ -99,25 +98,10 @@ namespace Server.Mobiles
         public override bool HasFireRing => true;
         public override double FireRingChance => 0.1;
 
-        public override int GetIdleSound()
-        {
-            return 0x1BF;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x1C0;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x1C1;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x1C2;
-        }
+        public override int GetIdleSound() { return 0x1BF; }
+        public override int GetAttackSound() { return 0x1C0; }
+        public override int GetHurtSound() { return 0x1C1; }
+        public override int GetDeathSound() { return 0x1C2; }
 
         #region Helpers
         public override bool CanSpawnHelpers => true;
@@ -161,15 +145,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

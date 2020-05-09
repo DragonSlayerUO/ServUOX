@@ -47,7 +47,7 @@ namespace Server.Mobiles
             ControlSlots = 4;
             MinTameSkill = 85.0;
 
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
 
             SetMagicalAbility(MagicalAbility.MageryMastery);
         }

@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -41,9 +40,8 @@ namespace Server.Mobiles
 
             Fame = 4000;
             Karma = -4000;
-            PackNecroReg(6, 8);
 
-            PackBodyPartOrBones();
+            PackItem(Loot.PackNecroReg(6, 8));
 
             SetWeaponAbility(WeaponAbility.BleedAttack);
         }
@@ -53,42 +51,27 @@ namespace Server.Mobiles
         {
         }
 
+        public override int TreasureMapLevel => 3;
         public override bool BleedImmunity => true;
         public override Poison PoisonImmunity => Poison.Greater;
         public override Poison HitPoison => Poison.Greater;
 
-        public override int GetAngerSound()
-        {
-            return 0x518;
-        }
+        public override int GetAngerSound() { return 0x518; }
+        public override int GetIdleSound() { return 0x517; }
+        public override int GetAttackSound() { return 0x516; }
+        public override int GetHurtSound() { return 0x519; }
+        public override int GetDeathSound() { return 0x515; }
 
-        public override int GetIdleSound()
+        public override void OnDeath(Container CorpseLoot)
         {
-            return 0x517;
+            CorpseLoot.DropItem(Loot.PackBodyPartOrBones());
+            base.OnDeath(CorpseLoot);
         }
-
-        public override int GetAttackSound()
-        {
-            return 0x516;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x519;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x515;
-        }
-
-        public override int TreasureMapLevel => 3;
 
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich, 2);
             AddLoot(LootPack.MedScrolls, 2);
-            // TODO: Bone Pile
         }
 
         public override void Serialize(GenericWriter writer)
@@ -100,7 +83,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

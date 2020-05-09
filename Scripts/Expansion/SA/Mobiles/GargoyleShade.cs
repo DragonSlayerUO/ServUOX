@@ -43,7 +43,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 28;
 
-            PackReg(10);
+            PackItem(Loot.PackReg(10));
         }
 
         public GargoyleShade(Serial serial)

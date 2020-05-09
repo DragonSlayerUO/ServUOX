@@ -33,7 +33,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 86.2);
             SetSkill(SkillName.Wrestling, 86.9);
 
-            PackNecroReg(10, 15); /// Stratics didn't specify
+            PackItem(Loot.PackNecroReg(10, 15));
         }
 
         public UndeadGuardian(Serial serial)

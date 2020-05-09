@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -51,11 +50,6 @@ namespace Server.Mobiles
 
             VirtualArmor = 50;
 
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
-
             SetAreaEffect(AreaEffect.AuraOfNausea);
         }
 
@@ -67,7 +61,10 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             c.DropItem(new DiseasedBark());
             c.DropItem(new EternallyCorruptTree());
@@ -95,6 +92,8 @@ namespace Server.Mobiles
                         break;
                 }
             }
+
+            base.OnDeath(c);
         }
 
         public override void OnThink()
@@ -145,15 +144,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         #region Smack Talk

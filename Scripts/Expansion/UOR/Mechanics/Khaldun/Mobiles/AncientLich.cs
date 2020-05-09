@@ -45,7 +45,7 @@ namespace Server.Mobiles
             Karma = -23000;
 
             VirtualArmor = 60;
-            PackNecroReg(30, 275);
+            PackItem(Loot.PackNecroReg(30, 275));
         }
 
         public AncientLich(Serial serial)

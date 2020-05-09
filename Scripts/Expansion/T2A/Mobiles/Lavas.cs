@@ -113,10 +113,6 @@ namespace Server.Mobiles
 
             VirtualArmor = 40;
 
-            PackItem(new SulfurousAsh(3));
-            PackItem(new Bone());
-            PackBodyPart();
-
             SetSpecialAbility(SpecialAbility.DragonBreath);
         }
 
@@ -133,6 +129,15 @@ namespace Server.Mobiles
         public void AuraEffect(Mobile m)
         {
             m.SendMessage("The radiating heat scorches your skin!");
+        }
+
+        public override void OnDeath(Container CorpseLoot)
+        {
+            CorpseLoot.DropItem(Loot.PackBodyPart());
+            CorpseLoot.DropItem(new SulfurousAsh(3));
+            CorpseLoot.DropItem(new Bone());
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()

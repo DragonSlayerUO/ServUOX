@@ -181,7 +181,7 @@ namespace Server.Mobiles
             Karma = -10000;
 
             PackItem(new SpidersSilk(5));
-            PackNecroReg(Utility.RandomMinMax(4, 10));
+            PackItem(Loot.PackNecroReg(4, 10));
         }
 
         public TerathanMatriarch(Serial serial)

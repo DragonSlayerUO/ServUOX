@@ -43,7 +43,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 44;
 
-            PackReg(6);
+            PackItem(Loot.PackReg(6));
 
             if (0.02 > Utility.RandomDouble())
                 PackStatue();

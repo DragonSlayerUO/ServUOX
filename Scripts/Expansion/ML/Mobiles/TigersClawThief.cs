@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -14,33 +13,12 @@ namespace Server.Mobiles
             Title = "of the Tiger's Claw Sect";
             Female = Utility.RandomBool();
             Race = Race.Human;
+
             Hue = Race.RandomSkinHue();
             HairItemID = Race.RandomHair(Female);
             HairHue = Race.RandomHairHue();
             Race.RandomFacialHair(this);
-
-            AddItem(new ThighBoots(0x51D));
-            AddItem(new Wakizashi());
-            AddItem(new FancyShirt(0x51D));
-            AddItem(new StuddedMempo());
-            AddItem(new JinBaori(0x69));
-
-            Item item;
-
-            item = new StuddedGloves();
-            item.Hue = 0x69;
-            AddItem(item);
-
-            item = new LeatherNinjaPants();
-            item.Hue = 0x51D;
-            AddItem(item);
-
-            item = new LightPlateJingasa();
-            item.Hue = 0x51D;
-            AddItem(item);
-
-            // TODO quest items
-
+                       
             SetStr(340, 360);
             SetDex(400, 415);
             SetInt(200, 215);
@@ -71,6 +49,32 @@ namespace Server.Mobiles
             Karma = -13000;
 
             VirtualArmor = 58;
+
+            // TODO quest items
+            AddItem(new ThighBoots(0x51D));
+            AddItem(new Wakizashi());
+            AddItem(new FancyShirt(0x51D));
+            AddItem(new StuddedMempo());
+            AddItem(new JinBaori(0x69));
+
+            Item item;
+            item = new StuddedGloves
+            {
+                Hue = 0x69
+            };
+            AddItem(item);
+
+            item = new LeatherNinjaPants
+            {
+                Hue = 0x51D
+            };
+            AddItem(item);
+
+            item = new LightPlateJingasa
+            {
+                Hue = 0x51D
+            };
+            AddItem(item);
         }
 
         public TigersClawThief(Serial serial)
@@ -88,22 +92,22 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
-
             if (Utility.RandomDouble() < 0.3)
                 c.DropItem(new TigerClawSectBadge());
+
+            base.OnDeath(c);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

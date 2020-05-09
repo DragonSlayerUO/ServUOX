@@ -39,10 +39,7 @@ namespace Server.Mobiles
             Fame = 18000;
             Karma = -18000;
 
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
+            VirtualArmor = 29;
         }
 
         public LadyJennifyr(Serial serial)
@@ -54,13 +51,18 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             if (Utility.RandomDouble() < 0.15)
                 c.DropItem(new DisintegratingThesisNotes());
 
             if (Utility.RandomDouble() < 0.1)
                 c.DropItem(new ParrotItem());
+
+            base.OnDeath(c);
         }
 
         /*public override bool GivesMLMinorArtifact
@@ -70,6 +72,7 @@ namespace Server.Mobiles
                 return true;
             }
         }*/
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 3);
@@ -81,9 +84,7 @@ namespace Server.Mobiles
 
             if (Utility.RandomDouble() < 0.1)
             {
-                ExpireTimer timer;
-
-                if (m_Table.TryGetValue(defender, out timer))
+                if (m_Table.TryGetValue(defender, out ExpireTimer timer))
                     timer.DoExpire();
 
                 defender.FixedParticles(0x3709, 10, 30, 5052, EffectLayer.LeftFoot);
@@ -101,15 +102,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         private class ExpireTimer : Timer

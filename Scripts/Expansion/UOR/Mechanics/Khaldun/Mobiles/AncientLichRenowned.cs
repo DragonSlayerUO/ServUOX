@@ -45,7 +45,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 60;
 
-            PackNecroReg(30, 275);
+            PackItem(Loot.PackNecroReg(30, 275));
         }
 
         public AncientLichRenowned(Serial serial)

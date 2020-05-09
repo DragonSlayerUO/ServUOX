@@ -1,6 +1,4 @@
 using System;
-using Server;
-using Server.Items;
 using System.Linq;
 using System.Collections.Generic;
 using Server.Engines.Despise;
@@ -64,10 +62,10 @@ namespace Server.Items
         public static void GenerateRandomItem(Item item, int luckChance, int attributeCount, int minIntensity, int maxIntensity)
         {
             int min = (attributeCount * 2) * minIntensity;
-            min = min + (int)(min * ((double)Utility.RandomMinMax(1, 4) / 10));
+            min += (int)(min * ((double)Utility.RandomMinMax(1, 4) / 10));
 
             int max = (attributeCount * 2) * maxIntensity;
-            max = max + (int)(max * ((double)Utility.RandomMinMax(1, 4) / 10));
+            max += (int)(max * ((double)Utility.RandomMinMax(1, 4) / 10));
 
             RunicReforging.GenerateRandomItem(item, luckChance, min, max);
         }
@@ -133,20 +131,17 @@ namespace Server.Items
 
         public static void Initialize()
         {
-            Entries = new List<BossEntry>();
+            Entries = new List<BossEntry>
+            {
+                new BossEntry(100, typeof(BaseRenowned), typeof(TRex), typeof(BaseShipCaptain), typeof(Navrey)),
 
-            Entries.Add(
-                new BossEntry(100, typeof(BaseRenowned), typeof(TRex), typeof(BaseShipCaptain), typeof(Navrey)));
-
-            Entries.Add(
                 new BossEntry(150, typeof(BaseChampion), typeof(Impaler), typeof(DarknightCreeper), typeof(FleshRenderer),
-                                   typeof(ShadowKnight), typeof(AbysmalHorror), typeof(AdrianTheGloriousLord), typeof(AndrosTheDreadLord)));
+                                   typeof(ShadowKnight), typeof(AbysmalHorror), typeof(AdrianTheGloriousLord), typeof(AndrosTheDreadLord)),
 
-            Entries.Add(
-                new BossEntry(250, typeof(BasePeerless), typeof(Harrower), typeof(DemonKnight), typeof(ShadowguardBoss), typeof(Osiredon)));
+                new BossEntry(250, typeof(BasePeerless), typeof(Harrower), typeof(DemonKnight), typeof(ShadowguardBoss), typeof(Osiredon)),
 
-            Entries.Add(
-                new BossEntry(350, typeof(ClockworkExodus), typeof(CoraTheSorceress), typeof(Charydbis), typeof(Zipactriotl), typeof(MyrmidexQueen)));
+                new BossEntry(350, typeof(ClockworkExodus), typeof(CoraTheSorceress), typeof(Charydbis), typeof(Zipactriotl), typeof(MyrmidexQueen))
+            };
         }
     }
 }

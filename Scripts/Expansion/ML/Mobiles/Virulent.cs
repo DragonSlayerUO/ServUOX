@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -40,16 +39,9 @@ namespace Server.Mobiles
             SetSkill(SkillName.Poisoning, 120.0);
             SetSkill(SkillName.Magery, 104.2, 119.8);
             SetSkill(SkillName.EvalInt, 102.8, 116.8);
-
-            PackItem(new SpidersSilk(8));
-
+                       
             Fame = 21000;
             Karma = -21000;
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
 
             SetWeaponAbility(WeaponAbility.MortalStrike);
         }
@@ -63,6 +55,7 @@ namespace Server.Mobiles
         public override Poison PoisonImmunity => Poison.Lethal;
         public override Poison HitPoison => Poison.Lethal;
         public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.AosUltraRich, 4);
@@ -70,7 +63,12 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            c.DropItem(new SpidersSilk(8));
+
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             if (Utility.RandomDouble() < 0.025)
             {
@@ -87,20 +85,20 @@ namespace Server.Mobiles
 
             if (Utility.RandomDouble() < 0.1)
                 c.DropItem(new ParrotItem());
+
+            base.OnDeath(c);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

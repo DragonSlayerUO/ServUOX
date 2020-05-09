@@ -88,18 +88,14 @@ namespace Server.Mobiles
 
         public virtual string DefaultName => "a changeling";
         public virtual int DefaultHue => 0;
-
         public override bool UseSmartAI => true;
-
         public override bool ShowFameTitle => false;
         public override bool InitialInnocent => (m_MorphedInto != null);
+
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile MorphedInto
         {
-            get
-            {
-                return m_MorphedInto;
-            }
+            get => m_MorphedInto;
             set
             {
                 if (value == this)
@@ -127,30 +123,11 @@ namespace Server.Mobiles
             AddLoot(LootPack.MedScrolls);
         }
 
-        public override int GetAngerSound()
-        {
-            return 0x46E;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x470;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x46D;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x471;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x46F;
-        }
+        public override int GetAngerSound() { return 0x46E; }
+        public override int GetIdleSound() { return 0x470; }
+        public override int GetAttackSound() { return 0x46D; }
+        public override int GetHurtSound() { return 0x471; }
+        public override int GetDeathSound() { return 0x46F; }
 
         public override void OnThink()
         {
@@ -197,7 +174,6 @@ namespace Server.Mobiles
         public override void OnAfterDelete()
         {
             DeleteClonedItems();
-
             base.OnAfterDelete();
         }
 
@@ -209,15 +185,14 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write(0); // version
+            writer.Write(0);
             writer.Write((m_MorphedInto != null));
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             if (reader.ReadBool())
                 ValidationQueue<Changeling>.Add(this);
@@ -308,15 +283,13 @@ namespace Server.Mobiles
             public override void Serialize(GenericWriter writer)
             {
                 base.Serialize(writer);
-
-                writer.Write(0); // version
+                writer.Write(0);
             }
 
             public override void Deserialize(GenericReader reader)
             {
                 base.Deserialize(reader);
-
-                int version = reader.ReadInt();
+                _ = reader.ReadInt();
             }
         }
     }

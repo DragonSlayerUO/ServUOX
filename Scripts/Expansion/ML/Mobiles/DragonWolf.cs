@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a dragon wolf corpse")]
@@ -51,7 +49,6 @@ namespace Server.Mobiles
         }
 
         public override bool CanAngerOnTame => true;
-
         public override int Meat => 4;
         public override int Hides => 25;
         public override FoodType FavoriteFood => FoodType.Meat;
@@ -71,7 +68,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

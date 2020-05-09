@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -10,11 +9,6 @@ namespace Server.Mobiles
         {
             Name = "a crystal wisp";
             Hue = 0x482;
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
         }
 
         public CrystalWisp(Serial serial)
@@ -27,18 +21,26 @@ namespace Server.Mobiles
             AddLoot(LootPack.MedScrolls);
         }
 
+        public override void OnDeath(Container CorpseLoot)
+        {
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
+
+            base.OnDeath(CorpseLoot);
+        }
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -44,11 +44,6 @@ namespace Server.Mobiles
             Fame = 15000;
             Karma = -15000;
 
-            if (Utility.RandomDouble() < .25)
-                PackItem(Engines.Plants.Seed.RandomBonsaiSeed());
-
-            PackBodyPartOrBones();
-
             Tamable = true;
             ControlSlots = 3;
             MinTameSkill = 93.9;
@@ -67,29 +62,20 @@ namespace Server.Mobiles
         public override FoodType FavoriteFood => FoodType.FruitsAndVegies | FoodType.GrainsAndHay;
         public override bool CanAngerOnTame => true;
 
-        public override int GetAngerSound()
-        {
-            return 0x4E8;
-        }
+        public override int GetAngerSound() { return 0x4E8; }
+        public override int GetIdleSound() { return 0x4E7; }
+        public override int GetAttackSound() { return 0x4E6; }
+        public override int GetHurtSound() { return 0x4E9; }
+        public override int GetDeathSound() { return 0x4E5; }
 
-        public override int GetIdleSound()
+        public override void OnDeath(Container CorpseLoot)
         {
-            return 0x4E7;
-        }
+            CorpseLoot.DropItem(Loot.PackBodyPartOrBones());
 
-        public override int GetAttackSound()
-        {
-            return 0x4E6;
-        }
+            if (Core.ML && Utility.RandomDouble() < .25)
+                CorpseLoot.DropItem(Engines.Plants.Seed.RandomBonsaiSeed());
 
-        public override int GetHurtSound()
-        {
-            return 0x4E9;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x4E5;
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()

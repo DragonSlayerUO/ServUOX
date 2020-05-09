@@ -208,7 +208,7 @@ namespace Server.Mobiles
             ControlSlots = 2;
             MinTameSkill = 84.3;
 
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
 
             SetSpecialAbility(SpecialAbility.DragonBreath);
         }

@@ -54,66 +54,47 @@ namespace Server.Mobiles
         public override bool GivesMLMinorArtifact => true;
         public override Poison PoisonImmunity => Poison.Lethal;
 
+        public override int GetDeathSound() { return 0x56F; }
+        public override int GetAttackSound() { return 0x570; }
+        public override int GetIdleSound() { return 0x571; }
+        public override int GetAngerSound() { return 0x572; }
+        public override int GetHurtSound() { return 0x573; }
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.AosSuperBoss, 8);
         }
 
-        public override void OnDeath(Container c)
+        public override void OnDeath(Container CorspeLoot)
         {
-            base.OnDeath(c);
-
-            c.DropItem(new LardOfParoxysmus());
+            CorspeLoot.DropItem(new LardOfParoxysmus());
 
             switch (Utility.Random(3))
             {
                 case 0:
-                    c.DropItem(new ParoxysmusDinner());
+                    CorspeLoot.DropItem(new ParoxysmusDinner());
                     break;
                 case 1:
-                    c.DropItem(new ParoxysmusCorrodedStein());
+                    CorspeLoot.DropItem(new ParoxysmusCorrodedStein());
                     break;
                 case 2:
-                    c.DropItem(new StringOfPartsOfParoxysmusVictims());
+                    CorspeLoot.DropItem(new StringOfPartsOfParoxysmusVictims());
                     break;
             }
 
             if (Utility.RandomDouble() < 0.6)
-                c.DropItem(new ParrotItem());
+                CorspeLoot.DropItem(new ParrotItem());
 
             if (Utility.RandomBool())
-                c.DropItem(new SweatOfParoxysmus());
+                CorspeLoot.DropItem(new SweatOfParoxysmus());
 
             if (Utility.RandomDouble() < 0.05)
-                c.DropItem(new ParoxysmusSwampDragonStatuette());
+                CorspeLoot.DropItem(new ParoxysmusSwampDragonStatuette());
 
             if (Utility.RandomDouble() < 0.05)
-                c.DropItem(new ScepterOfTheChief());
-        }
+                CorspeLoot.DropItem(new ScepterOfTheChief());
 
-        public override int GetDeathSound()
-        {
-            return 0x56F;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x570;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x571;
-        }
-
-        public override int GetAngerSound()
-        {
-            return 0x572;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x573;
+            base.OnDeath(CorspeLoot);
         }
 
         public override void OnDamage(int amount, Mobile from, bool willKill)
@@ -148,15 +129,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         public virtual void SpawnBulbous()

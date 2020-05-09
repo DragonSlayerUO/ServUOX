@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -41,24 +40,24 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
-
             c.DropItem(new TigerClawKey());
 
             if (Utility.RandomDouble() < 0.5)
                 c.DropItem(new TigerClawSectBadge());
+
+            base.OnDeath(c);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

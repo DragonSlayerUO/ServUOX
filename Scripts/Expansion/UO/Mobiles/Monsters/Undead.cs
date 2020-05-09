@@ -137,8 +137,8 @@ namespace Server.Mobiles
 
             VirtualArmor = 38;
 
-            PackReg(3);
-            PackNecroReg(3, 10);
+            PackItem(Loot.PackReg(3));
+            PackItem(Loot.PackNecroReg(3, 10));
         }
 
         public BoneMagi(Serial serial)
@@ -286,7 +286,7 @@ namespace Server.Mobiles
             VirtualArmor = 50;
 
             AddItem(new GnarledStaff());
-            PackNecroReg(17, 24);
+            PackItem(Loot.PackNecroReg(17, 24));
         }
 
         public Lich(Serial serial)
@@ -376,7 +376,7 @@ namespace Server.Mobiles
             VirtualArmor = 50;
 
             AddItem(new GnarledStaff());
-            PackNecroReg(12, 40);
+            PackItem(Loot.PackNecroReg(12, 40));
         }
 
         public LichLord(Serial serial)
@@ -460,7 +460,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 28;
 
-            PackReg(10);
+            PackItem(Loot.PackReg(10));
         }
 
         public Shade(Serial serial)
@@ -626,10 +626,10 @@ namespace Server.Mobiles
 
             VirtualArmor = 38;
 
-            PackReg(3);
+            PackItem(Loot.PackReg(3));
             if (Core.AOS)
             {
-                PackNecroReg(3, 10);
+                PackItem(Loot.PackNecroReg(3, 10));
                 PackItem(new Bone());
             }
         }
@@ -800,7 +800,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 28;
 
-            PackReg(10);
+            PackItem(Loot.PackReg(10));
         }
 
         public Spectre(Serial serial)
@@ -869,7 +869,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 28;
 
-            PackReg(10);
+            PackItem(Loot.PackReg(10));
         }
 
         public Wraith(Serial serial)
@@ -932,8 +932,6 @@ namespace Server.Mobiles
             Karma = -600;
 
             VirtualArmor = 18;
-
-            PackBodyPartOrBones();
         }
 
         public Zombie(Serial serial)
@@ -954,6 +952,12 @@ namespace Server.Mobiles
             }
 
             return base.IsEnemy(m);
+        }
+
+        public override void OnDeath(Container CorpseLoot)
+        {
+            CorpseLoot.DropItem(Loot.PackBodyPartOrBones());
+            base.OnDeath(CorpseLoot);
         }
 
         public override void GenerateLoot()

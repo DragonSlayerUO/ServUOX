@@ -176,7 +176,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 44;
 
-            PackReg(6);
+            PackItem(Loot.PackReg(6));
 
             if (Utility.RandomDouble() < 0.02)
                 PackStatue();

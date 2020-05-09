@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Server.Items;
 using Server.Mobiles;
@@ -56,11 +55,14 @@ namespace Server.Engines.Quests.Haven
                     weapon = new VikingSword();
                     break;
             }
+
             weapon.Movable = false;
             AddItem(weapon);
 
-            Item shield = new BronzeShield();
-            shield.Movable = false;
+            Item shield = new BronzeShield
+            {
+                Movable = false
+            };
             AddItem(shield);
 
             SetSkill(SkillName.Swords, 20.0);
@@ -72,6 +74,7 @@ namespace Server.Engines.Quests.Haven
         }
 
         public override bool ClickTitle => false;
+                       
         public override bool IsEnemy(Mobile m)
         {
             if (m.Player || m is BaseVendor)
@@ -92,15 +95,13 @@ namespace Server.Engines.Quests.Haven
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -131,7 +132,7 @@ namespace Server.Engines.Quests.Haven
 
         public override void OnSingleClick(Mobile from)
         {
-            int hue = Notoriety.GetHue(Server.Misc.NotorietyHandlers.CorpseNotoriety(from, this));
+            int hue = Notoriety.GetHue(Misc.NotorietyHandlers.CorpseNotoriety(from, this));
 
             if (ItemID == 0x2006) // Corpse form
                 from.Send(new MessageLocalized(Serial, ItemID, MessageType.Label, hue, 3, 1049318, "", Name)); // the remains of ~1_NAME~ the militia fighter
@@ -150,15 +151,13 @@ namespace Server.Engines.Quests.Haven
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

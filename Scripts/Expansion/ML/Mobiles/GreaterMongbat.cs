@@ -1,6 +1,3 @@
-using System;
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("a mongbat corpse")]
@@ -50,6 +47,7 @@ namespace Server.Mobiles
         public override int Meat => 1;
         public override int Hides => 6;
         public override FoodType FavoriteFood => FoodType.Meat;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Poor);
@@ -64,7 +62,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -1,8 +1,6 @@
 using System;
 using System.Linq;
-
 using Server.Items;
-using Server.Network;
 using Server.Spells;
 
 namespace Server.Mobiles
@@ -64,13 +62,9 @@ namespace Server.Mobiles
             Karma = -24000;
 
             VirtualArmor = 80;
+
             PackResources(8);
             PackTalismans(5);
-
-            for (int i = 0; i < Utility.RandomMinMax(1, 6); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
 
             SetSpecialAbility(SpecialAbility.HowlOfCacophony);
         }
@@ -90,7 +84,10 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(1, 6); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             c.DropItem(new GrizzledBones());
 
@@ -137,45 +134,26 @@ namespace Server.Mobiles
                         break;
                 }
             }
+
+            base.OnDeath(c);
         }
 
-        public override int GetDeathSound()
-        {
-            return 0x57F;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x580;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x581;
-        }
-
-        public override int GetAngerSound()
-        {
-            return 0x582;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x583;
-        }
+        public override int GetDeathSound() { return 0x57F; }
+        public override int GetAttackSound() { return 0x580; }
+        public override int GetIdleSound() { return 0x581; }
+        public override int GetAngerSound() { return 0x582; }
+        public override int GetHurtSound() { return 0x583; }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         public override void OnDamage(int amount, Mobile from, bool willKill)
@@ -194,7 +172,6 @@ namespace Server.Mobiles
 
     public class InfernalOoze : Item
     {
-        private bool m_Corrosive;
         private int m_Damage;
         private Mobile m_Owner;
         private Timer m_Timer;
@@ -216,18 +193,14 @@ namespace Server.Mobiles
 
             m_Damage = damage;
 
-            m_Corrosive = corrosive;
+            Corrosive = corrosive;
             m_StartTime = DateTime.UtcNow;
 
             m_Timer = Timer.DelayCall(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), OnTick);
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Corrosive
-        {
-            get { return m_Corrosive; }
-            set { m_Corrosive = value; }
-        }
+        public bool Corrosive { get; set; }
 
         private void OnTick()
         {
@@ -268,7 +241,7 @@ namespace Server.Mobiles
 
         public virtual void Damage(Mobile m)
         {
-            if (m_Corrosive)
+            if (Corrosive)
             {
                 for (int i = 0; i < m.Items.Count; i++)
                 {
@@ -319,15 +292,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             Delete();
         }

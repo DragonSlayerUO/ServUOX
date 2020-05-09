@@ -51,7 +51,7 @@ namespace Server.Mobiles
                 case 2: PackItem(new StrangleScroll()); break;
                 case 3: PackItem(new LichFormScroll()); break;
             }
-            PackReg(23);
+            PackItem(Loot.PackReg(23));
             PackItem(new Sandals());
 
             if (Utility.RandomDouble() < 0.75)

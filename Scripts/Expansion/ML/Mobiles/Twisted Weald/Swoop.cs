@@ -8,7 +8,6 @@ namespace Server.Mobiles
         [Constructable]
         public Swoop()
         {
-
             Name = "Swoop";
             Hue = 0xE0;
 
@@ -37,7 +36,7 @@ namespace Server.Mobiles
             Fame = 18000;
             Karma = 0;
 
-            PackReg(4);
+            PackItem(Loot.PackReg(4));
 
             Tamable = false;
 
@@ -51,39 +50,39 @@ namespace Server.Mobiles
 
         public override bool CanBeParagon => false;
 
-        public override void OnDeath(Container c)
+        public override void OnDeath(Container CorpseLoot)
         {
-            base.OnDeath(c);
+            base.OnDeath(CorpseLoot);
 
             if (Utility.RandomDouble() < 0.025)
             {
                 switch (Utility.Random(20))
                 {
-                    case 0: c.DropItem(new AssassinChest()); break;
-                    case 1: c.DropItem(new AssassinArms()); break;
-                    case 2: c.DropItem(new DeathChest()); break;
-                    case 3: c.DropItem(new MyrmidonArms()); break;
-                    case 4: c.DropItem(new MyrmidonLegs()); break;
-                    case 5: c.DropItem(new MyrmidonGorget()); break;
-                    case 6: c.DropItem(new LeafweaveGloves()); break;
-                    case 7: c.DropItem(new LeafweaveLegs()); break;
-                    case 8: c.DropItem(new LeafweavePauldrons()); break;
-                    case 9: c.DropItem(new PaladinGloves()); break;
-                    case 10: c.DropItem(new PaladinGorget()); break;
-                    case 11: c.DropItem(new PaladinArms()); break;
-                    case 12: c.DropItem(new HunterArms()); break;
-                    case 13: c.DropItem(new HunterGloves()); break;
-                    case 14: c.DropItem(new HunterLegs()); break;
-                    case 15: c.DropItem(new HunterChest()); break;
-                    case 16: c.DropItem(new GreymistArms()); break;
-                    case 17: c.DropItem(new GreymistGloves()); break;
-                    case 18: c.DropItem(new GreymistLegs()); break;
-                    case 19: c.DropItem(new MyrmidonChest()); break;
+                    case 0: CorpseLoot.DropItem(new AssassinChest()); break;
+                    case 1: CorpseLoot.DropItem(new AssassinArms()); break;
+                    case 2: CorpseLoot.DropItem(new DeathChest()); break;
+                    case 3: CorpseLoot.DropItem(new MyrmidonArms()); break;
+                    case 4: CorpseLoot.DropItem(new MyrmidonLegs()); break;
+                    case 5: CorpseLoot.DropItem(new MyrmidonGorget()); break;
+                    case 6: CorpseLoot.DropItem(new LeafweaveGloves()); break;
+                    case 7: CorpseLoot.DropItem(new LeafweaveLegs()); break;
+                    case 8: CorpseLoot.DropItem(new LeafweavePauldrons()); break;
+                    case 9: CorpseLoot.DropItem(new PaladinGloves()); break;
+                    case 10: CorpseLoot.DropItem(new PaladinGorget()); break;
+                    case 11: CorpseLoot.DropItem(new PaladinArms()); break;
+                    case 12: CorpseLoot.DropItem(new HunterArms()); break;
+                    case 13: CorpseLoot.DropItem(new HunterGloves()); break;
+                    case 14: CorpseLoot.DropItem(new HunterLegs()); break;
+                    case 15: CorpseLoot.DropItem(new HunterChest()); break;
+                    case 16: CorpseLoot.DropItem(new GreymistArms()); break;
+                    case 17: CorpseLoot.DropItem(new GreymistGloves()); break;
+                    case 18: CorpseLoot.DropItem(new GreymistLegs()); break;
+                    case 19: CorpseLoot.DropItem(new MyrmidonChest()); break;
                 }
             }
 
             if (Utility.RandomDouble() < 0.1)
-                c.DropItem(new ParrotItem());
+                CorpseLoot.DropItem(new ParrotItem());
         }
 
         public Swoop(Serial serial)
@@ -110,7 +109,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

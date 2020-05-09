@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -60,8 +59,10 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
+
         public override bool CanBeParagon => false;
         public override bool GivesMLMinorArtifact => true;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 3);
@@ -70,15 +71,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

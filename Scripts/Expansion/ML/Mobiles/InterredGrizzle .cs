@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -42,13 +41,22 @@ namespace Server.Mobiles
 
             Fame = 3700;  // Guessed
             Karma = -3700;  // Guessed
-
-            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
         }
+
+        public InterredGrizzle(Serial serial)
+        : base(serial)
+        {
+        }
+
         public override bool CanBeParagon => false;
+        public override int TreasureMapLevel => 4;
+
+        public override int GetAngerSound() { return 0x581; }
+        public override int GetIdleSound() { return 0x582; }
+        public override int GetAttackSound() { return 0x580; }
+        public override int GetHurtSound() { return 0x583; }
+        public override int GetDeathSound() { return 0x584; }
+
         /*
         public override bool OnBeforeDeath()
         {
@@ -57,12 +65,16 @@ namespace Server.Mobiles
         return base.OnBeforeDeath();
         }
         */
-        public InterredGrizzle(Serial serial)
-            : base(serial)
-        {
-        }
 
-        public override int TreasureMapLevel => 4;
+        public override void OnDeath(Container CorpseLoot)
+        {
+            for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
+            {
+                CorpseLoot.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
+
+            base.OnDeath(CorpseLoot);
+        }  
 
         public override void GenerateLoot() // -- Need to verify
         {
@@ -82,31 +94,6 @@ namespace Server.Mobiles
             return new InfernalOoze(this, false, Utility.RandomMinMax(6, 10));
         }
 
-        public override int GetAngerSound()
-        {
-            return 0x581;
-        }
-
-        public override int GetIdleSound()
-        {
-            return 0x582;
-        }
-
-        public override int GetAttackSound()
-        {
-            return 0x580;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x583;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x584;
-        }
-
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -116,7 +103,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

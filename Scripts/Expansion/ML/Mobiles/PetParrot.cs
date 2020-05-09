@@ -6,7 +6,6 @@ namespace Server.Mobiles
 {
     public class PetParrot : BaseCreature
     {
-        private DateTime m_Birth;
         [Constructable]
         public PetParrot()
             : this(DateTime.MinValue, null, 0)
@@ -41,9 +40,9 @@ namespace Server.Mobiles
             Blessed = true;
 
             if (birth != DateTime.MinValue)
-                m_Birth = birth;
+                Birth = birth;
             else
-                m_Birth = DateTime.UtcNow;
+                Birth = DateTime.UtcNow;
 
             if (name != null)
                 Name = name;
@@ -59,22 +58,12 @@ namespace Server.Mobiles
 
         public override bool NoHouseRestrictions => true;
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime Birth
-        {
-            get
-            {
-                return m_Birth;
-            }
-            set
-            {
-                m_Birth = value;
-            }
-        }
+        public DateTime Birth { get; set; }
         public override FoodType FavoriteFood => FoodType.FruitsAndVegies;
+
         public static int GetWeeks(DateTime birth)
         {
             TimeSpan span = DateTime.UtcNow - birth;
-
             return (int)(span.TotalDays / 7);
         }
 
@@ -87,7 +76,7 @@ namespace Server.Mobiles
                 if (house != null && house.IsCoOwner(from) && from.AccessLevel == AccessLevel.Player)
                     from.SendLocalizedMessage(1072625); // As the house owner, you may rename this Parrot.
 
-                from.Send(new Server.Network.MobileStatus(from, this));
+                from.Send(new Network.MobileStatus(from, this));
             }
         }
 
@@ -95,7 +84,7 @@ namespace Server.Mobiles
         {
             base.GetProperties(list);
 
-            int weeks = GetWeeks(m_Birth);
+            int weeks = GetWeeks(Birth);
 
             if (weeks == 1)
                 list.Add(1072626); // 1 week old
@@ -167,20 +156,17 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
+            writer.Write(0);
 
-            writer.Write(0); // version
-
-            writer.Write(m_Birth);
+            writer.Write(Birth);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
+            _ = reader.ReadInt();
 
-            int version = reader.ReadInt();
-
-            m_Birth = reader.ReadDateTime();
-
+            Birth = reader.ReadDateTime();
             Frozen = true;
         }
     }

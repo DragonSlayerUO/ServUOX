@@ -40,7 +40,6 @@ namespace Server.Mobiles
             VirtualArmor = 18;
 
             AddItem(new LightSource());
-            PackBones();
         }
 
         public ShadowWisp(Serial serial)
@@ -52,6 +51,7 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container CorpseLoot)
         {
+            CorpseLoot.DropItem(Loot.PackBones());
             base.OnDeath(CorpseLoot);
         }
 

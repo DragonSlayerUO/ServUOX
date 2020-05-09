@@ -88,11 +88,6 @@ namespace Server.Mobiles
             VirtualArmor = 50;
             PackTalismans(5);
             PackResources(8);
-
-            for (int i = 0; i < Utility.RandomMinMax(1, 6); i++)
-            {
-                PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            }
         }
 
         public override bool ShowFameTitle => false;
@@ -104,7 +99,10 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            for (int i = 0; i < Utility.RandomMinMax(1, 6); i++)
+            {
+                c.DropItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
+            }
 
             c.DropItem(new EyeOfTheTravesty());
             c.DropItem(new OrdersFromMinax());
@@ -138,13 +136,15 @@ namespace Server.Mobiles
             {
                 c.DropItem(new MalekisHonor());
             }
+
+            base.OnDeath(c);
         }
 
         public override void OnDamage(int amount, Mobile from, bool willKill)
         {
             if (0.1 > Utility.RandomDouble() && m_NextMirrorImage < DateTime.UtcNow)
             {
-                new Server.Spells.Ninjitsu.MirrorImage(this, null).Cast();
+                new Spells.Ninjitsu.MirrorImage(this, null).Cast();
 
                 m_NextMirrorImage = DateTime.UtcNow + TimeSpan.FromSeconds(Utility.RandomMinMax(20, 45));
             }
@@ -165,13 +165,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         public void ChangeBody()
@@ -428,13 +428,13 @@ namespace Server.Mobiles
             public override void Serialize(GenericWriter writer)
             {
                 base.Serialize(writer);
-                writer.Write(0); // version
+                writer.Write(0);
             }
 
             public override void Deserialize(GenericReader reader)
             {
                 base.Deserialize(reader);
-                int version = reader.ReadInt();
+                _ = reader.ReadInt();
             }
         }
     }
