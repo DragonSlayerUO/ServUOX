@@ -412,7 +412,7 @@ namespace Server
 
         public override void Write(decimal value)
         {
-            var bits = Decimal.GetBits(value);
+            var bits = decimal.GetBits(value);
 
             for (int i = 0; i < bits.Length; ++i)
             {

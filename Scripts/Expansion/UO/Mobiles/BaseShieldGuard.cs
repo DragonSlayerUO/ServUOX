@@ -80,7 +80,7 @@ namespace Server.Mobiles
             shield.Movable = false;
             AddItem(shield);
 
-            PackGold(250, 500);
+            PackItem(Loot.PackGold(250, 500));
 
             Skills[SkillName.Anatomy].Base = 120.0;
             Skills[SkillName.Tactics].Base = 120.0;

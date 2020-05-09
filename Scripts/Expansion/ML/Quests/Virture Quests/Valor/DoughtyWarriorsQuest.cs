@@ -221,7 +221,7 @@ namespace Server.Engines.Quests
                 case 1: AddItem(new ThighBoots()); break;
             }
 
-            PackGold(100, 200);
+            PackItem(Loot.PackGold(100, 200));
             Blessed = true;
         }
 

@@ -177,9 +177,6 @@ namespace Server.Mobiles
             VirtualArmor = 44;
 
             PackItem(Loot.PackReg(6));
-
-            if (Utility.RandomDouble() < 0.02)
-                PackStatue();
         }
 
         public RatmanMage(Serial serial)
@@ -217,6 +214,11 @@ namespace Server.Mobiles
                     case 9: CorpseLoot.DropItem(new PoisonStrikeScroll()); break;
                 }
             }
+
+            if (Utility.RandomDouble() < 0.02)
+                CorpseLoot.DropItem(Loot.RandomStatue());
+
+            base.OnDeath(CorpseLoot);
         }
 
         public override void Serialize(GenericWriter writer)

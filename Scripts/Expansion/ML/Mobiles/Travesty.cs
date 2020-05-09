@@ -90,7 +90,7 @@ namespace Server.Mobiles
             PackResources(8);
         }
 
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
 
         public Travesty(Serial serial)
             : base(serial)

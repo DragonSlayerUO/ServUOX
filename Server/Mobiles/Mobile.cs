@@ -790,7 +790,7 @@ namespace Server
         protected List<string> m_SlayerVulnerabilities = new List<string>();
         protected bool m_SpecialSlayerMechanics = false;
 
-        public List<String> SlayerVulnerabilities => m_SlayerVulnerabilities;
+        public List<string> SlayerVulnerabilities => m_SlayerVulnerabilities;
 
         [CommandProperty(AccessLevel.Decorator)]
         public bool SpecialSlayerMechanics => m_SpecialSlayerMechanics;
@@ -1050,7 +1050,7 @@ namespace Server
 
             if (name == null)
             {
-                name = String.Empty;
+                name = string.Empty;
             }
 
             string prefix = ""; // still needs to be defined due to cliloc. Only defined in PlayerMobile. BaseCreature and BaseVendor require the suffix for the title and use the same cliloc.
@@ -1715,7 +1715,7 @@ namespace Server
 
         public override string ToString()
         {
-            return String.Format("0x{0:X} \"{1}\"", Serial.Value, Name);
+            return string.Format("0x{0:X} \"{1}\"", Serial.Value, Name);
         }
 
         public long NextActionTime { get; set; }
@@ -6634,10 +6634,10 @@ namespace Server
                         op.WriteLine();
                     }
 
-                    Utility.WriteConsoleColor(ConsoleColor.Red, String.Format("Offending Mobile: {0} [{1}]", GetType().ToString(), this));
-                    Utility.WriteConsoleColor(ConsoleColor.Red, String.Format("Offending Item: {0} [{1}]", item, item.GetType().ToString()));
-                    Utility.WriteConsoleColor(ConsoleColor.Red, String.Format("Equipped Item: {0} [{1}]", equipped, equipped.GetType().ToString()));
-                    Utility.WriteConsoleColor(ConsoleColor.Red, String.Format("Layer: {0}", item.Layer.ToString()));
+                    Utility.WriteConsoleColor(ConsoleColor.Red, string.Format("Offending Mobile: {0} [{1}]", GetType().ToString(), this));
+                    Utility.WriteConsoleColor(ConsoleColor.Red, string.Format("Offending Item: {0} [{1}]", item, item.GetType().ToString()));
+                    Utility.WriteConsoleColor(ConsoleColor.Red, string.Format("Equipped Item: {0} [{1}]", equipped, equipped.GetType().ToString()));
+                    Utility.WriteConsoleColor(ConsoleColor.Red, string.Format("Layer: {0}", item.Layer.ToString()));
                 }
                 catch
                 { }
@@ -6948,7 +6948,7 @@ namespace Server
                 {
                     m_Fame = value;
 
-                    if (ShowFameTitle && (m_Player || m_Body.IsHuman) && (oldValue >= 10000) != (value >= 10000))
+                    if (DisplayFameTitle && (m_Player || m_Body.IsHuman) && (oldValue >= 10000) != (value >= 10000))
                     {
                         InvalidateProperties();
                     }
@@ -7008,12 +7008,12 @@ namespace Server
 
         public void SayTo(Mobile to, string format, params object[] args)
         {
-            SayTo(to, false, String.Format(format, args));
+            SayTo(to, false, string.Format(format, args));
         }
 
         public void SayTo(Mobile to, bool ascii, string format, params object[] args)
         {
-            SayTo(to, ascii, String.Format(format, args));
+            SayTo(to, ascii, string.Format(format, args));
         }
 
         public void SayTo(Mobile to, int number)
@@ -7043,7 +7043,7 @@ namespace Server
 
         public void SayTo(Mobile to, int hue, string text, string args, bool ascii)
         {
-            PrivateOverheadMessage(MessageType.Regular, hue, ascii, String.Format(text, args), to.NetState);
+            PrivateOverheadMessage(MessageType.Regular, hue, ascii, string.Format(text, args), to.NetState);
         }
 
         public void Say(int number, int hue)
@@ -7073,7 +7073,7 @@ namespace Server
 
         public void Say(string format, params object[] args)
         {
-            Say(String.Format(format, args));
+            Say(string.Format(format, args));
         }
 
         public void Say(int number, AffixType type, string affix, string args)
@@ -7098,7 +7098,7 @@ namespace Server
 
         public void Emote(string format, params object[] args)
         {
-            Emote(String.Format(format, args));
+            Emote(string.Format(format, args));
         }
 
         public void Emote(int number)
@@ -7118,7 +7118,7 @@ namespace Server
 
         public void Whisper(string format, params object[] args)
         {
-            Whisper(String.Format(format, args));
+            Whisper(string.Format(format, args));
         }
 
         public void Whisper(int number)
@@ -7138,7 +7138,7 @@ namespace Server
 
         public void Yell(string format, params object[] args)
         {
-            Yell(String.Format(format, args));
+            Yell(string.Format(format, args));
         }
 
         public void Yell(int number)
@@ -12057,7 +12057,7 @@ namespace Server
 
         public void SendMessage(string format, params object[] args)
         {
-            SendMessage(0x3B2, String.Format(format, args));
+            SendMessage(0x3B2, string.Format(format, args));
         }
 
         public void SendMessage(int hue, string text)
@@ -12077,7 +12077,7 @@ namespace Server
 
         public void SendMessage(int hue, string format, params object[] args)
         {
-            SendMessage(hue, String.Format(format, args));
+            SendMessage(hue, string.Format(format, args));
         }
 
         public void SendAsciiMessage(string text)
@@ -12087,7 +12087,7 @@ namespace Server
 
         public void SendAsciiMessage(string format, params object[] args)
         {
-            SendAsciiMessage(0x3B2, String.Format(format, args));
+            SendAsciiMessage(0x3B2, string.Format(format, args));
         }
 
         public void SendAsciiMessage(int hue, string text)
@@ -12107,7 +12107,7 @@ namespace Server
 
         public void SendAsciiMessage(int hue, string format, params object[] args)
         {
-            SendAsciiMessage(hue, String.Format(format, args));
+            SendAsciiMessage(hue, string.Format(format, args));
         }
         #endregion
 
@@ -12287,7 +12287,7 @@ namespace Server
                     m_MountItem = (mountItem = (FindItemOnLayer(Layer.Mount) as IMountItem)) as Item;
                 }
 
-                return mountItem == null ? null : mountItem.Mount;
+                return mountItem?.Mount;
             }
         }
 
@@ -12318,17 +12318,15 @@ namespace Server
         public virtual bool CanTarget => true;
         public virtual bool ClickTitle => true;
 
-        public virtual bool PropertyTitle => m_OldPropertyTitles ? ClickTitle : true;
-
-        private static bool m_OldPropertyTitles;
+        public virtual bool PropertyTitle => OldPropertyTitles ? ClickTitle : true;
 
         public static bool DisableHiddenSelfClick { get; set; } = true;
         public static bool AsciiClickMessage { get; set; } = true;
         public static bool GuildClickMessage { get; set; } = true;
-        public static bool OldPropertyTitles { get => m_OldPropertyTitles; set => m_OldPropertyTitles = value; }
+        public static bool OldPropertyTitles { get; set; }
 
-        public virtual bool ShowFameTitle => true;
-        public virtual bool ShowAccessTitle => false;
+        public virtual bool DisplayFameTitle => true;
+        public virtual bool DisplayAccessTitle => false;
 
         /// <summary>
         ///     Overridable. Event invoked when the Mobile is single clicked.
@@ -12371,7 +12369,7 @@ namespace Server
                         type = "";
                     }
 
-                    string text = String.Format(title.Length <= 0 ? "[{1}]{2}" : "[{0}, {1}]{2}", title, guild.Abbreviation, type);
+                    string text = string.Format(title.Length <= 0 ? "[{1}]{2}" : "[{0}, {1}]{2}", title, guild.Abbreviation, type);
 
                     PrivateOverheadMessage(MessageType.Regular, SpeechHue, true, text, from.NetState);
                 }
@@ -12396,12 +12394,12 @@ namespace Server
 
             if (name == null)
             {
-                name = String.Empty;
+                name = string.Empty;
             }
 
             string prefix = "";
 
-            if (ShowFameTitle && (m_Player || m_Body.IsHuman) && m_Fame >= 10000)
+            if (DisplayFameTitle && (m_Player || m_Body.IsHuman) && m_Fame >= 10000)
             {
                 prefix = (m_Female ? "Lady" : "Lord");
             }
@@ -12419,15 +12417,15 @@ namespace Server
 
             if (prefix.Length > 0 && suffix.Length > 0)
             {
-                val = String.Concat(prefix, " ", name, " ", suffix);
+                val = string.Concat(prefix, " ", name, " ", suffix);
             }
             else if (prefix.Length > 0)
             {
-                val = String.Concat(prefix, " ", name);
+                val = string.Concat(prefix, " ", name);
             }
             else if (suffix.Length > 0)
             {
-                val = String.Concat(name, " ", suffix);
+                val = string.Concat(name, " ", suffix);
             }
             else
             {

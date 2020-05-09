@@ -53,7 +53,7 @@ namespace Server.Mobiles
             else
                 AddItem(new ThighBoots());
 
-            PackGold(20, 100);
+            PackItem(Loot.PackGold(20, 100));
         }
 
         public HireMage(Serial serial)

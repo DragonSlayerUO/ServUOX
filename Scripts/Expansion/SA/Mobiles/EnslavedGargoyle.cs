@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -37,9 +36,6 @@ namespace Server.Mobiles
 
             VirtualArmor = 35;
 
-            if (0.2 > Utility.RandomDouble())
-                PackItem(new GargoylesPickaxe());
-
             SetSpecialAbility(SpecialAbility.AngryFire);
         }
 
@@ -50,6 +46,15 @@ namespace Server.Mobiles
 
         public override int Meat => 1;
         public override int TreasureMapLevel => 1;
+
+        public override void OnDeath(Container c)
+        {
+            if (0.2 > Utility.RandomDouble())
+                c.DropItem(new GargoylesPickaxe());
+
+            base.OnDeath(c);
+        }
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Average, 2);
@@ -65,7 +70,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

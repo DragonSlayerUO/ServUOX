@@ -44,9 +44,6 @@ namespace Server.Mobiles
             VirtualArmor = 44;
 
             PackItem(Loot.PackReg(6));
-
-            if (0.02 > Utility.RandomDouble())
-                PackStatue();
         }
 
         public VitaviRenowned(Serial serial)
@@ -68,6 +65,14 @@ namespace Server.Mobiles
         public override int Hides => 8;
 
         public override HideType HideType => HideType.Spined;
+
+        public override void OnDeath(Container c)
+        {
+            if (0.02 > Utility.RandomDouble())
+                c.DropItem(Loot.RandomStatue());
+            base.OnDeath(c);
+        }
+
 
         public override void GenerateLoot()
         {

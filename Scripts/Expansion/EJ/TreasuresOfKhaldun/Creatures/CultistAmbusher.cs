@@ -160,7 +160,7 @@ namespace Server.Mobiles
         }
 
         public override bool AlwaysMurderer => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
 
         public CultistAmbusher(Serial serial)
             : base(serial)

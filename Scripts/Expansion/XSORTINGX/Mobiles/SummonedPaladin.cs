@@ -42,7 +42,7 @@ namespace Server.Engines.Quests.Necro
             SetSkill(SkillName.Swords, 50.0);
             SetSkill(SkillName.Tactics, 50.0);
 
-            PackGold(500);
+            PackItem(Loot.PackGold(500));
         }
 
         public SummonedPaladin(Serial serial)

@@ -39,7 +39,7 @@ namespace Server.Mobiles
 
             VirtualArmor = 28;
 
-            PackGold(Utility.Random(100, 180));
+            PackItem(Loot.PackGold(100, 800));
 
             SolenHelper.PackPicnicBasket(this);
 

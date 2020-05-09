@@ -42,7 +42,7 @@ namespace Server.Items
                     MessageType.Regular,
                     0x3B2,
                     true,
-                    String.Format("Bank container has {0} items, {1} stones", TotalItems, TotalWeight),
+                    string.Format("Bank container has {0} items, {1} stones", TotalItems, TotalWeight),
                     Owner.NetState);
 
                 Owner.Send(new EquipUpdate(this));

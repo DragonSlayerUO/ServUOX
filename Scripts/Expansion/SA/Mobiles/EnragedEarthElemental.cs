@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -41,13 +40,6 @@ namespace Server.Mobiles
 
             VirtualArmor = 34;
             ControlSlots = 2;
-
-            PackItem(new FertileDirt(Utility.RandomMinMax(1, 4)));
-            PackItem(new MandrakeRoot());
-
-            Item ore = new IronOre(5);
-            ore.ItemID = 0x19B7;
-            PackItem(ore);
         }
 
         public EnragedEarthElemental(Serial serial)
@@ -59,6 +51,7 @@ namespace Server.Mobiles
         public override double DispelFocus => 45.0;
         public override bool BleedImmunity => true;
         public override int TreasureMapLevel => 1;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Average);
@@ -68,10 +61,19 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            c.DropItem(new FertileDirt(Utility.RandomMinMax(1, 4)));
+            c.DropItem(new MandrakeRoot());
+
+            Item ore = new IronOre(5)
+            {
+                ItemID = 0x19B7
+            };
+            c.DropItem(ore);
 
             if (Utility.RandomDouble() < 0.03)
                 c.DropItem(new LuckyCoin());
+
+            base.OnDeath(c);
         }
 
         public override void Serialize(GenericWriter writer)
@@ -83,7 +85,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

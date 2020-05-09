@@ -41,7 +41,7 @@ namespace Server.Mobiles
 
             Utility.AssignRandomHair(this);
 
-            PackGold(100, 150);
+            PackItem(Loot.PackGold(100, 150));
         }
 
         public override void Serialize(GenericWriter writer)

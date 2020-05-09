@@ -43,16 +43,17 @@ namespace Server.Mobiles
             Karma = -4000;
 
             VirtualArmor = 100;
-            if (0.02 > Utility.RandomDouble())
-                PackStatue();
         }
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);
+            if (0.02 > Utility.RandomDouble())
+                c.DropItem(Loot.RandomStatue());
 
             if (Utility.RandomDouble() < 0.3)
                 c.DropItem(new PixieLeg());
+
+            base.OnDeath(c);
         }
 
         public override void GenerateLoot()

@@ -109,7 +109,7 @@ namespace Server
             text = e.Text;
             access = e.Access;
 
-            if (String.IsNullOrWhiteSpace(text))
+            if (string.IsNullOrWhiteSpace(text))
             {
                 return;
             }
@@ -149,7 +149,7 @@ namespace Server
 
         public static void Broadcast(int hue, bool ascii, AccessLevel access, string format, params object[] args)
         {
-            Broadcast(hue, ascii, access, String.Format(format, args));
+            Broadcast(hue, ascii, access, string.Format(format, args));
         }
 
         private interface IEntityEntry
@@ -271,7 +271,7 @@ namespace Server
                         Console.WriteLine("Error: Type '{0}' was not found.", typeName);
                     }
 
-                    throw new Exception(String.Format("Bad type '{0}'", typeName));
+                    throw new Exception(string.Format("Bad type '{0}'", typeName));
                 }
 
                 ConstructorInfo ctor = t.GetConstructor(m_SerialTypeArray);
@@ -568,7 +568,7 @@ namespace Server
 
                                 if (reader.Position != (entry.Position + entry.Length))
                                 {
-                                    throw new Exception(String.Format("***** Bad serialize on {0} *****", m.GetType()));
+                                    throw new Exception(string.Format("***** Bad serialize on {0} *****", m.GetType()));
                                 }
                             }
                             catch (Exception e)
@@ -612,7 +612,7 @@ namespace Server
 
                                 if (reader.Position != (entry.Position + entry.Length))
                                 {
-                                    throw new Exception(String.Format("***** Bad serialize on {0} *****", item.GetType()));
+                                    throw new Exception(string.Format("***** Bad serialize on {0} *****", item.GetType()));
                                 }
                             }
                             catch (Exception e)
@@ -657,7 +657,7 @@ namespace Server
 
                                 if (reader.Position != (entry.Position + entry.Length))
                                 {
-                                    throw new Exception(String.Format("***** Bad serialize on Guild {0} *****", g.Id));
+                                    throw new Exception(string.Format("***** Bad serialize on Guild {0} *****", g.Id));
                                 }
                             }
                             catch (Exception e)
@@ -818,7 +818,7 @@ namespace Server
 
                 throw new Exception(
 
-                    String.Format(
+                    string.Format(
                         "Load failed (items={0}, mobiles={1}, guilds={2})", /*, data={3}, type={4}, serial={5}*/
                         failedItems,
                         failedMobiles,
@@ -959,7 +959,7 @@ namespace Server
         private static void AppendSafetyLog(string action, IEntity entity)
         {
             string message =
-                String.Format(
+                string.Format(
                     "Warning: Attempted to {1} {2} during world save." + "{0}This action could cause inconsistent state." +
                     "{0}It is strongly advised that the offending scripts be corrected.",
                     Environment.NewLine,

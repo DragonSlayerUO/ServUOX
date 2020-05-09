@@ -71,7 +71,7 @@ namespace Server.Mobiles
         public override Poison PoisonImmunity => Poison.Lethal;
         public override double HitPoisonChance => 0.8;
         public override int Feathers => 30;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override bool ClickTitle => false;
 
         public override void GenerateLoot()

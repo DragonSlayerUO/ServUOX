@@ -58,7 +58,7 @@ namespace Server.Mobiles
                     break;
             }
 
-            PackGold(200, 250);
+            PackItem(Loot.PackGold(200, 250));
         }
 
         public override void Serialize(GenericWriter writer)

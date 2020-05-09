@@ -213,15 +213,15 @@ namespace Server.Misc
         {
             StringBuilder title = new StringBuilder();
 
-            bool showSkillTitle = beheld.ShowFameTitle && ((beholder == beheld) || (beheld.Fame >= 5000));
+            bool showSkillTitle = beheld.DisplayFameTitle && ((beholder == beheld) || (beheld.Fame >= 5000));
 
             PlayerMobile pm = beheld as PlayerMobile;
 
-            if (Core.SA && beheld.ShowFameTitle && pm != null && pm.FameKarmaTitle != null)
+            if (Core.SA && beheld.DisplayFameTitle && pm != null && pm.FameKarmaTitle != null)
             {
                 title.AppendFormat(pm.FameKarmaTitle, beheld.Name, beheld.Female ? "Lady" : "Lord");
             }
-            else if (beheld.ShowFameTitle || (beholder == beheld))
+            else if (beheld.DisplayFameTitle || (beholder == beheld))
             {
                 title.Append(ComputeFameTitle(beheld));
             }

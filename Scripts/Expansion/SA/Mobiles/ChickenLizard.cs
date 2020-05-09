@@ -40,9 +40,14 @@ namespace Server.Mobiles
             Tamable = true;
             ControlSlots = 1;
             MinTameSkill = 0.0;
+        }
 
+        public override void OnDeath(Container c)
+        {
             if (0.05 > Utility.RandomDouble())
-                PackItem(new ChickenLizardEgg());
+                c.DropItem(new ChickenLizardEgg());
+
+            base.OnDeath(c);
         }
 
         public override int Meat => 3;

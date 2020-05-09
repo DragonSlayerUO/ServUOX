@@ -5669,7 +5669,7 @@ namespace Server.Mobiles
             set { m_CurrentVeteranTitle = value; InvalidateProperties(); }
         }
 
-        public override bool ShowAccessTitle
+        public override bool DisplayAccessTitle
         {
             get
             {
@@ -5690,7 +5690,7 @@ namespace Server.Mobiles
         {
             string prefix = "";
 
-            if (ShowFameTitle && Fame >= 10000)
+            if (DisplayFameTitle && Fame >= 10000)
             {
                 prefix = Female ? "Lady" : "Lord";
             }

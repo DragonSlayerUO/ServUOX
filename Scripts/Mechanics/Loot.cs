@@ -982,18 +982,23 @@ namespace Server
             return Construct(ImbuingEssenceIngreds) as Item;
         }
 
+        public static Item PackGold(int amount = 1)
+        {
+             return new Gold(amount);
+        }
+
+        public static Item PackGold(int min, int max)
+        {
+            return PackGold(Utility.RandomMinMax(min, max));
+        }
+
         public static Item PackReg(int min, int max)
         {
             return PackReg(Utility.RandomMinMax(min, max));
         }
 
-        public static Item PackReg(int amount)
+        public static Item PackReg(int amount = 1)
         {
-            if (amount <= 0)
-            {
-                amount = 1;
-            }
-
             Item reg = RandomReagent();
             reg.Amount = amount;
 
@@ -1005,16 +1010,11 @@ namespace Server
             return PackNecroReg(Utility.RandomMinMax(min, max));
         }
 
-        public static Item PackNecroReg(int amount)
+        public static Item PackNecroReg(int amount = 1)
         {
             if (!Core.AOS)
             {
                 return null;
-            }
-
-            if (amount <= 0)
-            {
-                amount = 1;
             }
 
             Item reg = RandomNecromancyReagent();
@@ -1022,6 +1022,22 @@ namespace Server
 
             return reg;
         }
+
+        public static Item PackGem(int min, int max)
+        {
+            return PackGem(Utility.RandomMinMax(min, max));
+        }
+
+        public static Item PackGem(int amount = 1)
+        {
+            Item gem = RandomGem();
+
+            gem.Amount = amount;
+
+            return gem;
+        }
+
+
 
         public static Item PackBones()
         {

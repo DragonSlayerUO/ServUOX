@@ -30,7 +30,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool ShowFameTitle => true;
+        public override bool DisplayFameTitle => true;
         public override bool Commandable => false;
         public override bool NoHouseRestrictions => true;
         public override bool CanOpenDoors => true;

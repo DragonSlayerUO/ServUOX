@@ -190,6 +190,137 @@ namespace Server.Mobiles
 
     public class BaseCreature : Mobile, IHonorTarget, IEngravable
     {
+        public BaseCreature(AIType ai, FightMode mode, int iRangePerception, int iRangeFight)
+            : this(ai, mode, iRangePerception, iRangeFight, .2, .4)
+        {
+        }
+
+        public BaseCreature(
+            AIType ai, FightMode mode, int iRangePerception, int iRangeFight, double dActiveSpeed, double dPassiveSpeed)
+        {
+            PhysicalDamage = 100;
+
+            CanMove = true;
+
+            ApproachWait = false;
+            ApproachRange = 10;
+
+            if (iRangePerception == OldRangePerception)
+            {
+                iRangePerception = DefaultRangePerception;
+            }
+
+            m_Loyalty = MaxLoyalty; // Wonderfully Happy
+
+            m_CurrentAI = ai;
+            m_DefaultAI = ai;
+
+            RangePerception = iRangePerception;
+            RangeFight = iRangeFight;
+
+            FightMode = mode;
+
+            m_iTeam = 0;
+
+            SpeedInfo.GetSpeeds(this, ref dActiveSpeed, ref dPassiveSpeed);
+
+            m_dActiveSpeed = dActiveSpeed;
+            m_dPassiveSpeed = dPassiveSpeed;
+            m_dCurrentSpeed = dPassiveSpeed;
+
+            Debug = false;
+
+            m_arSpellAttack = new List<Type>();
+            m_arSpellDefense = new List<Type>();
+
+            m_bControlled = false;
+            m_ControlMaster = null;
+            ControlTarget = null;
+            m_ControlOrder = OrderType.None;
+
+            m_bTamable = false;
+
+            Owners = new List<Mobile>();
+
+            NextReacquireTime = Core.TickCount + (int)ReacquireDelay.TotalMilliseconds;
+
+            ChangeAIType(AI);
+
+            InhumanSpeech speechType = SpeechType;
+
+            if (speechType != null)
+            {
+                speechType.OnConstruct(this);
+            }
+
+            if (IsInvulnerable && !Core.AOS)
+            {
+                NameHue = 0x35;
+            }
+
+            InitializeAbilities();
+
+            Timer.DelayCall(GenerateLoot, true);
+        }
+
+        public BaseCreature(Serial serial)
+            : base(serial)
+        {
+            m_arSpellAttack = new List<Type>();
+            m_arSpellDefense = new List<Type>();
+
+            Debug = false;
+        }               
+
+        #region Var declarations
+        private AIType m_CurrentAI; // The current AI
+        private AIType m_DefaultAI; // The default AI
+
+        private int m_iTeam; // Monster Team
+        private double m_dActiveSpeed; // Timer speed when active
+        private double m_dPassiveSpeed; // Timer speed when not active
+        private double m_dCurrentSpeed; // The current speed, lets say it could be changed by something;
+
+        private Point3D m_pHome; // The home position of the creature, used by some AI
+
+        private readonly List<Type> m_arSpellAttack; // List of attack spell/power
+        private readonly List<Type> m_arSpellDefense; // List of defensive spell/power
+
+        private bool m_bControlled; // Is controlled
+        private Mobile m_ControlMaster; // My master
+        private Point3D m_ControlDest; // My target destination (patrol)
+        private OrderType m_ControlOrder; // My order
+
+        private int m_Loyalty;
+
+        private double m_dMinTameSkill;
+        private bool m_bTamable;
+
+        private bool m_bSummoned;
+        private int m_iControlSlots = 1;
+        private Dictionary<Map, List<Point2D>> _NavPoints;
+
+        private Mobile m_SummonMaster;
+        private int m_DamageMin = -1;
+        private int m_DamageMax = -1;
+
+        private int m_PhysicalResistance;
+        private int m_FireResistance;
+        private int m_ColdResistance;
+        private int m_PoisonResistance;
+        private int m_EnergyResistance;
+        private bool m_IsStabled;
+
+        private bool m_HasGeneratedLoot; // have we generated our loot yet?
+
+        private bool m_Paragon;
+        private int m_FailedReturnHome; /* return to home failure counter */
+
+        private bool m_IsChampionSpawn;
+
+        private Mobile m_InitialFocus;
+        #endregion
+
         public const int MaxLoyalty = 100;
 
         private bool _LockDirection;
@@ -221,60 +352,6 @@ namespace Server.Mobiles
         public bool CanMove { get; set; }
 
         public virtual bool CanCallGuards => !Deleted && Alive && !AlwaysMurderer && Kills < 5 && (Player || Body.IsHuman);
-
-        #region Var declarations
-
-        private AIType m_CurrentAI; // The current AI
-        private AIType m_DefaultAI; // The default AI
-
-        private int m_iRangePerception; // The view area
-
-        private int m_iTeam; // Monster Team
-        private double m_dActiveSpeed; // Timer speed when active
-        private double m_dPassiveSpeed; // Timer speed when not active
-        private double m_dCurrentSpeed; // The current speed, lets say it could be changed by something;
-
-        private Point3D m_pHome; // The home position of the creature, used by some AI
-
-        private readonly List<Type> m_arSpellAttack; // List of attack spell/power
-        private readonly List<Type> m_arSpellDefense; // List of defensive spell/power
-
-        private bool m_bControlled; // Is controlled
-        private Mobile m_ControlMaster; // My master
-        private Point3D m_ControlDest; // My target destination (patrol)
-        private OrderType m_ControlOrder; // My order
-
-        private int m_Loyalty;
-
-        private double m_dMinTameSkill;
-        private bool m_bTamable;
-
-        private bool m_bSummoned;
-        private int m_iControlSlots = 1;
-        private Mobile m_bBardTarget;
-        private int _CurrentNavPoint;
-        private Dictionary<Map, List<Point2D>> _NavPoints;
-
-        private Mobile m_SummonMaster;
-        private int m_DamageMin = -1;
-        private int m_DamageMax = -1;
-
-        private int m_PhysicalResistance;
-        private int m_FireResistance;
-        private int m_ColdResistance;
-        private int m_PoisonResistance;
-        private int m_EnergyResistance;
-        private bool m_IsStabled;
-
-        private bool m_HasGeneratedLoot; // have we generated our loot yet?
-
-        private bool m_Paragon;
-        private int m_FailedReturnHome; /* return to home failure counter */
-
-        private bool m_IsChampionSpawn;
-
-        private Mobile m_InitialFocus;
-        #endregion
 
         #region Monster Stealables
 
@@ -1651,11 +1728,7 @@ namespace Server.Mobiles
         public WayPoint CurrentWayPoint { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int CurrentNavPoint
-        {
-            get => _CurrentNavPoint;
-            set => _CurrentNavPoint = value;
-        }
+        public int CurrentNavPoint { get; set; }
 
         public Dictionary<Map, List<Point2D>> NavPoints
         {
@@ -1842,14 +1915,12 @@ namespace Server.Mobiles
         public HonorContext ReceivedHonorContext { get; set; }
 
         /*
-
         Seems this actually was removed on OSI somewhere between the original bug report and now.
         We will call it ML, until we can get better information. I suspect it was on the OSI TC when
         originally it taken out of ServUOX, and not implmented on OSIs production shards until more
         recently.  Either way, this is, or was, accurate OSI behavior, and just entirely
         removing it was incorrect.  OSI followers were distracted by being attacked well into
         AoS, at very least.
-
         */
 
         public virtual bool CanBeDistracted => !Core.ML;
@@ -2248,87 +2319,7 @@ namespace Server.Mobiles
         public const int DefaultRangePerception = 16;
         public const int OldRangePerception = 10;
 
-        public BaseCreature(AIType ai, FightMode mode, int iRangePerception, int iRangeFight)
-            : this(ai, mode, iRangePerception, iRangeFight, .2, .4)
-        {
-        }
 
-        public BaseCreature(
-            AIType ai, FightMode mode, int iRangePerception, int iRangeFight, double dActiveSpeed, double dPassiveSpeed)
-        {
-            PhysicalDamage = 100;
-
-            CanMove = true;
-
-            ApproachWait = false;
-            ApproachRange = 10;
-
-            if (iRangePerception == OldRangePerception)
-            {
-                iRangePerception = DefaultRangePerception;
-            }
-
-            m_Loyalty = MaxLoyalty; // Wonderfully Happy
-
-            m_CurrentAI = ai;
-            m_DefaultAI = ai;
-
-            m_iRangePerception = iRangePerception;
-            RangeFight = iRangeFight;
-
-            FightMode = mode;
-
-            m_iTeam = 0;
-
-            SpeedInfo.GetSpeeds(this, ref dActiveSpeed, ref dPassiveSpeed);
-
-            m_dActiveSpeed = dActiveSpeed;
-            m_dPassiveSpeed = dPassiveSpeed;
-            m_dCurrentSpeed = dPassiveSpeed;
-
-            Debug = false;
-
-            m_arSpellAttack = new List<Type>();
-            m_arSpellDefense = new List<Type>();
-
-            m_bControlled = false;
-            m_ControlMaster = null;
-            ControlTarget = null;
-            m_ControlOrder = OrderType.None;
-
-            m_bTamable = false;
-
-            Owners = new List<Mobile>();
-
-            NextReacquireTime = Core.TickCount + (int)ReacquireDelay.TotalMilliseconds;
-
-            ChangeAIType(AI);
-
-            InhumanSpeech speechType = SpeechType;
-
-            if (speechType != null)
-            {
-                speechType.OnConstruct(this);
-            }
-
-            if (IsInvulnerable && !Core.AOS)
-            {
-                NameHue = 0x35;
-            }
-
-            InitializeAbilities();
-
-            Timer.DelayCall(GenerateLoot, true);
-        }
-
-        public BaseCreature(Serial serial)
-            : base(serial)
-        {
-            m_arSpellAttack = new List<Type>();
-            m_arSpellDefense = new List<Type>();
-
-            Debug = false;
-        }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -2349,7 +2340,7 @@ namespace Server.Mobiles
             writer.Write((int)m_CurrentAI);
             writer.Write((int)m_DefaultAI);
 
-            writer.Write(m_iRangePerception);
+            writer.Write(RangePerception);
             writer.Write(RangeFight);
 
             writer.Write(m_iTeam);
@@ -2543,7 +2534,7 @@ namespace Server.Mobiles
             m_CurrentAI = (AIType)reader.ReadInt();
             m_DefaultAI = (AIType)reader.ReadInt();
 
-            m_iRangePerception = reader.ReadInt();
+            RangePerception = reader.ReadInt();
             RangeFight = reader.ReadInt();
 
             m_iTeam = reader.ReadInt();
@@ -2552,9 +2543,9 @@ namespace Server.Mobiles
             m_dPassiveSpeed = reader.ReadDouble();
             m_dCurrentSpeed = reader.ReadDouble();
 
-            if (m_iRangePerception == OldRangePerception)
+            if (RangePerception == OldRangePerception)
             {
-                m_iRangePerception = DefaultRangePerception;
+                RangePerception = DefaultRangePerception;
             }
 
             m_pHome.X = reader.ReadInt();
@@ -3322,7 +3313,7 @@ namespace Server.Mobiles
         public FightMode FightMode { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int RangePerception { get => m_iRangePerception; set => m_iRangePerception = value; }
+        public int RangePerception { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int RangeFight { get; set; }
@@ -3639,7 +3630,7 @@ namespace Server.Mobiles
         public Mobile BardMaster { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile BardTarget { get => m_bBardTarget; set => m_bBardTarget = value; }
+        public Mobile BardTarget { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime BardEndTime { get; set; }
@@ -4539,7 +4530,7 @@ namespace Server.Mobiles
                 return true;
             }
 
-            return (AIObject != null && AIObject.HandlesOnSpeech(from) && from.InRange(this, m_iRangePerception));
+            return (AIObject != null && AIObject.HandlesOnSpeech(from) && from.InRange(this, RangePerception));
         }
 
         public override void OnSpeech(SpeechEventArgs e)
@@ -4550,7 +4541,7 @@ namespace Server.Mobiles
             {
                 e.Handled = true;
             }
-            else if (!e.Handled && AIObject != null && e.Mobile.InRange(this, m_iRangePerception))
+            else if (!e.Handled && AIObject != null && e.Mobile.InRange(this, RangePerception))
             {
                 AIObject.OnSpeech(e);
             }
@@ -5341,7 +5332,7 @@ namespace Server.Mobiles
 
         public virtual void GenerateLoot()
         { }
-
+        
         public virtual void AddLoot(LootPack pack, int amount)
         {
             for (int i = 0; i < amount; ++i)
@@ -5461,60 +5452,6 @@ namespace Server.Mobiles
             return val;
         }
 
-        public void PackGold(int amount)
-        {
-            if (amount > 0)
-            {
-                PackItem(new Gold(amount));
-            }
-        }
-
-        public void PackGold(int min, int max)
-        {
-            PackGold(Utility.RandomMinMax(min, max));
-        }
-
-        public void PackStatue(int min, int max)
-        {
-            PackStatue(Utility.RandomMinMax(min, max));
-        }
-
-        public void PackStatue(int amount)
-        {
-            for (int i = 0; i < amount; ++i)
-            {
-                PackStatue();
-            }
-        }
-
-        public void PackStatue()
-        {
-            PackItem(Loot.RandomStatue());
-        }
-
-        public void PackGem()
-        {
-            PackGem(1);
-        }
-
-        public void PackGem(int min, int max)
-        {
-            PackGem(Utility.RandomMinMax(min, max));
-        }
-
-        public void PackGem(int amount)
-        {
-            if (amount <= 0)
-            {
-                return;
-            }
-
-            Item gem = Loot.RandomGem();
-
-            gem.Amount = amount;
-
-            PackItem(gem);
-        }
 
         public void PackItem(Item item)
         {
@@ -7423,7 +7360,7 @@ namespace Server.Mobiles
 
         public override Mobile GetDamageMaster(Mobile damagee)
         {
-            if (BardProvoked && damagee == m_bBardTarget)
+            if (BardProvoked && damagee == BardTarget)
             {
                 return BardMaster;
             }

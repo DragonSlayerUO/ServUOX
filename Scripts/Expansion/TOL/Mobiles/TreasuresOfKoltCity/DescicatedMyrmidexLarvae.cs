@@ -42,7 +42,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Poisoning, 80, 100);
             SetSkill(SkillName.DetectHidden, 30, 40);
 
-            PackGold(20, 40);
+            PackItem(Loot.PackGold(20, 40));
 
             Fame = 2500;
             Karma = -2500;

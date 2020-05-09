@@ -51,7 +51,7 @@ namespace Server.Mobiles
 
         public override int Meat => 1;
         public override bool AlwaysMurderer => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override TribeType Tribe => TribeType.Savage;
         public override OppositionGroup OppositionGroup => OppositionGroup.SavagesAndOrcs;
 
@@ -166,7 +166,7 @@ namespace Server.Mobiles
 
         public override int Meat => 1;
         public override bool AlwaysMurderer => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override TribeType Tribe => TribeType.Savage;
         public override OppositionGroup OppositionGroup => OppositionGroup.SavagesAndOrcs;
 
@@ -295,7 +295,7 @@ namespace Server.Mobiles
 
         public override int Meat => 1;
         public override bool AlwaysMurderer => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override TribeType Tribe => TribeType.Savage;
         public override OppositionGroup OppositionGroup => OppositionGroup.SavagesAndOrcs;
 

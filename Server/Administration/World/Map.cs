@@ -440,7 +440,7 @@ namespace Server
 
         public static Map Parse(string value)
         {
-            if (String.IsNullOrWhiteSpace(value))
+            if (string.IsNullOrWhiteSpace(value))
             {
                 return null;
             }
@@ -452,7 +452,7 @@ namespace Server
 
             int index;
 
-            if (!Int32.TryParse(value, out index))
+            if (!int.TryParse(value, out index))
             {
                 return m_Maps.FirstOrDefault(m => m != null && Insensitive.Equals(m.Name, value));
             }

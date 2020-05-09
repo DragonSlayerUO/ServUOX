@@ -1,4 +1,3 @@
-using System;
 using Server.Network;
 
 namespace Server.Mobiles
@@ -18,20 +17,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override int GetAttackSound()
-        {
-            return 0xC9;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0xCA;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0xCB;
-        }
+        public override int GetAttackSound() { return 0xC9; }
+        public override int GetHurtSound() { return 0xCA; }
+        public override int GetDeathSound() { return 0xCB; }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -42,7 +30,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -61,20 +49,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override int GetAttackSound()
-        {
-            return 0x82;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x83;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x84;
-        }
+        public override int GetAttackSound() { return 0x82; }
+        public override int GetHurtSound() { return 0x83; }
+        public override int GetDeathSound() { return 0x84; }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -85,7 +62,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -104,20 +81,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override int GetAttackSound()
-        {
-            return 0x82;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x83;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x84;
-        }
+        public override int GetAttackSound() { return 0x82; }
+        public override int GetHurtSound() { return 0x83; }
+        public override int GetDeathSound() { return 0x84; }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -128,7 +94,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -157,7 +123,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -186,7 +152,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -285,7 +251,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
 
         private bool Combat(Mobile mobile)

@@ -309,7 +309,7 @@ namespace Server
 
             Region region;
 
-            if (String.IsNullOrWhiteSpace(Region) || Region == "Default")
+            if (string.IsNullOrWhiteSpace(Region) || Region == "Default")
             {
                 region = Facet.DefaultRegion;
             }
@@ -335,8 +335,8 @@ namespace Server
             }
             else
             {
-                int x1 = Int16.MaxValue, y1 = Int16.MaxValue, z1 = SByte.MaxValue;
-                int x2 = Int16.MinValue, y2 = Int16.MinValue, z2 = SByte.MinValue;
+                int x1 = short.MaxValue, y1 = short.MaxValue, z1 = sbyte.MaxValue;
+                int x2 = short.MinValue, y2 = short.MinValue, z2 = sbyte.MinValue;
 
                 foreach (var o in region.Area)
                 {

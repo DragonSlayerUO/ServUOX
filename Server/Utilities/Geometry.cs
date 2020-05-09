@@ -28,7 +28,7 @@ namespace Server
 
         public override string ToString()
         {
-            return String.Format("({0}, {1})", m_X, m_Y);
+            return string.Format("({0}, {1})", m_X, m_Y);
         }
 
         public static Point2D Parse(string value)
@@ -244,7 +244,7 @@ namespace Server
 
         public override string ToString()
         {
-            return String.Format("({0}, {1}, {2})", m_X, m_Y, m_Z);
+            return string.Format("({0}, {1}, {2})", m_X, m_Y, m_Z);
         }
 
         public override bool Equals(object o)
@@ -471,7 +471,7 @@ namespace Server
 
         public override string ToString()
         {
-            return String.Format("({0}, {1})+({2}, {3})", X, Y, Width, Height);
+            return string.Format("({0}, {1})+({2}, {3})", X, Y, Width, Height);
         }
 
         public override int GetHashCode()
@@ -583,7 +583,7 @@ namespace Server
 
         public override string ToString()
         {
-            return String.Format("({0}, {1}, {2})+({3}, {4}, {5})", Start.X, Start.Y, Start.Z, Width, Height, Depth);
+            return string.Format("({0}, {1}, {2})+({3}, {4}, {5})", Start.X, Start.Y, Start.Z, Width, Height, Depth);
         }
 
         public override int GetHashCode()

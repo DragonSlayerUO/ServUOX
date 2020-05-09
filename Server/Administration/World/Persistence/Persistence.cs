@@ -98,14 +98,14 @@ namespace Server
                 {
                     if (file.Length > 0)
                     {
-                        throw new Exception(String.Format("[Persistance]: {0}", eos));
+                        throw new Exception(string.Format("[Persistance]: {0}", eos));
                     }
                 }
                 catch (Exception e)
                 {
                     Utility.WriteConsoleColor(ConsoleColor.Red, "[Persistance]: An error was encountered while loading a saved object");
 
-                    throw new Exception(String.Format("[Persistance]: {0}", e));
+                    throw new Exception(string.Format("[Persistance]: {0}", e));
                 }
                 finally
                 {

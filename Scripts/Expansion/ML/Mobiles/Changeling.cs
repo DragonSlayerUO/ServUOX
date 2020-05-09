@@ -63,7 +63,7 @@ namespace Server.Mobiles
 
             PackItem(new Arrow(35));
             PackItem(new Bolt(25));
-            PackGem(2);
+            PackItem(Loot.PackGem(2));
 
             for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
             {
@@ -89,7 +89,7 @@ namespace Server.Mobiles
         public virtual string DefaultName => "a changeling";
         public virtual int DefaultHue => 0;
         public override bool UseSmartAI => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override bool InitialInnocent => (m_MorphedInto != null);
 
         [CommandProperty(AccessLevel.GameMaster)]

@@ -72,7 +72,7 @@ namespace Server.Mobiles
             AddItem(new PlateLegs());
             AddItem(new PlateArms());
             AddItem(new LeatherGorget());
-            PackGold(20, 100);
+            PackItem(Loot.PackGold(20, 100));
         }
 
         public HirePaladin(Serial serial)

@@ -68,7 +68,7 @@ namespace Server
 
         public static bool IsDigit(this string text, out int value)
         {
-            return Int32.TryParse(text, out value);
+            return int.TryParse(text, out value);
         }
 
         public static SaveStrategy GetSaveStrategy(this SaveStrategyTypes saveStrategyTypes)

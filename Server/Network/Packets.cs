@@ -2918,7 +2918,7 @@ m_Stream.Write( (int) renderMode );
 
                 if (v == null)
                 {
-                    v = String.Empty;
+                    v = string.Empty;
                 }
 
                 m_Strings.Write((ushort)v.Length);
@@ -3073,7 +3073,7 @@ m_Stream.Write( (int) renderMode );
 
                 if (v == null)
                 {
-                    v = String.Empty;
+                    v = string.Empty;
                 }
 
                 int length = (ushort)v.Length;

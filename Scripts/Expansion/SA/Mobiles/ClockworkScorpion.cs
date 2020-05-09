@@ -56,6 +56,7 @@ namespace Server.Mobiles
         public override bool DeleteOnRelease => true;
         public override bool BardImmunity => !Core.AOS || Controlled;
         public override Poison PoisonImmunity => Poison.Lethal;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Meager, 2);

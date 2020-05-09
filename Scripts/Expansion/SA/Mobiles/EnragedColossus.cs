@@ -1,4 +1,3 @@
-
 namespace Server.Mobiles
 {
     [CorpseName("the remains of an enraged colossus")]
@@ -8,7 +7,7 @@ namespace Server.Mobiles
         public EnragedColossus()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.4, 0.5)
         {
-            Name = "rising colossus";
+            Name = "a rising colossus";
             Body = 829;
 
             SetStr(600);
@@ -49,15 +48,8 @@ namespace Server.Mobiles
         public override bool BleedImmunity => true;
         public override Poison PoisonImmunity => Poison.Lethal;// Immune to poison?
 
-        public override int GetAttackSound()
-        {
-            return 0x627;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x629;
-        }
+        public override int GetAttackSound() { return 0x627; }
+        public override int GetHurtSound() { return 0x629; }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -68,7 +60,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

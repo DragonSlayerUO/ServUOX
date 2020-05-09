@@ -59,6 +59,7 @@ namespace Server.Mobiles
         public override Type[] SharedSAList => new Type[] { typeof(AnimatedLegsoftheInsaneTinker), typeof(StormCaller), typeof(PillarOfStrength) };
         public override Poison PoisonImmunity => Poison.Lethal;
         public override int Meat => 3;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich, 2);
@@ -73,7 +74,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

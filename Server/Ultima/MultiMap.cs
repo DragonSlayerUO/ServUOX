@@ -156,7 +156,7 @@ namespace Ultima
         public static unsafe Bitmap GetFacetImage(int id)
         {
             Bitmap bmp;
-            string path = Files.GetFilePath(String.Format("facet0{0}.mul", id));
+            string path = Files.GetFilePath(string.Format("facet0{0}.mul", id));
             if (path != null)
             {
                 using (var reader = new BinaryReader(new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)))

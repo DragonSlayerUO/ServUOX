@@ -155,7 +155,7 @@ namespace Server.Mobiles
                     break;
             }
 
-            PackGold(25, 100);
+            PackItem(Loot.PackGold(25, 100));
         }
 
         public HireFighter(Serial serial)

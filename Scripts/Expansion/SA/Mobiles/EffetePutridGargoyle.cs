@@ -47,6 +47,7 @@ namespace Server.Mobiles
         }
 
         public override int Meat => 1;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Average, 2);
@@ -63,7 +64,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -84,9 +84,7 @@ namespace Server.Mobiles
 
             Fame = 18000;
             Karma = -18000;
-            PackGold(1800, 2000);
-
-            //
+            PackItem(Loot.PackGold(1800, 2000));
         }
 
         public override int GetAngerSound() { return 0x175; }

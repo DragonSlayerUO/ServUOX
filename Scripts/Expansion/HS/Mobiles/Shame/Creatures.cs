@@ -46,7 +46,7 @@ namespace Server.Mobiles
 
             PackItem(Loot.PackReg(1, 2));
 
-            PackGem(1, 2);
+            PackItem(Loot.PackGem(1, 2));
 
             PackItem(new ExecutionersCap());
 
@@ -121,7 +121,7 @@ namespace Server.Mobiles
 
             PackItem(Loot.PackReg(1, 2));
 
-            PackGem(1, 2);
+            PackItem(Loot.PackGem(1, 2));
 
             PackItem(new Granite());
             PackItem(new Sand());
@@ -209,7 +209,7 @@ namespace Server.Mobiles
 
             Fame = 3500;
             Karma = -3500;
-            PackGem(1);
+            PackItem(Loot.PackGem());
 
             PackItem(new Saltpeter(Utility.RandomMinMax(1, 5)));
             PackItem(new Potash(Utility.RandomMinMax(1, 5)));

@@ -74,7 +74,7 @@ namespace Server.Mobiles
         public override bool CanRummageCorpses => true;
         public override bool BleedImmunity => true;
         public override Poison PoisonImmunity => Poison.Lethal;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override bool ClickTitle => false;
 
         public override ChampionSkullType SkullType => ChampionSkullType.None;

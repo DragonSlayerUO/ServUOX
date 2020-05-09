@@ -68,7 +68,7 @@ namespace Server.Mobiles
                     break;
             }
 
-            PackGold(0, 25);
+            PackItem(Loot.PackGold(0, 25));
         }
 
         public HireThief(Serial serial)

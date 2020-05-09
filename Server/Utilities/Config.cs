@@ -41,7 +41,7 @@ namespace Server
 
             public override string ToString()
             {
-                return String.Format("{0}.{1}{2}={3}", Scope, UseDefault ? "@" : "", Key, Value);
+                return string.Format("{0}.{1}{2}={3}", Scope, UseDefault ? "@" : "", Key, Value);
             }
 
             public override int GetHashCode()
@@ -192,7 +192,7 @@ namespace Server
                 throw new FileNotFoundException();
             }
 
-            path = info.Directory != null ? info.Directory.FullName : String.Empty;
+            path = info.Directory != null ? info.Directory.FullName : string.Empty;
 
             var io = path.IndexOf(_Path, StringComparison.OrdinalIgnoreCase);
 
@@ -203,7 +203,7 @@ namespace Server
 
             var parts = path.Split(Path.DirectorySeparatorChar);
 
-            var scope = String.Join(".", parts.Where(p => !String.IsNullOrWhiteSpace(p)));
+            var scope = string.Join(".", parts.Where(p => !string.IsNullOrWhiteSpace(p)));
 
             if (scope.Length > 0)
             {
@@ -220,7 +220,7 @@ namespace Server
             {
                 var line = lines[i].Trim();
 
-                if (String.IsNullOrWhiteSpace(line))
+                if (string.IsNullOrWhiteSpace(line))
                 {
                     desc.Clear();
                     continue;
@@ -244,27 +244,27 @@ namespace Server
 
                 if (io < 0)
                 {
-                    throw new FormatException(String.Format("Bad format at line {0}", i + 1));
+                    throw new FormatException(string.Format("Bad format at line {0}", i + 1));
                 }
 
                 var key = line.Substring(0, io);
                 var val = line.Substring(io + 1);
 
-                if (String.IsNullOrWhiteSpace(key))
+                if (string.IsNullOrWhiteSpace(key))
                 {
-                    throw new NullReferenceException(String.Format("Key can not be null at line {0}", i + 1));
+                    throw new NullReferenceException(string.Format("Key can not be null at line {0}", i + 1));
                 }
 
                 key = key.Trim();
 
-                if (String.IsNullOrEmpty(val))
+                if (string.IsNullOrEmpty(val))
                 {
                     val = null;
                 }
 
-                var e = new Entry(info.FullName, idx++, scope, String.Join(String.Empty, desc), key, val, useDef);
+                var e = new Entry(info.FullName, idx++, scope, string.Join(string.Empty, desc), key, val, useDef);
 
-                _Entries[String.Format("{0}.{1}", e.Scope, e.Key)] = e;
+                _Entries[string.Format("{0}.{1}", e.Scope, e.Key)] = e;
 
                 desc.Clear();
             }
@@ -308,7 +308,7 @@ namespace Server
             {
                 content.AppendLine();
 
-                if (!String.IsNullOrWhiteSpace(e.Desc))
+                if (!string.IsNullOrWhiteSpace(e.Desc))
                 {
                     line.Clear();
 
@@ -316,7 +316,7 @@ namespace Server
                     {
                         if ((line + word).Length > 100)
                         {
-                            content.AppendLine(String.Format("# {0}", line));
+                            content.AppendLine(string.Format("# {0}", line));
                             line.Clear();
                         }
 
@@ -325,12 +325,12 @@ namespace Server
 
                     if (line.Length > 0)
                     {
-                        content.AppendLine(String.Format("# {0}", line));
+                        content.AppendLine(string.Format("# {0}", line));
                         line.Clear();
                     }
                 }
 
-                content.AppendLine(String.Format("{0}{1}={2}", e.UseDefault ? "@" : String.Empty, e.Key, e.Value));
+                content.AppendLine(string.Format("{0}{1}={2}", e.UseDefault ? "@" : string.Empty, e.Key, e.Value));
             }
 
             File.WriteAllText(path, content.ToString());
@@ -362,7 +362,7 @@ namespace Server
             var file = new FileInfo(Path.Combine(_Path, Path.Combine(parts) + ".cfg"));
             var idx = _Entries.Values.Where(o => Insensitive.Equals(o.File, file.FullName)).Select(o => o.FileIndex).DefaultIfEmpty().Max();
 
-            _Entries[key] = new Entry(file.FullName, idx, String.Join(".", parts), String.Empty, realKey, value, false);
+            _Entries[key] = new Entry(file.FullName, idx, string.Join(".", parts), string.Empty, realKey, value, false);
         }
 
         public static void Set(string key, string value)

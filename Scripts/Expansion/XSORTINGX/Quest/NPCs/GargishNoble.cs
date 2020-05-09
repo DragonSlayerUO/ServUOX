@@ -31,7 +31,7 @@ namespace Server.Mobiles
                 AddItem(new GargishClothKilt(Utility.RandomNeutralHue()));
                 AddItem(new GargishClothLegs(Utility.RandomNeutralHue()));
 
-                PackGold(200, 250);
+                PackItem(Loot.PackGold(200, 250));
             }
         }
 

@@ -66,7 +66,7 @@ namespace Server.Mobiles
             ControlSlots = 4;
             MinTameSkill = 101.1;
 
-            PackGold(500, 800);
+            PackItem(Loot.PackGold(500, 800));
 
             SetWeaponAbility(WeaponAbility.BleedAttack);
         }

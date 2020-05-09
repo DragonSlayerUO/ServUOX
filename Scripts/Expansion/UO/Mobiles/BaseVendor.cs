@@ -70,7 +70,7 @@ namespace Server.Mobiles
         public virtual DateTime NextTrickOrTreat { get; set; }
         public virtual double GetMoveDelay => Utility.RandomMinMax(30, 120);
 
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
 
         public virtual bool IsValidBulkOrder(Item item)
         {
@@ -814,7 +814,7 @@ namespace Server.Mobiles
                 }
             }
 
-            if (!Siege.SiegeShard) PackGold(50, 100);
+            if (!Siege.SiegeShard) PackItem(Loot.PackGold(50, 100));
         }
 
         #region SA
@@ -861,8 +861,7 @@ namespace Server.Mobiles
                 }
             }
 
-            if (!Siege.SiegeShard)
-                PackGold(100, 200);
+            if (!Siege.SiegeShard) PackItem(Loot.PackGold(100, 200));
         }
         #endregion
 

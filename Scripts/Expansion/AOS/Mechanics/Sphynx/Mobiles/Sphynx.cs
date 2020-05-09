@@ -46,7 +46,7 @@ namespace Server.Mobiles
             Fame = 15000;
             Karma = 0;
 
-            PackGold(1000, 1200);
+            PackItem(Loot.PackGold(1000, 1200));
         }
 
         public override void GenerateLoot()

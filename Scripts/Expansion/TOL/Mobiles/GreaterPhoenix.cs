@@ -38,7 +38,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Magery, 90, 100);
             SetSkill(SkillName.EvalInt, 90, 100);
 
-            PackGold(500, 700);
+            PackItem(Loot.PackGold(500, 700));
 
             Fame = 10000;
             Karma = -10000;

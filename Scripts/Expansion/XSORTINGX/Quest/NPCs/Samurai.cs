@@ -86,7 +86,7 @@ namespace Server.Mobiles
             if (Utility.Random(7) != 0)
                 Utility.AssignRandomFacialHair(this, hairHue);
 
-            PackGold(250, 300);
+            PackItem(Loot.PackGold(250, 300));
         }
 
         public Samurai(Serial serial)

@@ -54,7 +54,7 @@ namespace Server.Mobiles
             AddImmovableItem(new BodySash(1157));
             AddImmovableItem(new Halberd());
 
-            PackGold(Utility.RandomMinMax(250, 300));
+            PackItem(Loot.PackGold(250, 300));
 
             Fame = 7500;
             Karma = 4500;
@@ -80,7 +80,7 @@ namespace Server.Mobiles
         }
 
         public override bool AlwaysAttackable => Region.IsPartOf<BattleRegion>();
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override bool ClickTitle => false;
 
         public override void GenerateLoot()

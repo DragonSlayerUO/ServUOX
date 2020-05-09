@@ -67,7 +67,7 @@ namespace Server.Mobiles
         }
 
         public override bool AlwaysMurderer => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override Poison PoisonImmunity => Poison.Lethal;
 
         public override void GenerateLoot()

@@ -33,7 +33,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.MagicResist, 67.4, 77.8);
             SetSkill(SkillName.Tactics, 89.5, 98.5);
             SetSkill(SkillName.Wrestling, 86.8, 93.1);
-            PackGold(75, 200);
+            PackItem(Loot.PackGold(75, 200));
         }
 
         public override bool DeleteCorpseOnDeath => true;
@@ -43,7 +43,7 @@ namespace Server.Mobiles
             if (!base.OnBeforeDeath())
                 return false;
 
-            new TreasureSand().MoveToWorld(this.Location, this.Map);
+            new TreasureSand().MoveToWorld(Location, Map);
 
             return true;
         }
@@ -56,16 +56,13 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            /*int version = */
-            reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

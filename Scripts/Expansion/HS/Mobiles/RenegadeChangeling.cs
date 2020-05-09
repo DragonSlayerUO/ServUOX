@@ -53,7 +53,7 @@ namespace Server.Mobiles
 
             PackItem(new Arrow(35));
             PackItem(new Bolt(25));
-            PackGem(2);
+            PackItem(Loot.PackGem(2));
 
             Fame = 18900;
             Karma = -18900;

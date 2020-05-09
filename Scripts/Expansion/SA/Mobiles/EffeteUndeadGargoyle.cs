@@ -1,7 +1,4 @@
 /* Based on Gargoyle, still no infos on Undead Gargoyle... Have to get also the correct body ID */
-using System;
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("an effete undead gargoyle corpse")]
@@ -48,6 +45,7 @@ namespace Server.Mobiles
 
         public override int TreasureMapLevel => 1;
         public override int Meat => 1;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Meager);
@@ -62,7 +60,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

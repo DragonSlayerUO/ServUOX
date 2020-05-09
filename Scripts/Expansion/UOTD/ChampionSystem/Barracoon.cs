@@ -80,7 +80,7 @@ namespace Server.Mobiles
         public override bool Unprovokable => Core.SE;
         public override bool Uncalmable => Core.SE;
         public override Poison PoisonImmunity => Poison.Deadly;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override bool ClickTitle => false;
 
         public override bool ForceStayHome => true;

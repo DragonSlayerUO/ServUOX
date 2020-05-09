@@ -88,7 +88,7 @@ namespace Server.Mobiles
             if (weapon.Layer == Layer.OneHanded && Utility.RandomBool())
                 AddItem(Loot.RandomShield());
 
-            PackGold(50, 150);
+            PackItem(Loot.PackGold(50, 100));
         }
 
         public ElfBrigand(Serial serial)
@@ -97,7 +97,7 @@ namespace Server.Mobiles
         }
 
         public override bool AlwaysMurderer => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
 
         public override void OnDeath(Container c)
         {

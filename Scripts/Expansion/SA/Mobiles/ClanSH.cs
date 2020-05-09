@@ -1,6 +1,3 @@
-using System;
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("a clan scratch henchrat corpse")]
@@ -49,6 +46,7 @@ namespace Server.Mobiles
         public override bool CanRummageCorpses => true;
         public override int Hides => 8;
         public override HideType HideType => HideType.Spined;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich, 3);
@@ -63,7 +61,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

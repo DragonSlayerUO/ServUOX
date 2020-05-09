@@ -85,7 +85,7 @@ namespace Server.Mobiles
             cloak.LootType = LootType.Blessed;
             SetWearable(cloak);
 
-            PackGold(400, 600);
+            PackItem(Loot.PackGold(250, 600));
         }
 
         public override void OnKilledBy(Mobile m)

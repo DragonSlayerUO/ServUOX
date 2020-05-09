@@ -57,9 +57,9 @@ namespace Server.Mobiles
             for (int i = 0; i < Utility.RandomMinMax(1, 3); i++)
             {
                 PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));
-            } 
+            }
 
-            PackGold(2000, 2500);
+            PackItem(Loot.PackGold(2000, 2500));
 
             SetSpecialAbility(SpecialAbility.DragonBreath);
         }

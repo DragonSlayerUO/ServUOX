@@ -84,7 +84,7 @@ namespace Server.Mobiles
             AddItem(new Longsword());
             PackItem(new Bow());
             PackItem(new Arrow(100));
-            PackGold(10, 50);
+            PackItem(Loot.PackGold(10, 50));
         }
 
         public HireBard(Serial serial)

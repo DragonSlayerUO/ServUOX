@@ -66,7 +66,7 @@ namespace Server.Mobiles
         public override bool Unprovokable => true;
         public override bool BleedImmunity => true;
         public override Poison PoisonImmunity => Poison.Lethal;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override bool ClickTitle => false;
         public override bool AlwaysMurderer => true;
         public override bool AutoDispel => true;

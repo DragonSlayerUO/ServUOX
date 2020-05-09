@@ -306,7 +306,7 @@ namespace Server
             {
                 content.AppendLine();
 
-                if (!String.IsNullOrWhiteSpace(e.Desc))
+                if (!string.IsNullOrWhiteSpace(e.Desc))
                 {
                     line.Clear();
 

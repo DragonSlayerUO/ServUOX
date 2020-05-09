@@ -810,9 +810,9 @@ namespace Server
         /// </summary>
         public virtual void AddNameProperty(ObjectPropertyList list)
         {
-            string name = Name ?? String.Empty;
+            string name = Name ?? string.Empty;
 
-            if (String.IsNullOrWhiteSpace(name))
+            if (string.IsNullOrWhiteSpace(name))
             {
                 if (m_Amount <= 1)
                 {
@@ -1371,7 +1371,7 @@ namespace Server
 
         public void LabelTo(Mobile to, string format, params object[] args)
         {
-            LabelTo(to, String.Format(format, args));
+            LabelTo(to, string.Format(format, args));
         }
 
         public void LabelToAffix(Mobile to, int number, AffixType type, string affix)
@@ -5555,7 +5555,7 @@ namespace Server
                                 LabelNumber,
                                 "",
                                 AffixType.Append,
-                                String.Format(" : {0}", m_Amount),
+                                string.Format(" : {0}", m_Amount),
                                 ""));
                     }
                 }

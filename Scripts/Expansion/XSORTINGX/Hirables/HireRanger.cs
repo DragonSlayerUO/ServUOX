@@ -69,7 +69,7 @@ namespace Server.Mobiles
             SetWearable(new StuddedGorget(), 0x59C);
 
             PackItem(new Arrow(20));
-            PackGold(10, 75);
+            PackItem(Loot.PackGold(10, 75));
         }
 
         public HireRanger(Serial serial)

@@ -33,7 +33,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 80.0, 100.0);
             SetSkill(SkillName.Wrestling, 80.0, 100.0);
 
-            PackGold(50, 150);
+            PackItem(Loot.PackGold(50, 150));
         }
 
         public Gregorio(Serial serial)

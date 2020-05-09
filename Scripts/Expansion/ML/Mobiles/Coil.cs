@@ -43,7 +43,7 @@ namespace Server.Mobiles
             Fame = 17500;
             Karma = -17500;
 
-            PackGem(2);
+            PackItem(Loot.PackGem(2));
             PackItem(new Bone());
 
             for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)

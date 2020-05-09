@@ -148,11 +148,11 @@ namespace Server
 
             if (attrs.Length > 0)
             {
-                message = String.Join("\n", attrs.OfType<DeleteConfirmAttribute>().Select(a => a.Message));
+                message = string.Join("\n", attrs.OfType<DeleteConfirmAttribute>().Select(a => a.Message));
                 return true;
             }
 
-            message = String.Empty;
+            message = string.Empty;
             return false;
         }
     }

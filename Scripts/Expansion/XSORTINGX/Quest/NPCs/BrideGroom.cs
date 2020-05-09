@@ -45,7 +45,7 @@ namespace Server.Mobiles
 
             HairHue = Race.RandomHairHue();
 
-            PackGold(200, 250);
+            PackItem(Loot.PackGold(200, 250));
         }
 
         public override void Serialize(GenericWriter writer)

@@ -67,7 +67,7 @@ namespace Server.Mobiles
         }
 
         public override bool ClickTitle => false;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
         public override bool DeleteCorpseOnDeath => true;
         public override bool AlwaysMurderer => true;
         public override int GetIdleSound()

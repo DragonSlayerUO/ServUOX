@@ -37,7 +37,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 30.1, 49.0);
             SetSkill(SkillName.Wrestling, 40, 50);
 
-            PackGold(60, 70);
+            PackItem(Loot.PackGold(60, 70));
 
             Fame = 5000;
             Karma = -5000;

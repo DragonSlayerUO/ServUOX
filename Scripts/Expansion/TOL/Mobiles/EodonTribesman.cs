@@ -394,7 +394,7 @@ namespace Server.Mobiles
         }
 
         public override bool AlwaysAttackable => Region.IsPartOf<BattleRegion>();
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
 
         public override void GenerateLoot()
         {
@@ -427,7 +427,7 @@ namespace Server.Mobiles
         {
             RangeFight = 7;
 
-            PackGold(60, 70);
+            PackItem(Loot.PackGold(60, 70));
 
             PackItem(Loot.PackReg(1, 3));
 
@@ -567,7 +567,7 @@ namespace Server.Mobiles
         }
 
         public override bool AlwaysAttackable => Region.IsPartOf<BattleRegion>();
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
 
         public TribeShaman(Serial serial) : base(serial)
         {

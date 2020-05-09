@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -57,25 +56,10 @@ namespace Server.Mobiles
             AddLoot(LootPack.Average);
         }
 
-        public override int GetIdleSound()
-        {
-            return 1499;
-        }
-
-        public override int GetAngerSound()
-        {
-            return 1496;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 1498;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 1497;
-        }
+        public override int GetIdleSound() { return 1499; }
+        public override int GetAngerSound() { return 1496; }
+        public override int GetHurtSound() { return 1498; }
+        public override int GetDeathSound() { return 1497; }
 
         public override bool CheckMovement(Direction d, out int newZ)
         {
@@ -97,7 +81,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

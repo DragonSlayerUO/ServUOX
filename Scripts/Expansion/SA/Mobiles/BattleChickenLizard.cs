@@ -45,7 +45,7 @@ namespace Server.Mobiles
 
         public override IDamageable Combatant
         {
-            get { return base.Combatant; }
+            get => base.Combatant;
             set
             {
                 base.Combatant = value;
@@ -100,7 +100,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

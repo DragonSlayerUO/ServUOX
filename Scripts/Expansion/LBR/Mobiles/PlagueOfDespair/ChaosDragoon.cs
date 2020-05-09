@@ -144,7 +144,7 @@ namespace Server.Mobiles
         public override bool BardImmunity => !Core.AOS;
         public override bool CanRummageCorpses => true;
         public override bool AlwaysMurderer => true;
-        public override bool ShowFameTitle => false;
+        public override bool DisplayFameTitle => false;
 
         public override int GetIdleSound() { return 0x2CE; }
         public override int GetDeathSound() { return 0x2CC; }

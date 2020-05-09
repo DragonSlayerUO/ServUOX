@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a dream wraith corpse")]
@@ -58,30 +56,16 @@ namespace Server.Mobiles
         public override bool BleedImmunity => true;
         public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
         public override Poison PoisonImmunity => Poison.Lethal;
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich);
         }
 
-        public override int GetIdleSound()
-        {
-            return 0x5F4;
-        }
-
-        public override int GetAngerSound()
-        {
-            return 0x5F1;
-        }
-
-        public override int GetDeathSound()
-        {
-            return 0x5F2;
-        }
-
-        public override int GetHurtSound()
-        {
-            return 0x5F3;
-        }
+        public override int GetIdleSound() { return 0x5F4; }
+        public override int GetAngerSound() { return 0x5F1; }
+        public override int GetDeathSound() { return 0x5F2; }
+        public override int GetHurtSound() { return 0x5F3; }
 
         public override void Serialize(GenericWriter writer)
         {
@@ -92,7 +76,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -1360,7 +1360,7 @@ namespace Server
                 return callback.Method.Name;
             }
 
-            return String.Format("{0}.{1}", callback.Method.DeclaringType.FullName, callback.Method.Name);
+            return string.Format("{0}.{1}", callback.Method.DeclaringType.FullName, callback.Method.Name);
         }
 
         private static readonly Stack<ConsoleColor> m_ConsoleColors = new Stack<ConsoleColor>();
@@ -1497,22 +1497,22 @@ namespace Server
             return output;
         }
 
-        public static String RemoveHtml(String str)
+        public static string RemoveHtml(string str)
         {
             return str.Replace("<", "").Replace(">", "").Trim();
         }
 
-        public static bool IsNumeric(String str)
+        public static bool IsNumeric(string str)
         {
             return !Regex.IsMatch(str, "[^0-9]");
         }
 
-        public static bool IsAlpha(String str)
+        public static bool IsAlpha(string str)
         {
             return !Regex.IsMatch(str, "[^a-z]", RegexOptions.IgnoreCase);
         }
 
-        public static bool IsAlphaNumeric(String str)
+        public static bool IsAlphaNumeric(string str)
         {
             return !Regex.IsMatch(str, "[^a-z0-9]", RegexOptions.IgnoreCase);
         }

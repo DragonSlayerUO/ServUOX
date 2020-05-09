@@ -166,18 +166,18 @@ namespace Ultima
                 idxPath = Files.MulPath[idxFile.ToLower()];
                 MulPath = Files.MulPath[mulFile.ToLower()];
 
-                if (!String.IsNullOrEmpty(uopFile) && Files.MulPath.ContainsKey(uopFile.ToLower()))
+                if (!string.IsNullOrEmpty(uopFile) && Files.MulPath.ContainsKey(uopFile.ToLower()))
                 {
                     uopPath = Files.MulPath[uopFile.ToLower()];
                 }
 
-                if (String.IsNullOrEmpty(idxPath))
+                if (string.IsNullOrEmpty(idxPath))
                 {
                     idxPath = null;
                 }
                 else
                 {
-                    if (String.IsNullOrEmpty(Path.GetDirectoryName(idxPath)))
+                    if (string.IsNullOrEmpty(Path.GetDirectoryName(idxPath)))
                     {
                         idxPath = Path.Combine(Files.RootDir, idxPath);
                     }
@@ -188,13 +188,13 @@ namespace Ultima
                     }
                 }
 
-                if (String.IsNullOrEmpty(MulPath))
+                if (string.IsNullOrEmpty(MulPath))
                 {
                     MulPath = null;
                 }
                 else
                 {
-                    if (String.IsNullOrEmpty(Path.GetDirectoryName(MulPath)))
+                    if (string.IsNullOrEmpty(Path.GetDirectoryName(MulPath)))
                     {
                         MulPath = Path.Combine(Files.RootDir, MulPath);
                     }
@@ -205,13 +205,13 @@ namespace Ultima
                     }
                 }
 
-                if (String.IsNullOrEmpty(uopPath))
+                if (string.IsNullOrEmpty(uopPath))
                 {
                     uopPath = null;
                 }
                 else
                 {
-                    if (String.IsNullOrEmpty(Path.GetDirectoryName(uopPath)))
+                    if (string.IsNullOrEmpty(Path.GetDirectoryName(uopPath)))
                     {
                         uopPath = Path.Combine(Files.RootDir, uopPath);
                     }
@@ -389,13 +389,13 @@ namespace Ultima
             {
                 idxPath = Files.MulPath[idxFile.ToLower()];
                 MulPath = Files.MulPath[mulFile.ToLower()];
-                if (String.IsNullOrEmpty(idxPath))
+                if (string.IsNullOrEmpty(idxPath))
                 {
                     idxPath = null;
                 }
                 else
                 {
-                    if (String.IsNullOrEmpty(Path.GetDirectoryName(idxPath)))
+                    if (string.IsNullOrEmpty(Path.GetDirectoryName(idxPath)))
                     {
                         idxPath = Path.Combine(Files.RootDir, idxPath);
                     }
@@ -404,13 +404,13 @@ namespace Ultima
                         idxPath = null;
                     }
                 }
-                if (String.IsNullOrEmpty(MulPath))
+                if (string.IsNullOrEmpty(MulPath))
                 {
                     MulPath = null;
                 }
                 else
                 {
-                    if (String.IsNullOrEmpty(Path.GetDirectoryName(MulPath)))
+                    if (string.IsNullOrEmpty(Path.GetDirectoryName(MulPath)))
                     {
                         MulPath = Path.Combine(Files.RootDir, MulPath);
                     }

@@ -1,5 +1,3 @@
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("a snake corpse")]
@@ -53,12 +51,9 @@ namespace Server.Mobiles
         }
 
         public override Poison PoisonImmunity => Poison.Lesser;
-
         public override Poison HitPoison => Poison.Deadly;
-
         //public override bool DeathAdderCharmable{ get{ return true; } }
         public override int Meat => 1;
-
         public override FoodType FavoriteFood => FoodType.Eggs;
 
         public override void Serialize(GenericWriter writer)
