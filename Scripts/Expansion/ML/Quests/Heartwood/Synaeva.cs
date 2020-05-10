@@ -1,7 +1,8 @@
 using System;
 using Server.Items;
+using Server.Engines.Quests;
 
-namespace Server.Engines.Quests
+namespace Server.Mobiles
 {
     public class Synaeva : MondainQuester
     {

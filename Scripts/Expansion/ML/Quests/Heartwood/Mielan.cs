@@ -1,13 +1,14 @@
 using System;
 using Server.Items;
+using Server.Engines.Quests;
 
-namespace Server.Engines.Quests
+namespace Server.Mobiles
 {
     public class Mielan : MondainQuester
     {
         [Constructable]
         public Mielan()
-            : base("Mielan", "the arcanist")
+            : base("Mielan", "the Arcanist")
         {
             SetSkill(SkillName.Meditation, 60.0, 83.0);
             SetSkill(SkillName.Focus, 60.0, 83.0);
