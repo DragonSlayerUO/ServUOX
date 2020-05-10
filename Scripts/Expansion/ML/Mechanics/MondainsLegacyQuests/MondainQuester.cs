@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Server.Mobiles;
+using Server.Engines.Quests;
 
-namespace Server.Engines.Quests
+namespace Server.Mobiles
 {
     public abstract class MondainQuester : BaseVendor
     {

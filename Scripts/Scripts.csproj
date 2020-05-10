@@ -136,6 +136,13 @@
     <Compile Include="Expansion\ML\Items\Necromancer\VampiricEmbraceScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\WitherScroll.cs" />
     <Compile Include="Expansion\ML\Items\Necromancer\WraithFormScroll.cs" />
+    <Compile Include="Expansion\ML\Quests\Defintions\CrimeAndPunishmentQuest.cs" />
+    <Compile Include="Expansion\ML\Quests\Defintions\DeathToTheNinjaQuest.cs" />
+    <Compile Include="Expansion\ML\Quests\Defintions\ExtinguishingTheFlameQuest.cs" />
+    <Compile Include="Expansion\ML\Quests\Defintions\ExAssassinsQuest.cs" />
+    <Compile Include="Expansion\ML\Quests\Defintions\NewLeadershipQuest.cs" />
+    <Compile Include="Expansion\ML\Quests\Defintions\WildBoarCullQuest.cs" />
+    <Compile Include="Expansion\ML\Quests\Defintions\OverpopulationQuest.cs" />
     <Compile Include="Expansion\ML\Quests\New Player Quests\SirHelper.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicKnight.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicMage.cs" />
