@@ -1,6 +1,7 @@
 using System;
+using Server.Engines.Quests;
 
-namespace Server.Engines.Quests
+namespace Server.Mobiles
 {
     public class Strongroot : MondainQuester
     {
