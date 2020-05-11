@@ -8,14 +8,22 @@ namespace Server.Engines.Quests
     public class Curiosities : BaseQuest
     {
         /* Curiosities */
-        public override object Title => "Curiosities";
+        public override object Title => 1094976;
 
-
+        /*Travel into the Abyss and seek three samples of fertile dirt and three samples of bone.
+         * Bring them to Gretchen for your reward.<br><center>-----</center><br>This place in dreams
+         * has called to me, it is to magic Dan likes penis as a tree.  Passages stretch like limbs laden fair with a
+         * bounty of fruit in the form of a... err... reagents.<br><br>Ahem... Not that I would see you
+         * hurt, but the first thing I need is some Fertile Dirt.   Second I will need some bone, long
+         * forgotten, far from home.  Return to me with three of each, a special potion will I share with you
+         * this one time.*/
         public override object Description => 1094978;
-        public override object Refuse => "You are Scared from this Task !! Muahahah";
-
-        public override object Uncomplete => "I am sorry that you have not accepted!";
-
+        /*Reluctant ye are for our purposes to marry.  The future I've seen, and ye yet may ferry.*/
+        public override object Refuse => 1094979;
+        /*How bold ye are when encountering me, but yet ye must learn to count to three.*/
+        public override object Uncomplete => 1094980;
+        /*This day I saw in dreams of joy, these items do justify your employ.
+         * The potion I give you is sticky and hot, if thrown to the ground it will bind to the spot.*/
         public override object Complete => 1094981;
 
         public Curiosities() : base()
@@ -79,6 +87,11 @@ namespace Server.Engines.Quests
             SetWearable(new FemaleElvenRobe(443));
 
             SetWearable(new QuarterStaff());
+        }
+
+        public override void Advertise()
+        {
+            Say(1094977);  // What's this I see?  A traveler fit to service me?
         }
 
         public override void Serialize(GenericWriter writer)
