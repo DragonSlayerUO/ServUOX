@@ -1326,7 +1326,7 @@
     <Compile Include="Expansion\UOR\Mechanics\New Magincia\MaginciaPlants\GardeningContract.cs" />
     <Compile Include="Expansion\UOR\Mechanics\Plants\PottedCoffeePlant.cs" />
     <Compile Include="Expansion\TOL\Items\Equipment\GlovesOfFeudalGrip.cs" />
-    <Compile Include="Expansion\XSORTINGX\BritchesOfWarding.cs" />
+    <Compile Include="Expansion\XSORTINGX\Quest\Quests\BritchesOfWarding.cs" />
     <Compile Include="Expansion\SA\Items\Armor\CuffsOfTheArchmage.cs" />
     <Compile Include="Expansion\ML\Items\Equipment\Sets\Alorons Set\AloronsBustier.cs" />
     <Compile Include="Expansion\ML\Items\Equipment\Sets\Alorons Set\AloronsGorget.cs" />
