@@ -21,9 +21,6 @@ namespace Server.Engines.Quests.Doom
             1, 1
         };
 
-        private Mobile m_AngryAt;
-        private BellOfTheDead m_Bell;
-
         [Constructable]
         public Chyloth()
             : base("the Ferryman")
@@ -35,28 +32,8 @@ namespace Server.Engines.Quests.Doom
         {
         }
 
-        public BellOfTheDead Bell
-        {
-            get
-            {
-                return m_Bell;
-            }
-            set
-            {
-                m_Bell = value;
-            }
-        }
-        public Mobile AngryAt
-        {
-            get
-            {
-                return m_AngryAt;
-            }
-            set
-            {
-                m_AngryAt = value;
-            }
-        }
+        public BellOfTheDead Bell { get; set; }
+        public Mobile AngryAt { get; set; }
         public static void TeleportToFerry(Mobile from)
         {
             Point3D loc = new Point3D(408, 251, 2);
@@ -65,7 +42,7 @@ namespace Server.Engines.Quests.Doom
             Effects.SendLocationParticles(EffectItem.Create(loc, map, EffectItem.DefaultDuration), 0x3728, 10, 10, 0, 0, 2023, 0);
             Effects.PlaySound(loc, map, 0x1FE);
 
-            BaseCreature.TeleportPets(from, loc, map);
+            TeleportPets(from, loc, map);
 
             from.MoveToWorld(loc, map);
         }
@@ -88,7 +65,7 @@ namespace Server.Engines.Quests.Doom
 
         public virtual void BeginGiveWarning()
         {
-            if (Deleted || m_AngryAt == null)
+            if (Deleted || AngryAt == null)
                 return;
 
             Timer.DelayCall(TimeSpan.FromSeconds(4.0), new TimerCallback(EndGiveWarning));
@@ -96,10 +73,10 @@ namespace Server.Engines.Quests.Doom
 
         public virtual void EndGiveWarning()
         {
-            if (Deleted || m_AngryAt == null)
+            if (Deleted || AngryAt == null)
                 return;
 
-            PublicOverheadMessage(MessageType.Regular, 0x3B2, 1050013, m_AngryAt.Name); // You have summoned me in vain ~1_NAME~!  Only the dead may cross!
+            PublicOverheadMessage(MessageType.Regular, 0x3B2, 1050013, AngryAt.Name); // You have summoned me in vain ~1_NAME~!  Only the dead may cross!
             PublicOverheadMessage(MessageType.Regular, 0x3B2, 1050014); // Why have you disturbed me, mortal?!?
 
             BeginSummonDragon();
@@ -107,7 +84,7 @@ namespace Server.Engines.Quests.Doom
 
         public virtual void BeginSummonDragon()
         {
-            if (Deleted || m_AngryAt == null)
+            if (Deleted || AngryAt == null)
                 return;
 
             Timer.DelayCall(TimeSpan.FromSeconds(30.0), new TimerCallback(EndSummonDragon));
@@ -134,15 +111,15 @@ namespace Server.Engines.Quests.Doom
 
         public virtual void EndSummonDragon()
         {
-            if (Deleted || m_AngryAt == null)
+            if (Deleted || AngryAt == null)
                 return;
 
-            Map map = m_AngryAt.Map;
+            Map map = AngryAt.Map;
 
             if (map == null)
                 return;
 
-            if (!m_AngryAt.Region.IsPartOf("Doom"))
+            if (!AngryAt.Region.IsPartOf("Doom"))
                 return;
 
             PublicOverheadMessage(MessageType.Regular, 0x3B2, 1050015); // Feel the wrath of my legions!!!
@@ -156,12 +133,12 @@ namespace Server.Engines.Quests.Doom
 
             for (int i = 0; i < m_Offsets.Length; i += 2)
             {
-                int x = m_AngryAt.X + m_Offsets[(offset + i) % m_Offsets.Length];
-                int y = m_AngryAt.Y + m_Offsets[(offset + i + 1) % m_Offsets.Length];
+                int x = AngryAt.X + m_Offsets[(offset + i) % m_Offsets.Length];
+                int y = AngryAt.Y + m_Offsets[(offset + i + 1) % m_Offsets.Length];
 
-                if (map.CanSpawnMobile(x, y, m_AngryAt.Z))
+                if (map.CanSpawnMobile(x, y, AngryAt.Z))
                 {
-                    dragon.MoveToWorld(new Point3D(x, y, m_AngryAt.Z), map);
+                    dragon.MoveToWorld(new Point3D(x, y, AngryAt.Z), map);
                     foundLoc = true;
                     break;
                 }
@@ -179,12 +156,12 @@ namespace Server.Engines.Quests.Doom
             }
 
             if (!foundLoc)
-                dragon.MoveToWorld(m_AngryAt.Location, map);
+                dragon.MoveToWorld(AngryAt.Location, map);
 
-            dragon.Combatant = m_AngryAt;
+            dragon.Combatant = AngryAt;
 
-            if (m_Bell != null)
-                m_Bell.Dragon = dragon;
+            if (Bell != null)
+                Bell.Dragon = dragon;
         }
 
         public override bool OnDragDrop(Mobile from, Item dropped)
@@ -207,8 +184,8 @@ namespace Server.Engines.Quests.Doom
 
                         if (member != from && member.Map == Map.Malas && member.Region.IsPartOf("Doom"))
                         {
-                            if (m_AngryAt == member)
-                                m_AngryAt = null;
+                            if (AngryAt == member)
+                                AngryAt = null;
 
                             member.CloseGump(typeof(ChylothPartyGump));
                             member.SendGump(new ChylothPartyGump(from, member));
@@ -216,8 +193,8 @@ namespace Server.Engines.Quests.Doom
                     }
                 }
 
-                if (m_AngryAt == from)
-                    m_AngryAt = null;
+                if (AngryAt == from)
+                    AngryAt = null;
 
                 TeleportToFerry(from);
 
