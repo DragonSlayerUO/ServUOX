@@ -1,24 +1,23 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class JackLoanShark : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
+        public override Type[] Quests => null;   //JackTheVillainQuest
 
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public JackLoanShark()
+            : base("Jack", "the Loan Shark")
         {
         }
 
-        public Percolem(Serial serial)
+        public JackLoanShark(Serial serial)
             : base(serial)
         {
         }
-
-        public override Type[] Quests => new Type[] { };
 
         public override void InitBody()
         {
@@ -27,34 +26,30 @@ namespace Server.Mobiles
             Female = false;
             Race = Race.Human;
 
-            Hue = 0x840C;
-            HairItemID = 0x203C;
-            HairHue = 0x3B3;
+            Hue = 0x83EC;
+            HairItemID = 0x2045;
+            HairHue = 0x464;
+            FacialHairItemID = 0x204B;
+            FacialHairHue = 0x464;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
-
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
-
-            Blessed = true;
+            AddItem(new Dagger());
+            AddItem(new ThighBoots(0x901));
+            AddItem(new LongPants(0x521));
+            AddItem(new FancyShirt(0x5A7));
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
         }
     }

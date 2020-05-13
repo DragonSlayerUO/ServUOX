@@ -1,25 +1,23 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class Emilio : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
-
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public Emilio()
+            : base("Emilio", "the tortured artist")
         {
         }
 
-        public Percolem(Serial serial)
+        public Emilio(Serial serial)
             : base(serial)
         {
         }
 
-        public override Type[] Quests => new Type[] { };
-
+        public override Type[] Quests => new Type[] { typeof(UnfadingMemoriesOneQuest) };
         public override void InitBody()
         {
             InitStats(100, 100, 25);
@@ -27,21 +25,21 @@ namespace Server.Mobiles
             Female = false;
             Race = Race.Human;
 
-            Hue = 0x840C;
-            HairItemID = 0x203C;
-            HairHue = 0x3B3;
+            Hue = 0x83EB;
+            HairItemID = 0x2048;
+            HairHue = 0x470;
+            FacialHairItemID = 0x204C;
+            FacialHairHue = 0x470;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
-
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
-
-            Blessed = true;
+            AddItem(new Backpack());
+            AddItem(new Sandals(0x721));
+            AddItem(new LongPants(0x51B));
+            AddItem(new FancyShirt(0x517));
+            AddItem(new FloppyHat(0x584));
+            AddItem(new BodySash(0x13));
         }
 
         public override void Serialize(GenericWriter writer)

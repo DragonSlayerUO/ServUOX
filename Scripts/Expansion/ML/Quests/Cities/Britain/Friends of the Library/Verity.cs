@@ -1,47 +1,45 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class Verity : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
-
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public Verity()
+            : base("Verity", "the Librarian")
         {
         }
 
-        public Percolem(Serial serial)
+        public Verity(Serial serial)
             : base(serial)
         {
         }
 
-        public override Type[] Quests => new Type[] { };
-
+        public override Type[] Quests => new Type[]
+                {
+                    typeof(FriendsOfTheLibraryQuest)
+                };
         public override void InitBody()
         {
             InitStats(100, 100, 25);
 
-            Female = false;
+            Female = true;
             Race = Race.Human;
 
-            Hue = 0x840C;
-            HairItemID = 0x203C;
+            Hue = 0x83EF;
+            HairItemID = 0x2047;
             HairHue = 0x3B3;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
-
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
-
-            Blessed = true;
+            AddItem(new Backpack());
+            AddItem(new Shoes(0x754));
+            AddItem(new Shirt(0x653));
+            AddItem(new Cap(0x901));
+            AddItem(new Kilt(0x901));
         }
 
         public override void Serialize(GenericWriter writer)

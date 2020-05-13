@@ -1,47 +1,53 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class Hargrove : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
-
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public Hargrove()
+            : base("Hargrove", "the Lumberjack")
         {
         }
 
-        public Percolem(Serial serial)
+        public Hargrove(Serial serial)
             : base(serial)
         {
         }
 
-        public override Type[] Quests => new Type[] { };
-
+        public override Type[] Quests => new Type[]
+                {
+                    typeof(ChopChopOnTheDoubleQuest)
+                };
         public override void InitBody()
         {
             InitStats(100, 100, 25);
 
             Female = false;
+            CantWalk = true;
             Race = Race.Human;
 
-            Hue = 0x840C;
+            Hue = 0x83FF;
             HairItemID = 0x203C;
-            HairHue = 0x3B3;
+            HairHue = 0x0;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
+            AddItem(new Backpack());
+            AddItem(new BattleAxe());
+            AddItem(new Boots(0x901));
+            AddItem(new StuddedLegs());
+            AddItem(new Shirt(0x288));
+            AddItem(new Bandana(0x20));
 
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
+            Item item;
 
-            Blessed = true;
+            item = new PlateGloves();
+            item.Hue = 0x21E;
+            AddItem(item);
         }
 
         public override void Serialize(GenericWriter writer)

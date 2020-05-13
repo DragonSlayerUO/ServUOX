@@ -1,25 +1,23 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class Andros : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
-
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public Andros()
+            : base("Andros", "the Blacksmith")
         {
         }
 
-        public Percolem(Serial serial)
+        public Andros(Serial serial)
             : base(serial)
         {
         }
 
-        public override Type[] Quests => new Type[] { };
-
+        public override Type[] Quests => null;
         public override void InitBody()
         {
             InitStats(100, 100, 25);
@@ -27,21 +25,21 @@ namespace Server.Mobiles
             Female = false;
             Race = Race.Human;
 
-            Hue = 0x840C;
-            HairItemID = 0x203C;
-            HairHue = 0x3B3;
+            Hue = 0x8409;
+            HairItemID = 0x2049;
+            HairHue = 0x45E;
+            FacialHairItemID = 0x2041;
+            FacialHairHue = 0x45E;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
-
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
-
-            Blessed = true;
+            AddItem(new Backpack());
+            AddItem(new Boots(0x901));
+            AddItem(new LongPants(0x1BB));
+            AddItem(new FancyShirt(0x60B));
+            AddItem(new FullApron(0x901));
+            AddItem(new SmithHammer());
         }
 
         public override void Serialize(GenericWriter writer)

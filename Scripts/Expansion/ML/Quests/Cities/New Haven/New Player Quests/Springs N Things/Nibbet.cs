@@ -1,47 +1,52 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class Nibbet : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
-
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public Nibbet()
+            : base("Nibbet", "the Tinker")
         {
         }
 
-        public Percolem(Serial serial)
+        public Nibbet(Serial serial)
             : base(serial)
         {
         }
 
-        public override Type[] Quests => new Type[] { };
-
+        public override Type[] Quests => new Type[]
+                {
+                    typeof(ClockworkPuzzleQuest)
+                };
         public override void InitBody()
         {
             InitStats(100, 100, 25);
 
             Female = false;
+            CantWalk = true;
             Race = Race.Human;
 
             Hue = 0x840C;
-            HairItemID = 0x203C;
-            HairHue = 0x3B3;
+            HairItemID = 0x2044;
+            HairHue = 0x1;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
+            AddItem(new Backpack());
+            AddItem(new Boots(0x591));
+            AddItem(new ShortPants(0xF8));
+            AddItem(new Shirt(0x2D));
+            AddItem(new FullApron(0x288));
 
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
+            Item item;
 
-            Blessed = true;
+            item = new PlateGloves();
+            item.Hue = 0x21E;
+            AddItem(item);
         }
 
         public override void Serialize(GenericWriter writer)

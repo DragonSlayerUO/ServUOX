@@ -1,47 +1,47 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class Asandos : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
-
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public Asandos()
+            : base("Asandos", "the Chef")
         {
         }
 
-        public Percolem(Serial serial)
+        public Asandos(Serial serial)
             : base(serial)
         {
         }
 
-        public override Type[] Quests => new Type[] { };
-
+        public override Type[] Quests => new Type[]
+                {
+                    typeof(BakersDozenQuest)
+                };
         public override void InitBody()
         {
             InitStats(100, 100, 25);
 
             Female = false;
+            CantWalk = true;
             Race = Race.Human;
 
-            Hue = 0x840C;
-            HairItemID = 0x203C;
-            HairHue = 0x3B3;
+            Hue = 0x83FF;
+            HairItemID = 0x2044;
+            HairHue = 0x1;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
-
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
-
-            Blessed = true;
+            AddItem(new Backpack());
+            AddItem(new Boots(0x901));
+            AddItem(new ShortPants());
+            AddItem(new Shirt());
+            AddItem(new Cap());
+            AddItem(new HalfApron(0x28));
         }
 
         public override void Serialize(GenericWriter writer)

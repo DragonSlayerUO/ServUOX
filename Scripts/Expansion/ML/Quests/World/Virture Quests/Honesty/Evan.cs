@@ -1,25 +1,23 @@
 using System;
+using Server.Items;
 using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
-    public class Percolem : MondainQuester, ITierQuester
+    public class Evan : MondainQuester
     {
-        public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
-
         [Constructable]
-        public Percolem()
-            : base("Percolem", "the Hunter")
+        public Evan()
+            : base("Evan", "the Beggar")
         {
         }
 
-        public Percolem(Serial serial)
+        public Evan(Serial serial)
             : base(serial)
         {
         }
 
-        public override Type[] Quests => new Type[] { };
-
+        public override Type[] Quests => new Type[] { typeof(HonestBeggarQuest) };
         public override void InitBody()
         {
             InitStats(100, 100, 25);
@@ -27,21 +25,19 @@ namespace Server.Mobiles
             Female = false;
             Race = Race.Human;
 
-            Hue = 0x840C;
-            HairItemID = 0x203C;
-            HairHue = 0x3B3;
+            Hue = 0x841B;
+            HairItemID = 0x204A;
+            HairHue = 0x451;
+            FacialHairItemID = 0x203F;
+            FacialHairHue = 0x451;
         }
 
         public override void InitOutfit()
         {
-            CantWalk = true;
-
-            AddItem(new Server.Items.Boots());
-            AddItem(new Server.Items.Shirt(1436));
-            AddItem(new Server.Items.ShortPants(1436));
-            AddItem(new Server.Items.CompositeBow());
-
-            Blessed = true;
+            AddItem(new Backpack());
+            AddItem(new Shoes(0x737));
+            AddItem(new ShortPants(0x74C));
+            AddItem(new FancyShirt(0x535));
         }
 
         public override void Serialize(GenericWriter writer)
