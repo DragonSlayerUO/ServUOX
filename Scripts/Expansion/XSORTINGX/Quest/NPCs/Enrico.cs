@@ -1,19 +1,21 @@
-using Server.Mobiles;
+using Server.Items;
 
-namespace Server.Items
+namespace Server.Mobiles
 {
-    public class SkeletonKey : BaseCollectionMobile
+    [TypeAlias("Server.Items.SkeletonKey")]
+    public class Enrico : BaseCollectionMobile
     {
         [Constructable]
-        public SkeletonKey()
+        public Enrico()
             : base("Enrico", "the thief")
         {
             StartTier = 10000000;
             DailyDecay = 100000;
+
             DonationLabel = 1073443; // Skeleton Key Section Donation Representative.
         }
 
-        public SkeletonKey(Serial serial)
+        public Enrico(Serial serial)
             : base(serial)
         {
         }
