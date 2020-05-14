@@ -130,7 +130,7 @@ namespace Server.Mobiles
             : base(aiType, fightMode, rangePerception, rangeFight, activeSpeed, passiveSpeed)
         {
             m_NextFireRing = Core.TickCount + 10000;
-            m_CurrentWave = MaxHelpersWaves;
+            CurrentWave = MaxHelpersWaves;
         }
 
         public override void Serialize(GenericWriter writer)
@@ -156,19 +156,7 @@ namespace Server.Mobiles
         public virtual int MaxHelpersWaves => 0;
         public virtual double SpawnHelpersChance => 0.05;
 
-        private int m_CurrentWave;
-
-        public int CurrentWave
-        {
-            get
-            {
-                return m_CurrentWave;
-            }
-            set
-            {
-                m_CurrentWave = value;
-            }
-        }
+        public int CurrentWave { get; set; }
 
         public bool AllHelpersDead
         {
@@ -183,14 +171,14 @@ namespace Server.Mobiles
 
         public virtual bool CanSpawnWave()
         {
-            if (MaxHelpersWaves > 0 && m_CurrentWave > 0)
+            if (MaxHelpersWaves > 0 && CurrentWave > 0)
             {
                 double hits = (Hits / (double)HitsMax);
-                double waves = (m_CurrentWave / (double)(MaxHelpersWaves + 1));
+                double waves = (CurrentWave / (double)(MaxHelpersWaves + 1));
 
                 if (hits < waves && Utility.RandomDouble() < SpawnHelpersChance)
                 {
-                    m_CurrentWave -= 1;
+                    CurrentWave -= 1;
                     return true;
                 }
             }

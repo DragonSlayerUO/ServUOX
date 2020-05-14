@@ -1,3 +1,5 @@
+using Server.SkillHandlers;
+
 namespace Server.Items
 {
     public class ShepherdsCrookOfHumility : BaseStaff
@@ -46,10 +48,10 @@ namespace Server.Items
             int version = reader.ReadInt();
         }
 
-        public override void OnDoubleClick(Mobile from)
-        {
+        /*public override void OnDoubleClick(Mobile from)
+        {needs fixed
             from.SendLocalizedMessage(502464); // Target the animal you wish to herd.
             from.Target = new HerdingTarget(this);
-        }
+        }*/
     }
 }

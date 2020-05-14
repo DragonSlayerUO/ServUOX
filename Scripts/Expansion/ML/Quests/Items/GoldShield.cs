@@ -1,3 +1,5 @@
+using Server.Guilds;
+
 namespace Server.Items
 {
     public class GoldShield : BaseShield
