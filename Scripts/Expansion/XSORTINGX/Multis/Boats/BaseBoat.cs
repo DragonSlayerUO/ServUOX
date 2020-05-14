@@ -894,6 +894,9 @@ namespace Server.Multis
 
         public void Refresh(Mobile from = null)
         {
+            if (from != null && from.Account != Owner.Account)
+                return;
+
             if (from != null && Status > 1043010)
             {
                 from.SendLocalizedMessage(1043294); // Your ship's age and contents have been refreshed.
