@@ -36,12 +36,17 @@ namespace Server.Engines.Blackthorn
 
             if (Controller != null)
                 Timer.DelayCall(TimeSpan.FromSeconds(1), () => Controller.SpawnWave());
+
         }
 
         public override bool OnBeforeDestroyed()
         {
             if (Controller != null)
                 Controller.OnBeaconDestroyed();
+            else
+            {
+                Timer.DelayCall(TimeSpan.FromSeconds(10), Delete);
+            }
 
             return base.OnBeforeDestroyed();
         }

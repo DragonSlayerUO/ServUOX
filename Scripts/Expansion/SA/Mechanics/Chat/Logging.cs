@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -54,8 +54,10 @@ namespace Server.Engines.Chat
 
                 StreamWriter channelOutput;
 
-                if (m_OutputPerChannel.ContainsKey(channel))
+                if (m_OutputPerChannel[channel] != null && m_OutputPerChannel.ContainsKey(channel))
+                {
                     channelOutput = m_OutputPerChannel[channel];
+                }
                 else
                 {
                     var path = "Logs";

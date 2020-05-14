@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Server;
 using Server.Multis;
 using Server.ContextMenus;
 using Server.Mobiles;
@@ -32,7 +31,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);//version
+            writer.Write(0);
 
             writer.Write(Boat);
             writer.Write((int)Side);
@@ -274,7 +273,7 @@ namespace Server.Items
             if (Boat == null)
                 return;
 
-            Boat.Refresh();
+            Boat.Refresh(from);
 
             if (BaseBoat.IsDriving(from))
             {

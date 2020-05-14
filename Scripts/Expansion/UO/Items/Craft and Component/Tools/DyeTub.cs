@@ -71,23 +71,11 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
-            switch (version)
-            {
-                case 1:
-                    {
-                        Level = (SecureLevel)reader.ReadInt();
-                        goto case 0;
-                    }
-                case 0:
-                    {
-                        Redyable = reader.ReadBool();
-                        m_DyedHue = reader.ReadInt();
-
-                        break;
-                    }
-            }
+            Level = (SecureLevel)reader.ReadInt();
+            Redyable = reader.ReadBool();
+            m_DyedHue = reader.ReadInt();
         }
 
         public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
@@ -132,6 +120,10 @@ namespace Server.Items
                         else if (item.Parent is Mobile)
                         {
                             from.SendLocalizedMessage(500861); // Can't Dye clothing that is being worn.
+                        }
+                        else if (item.IsLockedDown)
+                        {
+                            from.SendLocalizedMessage(1061637); // You are not allowed to access this.
                         }
                         else if (((IDyable)item).Dye(from, m_Tub))
                         {

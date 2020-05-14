@@ -17,13 +17,13 @@ namespace Server.Mobiles
 
             SetStr(-350, 380);
             SetDex(450, 600);
-            SetInt(700, 8500);
+            SetInt(700, 850);
 
             SetHits(9100, 9200);
             SetStam(450, 600);
             SetMana(700, 800);
 
-            SetDamage(9, 15);
+            SetDamage(27, 38);
 
             SetDamageType(ResistanceType.Physical, 100);
 

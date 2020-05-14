@@ -15,9 +15,7 @@ namespace Server.Spells.Bushido
         public override TextDefinition AbilityMessage => new TextDefinition(1063122);// You better kill your enemy with your next hit or you'll be rather sorry...
         public static int GetSwingBonus(Mobile target)
         {
-            HonorableExecutionInfo info = m_Table[target] as HonorableExecutionInfo;
-
-            if (info == null)
+            if (!(m_Table[target] is HonorableExecutionInfo info))
                 return 0;
 
             return info.m_SwingBonus;
@@ -25,9 +23,7 @@ namespace Server.Spells.Bushido
 
         public static bool IsUnderPenalty(Mobile target)
         {
-            HonorableExecutionInfo info = m_Table[target] as HonorableExecutionInfo;
-
-            if (info == null)
+            if (!(m_Table[target] is HonorableExecutionInfo info))
                 return false;
 
             return info.m_Penalty;
@@ -35,9 +31,7 @@ namespace Server.Spells.Bushido
 
         public static void RemovePenalty(Mobile target)
         {
-            HonorableExecutionInfo info = m_Table[target] as HonorableExecutionInfo;
-
-            if (info == null || !info.m_Penalty)
+            if (!(m_Table[target] is HonorableExecutionInfo info) || (info.m_SwingBonus == 0 && !info.m_Penalty))
                 return;
 
             info.Clear();
@@ -63,9 +57,7 @@ namespace Server.Spells.Bushido
 
             ClearCurrentMove(attacker);
 
-            HonorableExecutionInfo info = m_Table[attacker] as HonorableExecutionInfo;
-
-            if (info != null)
+            if (m_Table[attacker] is HonorableExecutionInfo info)
             {
                 info.Clear();
 
@@ -86,17 +78,20 @@ namespace Server.Spells.Bushido
                 info = new HonorableExecutionInfo(attacker, swingBonus);
                 info.m_Timer = Timer.DelayCall(TimeSpan.FromSeconds(20.0), new TimerStateCallback(EndEffect), info);
 
+                BuffInfo.AddBuff(attacker, new BuffInfo(BuffIcon.HonorableExecution, 1060595, 1153807, TimeSpan.FromSeconds(20.0), attacker, string.Format("{0}", swingBonus)));
+
                 m_Table[attacker] = info;
             }
             else
             {
-                ArrayList mods = new ArrayList();
-
-                mods.Add(new ResistanceMod(ResistanceType.Physical, -40));
-                mods.Add(new ResistanceMod(ResistanceType.Fire, -40));
-                mods.Add(new ResistanceMod(ResistanceType.Cold, -40));
-                mods.Add(new ResistanceMod(ResistanceType.Poison, -40));
-                mods.Add(new ResistanceMod(ResistanceType.Energy, -40));
+                ArrayList mods = new ArrayList
+                {
+                    new ResistanceMod(ResistanceType.Physical, -40),
+                    new ResistanceMod(ResistanceType.Fire, -40),
+                    new ResistanceMod(ResistanceType.Cold, -40),
+                    new ResistanceMod(ResistanceType.Poison, -40),
+                    new ResistanceMod(ResistanceType.Energy, -40)
+                };
 
                 double resSpells = attacker.Skills[SkillName.MagicResist].Value;
 

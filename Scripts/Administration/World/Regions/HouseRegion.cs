@@ -53,7 +53,11 @@ namespace Server.Regions
                     House.RefreshDecay();
                 }
             }
-            m.SendEverything();
+            //m.SendEverything();
+            Timer.DelayCall(TimeSpan.FromMilliseconds(250), () =>
+            {
+                m.SendEverything();
+            });
         }
 
         public override bool CanSee(Mobile m, IEntity e)
