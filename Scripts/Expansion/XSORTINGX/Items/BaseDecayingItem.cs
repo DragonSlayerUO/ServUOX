@@ -1,5 +1,4 @@
 using System;
-using Server;
 
 namespace Server.Items
 {
@@ -14,11 +13,10 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int TimeLeft
         {
-            get { return m_Lifespan; }
+            get => m_Lifespan;
             set
             {
                 m_Lifespan = value;
-
                 InvalidateProperties();
             }
         }
@@ -116,6 +114,11 @@ namespace Server.Items
             Delete();
         }
 
+        public virtual void SendTimeRemainingMessage(Mobile to)
+        {
+            to.SendLocalizedMessage(1072516, string.Format("{0}\t{1}", (Name == null ? string.Format("#{0}", LabelNumber) : Name), (int)TimeSpan.FromSeconds(m_Lifespan).TotalSeconds)); // ~1_name~ will expire in ~2_val~ seconds!
+        }
+
         public BaseDecayingItem(Serial serial) : base(serial)
         {
         }
@@ -123,16 +126,16 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
+            writer.Write(0);
 
-            writer.Write(0); // version
             writer.Write(m_Lifespan);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
+            _ = reader.ReadInt();
 
-            int version = reader.ReadInt();
             m_Lifespan = reader.ReadInt();
 
             if (Lifespan > 0)

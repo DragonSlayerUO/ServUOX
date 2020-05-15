@@ -1,12 +1,12 @@
 using System;
-using Server;
 using System.Collections.Generic;
+using Server.Network;
 
 namespace Server.Items
 {
     public class UnderworldPuzzleBox : MetalChest
     {
-        private static Dictionary<Mobile, DateTime> m_Table = new Dictionary<Mobile, DateTime>();
+        private static readonly Dictionary<Mobile, DateTime> m_Table = new Dictionary<Mobile, DateTime>();
 
         [Constructable]
         public UnderworldPuzzleBox()
@@ -17,24 +17,36 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from.InRange(Location, 3))
+            if (!from.InRange(Location, 3))
             {
-                if (from.AccessLevel == AccessLevel.Player && IsInCooldown(from))
-                    from.SendLocalizedMessage(1113413); // You have recently participated in this challenge. You must wait 24 hours to try again.
-                else if (from.Backpack != null)
+                from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
+                return;
+            }
+
+            if (from.IsPlayer() && IsInCooldown(from))
+            {
+                from.SendLocalizedMessage(1113386); // You are too tired to attempt solving more puzzles at this time.
+                return;
+            }
+
+            if (from.Backpack != null)
+            {
+                var item = from.Backpack.FindItemByType(typeof(UnderworldPuzzleItem));
+
+                if (item != null)
                 {
-                    Item item = from.Backpack.FindItemByType(typeof(UnderworldPuzzleItem));
+                    from.SendLocalizedMessage(501885); // You already own one of those!
+                }
+                else
+                {
+                    UnderworldPuzzleItem puzzle = new UnderworldPuzzleItem();
 
-                    if (item != null)
-                        from.SendMessage("You already have a puzzle board.");
-                    else
-                    {
-                        from.AddToBackpack(new UnderworldPuzzleItem());
-                        from.SendMessage("You recieve a puzzle piece.");
+                    from.AddToBackpack(puzzle);
+                    from.SendLocalizedMessage(1072223); // An item has been placed in your backpack.
+                    puzzle.SendTimeRemainingMessage(from);
 
-                        if (from.AccessLevel == AccessLevel.Player)
-                            m_Table[from] = DateTime.UtcNow + TimeSpan.FromHours(24);
-                    }
+                    if (from.AccessLevel == AccessLevel.Player)
+                        m_Table[from] = DateTime.UtcNow + TimeSpan.FromHours(24);
                 }
             }
         }
@@ -50,7 +62,19 @@ namespace Server.Items
             return m_Table.ContainsKey(from);
         }
 
-        public UnderworldPuzzleBox(Serial serial) : base(serial)
+        public override bool OnDragDrop(Mobile from, Item dropped)
+        {
+            from.SendLocalizedMessage(1113513); // You cannot put items there.
+            return false;
+        }
+
+        public override void DisplayTo(Mobile to)
+        {
+            to.SendLocalizedMessage(1005213); // You can't do that
+        }
+
+        public UnderworldPuzzleBox(Serial serial)
+            : base(serial)
         {
         }
 
@@ -63,7 +87,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int v = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }
