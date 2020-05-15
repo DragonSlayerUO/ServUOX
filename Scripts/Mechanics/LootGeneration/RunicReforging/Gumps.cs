@@ -1,9 +1,6 @@
 using System;
-using Server;
 using Server.Items;
-using Server.Mobiles;
 using Server.Network;
-using Server.Engines.Quests;
 
 namespace Server.Gumps
 {
@@ -59,6 +56,20 @@ namespace Server.Gumps
             m_Context = ReforgingContext.GetContext(from);
 
             if (!m_Context.Contexts.ContainsKey(tool))
+            {
+                m_Context.Contexts[tool] = new ReforgingInfo();
+            }
+
+            m_Tool = tool;
+            m_ToReforge = toReforge;
+            m_Options = m_Context.Contexts[tool].Options;
+            m_Prefix = m_Context.Contexts[tool].Prefix;
+            m_Suffix = m_Context.Contexts[tool].Suffix;
+
+            /*
+            m_Context = ReforgingContext.GetContext(from);
+
+            if (!m_Context.Contexts.ContainsKey(tool))
                 m_Context.Contexts[tool] = ReforgingOption.None;
 
             m_Tool = tool;
@@ -67,7 +78,7 @@ namespace Server.Gumps
 
             m_Prefix = m_Context.Prefix;
             m_Suffix = m_Context.Suffix;
-
+            */
             AddBackground(0, 0, 370, 440, 83);
             AddHtmlLocalized(10, 10, 350, 18, 1114513, "#1151952", 0x4BB7, false, false); // Runic Crafting Options
 
@@ -399,13 +410,13 @@ namespace Server.Gumps
                                 if (m_Prefix != ReforgedPrefix.None && !RunicReforging.HasSelection((int)m_Prefix, m_ToReforge, m_Tool, m_Options, -1, -1))
                                 {
                                     m_Prefix = ReforgedPrefix.None;
-                                    m_Context.Prefix = ReforgedPrefix.None;
+                                    m_Context.Contexts[m_Tool].Prefix = ReforgedPrefix.None;
                                 }
 
                                 if (m_Suffix != ReforgedSuffix.None && !RunicReforging.HasSelection((int)m_Suffix, m_ToReforge, m_Tool, m_Options, -1, -1))
                                 {
                                     m_Suffix = ReforgedSuffix.None;
-                                    m_Context.Suffix = ReforgedSuffix.None;
+                                    m_Context.Contexts[m_Tool].Suffix = ReforgedSuffix.None;
                                 }
                             }
                             else
@@ -414,7 +425,7 @@ namespace Server.Gumps
                                 InvalidatePrerequisite(option);
                             }
 
-                            m_Context.Contexts[m_Tool] = m_Options;
+                            m_Context.Contexts[m_Tool].Options = m_Options;
                         }
 
                         from.SendGump(new RunicReforgingGump(from, m_ToReforge, m_Tool));
@@ -592,12 +603,12 @@ namespace Server.Gumps
 
                     if (m_IsPrefix)
                     {
-                        context.Prefix = (ReforgedPrefix)index;
+                        context.Contexts[m_Tool].Prefix = (ReforgedPrefix)index;
                         m_Prefix = (ReforgedPrefix)index;
                     }
                     else
                     {
-                        context.Suffix = (ReforgedSuffix)index;
+                        context.Contexts[m_Tool].Suffix = (ReforgedSuffix)index;
                         m_Suffix = (ReforgedSuffix)index;
                     }
                 }

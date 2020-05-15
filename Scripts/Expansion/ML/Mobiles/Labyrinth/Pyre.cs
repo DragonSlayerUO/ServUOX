@@ -40,6 +40,8 @@ namespace Server.Mobiles
             Fame = 21000;
             Karma = -21000;
 
+            Tamable = false;
+
             for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
             {
                 PackItem(Loot.RandomScroll(0, Loot.ArcanistScrollTypes.Length, SpellbookType.Arcanist));

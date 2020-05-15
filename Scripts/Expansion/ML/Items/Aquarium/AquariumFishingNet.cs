@@ -89,7 +89,7 @@ namespace Server.Items
             }
         }
 
-        private BaseFish GiveFish(Mobile from)
+        protected virtual BaseFish GiveFish(Mobile from)
         {
             double skill = from.Skills.Fishing.Value;
 

@@ -45,7 +45,7 @@ namespace Server.Engines.Blackthorn
                 Controller.OnBeaconDestroyed();
             else
             {
-                Timer.DelayCall(TimeSpan.FromSeconds(10), Delete);
+                Timer.DelayCall(TimeSpan.FromMinutes(1), Delete);
             }
 
             return base.OnBeforeDestroyed();
