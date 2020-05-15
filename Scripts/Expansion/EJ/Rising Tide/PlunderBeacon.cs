@@ -1,10 +1,4 @@
-using System;
 using System.Linq;
-using System.Collections.Generic;
-
-using Server;
-using Server.Items;
-using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -35,6 +29,8 @@ namespace Server.Items
 
         public override void OnHalfDamage()
         {
+            base.OnHalfDamage();
+
             /*IPooledEnumerable eable = this.Map.GetMobilesInRange(this.Location, 20);
 
             foreach (Mobile m in eable)
@@ -93,11 +89,6 @@ namespace Server.Items
         public override void Delete()
         {
             base.Delete();
-
-            if (Controller != null && !Controller.Deleted)
-            {
-                Controller.Delete();
-            }
         }
 
         public PlunderBeacon(Serial serial)

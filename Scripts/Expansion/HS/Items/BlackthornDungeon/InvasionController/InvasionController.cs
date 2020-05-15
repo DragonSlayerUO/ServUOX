@@ -421,7 +421,7 @@ namespace Server.Engines.Blackthorn
 
         public void Cleanup()
         {
-            if (Beacon != null)
+            if (Beacon != null && !Beacon.Deleted)
                 Beacon.Delete();
         }
 
