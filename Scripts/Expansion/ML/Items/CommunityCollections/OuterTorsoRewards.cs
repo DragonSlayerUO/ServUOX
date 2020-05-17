@@ -1,28 +1,24 @@
 using System;
-using System.Collections.Generic;
-using Server.Engines.Craft;
-using Server.Network;
 
 namespace Server.Items
 {
-    #region Reward Clothing
-    public class ZooMemberBonnet : Bonnet
+    public class ZooMemberSkirt : PlainDress
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
         [Constructable]
-        public ZooMemberBonnet()
+        public ZooMemberSkirt()
             : this(0)
         {
         }
 
         [Constructable]
-        public ZooMemberBonnet(int hue)
+        public ZooMemberSkirt(int hue)
             : base(hue)
         {
         }
 
-        public ZooMemberBonnet(Serial serial)
+        public ZooMemberSkirt(Serial serial)
             : base(serial)
         {
         }
@@ -40,23 +36,23 @@ namespace Server.Items
         }
     }
 
-    public class ZooMemberFloppyHat : FloppyHat
+    public class ZooMemberBodySash : BodySash
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
         [Constructable]
-        public ZooMemberFloppyHat()
+        public ZooMemberBodySash()
             : this(0)
         {
         }
 
         [Constructable]
-        public ZooMemberFloppyHat(int hue)
+        public ZooMemberBodySash(int hue)
             : base(hue)
         {
         }
 
-        public ZooMemberFloppyHat(Serial serial)
+        public ZooMemberBodySash(Serial serial)
             : base(serial)
         {
         }
@@ -74,23 +70,23 @@ namespace Server.Items
         }
     }
 
-    public class LibraryFriendFeatheredHat : FeatheredHat
+    public class ZooMemberRobe : Robe
     {
-        public override int LabelNumber => 1073347; // Friends of the Library Feathered Hat
+        public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
         [Constructable]
-        public LibraryFriendFeatheredHat()
+        public ZooMemberRobe()
             : this(0)
         {
         }
 
         [Constructable]
-        public LibraryFriendFeatheredHat(int hue)
+        public ZooMemberRobe(int hue)
             : base(hue)
         {
         }
 
-        public LibraryFriendFeatheredHat(Serial serial)
+        public ZooMemberRobe(Serial serial)
             : base(serial)
         {
         }
@@ -108,124 +104,193 @@ namespace Server.Items
         }
     }
 
-    public class JesterHatOfChuckles : JesterHat
+    public class ZooMemberCloak : Cloak
     {
-        public override int LabelNumber => 1073256;// Jester Hat of Chuckles - Museum of Vesper Replica
-
-        public override int BasePhysicalResistance => 12;
-        public override int BaseFireResistance => 12;
-        public override int BaseColdResistance => 12;
-        public override int BasePoisonResistance => 12;
-        public override int BaseEnergyResistance => 12;
-
-        public override int InitMinHits => 100;
-        public override int InitMaxHits => 100;
+        public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
         [Constructable]
-        public JesterHatOfChuckles()
+        public ZooMemberCloak()
             : this(0)
         {
         }
 
         [Constructable]
-        public JesterHatOfChuckles(int hue)
-            : base(hue)
-        {
-            Attributes.Luck = 150;
-        }
-
-        public JesterHatOfChuckles(Serial serial)
-            : base(serial)
-        {
-        }
-
-        public override void Serialize(GenericWriter writer)
-        {
-            base.Serialize(writer);
-
-            writer.Write(0); // version
-        }
-
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-
-            int version = reader.ReadInt();
-        }
-    }
-
-    public class NystulsWizardsHat : WizardsHat
-    {
-        public override int LabelNumber => 1073255;// Nystul's Wizard's Hat - Museum of Vesper Replica
-
-        public override int BasePhysicalResistance => 10;
-        public override int BaseFireResistance => 10;
-        public override int BaseColdResistance => 10;
-        public override int BasePoisonResistance => 10;
-        public override int BaseEnergyResistance => 25;
-
-        public override int InitMinHits => 100;
-        public override int InitMaxHits => 100;
-
-        [Constructable]
-        public NystulsWizardsHat()
-            : this(0)
-        {
-        }
-
-        [Constructable]
-        public NystulsWizardsHat(int hue)
-            : base(hue)
-        {
-            Attributes.LowerManaCost = 15;
-        }
-
-        public NystulsWizardsHat(Serial serial)
-            : base(serial)
-        {
-        }
-
-        public override void Serialize(GenericWriter writer)
-        {
-            base.Serialize(writer);
-
-            writer.Write(0); // version
-        }
-
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-
-            int version = reader.ReadInt();
-        }
-    }
-
-    public class GypsyHeaddress : SkullCap
-    {
-        public override int LabelNumber => 1073254;// Gypsy Headdress - Museum of Vesper Replica
-
-        public override int BasePhysicalResistance => 15;
-        public override int BaseFireResistance => 20;
-        public override int BaseColdResistance => 20;
-        public override int BasePoisonResistance => 15;
-        public override int BaseEnergyResistance => 15;
-
-        public override int InitMinHits => 100;
-        public override int InitMaxHits => 100;
-
-        [Constructable]
-        public GypsyHeaddress()
-            : this(0)
-        {
-        }
-
-        [Constructable]
-        public GypsyHeaddress(int hue)
+        public ZooMemberCloak(int hue)
             : base(hue)
         {
         }
 
-        public GypsyHeaddress(Serial serial)
+        public ZooMemberCloak(Serial serial)
+            : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0); // version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+
+    public class LibraryFriendBodySash : BodySash
+    {
+        public override int LabelNumber => 1073346; // Friends of the Library Sash
+
+        [Constructable]
+        public LibraryFriendBodySash()
+            : this(0)
+        {
+        }
+
+        [Constructable]
+        public LibraryFriendBodySash(int hue)
+            : base(hue)
+        {
+        }
+
+        public LibraryFriendBodySash(Serial serial)
+            : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0); // version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+
+    public class LibraryFriendDoublet : Doublet
+    {
+        public override int LabelNumber => 1073351; // Friends of the Library Doublet
+
+        [Constructable]
+        public LibraryFriendDoublet()
+            : this(0)
+        {
+        }
+
+        [Constructable]
+        public LibraryFriendDoublet(int hue)
+            : base(hue)
+        {
+        }
+
+        public LibraryFriendDoublet(Serial serial)
+            : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0); // version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+
+    public class LibraryFriendSurcoat : Surcoat
+    {
+        public override int LabelNumber => 1073348; // Friends of the Library Surcoat
+
+        [Constructable]
+        public LibraryFriendSurcoat()
+            : this(0)
+        {
+        }
+
+        [Constructable]
+        public LibraryFriendSurcoat(int hue)
+            : base(hue)
+        {
+        }
+
+        public LibraryFriendSurcoat(Serial serial)
+            : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0); // version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+
+    public class LibraryFriendCloak : Cloak
+    {
+        public override int LabelNumber => 1073350; // Friends of the Library Cloak
+
+        [Constructable]
+        public LibraryFriendCloak()
+            : this(0)
+        {
+        }
+
+        [Constructable]
+        public LibraryFriendCloak(int hue)
+            : base(hue)
+        {
+        }
+
+        public LibraryFriendCloak(Serial serial)
+            : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0); // version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+
+    public class Adranath : BodySash
+    {
+        public override int LabelNumber => 1073253;// Adranath - Museum of Vesper Replica
+
+        [Constructable]
+        public Adranath()
+            : this(0)
+        {
+        }
+
+        [Constructable]
+        public Adranath(int hue)
+            : base(hue)
+        {
+        }
+
+        public Adranath(Serial serial)
             : base(serial)
         {
         }
@@ -244,33 +309,24 @@ namespace Server.Items
             int version = reader.ReadInt();
         }
     }
-    #endregion
 
-    [Flipable(0x2798, 0x27E3)]
-    public class Kasa : BaseHat
+    public class OdricsRobe : Robe
     {
-        public override int BasePhysicalResistance => 0;
-        public override int BaseFireResistance => 5;
-        public override int BaseColdResistance => 9;
-        public override int BasePoisonResistance => 5;
-        public override int BaseEnergyResistance => 5;
-
-        public override int InitMinHits => 20;
-        public override int InitMaxHits => 30;
+        public override int LabelNumber => 1073250;// Odric's Robe - Museum of Vesper Replica
 
         [Constructable]
-        public Kasa()
+        public OdricsRobe()
             : this(0)
         {
         }
 
         [Constructable]
-        public Kasa(int hue)
-            : base(0x2798, hue)
+        public OdricsRobe(int hue)
+            : base(hue)
         {
         }
 
-        public Kasa(Serial serial)
+        public OdricsRobe(Serial serial)
             : base(serial)
         {
         }
@@ -290,31 +346,23 @@ namespace Server.Items
         }
     }
 
-    [Flipable(0x278F, 0x27DA)]
-    public class ClothNinjaHood : BaseHat
+    public class BaronLenshiresCloak : Cloak
     {
-        public override int BasePhysicalResistance => 3;
-        public override int BaseFireResistance => 3;
-        public override int BaseColdResistance => 6;
-        public override int BasePoisonResistance => 9;
-        public override int BaseEnergyResistance => 9;
-
-        public override int InitMinHits => 20;
-        public override int InitMaxHits => 30;
+        public override int LabelNumber => 1073252;// Baron Lenshire's Cloak - Museum of Vesper Replica
 
         [Constructable]
-        public ClothNinjaHood()
+        public BaronLenshiresCloak()
             : this(0)
         {
         }
 
         [Constructable]
-        public ClothNinjaHood(int hue)
-            : base(0x278F, hue)
+        public BaronLenshiresCloak(int hue)
+            : base(hue)
         {
         }
 
-        public ClothNinjaHood(Serial serial)
+        public BaronLenshiresCloak(Serial serial)
             : base(serial)
         {
         }
@@ -330,94 +378,6 @@ namespace Server.Items
         {
             base.Deserialize(reader);
 
-            int version = reader.ReadInt();
-        }
-    }
-
-    [Flipable(0x2306, 0x2305)]
-    public class FlowerGarland : BaseHat
-    {
-        public override int BasePhysicalResistance => 3;
-        public override int BaseFireResistance => 3;
-        public override int BaseColdResistance => 6;
-        public override int BasePoisonResistance => 9;
-        public override int BaseEnergyResistance => 9;
-
-        public override int InitMinHits => 20;
-        public override int InitMaxHits => 30;
-
-        [Constructable]
-        public FlowerGarland()
-            : this(0)
-        {
-        }
-
-        [Constructable]
-        public FlowerGarland(int hue)
-            : base(0x2306, hue)
-        {
-
-        }
-
-        public FlowerGarland(Serial serial)
-            : base(serial)
-        {
-        }
-
-        public override void Serialize(GenericWriter writer)
-        {
-            base.Serialize(writer);
-
-            writer.Write(0); // version
-        }
-
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-
-            int version = reader.ReadInt();
-        }
-    }
-
-    public class ChefsToque : BaseHat
-    {
-        public override int LabelNumber => 1109618;  // Chef's Toque
-
-        public override int BasePhysicalResistance => 0;
-        public override int BaseFireResistance => 5;
-        public override int BaseColdResistance => 9;
-        public override int BasePoisonResistance => 5;
-        public override int BaseEnergyResistance => 5;
-
-        public override int InitMinHits => 20;
-        public override int InitMaxHits => 30;
-
-        [Constructable]
-        public ChefsToque()
-            : this(0)
-        {
-        }
-
-        [Constructable]
-        public ChefsToque(int hue)
-            : base(0x781A, hue)
-        {
-        }
-
-        public ChefsToque(Serial serial)
-            : base(serial)
-        {
-        }
-
-        public override void Serialize(GenericWriter writer)
-        {
-            base.Serialize(writer);
-            writer.Write(0); // version
-        }
-
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
             int version = reader.ReadInt();
         }
     }

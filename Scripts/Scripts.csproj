@@ -168,6 +168,10 @@
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenWarrior.cs" />
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenWorker.cs" />
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\SolenHelper.cs" />
+    <Compile Include="Expansion\ML\Items\CommunityCollections\OuterTorsoRewards.cs" />
+    <Compile Include="Expansion\SA\Items\Clothing\GargishEpaulette.cs" />
+    <Compile Include="Expansion\SE\Items\Equipment\ClohingOuter.cs" />
+    <Compile Include="Expansion\ML\Items\Equipment\MonkRobe.cs" />
     <Compile Include="Expansion\ML\Items\Furinture\MLChairs.cs" />
     <Compile Include="Expansion\HS\Items\Food and Drinks\HotCocoaMug.cs" />
     <Compile Include="Expansion\HS\Items\PulledPorkSandwich.cs" />
@@ -412,6 +416,7 @@
     <Compile Include="Expansion\ML\Quests\World\Virture Quests\Honor\DerekMerchant.cs" />
     <Compile Include="Expansion\ML\Quests\Defintions\GuiltyQuest.cs" />
     <Compile Include="Expansion\ML\Quests\World\Virture Quests\Valor\Kane.cs" />
+    <Compile Include="Expansion\SA\Items\Clothing\VetRewardsClothing.cs" />
     <Compile Include="Expansion\SA\Quests\Defintions\AWorthyPropositionQuest.cs" />
     <Compile Include="Expansion\SA\Quests\Defintions\TheExchangeQuest.cs" />
     <Compile Include="Expansion\SA\Quests\Defintions\YeOldeGargishQuest.cs" />
@@ -445,6 +450,7 @@
     <Compile Include="Expansion\SA\Quests\Prassel.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicKnight.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicMage.cs" />
+    <Compile Include="Expansion\SE\Items\Equipment\Hakama.cs" />
     <Compile Include="Expansion\UOR\Items\Deeds\LargeMarbleDeed.cs" />
     <Compile Include="Expansion\UOR\Items\Deeds\SmallTowerDeed.cs" />
     <Compile Include="Expansion\UOR\Items\Deeds\LogCabinDeed.cs" />
@@ -453,6 +459,12 @@
     <Compile Include="Expansion\UOR\Items\Deeds\VillaDeed.cs" />
     <Compile Include="Expansion\UOR\Items\Deeds\StoneWorkshopDeed.cs" />
     <Compile Include="Expansion\UOR\Items\Deeds\LargePatioDeed.cs" />
+    <Compile Include="Expansion\ML\Items\CommunityCollections\CommunityCollectionRewards.cs" />
+    <Compile Include="Expansion\SA\Items\Clothing\ChefsToque.cs" />
+    <Compile Include="Expansion\UOR\Items\Vetrewards\RewardDress.cs" />
+    <Compile Include="Expansion\UOR\Items\Vetrewards\RewardRobe.cs" />
+    <Compile Include="Expansion\UOTD\FlowerGarland.cs" />
+    <Compile Include="Expansion\UOR\Items\Vetrewards\RewardCloak.cs" />
     <Compile Include="Expansion\UO\Items\Deeds\Boats\SmallDragonBoatDeed.cs" />
     <Compile Include="Expansion\UO\Items\Deeds\Boats\SmallBoatDeed.cs" />
     <Compile Include="Expansion\UO\Items\Deeds\Boats\MediumDragonBoatDeed.cs" />
@@ -524,6 +536,13 @@
     <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealRidgeback.cs" />
     <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealOstard.cs" />
     <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealHorse.cs" />
+    <Compile Include="Expansion\SE\Items\Equipment\JinBaori.cs" />
+    <Compile Include="Expansion\ML\Items\Equipment\ElvenPants.cs" />
+    <Compile Include="Expansion\ML\Items\CommunityCollections\RewardPants.cs" />
+    <Compile Include="Expansion\SE\Items\Equipment\TattsukeHakama.cs" />
+    <Compile Include="Expansion\ML\Items\Equipment\ElvenShirts.cs" />
+    <Compile Include="Expansion\ML\Items\CommunityCollections\RewardShoes.cs" />
+    <Compile Include="Expansion\ML\Items\Equipment\ElvenShoes.cs" />
     <Compile Include="Holidays\Holiday Items\LanternOfSouls.cs" />
     <Compile Include="Holidays\Holiday Items\ThreeTieredCake.cs" />
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Cooked\ChickenLeg.cs" />
@@ -1614,9 +1633,9 @@
     <Compile Include="Expansion\ML\Items\Equipment\Armor\AnkhPendant.cs" />
     <Compile Include="Expansion\SA\Items\Jewelry\NecklaceofDiligence.cs" />
     <Compile Include="Expansion\SA\Items\Jewelry\BraceletOfPrimalConsumption.cs" />
-    <Compile Include="Expansion\XSORTINGX\Glenda.cs" />
+    <Compile Include="Expansion\EJ\Publish 96\Glenda.cs" />
     <Compile Include="Expansion\AOS\Items\Artifacts Doom\Weapons\BowOfTheInfiniteSwarm.cs" />
-    <Compile Include="Expansion\XSORTINGX\TheDeceiver.cs" />
+    <Compile Include="Expansion\EJ\Publish 96\TheDeceiver.cs" />
     <Compile Include="Expansion\UOR\Mechanics\Khaldun\Journals\BaseJournal.cs" />
     <Compile Include="Expansion\SA\Items\Books\SpecialScrollBooks\BaseSpecialScrollBook.cs" />
     <Compile Include="Expansion\SA\Items\Books\SpecialScrollBooks\PowerScrollBook.cs" />
@@ -1758,8 +1777,8 @@
     <Compile Include="Expansion\SA\Automaton\InoperativeAutomatonHead.cs" />
     <Compile Include="Expansion\SA\Automaton\KotlAutomaton.cs" />
     <Compile Include="Expansion\SA\Automaton\KotlAutomatonHead.cs" />
-    <Compile Include="Expansion\XSORTINGX\Items\BaseArtifactLight.cs" />
-    <Compile Include="Expansion\XSORTINGX\Items\BaseDecayingItem.cs" />
+    <Compile Include="Expansion\AOS\Items\Artifacts Doom\BaseArtifactLight.cs" />
+    <Compile Include="Expansion\UO\Mechanics\BaseDecayingItem.cs" />
     <Compile Include="Expansion\UO\Items\World\Doors\BaseDoor.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -2984,12 +3003,12 @@
     <Compile Include="Expansion\SA\Mobiles\GrayGoblin.cs" />
     <Compile Include="Expansion\SA\Mobiles\GrayGoblinKeeper.cs" />
     <Compile Include="Expansion\SA\Mobiles\GrayGoblinMage.cs" />
-    <Compile Include="Expansion\XSORTINGX\Guardian.cs" />
+    <Compile Include="Customs\Mobiles\Guardian.cs" />
     <Compile Include="Expansion\UO\Mobiles\Monsters\Harpy.cs" />
     <Compile Include="Expansion\UO\Mobiles\Monsters\HeadlessOne.cs" />
     <Compile Include="Expansion\T2A\Mobiles\HellCat.cs" />
     <Compile Include="Expansion\T2A\Mobiles\HellHound.cs" />
-    <Compile Include="Expansion\XSORTINGX\HellSteed.cs" />
+    <Compile Include="Expansion\AOS\Mobiles\HellSteed.cs" />
     <Compile Include="Expansion\SA\TerMur\HighPlainsBoura.cs" />
     <Compile Include="Expansion\UO\Mobiles\Animals\Deer.cs" />
     <Compile Include="Expansion\SE\Mobiles\Hiryu.cs" />
@@ -4184,7 +4203,7 @@
     <Compile Include="Customs\Items\PyramidAddon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\RejuvinationAnkhs.cs">
+    <Compile Include="Customs\Items\RejuvinationAnkhs.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Addons\SandstoneFireplaceEastAddon.cs">
@@ -4453,7 +4472,7 @@
     <Compile Include="Expansion\AOS\Items\Doom Stealables\InquisitorsResolution.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\JackalsCollar.cs">
+    <Compile Include="Expansion\AOS\Items\Artifacts Doom\Armor\JackalsCollar.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\AOS\Items\Artifacts Doom\Armor\LeggingsOfBane.cs">
@@ -5370,7 +5389,7 @@
     <Compile Include="Expansion\AOS\Items\Artifacts Doom\Armor\SpiritOfTheTotem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\Cloaks.cs">
+    <Compile Include="Expansion\SA\Items\Clothing\Cloaks.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Armor\Gargoyle Accessories.cs">
@@ -5394,25 +5413,25 @@
     <Compile Include="Expansion\SA\Items\Armor\SpinedBloodwormBracers.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\Hats.cs">
+    <Compile Include="Expansion\SE\Items\Equipment\Hats.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\MiddleTorso.cs">
+    <Compile Include="Expansion\SA\Items\Clothing\GargishSash.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\OuterLegs.cs">
+    <Compile Include="Expansion\SA\Items\Clothing\OuterLegs.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\OuterTorso.cs">
+    <Compile Include="Expansion\ML\Items\Equipment\OuterTorso.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\Pants.cs">
+    <Compile Include="Expansion\SA\Items\Clothing\Pants.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\Shirts.cs">
+    <Compile Include="Expansion\SA\Items\Clothing\Shirts.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\Shoes.cs">
+    <Compile Include="Expansion\SE\Items\Equipment\Shoes.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\World\BaseSwitch.cs">
@@ -5472,7 +5491,7 @@
     <Compile Include="Expansion\UO\Items\Decorations\Furinture\Easle.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Items\MeltedWax.cs">
+    <Compile Include="Expansion\SA\Items\MeltedWax.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Craft and Component\MusicStand.cs">
