@@ -19,6 +19,11 @@ namespace Server.Engines.Blackthorn
 
         public override void OnHalfDamage()
         {
+            if (Map == null || Map == Map.Internal)
+            {
+                return;
+            }
+
             IPooledEnumerable eable = Map.GetMobilesInRange(Location, 20);
 
             foreach (Mobile m in eable)

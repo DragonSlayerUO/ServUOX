@@ -16,7 +16,18 @@ namespace Server.Mobiles
         private EffectMobile()
         {
             CantWalk = true;
-            Hidden = true;
+            // Hidden = true;
+            Blessed = true;
+        }
+
+        public override void Kill()
+        {
+            base.Kill();
+        }
+
+        public override int Damage(int amount, Mobile from, bool informMount, bool checkDisrupt)
+        {
+            return 0;
         }
 
         public static EffectMobile Create(Point3D p, Map map, TimeSpan duration)

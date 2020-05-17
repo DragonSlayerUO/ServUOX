@@ -1,5 +1,3 @@
-using System;
-using Server;
 using Server.Items;
 using System.Collections.Generic;
 
@@ -22,7 +20,7 @@ namespace Server.Mobiles.MannequinProperty
 
         public override bool Matches(List<Item> items)
         {
-            foreach (var item in items)
+            foreach (Item item in items)
             {
                 if (item is ISlayer slayer)
                     return slayer.Slayer == Slayer || slayer.Slayer2 == Slayer;
@@ -48,7 +46,7 @@ namespace Server.Mobiles.MannequinProperty
 
         public override bool Matches(List<Item> items)
         {
-            foreach (var item in items)
+            foreach (Item item in items)
             {
                 if (item is BaseTalisman talisman)
                     return talisman.Slayer == Slayer;

@@ -15,9 +15,6 @@ namespace Server.Mobiles
         public Kane()
             : base("Kane", "the Master of Arms")
         {
-            //if (!(this is MondainQuester))
-            //    Name = "Kane";
-            // Title = "the Master of Arms";
         }
 
         public Kane(Serial serial)
@@ -28,11 +25,8 @@ namespace Server.Mobiles
         public override void InitBody()
         {
             InitStats(100, 100, 25);
-
             Female = false;
             Race = Race.Human;
-
-            //Hue = 0x840C;
             HairItemID = 0x203C;
             HairHue = 0x3B3;
         }
@@ -62,9 +56,10 @@ namespace Server.Mobiles
 
             AddItem(new Broadsword());
 
-            Item shield = new MetalKiteShield();
-
-            shield.Hue = Utility.RandomNondyedHue();
+            Item shield = new MetalKiteShield
+            {
+                Hue = Utility.RandomNondyedHue()
+            };
 
             AddItem(shield);
 
@@ -78,18 +73,44 @@ namespace Server.Mobiles
             Blessed = true;
         }
 
+        /*
+        public static Kane TramInstance { get; set; }
+        public static Kane FelInstance { get; set; }
+
+        public static void Initialize()
+        {
+            if (TramInstance == null)
+            {
+                TramInstance = new Kane();
+                var p = new Point3D(2027, 2740, 50);
+
+                TramInstance.MoveToWorld(p, Map.Trammel);
+                TramInstance.Home = p;
+                TramInstance.RangeHome = 5;
+            }
+
+            if (FelInstance == null)
+            {
+                FelInstance = new Kane();
+                var p = new Point3D(2027, 2740, 50);
+
+                FelInstance.MoveToWorld(p, Map.Felucca);
+                FelInstance.Home = p;
+                FelInstance.RangeHome = 5;
+            }
+        }
+        */ 
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
+            writer.Write(0); 
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }
