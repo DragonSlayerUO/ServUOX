@@ -1,14 +1,10 @@
-using System;
-using Server;
 using Server.Regions;
-using Server.Targeting;
-using Server.Engines.CannedEvil;
 using Server.Network;
 using Server.Gumps;
-using Server.Items;
 using System.Linq;
+using Server.Multis;
 
-namespace Server.Multis
+namespace Server.Items
 {
     public abstract class BaseBoatDeed : Item
     {
