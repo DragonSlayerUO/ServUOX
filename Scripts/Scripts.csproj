@@ -169,6 +169,7 @@
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\RedSolenWorker.cs" />
     <Compile Include="Expansion\LBR\Mobiles\WhenAntsAttack\SolenHelper.cs" />
     <Compile Include="Expansion\ML\Items\CommunityCollections\OuterTorsoRewards.cs" />
+    <Content Include="Expansion\ML\Missing Events.txt" />
     <Compile Include="Expansion\SA\Items\Clothing\GargishEpaulette.cs" />
     <Compile Include="Expansion\SE\Items\Equipment\ClohingOuter.cs" />
     <Compile Include="Expansion\ML\Items\Equipment\MonkRobe.cs" />
@@ -1249,8 +1250,8 @@
     <Compile Include="Expansion\HS\Items\Kings Collection Theme Pack\BullTapestry.cs" />
     <Compile Include="Expansion\HS\Items\Kings Collection Theme Pack\HorsePainting.cs" />
     <Compile Include="Expansion\HS\Items\Craft Addons\GlassKiln.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\GildedStatue.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\KingsPainting.cs" />
+    <Compile Include="Expansion\HS\Items\Kings Collection Theme Pack\GildedStatue.cs" />
+    <Compile Include="Expansion\HS\Items\Kings Collection Theme Pack\KingsPainting.cs" />
     <Compile Include="Expansion\SA\Items\World\MedusasFloorTileAddon.cs" />
     <Compile Include="Expansion\ML\Items\Equipment\Glasses\LegendaryMapmakersGlasses.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\TheRedeemer.cs" />
@@ -1449,11 +1450,11 @@
     <Compile Include="Expansion\ML\Items\10th Anniversary Gifts\RoseRug.cs" />
     <Compile Include="Expansion\ML\Items\10th Anniversary Gifts\SkullRug.cs" />
     <Compile Include="Expansion\UO\Items\Addons\SouthEastPlacementGump.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\AcademicBooks.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\MapOfTheKnownWorld.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\MummifiedCorpse.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\SantaStatue.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\TenthAnniversarySculpture.cs" />
+    <Compile Include="Expansion\ML\Items\Artifcts\AcademicBooks.cs" />
+    <Compile Include="Expansion\HS\Items\MapOfTheKnownWorld.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\MummifiedCorpse.cs" />
+    <Compile Include="Expansion\HS\Items\SantaStatue.cs" />
+    <Compile Include="Expansion\ML\Items\10th Anniversary Gifts\TenthAnniversarySculpture.cs" />
     <Compile Include="Expansion\TOL\Items\TOLDecorationArtifacts.cs" />
     <Compile Include="Expansion\ML\Items\Equipment\Sets\Epiphany\EpiphanyHelper.cs" />
     <Compile Include="Expansion\ML\Items\Equipment\Sets\Epiphany\VillainousEpiphany.cs" />
@@ -1660,9 +1661,9 @@
     <Compile Include="Expansion\SA\Items\Weapons\Craven.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\CaptainJohnesBlade.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\Abhorrence.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\FigureheadOfBmvArarat.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\ShipsBellOfBmvArarat.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\SternAnchorOfBmvArarat.cs" />
+    <Compile Include="Expansion\HS\Items\FigureheadOfBmvArarat.cs" />
+    <Compile Include="Expansion\HS\Items\ShipsBellOfBmvArarat.cs" />
+    <Compile Include="Expansion\HS\Items\SternAnchorOfBmvArarat.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\Pincer.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\Equivocation.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\FNPitchfork.cs" />
@@ -1694,8 +1695,8 @@
     <Compile Include="Expansion\SA\Items\Containers\MeagerImbuingBag.cs" />
     <Compile Include="Customs\Items\ScrollBox2.cs" />
     <Compile Include="Expansion\UO\Items\Craft and Component\Containers\CleanupTrashBarrel.cs" />
-    <Compile Include="Expansion\XSORTINGX\Duped Items\AcidWall.cs" />
-    <Compile Include="Expansion\XSORTINGX\Duped Items\AcidWall1.cs" />
+    <Compile Include="Expansion\ML\Items\AcidWall.cs" />
+    <Compile Include="Expansion\ML\Items\AcidWall1.cs" />
     <Compile Include="Holidays\Holiday Items\BasePaintedMask.cs" />
     <Compile Include="Expansion\UO\Items\Decorations\Furinture\ChairInAGhostCostume.cs" />
     <Compile Include="Holidays\Holiday Items\ClownMask.cs" />
@@ -1763,7 +1764,7 @@
     <Compile Include="Expansion\UO\Items\Craft and Component\Potions\BaseCurePotion.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\BaseDecorationArtifact.cs">
+    <Compile Include="Expansion\ML\Items\Artifcts\BaseDecorationArtifact.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Weapons\PaladinSword.cs" />
@@ -5245,49 +5246,49 @@
     <Compile Include="Expansion\UO\Items\Equipment\Books\TanBook.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\ArtifactLargeVase.cs">
+    <Compile Include="Expansion\ML\Items\Artifcts\ArtifactLargeVase.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\ArtifactVase.cs">
+    <Compile Include="Expansion\ML\Items\Artifcts\ArtifactVase.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\DemonSkull.cs">
+    <Compile Include="Expansion\UOTD\ChampionSystem\DemonSkull.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\DirtPatch.cs">
+    <Compile Include="Expansion\UO\Items\Decorations\DirtPatch.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\EvilIdolSkull.cs">
+    <Compile Include="Expansion\UOTD\ChampionSystem\EvilIdolSkull.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SE\Items\Decorative\Futon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\LavaTile.cs">
+    <Compile Include="Expansion\UO\Items\Decorations\LavaTile.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\Pier.cs">
+    <Compile Include="Expansion\AOS\Items\Pier.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\SkullPole.cs">
+    <Compile Include="Expansion\ML\Items\Publish 57\SkullPole.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\SwampTile.cs">
+    <Compile Include="Expansion\UO\Items\Decorations\SwampTile.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\TatteredAncientMummyWrapping.cs">
+    <Compile Include="Expansion\ML\Items\Publish 57\TatteredAncientMummyWrapping.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\WallBlood.cs">
+    <Compile Include="Expansion\ML\Items\Publish 57\WallBlood.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\WaterTile.cs">
+    <Compile Include="Expansion\UO\Items\Decorations\WaterTile.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\Web.cs">
+    <Compile Include="Expansion\ML\Items\Publish 57\Web.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\WindSpirit.cs">
+    <Compile Include="Expansion\ML\Items\Publish 57\WindSpirit.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Clothing\ANecromancerShroud.cs">
@@ -6177,7 +6178,7 @@
     <Compile Include="Expansion\AOS\Items\Publish 27\Minor Artifacts\PolarBearMask.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\SeahorseStatuette.cs">
+    <Compile Include="Expansion\UOTD\SeahorseStatuette.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\AOS\Items\Publish 27\Minor Artifacts\ShieldOfInvulnerability.cs">
@@ -8261,12 +8262,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Clothing\AntiqueWeddingDress.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\CoffinPiece.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\CreepingVine.cs" />
+    <Compile Include="Expansion\EJ\Forgotten Treasures\CoffinPiece.cs" />
+    <Compile Include="Expansion\EJ\Forgotten Treasures\CreepingVine.cs" />
     <Compile Include="Expansion\HS\Items\Food and Drinks\GrapeBunch.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\GrapeVine.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\GrapeVine.cs" />
     <Compile Include="Expansion\HS\Items\Publish 68.3 Items\Message in a Bottle Revamp\KelpWovenLeggings.cs" />
-    <Compile Include="Expansion\XSORTINGX\Decorative\LargeFishingNet.cs" />
+    <Compile Include="Expansion\UO\Items\Provision\LargeFishingNet.cs" />
     <Compile Include="Expansion\SA\Items\Talismans\ManaPhasingOrb.cs" />
     <Compile Include="Expansion\SA\Items\World\MasterSkeletonKey.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\RunedDriftwoodBow.cs" />
@@ -9607,10 +9608,10 @@
     <Compile Include="Expansion\ML\Items\Equipment\Glasses\CollectionsBritLibraryGlasses.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\CollectionsBritLibraryMisc.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\CollectionsBritLibraryMisc.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\CollectionsBritLibraryQuotes.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\CollectionsBritLibraryQuotes.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Talismans\CollectionsBritLibraryTalismans.cs">
@@ -9638,10 +9639,10 @@
     <Compile Include="Expansion\SE\Items\Decorative\BakeKitsuneStatue.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\ChangelingStatue.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\ChangelingStatue.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\CollectionStatuettes.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\CollectionStatuettes.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Items\Equipment\Armor\RoyalZooLeatherArmor.cs">
@@ -9650,22 +9651,22 @@
     <Compile Include="Expansion\ML\Items\Equipment\Armor\RoyalZooPlateArmor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\PolarBearStatue.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\PolarBearStatue.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\QuagmireStatue.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\QuagmireStatue.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Items\Decorative\ReptalonStatue.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\SnakeStatue.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\SnakeStatue.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Items\Equipment\Armor\RoyalZooStuddedArmor.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\WolfStatue.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\WolfStatue.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Items\CommunityCollections\SelectTitleGump.cs">
@@ -9683,10 +9684,10 @@
     <Compile Include="Expansion\SA\Items\Jewelry\MuseumJewlery.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\LordBritishThroneAddon.cs">
+    <Compile Include="Expansion\UO\Items\Decorations\LordBritishThroneAddon.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\MuseumStatues.cs">
+    <Compile Include="Expansion\ML\Items\CommunityCollections\MuseumStatues.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Weapons\MuseumWeapons.cs">
@@ -10171,20 +10172,20 @@
     <Compile Include="Expansion\ML\Mechanics\Quests\Q&amp;AEntry.cs" />
     <Compile Include="Expansion\ML\Quests\Items\QuestHintItem.cs" />
     <Compile Include="Expansion\ML\Mechanics\Quests\Objectives\SimpleObjective.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Core\BaseBalmOrLotion.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Core\BaseThieveConsumable.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Core\StealingHandler.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\BalmOfProtection.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\BalmOfStrength.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\BalmOfSwiftness.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\BalmOfWisdom.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\GemOfSalvation.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\LifeShieldLotion.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\ManaDraught.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\SeedOflife.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\SmugglersLantern.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\SmugglersToolBox.cs" />
-    <Compile Include="Expansion\ML\Mechanics\Monster Stealing\Items\StoneSkinLotion.cs" />
+    <Compile Include="Expansion\ML\Mechanics\Publish 57\Stealing\BaseBalmOrLotion.cs" />
+    <Compile Include="Expansion\ML\Mechanics\Publish 57\Stealing\BaseThieveConsumable.cs" />
+    <Compile Include="Expansion\ML\Mechanics\Publish 57\Stealing\StealingHandler.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\BalmOfProtection.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\BalmOfStrength.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\BalmOfSwiftness.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\BalmOfWisdom.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\GemOfSalvation.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\LifeShieldLotion.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\ManaDraught.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\SeedOflife.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\SmugglersLantern.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\SmugglersToolBox.cs" />
+    <Compile Include="Expansion\ML\Items\Publish 57\StoneSkinLotion.cs" />
     <Compile Include="Expansion\UOR\Mechanics\New Magincia\Command.cs" />
     <Compile Include="Expansion\HS\Items\Rustic Theme Pack\Distillation\CraftDefinition.cs" />
     <Compile Include="Expansion\HS\Items\Rustic Theme Pack\Distillation\DistillationContext.cs" />
@@ -11326,7 +11327,7 @@
     <Compile Include="Expansion\ML\Mobiles\TigersClawThief.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Decorative\TragicRemainsOfTravesty.cs">
+    <Compile Include="Expansion\ML\Items\TragicRemainsOfTravesty.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\ML\Mobiles\Travesty.cs">
