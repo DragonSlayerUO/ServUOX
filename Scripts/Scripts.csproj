@@ -478,6 +478,26 @@
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Resources\EmptyWoodenBowl.cs" />
     <Compile Include="Expansion\UOTD\ChampionSystem\MemorialStone.cs" />
     <Compile Include="Expansion\ML\Quests\Defintions\LastWordsQuest.cs" />
+    <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealLlama.cs" />
+    <Compile Include="Expansion\TOL\Mobiles\Ethereals\EtherealWarBoar.cs" />
+    <Compile Include="Expansion\UOTD\Mobiles\Ethereals\EtherealSerpentineDragon.cs" />
+    <Compile Include="Expansion\SA\Mobiles\EtherealLasher.cs" />
+    <Compile Include="Expansion\TOL\Mobiles\EtherealTarantula.cs" />
+    <Compile Include="Expansion\TOL\Mobiles\EtherealTiger.cs" />
+    <Compile Include="Expansion\SA\Mobiles\EtherealAncientHellHound.cs" />
+    <Compile Include="Expansion\SA\Mobiles\EtherealBoura.cs" />
+    <Compile Include="Expansion\SA\Mobiles\ChargerOfTheFallen.cs" />
+    <Compile Include="Expansion\ML\Mobiles\Ethereals\EtherealReptalon.cs" />
+    <Compile Include="Expansion\SE\Mobiles\EtherealHiryu.cs" />
+    <Compile Include="Expansion\ML\Mobiles\Ethereals\EtherealCuSidhe.cs" />
+    <Compile Include="Expansion\TOL\Mobiles\RideablePolarBear.cs" />
+    <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealSwampDragon.cs" />
+    <Compile Include="Expansion\UOTD\Mobiles\Ethereals\EtherealKirin.cs" />
+    <Compile Include="Expansion\UOTD\Mobiles\Ethereals\EtherealBeetle.cs" />
+    <Compile Include="Expansion\UOTD\Mobiles\Ethereals\EtherealUnicorn.cs" />
+    <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealRidgeback.cs" />
+    <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealOstard.cs" />
+    <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealHorse.cs" />
     <Compile Include="Holidays\Holiday Items\LanternOfSouls.cs" />
     <Compile Include="Holidays\Holiday Items\ThreeTieredCake.cs" />
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Cooked\ChickenLeg.cs" />
@@ -648,7 +668,7 @@
     <Compile Include="Expansion\UO\Mobiles\Animals\Wolves.cs" />
     <Compile Include="Expansion\UO\Mobiles\Monsters\Elementals.cs" />
     <Compile Include="Expansion\UO\Mobiles\Monsters\Undead.cs" />
-    <Compile Include="Expansion\XSORTINGX\Pet Abilities\ColdWind.cs" />
+    <Compile Include="Expansion\EJ\Mechanics\Abilities\ColdWind.cs" />
     <Compile Include="Expansion\AOS\Mechanics\Skills\Focus.cs" />
     <Compile Include="Administration\Accounting\AccessRestrictions.cs">
       <SubType>Code</SubType>
@@ -2887,7 +2907,7 @@
     <Compile Include="Expansion\SA\Mobiles\EnslavedGreenGoblin.cs" />
     <Compile Include="Expansion\SA\Mobiles\EnslavedGreenGoblinAlchemist.cs" />
     <Compile Include="Expansion\SA\Mobiles\EnslavedSatyr.cs" />
-    <Compile Include="Expansion\XSORTINGX\Ethereals.cs" />
+    <Compile Include="Expansion\UOR\Mobiles\Ethereals\EtherealMount.cs" />
     <Compile Include="Expansion\UOTD\Mobiles\EtherealWarrior.cs" />
     <Compile Include="Expansion\UO\Mobiles\Monsters\Ettin.cs" />
     <Compile Include="Expansion\UO\Mobiles\Monsters\EvilMages.cs" />
@@ -8275,7 +8295,7 @@
     <Compile Include="Expansion\AOS\Mechanics\Special Moves\Dismount.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\XSORTINGX\Disrobe.cs">
+    <Compile Include="Customs\Disrobe.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SE\Mechanics\Abilities\DoubleShot.cs">
