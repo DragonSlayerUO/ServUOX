@@ -1,3 +1,7 @@
+using System;
+using Server;
+using Server.Items;
+
 namespace Server.Multis
 {
     public class SmallDragonBoat : BaseBoat
@@ -23,6 +27,35 @@ namespace Server.Multis
         }
 
         public SmallDragonBoat(Serial serial) : base(serial)
+        {
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+
+            int version = reader.ReadInt();
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+
+            writer.Write(0);
+        }
+    }
+
+    public class SmallDragonBoatDeed : BaseBoatDeed
+    {
+        public override int LabelNumber => 1041206;  // small dragon ship deed
+        public override BaseBoat Boat => new SmallDragonBoat(BoatDirection);
+
+        [Constructable]
+        public SmallDragonBoatDeed() : base(0x4, Point3D.Zero)
+        {
+        }
+
+        public SmallDragonBoatDeed(Serial serial) : base(serial)
         {
         }
 

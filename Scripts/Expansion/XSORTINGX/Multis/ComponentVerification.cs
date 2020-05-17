@@ -1,18 +1,23 @@
+#region References
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+#endregion
 
 namespace Server.Multis
 {
     public class ComponentVerification
     {
-        public int[] ItemTable { get; }
-        public int[] MultiTable { get; }
+        public int[] ItemTable => m_ItemTable;
+        public int[] MultiTable => m_MultiTable;
+
+        private readonly int[] m_ItemTable;
+        private readonly int[] m_MultiTable;
 
         public ComponentVerification()
         {
-            ItemTable = CreateTable(TileData.MaxItemValue);
-            MultiTable = CreateTable(0x4000);
+            m_ItemTable = CreateTable(TileData.MaxItemValue);
+            m_MultiTable = CreateTable(0x4000);
 
             LoadItems(
                 "Data/Components/walls.txt",
@@ -140,22 +145,22 @@ namespace Server.Multis
 
         public bool IsItemValid(int itemID)
         {
-            if (itemID <= 0 || itemID >= ItemTable.Length)
+            if (itemID <= 0 || itemID >= m_ItemTable.Length)
             {
                 return false;
             }
 
-            return CheckValidity(ItemTable[itemID]);
+            return CheckValidity(m_ItemTable[itemID]);
         }
 
         public bool IsMultiValid(int multiID)
         {
-            if (multiID <= 0 || multiID >= MultiTable.Length)
+            if (multiID <= 0 || multiID >= m_MultiTable.Length)
             {
                 return false;
             }
 
-            return CheckValidity(MultiTable[multiID]);
+            return CheckValidity(m_MultiTable[multiID]);
         }
 
         public bool CheckValidity(int val)
@@ -182,12 +187,12 @@ namespace Server.Multis
 
         private void LoadItems(string path, params string[] itemColumns)
         {
-            LoadSpreadsheet(ItemTable, path, itemColumns);
+            LoadSpreadsheet(m_ItemTable, path, itemColumns);
         }
 
         private void LoadMultis(string path, params string[] multiColumns)
         {
-            LoadSpreadsheet(MultiTable, path, multiColumns);
+            LoadSpreadsheet(m_MultiTable, path, multiColumns);
         }
 
         private static void LoadSpreadsheet(int[] table, string path, params string[] tileColumns)

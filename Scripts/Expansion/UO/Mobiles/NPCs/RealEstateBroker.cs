@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Server.Items;
+using Server.Multis.Deeds;
 using Server.Network;
 using Server.Targeting;
 

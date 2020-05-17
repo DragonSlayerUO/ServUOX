@@ -58,7 +58,8 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+
+            int version = reader.ReadInt();
 
             DateTime next = reader.ReadDateTime();
             m_Area = new Rectangle3D[reader.ReadInt()];

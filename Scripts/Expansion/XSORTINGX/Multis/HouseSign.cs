@@ -7,11 +7,14 @@ namespace Server.Multis
 {
     public class HouseSign : Item
     {
+        private BaseHouse m_Owner;
+        private Mobile m_OrgOwner;
+
         public HouseSign(BaseHouse owner)
             : base(0xBD2)
         {
-            Owner = owner;
-            OriginalOwner = Owner.Owner;
+            m_Owner = owner;
+            m_OrgOwner = m_Owner.Owner;
             Movable = false;
         }
 
@@ -28,31 +31,31 @@ namespace Server.Multis
             return Name;
         }
 
-        public BaseHouse Owner { get; private set; }
+        public BaseHouse Owner => m_Owner;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool RestrictDecay
         {
             get
             {
-                return (Owner != null && Owner.RestrictDecay);
+                return (m_Owner != null && m_Owner.RestrictDecay);
             }
             set
             {
-                if (Owner != null)
-                    Owner.RestrictDecay = value;
+                if (m_Owner != null)
+                    m_Owner.RestrictDecay = value;
             }
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile OriginalOwner { get; private set; }
+        public Mobile OriginalOwner => m_OrgOwner;
 
         public override void OnAfterDelete()
         {
             base.OnAfterDelete();
 
-            if (Owner != null && !Owner.Deleted)
-                Owner.Delete();
+            if (m_Owner != null && !m_Owner.Deleted)
+                m_Owner.Delete();
         }
 
         public override void AddNameProperty(ObjectPropertyList list)
@@ -62,22 +65,24 @@ namespace Server.Multis
 
         public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
-        public bool GettingProperties { get; private set; }
+        private bool m_GettingProperties;
+
+        public bool GettingProperties => m_GettingProperties;
 
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
 
             list.Add(1061639, Utility.FixHtml(GetName())); // Name: ~1_NAME~
-            list.Add(1061640, (Owner == null || Owner.Owner == null) ? "nobody" : Owner.Owner.Name); // Owner: ~1_OWNER~
+            list.Add(1061640, (m_Owner == null || m_Owner.Owner == null) ? "nobody" : m_Owner.Owner.Name); // Owner: ~1_OWNER~
 
-            if (Owner != null)
+            if (m_Owner != null)
             {
-                list.Add(Owner.Public ? 1061641 : 1061642); // This House is Open to the Public : This is a Private Home
+                list.Add(m_Owner.Public ? 1061641 : 1061642); // This House is Open to the Public : This is a Private Home
 
-                GettingProperties = true;
-                DecayLevel level = Owner.DecayLevel;
-                GettingProperties = false;
+                m_GettingProperties = true;
+                DecayLevel level = m_Owner.DecayLevel;
+                m_GettingProperties = false;
 
                 if (level == DecayLevel.DemolitionPending)
                 {
@@ -95,11 +100,11 @@ namespace Server.Multis
 
         public override void OnSingleClick(Mobile from)
         {
-            if (Owner != null && BaseHouse.DecayEnabled && Owner.DecayPeriod != TimeSpan.Zero)
+            if (m_Owner != null && BaseHouse.DecayEnabled && m_Owner.DecayPeriod != TimeSpan.Zero)
             {
                 string message;
 
-                switch (Owner.DecayLevel)
+                switch (m_Owner.DecayLevel)
                 {
                     case DecayLevel.Ageless:
                         message = "ageless";
@@ -132,43 +137,44 @@ namespace Server.Multis
 
         public void ShowSign(Mobile m)
         {
-            if (Owner != null && m.AccessLevel == AccessLevel.Player)
+            if (m_Owner != null && m.AccessLevel == AccessLevel.Player)
             {
-                if ((Core.ML && Owner.IsFriend(m)) || !Core.ML)
+                if ((Core.ML && m_Owner.IsFriend(m)) || !Core.ML)
                 {
-                    Owner.RefreshDecay();
+                    m_Owner.RefreshDecay();
                 }
 
-                if (!Core.AOS && Owner.IsFriend(m))
+                if (!Core.AOS && m_Owner.IsFriend(m))
                 {
                     m.SendLocalizedMessage(501293); // Welcome back to the house, friend!
                 }
             }
 
-            if (Owner.IsAosRules)
+            if (m_Owner.IsAosRules)
             {
-                m.SendGump(new HouseGumpAOS(HouseGumpPageAOS.Information, m, Owner));
+                m.SendGump(new HouseGumpAOS(HouseGumpPageAOS.Information, m, m_Owner));
             }
             else
             {
-                m.SendGump(new HouseGump(m, Owner));
+                m.SendGump(new HouseGump(m, m_Owner));
             }
         }
 
         public void ClaimGump_Callback(Mobile from, bool okay, object state)
         {
-            if (okay && Owner != null && Owner.Owner == null && Owner.DecayLevel != DecayLevel.DemolitionPending)
+            if (okay && m_Owner != null && m_Owner.Owner == null && m_Owner.DecayLevel != DecayLevel.DemolitionPending)
             {
-                bool canClaim;
-                if (Owner.CoOwners == null || Owner.CoOwners.Count == 0)
-                    canClaim = Owner.IsFriend(from);
+                bool canClaim = false;
+
+                if (m_Owner.CoOwners == null || m_Owner.CoOwners.Count == 0)
+                    canClaim = m_Owner.IsFriend(from);
                 else
-                    canClaim = Owner.IsCoOwner(from);
+                    canClaim = m_Owner.IsCoOwner(from);
 
                 if (canClaim && !BaseHouse.AtAccountHouseLimit(from))
                 {
-                    Owner.Owner = from;
-                    Owner.LastTraded = DateTime.UtcNow;
+                    m_Owner.Owner = from;
+                    m_Owner.LastTraded = DateTime.UtcNow;
                 }
             }
 
@@ -178,17 +184,17 @@ namespace Server.Multis
 
         public override void OnDoubleClick(Mobile m)
         {
-            if (Owner == null)
+            if (m_Owner == null)
                 return;
 
-            if (m.AccessLevel < AccessLevel.GameMaster && Owner.Owner == null && Owner.DecayLevel != DecayLevel.DemolitionPending)
+            if (m.AccessLevel < AccessLevel.GameMaster && m_Owner.Owner == null && m_Owner.DecayLevel != DecayLevel.DemolitionPending)
             {
                 bool canClaim = false;
 
-                if (Owner.CoOwners == null || Owner.CoOwners.Count == 0)
-                    canClaim = Owner.IsFriend(m);
+                if (m_Owner.CoOwners == null || m_Owner.CoOwners.Count == 0)
+                    canClaim = m_Owner.IsFriend(m);
                 else
-                    canClaim = Owner.IsCoOwner(m);
+                    canClaim = m_Owner.IsCoOwner(m);
 
                 if (canClaim && !BaseHouse.AtAccountHouseLimit(m))
                 {
@@ -284,8 +290,8 @@ namespace Server.Multis
 
             writer.Write(0); // version
 
-            writer.Write(Owner);
-            writer.Write(OriginalOwner);
+            writer.Write(m_Owner);
+            writer.Write(m_OrgOwner);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -298,8 +304,8 @@ namespace Server.Multis
             {
                 case 0:
                     {
-                        Owner = reader.ReadItem() as BaseHouse;
-                        OriginalOwner = reader.ReadMobile();
+                        m_Owner = reader.ReadItem() as BaseHouse;
+                        m_OrgOwner = reader.ReadMobile();
 
                         break;
                     }

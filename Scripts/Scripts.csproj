@@ -445,20 +445,6 @@
     <Compile Include="Expansion\SA\Quests\Prassel.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicKnight.cs" />
     <Compile Include="Expansion\SA\Tomb of Kings\Mobiles\CursedMetallicMage.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\LargeMarbleDeed.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\SmallTowerDeed.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\LogCabinDeed.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\SandstonePatioDeed.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\MarbleWorkshopDeed.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\VillaDeed.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\StoneWorkshopDeed.cs" />
-    <Compile Include="Expansion\UOR\Items\Deeds\LargePatioDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Boats\SmallDragonBoatDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Boats\SmallBoatDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Boats\MediumDragonBoatDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Boats\MediumBoatDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Boats\LargeDragonBoatDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Boats\LargeBoatDeed.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Bracelet\GoldBracelet.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Bracelet\SilverBracelet.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Earrings\GoldEarrings.cs" />
@@ -471,18 +457,6 @@
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Necklaces\Necklace.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Rings\SilverRing.cs" />
     <Compile Include="Expansion\UO\Items\Equipment\Jewelry\Rings\GoldRing.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\CastleDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\TwoStoryWoodPlasterHouseDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\KeepDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\TowerDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\TwoStoryStonePlasterHouseDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\BrickHouseDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\SmallBrickHouseDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\WoodHouseDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\ThatchedRoofCottageDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\WoodPlasterHouseDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\FieldStoneHouseDeed.cs" />
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\StonePlasterHouseDeed.cs" />
     <Compile Include="Expansion\UO\Items\Provision\Food and Drink\Beverages\Glass.cs" />
     <Compile Include="Expansion\UO\Mechanics\Skills\Herding.cs" />
     <Compile Include="Expansion\SA\Items\Food and Drinks\BowlOfBlackrockStew.cs" />
@@ -1508,7 +1482,7 @@
     <Compile Include="Expansion\HS\Items\Galleons\GalleonItem.cs" />
     <Compile Include="Expansion\EJ\Forsaken Foes\Mobile\MiningCooperativeMerchant.cs" />
     <Compile Include="Expansion\UO\Mobiles\NPCs\CommissionPlayerVendors.cs" />
-    <Compile Include="Expansion\AOS\Mechanics\Houses\ContestHouses.cs" />
+    <Compile Include="Expansion\XSORTINGX\Multis\ContestHouses.cs" />
     <Compile Include="Expansion\SA\Quests\Items\TheRitualItems.cs" />
     <Compile Include="Expansion\SA\Quests\The Ritual\Prugyilonus.cs" />
     <Compile Include="Expansion\SA\Quests\Items\CrystalLotusPuzzle.cs" />
@@ -3456,7 +3430,7 @@
     <Compile Include="Expansion\SA\TerMur\Relanord.cs" />
     <Compile Include="Expansion\SA\TerMur\UsagralemBallem.cs" />
     <Compile Include="Expansion\SA\TerMur\Vasanord.cs" />
-    <Compile Include="Expansion\AOS\Mechanics\Houses\HouseTeleporterTile.cs" />
+    <Compile Include="Expansion\XSORTINGX\Multis\HouseTeleporterTile.cs" />
     <Compile Include="Expansion\SA\Quests\Defintions\ALittleSomething.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\AmbitiousQueenQuest.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quests\AmbitiousSolenQueen\Conversations.cs" />
@@ -9337,116 +9311,119 @@
     <Compile Include="Expansion\UO\Mechanics\AI\VendorAI.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Houses\BaseHouse.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\BaseHouse.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\BaseBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\BaseBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Items\Deeds\Boats\BaseBoatDeed.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\BaseBoatDeed.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\BaseDockedBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\BaseDockedBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\ConfirmDryDockGump.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\ConfirmDryDockGump.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\Hold.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\Hold.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\LargeBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\LargeBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\LargeDragonBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\LargeDragonBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\MediumBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\MediumBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\MediumDragonBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\MediumDragonBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\Plank.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\Plank.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\RenameBoatPrompt.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\RenameBoatPrompt.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\SmallBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\SmallBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\SmallDragonBoat.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\SmallDragonBoat.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\Strandedness.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\Strandedness.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Boats\TillerMan.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Boats\TillerMan.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\BankerCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\BankerCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\BaseCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\BaseCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\BrigandCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\BrigandCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\ML\Mechanics\Camps\ElfBrigandCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\ElfBrigandCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\HealerCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\HealerCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\LizardmenCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\HumanBrigandCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\MageCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\LizardmenCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\OrcCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\MageCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Camps\PrisonerCamp.cs" />
-    <Compile Include="Expansion\UO\Mechanics\Camps\RatCamp.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\OrcCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\AOS\Mechanics\Houses\ComponentVerification.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\PrisonerCamp.cs" />
+    <Compile Include="Expansion\XSORTINGX\Multis\Camps\RatCamp.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Items\Deeds\Houses\HouseDeed.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\ComponentVerification.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Houses\DynamicDecay.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Deeds.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\AOS\Mechanics\Houses\HouseFoundation.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\DynamicDecay.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Houses\HousePlacement.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\HouseFoundation.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\AOS\Items\HousePlacementTool.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\HousePlacement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Houses\Houses.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\HousePlacementTool.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Houses\HouseSign.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\Houses.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\AOS\Mechanics\Houses\HouseTeleporter.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\HouseSign.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\AOS\Mechanics\Houses\MovingCrate.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\HouseTeleporter.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Houses\NoHousingItem.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\MovingCrate.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Mechanics\Houses\PreviewHouse.cs">
+    <Compile Include="Expansion\XSORTINGX\Multis\NoHousingItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Expansion\XSORTINGX\Multis\PreviewHouse.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\AOS\Quests\Collector\CollectorQuest.cs">

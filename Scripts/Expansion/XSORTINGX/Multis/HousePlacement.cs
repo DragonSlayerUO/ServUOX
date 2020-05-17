@@ -23,7 +23,8 @@ namespace Server.Multis
     public class HousePlacement
     {
         // Any land tile which matches one of these ID numbers is considered a road and cannot be placed over.
-        public static int[] RoadIDs { get; } = new int[]
+        public static int[] RoadIDs => m_RoadIDs;
+        private static readonly int[] m_RoadIDs = new int[]
         {
             0x0071, 0x0078,
             0x00E8, 0x00EB,
@@ -35,7 +36,6 @@ namespace Server.Multis
             0x0009, 0x0015, // Furrows
             0x0150, 0x015C  // Furrows
         };
-
         private const int YardSize = 5;
         public static HousePlacementResult Check(Mobile from, int multiID, Point3D center, out ArrayList toMove)
         {
@@ -57,7 +57,7 @@ namespace Server.Multis
                 return HousePlacementResult.InvalidCastleKeep;
 
             #region SA
-            if (map == Map.TerMur && !Engines.Points.PointsSystem.QueensLoyalty.IsNoble(from))
+            if (map == Map.TerMur && !Server.Engines.Points.PointsSystem.QueensLoyalty.IsNoble(from))
             {
                 return HousePlacementResult.NoQueenLoyalty;
             }
@@ -224,9 +224,9 @@ namespace Server.Multis
                         }
                     }
 
-                    for (int i = 0; i < RoadIDs.Length; i += 2)
+                    for (int i = 0; i < m_RoadIDs.Length; i += 2)
                     {
-                        if (landID >= RoadIDs[i] && landID <= RoadIDs[i + 1])
+                        if (landID >= m_RoadIDs[i] && landID <= m_RoadIDs[i + 1])
                             return HousePlacementResult.BadLand; // Broke rule #5
                     }
 
@@ -292,9 +292,9 @@ namespace Server.Multis
                 if ((TileData.LandTable[landID].Flags & TileFlag.Impassable) != 0)
                     return HousePlacementResult.BadLand;
 
-                for (int j = 0; j < RoadIDs.Length; j += 2)
+                for (int j = 0; j < m_RoadIDs.Length; j += 2)
                 {
-                    if (landID >= RoadIDs[j] && landID <= RoadIDs[j + 1])
+                    if (landID >= m_RoadIDs[j] && landID <= m_RoadIDs[j + 1])
                         return HousePlacementResult.BadLand; // Broke rule #5
                 }
 
@@ -341,8 +341,9 @@ namespace Server.Multis
                     {
                         for (int j = 0; j < sector.Multis.Count; j++)
                         {
-                            if (sector.Multis[j] is BaseHouse _house)
+                            if (sector.Multis[j] is BaseHouse)
                             {
+                                BaseHouse _house = (BaseHouse)sector.Multis[j];
                                 if (!_houses.Contains(_house))
                                 {
                                     _houses.Add(_house);
