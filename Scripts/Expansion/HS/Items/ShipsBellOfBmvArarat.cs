@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Server.Items;
 
 namespace Server.Items
