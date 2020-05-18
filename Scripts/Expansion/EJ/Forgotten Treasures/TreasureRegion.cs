@@ -1,6 +1,6 @@
-using Server.Regions;
 using System;
 using System.IO;
+using Server.Regions;
 
 namespace Server
 {
@@ -63,17 +63,13 @@ namespace Server
         public override void OnEnter(Mobile m)
         {
             if (m.IsStaff())
-            {
                 m.SendMessage("You have entered a protected treasure map area.");
-            }
         }
 
         public override void OnExit(Mobile m)
         {
             if (m.IsStaff())
-            {
                 m.SendMessage("You have left a protected treasure map area.");
-            }
         }
     }
 }

@@ -1,3 +1,5 @@
+using System;
+
 namespace Server.Items
 {
     public class JackOLanternHelm : BaseArmor
@@ -40,7 +42,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 }

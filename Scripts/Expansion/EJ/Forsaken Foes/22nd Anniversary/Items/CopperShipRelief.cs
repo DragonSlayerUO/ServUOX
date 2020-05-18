@@ -1,3 +1,4 @@
+using System;
 using Server.Gumps;
 
 namespace Server.Items
@@ -9,7 +10,7 @@ namespace Server.Items
         private string _DisplayName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string DisplayName { get => _DisplayName; set { _DisplayName = value; InvalidateProperties(); } }
+        public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
         public AddonFacing Facing { get; set; }
 
@@ -55,9 +56,7 @@ namespace Server.Items
                 }
 
                 if (Hue == 2951)
-                {
                     list.Add(1076187); // Antique
-                }
             }
 
             public CopperShipReliefComponent(Serial serial)
@@ -68,13 +67,13 @@ namespace Server.Items
             public override void Serialize(GenericWriter writer)
             {
                 base.Serialize(writer);
-                writer.WriteEncodedInt(0);
+                writer.WriteEncodedInt(0); // version
             }
 
             public override void Deserialize(GenericReader reader)
             {
                 base.Deserialize(reader);
-                _ = reader.ReadEncodedInt();
+                int version = reader.ReadEncodedInt();
             }
         }
 
@@ -86,7 +85,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.WriteEncodedInt(1);
+            writer.WriteEncodedInt(1); // version
 
             writer.Write(_DisplayName);
         }
@@ -114,7 +113,7 @@ namespace Server.Items
         private string _DisplayName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string DisplayName { get => _DisplayName; set { _DisplayName = value; InvalidateProperties(); } }
+        public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
         private AddonFacing Facing { get; set; }
 
@@ -132,13 +131,9 @@ namespace Server.Items
             LootType = LootType.Blessed;
 
             if (name == null)
-            {
                 _DisplayName = _Names[Utility.Random(_Names.Length)];
-            }
             else
-            {
                 _DisplayName = name;
-            }
         }
 
         public override void OnDoubleClick(Mobile from)
@@ -149,9 +144,7 @@ namespace Server.Items
                 from.SendGump(new AddonOptionGump(this));
             }
             else
-            {
                 from.SendLocalizedMessage(1062334); // This item must be in your backpack to be used.       	
-            }
         }
 
         public override void GetProperties(ObjectPropertyList list)
@@ -164,9 +157,7 @@ namespace Server.Items
             }
 
             if (Hue == 2951)
-            {
                 list.Add(1076187); // Antique
-            }
         }
 
         public CopperShipReliefAddonDeed(Serial serial)
@@ -177,7 +168,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // version
 
             writer.Write(_DisplayName);
         }
@@ -185,7 +176,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             _DisplayName = reader.ReadString();
         }
@@ -202,9 +193,7 @@ namespace Server.Items
             Facing = (AddonFacing)choice;
 
             if (!Deleted)
-            {
                 base.OnDoubleClick(from);
-            }
         }
 
         public static string[] _Names =

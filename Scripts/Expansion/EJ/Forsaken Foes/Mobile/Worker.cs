@@ -1,7 +1,8 @@
-using Server.Engines.Quests;
-using Server.Gumps;
+using System;
 using Server.Items;
+using Server.Gumps;
 using Server.Mobiles;
+using Server.Engines.Quests;
 using System.Collections.Generic;
 using System.IO;
 
@@ -185,13 +186,9 @@ namespace Server.Engines.Fellowship
                 if (FellowshipChainList.ContainsKey(from))
                 {
                     if (chain > FellowshipChainList[from])
-                    {
                         cliloc = clilocs[(int)(chain - 1), 0];
-                    }
                     else
-                    {
                         cliloc = clilocs[(int)(chain - 1), 1];
-                    }
                 }
                 else
                 {
@@ -223,7 +220,7 @@ namespace Server.Engines.Fellowship
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             Chain = (FellowshipChain)reader.ReadInt();
 

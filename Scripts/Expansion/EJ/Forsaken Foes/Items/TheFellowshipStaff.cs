@@ -1,3 +1,5 @@
+using System;
+
 namespace Server.Items
 {
     [Flipable(0xA343, 0xA344)]
@@ -39,13 +41,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.WriteEncodedInt(0);
+            writer.WriteEncodedInt(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadEncodedInt();
+            int version = reader.ReadEncodedInt();
 
             if (Map == Map.Trammel)
             {

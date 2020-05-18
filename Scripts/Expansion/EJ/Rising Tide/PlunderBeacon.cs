@@ -81,9 +81,7 @@ namespace Server.Items
             }
 
             if (Controller != null)
-            {
                 Controller.OnBeaconDestroyed();
-            }
 
             return base.OnBeforeDestroyed();
         }
@@ -103,7 +101,7 @@ namespace Server.Items
             base.Serialize(writer);
             writer.Write(0);
 
-            writer.WriteItem(Controller);
+            writer.WriteItem<PlunderBeaconAddon>(Controller);
         }
 
         public override void Deserialize(GenericReader reader)

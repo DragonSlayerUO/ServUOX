@@ -1,11 +1,11 @@
-using Server.Engines.Craft;
-using Server.Engines.PartySystem;
-using Server.Mobiles;
-using Server.SkillHandlers;
-using Server.Spells;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Server.Engines.Craft;
+using Server.Spells;
+using Server.SkillHandlers;
+using Server.Mobiles;
+using Server.Engines.PartySystem;
 
 namespace Server.Items
 {
@@ -57,9 +57,7 @@ namespace Server.Items
         public static int ConvertLevel(int level)
         {
             if (!NewSystem || level == -1)
-            {
                 return level;
-            }
 
             switch (level)
             {
@@ -233,9 +231,7 @@ namespace Server.Items
         public static SkillName[] GetPowerScrollList(TreasureLevel level, TreasurePackage package, TreasureFacet facet)
         {
             if (facet != TreasureFacet.Felucca)
-            {
                 return null;
-            }
 
             if (level >= TreasureLevel.Cache)
             {
@@ -289,9 +285,7 @@ namespace Server.Items
         public static Type[] GetReagentList(TreasureLevel level, TreasurePackage package, TreasureFacet facet)
         {
             if (level != TreasureLevel.Stash || package != TreasurePackage.Mage)
-            {
                 return null;
-            }
 
             switch (facet)
             {
@@ -317,9 +311,7 @@ namespace Server.Items
         public static Type[] GetSpecialLootList(TreasureLevel level, TreasurePackage package)
         {
             if (level == TreasureLevel.Stash)
-            {
                 return null;
-            }
 
             Type[] list;
 
@@ -413,7 +405,8 @@ namespace Server.Items
 
         public static int GetEquipmentAmount(Mobile from, TreasureLevel level, TreasurePackage package)
         {
-            int amount;
+            var amount = 0;
+
             switch (level)
             {
                 default:
@@ -443,7 +436,7 @@ namespace Server.Items
         public static void GetMinMaxBudget(TreasureLevel level, Item item, out int min, out int max)
         {
             var preArtifact = Imbuing.GetMaxWeight(item) + 100;
-            _ = 0;
+            min = max = 0;
 
             switch (level)
             {
@@ -880,10 +873,8 @@ namespace Server.Items
 
                         if (_DecorativeMinorArtifacts.Any(t => t == deco.GetType()))
                         {
-                            Container pack = new Backpack
-                            {
-                                Hue = 1278
-                            };
+                            Container pack = new Backpack();
+                            pack.Hue = 1278;
 
                             pack.DropItem(deco);
                             chest.DropItem(pack);
@@ -935,17 +926,16 @@ namespace Server.Items
                             }
                             else
                             {
-                                GetMinMaxBudget(level, deco, out int min, out int max);
+                                int min, max;
+                                GetMinMaxBudget(level, deco, out min, out max);
                                 RunicReforging.GenerateRandomItem(deco, from is PlayerMobile ? ((PlayerMobile)from).RealLuck : from.Luck, min, max, chest.Map);
                             }
                         }
 
                         if (_FunctionalMinorArtifacts.Any(t => t == type))
                         {
-                            Container pack = new Backpack
-                            {
-                                Hue = 1278
-                            };
+                            Container pack = new Backpack();
+                            pack.Hue = 1278;
 
                             pack.DropItem(deco);
                             chest.DropItem(pack);
@@ -967,7 +957,8 @@ namespace Server.Items
             foreach (var type in GetRandomEquipment(level, package, facet, amount))
             {
                 var item = Loot.Construct(type);
-                GetMinMaxBudget(level, item, out int min, out int max);
+                int min, max;
+                GetMinMaxBudget(level, item, out min, out max);
 
                 if (item != null)
                 {

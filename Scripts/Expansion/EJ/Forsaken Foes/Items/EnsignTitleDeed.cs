@@ -1,3 +1,5 @@
+using System;
+
 namespace Server.Items
 {
     public class EnsignTitleDeed : BaseRewardTitleDeed
@@ -23,7 +25,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int v = reader.ReadInt();
         }
     }
 }

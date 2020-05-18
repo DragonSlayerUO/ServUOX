@@ -1,3 +1,5 @@
+using System;
+
 namespace Server.Items
 {
     public class BlackthornStep5 : BlackthornBaseAddon
@@ -24,9 +26,7 @@ namespace Server.Items
         public BlackthornStep5()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)
-            {
                 AddComponent(new AddonComponent(m_AddOnSimpleComponents[i, 0]), m_AddOnSimpleComponents[i, 1], m_AddOnSimpleComponents[i, 2], m_AddOnSimpleComponents[i, 3]);
-            }
 
             AddComplexComponent(this, 3309, 9, -6, 0, 63, -1, "", 1);// 1
             AddComplexComponent(this, 8445, -6, -4, 17, 2500, -1, "", 1);// 11
@@ -58,13 +58,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // Version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             if (Map == Map.Trammel)
             {

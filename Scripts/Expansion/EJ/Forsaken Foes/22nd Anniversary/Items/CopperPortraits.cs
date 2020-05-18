@@ -1,3 +1,5 @@
+using System;
+
 namespace Server.Items
 {
     [Flipable(0xA3E0, 0xA3E4)]
@@ -6,7 +8,7 @@ namespace Server.Items
         private string _DisplayName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string DisplayName { get => _DisplayName; set { _DisplayName = value; InvalidateProperties(); } }
+        public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
         public override int LabelNumber => 1159154;  // Copper Portrait
 
@@ -27,9 +29,7 @@ namespace Server.Items
             }
 
             if (Hue == 2951)
-            {
                 list.Add(1076187); // Antique
-            }
         }
 
         public CopperPortrait1(Serial serial)
@@ -48,7 +48,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             _DisplayName = reader.ReadString();
         }
@@ -67,7 +67,7 @@ namespace Server.Items
         private string _DisplayName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string DisplayName { get => _DisplayName; set { _DisplayName = value; InvalidateProperties(); } }
+        public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
         public override int LabelNumber => 1159154;  // Copper Portrait
 
@@ -88,9 +88,7 @@ namespace Server.Items
             }
 
             if (Hue == 2951)
-            {
                 list.Add(1076187); // Antique
-            }
         }
 
         public CopperPortrait2(Serial serial)
@@ -109,7 +107,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             _DisplayName = reader.ReadString();
         }

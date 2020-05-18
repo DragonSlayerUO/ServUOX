@@ -1,3 +1,5 @@
+using System;
+
 namespace Server.Items
 {
     public class TheFellowshipHouse : BlackthornBaseAddon
@@ -230,9 +232,7 @@ namespace Server.Items
         public TheFellowshipHouse()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)
-            {
                 AddComponent(new AddonComponent(m_AddOnSimpleComponents[i, 0]), m_AddOnSimpleComponents[i, 1], m_AddOnSimpleComponents[i, 2], m_AddOnSimpleComponents[i, 3]);
-            }
 
             AddComplexComponent(this, 41185, -7, 6, 30, 22, -1, "", 1);// 78
             AddComplexComponent(this, 41254, -1, 8, 8, 33, -1, "", 1);// 100
@@ -275,13 +275,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // Version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             if (Map == Map.Trammel)
             {

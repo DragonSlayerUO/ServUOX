@@ -1,9 +1,11 @@
-using Server.Engines.SeasonalEvents;
-using Server.Items;
-using Server.Spells;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
+using Server;
+using Server.Items;
+using Server.Engines.SeasonalEvents;
+using Server.Spells;
 
 namespace Server.Mobiles
 {
@@ -84,16 +86,12 @@ namespace Server.Mobiles
         public void Summon(Mobile target, bool initial = false)
         {
             if (target == null || (!initial && InitialSpawn != null && InitialSpawn.Count > 0))
-            {
                 return;
-            }
 
             var map = Map;
 
             if (map == null || TotalSummons() > MaxSummons)
-            {
                 return;
-            }
 
             if (!initial)
             {
@@ -103,9 +101,7 @@ namespace Server.Mobiles
             Timer.DelayCall(TimeSpan.FromSeconds(initial ? 0.25 : 1.0), com =>
             {
                 if (!com.Alive)
-                {
                     return;
-                }
 
                 int count = Utility.RandomMinMax(3, 5);
 
@@ -141,9 +137,7 @@ namespace Server.Mobiles
                             if (spawn.Combatant != null)
                             {
                                 if (!(spawn.Combatant is PlayerMobile) || !((PlayerMobile)spawn.Combatant).HonorActive)
-                                {
                                     spawn.Combatant = com;
-                                }
                             }
                             else
                             {
@@ -169,26 +163,18 @@ namespace Server.Mobiles
             if (initial)
             {
                 if (InitialSpawn == null)
-                {
                     InitialSpawn = new List<BaseCreature>();
-                }
 
                 if (!InitialSpawn.Contains(bc))
-                {
                     InitialSpawn.Add(bc);
-                }
             }
             else
             {
                 if (SummonedHelpers == null)
-                {
                     SummonedHelpers = new List<BaseCreature>();
-                }
 
                 if (!SummonedHelpers.Contains(bc))
-                {
                     SummonedHelpers.Add(bc);
-                }
             }
         }
 
@@ -299,15 +285,8 @@ namespace Server.Mobiles
                     {
                         var range = (int)GetDistanceToSqrt(m);
 
-                        if (range < 1)
-                        {
-                            range = 1;
-                        }
-
-                        if (range > 4)
-                        {
-                            range = 4;
-                        }
+                        if (range < 1) range = 1;
+                        if (range > 4) range = 4;
 
                         m.PlaySound(0x20D);
                         AOS.Damage(this, m, baseDamage / range, 0, 0, 0, 0, 0, 100, 0);
@@ -414,22 +393,18 @@ namespace Server.Mobiles
             writer.Write(SummonedHelpers == null ? 0 : SummonedHelpers.Count);
 
             if (SummonedHelpers != null)
-            {
                 SummonedHelpers.ForEach(m => writer.Write(m));
-            }
 
             writer.Write(InitialSpawn == null ? 0 : InitialSpawn.Count);
 
             if (InitialSpawn != null)
-            {
                 InitialSpawn.ForEach(m => writer.Write(m));
-            }
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             SpawnLocation = reader.ReadPoint3D();
 
@@ -439,12 +414,12 @@ namespace Server.Mobiles
             {
                 for (int i = 0; i < count; i++)
                 {
-                    if (reader.ReadMobile() is BaseCreature summon)
+                    BaseCreature summon = reader.ReadMobile() as BaseCreature;
+
+                    if (summon != null)
                     {
                         if (SummonedHelpers == null)
-                        {
                             SummonedHelpers = new List<BaseCreature>();
-                        }
 
                         SummonedHelpers.Add(summon);
                     }
@@ -457,12 +432,12 @@ namespace Server.Mobiles
             {
                 for (int i = 0; i < count; i++)
                 {
-                    if (reader.ReadMobile() is BaseCreature summon)
+                    BaseCreature summon = reader.ReadMobile() as BaseCreature;
+
+                    if (summon != null)
                     {
                         if (InitialSpawn == null)
-                        {
                             InitialSpawn = new List<BaseCreature>();
-                        }
 
                         InitialSpawn.Add(summon);
                     }

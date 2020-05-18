@@ -1,3 +1,6 @@
+using System;
+using Server.Items;
+
 namespace Server.Mobiles
 {
     [CorpseName("a minion corpse")]
@@ -59,7 +62,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 }

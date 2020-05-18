@@ -1,3 +1,4 @@
+using System;
 using Server.Mobiles;
 using Server.Network;
 using Server.Targeting;
@@ -73,7 +74,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 }

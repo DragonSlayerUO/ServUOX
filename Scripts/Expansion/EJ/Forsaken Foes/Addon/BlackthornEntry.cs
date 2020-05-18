@@ -1,3 +1,5 @@
+using System;
+
 namespace Server.Items
 {
     public class BlackthornBaseAddon : BaseAddon
@@ -22,38 +24,29 @@ namespace Server.Items
             AddonComponent ac;
             ac = new AddonComponent(item);
             if (name != null && name.Length > 0)
-            {
                 ac.Name = name;
-            }
-
             if (hue != 0)
-            {
                 ac.Hue = hue;
-            }
-
             if (amount > 1)
             {
                 ac.Stackable = true;
                 ac.Amount = amount;
             }
             if (lightsource != -1)
-            {
                 ac.Light = (LightType)lightsource;
-            }
-
             addon.AddComponent(ac, xoffset, yoffset, zoffset);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // Version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 
@@ -134,9 +127,7 @@ namespace Server.Items
         public BlackthornEntry()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)
-            {
                 AddComponent(new AddonComponent(m_AddOnSimpleComponents[i, 0]), m_AddOnSimpleComponents[i, 1], m_AddOnSimpleComponents[i, 2], m_AddOnSimpleComponents[i, 3]);
-            }
 
             AddComplexComponent(this, 954, 7, -2, 0, 1175, -1, "", 1);// 1
             AddComplexComponent(this, 964, 7, -1, 0, 1175, -1, "", 1);// 2
@@ -174,13 +165,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // Version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             if (Map == Map.Trammel)
             {

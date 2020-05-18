@@ -1,3 +1,5 @@
+using System;
+using Server;
 using Server.Engines.Fellowship;
 using Server.Mobiles;
 
@@ -74,7 +76,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // version
 
             writer.Write(Dest);
             writer.Write((int)Chain);
@@ -83,7 +85,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             Dest = reader.ReadPoint3D();
             Chain = (FellowshipChain)reader.ReadInt();

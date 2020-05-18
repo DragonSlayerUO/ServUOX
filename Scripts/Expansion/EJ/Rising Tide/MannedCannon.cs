@@ -1,9 +1,11 @@
-using Server.Mobiles;
-using Server.Multis;
-using Server.Spells;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
+using Server;
+using Server.Mobiles;
+using Server.Multis;
+using Server.Spells;
 
 namespace Server.Items
 {
@@ -141,11 +143,9 @@ namespace Server.Items
                 yOffset = yo;
 
                 if (LateralOffset > 1 && currentRange % LateralOffset == 0)
-                {
                     lateralOffset++;
-                }
 
-                _ = TimeSpan.FromSeconds(currentRange / 10.0);
+                TimeSpan delay = TimeSpan.FromSeconds(currentRange / 10.0);
 
                 switch (AmmoType)
                 {
@@ -154,30 +154,24 @@ namespace Server.Items
                     case AmmunitionType.FrostCannonball:
                     case AmmunitionType.FlameCannonball:
                         {
+                            Point3D newPoint = pnt;
                             //List<IEntity> list = new List<IEntity>();
 
                             for (int i = -lateralOffset; i <= lateralOffset; i++)
                             {
-                                Point3D newPoint;
                                 if (xOffset == 0)
-                                {
                                     newPoint = new Point3D(pnt.X + (xOffset + i), pnt.Y + (yOffset * currentRange), pnt.Z);
-                                }
                                 else
-                                {
                                     newPoint = new Point3D(pnt.X + (xOffset * currentRange), pnt.Y + (yOffset + i), pnt.Z);
-                                }
 
                                 BaseGalleon g = FindValidBoatTarget(newPoint, map, ammo);
 
                                 if (g != null && g.DamageTaken < DamageLevel.Severely && g.Owner is PlayerMobile)
                                 {
-                                    var target = new Target
-                                    {
-                                        Entity = g,
-                                        Location = newPoint,
-                                        Range = currentRange
-                                    };
+                                    var target = new Target();
+                                    target.Entity = g;
+                                    target.Location = newPoint;
+                                    target.Range = currentRange;
 
                                     return new Target[] { target };
                                 }
@@ -186,28 +180,22 @@ namespace Server.Items
                         break;
                     case AmmunitionType.Grapeshot:
                         {
+                            Point3D newPoint = pnt;
                             List<Target> mobiles = new List<Target>();
 
                             for (int i = -lateralOffset; i <= lateralOffset; i++)
                             {
-                                Point3D newPoint;
                                 if (xOffset == 0)
-                                {
                                     newPoint = new Point3D(pnt.X + (xOffset + i), pnt.Y + (yOffset * currentRange), pnt.Z);
-                                }
                                 else
-                                {
                                     newPoint = new Point3D(pnt.X + (xOffset * currentRange), pnt.Y + (yOffset + i), pnt.Z);
-                                }
 
                                 foreach (Mobile m in GetTargets(newPoint, map))
                                 {
-                                    var target = new Target
-                                    {
-                                        Entity = m,
-                                        Location = newPoint,
-                                        Range = currentRange
-                                    };
+                                    var target = new Target();
+                                    target.Entity = m;
+                                    target.Location = newPoint;
+                                    target.Range = currentRange;
 
                                     mobiles.Add(target);
                                 }
@@ -274,18 +262,12 @@ namespace Server.Items
                     case Direction.North:
                     case Direction.South:
                         if (newPoint.X <= galleon.X - d || newPoint.X >= galleon.X + d)
-                        {
                             return null;
-                        }
-
                         break;
                     case Direction.East:
                     case Direction.West:
                         if (newPoint.Y <= galleon.Y - d || newPoint.Y >= galleon.Y + d)
-                        {
                             return null;
-                        }
-
                         break;
                 }
 
@@ -311,11 +293,12 @@ namespace Server.Items
         public virtual void OnShipHit(object obj)
         {
             object[] list = (object[])obj;
+            BaseBoat target = list[0] as BaseBoat;
             Point3D pnt = (Point3D)list[1];
 
             var ammoInfo = AmmoInfo.GetAmmoInfo((AmmunitionType)list[2]);
 
-            if (ammoInfo != null && list[0] is BaseBoat target)
+            if (ammoInfo != null && target != null)
             {
                 int damage = (Utility.RandomMinMax(ammoInfo.MinDamage, ammoInfo.MaxDamage));
                 damage /= 7;
@@ -408,7 +391,7 @@ namespace Server.Items
         {
             object[] objects = (object[])obj;
             Mobile toHit = objects[0] as Mobile;
-            _ = (Point3D)objects[1];
+            Point3D pnt = (Point3D)objects[1];
 
             AmmoInfo ammoInfo = AmmoInfo.GetAmmoInfo((AmmunitionType)objects[2]);
 
@@ -493,7 +476,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 
@@ -518,7 +501,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 
@@ -545,7 +528,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 }

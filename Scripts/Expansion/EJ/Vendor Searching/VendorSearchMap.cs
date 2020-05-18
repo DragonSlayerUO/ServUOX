@@ -1,11 +1,11 @@
-using Server.ContextMenus;
-using Server.Engines.Auction;
-using Server.Engines.VendorSearching;
-using Server.Gumps;
-using Server.Mobiles;
-using Server.Multis;
 using System;
 using System.Collections.Generic;
+using Server.Engines.VendorSearching;
+using Server.Mobiles;
+using Server.ContextMenus;
+using Server.Multis;
+using Server.Gumps;
+using Server.Engines.Auction;
 
 namespace Server.Items
 {
@@ -92,7 +92,7 @@ namespace Server.Items
 
         public new string[] Name()
         {
-            _ = new string[2];
+            string[] array = new string[2];
 
             string Name = "Unknown";
             string Shop = "Unknown";
@@ -106,9 +106,7 @@ namespace Server.Items
                         BaseHouse house = BaseHouse.FindHouseAt(AuctionSafe);
 
                         if (house != null)
-                        {
                             Name = house.Sign.GetName();
-                        }
                     }
 
                     Shop = (SearchItem.LabelNumber != 0) ? string.Format("#{0}", SearchItem.LabelNumber) : SearchItem.Name;
@@ -133,13 +131,9 @@ namespace Server.Items
             string[] coord = GetCoords();
 
             if (SetLocation == Point3D.Zero)
-            {
                 list.Add(1154639, string.Format("{0}\t{1}", coord[0], coord[1])); //  Vendor Located at ~1_loc~ (~2_facet~)
-            }
             else
-            {
                 list.Add(1154638, string.Format("{0}\t{1}", coord[0], coord[1])); //  Return to ~1_loc~ (~2_facet~)                
-            }
 
             if (!IsSale())
             {
@@ -156,7 +150,7 @@ namespace Server.Items
 
         public string[] GetCoords()
         {
-            _ = new string[2];
+            string[] array = new string[2];
 
             Point3D loc = Point3D.Zero;
             Map locmap = Map.Internal;
@@ -220,13 +214,9 @@ namespace Server.Items
             list.Add(new OpenMapEntry(from, this));
 
             if (SetLocation == Point3D.Zero)
-            {
                 list.Add(new TeleportEntry(from, this));
-            }
             else
-            {
                 list.Add(new ReturnTeleportEntry(from, this));
-            }
 
             list.Add(new OpenContainerEntry(from, this));
         }
@@ -266,9 +256,7 @@ namespace Server.Items
         public Map GetMap()
         {
             if (SetLocation != Point3D.Zero)
-            {
                 return SetMap;
-            }
 
             Map map = null;
 
@@ -368,9 +356,7 @@ namespace Server.Items
                 Clicker = from;
 
                 if (VendorMap.SearchItem != null)
-                {
                     Container = VendorMap.SearchItem.ParentEntity as Container;
-                }
 
                 Enabled = IsAccessible();
             }
@@ -378,19 +364,13 @@ namespace Server.Items
             private bool IsAccessible()
             {
                 if (Container == null || VendorMap.IsAuction)
-                {
                     return false;
-                }
 
                 if (!Container.IsAccessibleTo(Clicker))
-                {
                     return false;
-                }
 
                 if (!Clicker.InRange(Container.GetWorldLocation(), 18))
-                {
                     return false;
-                }
 
                 return true;
             }
@@ -403,9 +383,7 @@ namespace Server.Items
             private static void RecurseOpen(Container c, Mobile from)
             {
                 if (c.Parent is Container parent)
-                {
                     RecurseOpen(parent, from);
-                }
 
                 c.DisplayTo(from);
             }
@@ -425,7 +403,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             Delete();
         }

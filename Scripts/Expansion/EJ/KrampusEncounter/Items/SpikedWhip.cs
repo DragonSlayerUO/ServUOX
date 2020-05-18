@@ -1,10 +1,11 @@
+using System;
 using Server.Engines.Craft;
 
 namespace Server.Items
 {
-    public class SpikedWhip : BaseSword, IRepairable
+    public class SpikedWhip : BaseSword, Server.Engines.Craft.IRepairable
     {
-        public CraftSystem RepairSystem => DefTinkering.CraftSystem;
+        public Server.Engines.Craft.CraftSystem RepairSystem => Server.Engines.Craft.DefTinkering.CraftSystem;
         public override int LabelNumber => 1125634;  // Spiked Whip
 
         [Constructable]
@@ -37,13 +38,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 }

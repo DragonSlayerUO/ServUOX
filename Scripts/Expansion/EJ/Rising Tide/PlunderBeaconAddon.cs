@@ -1,7 +1,10 @@
-using Server.Mobiles;
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
+
+using Server;
+using Server.Items;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -30,9 +33,7 @@ namespace Server.Items
         public PlunderBeaconAddon()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)
-            {
                 AddComponent(new AddonComponent(m_AddOnSimpleComponents[i, 0]), m_AddOnSimpleComponents[i, 1], m_AddOnSimpleComponents[i, 2], m_AddOnSimpleComponents[i, 3]);
-            }
 
             AddComplexComponent(this, 2572, 0, 2, 37, 0, 5, "", 1);
             AddComplexComponent(this, 2567, 2, 0, 37, 0, 5, "", 1);
@@ -72,10 +73,8 @@ namespace Server.Items
 
             if (oper)
             {
-                mob = new PirateCrew
-                {
-                    CantWalk = true
-                };
+                mob = new PirateCrew();
+                mob.CantWalk = true;
 
                 Crew.Add(mob);
             }
@@ -173,9 +172,7 @@ namespace Server.Items
         public void OnBeaconDestroyed()
         {
             if (Deleted)
-            {
                 return;
-            }
 
             for (int i = 0; i < 4; i++)
             {
@@ -268,9 +265,7 @@ namespace Server.Items
         private void SpawnHelper(bool initial)
         {
             if (Map == null || Beacon == null)
-            {
                 return;
-            }
 
             Point3D p = Location;
             var map = Map;
@@ -297,9 +292,7 @@ namespace Server.Items
                         creature.RangeHome = 10;
 
                         if (BaseCreature.IsSoulboundEnemies)
-                        {
                             creature.IsSoulbound = true;
-                        }
 
                         Spawn.Add(creature, initial);
 
@@ -441,31 +434,26 @@ namespace Server.Items
         }
 
         #region Components
+        private static void AddComplexComponent(BaseAddon addon, int item, int xoffset, int yoffset, int zoffset, int hue, int lightsource)
+        {
+            AddComplexComponent(addon, item, xoffset, yoffset, zoffset, hue, lightsource, null, 1);
+        }
 
         private static void AddComplexComponent(BaseAddon addon, int item, int xoffset, int yoffset, int zoffset, int hue, int lightsource, string name, int amount)
         {
             AddonComponent ac;
             ac = new AddonComponent(item);
             if (name != null && name.Length > 0)
-            {
                 ac.Name = name;
-            }
-
             if (hue != 0)
-            {
                 ac.Hue = hue;
-            }
-
             if (amount > 1)
             {
                 ac.Stackable = true;
                 ac.Amount = amount;
             }
             if (lightsource != -1)
-            {
                 ac.Light = (LightType)lightsource;
-            }
-
             addon.AddComponent(ac, xoffset, yoffset, zoffset);
         }
 

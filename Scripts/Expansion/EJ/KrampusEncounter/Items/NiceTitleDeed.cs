@@ -1,3 +1,6 @@
+using System;
+using Server.Mobiles;
+
 namespace Server.Items
 {
     public class NiceTitleDeed : BaseRewardTitleDeed
@@ -23,7 +26,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int v = reader.ReadInt();
         }
     }
 }

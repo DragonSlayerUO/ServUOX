@@ -1,7 +1,9 @@
-using Server.ContextMenus;
-using Server.Items;
-using Server.Mobiles;
+using Server;
+using System;
 using System.Collections.Generic;
+using Server.Mobiles;
+using Server.Items;
+using Server.ContextMenus;
 
 namespace Server.Engines.Fellowship
 {
@@ -92,9 +94,7 @@ namespace Server.Engines.Fellowship
             public override void OnClick()
             {
                 if (!m_From.InRange(m_Vendor.Location, 5) || !(m_From is PlayerMobile))
-                {
                     return;
-                }
 
                 m_From.SendGump(new FellowshipRewardGump(m_Vendor, m_From as PlayerMobile));
             }
@@ -114,7 +114,7 @@ namespace Server.Engines.Fellowship
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             if (Map == Map.Trammel)
             {

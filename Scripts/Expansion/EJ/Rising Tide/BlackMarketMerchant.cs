@@ -1,6 +1,9 @@
-using Server.Engines.Points;
+using System;
+
+using Server;
 using Server.Items;
 using Server.Mobiles;
+using Server.Engines.Points;
 
 namespace Server.Engines.RisingTide
 {
@@ -9,6 +12,7 @@ namespace Server.Engines.RisingTide
         public static BlackMarketMerchant InstanceTram { get; set; }
         public static BlackMarketMerchant InstanceFel { get; set; }
         public static Point3D SpawnLocation => new Point3D(2719, 2187, 0);
+
         public override int TitleLocalization => 1158918;  // Maritime Black Market
         public override int CancelLocalization => 1158911; 	// Bring me maritime trade cargo and I will pay you in doubloons!
         public override int TurnInLocalization => 1158912;  // Sell Maritime Trade Cargo
@@ -74,9 +78,7 @@ namespace Server.Engines.RisingTide
         public override void SendRewardGump(Mobile m)
         {
             if (m.Player && m.CheckAlive())
-            {
                 m.SendGump(new RisingTideRewardGump(this, m as PlayerMobile));
-            }
         }
 
         public override void Delete()
@@ -106,7 +108,7 @@ namespace Server.Engines.RisingTide
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            int version = reader.ReadInt();
 
             if (Map == Map.Trammel)
             {

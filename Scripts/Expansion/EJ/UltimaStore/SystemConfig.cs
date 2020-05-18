@@ -1,5 +1,5 @@
-using Server.Engines.Points;
 using System;
+using Server.Engines.Points;
 
 namespace Server.Engines.UOStore
 {

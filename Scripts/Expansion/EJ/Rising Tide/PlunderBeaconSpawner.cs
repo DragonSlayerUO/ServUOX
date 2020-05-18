@@ -1,6 +1,11 @@
-using Server.Multis;
 using System;
+using System.Linq;
 using System.Collections.Generic;
+
+using Server;
+using Server.Items;
+using Server.Mobiles;
+using Server.Multis;
 
 namespace Server.Items
 {
@@ -23,9 +28,7 @@ namespace Server.Items
         public static void AddPlunderBeacon(PlunderZone zone, PlunderBeaconAddon beacon)
         {
             if (Spawner == null)
-            {
                 return;
-            }
 
             if (!Spawner.PlunderBeacons[zone].Contains(beacon))
             {
@@ -36,9 +39,7 @@ namespace Server.Items
         public void RemovePlunderBeacon(PlunderBeaconAddon beacon)
         {
             if (Spawner == null || Spawner.PlunderBeacons == null)
-            {
                 return;
-            }
 
             foreach (var kvp in Spawner.PlunderBeacons)
             {
@@ -97,15 +98,13 @@ namespace Server.Items
                 Spawner = this;
                 Timer = Timer.DelayCall(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1), TickTock);
 
-                PlunderBeacons = new Dictionary<PlunderZone, List<PlunderBeaconAddon>>
-                {
-                    [PlunderZone.Tram] = new List<PlunderBeaconAddon>(),
-                    [PlunderZone.Fel] = new List<PlunderBeaconAddon>(),
-                    [PlunderZone.Tokuno1] = new List<PlunderBeaconAddon>(),
-                    [PlunderZone.Tokuno2] = new List<PlunderBeaconAddon>(),
-                    [PlunderZone.Tokuno3] = new List<PlunderBeaconAddon>(),
-                    [PlunderZone.Tokuno4] = new List<PlunderBeaconAddon>()
-                };
+                PlunderBeacons = new Dictionary<PlunderZone, List<PlunderBeaconAddon>>();
+                PlunderBeacons[PlunderZone.Tram] = new List<PlunderBeaconAddon>();
+                PlunderBeacons[PlunderZone.Fel] = new List<PlunderBeaconAddon>();
+                PlunderBeacons[PlunderZone.Tokuno1] = new List<PlunderBeaconAddon>();
+                PlunderBeacons[PlunderZone.Tokuno2] = new List<PlunderBeaconAddon>();
+                PlunderBeacons[PlunderZone.Tokuno3] = new List<PlunderBeaconAddon>();
+                PlunderBeacons[PlunderZone.Tokuno4] = new List<PlunderBeaconAddon>();
             }
             else
             {
@@ -123,9 +122,7 @@ namespace Server.Items
             foreach (int i in Enum.GetValues(typeof(PlunderZone)))
             {
                 if (i == -1)
-                {
                     continue;
-                }
 
                 var zone = (PlunderZone)i;
                 int low = _SpawnCount[i] - PlunderBeacons[zone].Count;
@@ -142,13 +139,9 @@ namespace Server.Items
             Map map = Map.Trammel;
 
             if (zone == PlunderZone.Fel)
-            {
                 map = Map.Felucca;
-            }
             else if (zone > PlunderZone.Fel)
-            {
                 map = Map.Tokuno;
-            }
 
             for (int i = 0; i < amount; i++)
             {
@@ -160,9 +153,7 @@ namespace Server.Items
                     p = map.GetRandomSpawnPoint(rec); //new Point3D(rec.X + Utility.Random(rec.Width), rec.Y + Utility.RandomMinMax(rec.Start.X, rec.Height), -5);
 
                     if (p.Z != -5)
-                    {
                         p.Z = -5;
-                    }
 
                     var bounds = new Rectangle2D(p.X - 7, p.Y - 7, 15, 15);
 
@@ -180,9 +171,7 @@ namespace Server.Items
                         }
 
                         if (badSpot)
-                        {
                             break;
-                        }
                     }
 
                     if (!badSpot)
