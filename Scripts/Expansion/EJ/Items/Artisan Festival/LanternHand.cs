@@ -1,18 +1,18 @@
 namespace Server.Items
 {
-    public class LanternBrokenShield : BaseLight, IFlipable
+    public class LanternHand : BaseLight, IFlipable
     {
         public override int LabelNumber => 1011221;  // lantern
 
-        public override int LitItemID => ItemID == 0xA469 ? 0xA46A : 0xA46E;
-        public override int UnlitItemID => ItemID == 0xA46A ? 0xA469 : 0xA46D;
+        public override int LitItemID => ItemID == 0xA471 ? 0xA472 : 0xA476;
+        public override int UnlitItemID => ItemID == 0xA472 ? 0xA471 : 0xA475;
 
-        public int NorthID => Burning ? 0xA46A : 0xA469;
-        public int WestID => Burning ? 0xA46E : 0xA46D;
+        public int NorthID => Burning ? 0xA472 : 0xA471;
+        public int WestID => Burning ? 0xA476 : 0xA475;
 
         [Constructible]
-        public LanternBrokenShield()
-            : base(0xA469)
+        public LanternHand()
+            : base(0xA471)
         {
             Weight = 1;
         }
@@ -20,12 +20,16 @@ namespace Server.Items
         public void OnFlip(Mobile from)
         {
             if (ItemID == NorthID)
+            {
                 ItemID = WestID;
+            }
             else if (ItemID == WestID)
+            {
                 ItemID = NorthID;
+            }
         }
 
-        public LanternBrokenShield(Serial serial)
+        public LanternHand(Serial serial)
             : base(serial)
         {
         }

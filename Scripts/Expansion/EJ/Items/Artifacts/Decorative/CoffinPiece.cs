@@ -1,20 +1,16 @@
-﻿using Server;
-using System;
-
-namespace Server.Items
+﻿namespace Server.Items
 {
-    public class CreepingVine : Item
+    public class CoffinPiece : Item
     {
         public override bool IsArtifact => true;
-        public override int LabelNumber => 1112401;
+        public override int LabelNumber => 1116783;
 
         [Constructible]
-        public CreepingVine()
-            : base(Utility.Random(18322, 4))
+        public CoffinPiece() : base(Utility.RandomList(7481, 7480, 7479, 7452, 7451, 7450))
         {
         }
 
-        public CreepingVine(Serial serial)
+        public CoffinPiece(Serial serial)
             : base(serial)
         {
         }
@@ -31,4 +27,5 @@ namespace Server.Items
             int version = reader.ReadInt();
         }
     }
+
 }

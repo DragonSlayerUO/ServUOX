@@ -1,18 +1,18 @@
 namespace Server.Items
 {
-    public class LanternHeart : BaseLight, IFlipable
+    public class LanternUnevenScales : BaseLight, IFlipable
     {
         public override int LabelNumber => 1011221;  // lantern
 
-        public override int LitItemID => ItemID == 0xA481 ? 0xA482 : 0xA486;
-        public override int UnlitItemID => ItemID == 0xA482 ? 0xA481 : 0xA485;
+        public override int LitItemID => ItemID == 0xA479 ? 0xA47A : 0xA47E;
+        public override int UnlitItemID => ItemID == 0xA47A ? 0xA479 : 0xA47D;
 
-        public int NorthID => Burning ? 0xA482 : 0xA481;
-        public int WestID => Burning ? 0xA486 : 0xA485;
+        public int NorthID => Burning ? 0xA47A : 0xA479;
+        public int WestID => Burning ? 0xA47E : 0xA47D;
 
         [Constructible]
-        public LanternHeart()
-            : base(0xA481)
+        public LanternUnevenScales()
+            : base(0xA479)
         {
             Weight = 1;
         }
@@ -20,12 +20,16 @@ namespace Server.Items
         public void OnFlip(Mobile from)
         {
             if (ItemID == NorthID)
+            {
                 ItemID = WestID;
+            }
             else if (ItemID == WestID)
+            {
                 ItemID = NorthID;
+            }
         }
 
-        public LanternHeart(Serial serial)
+        public LanternUnevenScales(Serial serial)
             : base(serial)
         {
         }
