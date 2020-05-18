@@ -29,14 +29,12 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
 
             if (version == 0 && Weight == 0)
@@ -81,15 +79,14 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
+            writer.Write((byte)0);
 
-            writer.Write((byte)0); // version
             writer.WriteEncodedInt(m_LabelNumber);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadByte();
 
             switch (version)

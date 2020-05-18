@@ -1,14 +1,3 @@
-
-
-// Ideas
-// When you run on animals the panic
-// When if ( distance < 8 && Utility.RandomDouble() * Math.Sqrt( (8 - distance) / 6 ) >= incoming.Skills[SkillName.AnimalTaming].Value )
-// More your close, the more it can panic
-/*
-* AnimalHunterAI, AnimalHidingAI, AnimalDomesticAI...
-*
-*/
-
 namespace Server.Mobiles
 {
     public class AnimalAI : BaseAI

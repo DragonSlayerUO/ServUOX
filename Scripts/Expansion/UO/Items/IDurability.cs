@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     interface IDurability
@@ -10,7 +8,6 @@ namespace Server.Items
         int HitPoints { get; set; }
         int MaxHitPoints { get; set; }
         void ScaleDurability();
-
         void UnscaleDurability();
     }
 

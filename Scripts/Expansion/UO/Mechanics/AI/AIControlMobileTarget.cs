@@ -1,30 +1,27 @@
-#region References
 using Server.Gumps;
 using Server.Items;
 using Server.Mobiles;
 using Server.Targeting;
 using System.Collections.Generic;
-#endregion
 
 namespace Server.Targets
 {
     public class AIControlMobileTarget : Target
     {
         private readonly List<BaseAI> m_List;
-        private readonly OrderType m_Order;
         private readonly BaseCreature m_Mobile;
 
         public AIControlMobileTarget(BaseAI ai, OrderType order)
             : base(-1, false, (order == OrderType.Attack ? TargetFlags.Harmful : TargetFlags.None))
         {
             m_List = new List<BaseAI>();
-            m_Order = order;
+            Order = order;
 
             AddAI(ai);
             m_Mobile = ai.m_Mobile;
         }
 
-        public OrderType Order => m_Order;
+        public OrderType Order { get; }
 
         public void AddAI(BaseAI ai)
         {
@@ -42,10 +39,10 @@ namespace Server.Targets
 
                 for (var i = 0; i < m_List.Count; ++i)
                 {
-                    m_List[i].EndPickTarget(from, dam, m_Order);
+                    m_List[i].EndPickTarget(from, dam, Order);
                 }
             }
-            else if (o is MoonglowDonationBox && m_Order == OrderType.Transfer && from is PlayerMobile)
+            else if (o is MoonglowDonationBox && Order == OrderType.Transfer && from is PlayerMobile)
             {
                 var pm = (PlayerMobile)from;
                 var box = (MoonglowDonationBox)o;

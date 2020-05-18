@@ -6823,7 +6823,7 @@
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\1Circle\NightSightScroll.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\Items\Consumables\ReactiveArmorScroll.cs">
+    <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\1Circle\ReactiveArmorScroll.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\1Circle\WeakenScroll.cs">
@@ -6922,13 +6922,13 @@
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\2Circle\MagicUnTrapScroll.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\Items\Consumables\ProtectionScroll.cs">
+    <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\2Circle\ProtectionScroll.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\2Circle\StrengthScroll.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\UO\Items\Craft and Component\Potions\ChainLightningScroll.cs">
+    <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\7Circle\ChainLightningScroll.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\7Circle\EnergyFieldScroll.cs">
@@ -6940,13 +6940,13 @@
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\7Circle\GateTravelScroll.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\Items\Consumables\ManaVampireScroll.cs">
+    <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\7Circle\ManaVampireScroll.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\7Circle\MassDispelScroll.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\HS\Items\Consumables\MeteorStormScroll.cs">
+    <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\7Circle\MeteorStormScroll.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\UO\Items\Craft and Component\Scrolls\7Circle\PolymorphScroll.cs">
@@ -9306,7 +9306,7 @@
     <Compile Include="Administration\World\WelcomeTimer.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customs\Peoharen SE\BaseSummoned.cs">
+    <Compile Include="Expansion\UO\Mobiles\BaseSummoned.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Mechanics\Enhancement.cs">

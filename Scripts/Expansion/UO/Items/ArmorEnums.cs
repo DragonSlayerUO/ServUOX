@@ -7,7 +7,7 @@ namespace Server.Items
         Substantial,
         Massive,
         Fortified,
-        Indestructible
+        Indestructible,
     }
 
     public enum ArmorProtectionLevel
@@ -28,7 +28,7 @@ namespace Server.Items
         Arms,
         Legs,
         Chest,
-        Shield
+        Shield,
     }
 
     public enum ArmorMaterialType

@@ -57,12 +57,6 @@ namespace Server.Mobiles
 
         public BaseCreature m_Mobile;
 
-        /// <summary>
-        ///     Prevent AI from altering the Mobile's Direction.
-        ///     This does not prevent direct modification of a Mobile's Direction.
-        ///     Can be useful when processing long sequence attacks for monsters
-        ///     where the effect requires Direction manipulation.
-        /// </summary>
         public bool DirectionLocked { get; set; }
 
         public BaseAI(BaseCreature m)
@@ -1605,9 +1599,8 @@ namespace Server.Mobiles
                 // ~1_NAME~ will no longer accept movement commands from ~2_NAME~.
                 from.SendLocalizedMessage(1070951, string.Format("{0}\t{1}", m_Mobile.Name, to.Name));
 
-                /* ~1_NAME~ has no longer granted you the ability to give orders to their pet ~2_PET_NAME~.
-                * This creature will no longer consider you as a friend.
-                */
+                // ~1_NAME~ has no longer granted you the ability to give orders to their pet ~2_PET_NAME~.
+                // This creature will no longer consider you as a friend.
                 to.SendLocalizedMessage(1070952, string.Format("{0}\t{1}", from.Name, m_Mobile.Name));
 
                 m_Mobile.RemovePetFriend(to);
@@ -1684,10 +1677,9 @@ namespace Server.Mobiles
                 Action = ActionType.Combat;
                 m_Mobile.Direction = m_Mobile.GetDirectionTo(combatant);
 
-                /*
-                * We need to call Think() here or spell casting monsters will not use
-                * spells when guarding because their target is never processed.
-                */
+                // We need to call Think() here or spell casting monsters will not use
+                // spells when guarding because their target is never processed.
+
                 Think();
             }
             else
