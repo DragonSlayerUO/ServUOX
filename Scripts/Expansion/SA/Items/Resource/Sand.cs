@@ -7,13 +7,13 @@ namespace Server.Items
         public override int LabelNumber => 1044626;  // sand
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public Sand()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Sand(int amount)
             : base(0x423A)
         {

@@ -9,7 +9,7 @@ namespace Server.Mobiles
     public class Sheep : BaseCreature, ICarvable
     {
         private DateTime m_NextWoolTime;
-        [Constructable]
+        [Constructible]
         public Sheep()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

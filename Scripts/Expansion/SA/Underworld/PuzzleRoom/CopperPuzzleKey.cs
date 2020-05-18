@@ -8,7 +8,7 @@ namespace Server.Items
         public override int Lifespan => 1800;
         public override int LabelNumber => 1024110;  // copper key
 
-        [Constructable]
+        [Constructible]
         public CopperPuzzleKey() : base(4115)
         {
         }

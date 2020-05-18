@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class SuitOfGoldArmorAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SuitOfGoldArmorAddon()
             : base()
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class SuitOfGoldArmorDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SuitOfGoldArmorDeed()
             : base()
         {

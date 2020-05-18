@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1123476;  // Jade Skull
 
-        [Constructable]
+        [Constructible]
         public JadeSkull()
             : base(0x9A1C)
         {

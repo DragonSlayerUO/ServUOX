@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class YellowBoxfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public YellowBoxfish()
             : base(0xA371)
         {

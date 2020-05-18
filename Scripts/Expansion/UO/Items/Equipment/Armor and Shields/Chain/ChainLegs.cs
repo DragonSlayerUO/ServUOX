@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x13be, 0x13c3)]
     public class ChainLegs : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public ChainLegs()
             : base(0x13BE)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         private string _Name;
 
-        [Constructable]
+        [Constructible]
         public KrampusPunishinList(string name)
             : base(0x46AE)
         {

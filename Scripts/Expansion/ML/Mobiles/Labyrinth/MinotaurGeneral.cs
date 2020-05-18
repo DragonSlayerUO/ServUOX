@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a minotaur general corpse")]
     public class MinotaurGeneral : MinotaurCaptain
     {
-        [Constructable]
+        [Constructible]
         public MinotaurGeneral()
         {
             Name = "a minotaur general";

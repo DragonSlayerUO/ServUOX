@@ -5,7 +5,7 @@ namespace Server.Items
     public class DefenderOfTheMagus : MetalShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DefenderOfTheMagus()
         {
             Hue = 590;

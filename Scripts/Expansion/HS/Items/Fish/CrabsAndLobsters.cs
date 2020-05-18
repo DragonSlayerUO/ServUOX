@@ -69,7 +69,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1096489;
 
-        [Constructable]
+        [Constructible]
         public Crab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -94,7 +94,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1096491;
 
-        [Constructable]
+        [Constructible]
         public Lobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -119,7 +119,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116378;
 
-        [Constructable]
+        [Constructible]
         public AppleCrab() : base(BaseHighseasFish.GetCrabID())
         {
         }
@@ -143,7 +143,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116374;
 
-        [Constructable]
+        [Constructible]
         public BlueCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -168,7 +168,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116373;
 
-        [Constructable]
+        [Constructible]
         public DungeonessCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -193,7 +193,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116375;
 
-        [Constructable]
+        [Constructible]
         public KingCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -218,7 +218,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116376;
 
-        [Constructable]
+        [Constructible]
         public RockCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -243,7 +243,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116377;
 
-        [Constructable]
+        [Constructible]
         public SnowCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -269,7 +269,7 @@ namespace Server.Items
         public override int LabelNumber => 1116334;
         public override Item GetCarved => new StoneCrabMeat();
 
-        [Constructable]
+        [Constructible]
         public StoneCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -296,7 +296,7 @@ namespace Server.Items
         public override int LabelNumber => 1116336;
         public override Item GetCarved => new SpiderCrabMeat();
 
-        [Constructable]
+        [Constructible]
         public SpiderCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -322,7 +322,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116372;
 
-        [Constructable]
+        [Constructible]
         public TunnelCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -348,7 +348,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116368;
 
-        [Constructable]
+        [Constructible]
         public VoidCrab()
             : base(BaseHighseasFish.GetCrabID())
         {
@@ -373,7 +373,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116383;
 
-        [Constructable]
+        [Constructible]
         public CrustyLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -398,7 +398,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116382;
 
-        [Constructable]
+        [Constructible]
         public FredLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -423,7 +423,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116381;
 
-        [Constructable]
+        [Constructible]
         public HummerLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -448,7 +448,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116380;
 
-        [Constructable]
+        [Constructible]
         public RockLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -473,7 +473,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116384;
 
-        [Constructable]
+        [Constructible]
         public ShovelNoseLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -498,7 +498,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116379;
 
-        [Constructable]
+        [Constructible]
         public SpineyLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -524,7 +524,7 @@ namespace Server.Items
         public override int LabelNumber => 1116366;
         public override Item GetCarved => new BlueLobsterMeat();
 
-        [Constructable]
+        [Constructible]
         public BlueLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -550,7 +550,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116370;
 
-        [Constructable]
+        [Constructible]
         public BloodLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -576,7 +576,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116371;
 
-        [Constructable]
+        [Constructible]
         public DreadLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -602,7 +602,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116369;
 
-        [Constructable]
+        [Constructible]
         public VoidLobster()
             : base(BaseHighseasFish.GetLobsterID())
         {
@@ -628,7 +628,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116317;
 
-        [Constructable]
+        [Constructible]
         public StoneCrabMeat() : base(4159)
         {
             Hue = FishInfo.GetFishHue(typeof(StoneCrab));
@@ -653,7 +653,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116320;
 
-        [Constructable]
+        [Constructible]
         public SpiderCrabMeat()
             : base(4159)
         {
@@ -679,7 +679,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116318;
 
-        [Constructable]
+        [Constructible]
         public BlueLobsterMeat()
             : base(4159)
         {

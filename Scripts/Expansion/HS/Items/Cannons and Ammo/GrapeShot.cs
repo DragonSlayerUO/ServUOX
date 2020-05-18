@@ -13,13 +13,13 @@ namespace Server.Items
 
         public AmmunitionType AmmoType => AmmunitionType.Grapeshot;
 
-        [Constructable]
+        [Constructible]
         public Grapeshot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Grapeshot(int amount)
             : base(0xA2BF)
         {
@@ -55,12 +55,12 @@ namespace Server.Items
 
         public AmmunitionType AmmoType => AmmunitionType.Grapeshot;
 
-        [Constructable]
+        [Constructible]
         public LightGrapeshot() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightGrapeshot(int amount) : base(16869)
         {
             Stackable = true;
@@ -97,12 +97,12 @@ namespace Server.Items
 
         public AmmunitionType AmmoType => AmmunitionType.Grapeshot;
 
-        [Constructable]
+        [Constructible]
         public HeavyGrapeshot() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyGrapeshot(int amount) : base(16869)
         {
             Stackable = true;

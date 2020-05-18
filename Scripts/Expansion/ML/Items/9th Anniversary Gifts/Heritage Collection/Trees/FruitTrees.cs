@@ -94,7 +94,7 @@ namespace Server.Items
 
     public class AppleTreeAddon : BaseFruitTreeAddon
     {
-        [Constructable]
+        [Constructible]
         public AppleTreeAddon()
             : base()
         {
@@ -126,7 +126,7 @@ namespace Server.Items
 
     public class AppleTreeDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public AppleTreeDeed()
             : base()
         {
@@ -157,7 +157,7 @@ namespace Server.Items
 
     public class PeachTreeAddon : BaseFruitTreeAddon
     {
-        [Constructable]
+        [Constructible]
         public PeachTreeAddon()
             : base()
         {
@@ -189,7 +189,7 @@ namespace Server.Items
 
     public class PeachTreeDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public PeachTreeDeed()
             : base()
         {

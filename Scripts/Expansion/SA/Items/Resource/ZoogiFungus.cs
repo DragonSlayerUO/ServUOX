@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ZoogiFungus : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public ZoogiFungus()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZoogiFungus(int amount)
             : base(0x26B7)
         {

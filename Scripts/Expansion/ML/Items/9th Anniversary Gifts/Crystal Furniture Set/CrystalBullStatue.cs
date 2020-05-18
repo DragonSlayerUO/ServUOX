@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CrystalBullStatueAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CrystalBullStatueAddon(DirectionType type)
         {
             switch (type)
@@ -51,7 +51,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public CrystalBullStatueDeed()
             : base()
         {

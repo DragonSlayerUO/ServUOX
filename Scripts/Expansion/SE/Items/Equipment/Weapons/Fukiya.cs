@@ -11,7 +11,7 @@ namespace Server.Items
         private int m_UsesRemaining;
         private Poison m_Poison;
         private int m_PoisonCharges;
-        [Constructable]
+        [Constructible]
         public Fukiya()
             : base(0x27AA)
         {

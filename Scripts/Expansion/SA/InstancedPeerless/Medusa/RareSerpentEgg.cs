@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112575;  // a rare serpent egg
 
-        [Constructable]
+        [Constructible]
         public RareSerpentEgg()
             : base(0x41BF)
         {

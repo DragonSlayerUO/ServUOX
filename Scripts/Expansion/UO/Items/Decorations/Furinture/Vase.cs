@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Vase : Item
     {
-        [Constructable]
+        [Constructible]
         public Vase()
             : base(0xB46)
         {
@@ -29,7 +29,7 @@ namespace Server.Items
 
     public class LargeVase : Item
     {
-        [Constructable]
+        [Constructible]
         public LargeVase()
             : base(0xB45)
         {
@@ -56,7 +56,7 @@ namespace Server.Items
 
     public class SmallUrn : Item
     {
-        [Constructable]
+        [Constructible]
         public SmallUrn()
             : base(0x241C)
         {

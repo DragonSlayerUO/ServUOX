@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156382;  // Holiday Giftbox
 
-        [Constructable]
+        [Constructible]
         public GiftBox()
             : this(Utility.RandomDyedHue())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GiftBox(int hue)
             : base(Utility.Random(0x232A, 2))
         {

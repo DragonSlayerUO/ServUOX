@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a hiryu corpse")]
     public class LesserHiryu : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public LesserHiryu()
             : base("a lesser hiryu", 243, 0x3E94, AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -9,7 +9,7 @@ namespace Server.Items
         public override Race RequiredRace => null;
         public override int LabelNumber => 1113762;  // Crown of Arcane Temperament
 
-        [Constructable]
+        [Constructible]
         public CrownOfArcaneTemperament()
         {
             Attributes.BonusMana = 8;

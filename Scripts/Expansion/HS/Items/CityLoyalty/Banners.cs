@@ -18,7 +18,7 @@ namespace Server.Engines.CityLoyalty
         public override int EastID => SouthID + 9;
         public override int SouthID => BannerInfo[City][0];
 
-        [Constructable]
+        [Constructible]
         public CityBanner(City city)
             : base(true, BannerInfo[city][1])
         {
@@ -75,7 +75,7 @@ namespace Server.Engines.CityLoyalty
         [CommandProperty(AccessLevel.GameMaster)]
         public City City { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public CityBannerDeed(City city)
         {
             City = city;

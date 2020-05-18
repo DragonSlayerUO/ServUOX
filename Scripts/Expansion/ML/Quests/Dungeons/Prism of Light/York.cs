@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class York : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public York()
             : base("York", "the iron worker")
         {

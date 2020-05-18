@@ -21,14 +21,14 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public RunicMalletAndChisel(CraftResource resource) : base(resource, 4787)
         {
             Weight = 2.0;
             Hue = CraftResources.GetHue(resource);
         }
 
-        [Constructable]
+        [Constructible]
         public RunicMalletAndChisel(CraftResource resource, int uses) : base(resource, uses, 4787)
         {
             Weight = 2.0;

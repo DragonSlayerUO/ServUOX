@@ -12,7 +12,7 @@ namespace Server.Items
 
         public bool IsRewardItem { get; set; }
 
-        [Constructable]
+        [Constructible]
         public EtherealRetouchingTool()
             : base(0x42C6)
         {

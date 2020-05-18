@@ -5,7 +5,7 @@ namespace Server.Items
     public class SpiritOfTheTotem : BearMask
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SpiritOfTheTotem()
         {
             Hue = 0x455;

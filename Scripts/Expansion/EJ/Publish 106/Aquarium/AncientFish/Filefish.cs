@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Filefish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Filefish()
             : base(0xA36F)
         {

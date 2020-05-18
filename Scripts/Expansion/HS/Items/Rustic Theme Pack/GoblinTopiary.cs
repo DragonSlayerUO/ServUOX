@@ -8,7 +8,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1070878;  // a decorative topiary
 
-        [Constructable]
+        [Constructible]
         public GoblinTopiary() : base(0x4919)
         {
             Weight = 1.0;

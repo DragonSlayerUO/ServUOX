@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class MoonglowDonationBox : BaseCollectionItem
     {
-        [Constructable]
+        [Constructible]
         public MoonglowDonationBox()
             : base(0x9AA)
         {

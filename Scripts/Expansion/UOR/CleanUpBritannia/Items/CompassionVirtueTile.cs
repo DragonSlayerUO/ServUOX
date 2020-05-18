@@ -18,7 +18,7 @@ namespace Server.Items
 
         private int offset;
 
-        [Constructable]
+        [Constructible]
         public CompassionVirtueTileAddon(CompassionTileType type)
         {
             m_CompassionTileType = type;
@@ -63,7 +63,7 @@ namespace Server.Items
 
         private CompassionTileType m_CompassionTileType;
 
-        [Constructable]
+        [Constructible]
         public CompassionVirtueTileDeed()
         {
             LootType = LootType.Blessed;

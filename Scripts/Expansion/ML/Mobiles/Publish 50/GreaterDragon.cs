@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a dragon corpse")]
     public class GreaterDragon : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GreaterDragon()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.3, 0.5)
         {

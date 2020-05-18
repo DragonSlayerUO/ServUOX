@@ -8,13 +8,13 @@ namespace Server.Items
     [Flipable(0x2797, 0x27E2)]
     public class NinjaTabi : BaseShoes
     {
-        [Constructable]
+        [Constructible]
         public NinjaTabi()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public NinjaTabi(int hue)
             : base(0x2797, hue)
         {
@@ -45,13 +45,13 @@ namespace Server.Items
     [Flipable(0x2796, 0x27E1)]
     public class SamuraiTabi : BaseShoes
     {
-        [Constructable]
+        [Constructible]
         public SamuraiTabi()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SamuraiTabi(int hue)
             : base(0x2796, hue)
         {
@@ -82,13 +82,13 @@ namespace Server.Items
     [Flipable(0x2796, 0x27E1)]
     public class Waraji : BaseShoes
     {
-        [Constructable]
+        [Constructible]
         public Waraji()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Waraji(int hue)
             : base(0x2796, hue)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158684;  // Zealot of Khal Ankur
 
-        [Constructable]
+        [Constructible]
         public ZealotOfKhalAnkurTitleDeed()
         {
         }

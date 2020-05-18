@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new ChaosTileDeed();
 
-        [Constructable]
+        [Constructible]
         public ChaosTileAddon()
         {
             AddComponent(new AddonComponent(5347), 0, 0, 0);
@@ -41,7 +41,7 @@ namespace Server.Items
         public override BaseAddon Addon => new ChaosTileAddon();
         public override int LabelNumber => 1080490;  // Chaos Tile Deed
 
-        [Constructable]
+        [Constructible]
         public ChaosTileDeed()
         {
             LootType = LootType.Blessed;

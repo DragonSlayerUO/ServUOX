@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ParoxysmusDinner : Item
     {
-        [Constructable]
+        [Constructible]
         public ParoxysmusDinner()
             : base(0x1E95)
         {

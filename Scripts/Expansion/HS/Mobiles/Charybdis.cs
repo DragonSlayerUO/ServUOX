@@ -35,7 +35,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public int Tentacles => m_Tentacles.Count;
 
-        [Constructable]
+        [Constructible]
         public Charydbis() : this(null) { }
 
         public Charydbis(Mobile fisher)

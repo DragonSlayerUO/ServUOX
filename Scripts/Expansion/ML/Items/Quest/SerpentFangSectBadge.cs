@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SerpentFangSectBadge : Item
     {
-        [Constructable]
+        [Constructible]
         public SerpentFangSectBadge()
             : base(0x23C)
         {

@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113052;  // The Silver Sapling
 
-        [Constructable]
+        [Constructible]
         public SilverSapling()
             : base(0x0CE3)
         {
@@ -77,7 +77,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113053;  // a seed of the Silver Sapling
 
-        [Constructable]
+        [Constructible]
         public SilverSaplingSeed()
             : base(0x0DCF)
         {

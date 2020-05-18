@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x27AF, 0x27FA)]
     public class Sai : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public Sai()
             : base(0x27AF)
         {

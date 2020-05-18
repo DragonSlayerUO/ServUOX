@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(DefyingTheArcaneQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Alefian()
             : base("Alefian", "the Resisting Spells Instructor")
         {

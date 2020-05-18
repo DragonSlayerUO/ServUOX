@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class PicnicBlanketAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PicnicBlanketAddon(DirectionType type)
         {
             switch (type)
@@ -93,7 +93,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public PicnicBlanketDeed()
             : base()
         {

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class SmithsSatchel : BaseContainer, IDyable
     {
-        [Constructable]
+        [Constructible]
         public SmithsSatchel()
             : base(0xE75)
         {

@@ -29,7 +29,7 @@ namespace Server.Engines.MyrmidexInvasion
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextSpawn { get; set; }
 
-        [Constructable]
+        [Constructible]
         public BattleFlag(int itemid, int hue)
             : base(itemid)
         {

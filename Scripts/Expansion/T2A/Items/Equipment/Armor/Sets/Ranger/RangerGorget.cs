@@ -7,7 +7,7 @@ namespace Server.Items
         public CraftSystem RepairSystem => DefTailoring.CraftSystem;
 
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RangerGorget()
             : base(0x13D6)
         {

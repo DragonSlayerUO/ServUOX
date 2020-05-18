@@ -9,13 +9,13 @@ namespace Server.Items
 
         public override int LabelNumber => 1112173; // silver serpent venom
 
-        [Constructable]
+        [Constructible]
         public SilverSerpentVenom()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SilverSerpentVenom(int amount)
             : base(0xE24)
         {

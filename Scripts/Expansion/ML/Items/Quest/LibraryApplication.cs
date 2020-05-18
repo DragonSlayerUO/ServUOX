@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LibraryApplication : Item
     {
-        [Constructable]
+        [Constructible]
         public LibraryApplication()
             : base(0xEC0)
         {

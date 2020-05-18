@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113376;  // Soles of Providence
 
-        [Constructable]
+        [Constructible]
         public SolesOfProvidence()
         {
             Attributes.Luck = 80;

@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x143D, 0x143C)]
     public class HammerPick : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public HammerPick()
             : base(0x143D)
         {

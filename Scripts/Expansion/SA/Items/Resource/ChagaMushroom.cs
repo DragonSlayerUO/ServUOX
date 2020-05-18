@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ChagaMushroom : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public ChagaMushroom()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ChagaMushroom(int amount)
             : base(0x5743)
         {

@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(StoppingTheWorldQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Gustar()
             : base("Gustar", "the Meditation Instructor")
         {

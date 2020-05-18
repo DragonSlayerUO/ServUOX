@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1157349;  // gloves of feudal grip
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GlovesOfFeudalGrip()
         {
             Resource = CraftResource.None;
@@ -58,7 +58,7 @@ namespace Server.Items
         public override int LabelNumber => 1157367;  // Kilt of Feudal Vise
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishKiltOfFeudalVise()
         {
             Resource = CraftResource.None;

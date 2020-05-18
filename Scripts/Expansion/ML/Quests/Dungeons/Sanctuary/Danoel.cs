@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Danoel : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Danoel()
             : base("Danoel", "the Metal Weaver")
         {

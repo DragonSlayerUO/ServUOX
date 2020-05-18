@@ -13,7 +13,7 @@ namespace Server.Items
         public override bool CanFortify => false;
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public SmugglersEdge()
         {
             Hue = 1461;
@@ -81,7 +81,7 @@ namespace Server.Items
         public override bool CanFortify => false;
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishSmugglersEdge()
         {
             Hue = 1461;

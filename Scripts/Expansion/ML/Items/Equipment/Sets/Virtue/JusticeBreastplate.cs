@@ -6,7 +6,7 @@ namespace Server.Items
     public class JusticeBreastplate : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public JusticeBreastplate()
             : base(0x2B08)
         {

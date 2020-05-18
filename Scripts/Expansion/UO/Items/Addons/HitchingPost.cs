@@ -60,13 +60,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public HitchingPost()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HitchingPost(bool replica)
             : base(0x14E7)
         {

@@ -10,7 +10,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158689;  // Caddellite Pickaxe
 
-        [Constructable]
+        [Constructible]
         public CaddellitePickaxe()
         {
         }
@@ -46,7 +46,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158690;  // Caddellite Hatchet
 
-        [Constructable]
+        [Constructible]
         public CaddelliteHatchet()
         {
         }
@@ -82,7 +82,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158691;  // Caddellite Fishing Pole
 
-        [Constructable]
+        [Constructible]
         public CaddelliteFishingPole()
         {
         }

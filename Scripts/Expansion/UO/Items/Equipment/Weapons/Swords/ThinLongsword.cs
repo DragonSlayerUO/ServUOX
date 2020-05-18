@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0x13B8, 0x13B7)]
     public class ThinLongsword : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public ThinLongsword()
             : base(0x13B8)
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BlankMap : MapItem
     {
-        [Constructable]
+        [Constructible]
         public BlankMap()
         {
         }

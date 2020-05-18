@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Clehin : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Clehin()
             : base("Clehin", "the Soil Nurturer")
         {

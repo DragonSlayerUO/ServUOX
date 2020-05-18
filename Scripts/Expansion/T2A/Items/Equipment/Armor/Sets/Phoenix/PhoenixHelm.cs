@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PhoenixHelm : NorseHelm
     {
-        [Constructable]
+        [Constructible]
         public PhoenixHelm()
         {
             Hue = 0x8E;

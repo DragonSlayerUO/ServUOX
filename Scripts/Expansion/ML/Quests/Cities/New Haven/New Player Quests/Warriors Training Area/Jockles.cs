@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(TheWayOfTheBladeQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Jockles()
             : base("Jockles", "the Swordsmanship Instructor")
         {

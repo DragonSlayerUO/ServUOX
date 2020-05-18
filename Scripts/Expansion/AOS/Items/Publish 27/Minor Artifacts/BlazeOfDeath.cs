@@ -5,7 +5,7 @@ namespace Server.Items
     public class BlazeOfDeath : Halberd
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BlazeOfDeath()
         {
             Hue = 0x501;

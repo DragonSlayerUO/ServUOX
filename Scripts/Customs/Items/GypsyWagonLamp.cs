@@ -12,7 +12,7 @@ namespace Server.Items
         public int NorthID => Burning ? 0x9D34 : 0x9D36;
         public int WestID => Burning ? 0x9D35 : 0x9D37;
 
-        [Constructable]
+        [Constructible]
         public GypsyWagonLamp()
             : base(0x9D36)
         {

@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class MaulBear : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public MaulBear()
             : base("Maul")
         {

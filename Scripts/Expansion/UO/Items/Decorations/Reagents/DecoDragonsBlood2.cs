@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoDragonsBlood2 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoDragonsBlood2()
             : base(0xF82)
         {

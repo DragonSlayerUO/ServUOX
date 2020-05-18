@@ -16,13 +16,13 @@ namespace Server.Mobiles
             0xCC, 0x3EA2
         };
 
-        [Constructable]
+        [Constructible]
         public Horse()
             : this("a horse")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Horse(string name)
             : base(name, 0xE2, 0x3EA0, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -82,7 +82,7 @@ namespace Server.Mobiles
     [CorpseName("a horse corpse")]
     public class PackHorse : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public PackHorse()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

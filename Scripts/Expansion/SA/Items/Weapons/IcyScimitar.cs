@@ -5,7 +5,7 @@ namespace Server.Items
     public class IcyScimitar : RadiantScimitar
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public IcyScimitar()
         {
             WeaponAttributes.HitHarm = 15;

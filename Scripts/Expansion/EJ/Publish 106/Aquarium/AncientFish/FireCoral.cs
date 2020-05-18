@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class FireCoral : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public FireCoral()
             : base(0xA38B)
         {

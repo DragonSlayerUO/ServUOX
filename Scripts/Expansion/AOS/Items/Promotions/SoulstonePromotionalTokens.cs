@@ -14,7 +14,7 @@ namespace Server.Items
 
     public class SoulstoneFragmentToken : PromotionalToken
     {
-        [Constructable]
+        [Constructible]
         public SoulstoneFragmentToken()
             : base()
         {
@@ -57,13 +57,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SoulstoneType Type { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SoulstoneToken()
             : this(SoulstoneType.Blue)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SoulstoneToken(SoulstoneType type)
             : base()
         {

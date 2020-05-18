@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override string CreatureName => "saber-toothed tiger";
 
-        [Constructable]
+        [Constructible]
         public SabertoothedTigerCostume() : base()
         {
             CostumeBody = 0x588;

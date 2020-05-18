@@ -5,7 +5,7 @@ namespace Server.Items
     public class DivineCountenance : HornedTribalMask
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DivineCountenance()
         {
             Hue = 0x482;

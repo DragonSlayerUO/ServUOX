@@ -18,7 +18,7 @@ namespace Server.Items
 
         public static readonly Point3D TeleportDestination = new Point3D(76, 224, 4);
 
-        [Constructable]
+        [Constructible]
         public DoomPlaque()
             : base(0x4B20)
         {

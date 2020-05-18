@@ -25,7 +25,7 @@ namespace Server.Mobiles
         public override Poison HitPoison => Poison.Parasitic;
         public override bool Unprovokable => true;
 
-        [Constructable]
+        [Constructible]
         public MyrmidexQueen()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.15, 0.3)
         {
@@ -432,7 +432,7 @@ namespace Server.Mobiles
         private DateTime _NextMastery;
         private DateTime _NextSpecial;
 
-        [Constructable]
+        [Constructible]
         public Zipactriotl() : this(false) { }
 
         public Zipactriotl(bool quest)
@@ -707,7 +707,7 @@ namespace Server.Mobiles
     {
         public override bool AlwaysMurderer => true;
 
-        [Constructable]
+        [Constructible]
         public IgnisFatalis()
             : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.15, 0.3)
         {

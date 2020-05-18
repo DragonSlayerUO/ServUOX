@@ -10,7 +10,7 @@ namespace Server.Items
 
         private TextDefinition _Title;
 
-        [Constructable]
+        [Constructible]
         public BODRewardTitleDeed(int title)
         {
             _Title = new TextDefinition(1157181 + title);

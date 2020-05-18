@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class TribalPaint : Item
     {
-        [Constructable]
+        [Constructible]
         public TribalPaint()
             : base(0x9EC)
         {

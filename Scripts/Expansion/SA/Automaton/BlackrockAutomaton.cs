@@ -8,7 +8,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public override Type RepairResource => typeof(CrystallineBlackrock); // TODO: Needs to be regular blackrock. THis doesn't exist on ServUOX
 
-        [Constructable]
+        [Constructible]
         public BlackrockAutomaton()
         {
             Name = "blackrock automaton";

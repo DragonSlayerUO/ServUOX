@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a mimic corpse")]
     public class Mimic : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Mimic()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

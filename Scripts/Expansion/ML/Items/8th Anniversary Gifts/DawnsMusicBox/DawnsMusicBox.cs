@@ -50,7 +50,7 @@ namespace Server.Items
         private Timer m_Timer;
         private int m_ItemID = 0;
         private int m_Count = 0;
-        [Constructable]
+        [Constructible]
         public DawnsMusicBox()
             : base(0x2AF9)
         {

@@ -7,13 +7,13 @@ namespace Server.Items
         private bool m_Active;
         private Point3D m_PointDest;
         private Map m_MapDest;
-        [Constructable]
+        [Constructible]
         public KhaldunPitTeleporter()
             : this(new Point3D(5451, 1374, 0), Map.Felucca)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public KhaldunPitTeleporter(Point3D pointDest, Map mapDest)
             : base(0x053B)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GrizzledSkullCollection : Item
     {
-        [Constructable]
+        [Constructible]
         public GrizzledSkullCollection()
             : base(0x21FC)
         {

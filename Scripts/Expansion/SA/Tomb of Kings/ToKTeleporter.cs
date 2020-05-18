@@ -8,7 +8,7 @@ namespace Server.Items
     {
         private static readonly Point3D m_Dest = new Point3D(35, 215, -5);
 
-        [Constructable]
+        [Constructible]
         public ToKTeleporter()
             : base(0x1BC3)
         {

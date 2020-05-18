@@ -11,7 +11,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public bool CheckWhenHidden => true;
 
-        [Constructable]
+        [Constructible]
         public KotlRegalChest()
             : base(0x4D0C)
         {

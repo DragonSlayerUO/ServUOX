@@ -349,13 +349,13 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TreasureMap(int level, Map map)
             : this(level, map, false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TreasureMap(int level, Map map, bool eodon)
         {
             Level = level;

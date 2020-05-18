@@ -5,7 +5,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(MediumPlateShield))]
     public class MetalShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public MetalShield()
             : base(0x1B7B)
         {

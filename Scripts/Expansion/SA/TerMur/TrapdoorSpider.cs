@@ -7,7 +7,7 @@ namespace Server.Mobiles
     {
         public override bool CanStealth => true;
 
-        [Constructable]
+        [Constructible]
         public TrapdoorSpider()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

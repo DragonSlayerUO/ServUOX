@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1115514;  // Ranger's Cloak Of Augmentation
 
-        [Constructable]
+        [Constructible]
         public RangersCloakOfAugmentation()
         {
             Hue = 0x54A;

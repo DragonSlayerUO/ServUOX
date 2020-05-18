@@ -30,19 +30,19 @@ namespace Server.Mobiles
         private List<SpawnObject> m_SpawnObjects;
         private int m_MaxCount;
 
-        [Constructable]
+        [Constructible]
         public Spawner()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Spawner(string spawnName)
             : this(1, 5, 10, 0, 4, spawnName)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Spawner(int amount, int minDelay, int maxDelay, int team, int spawnRange, string spawnName)
             : base(0x1f13)
         {
@@ -1053,7 +1053,7 @@ namespace Server.Mobiles
             {
                 ConstructorInfo ctor = ctors[i];
 
-                if (!Add.IsConstructable(ctor, AccessLevel.Spawner))
+                if (!Add.IsConstructible(ctor, AccessLevel.Spawner))
                     continue;
 
                 ParameterInfo[] paramList = ctor.GetParameters();

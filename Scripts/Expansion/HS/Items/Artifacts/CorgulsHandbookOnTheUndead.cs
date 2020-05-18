@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1149780;
 
-        [Constructable]
+        [Constructible]
         public CorgulsHandbookOnTheUndead()
         {
             Hue = 2953;

@@ -21,7 +21,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ScrollOfAlacrity(SkillName skill)
             : base(skill, 0.0)
         {

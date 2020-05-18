@@ -8,24 +8,24 @@ namespace Server.Mobiles
         private int m_TriggerRange;
         private TextDefinition m_SpawnMessage;
         private bool m_InstantFlag;
-        [Constructable]
+        [Constructible]
         public ProximitySpawner()
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ProximitySpawner(string spawnName)
             : base(spawnName)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ProximitySpawner(int amount, int minDelay, int maxDelay, int team, int homeRange, string spawnName)
             : base(amount, minDelay, maxDelay, team, homeRange, spawnName)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ProximitySpawner(int amount, int minDelay, int maxDelay, int team, int homeRange, string spawnName, int triggerRange, string spawnMessage, bool instantFlag)
             : base(amount, minDelay, maxDelay, team, homeRange, spawnName)
         {

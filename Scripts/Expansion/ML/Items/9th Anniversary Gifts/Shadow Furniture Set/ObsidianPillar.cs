@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ObsidianPillarAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ObsidianPillarAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x364F, 1076678), 0, 0, 0);
@@ -36,7 +36,7 @@ namespace Server.Items
 
         public override bool ExcludeDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public ObsidianPillarDeed()
         {
             LootType = LootType.Blessed;

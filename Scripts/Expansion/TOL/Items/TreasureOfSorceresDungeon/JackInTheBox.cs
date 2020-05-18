@@ -11,7 +11,7 @@ namespace Server.Items
 
         private DateTime _LastUse;
 
-        [Constructable]
+        [Constructible]
         public JackInTheBox()
             : base(0x9F64)
         {

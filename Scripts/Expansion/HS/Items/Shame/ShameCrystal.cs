@@ -9,12 +9,12 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151624;  // Crystal of Shame
 
-        [Constructable]
+        [Constructible]
         public ShameCrystal() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ShameCrystal(int amount) : base(16395)
         {
             Stackable = true;

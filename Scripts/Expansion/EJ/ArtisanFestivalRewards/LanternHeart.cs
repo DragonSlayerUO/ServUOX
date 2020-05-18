@@ -10,7 +10,7 @@ namespace Server.Items
         public int NorthID => Burning ? 0xA482 : 0xA481;
         public int WestID => Burning ? 0xA486 : 0xA485;
 
-        [Constructable]
+        [Constructible]
         public LanternHeart()
             : base(0xA481)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SabrixsEye : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public SabrixsEye()
             : base(0xF87)
         {

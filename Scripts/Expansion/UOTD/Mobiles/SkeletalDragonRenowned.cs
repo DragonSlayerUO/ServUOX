@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Skeletal Dragon [Renowned] corpse")]
     public class SkeletalDragonRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public SkeletalDragonRenowned()
             : base(AIType.AI_Mage)
         {

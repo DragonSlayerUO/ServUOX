@@ -13,7 +13,7 @@ namespace Server.Mobiles
         public static List<Djinn> Instances { get; set; }
         private SummonEfreetTimer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public Djinn()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

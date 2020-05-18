@@ -6,7 +6,7 @@ namespace Server.Items
     public class ParrotPerchAddon : BaseAddon
     {
         private PetParrot m_Parrot;
-        [Constructable]
+        [Constructible]
         public ParrotPerchAddon()
             : this(null)
         {
@@ -85,7 +85,7 @@ namespace Server.Items
     {
         private PetParrot m_Parrot;
         private bool m_Safety;
-        [Constructable]
+        [Constructible]
         public ParrotPerchAddonDeed()
             : this(null)
         {

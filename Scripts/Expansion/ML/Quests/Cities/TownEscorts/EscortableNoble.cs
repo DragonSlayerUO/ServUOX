@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class EscortableNoble : TownEscortable
     {
-        [Constructable]
+        [Constructible]
         public EscortableNoble()
         {
             Title = "the noble";

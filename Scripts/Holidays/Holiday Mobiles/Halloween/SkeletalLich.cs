@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a skeletal corpse")]
     public class SkeletalLich : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SkeletalLich() : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "a skeletal lich";

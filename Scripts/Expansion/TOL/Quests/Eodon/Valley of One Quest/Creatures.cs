@@ -12,7 +12,7 @@ namespace Server.Mobiles
     {
         private DateTime _NextFreeze;
 
-        [Constructable]
+        [Constructible]
         public TRex()
             : base(AIType.AI_Melee, FightMode.Weakest, 10, 1, .08, .17)
         {
@@ -319,7 +319,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Teleports { get; set; }
 
-        [Constructable]
+        [Constructible]
         public GreatApe(bool teleports = false)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .08, .17)
         {
@@ -557,7 +557,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile Protector { get; set; }
 
-        [Constructable]
+        [Constructible]
         public TigerCub()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -652,7 +652,7 @@ namespace Server.Mobiles
 
     public class Trapper : Brigand
     {
-        [Constructable]
+        [Constructible]
         public Trapper()
         {
             Title = "the trapper";
@@ -711,7 +711,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public NestWithEgg Nest { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Poacher(NestWithEgg nest)
         {
             Title = "the poacher";
@@ -754,7 +754,7 @@ namespace Server.Mobiles
     [CorpseName("a lava elemental corpse")]
     public class VolcanoElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public VolcanoElemental()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

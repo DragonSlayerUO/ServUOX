@@ -5,7 +5,7 @@ namespace Server.Items
     public class FangOfRactus : Kryss
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public FangOfRactus()
         {
             Hue = 0x117;

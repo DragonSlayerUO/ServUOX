@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SpeckledPoisonSac : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public SpeckledPoisonSac()
             : base(0x23A)
         {

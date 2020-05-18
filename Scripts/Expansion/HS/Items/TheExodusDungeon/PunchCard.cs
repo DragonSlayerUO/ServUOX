@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PunchCard : BaseDecayingItem
     {
-        [Constructable]
+        [Constructible]
         public PunchCard()
             : base(0x0FF4)
         {

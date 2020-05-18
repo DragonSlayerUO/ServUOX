@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a shadow wyrm corpse")]
     public class ShadowWyrm : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ShadowWyrm()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

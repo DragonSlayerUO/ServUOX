@@ -5,13 +5,13 @@ namespace Server.Items
     public class ArcaneFocus : TransientItem
     {
         private int m_StrengthBonus;
-        [Constructable]
+        [Constructible]
         public ArcaneFocus()
             : this(TimeSpan.FromHours(1), 1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ArcaneFocus(int lifeSpan, int strengthBonus)
             : this(TimeSpan.FromSeconds(lifeSpan), strengthBonus)
         {

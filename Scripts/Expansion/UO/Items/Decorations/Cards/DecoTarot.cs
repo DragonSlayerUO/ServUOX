@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoTarot : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoTarot()
             : base(0x12A5)
         {

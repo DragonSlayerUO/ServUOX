@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153528;  // Crafting glass with Glassblowing
 
-        [Constructable]
+        [Constructible]
         public GlassblowingBook()
             : base(0xFF4)
         {

@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("Rakktavi [Renowned] corpse")]
     public class RakktaviRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public RakktaviRenowned()
             : base(AIType.AI_Archer)
         {

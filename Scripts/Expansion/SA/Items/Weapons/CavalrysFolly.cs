@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1115446;  // Cavalry's Folly
 
-        [Constructable]
+        [Constructible]
         public CavalrysFolly()
             : base()
         {

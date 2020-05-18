@@ -5,7 +5,7 @@ namespace Server.Items
     public class GrizzleTunic : BoneChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GrizzleTunic()
             : base()
         {

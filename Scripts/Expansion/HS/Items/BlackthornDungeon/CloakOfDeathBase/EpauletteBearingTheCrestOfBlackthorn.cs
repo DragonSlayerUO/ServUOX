@@ -9,7 +9,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1123325;  // Epaulette
 
-        [Constructable]
+        [Constructible]
         public EpauletteBearingTheCrestOfBlackthorn6()
         {
             ReforgedSuffix = ReforgedSuffix.Blackthorn;

@@ -14,7 +14,7 @@ namespace Server.Mobiles
 
         private DateTime m_NextWeaponChange;
 
-        [Constructable]
+        [Constructible]
         public EliteNinja() : base(AIType.AI_Ninja, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             SpeechHue = Utility.RandomDyedHue();

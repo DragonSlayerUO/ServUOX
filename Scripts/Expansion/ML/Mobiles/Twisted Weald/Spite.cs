@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Spite corpse")]
     public class Spite : Changeling
     {
-        [Constructable]
+        [Constructible]
         public Spite()
         {
             Hue = DefaultHue;

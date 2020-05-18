@@ -10,7 +10,7 @@ namespace Server.Mobiles
         public override VoidEvolution Evolution => VoidEvolution.None;
         public override int Stage => 0;
 
-        [Constructable]
+        [Constructible]
         public Korpre()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

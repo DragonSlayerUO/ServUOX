@@ -33,7 +33,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public RunedSashOfWarding()
         {
             Hue = 1157;
@@ -143,7 +143,7 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public GargishRunedSashOfWarding()
         {
             ItemID = 0x46B4;

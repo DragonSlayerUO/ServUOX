@@ -152,7 +152,7 @@ namespace Server.Items
 
     public class PickpocketDipEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PickpocketDipEastAddon()
         {
             AddComponent(new PickpocketDip(0x1EC3), 0, 0, 0);
@@ -178,7 +178,7 @@ namespace Server.Items
 
     public class PickpocketDipEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public PickpocketDipEastDeed()
         {
         }
@@ -204,7 +204,7 @@ namespace Server.Items
 
     public class PickpocketDipSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PickpocketDipSouthAddon()
         {
             AddComponent(new PickpocketDip(0x1EC0), 0, 0, 0);
@@ -230,7 +230,7 @@ namespace Server.Items
 
     public class PickpocketDipSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public PickpocketDipSouthDeed()
         {
         }

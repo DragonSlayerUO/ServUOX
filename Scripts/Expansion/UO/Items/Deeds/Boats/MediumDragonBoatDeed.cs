@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1041208;  // medium dragon ship deed
         public override BaseBoat Boat => new MediumDragonBoat(BoatDirection);
 
-        [Constructable]
+        [Constructible]
         public MediumDragonBoatDeed() : base(0xC, Point3D.Zero)
         {
         }

@@ -17,7 +17,7 @@ namespace Server.Items
         public override bool CanBeWornByGargoyles => true;
         public override Race RequiredRace => Race.Gargoyle;
 
-        [Constructable]
+        [Constructible]
         public GargishChaosShield()
             : base(0x4228)
         {

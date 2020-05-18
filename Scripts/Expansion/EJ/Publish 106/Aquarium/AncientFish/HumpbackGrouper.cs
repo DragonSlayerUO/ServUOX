@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class HumpbackGrouper : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public HumpbackGrouper()
             : base(0xA363)
         {

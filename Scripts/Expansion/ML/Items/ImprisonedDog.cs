@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ImprisonedDog : BaseImprisonedMobile
     {
-        [Constructable]
+        [Constructible]
         public ImprisonedDog()
             : base(0x1F1C)
         {
@@ -42,7 +42,7 @@ namespace Server.Mobiles
     {
         private string m_Name;
         private DateTime m_NextAttempt;
-        [Constructable]
+        [Constructible]
         public TravestyDog()
             : base()
         {

@@ -214,7 +214,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1011199;  // Plate
 
-        [Constructable]
+        [Constructible]
         public SorcerersPlate(SorcerersPlateController controller, RegsType type)
             : base(0x9D7)
         {

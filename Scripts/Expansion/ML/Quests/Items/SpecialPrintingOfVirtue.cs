@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1075793;  // Special Printing of 'Virtue' by Lord British
 
-        [Constructable]
+        [Constructible]
         public SpecialPrintingOfVirtue() : base(4082)
         {
         }

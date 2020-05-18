@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public abstract class BaseImprisonedMobile : Item
     {
-        [Constructable]
+        [Constructible]
         public BaseImprisonedMobile(int itemID)
             : base(itemID)
         {

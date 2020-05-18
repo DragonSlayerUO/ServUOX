@@ -76,13 +76,13 @@ namespace Server.Items
 
     public class RedScales : BaseScales
     {
-        [Constructable]
+        [Constructible]
         public RedScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RedScales(int amount)
             : base(CraftResource.RedScales, amount)
         {
@@ -112,13 +112,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.YellowScales;
 
-        [Constructable]
+        [Constructible]
         public YellowScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public YellowScales(int amount)
             : base(CraftResource.YellowScales, amount)
         {
@@ -148,13 +148,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.BlackScales;
 
-        [Constructable]
+        [Constructible]
         public BlackScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BlackScales(int amount)
             : base(CraftResource.BlackScales, amount)
         {
@@ -184,13 +184,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.GreenScales;
 
-        [Constructable]
+        [Constructible]
         public GreenScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GreenScales(int amount)
             : base(CraftResource.GreenScales, amount)
         {
@@ -220,13 +220,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.WhiteScales;
 
-        [Constructable]
+        [Constructible]
         public WhiteScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WhiteScales(int amount)
             : base(CraftResource.WhiteScales, amount)
         {
@@ -256,13 +256,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.BlueScales;
 
-        [Constructable]
+        [Constructible]
         public BlueScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BlueScales(int amount)
             : base(CraftResource.BlueScales, amount)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class WrathOfTheDryad : GnarledStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public WrathOfTheDryad()
         {
             Hue = 0x29C;

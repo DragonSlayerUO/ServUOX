@@ -8,14 +8,14 @@ namespace Server.Items
             Movable = false;
         }
 
-        [Constructable]
+        [Constructible]
         public Static(int itemID)
             : base(itemID)
         {
             Movable = false;
         }
 
-        [Constructable]
+        [Constructible]
         public Static(int itemID, int count)
             : this(Utility.Random(itemID, count))
         {
@@ -47,13 +47,13 @@ namespace Server.Items
     public class LocalizedStatic : Static
     {
         private int m_LabelNumber;
-        [Constructable]
+        [Constructible]
         public LocalizedStatic(int itemID)
             : this(itemID, itemID < 0x4000 ? 1020000 + itemID : 1078872 + itemID)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LocalizedStatic(int itemID, int labelNumber)
             : base(itemID)
         {

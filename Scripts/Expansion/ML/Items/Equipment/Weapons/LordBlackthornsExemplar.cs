@@ -5,7 +5,7 @@ namespace Server.Items
     public class LordBlackthornsExemplar : ChaosShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LordBlackthornsExemplar()
             : base()
         {

@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("Tikitavi [Renowned] corpse")]
     public class TikitaviRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public TikitaviRenowned()
             : base(AIType.AI_Melee)
         {

@@ -14,7 +14,7 @@ namespace Server.Items
         public override int ArmorBase => 18;
         public override ArmorMaterialType MaterialType => ArmorMaterialType.Plate;
 
-        [Constructable]
+        [Constructible]
         public Bascinet()
             : base(0x140C)
         {

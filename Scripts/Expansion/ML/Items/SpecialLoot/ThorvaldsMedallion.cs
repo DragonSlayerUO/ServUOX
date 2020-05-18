@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ThorvaldsMedallion : Item
     {
-        [Constructable]
+        [Constructible]
         public ThorvaldsMedallion()
             : base(0x2AAA)
         {

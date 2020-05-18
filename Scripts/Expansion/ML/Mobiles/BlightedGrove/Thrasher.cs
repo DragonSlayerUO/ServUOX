@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a thrasher corpse")]
     public class Thrasher : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Thrasher()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.1, 0.2)
         {

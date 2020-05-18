@@ -5,7 +5,7 @@ namespace Server.Items
     public class ZyronicClaw : ExecutionersAxe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ZyronicClaw()
         {
             Hue = 0x485;

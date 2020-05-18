@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SeaFan : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SeaFan()
             : base(0xA38C)
         {

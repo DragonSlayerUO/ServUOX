@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MinocBlueFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public MinocBlueFish()
             : base(0x3AFE)
         {

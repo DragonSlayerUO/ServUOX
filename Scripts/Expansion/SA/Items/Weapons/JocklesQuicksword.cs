@@ -5,7 +5,7 @@ namespace Server.Items
     public class JocklesQuicksword : Longsword
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public JocklesQuicksword()
         {
             LootType = LootType.Blessed;

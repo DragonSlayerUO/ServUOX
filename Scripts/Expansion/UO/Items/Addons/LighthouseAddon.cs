@@ -15,7 +15,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => new LighthouseAddonDeed(Account);
 
-        [Constructable]
+        [Constructible]
         public LighthouseAddon(string account)
         {
             Account = account;
@@ -224,7 +224,7 @@ namespace Server.Items
         public override BaseAddon Addon => new LighthouseAddon(Account);
         public override int LabelNumber => 1154582;  // Deed for a Lighthouse
 
-        [Constructable]
+        [Constructible]
         public LighthouseAddonDeed() : this(null)
         {
         }

@@ -35,7 +35,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154173;  // Upholstered Chair       
 
-        [Constructable]
+        [Constructible]
         public UpholsteredChairDeed()
         {
         }
@@ -65,7 +65,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new UpholsteredChairDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public UpholsteredChairAddon()
         {
             AddComponent(new UpholsteredChairComponent(), 0, 0, 0);

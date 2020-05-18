@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a dread spider corpse")]
     public class DreadSpider : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DreadSpider()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -89,7 +89,7 @@ namespace Server.Mobiles
     [CorpseName("a giant spider corpse")]
     public class GiantSpider : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GiantSpider()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

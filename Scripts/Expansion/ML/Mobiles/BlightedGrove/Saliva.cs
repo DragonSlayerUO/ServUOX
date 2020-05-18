@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a saliva corpse")]
     public class Saliva : Harpy
     {
-        [Constructable]
+        [Constructible]
         public Saliva()
             : base()
         {

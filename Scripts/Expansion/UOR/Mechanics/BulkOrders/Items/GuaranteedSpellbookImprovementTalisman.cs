@@ -5,13 +5,13 @@ namespace Server.Items
 {
     public class GuaranteedSpellbookImprovementTalisman : BaseTalisman
     {
-        [Constructable]
+        [Constructible]
         public GuaranteedSpellbookImprovementTalisman()
             : this(10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GuaranteedSpellbookImprovementTalisman(int charges)
             : base(0x9E28)
         {

@@ -16,7 +16,7 @@ namespace Server.Items
 			, {4954, -13, 4, 4}, {4962, -15, 1, 4}, {4954, -10, 0, 4}// 59	60	61	
 					};
 
-        [Constructable]
+        [Constructible]
         public BlackthornStep6()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

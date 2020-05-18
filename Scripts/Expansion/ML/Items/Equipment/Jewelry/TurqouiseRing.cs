@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TurqouiseRing : GoldRing
     {
-        [Constructable]
+        [Constructible]
         public TurqouiseRing()
             : base()
         {

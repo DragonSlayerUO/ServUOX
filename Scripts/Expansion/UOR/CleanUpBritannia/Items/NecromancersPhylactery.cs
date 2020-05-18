@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public NecromancersPhylactery()
             : base(0x2F5A)
         {

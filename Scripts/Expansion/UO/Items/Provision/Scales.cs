@@ -21,7 +21,7 @@ namespace Server.Items
 
         public bool PlayerConstructed => true;
 
-        [Constructable]
+        [Constructible]
         public Scales()
             : base(0x1852)
         {

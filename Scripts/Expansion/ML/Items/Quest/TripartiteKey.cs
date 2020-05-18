@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class TripartiteKey : Item
     {
-        [Constructable]
+        [Constructible]
         public TripartiteKey()
             : base(0x1012)
         {

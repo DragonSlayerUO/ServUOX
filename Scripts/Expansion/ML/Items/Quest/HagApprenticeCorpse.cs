@@ -9,7 +9,7 @@ namespace Server.Engines.Quests.Hag
 {
     public class HagApprenticeCorpse : Corpse
     {
-        [Constructable]
+        [Constructible]
         public HagApprenticeCorpse()
             : base(GetOwner(), GetEquipment())
         {

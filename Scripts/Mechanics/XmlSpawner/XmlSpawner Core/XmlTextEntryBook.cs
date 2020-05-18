@@ -133,7 +133,7 @@ namespace Server.Items
 
         public BookPageInfo[] Pages => m_Pages;
 
-        [Constructable]
+        [Constructible]
         public BaseEntryBook(int itemID, string title, string author, int pageCount, bool writable) : base(itemID)
         {
             m_Title = title;

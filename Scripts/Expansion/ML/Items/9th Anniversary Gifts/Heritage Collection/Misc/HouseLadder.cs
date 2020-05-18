@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new HouseLadderDeed();
 
-        [Constructable]
+        [Constructible]
         public HouseLadderAddon(int type)
             : base()
         {
@@ -72,7 +72,7 @@ namespace Server.Items
         public override int LabelNumber => 1076287;  // Ladder
         private int m_Type;
 
-        [Constructable]
+        [Constructible]
         public HouseLadderDeed()
             : base()
         {

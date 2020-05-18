@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RoyalSoulForge : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public RoyalSoulForge()
         {
             AddComponent(new AddonComponent(0x4277), 0, 0, 0);

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Devourer of Souls [Renowned] corpse")]
     public class DevourerRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public DevourerRenowned()
             : base(AIType.AI_NecroMage)
         {

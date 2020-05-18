@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class TotalRefreshPotion : BaseRefreshPotion
     {
-        [Constructable]
+        [Constructible]
         public TotalRefreshPotion()
             : base(PotionEffect.RefreshTotal)
         {

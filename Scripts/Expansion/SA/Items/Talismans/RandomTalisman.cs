@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class RandomTalisman : BaseTalisman
     {
-        [Constructable]
+        [Constructible]
         public RandomTalisman()
             : base(GetRandomItemID())
         {

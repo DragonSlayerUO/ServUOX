@@ -9,7 +9,7 @@ namespace Server.Items
         private int m_Lifespan;
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public RobeofRite() : base(0x1F03)
         {
             Weight = 3;

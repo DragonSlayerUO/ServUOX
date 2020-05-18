@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class AnvilEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public AnvilEastAddon()
         {
             AddComponent(new AnvilComponent(0xFAF), 0, 0, 0);
@@ -29,7 +29,7 @@ namespace Server.Items
 
     public class AnvilEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public AnvilEastDeed()
         {
         }

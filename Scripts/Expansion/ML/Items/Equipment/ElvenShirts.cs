@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0x2794, 0x27DF)]
     public class ClothNinjaJacket : BaseShirt
     {
-        [Constructable]
+        [Constructible]
         public ClothNinjaJacket()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ClothNinjaJacket(int hue)
             : base(0x2794, hue)
         {
@@ -42,13 +42,13 @@ namespace Server.Items
 
     public class ElvenShirt : BaseShirt
     {
-        [Constructable]
+        [Constructible]
         public ElvenShirt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ElvenShirt(int hue)
             : base(0x3175, hue)
         {
@@ -78,13 +78,13 @@ namespace Server.Items
 
     public class ElvenDarkShirt : BaseShirt
     {
-        [Constructable]
+        [Constructible]
         public ElvenDarkShirt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ElvenDarkShirt(int hue)
             : base(0x3176, hue)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoGoldIngots3 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoGoldIngots3()
             : base(0x1BED)
         {

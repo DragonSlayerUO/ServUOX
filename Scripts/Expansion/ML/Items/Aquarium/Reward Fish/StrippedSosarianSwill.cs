@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StrippedSosarianSwill : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public StrippedSosarianSwill()
             : base(0x3B0A)
         {

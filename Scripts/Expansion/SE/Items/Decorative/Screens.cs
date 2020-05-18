@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x24D0, 0x24D1, 0x24D2, 0x24D3, 0x24D4)]
     public class BambooScreen : Item
     {
-        [Constructable]
+        [Constructible]
         public BambooScreen()
             : base(0x24D0)
         {
@@ -37,7 +37,7 @@ namespace Server.Items
     [Flipable(0x24CB, 0x24CC, 0x24CD, 0x24CE, 0x24CF)]
     public class ShojiScreen : Item
     {
-        [Constructable]
+        [Constructible]
         public ShojiScreen()
             : base(0x24CB)
         {

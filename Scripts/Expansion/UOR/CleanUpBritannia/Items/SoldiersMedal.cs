@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public SoldiersMedal()
             : base(0x2F5B)
         {

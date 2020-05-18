@@ -5,7 +5,7 @@ namespace Server.Items
     public class MysticalShortbow : MagicalShortbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MysticalShortbow()
         {
             Attributes.SpellChanneling = 1;

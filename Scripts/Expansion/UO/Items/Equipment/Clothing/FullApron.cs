@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0x153d, 0x153e)]
     public class FullApron : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public FullApron()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FullApron(int hue)
             : base(0x153d, hue)
         {

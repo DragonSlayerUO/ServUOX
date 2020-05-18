@@ -8,7 +8,7 @@ namespace Server.Items
     */
     public class SkullsOnPike : Item
     {
-        [Constructable]
+        [Constructible]
         public SkullsOnPike()
             : base(0x42B5)
         {

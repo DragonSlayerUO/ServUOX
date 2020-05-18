@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a desert scorpion corpse")]
     public class DesertScorpion : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DesertScorpion()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .2, .4)
         {

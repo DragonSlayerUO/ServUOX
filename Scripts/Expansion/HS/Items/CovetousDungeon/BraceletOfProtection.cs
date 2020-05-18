@@ -10,13 +10,13 @@ namespace Server.Items
         public override int LabelNumber => 1152730;  // Bracelet of Protection
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BraceletOfProtection()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BraceletOfProtection(bool antique)
         {
             Hue = 1157;

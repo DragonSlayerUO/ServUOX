@@ -14,7 +14,7 @@ namespace Server.Items
         public int NorthID => Burning ? 0x4C45 : 0x4C44;
         public int WestID => Burning ? 0x4C47 : 0x4C46;
 
-        [Constructable]
+        [Constructible]
         public BirdLamp()
             : base(0x4C44)
         {
@@ -83,7 +83,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154188;  // Bird Lamp
 
-        [Constructable]
+        [Constructible]
         public BirdLampDeed()
             : base(0x14F0)
         {

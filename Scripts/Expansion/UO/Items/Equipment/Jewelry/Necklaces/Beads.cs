@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Beads : BaseNecklace
     {
-        [Constructable]
+        [Constructible]
         public Beads()
             : base(0x108B)
         {

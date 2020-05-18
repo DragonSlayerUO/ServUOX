@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x27Ab, 0x27F6)]
     public class Tekagi : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public Tekagi()
             : base(0x27AB)
         {

@@ -3,13 +3,13 @@ namespace Server.Mobiles
     [CorpseName("an ostard corpse")]
     public class DesertOstard : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public DesertOstard()
             : this("a desert ostard")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DesertOstard(string name)
             : base(name, 0xD2, 0x3EA3, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -66,13 +66,13 @@ namespace Server.Mobiles
     [CorpseName("an ostard corpse")]
     public class ForestOstard : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public ForestOstard()
             : this("a forest ostard")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ForestOstard(string name)
             : base(name, 0xDB, 0x3EA5, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -130,13 +130,13 @@ namespace Server.Mobiles
     [CorpseName("an ostard corpse")]
     public class FrenziedOstard : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public FrenziedOstard()
             : this("a frenzied ostard")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FrenziedOstard(string name)
             : base(name, 0xDA, 0x3EA4, AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

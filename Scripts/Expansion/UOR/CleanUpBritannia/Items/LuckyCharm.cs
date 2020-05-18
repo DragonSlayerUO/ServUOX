@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1154725; // Lucky Charm
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public LuckyCharm()
             : base(0x2F5B)
         {

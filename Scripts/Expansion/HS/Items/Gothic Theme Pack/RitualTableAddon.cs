@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class RitualTableAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public RitualTableAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RitualTableAddon(int hue)
         {
             AddComponent(new AddonComponent(0x4985), 0, 0, 0);
@@ -45,7 +45,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1097690;  // ritual table
 
-        [Constructable]
+        [Constructible]
         public RitualTableDeed()
         {
         }

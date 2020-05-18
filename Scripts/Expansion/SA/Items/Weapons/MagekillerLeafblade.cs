@@ -5,7 +5,7 @@ namespace Server.Items
     public class MagekillerLeafblade : Leafblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MagekillerLeafblade()
         {
             WeaponAttributes.HitLeechMana = 16;

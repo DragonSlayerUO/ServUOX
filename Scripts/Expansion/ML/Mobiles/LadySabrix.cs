@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Lady Sabrix corpse")]
     public class LadySabrix : GiantBlackWidow
     {
-        [Constructable]
+        [Constructible]
         public LadySabrix()
         {
             Name = "Lady Sabrix";

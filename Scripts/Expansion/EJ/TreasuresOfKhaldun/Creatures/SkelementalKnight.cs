@@ -14,13 +14,13 @@ namespace Server.Mobiles
             Energy
         }
 
-        [Constructable]
+        [Constructible]
         public SkelementalKnight()
             : this(Utility.RandomBool() ? SkeletalType.Energy : SkeletalType.Poison)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkelementalKnight(SkeletalType type)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
 
     public class LoomEastAddon : BaseAddon, ILoom
     {
-        [Constructable]
+        [Constructible]
         public LoomEastAddon()
         {
             AddComponent(new AddonComponent(0x1060), 0, 0, 0);
@@ -45,7 +45,7 @@ namespace Server.Items
 
     public class LoomEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public LoomEastDeed()
         {
         }

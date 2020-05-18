@@ -38,7 +38,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public GobletOfCelebration()
             : base(0x99A)
         {

@@ -24,7 +24,7 @@ namespace Server.Items
 
         public override ArmorMeditationAllowance DefMedAllowance => ArmorMeditationAllowance.All;
 
-        [Constructable]
+        [Constructible]
         public LeatherGloves()
             : base(0x13C6)
         {

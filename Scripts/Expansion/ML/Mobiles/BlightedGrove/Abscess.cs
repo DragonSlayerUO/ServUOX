@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an abscess's corpse")]
     public class Abscess : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Abscess()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

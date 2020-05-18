@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154906;  // Slim's Shadow Veil
 
-        [Constructable]
+        [Constructible]
         public SlimsShadowVeil()
         {
             Hue = 1932;

@@ -14,7 +14,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsRewardItem { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CoralTheOwl() : base(0x9A9B)
         {
             LootType = LootType.Blessed;

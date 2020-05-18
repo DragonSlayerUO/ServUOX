@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0x494E, 0x494D)]
     public class StatueGargoyleEast : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueGargoyleEast()
             : base(0x494E)
         {
@@ -33,7 +33,7 @@ namespace Server.Items
     [Flipable(0x494D, 0x494E)]
     public class StatueGargoyleSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueGargoyleSouth()
             : base(0x494D)
         {

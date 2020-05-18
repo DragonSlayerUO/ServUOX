@@ -17,7 +17,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBBlacksmith());
         }
 
-        [Constructable]
+        [Constructible]
         public GeorgeHephaestus()
             : base("George Hephaestus", "the Blacksmith Instructor")
         {

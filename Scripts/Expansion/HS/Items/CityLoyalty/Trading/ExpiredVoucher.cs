@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151749;  // Expired Voucher for a Free Drink at the Fortune's Fire Casino
 
-        [Constructable]
+        [Constructible]
         public ExpiredVoucher()
             : base(0x2831)
         {

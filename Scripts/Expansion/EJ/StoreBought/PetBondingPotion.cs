@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1152921;  // Pet Bonding Potion
 
-        [Constructable]
+        [Constructible]
         public PetBondingPotion() : base(0x0F04)
         {
             Weight = 1.0;

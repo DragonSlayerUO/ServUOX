@@ -5,7 +5,7 @@ namespace Server.Factions
 {
     public class FactionNecromancer : BaseFactionGuard
     {
-        [Constructable]
+        [Constructible]
         public FactionNecromancer()
             : base("the necromancer")
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
         private int m_Level;
-        [Constructable]
+        [Constructible]
         public DetectiveBoots()
         {
             Hue = 0x455;

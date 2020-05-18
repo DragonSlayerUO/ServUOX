@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Ninja
 {
     public class GreenNinjaQuestTeleporter : DynamicTeleporter
     {
-        [Constructable]
+        [Constructible]
         public GreenNinjaQuestTeleporter()
             : base(0x51C, 0x17E)
         {

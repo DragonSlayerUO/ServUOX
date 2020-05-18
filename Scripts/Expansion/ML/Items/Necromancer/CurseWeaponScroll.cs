@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class CurseWeaponScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public CurseWeaponScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CurseWeaponScroll(int amount)
             : base(103, 0x2263, amount)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class NameChangeDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public NameChangeDeed()
             : base(0x14F0)
         {

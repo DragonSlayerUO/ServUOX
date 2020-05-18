@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class DecorativeVines : Item
     {
-        [Constructable]
+        [Constructible]
         public DecorativeVines()
             : this(Utility.Random(4))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DecorativeVines(int v)
             : base(0x2CF9)
         {

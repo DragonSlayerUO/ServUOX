@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BegFishingPole : FishingPole
     {
-        [Constructable]
+        [Constructible]
         public BegFishingPole()
         {
         }

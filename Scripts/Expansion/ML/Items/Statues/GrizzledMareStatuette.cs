@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1074475;  // Grizzled Mare Statuette
 
-        [Constructable]
+        [Constructible]
         public GrizzledMareStatuette()
             : base(0x2617)
         {
@@ -39,13 +39,13 @@ namespace Server.Mobiles
 {
     public class GrizzledMare : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public GrizzledMare()
             : this("Grizzled Mare")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GrizzledMare(string name)
             : base(name, 793, 0x3EBB, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

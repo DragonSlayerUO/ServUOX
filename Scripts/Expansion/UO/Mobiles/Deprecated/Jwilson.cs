@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a jwilson corpse")]
     public class Jwilson : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Jwilson()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

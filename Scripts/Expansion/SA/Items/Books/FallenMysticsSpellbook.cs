@@ -7,13 +7,13 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113867;  // Fallen Mystic's Spellbook
 
-        [Constructable]
+        [Constructible]
         public FallenMysticsSpellbook()
             : this((ulong)0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FallenMysticsSpellbook(ulong content)
             : base(content, 0x2D9D)
         {

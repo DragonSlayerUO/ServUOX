@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StuddedHaidate : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public StuddedHaidate()
             : base(0x278B)
         {

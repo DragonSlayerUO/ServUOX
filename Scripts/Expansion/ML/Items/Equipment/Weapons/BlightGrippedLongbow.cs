@@ -5,7 +5,7 @@ namespace Server.Items
     public class BlightGrippedLongbow : ElvenCompositeLongbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BlightGrippedLongbow()
         {
             Hue = 0x8A4;

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an elf corpse")]
     public class ElfBrigand : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ElfBrigand()
             : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

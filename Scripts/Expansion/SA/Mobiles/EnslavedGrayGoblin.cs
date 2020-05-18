@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an goblin corpse")]
     public class EnslavedGrayGoblin : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public EnslavedGrayGoblin()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

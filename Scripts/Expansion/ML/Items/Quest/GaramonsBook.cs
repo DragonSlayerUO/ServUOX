@@ -44,7 +44,7 @@ namespace Server.Items
                 "We will have redeemed",
                 "ourselves. May the Virtues",
                 "give us strength..."));
-        [Constructable]
+        [Constructible]
         public GaramonsBook()
             : base(false)
         {

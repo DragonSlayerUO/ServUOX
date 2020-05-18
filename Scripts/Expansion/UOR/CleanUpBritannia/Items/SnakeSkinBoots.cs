@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1080122;  // Snake Skin Boots
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public SnakeSkinBoots()
         {
             Hue = 0x7D9;

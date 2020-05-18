@@ -17,7 +17,7 @@ namespace Server.Items
 
         public SBType Type { get; set; }
 
-        [Constructable]
+        [Constructible]
         public StoreSingingBall()
             : base(0x468A)
         {

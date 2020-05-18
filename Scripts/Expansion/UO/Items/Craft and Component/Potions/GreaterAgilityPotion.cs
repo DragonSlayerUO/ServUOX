@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GreaterAgilityPotion : BaseAgilityPotion
     {
-        [Constructable]
+        [Constructible]
         public GreaterAgilityPotion()
             : base(PotionEffect.AgilityGreater)
         {

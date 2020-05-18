@@ -12,7 +12,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1123373;
 
-        [Constructable]
+        [Constructible]
         public WrongBanner()
             : base(39349)
         {

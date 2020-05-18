@@ -13,7 +13,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1071096;  // Ancestral Gravestone
 
-        [Constructable]
+        [Constructible]
         public AncestralGravestone()
             : base(0x1173)
         {

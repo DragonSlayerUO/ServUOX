@@ -7,13 +7,13 @@ namespace Server.Items.MusicBox
     public class MusicBoxGears : Item
     {
         private readonly MusicName m_Music;
-        [Constructable]
+        [Constructible]
         public MusicBoxGears()
             : this(TrackInfo.RandomSong())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MusicBoxGears(MusicName music)
             : base(0x1053)
         {

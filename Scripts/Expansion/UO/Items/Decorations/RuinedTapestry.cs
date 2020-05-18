@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1096945; // ruined tapestry
 
-        [Constructable]
+        [Constructible]
         public RuinedTapestry()
             : base(Utility.RandomBool() ? 0x4699 : 0x469A)
         {

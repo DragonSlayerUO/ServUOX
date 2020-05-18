@@ -10,13 +10,13 @@ namespace Server.Items
 
         private int m_UsesRemaining;
 
-        [Constructable]
+        [Constructible]
         public PowderOfTemperament()
             : this(10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PowderOfTemperament(int charges)
             : base(4102)
         {

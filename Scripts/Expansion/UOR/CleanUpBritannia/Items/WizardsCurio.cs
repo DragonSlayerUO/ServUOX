@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public WizardsCurio()
             : base(0x2F58)
         {

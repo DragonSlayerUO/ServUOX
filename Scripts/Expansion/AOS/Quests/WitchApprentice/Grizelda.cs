@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Hag
 {
     public class Grizelda : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public Grizelda()
             : base("the Hag")
         {

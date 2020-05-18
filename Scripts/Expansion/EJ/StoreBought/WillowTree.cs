@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new WillowTreeDeed();
 
-        [Constructable]
+        [Constructible]
         public WillowTreeAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x224A, 1071105), 0, 0, 0);
@@ -37,7 +37,7 @@ namespace Server.Items
         public override BaseAddon Addon => new WillowTreeAddon();
         public override int LabelNumber => 1071105;  // Willow Tree
 
-        [Constructable]
+        [Constructible]
         public WillowTreeDeed()
         {
             LootType = LootType.Blessed;

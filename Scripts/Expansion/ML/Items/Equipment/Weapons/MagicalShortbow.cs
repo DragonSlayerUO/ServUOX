@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2D2B, 0x2D1F)]
     public class MagicalShortbow : BaseRanged
     {
-        [Constructable]
+        [Constructible]
         public MagicalShortbow()
             : base(0x2D2B)
         {

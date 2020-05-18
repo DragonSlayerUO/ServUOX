@@ -6,7 +6,7 @@ namespace Server.Items
     public class InvisibilityPotion : BasePotion
     {
         private static readonly Hashtable m_Table = new Hashtable();
-        [Constructable]
+        [Constructible]
         public InvisibilityPotion()
             : base(0xF0A, PotionEffect.Invisibility)
         {

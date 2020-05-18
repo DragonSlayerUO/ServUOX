@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class FalseClownfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public FalseClownfish()
             : base(0xA362)
         {

@@ -9,7 +9,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public MacawSpawner MacawSpawner { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Macaw()
             : this(null)
         {

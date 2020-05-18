@@ -54,7 +54,7 @@ namespace Server.Items
             new BookPageInfo(
                 "last ten years of my",
                 "life."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal1()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -163,7 +163,7 @@ namespace Server.Items
                 "once the workers have",
                 "set to excavating the",
                 "hall."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal2()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -246,7 +246,7 @@ namespace Server.Items
                 "rest of our crew",
                 "continue excavating",
                 "the inner halls."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal3()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -340,7 +340,7 @@ namespace Server.Items
                 "ever turned to run,",
                 "even in the face of",
                 "certain death."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal6()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -424,7 +424,7 @@ namespace Server.Items
                 "issue, as I suddenly",
                 "felt foolish even at",
                 "my askance."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal7()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -524,7 +524,7 @@ namespace Server.Items
                 "and am thankful for",
                 "his laughter as well",
                 "as his strength."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal8()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -604,7 +604,7 @@ namespace Server.Items
                 "must have fled the",
                 "site altogether, as",
                 "Bergen said."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal9()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -704,7 +704,7 @@ namespace Server.Items
                 "above us like some",
                 "horrible, eldritch",
                 "curse upon us all."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal11()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -797,7 +797,7 @@ namespace Server.Items
                 "Do we dare approach?",
                 "We must make a",
                 "decision soon."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal14()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -900,7 +900,7 @@ namespace Server.Items
                 "tore at Lysander,",
                 "coming towards us in",
                 "droves."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal16()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -994,7 +994,7 @@ namespace Server.Items
                 "here soon, even at the",
                 "unhurried pace of the",
                 "shuffling dead."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal16b()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -1055,7 +1055,7 @@ namespace Server.Items
             new BookPageInfo(
                 "away in this ocean of",
                 "blood."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal17()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -1107,7 +1107,7 @@ namespace Server.Items
             new BookPageInfo(
                 "must be done. I must",
                 "end this."));
-        [Constructable]
+        [Constructible]
         public TavarasJournal19()
             : base(Utility.Random(0xFF1, 2), false)
         {

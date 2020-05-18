@@ -11,7 +11,7 @@ namespace Server.Items
 
         public static int Bonus = 400;
 
-        [Constructable]
+        [Constructible]
         public PotionOfGloriousFortune()
             : base(0xA1E6)
         {

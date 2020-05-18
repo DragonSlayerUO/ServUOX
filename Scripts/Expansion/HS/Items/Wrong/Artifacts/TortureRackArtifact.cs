@@ -44,7 +44,7 @@ namespace Server.Items
 
     public class TortureRackEast : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public TortureRackEast()
         {
             AddComponent(new TortureRackComponent(0x4AAB), 0, 0, 0);
@@ -76,7 +76,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1152305;
 
-        [Constructable]
+        [Constructible]
         public TortureRackEastDeed()
         {
         }
@@ -105,7 +105,7 @@ namespace Server.Items
 
     public class TortureRackSouth : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public TortureRackSouth()
         {
             AddComponent(new TortureRackComponent(0x4AA0), 0, 0, 0);
@@ -137,7 +137,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1152306;
 
-        [Constructable]
+        [Constructible]
         public TortureRackSouthDeed()
         {
         }

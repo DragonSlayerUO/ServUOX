@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new MiniSoulForgeDeed();
 
-        [Constructable]
+        [Constructible]
         public MiniSoulForge()
         {
             AddComponent(new AddonComponent(17607), 0, 0, 0);
@@ -35,7 +35,7 @@ namespace Server.Items
     {
         public override BaseAddon Addon => new MiniSoulForge();
 
-        [Constructable]
+        [Constructible]
         public MiniSoulForgeDeed()
         {
             Name = "SoulForge";

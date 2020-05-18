@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an efreet corpse")]
     public class Efreet : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Efreet()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -98,7 +98,7 @@ namespace Server.Mobiles
     [CorpseName("an ice elemental corpse")]
     public class IceElemental : BaseCreature, IAuraCreature
     {
-        [Constructable]
+        [Constructible]
         public IceElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -177,7 +177,7 @@ namespace Server.Mobiles
     [CorpseName("a snow elemental corpse")]
     public class SnowElemental : BaseCreature, IAuraCreature
     {
-        [Constructable]
+        [Constructible]
         public SnowElemental()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

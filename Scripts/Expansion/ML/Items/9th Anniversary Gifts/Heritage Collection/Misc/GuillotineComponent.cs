@@ -35,7 +35,7 @@ namespace Server.Items
 
     public class GuillotineAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GuillotineAddon()
             : base()
         {
@@ -170,7 +170,7 @@ namespace Server.Items
 
     public class GuillotineDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public GuillotineDeed()
             : base()
         {

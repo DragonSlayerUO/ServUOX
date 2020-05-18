@@ -6,7 +6,7 @@ namespace Server.Items
     public class FNPitchfork : BaseSpear
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public FNPitchfork()
             : base(0xE87)
         {

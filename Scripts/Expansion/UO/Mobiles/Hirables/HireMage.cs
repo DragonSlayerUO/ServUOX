@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class HireMage : BaseHire
     {
-        [Constructable]
+        [Constructible]
         public HireMage()
             : base(AIType.AI_Mage)
         {

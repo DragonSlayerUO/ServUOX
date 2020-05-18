@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Yorus : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Yorus()
             : base("Yorus", "the Tinker")
         {

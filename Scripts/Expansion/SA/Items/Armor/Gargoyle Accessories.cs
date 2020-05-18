@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x450D, 0x450D)]
     public class GargoyleTailMale : BaseWaist
     {
-        [Constructable]
+        [Constructible]
         public GargoyleTailMale()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargoyleTailMale(int hue)
             : base(0x450D, hue)
         {
@@ -43,13 +43,13 @@ namespace Server.Items
     [Flipable(0x44C1, 0x44C2)]
     public class GargoyleTailFemale : BaseWaist
     {
-        [Constructable]
+        [Constructible]
         public GargoyleTailFemale()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargoyleTailFemale(int hue)
             : base(0x44C1, hue)
         {

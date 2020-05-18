@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BlightedCotton : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public BlightedCotton()
             : base(0x2DB)
         {

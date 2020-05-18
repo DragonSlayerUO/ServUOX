@@ -20,7 +20,7 @@ namespace Server.Items
 
         public override BaseAddonContainerDeed Deed => new SacrificialAltarDeed();
 
-        [Constructable]
+        [Constructible]
         public SacrificialAltarAddon()
             : base(0x2A9B)
         {
@@ -246,7 +246,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1074818;  // Sacrificial Altar
 
-        [Constructable]
+        [Constructible]
         public SacrificialAltarDeed()
             : base()
         {

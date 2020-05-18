@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a treefellow corpse")]
     public class FeralTreefellow : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public FeralTreefellow()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

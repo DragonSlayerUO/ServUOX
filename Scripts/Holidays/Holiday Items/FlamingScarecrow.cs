@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1027732;  // scarecrow
 
-        [Constructable]
+        [Constructible]
         public FlamingScarecrow()
             : base(0x9F33)
         {

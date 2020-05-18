@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Arrow : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Arrow()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Arrow(int amount)
             : base(0xF3F)
         {

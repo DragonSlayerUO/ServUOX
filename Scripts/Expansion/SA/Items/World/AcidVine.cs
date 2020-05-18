@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1111655;  // magic vines
         public override bool ForceShowProperties => ObjectPropertyList.Enabled;
 
-        [Constructable]
+        [Constructible]
         public AcidVine()
             : base(3313)
         {

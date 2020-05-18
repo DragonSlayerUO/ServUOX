@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a snake corpse")]
     public class CoralSnake : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public CoralSnake()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

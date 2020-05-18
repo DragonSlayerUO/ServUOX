@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Lavalizard")]
     public class LavaLizard : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LavaLizard()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -79,7 +79,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Lavaserpant")]
     public class LavaSerpent : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LavaSerpent()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -162,7 +162,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Lavasnake")]
     public class LavaSnake : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LavaSnake()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

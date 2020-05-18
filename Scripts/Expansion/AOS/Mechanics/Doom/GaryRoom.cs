@@ -487,7 +487,7 @@ namespace Server.Engines.Doom
     {
         public override int LabelNumber => 1080096;  // Star Sapphire d20
 
-        [Constructable]
+        [Constructible]
         public Sapphired20()
             : base(0x3192)
         {
@@ -562,7 +562,7 @@ namespace Server.Engines.Doom
             }
         }
 
-        [Constructable]
+        [Constructible]
         public DisplayStatue()
         {
             AssignRandom();
@@ -624,7 +624,7 @@ namespace Server.Engines.Doom
 
         public override int LabelNumber => 1080085;  // The Rulebook
 
-        [Constructable]
+        [Constructible]
         public UOBoard() : base(0xFAA)
         {
         }

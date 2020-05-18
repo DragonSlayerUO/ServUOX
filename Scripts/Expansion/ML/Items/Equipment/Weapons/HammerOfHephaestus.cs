@@ -23,7 +23,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public HammerOfHephaestus()
             : base(10, 20)
         {

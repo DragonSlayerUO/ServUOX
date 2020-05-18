@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DirtPatch : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtPatch()
             : base(0x0913)
         {

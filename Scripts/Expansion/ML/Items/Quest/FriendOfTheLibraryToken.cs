@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FriendOfTheLibraryToken : BaseTalisman
     {
-        [Constructable]
+        [Constructible]
         public FriendOfTheLibraryToken()
             : base(0x2F58)
         {

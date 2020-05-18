@@ -11,7 +11,7 @@ namespace Server.Items
             0x221A, 0x221B, 0x221C, 0x221D, 0x221E, 0x221F, 0x2220, 0x2221, 0x2222,
             0x2224, 0x2225, 0x2226, 0x2227, 0x2228, 0x2229, 0x222A, 0x222B, 0x222C
         };
-        [Constructable]
+        [Constructible]
         public ShimmeringCrystals()
             : base(Utility.RandomList(m_ItemIDs))
         {

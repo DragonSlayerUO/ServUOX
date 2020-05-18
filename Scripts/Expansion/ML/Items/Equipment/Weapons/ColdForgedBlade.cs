@@ -5,7 +5,7 @@ namespace Server.Items
     public class ColdForgedBlade : ElvenSpellblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ColdForgedBlade()
         {
             WeaponAttributes.HitHarm = 40;

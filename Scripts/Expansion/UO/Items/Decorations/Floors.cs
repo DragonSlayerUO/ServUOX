@@ -32,7 +32,7 @@ namespace Server.Items
 
     public class StonePaversLight : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public StonePaversLight()
             : base(0x519, 4)
         {
@@ -60,7 +60,7 @@ namespace Server.Items
 
     public class StonePaversMedium : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public StonePaversMedium()
             : base(0x51D, 4)
         {
@@ -88,7 +88,7 @@ namespace Server.Items
 
     public class StonePaversDark : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public StonePaversDark()
             : base(0x521, 4)
         {
@@ -116,7 +116,7 @@ namespace Server.Items
 
     public class GreyFlagstones : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public GreyFlagstones()
             : base(0x4FC, 4)
         {
@@ -144,7 +144,7 @@ namespace Server.Items
 
     public class SandFlagstones : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public SandFlagstones()
             : base(0x500, 4)
         {
@@ -172,7 +172,7 @@ namespace Server.Items
 
     public class MarbleFloor : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public MarbleFloor()
             : base(0x50D, 2)
         {
@@ -200,7 +200,7 @@ namespace Server.Items
 
     public class GreenMarbleFloor : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public GreenMarbleFloor()
             : base(0x50F, 2)
         {
@@ -228,7 +228,7 @@ namespace Server.Items
 
     public class GreyMarbleFloor : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public GreyMarbleFloor()
             : base(0x511, 4)
         {
@@ -256,7 +256,7 @@ namespace Server.Items
 
     public class CobblestonesFloor : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public CobblestonesFloor()
             : base(0x515, 4)
         {
@@ -284,7 +284,7 @@ namespace Server.Items
 
     public class SandstoneFloorN : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public SandstoneFloorN()
             : base(0x525, 4)
         {
@@ -312,7 +312,7 @@ namespace Server.Items
 
     public class SandstoneFloorW : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public SandstoneFloorW()
             : base(0x529, 4)
         {
@@ -340,7 +340,7 @@ namespace Server.Items
 
     public class DarkSandstoneFloorN : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public DarkSandstoneFloorN()
             : base(0x52F, 4)
         {
@@ -368,7 +368,7 @@ namespace Server.Items
 
     public class DarkSandstoneFloorW : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public DarkSandstoneFloorW()
             : base(0x533, 4)
         {
@@ -396,7 +396,7 @@ namespace Server.Items
 
     public class BricksFloor1 : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public BricksFloor1()
             : base(0x4E2, 8)
         {
@@ -424,7 +424,7 @@ namespace Server.Items
 
     public class BricksFloor2 : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public BricksFloor2()
             : base(0x537, 4)
         {
@@ -452,7 +452,7 @@ namespace Server.Items
 
     public class CaveFloorCenter : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public CaveFloorCenter()
             : base(0x53B, 4)
         {
@@ -480,7 +480,7 @@ namespace Server.Items
 
     public class CaveFloorSouth : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public CaveFloorSouth()
             : base(0x541, 3)
         {
@@ -508,7 +508,7 @@ namespace Server.Items
 
     public class CaveFloorEast : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public CaveFloorEast()
             : base(0x544, 3)
         {
@@ -536,7 +536,7 @@ namespace Server.Items
 
     public class CaveFloorWest : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public CaveFloorWest()
             : base(0x54A, 3)
         {
@@ -564,7 +564,7 @@ namespace Server.Items
 
     public class CaveFloorNorth : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public CaveFloorNorth()
             : base(0x54D, 3)
         {
@@ -592,7 +592,7 @@ namespace Server.Items
 
     public class MarblePavers : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public MarblePavers()
             : base(0x495, 4)
         {
@@ -620,7 +620,7 @@ namespace Server.Items
 
     public class BlueSlateFloorCenter : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public BlueSlateFloorCenter()
             : base(0x49B, 1)
         {
@@ -648,7 +648,7 @@ namespace Server.Items
 
     public class GreySlateFloor : BaseFloor
     {
-        [Constructable]
+        [Constructible]
         public GreySlateFloor()
             : base(0x49C, 1)
         {

@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Tourmaline : Item, IGem
     {
-        [Constructable]
+        [Constructible]
         public Tourmaline()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Tourmaline(int amount)
             : base(0x0F18)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class MidnightBracers : BoneArms
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MidnightBracers()
         {
             Hue = 0x455;

@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0xDF1, 0xDF0)]
     public class BlackStaff : BaseStaff
     {
-        [Constructable]
+        [Constructible]
         public BlackStaff()
             : base(0xDF0)
         {

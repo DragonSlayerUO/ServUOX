@@ -29,7 +29,7 @@ namespace Server.Items
 
         public override bool HandlesOnSpeech => true;
 
-        [Constructable]
+        [Constructible]
         public CrystalPortal()
             : base(0x468B)
         {

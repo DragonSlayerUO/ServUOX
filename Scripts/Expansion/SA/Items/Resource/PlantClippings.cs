@@ -14,13 +14,13 @@ namespace Server.Items
 
         public override int LabelNumber => 1112131;  // plant clippings
 
-        [Constructable]
+        [Constructible]
         public PlantClippings()
             : this(PlantHue.Plain)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlantClippings(PlantHue hue)
             : base(0x4022)
         {

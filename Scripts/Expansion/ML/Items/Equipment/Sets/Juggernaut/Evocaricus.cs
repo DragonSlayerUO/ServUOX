@@ -5,7 +5,7 @@ namespace Server.Items
     public class Evocaricus : VikingSword
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Evocaricus()
             : base()
         {

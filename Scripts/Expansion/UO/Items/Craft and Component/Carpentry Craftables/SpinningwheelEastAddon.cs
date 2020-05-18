@@ -12,7 +12,7 @@ namespace Server.Items
     public class SpinningwheelEastAddon : BaseAddon, ISpinningWheel
     {
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public SpinningwheelEastAddon()
         {
             AddComponent(new AddonComponent(0x1019), 0, 0, 0);
@@ -118,7 +118,7 @@ namespace Server.Items
 
     public class SpinningwheelEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SpinningwheelEastDeed()
         {
         }

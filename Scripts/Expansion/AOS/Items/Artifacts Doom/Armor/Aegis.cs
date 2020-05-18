@@ -3,7 +3,7 @@ namespace Server.Items
     public class Aegis : HeaterShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Aegis()
         {
             Hue = 0x47E;

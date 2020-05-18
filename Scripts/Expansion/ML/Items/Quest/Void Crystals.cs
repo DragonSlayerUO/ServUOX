@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150321;  // Void Crystal of Corrupted Arcane Essence
 
-        [Constructable]
+        [Constructible]
         public VoidCrystalOfCorruptedArcaneEssence() : base(0x1F19)
         {
             Hue = 1267;
@@ -33,7 +33,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150322;  // Void Crystal of Corrupted Spiritual Essence
 
-        [Constructable]
+        [Constructible]
         public VoidCrystalOfCorruptedSpiritualEssence()
             : base(0x1F19)
         {
@@ -62,7 +62,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150323;  // Void Crystal of Corrupted Mystical Essence
 
-        [Constructable]
+        [Constructible]
         public VoidCrystalOfCorruptedMysticalEssence() : base(0x1F19)
         {
             Hue = 2717;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class IndecipherableMap : MapItem
     {
-        [Constructable]
+        [Constructible]
         public IndecipherableMap()
         {
             if (Utility.RandomDouble() < 0.2)

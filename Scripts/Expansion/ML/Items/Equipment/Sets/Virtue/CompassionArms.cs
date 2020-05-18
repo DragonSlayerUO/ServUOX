@@ -6,7 +6,7 @@ namespace Server.Items
     public class CompassionArms : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CompassionArms()
             : base(0x2B0A)
         {

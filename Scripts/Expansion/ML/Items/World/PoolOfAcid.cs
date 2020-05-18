@@ -13,13 +13,13 @@ namespace Server.Items
         private readonly Timer m_Timer;
         private bool m_Drying;
 
-        [Constructable]
+        [Constructible]
         public PoolOfAcid()
             : this(TimeSpan.FromSeconds(10.0), 2, 5)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PoolOfAcid(TimeSpan duration, int minDamage, int maxDamage)
             : base(0x122A)
         {

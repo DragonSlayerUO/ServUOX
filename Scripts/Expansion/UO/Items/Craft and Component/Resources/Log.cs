@@ -18,23 +18,23 @@ namespace Server.Items
 
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public BaseLog() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaseLog(int amount) : this(CraftResource.RegularWood, amount)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaseLog(CraftResource resource)
             : this(resource, 1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaseLog(CraftResource resource, int amount)
             : base(0x1BDD)
         {
@@ -130,13 +130,13 @@ namespace Server.Items
 
     public class Log : BaseLog
     {
-        [Constructable]
+        [Constructible]
         public Log()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Log(int amount)
             : base(CraftResource.RegularWood, amount)
         {

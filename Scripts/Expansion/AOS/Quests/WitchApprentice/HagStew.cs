@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HagStew : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public HagStew()
         {
             AddonComponent stew;

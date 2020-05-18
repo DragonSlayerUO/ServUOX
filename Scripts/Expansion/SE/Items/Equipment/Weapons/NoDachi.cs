@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x27A2, 0x27ED)]
     public class NoDachi : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public NoDachi()
             : base(0x27A2)
         {

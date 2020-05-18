@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ElvenWashBasinSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ElvenWashBasinSouthAddon()
         {
             AddComponent(new AddonComponent(0x30E1), 0, 0, 0);
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class ElvenWashBasinSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public ElvenWashBasinSouthDeed()
         {
         }

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoRoseOfTrinsic2 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoRoseOfTrinsic2()
             : base(0x234D)
         {

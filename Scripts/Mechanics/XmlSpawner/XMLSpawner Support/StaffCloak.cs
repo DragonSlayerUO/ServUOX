@@ -107,7 +107,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public StaffCloak() : base()
         {
 

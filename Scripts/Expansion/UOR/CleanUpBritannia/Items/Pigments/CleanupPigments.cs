@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class IntenseTealPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public IntenseTealPigment()
             : base(CompassionPigmentType.IntenseTeal)
         {
@@ -35,7 +35,7 @@ namespace Server.Items
 
     public class TyrianPurplePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public TyrianPurplePigment()
             : base(CompassionPigmentType.TyrianPurple)
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class MottledSunsetBluePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public MottledSunsetBluePigment()
             : base(CompassionPigmentType.MottledSunsetBlue)
         {
@@ -91,7 +91,7 @@ namespace Server.Items
 
     public class MossyGreenPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public MossyGreenPigment()
             : base(CompassionPigmentType.MossyGreen)
         {
@@ -119,7 +119,7 @@ namespace Server.Items
 
     public class VibrantOcherPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public VibrantOcherPigment()
             : base(CompassionPigmentType.VibrantOcher)
         {
@@ -147,7 +147,7 @@ namespace Server.Items
 
     public class OliveGreenPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public OliveGreenPigment()
             : base(CompassionPigmentType.OliveGreen)
         {
@@ -175,7 +175,7 @@ namespace Server.Items
 
     public class PolishedBronzePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public PolishedBronzePigment()
             : base(CompassionPigmentType.PolishedBronze)
         {
@@ -203,7 +203,7 @@ namespace Server.Items
 
     public class GlossyBluePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public GlossyBluePigment()
             : base(CompassionPigmentType.GlossyBlue)
         {
@@ -231,7 +231,7 @@ namespace Server.Items
 
     public class BlackAndGreenPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public BlackAndGreenPigment()
             : base(CompassionPigmentType.BlackAndGreen)
         {
@@ -259,7 +259,7 @@ namespace Server.Items
 
     public class DeepVioletPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public DeepVioletPigment()
             : base(CompassionPigmentType.DeepViolet)
         {
@@ -287,7 +287,7 @@ namespace Server.Items
 
     public class AuraOfAmberPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public AuraOfAmberPigment()
             : base(CompassionPigmentType.AuraOfAmber)
         {
@@ -315,7 +315,7 @@ namespace Server.Items
 
     public class MurkySeagreenPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public MurkySeagreenPigment()
             : base(CompassionPigmentType.MurkySeagreen)
         {
@@ -343,7 +343,7 @@ namespace Server.Items
 
     public class ShadowyBluePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public ShadowyBluePigment()
             : base(CompassionPigmentType.ShadowyBlue)
         {
@@ -371,7 +371,7 @@ namespace Server.Items
 
     public class GleamingFuchsiaPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public GleamingFuchsiaPigment()
             : base(CompassionPigmentType.GleamingFuchsia)
         {
@@ -399,7 +399,7 @@ namespace Server.Items
 
     public class GlossyFuchsiaPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public GlossyFuchsiaPigment()
             : base(CompassionPigmentType.GlossyFuchsia)
         {
@@ -427,7 +427,7 @@ namespace Server.Items
 
     public class DeepBluePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public DeepBluePigment()
             : base(CompassionPigmentType.DeepBlue)
         {
@@ -455,7 +455,7 @@ namespace Server.Items
 
     public class VibranSeagreenPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public VibranSeagreenPigment()
             : base(CompassionPigmentType.VibranSeagreen)
         {
@@ -483,7 +483,7 @@ namespace Server.Items
 
     public class MurkyAmberPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public MurkyAmberPigment()
             : base(CompassionPigmentType.MurkyAmber)
         {
@@ -511,7 +511,7 @@ namespace Server.Items
 
     public class VibrantCrimsonPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public VibrantCrimsonPigment()
             : base(CompassionPigmentType.VibrantCrimson)
         {
@@ -539,7 +539,7 @@ namespace Server.Items
 
     public class ReflectiveShadowPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public ReflectiveShadowPigment()
             : base(CompassionPigmentType.ReflectiveShadow)
         {
@@ -567,7 +567,7 @@ namespace Server.Items
 
     public class StarBluePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public StarBluePigment()
             : base(CompassionPigmentType.StarBlue)
         {
@@ -595,7 +595,7 @@ namespace Server.Items
 
     public class MotherOfPearlPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public MotherOfPearlPigment()
             : base(CompassionPigmentType.MotherOfPearl)
         {
@@ -623,7 +623,7 @@ namespace Server.Items
 
     public class LiquidSunshinePigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public LiquidSunshinePigment()
             : base(CompassionPigmentType.LiquidSunshine)
         {
@@ -651,7 +651,7 @@ namespace Server.Items
 
     public class DarkVoidPigment : CompassionPigment
     {
-        [Constructable]
+        [Constructible]
         public DarkVoidPigment()
             : base(CompassionPigmentType.DarkVoid)
         {

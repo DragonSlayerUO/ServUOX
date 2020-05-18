@@ -14,12 +14,12 @@ namespace Server.Mobiles
         private bool m_Manifested;
         private DateTime m_NextBard;
 
-        [Constructable]
+        [Constructible]
         public GargishRouser() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishRouser(int type)
             : base(Utility.RandomBool() ? AIType.AI_Mystic : AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

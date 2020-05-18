@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1095058;  // Acid Popper
 
-        [Constructable]
+        [Constructible]
         public AcidPopper()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AcidPopper(int amount)
             : base(0x2808)
         {

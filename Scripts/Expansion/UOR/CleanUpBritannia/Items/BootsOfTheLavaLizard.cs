@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1151207;  // Boots Of The Lava Lizard
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BootsOfTheLavaLizard()
         {
             Hue = 0x674;

@@ -16,7 +16,7 @@ namespace Server.Items
             set { m_ClosedId = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public TombOfKingsSecretDoor(int closedId)
             : base(closedId)
         {

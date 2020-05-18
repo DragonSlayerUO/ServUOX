@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a phoenix corpse")]
     public class Phoenix : BaseCreature, IAuraCreature
     {
-        [Constructable]
+        [Constructible]
         public Phoenix()
             : base(AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

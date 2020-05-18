@@ -10,7 +10,7 @@ namespace Server.Items
         private int _Type;
         public virtual int Type => _Type;
 
-        [Constructable]
+        [Constructible]
         public MasterCraftsmanTalisman(int charges, int itemID, TalismanSkill skill)
             : base(itemID)
         {

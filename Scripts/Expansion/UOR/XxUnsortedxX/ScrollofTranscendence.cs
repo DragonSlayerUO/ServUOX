@@ -30,7 +30,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ScrollOfTranscendence(SkillName skill, double value)
             : base(skill, value)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x1405, 0x1404)]
     public class WarFork : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public WarFork()
             : base(0x1405)
         {

@@ -17,7 +17,7 @@ namespace Server.Items
             set { m_StorageLocker = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public WoodenKeyBarrel(Parts key)
             : base(0x0FAE, 0x0FAE)
         {
@@ -150,7 +150,7 @@ namespace Server.Items
             set { m_StorageLocker = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public WoodenToMetalBarrel(StorageLocker item)
             : base(0x0FAE, 0x0FAE)
         {
@@ -206,7 +206,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023703;  // barrel
 
-        [Constructable]
+        [Constructible]
         public MetalBarrel()
             : base(0x0FAE)
         {
@@ -234,7 +234,7 @@ namespace Server.Items
 
     public class WoodKeyDebris : Item
     {
-        [Constructable]
+        [Constructible]
         public WoodKeyDebris()
             : base(0x0C2F)
         {

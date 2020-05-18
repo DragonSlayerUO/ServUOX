@@ -19,13 +19,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FruitBasket()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FruitBasket(bool rare)
             : base(1, 0x993)
         {

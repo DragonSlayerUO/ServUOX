@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073426;  // Clockwork Assembly
 
-        [Constructable]
+        [Constructible]
         public ClockworkAssembly()
             : base(0x1EA8)
         {

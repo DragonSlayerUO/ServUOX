@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153778;  // an orcish bow
 
-        [Constructable]
+        [Constructible]
         public OrcishBow()
         {
             Hue = 1107;

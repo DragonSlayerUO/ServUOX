@@ -5,7 +5,7 @@ namespace Server.Items
     public class OrcishMachete : ElvenMachete
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public OrcishMachete()
         {
             Attributes.BonusInt = -5;

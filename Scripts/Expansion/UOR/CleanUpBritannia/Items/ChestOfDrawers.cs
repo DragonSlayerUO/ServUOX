@@ -9,7 +9,7 @@ namespace Server.Items
     [Flipable(0x0A2C, 0x0A34)]
     public class ChestOfDrawers : LockableContainer
     {
-        [Constructable]
+        [Constructible]
         public ChestOfDrawers()
             : base(0x0A2C)
         {

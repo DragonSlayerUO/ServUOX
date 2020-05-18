@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159210;  // dagger belt
 
-        [Constructable]
+        [Constructible]
         public DaggerBelt()
             : base(0xA40E)
         {

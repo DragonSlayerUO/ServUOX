@@ -15,13 +15,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 40;
 
-        [Constructable]
+        [Constructible]
         public MagesHood()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MagesHood(int hue)
             : base(0xA411, hue)
         {

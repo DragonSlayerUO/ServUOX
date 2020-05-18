@@ -10,10 +10,10 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public Matchcord() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public Matchcord(int amount)
             : base(5153)
         {

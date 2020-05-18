@@ -8,7 +8,7 @@ namespace Server.Items
         private Map m_MapDest;
         private bool m_Locked;
         private bool m_Active;
-        [Constructable]
+        [Constructible]
         public SecretWall(int itemID)
             : base(itemID)
         {
@@ -112,13 +112,13 @@ namespace Server.Items
     {
         private SecretWall m_Wall;
         private bool m_TurnedOn;
-        [Constructable]
+        [Constructible]
         public SecretSwitch()
             : this(0x108F, null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SecretSwitch(int itemID, SecretWall wall)
             : base(itemID)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     public class GargishWoodenShield : BaseShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GargishWoodenShield()
             : base(0x4200)
         {

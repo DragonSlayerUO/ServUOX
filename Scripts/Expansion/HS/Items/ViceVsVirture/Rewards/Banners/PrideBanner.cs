@@ -12,7 +12,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1123369;
 
-        [Constructable]
+        [Constructible]
         public PrideBanner()
             : base(39345)
         {

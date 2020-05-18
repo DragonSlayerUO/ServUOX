@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class HairRestylingDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public HairRestylingDeed()
             : base(0x14F0)
         {

@@ -4,7 +4,7 @@ namespace Server.Engines.Quests.Hag
 {
     public class MoonfireBrew : Item
     {
-        [Constructable]
+        [Constructible]
         public MoonfireBrew()
             : base(0xF04)
         {

@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(TheInnerWarriorQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public SarsmeaSmythe()
             : base("Sarsmea Smythe", "the Focus Instructor")
         {

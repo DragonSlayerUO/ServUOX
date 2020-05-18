@@ -20,7 +20,7 @@ namespace Server.Mobiles
         public Mobile Owner { get; set; }
         public string Description { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Mannequin(Mobile owner)
             : base(AIType.AI_Use_Default, FightMode.None, 1, 1, 0.2, 0.2)
         {
@@ -609,7 +609,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1151602;  // Mannequin Deed
 
-        [Constructable]
+        [Constructible]
         public MannequinDeed()
             : base(0x14F0)
         {

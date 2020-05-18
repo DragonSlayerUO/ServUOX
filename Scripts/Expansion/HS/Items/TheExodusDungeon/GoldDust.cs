@@ -4,12 +4,12 @@ namespace Server.Items
 {
     public class GoldDust : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public GoldDust() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GoldDust(int amount) : base(0x4C09)
         {
             Stackable = true;

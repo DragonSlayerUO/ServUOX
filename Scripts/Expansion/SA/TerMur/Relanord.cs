@@ -8,7 +8,7 @@ namespace Server.Mobiles
         public override VoidEvolution Evolution => VoidEvolution.Survival;
         public override int Stage => 2;
 
-        [Constructable]
+        [Constructible]
         public Relanord()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

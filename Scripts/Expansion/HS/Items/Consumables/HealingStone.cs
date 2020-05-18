@@ -30,7 +30,7 @@ namespace Server.Items
 
         public override bool Nontransferable => true;
 
-        [Constructable]
+        [Constructible]
         public HealingStone(Mobile caster, int amount, int maxHeal) : base(0x4078)
         {
             m_Caster = caster;

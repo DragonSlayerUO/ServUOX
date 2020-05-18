@@ -11,7 +11,7 @@ namespace Server.Mobiles
 
         public override NpcGuild NpcGuild => NpcGuild.TailorsGuild;
 
-        [Constructable]
+        [Constructible]
         public Weaver()
             : base("the weaver")
         {

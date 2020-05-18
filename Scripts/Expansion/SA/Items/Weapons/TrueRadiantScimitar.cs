@@ -5,7 +5,7 @@ namespace Server.Items
     public class TrueRadiantScimitar : RadiantScimitar
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TrueRadiantScimitar()
         {
             Attributes.NightSight = 1;

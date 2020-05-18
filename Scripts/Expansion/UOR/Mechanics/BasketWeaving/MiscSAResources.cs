@@ -22,7 +22,7 @@ namespace Server.Items
             Stackable = true;
         }
 
-        [Constructable]
+        [Constructible]
         public DryReeds()
             : this(PlantHue.Plain)
         {
@@ -105,7 +105,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1112249;  //Softened reeds
 
-        [Constructable]
+        [Constructible]
         public SoftenedReeds()
             : this(PlantHue.Plain)
         {
@@ -198,7 +198,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112329;  // crystal granules
 
-        [Constructable]
+        [Constructible]
         public CrystalGranules()
             : base(16392)
         {

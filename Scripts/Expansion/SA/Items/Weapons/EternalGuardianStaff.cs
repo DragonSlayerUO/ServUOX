@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1112443;  // Eternal Guardian Staff
 
-        [Constructable]
+        [Constructible]
         public EternalGuardianStaff()
         {
             Hue = 95;

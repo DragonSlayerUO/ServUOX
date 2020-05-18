@@ -15,13 +15,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public KrampusMinionHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public KrampusMinionHat(int hue)
             : base(0xA28F, hue)
         {

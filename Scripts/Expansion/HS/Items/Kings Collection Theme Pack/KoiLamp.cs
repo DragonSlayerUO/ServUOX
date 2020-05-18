@@ -14,7 +14,7 @@ namespace Server.Items
         public int NorthID => Burning ? 0x4C49 : 0x4C48;
         public int WestID => Burning ? 0x4C4B : 0x4C4A;
 
-        [Constructable]
+        [Constructible]
         public KoiLamp()
             : base(0x4C49)
         {
@@ -83,7 +83,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154190;  // Koi Lamp
 
-        [Constructable]
+        [Constructible]
         public KoiLampDeed()
             : base(0x14F0)
         {

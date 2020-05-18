@@ -10,7 +10,7 @@ namespace Server.Items
 
         public override double DefaultWeight => 1.0;
 
-        [Constructable]
+        [Constructible]
         public OilCloth()
             : base(0x175D)
         {

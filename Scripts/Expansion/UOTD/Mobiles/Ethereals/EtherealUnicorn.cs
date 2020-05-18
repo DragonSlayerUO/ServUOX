@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealUnicorn : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealUnicorn()
             : base(0x25CE, 0x3E9B, 0x3EB4, DefaultEtherealHue)
         { }

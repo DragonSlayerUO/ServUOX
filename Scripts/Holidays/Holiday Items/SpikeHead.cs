@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public int GumpID { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SpikeHead()
             : this(Utility.Random(SpikeHeadType.Length))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpikeHead(int type)
             : base(0x9955 + type)
         {

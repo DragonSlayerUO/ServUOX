@@ -5,7 +5,7 @@ namespace Server.Items
     public class SilvanisFeywoodBow : ElvenCompositeLongbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SilvanisFeywoodBow()
         {
             Hue = 0x1A;

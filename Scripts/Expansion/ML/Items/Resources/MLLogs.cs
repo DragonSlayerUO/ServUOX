@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class HeartwoodLog : BaseLog, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public HeartwoodLog()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeartwoodLog(int amount)
             : base(CraftResource.Heartwood, amount)
         {
@@ -46,13 +46,13 @@ namespace Server.Items
 
     public class BloodwoodLog : BaseLog, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public BloodwoodLog()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BloodwoodLog(int amount)
             : base(CraftResource.Bloodwood, amount)
         {
@@ -90,13 +90,13 @@ namespace Server.Items
 
     public class FrostwoodLog : BaseLog, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public FrostwoodLog()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FrostwoodLog(int amount)
             : base(CraftResource.Frostwood, amount)
         {
@@ -134,13 +134,13 @@ namespace Server.Items
 
     public class OakLog : BaseLog, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public OakLog()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public OakLog(int amount)
             : base(CraftResource.OakWood, amount)
         {
@@ -178,13 +178,13 @@ namespace Server.Items
 
     public class AshLog : BaseLog, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public AshLog()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AshLog(int amount)
             : base(CraftResource.AshWood, amount)
         {
@@ -222,13 +222,13 @@ namespace Server.Items
 
     public class YewLog : BaseLog, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public YewLog()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public YewLog(int amount)
             : base(CraftResource.YewWood, amount)
         {

@@ -34,7 +34,7 @@ namespace Server.Engines.MyrmidexInvasion
             }
         }
 
-        [Constructable]
+        [Constructible]
         public AllegianceIdol(Allegiance allegiance) : base(allegiance == Allegiance.Myrmidex ? 9730 : 17099)
         {
             AllegianceType = allegiance;

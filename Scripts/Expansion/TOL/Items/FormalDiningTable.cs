@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class FormalDiningTableAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public FormalDiningTableAddon(DirectionType type)
         {
             switch (type)
@@ -69,7 +69,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public FormalDiningTableDeed()
             : base()
         {

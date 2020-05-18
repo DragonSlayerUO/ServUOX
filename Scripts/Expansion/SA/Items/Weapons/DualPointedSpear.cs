@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x904, 0x406D)]
     public class DualPointedSpear : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public DualPointedSpear()
             : base(0x904)
         {

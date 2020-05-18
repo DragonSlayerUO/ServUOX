@@ -5,7 +5,7 @@ namespace Server.Items
     public class QuiverOfInfinity : BaseQuiver
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public QuiverOfInfinity()
             : base(0x2B02)
         {

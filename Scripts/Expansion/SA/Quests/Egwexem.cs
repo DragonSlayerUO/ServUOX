@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Egwexem : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Egwexem()
             : base("Egwexem", "the Noble")
         {
@@ -57,7 +57,7 @@ namespace Server.Mobiles
 
     public class EgwexemWrit : Item
     {
-        [Constructable]
+        [Constructible]
         public EgwexemWrit()
             : base(0x0E34)
         {

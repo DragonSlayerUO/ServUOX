@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ColorFixative : Item
     {
-        [Constructable]
+        [Constructible]
         public ColorFixative()
             : base(0x182D)
         {

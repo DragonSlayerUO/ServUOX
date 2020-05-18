@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113629;  // A Vollem Held in Crystal
 
-        [Constructable]
+        [Constructible]
         public VollemHeldInCrystal()
             : base(0x1f19)
         {
@@ -47,7 +47,7 @@ namespace Server.Items
 
     public class VollemHeld : Vollem
     {
-        [Constructable]
+        [Constructible]
         public VollemHeld()
             : base()
         {

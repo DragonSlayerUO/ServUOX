@@ -10,7 +10,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1155554;  // Essence of Courage
 
-        [Constructable]
+        [Constructible]
         public EssenceOfCourage()
             : base(3838)
         {

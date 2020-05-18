@@ -11,7 +11,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StatCapScroll(int value)
             : base(SkillName.Alchemy, value)
         {

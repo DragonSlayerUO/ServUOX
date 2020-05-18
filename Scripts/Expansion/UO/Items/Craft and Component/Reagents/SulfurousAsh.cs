@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SulfurousAsh : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SulfurousAsh()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SulfurousAsh(int amount)
             : base(0xF8C, amount)
         {

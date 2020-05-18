@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1095011; //Talisman of Goblin Slaying
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public TalismanofGoblinSlaying()
             : base(0x2F58)
         {

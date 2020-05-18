@@ -50,7 +50,7 @@ namespace Server.Mobiles
         private const int MinAbilityTime = 4;
         private const int MaxAbilityTime = 8;
 
-        [Constructable]
+        [Constructible]
         public Niporailem()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

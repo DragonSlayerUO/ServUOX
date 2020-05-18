@@ -178,7 +178,7 @@ namespace Server.Items
 
     public class DailyRocks : Item
     {
-        [Constructable]
+        [Constructible]
         public DailyRocks()
             : base(0x1367)
         {
@@ -204,7 +204,7 @@ namespace Server.Items
 
     public class DailyRock : Item
     {
-        [Constructable]
+        [Constructible]
         public DailyRock()
             : base(0x1368)
         {
@@ -230,7 +230,7 @@ namespace Server.Items
 
     public class DailyFullJars : Item
     {
-        [Constructable]
+        [Constructible]
         public DailyFullJars()
             : base(0xE48)
         {
@@ -256,7 +256,7 @@ namespace Server.Items
 
     public class DailyBrokenChair : Item
     {
-        [Constructable]
+        [Constructible]
         public DailyBrokenChair()
             : base(0xC19)
         {
@@ -282,7 +282,7 @@ namespace Server.Items
 
     public class DailySeaweed : Item
     {
-        [Constructable]
+        [Constructible]
         public DailySeaweed()
             : base(0xDBA)
         {
@@ -310,7 +310,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1060141;  // a tasty meat pie
 
-        [Constructable]
+        [Constructible]
         public DailyMeatPie()
             : base(0x1041)
         {

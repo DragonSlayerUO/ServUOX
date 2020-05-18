@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class AbyssalHairDye : Item
     {
-        [Constructable]
+        [Constructible]
         public AbyssalHairDye()
             : base(0xEFE)
         {

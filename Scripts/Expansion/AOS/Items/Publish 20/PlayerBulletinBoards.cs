@@ -11,7 +11,7 @@ namespace Server.Items
 {
     public class PlayerBBSouth : BasePlayerBB
     {
-        [Constructable]
+        [Constructible]
         public PlayerBBSouth()
             : base(0x2311)
         {
@@ -41,7 +41,7 @@ namespace Server.Items
 
     public class PlayerBBEast : BasePlayerBB
     {
-        [Constructable]
+        [Constructible]
         public PlayerBBEast()
             : base(0x2312)
         {

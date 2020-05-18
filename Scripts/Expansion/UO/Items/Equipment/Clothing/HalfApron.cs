@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0x153b, 0x153c)]
     public class HalfApron : BaseWaist
     {
-        [Constructable]
+        [Constructible]
         public HalfApron()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HalfApron(int hue)
             : base(0x153b, hue)
         {

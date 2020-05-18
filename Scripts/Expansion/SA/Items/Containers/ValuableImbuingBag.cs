@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ValuableImbuingBag : BaseRewardBag
     {
-        [Constructable]
+        [Constructible]
         public ValuableImbuingBag()
         {
 

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class StaghornCoral : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public StaghornCoral()
             : base(0xA38D)
         {

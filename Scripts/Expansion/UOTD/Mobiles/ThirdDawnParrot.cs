@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a parrot corpse")]
     public class Parrot : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Parrot()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

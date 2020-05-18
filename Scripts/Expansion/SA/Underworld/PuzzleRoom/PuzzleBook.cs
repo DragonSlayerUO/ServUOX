@@ -32,7 +32,7 @@ namespace Server.Items
                 "discover its location within",
                 "the underworld!!"));
 
-        [Constructable]
+        [Constructible]
         public PuzzleBook() : base(false)
         {
             Movable = false;

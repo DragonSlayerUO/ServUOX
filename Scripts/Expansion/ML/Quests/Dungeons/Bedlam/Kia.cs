@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Kia : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Kia()
             : base("Kia", "the Student")
         {

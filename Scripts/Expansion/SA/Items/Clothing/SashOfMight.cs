@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1075412;  // Sash of Might
 
-        [Constructable]
+        [Constructible]
         public SashOfMight() : base(0x1541)
         {
             Hue = 0x481;

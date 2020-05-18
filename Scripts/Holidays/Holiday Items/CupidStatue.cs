@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1099220;  // cupid statue
 
-        [Constructable]
+        [Constructible]
         public CupidStatue()
             : base(0x4F7C)
         {

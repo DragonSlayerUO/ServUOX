@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class JeweledFiligree : Item
     {
-        [Constructable]
+        [Constructible]
         public JeweledFiligree()
             : base(0x2F5E)
         {

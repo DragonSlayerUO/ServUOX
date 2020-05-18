@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x2D32, 0x2D26)]
     public class RuneBlade : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public RuneBlade()
             : base(0x2D32)
         {

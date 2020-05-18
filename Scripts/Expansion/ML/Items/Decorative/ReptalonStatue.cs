@@ -5,7 +5,7 @@ namespace Server.Items
     public class ReptalonStatue : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ReptalonStatue()
             : base(0x2D95)
         {

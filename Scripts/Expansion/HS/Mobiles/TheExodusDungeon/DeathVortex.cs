@@ -7,7 +7,7 @@ namespace Server.Items
     {
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public DeathVortexTrap()
             : base(0x3789)
         {

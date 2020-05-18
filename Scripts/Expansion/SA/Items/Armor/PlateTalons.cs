@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x42DE, 0x42DF)]
     public class PlateTalons : BaseShoes
     {
-        [Constructable]
+        [Constructible]
         public PlateTalons()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlateTalons(int hue)
             : base(0x42DE, hue)
         {

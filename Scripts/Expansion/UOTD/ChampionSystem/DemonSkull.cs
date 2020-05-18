@@ -5,7 +5,7 @@ namespace Server.Items
     public class DemonSkull : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DemonSkull()
             : base(0x224e + Utility.Random(4))
         {

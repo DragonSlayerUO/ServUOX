@@ -10,7 +10,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1155508;
 
-        [Constructable]
+        [Constructible]
         public ManaSpike() : base(2308)
         {
         }

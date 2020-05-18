@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class GlassBottle : Item
     {
-        [Constructable]
+        [Constructible]
         public GlassBottle()
             : base(0xe2b)
         {

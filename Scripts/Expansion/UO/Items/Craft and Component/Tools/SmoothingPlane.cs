@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0x1032, 0x1033)]
     public class SmoothingPlane : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public SmoothingPlane()
             : base(0x1032)
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public SmoothingPlane(int uses)
             : base(uses, 0x1032)
         {

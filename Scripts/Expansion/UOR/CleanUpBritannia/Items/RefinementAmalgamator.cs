@@ -11,7 +11,7 @@ namespace Server.Items
         public List<RefinementComponent> ToCombine { get; set; }
         public RefinementComponent ToUpgrade { get; set; }
 
-        [Constructable]
+        [Constructible]
         public RefinementAmalgamator()
             : base(0x9966)
         {

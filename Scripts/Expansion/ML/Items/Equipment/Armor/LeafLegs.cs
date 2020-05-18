@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x2FC9, 0x317F)]
     public class LeafLegs : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeafLegs()
             : base(0x2FC9)
         {

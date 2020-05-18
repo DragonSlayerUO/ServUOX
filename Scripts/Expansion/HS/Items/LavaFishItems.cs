@@ -11,12 +11,12 @@ namespace Server.Items
             EventSink.Movement += new MovementEventHandler(EventSink_Movement);
         }
 
-        [Constructable]
+        [Constructible]
         public StoneFootwear() : this(Utility.Random(5899, 8))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StoneFootwear(int itemID)
             : base(itemID)
         {
@@ -135,7 +135,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098151;
 
-        [Constructable]
+        [Constructible]
         public CrackedLavaRockSouth() : base(19279)
         {
         }
@@ -181,7 +181,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098151;
 
-        [Constructable]
+        [Constructible]
         public CrackedLavaRockEast() : base(19275)
         {
         }
@@ -234,7 +234,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098145;
 
-        [Constructable]
+        [Constructible]
         public GeodeSouth() : base(Utility.Random(19277, 2))
         {
             switch (Utility.Random(4))
@@ -265,7 +265,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098145;
 
-        [Constructable]
+        [Constructible]
         public GeodeEast() : base(Utility.Random(19273, 2))
         {
             switch (Utility.Random(4))
@@ -296,7 +296,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098148;
 
-        [Constructable]
+        [Constructible]
         public GeodeShardSouth() : base(19276)
         {
             switch (Utility.Random(4))
@@ -327,7 +327,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098148;
 
-        [Constructable]
+        [Constructible]
         public GeodeShardEast() : base(19272)
         {
             switch (Utility.Random(4))
@@ -358,7 +358,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151166;
 
-        [Constructable]
+        [Constructible]
         public LavaRock() : base(Utility.Random(4964, 6))
         {
             Hue = 1175;
@@ -383,7 +383,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1097277;
 
-        [Constructable]
+        [Constructible]
         public StonePaver()
             : base(Utility.RandomList(18396, 18397, 18398, 18399, 18400, 18405, 18652, 18653, 18654, 18655))
         {

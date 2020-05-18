@@ -7,7 +7,7 @@ namespace Server.Items
         public override double DefaultWeight => 1;
         public override int LabelNumber => 1153873;  // Harvest Wine
 
-        [Constructable]
+        [Constructible]
         public HarvestWine()
             : base(BeverageType.Wine)
         {

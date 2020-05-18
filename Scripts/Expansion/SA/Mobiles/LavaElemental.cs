@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a lava elemental corpse")]
     public class LavaElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LavaElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

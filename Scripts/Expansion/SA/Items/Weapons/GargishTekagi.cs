@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48CE, 0x48Cf)]
     public class GargishTekagi : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public GargishTekagi()
             : base(0x48CE)
         {

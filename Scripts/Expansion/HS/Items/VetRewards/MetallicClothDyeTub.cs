@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MetallicClothDyeTub : DyeTub
     {
-        [Constructable]
+        [Constructible]
         public MetallicClothDyeTub()
         {
             LootType = LootType.Blessed;

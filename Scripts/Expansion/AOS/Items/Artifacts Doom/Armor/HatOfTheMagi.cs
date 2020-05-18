@@ -5,7 +5,7 @@ namespace Server.Items
     public class HatOfTheMagi : WizardsHat
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HatOfTheMagi()
         {
             Hue = 0x481;

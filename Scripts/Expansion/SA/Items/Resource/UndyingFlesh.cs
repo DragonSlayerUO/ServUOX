@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class UndyingFlesh : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public UndyingFlesh()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public UndyingFlesh(int amount)
             : base(0x5731)
         {

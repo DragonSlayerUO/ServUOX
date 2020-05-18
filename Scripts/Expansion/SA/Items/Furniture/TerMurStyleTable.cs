@@ -5,7 +5,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1095321;  // Ter-Mur style table
 
-        [Constructable]
+        [Constructible]
         public TerMurStyleTable()
             : base(0x4041)
         {

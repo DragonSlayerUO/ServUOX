@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool IsSkeletonKey => true;
         public override int SkillBonus => 100;
 
-        [Constructable]
+        [Constructible]
         public MasterSkeletonKey()
         {
             Uses = 10;

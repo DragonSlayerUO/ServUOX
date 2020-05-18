@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2DD3, 0x2DD4)]
     public class ElvenAlchemyTable : Item
     {
-        [Constructable]
+        [Constructible]
         public ElvenAlchemyTable()
             : base(0x2DD3)
         {

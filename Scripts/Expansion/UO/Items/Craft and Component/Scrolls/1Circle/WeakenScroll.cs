@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class WeakenScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public WeakenScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WeakenScroll(int amount)
             : base(7, 0x1F34, amount)
         {

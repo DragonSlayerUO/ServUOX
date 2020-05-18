@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a silverback gorilla corpse")]
     public class SilverbackGorilla : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SilverbackGorilla()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .2, .4)
         {

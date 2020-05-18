@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113758;  // Claws of the Berserker
 
-        [Constructable]
+        [Constructible]
         public ClawsOfTheBerserker()
             : base()
         {

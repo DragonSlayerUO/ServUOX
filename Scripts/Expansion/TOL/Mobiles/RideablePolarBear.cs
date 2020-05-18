@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class RideablePolarBear : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public RideablePolarBear()
             : base(0x20E1, 0x3EC5, 0x3EC5, DefaultEtherealHue)
         {

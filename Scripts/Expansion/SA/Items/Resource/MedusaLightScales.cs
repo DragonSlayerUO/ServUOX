@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class MedusaLightScales : Item
     {
-        [Constructable]
+        [Constructible]
         public MedusaLightScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MedusaLightScales(int amount)
             : base(9908)
         {

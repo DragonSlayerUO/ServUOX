@@ -20,7 +20,7 @@ namespace Server.Items
     public class AncientFarmersKasa : Kasa
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AncientFarmersKasa()
             : base()
         {
@@ -67,7 +67,7 @@ namespace Server.Items
     public class AncientSamuraiDo : PlateDo
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AncientSamuraiDo()
             : base()
         {
@@ -107,7 +107,7 @@ namespace Server.Items
     public class ArmsOfTacticalExcellence : LeatherHiroSode
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ArmsOfTacticalExcellence()
             : base()
         {
@@ -144,7 +144,7 @@ namespace Server.Items
     public class BlackLotusHood : ClothNinjaHood
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BlackLotusHood()
             : base()
         {
@@ -190,7 +190,7 @@ namespace Server.Items
     public class DaimyosHelm : PlateBattleKabuto
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DaimyosHelm()
             : base()
         {
@@ -227,7 +227,7 @@ namespace Server.Items
     public class DemonForks : Sai
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DemonForks()
             : base()
         {
@@ -265,7 +265,7 @@ namespace Server.Items
     public class DragonNunchaku : Nunchaku
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DragonNunchaku()
             : base()
         {
@@ -303,7 +303,7 @@ namespace Server.Items
     public class Exiler : Tetsubo
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Exiler()
             : base()
         {
@@ -347,7 +347,7 @@ namespace Server.Items
     public class GlovesOfTheSun : LeatherNinjaMitts
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GlovesOfTheSun()
             : base()
         {
@@ -384,7 +384,7 @@ namespace Server.Items
     public class HanzosBow : Yumi
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HanzosBow()
             : base()
         {
@@ -422,7 +422,7 @@ namespace Server.Items
     public class LegsOfStability : PlateSuneate
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LegsOfStability()
             : base()
         {
@@ -461,7 +461,7 @@ namespace Server.Items
     public class PeasantsBokuto : Bokuto
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PeasantsBokuto()
             : base()
         {
@@ -499,7 +499,7 @@ namespace Server.Items
     public class PilferedDancerFans : Tessen
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PilferedDancerFans()
             : base()
         {
@@ -536,7 +536,7 @@ namespace Server.Items
     public class TheDestroyer : NoDachi
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TheDestroyer()
             : base()
         {
@@ -573,7 +573,7 @@ namespace Server.Items
     public class TomeOfEnlightenment : Spellbook
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TomeOfEnlightenment()
             : base()
         {
@@ -609,7 +609,7 @@ namespace Server.Items
     public class LeurociansMempoOfFortune : LeatherMempo
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LeurociansMempoOfFortune()
             : base()
         {
@@ -691,7 +691,7 @@ namespace Server.Items
             "Zeshin"
         };
         private string m_UrnName;
-        [Constructable]
+        [Constructible]
         public AncientUrn(string urnName)
             : base(0x241D)
         {
@@ -699,7 +699,7 @@ namespace Server.Items
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public AncientUrn()
             : this(m_Names[Utility.Random(m_Names.Length)])
         {
@@ -757,7 +757,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
         private string m_SwordsName;
-        [Constructable]
+        [Constructible]
         public HonorableSwords(string swordsName)
             : base(0x2853)
         {
@@ -766,7 +766,7 @@ namespace Server.Items
             Weight = 5.0;
         }
 
-        [Constructable]
+        [Constructible]
         public HonorableSwords()
             : this(AncientUrn.Names[Utility.Random(AncientUrn.Names.Length)])
         {
@@ -824,7 +824,7 @@ namespace Server.Items
     public class ChestOfHeirlooms : LockableContainer
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ChestOfHeirlooms()
             : base(0x2811)
         {
@@ -905,7 +905,7 @@ namespace Server.Items
     public class FluteOfRenewal : BambooFlute
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public FluteOfRenewal()
             : base()
         {
@@ -959,13 +959,13 @@ namespace Server.Items
             new int[] { /*PigmentType.BurntBrown,*/ 0x41A, 1071453 }
         };
         private LesserPigmentType m_Type;
-        [Constructable]
+        [Constructible]
         public LesserPigmentsOfTokuno()
             : this((LesserPigmentType)Utility.Random(0, 11))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LesserPigmentsOfTokuno(LesserPigmentType type)
             : base(1)
         {
@@ -1042,7 +1042,7 @@ namespace Server.Items
     public class MetalPigmentsOfTokuno : BasePigmentsOfTokuno
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MetalPigmentsOfTokuno()
             : base(1)
         {

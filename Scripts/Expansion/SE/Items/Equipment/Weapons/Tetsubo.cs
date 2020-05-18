@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x27A6, 0x27F1)]
     public class Tetsubo : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public Tetsubo()
             : base(0x27A6)
         {

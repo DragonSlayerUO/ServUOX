@@ -6,7 +6,7 @@ namespace Server.Items
     public class ObiDiEnse : Obi
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ObiDiEnse()
             : base(0x27A0)
         {

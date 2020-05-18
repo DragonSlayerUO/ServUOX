@@ -9,13 +9,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
-        [Constructable]
+        [Constructible]
         public ZooMemberBonnet()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZooMemberBonnet(int hue)
             : base(hue)
         {
@@ -43,13 +43,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
-        [Constructable]
+        [Constructible]
         public ZooMemberFloppyHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZooMemberFloppyHat(int hue)
             : base(hue)
         {
@@ -77,13 +77,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073347; // Friends of the Library Feathered Hat
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendFeatheredHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendFeatheredHat(int hue)
             : base(hue)
         {
@@ -120,13 +120,13 @@ namespace Server.Items
         public override int InitMinHits => 100;
         public override int InitMaxHits => 100;
 
-        [Constructable]
+        [Constructible]
         public JesterHatOfChuckles()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public JesterHatOfChuckles(int hue)
             : base(hue)
         {
@@ -166,13 +166,13 @@ namespace Server.Items
         public override int InitMinHits => 100;
         public override int InitMaxHits => 100;
 
-        [Constructable]
+        [Constructible]
         public NystulsWizardsHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public NystulsWizardsHat(int hue)
             : base(hue)
         {
@@ -212,13 +212,13 @@ namespace Server.Items
         public override int InitMinHits => 100;
         public override int InitMaxHits => 100;
 
-        [Constructable]
+        [Constructible]
         public GypsyHeaddress()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GypsyHeaddress(int hue)
             : base(hue)
         {

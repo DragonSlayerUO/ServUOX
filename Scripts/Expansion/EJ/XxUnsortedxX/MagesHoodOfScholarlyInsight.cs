@@ -17,13 +17,13 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public MagesHoodOfScholarlyInsight()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MagesHoodOfScholarlyInsight(int hue)
             : base(hue)
         {

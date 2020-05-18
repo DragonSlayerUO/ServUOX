@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1077749; // Amelias Toolbox
 
-        [Constructable]
+        [Constructible]
         public AmeliasToolbox()
             : base(500)
         {

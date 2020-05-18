@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Cards : Item
     {
-        [Constructable]
+        [Constructible]
         public Cards()
             : base(0xE19)
         {

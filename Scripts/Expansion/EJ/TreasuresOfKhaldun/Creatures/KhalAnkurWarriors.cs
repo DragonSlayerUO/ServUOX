@@ -25,13 +25,13 @@ namespace Server.Mobiles
 
         public WarriorType _Type { get; set; }
 
-        [Constructable]
+        [Constructible]
         public KhalAnkurWarriors()
             : this(RandomType)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public KhalAnkurWarriors(WarriorType type)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

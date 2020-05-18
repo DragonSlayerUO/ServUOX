@@ -9,13 +9,13 @@ namespace Server.Items
 
         public override int LabelNumber => 1040001; // tribal berry
 
-        [Constructable]
+        [Constructible]
         public TribalBerry()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TribalBerry(int amount)
             : base(0x9D0)
         {

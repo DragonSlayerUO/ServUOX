@@ -12,7 +12,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1123385;
 
-        [Constructable]
+        [Constructible]
         public SacraficeBanner() : base(39361)
         {
         }

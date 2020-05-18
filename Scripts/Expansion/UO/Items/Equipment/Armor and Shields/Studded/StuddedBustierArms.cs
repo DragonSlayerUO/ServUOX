@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x1c0c, 0x1c0d)]
     public class StuddedBustierArms : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public StuddedBustierArms()
             : base(0x1C0C)
         {

@@ -16,7 +16,7 @@ namespace Server.Engines.Quests.Haven
         private CannonDirection m_CannonDirection;
         private MilitiaCanoneer m_Canoneer;
 
-        [Constructable]
+        [Constructible]
         public Cannon(CannonDirection direction)
         {
             m_CannonDirection = direction;

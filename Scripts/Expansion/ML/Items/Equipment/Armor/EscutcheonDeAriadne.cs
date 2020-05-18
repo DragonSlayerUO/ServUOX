@@ -5,7 +5,7 @@ namespace Server.Items
     public class EscutcheonDeAriadne : MetalKiteShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public EscutcheonDeAriadne()
         {
             LootType = LootType.Blessed;

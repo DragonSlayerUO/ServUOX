@@ -210,7 +210,7 @@ namespace Server.Mobiles
 
     public class SummonedAntLion : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedAntLion()
         {
             Name = "an ant lion";
@@ -260,7 +260,7 @@ namespace Server.Mobiles
 
     public class SummonedArcticOgreLord : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedArcticOgreLord()
         {
             Name = "an arctic ogre lord";
@@ -309,7 +309,7 @@ namespace Server.Mobiles
 
     public class SummonedBakeKitsune : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedBakeKitsune()
         {
             Name = "a bake kitsune";
@@ -360,7 +360,7 @@ namespace Server.Mobiles
 
     public class SummonedBogling : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedBogling()
         {
             Name = "a bogling";
@@ -409,7 +409,7 @@ namespace Server.Mobiles
 
     public class SummonedBullFrog : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedBullFrog()
         {
             Name = "a bull frog";
@@ -456,7 +456,7 @@ namespace Server.Mobiles
 
     public class SummonedChicken : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedChicken()
         {
             Name = "a chicken";
@@ -502,7 +502,7 @@ namespace Server.Mobiles
 
     public class SummonedCow : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedCow()
         {
             Name = "a cow";
@@ -550,7 +550,7 @@ namespace Server.Mobiles
 
     public class SummonedDoppleganger : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedDoppleganger()
         {
             Name = "a doppleganger";
@@ -597,7 +597,7 @@ namespace Server.Mobiles
 
     public class SummonedFrostSpider : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedFrostSpider()
         {
             Name = "a frost spider";
@@ -648,7 +648,7 @@ namespace Server.Mobiles
 
     public class SummonedGreatHart : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedGreatHart()
         {
             Name = "a great hart";
@@ -696,7 +696,7 @@ namespace Server.Mobiles
     {
         private DateTime m_NextWave;
 
-        [Constructable]
+        [Constructible]
         public SummonedLavaSerpent()
         {
             Name = "a lava serpent";
@@ -789,7 +789,7 @@ namespace Server.Mobiles
 
     public class SummonedOrcBrute : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedOrcBrute()
         {
             Body = 189;
@@ -840,7 +840,7 @@ namespace Server.Mobiles
 
     public class SummonedPanther : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedPanther()
         {
             Name = "a panther";
@@ -890,7 +890,7 @@ namespace Server.Mobiles
 
     public class SummonedSheep : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedSheep()
         {
             Name = "a sheep";
@@ -936,7 +936,7 @@ namespace Server.Mobiles
 
     public class SummonedSkeletalKnight : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedSkeletalKnight()
         {
             Name = "a skeletal knight";
@@ -986,7 +986,7 @@ namespace Server.Mobiles
 
     public class SummonedVorpalBunny : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedVorpalBunny()
         {
             Name = "a vorpal bunny";
@@ -1049,7 +1049,7 @@ namespace Server.Mobiles
 
     public class SummonedWailingBanshee : BaseTalismanSummon
     {
-        [Constructable]
+        [Constructible]
         public SummonedWailingBanshee()
         {
             Name = "a wailing banshee";

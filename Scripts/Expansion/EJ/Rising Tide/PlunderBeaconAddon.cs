@@ -29,7 +29,7 @@ namespace Server.Items
         public DateTime NextSpawn { get; set; }
         public bool InitialSpawn { get; set; }
 
-        [Constructable]
+        [Constructible]
         public PlunderBeaconAddon()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

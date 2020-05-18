@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SpleenOfThePutrefier : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public SpleenOfThePutrefier()
             : base(0x1CEE)
         {

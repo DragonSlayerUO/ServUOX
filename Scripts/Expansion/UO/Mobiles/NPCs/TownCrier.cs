@@ -434,7 +434,7 @@ namespace Server.Mobiles
         private Timer m_NewsTimer;
         private Timer m_AutoShoutTimer;
 
-        [Constructable]
+        [Constructible]
         public TownCrier()
         {
             Instances.Add(this);

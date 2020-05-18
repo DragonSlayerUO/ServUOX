@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a chaos daemon corpse")]
     public class ChaosDaemon : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ChaosDaemon()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

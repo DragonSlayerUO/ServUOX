@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AbyssBarrier : Item
     {
-        [Constructable]
+        [Constructible]
         public AbyssBarrier() : base(0x49E)
         {
             Movable = false;

@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Citrine : Item, IGem
     {
-        [Constructable]
+        [Constructible]
         public Citrine()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Citrine(int amount)
             : base(0xF15)
         {

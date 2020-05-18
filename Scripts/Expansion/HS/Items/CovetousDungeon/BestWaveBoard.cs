@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public BestWaveBoard() : base(7774)
         {
             Name = "Void Pool - Best Wave";

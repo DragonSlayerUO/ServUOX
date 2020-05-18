@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(WalkingSilentlyQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Jun()
             : base("Jun", "the Stealth Instructor")
         {

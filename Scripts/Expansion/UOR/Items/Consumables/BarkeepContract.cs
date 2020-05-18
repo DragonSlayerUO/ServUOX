@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153779;  // a barkeep contract
 
-        [Constructable]
+        [Constructible]
         public BarkeepContract()
             : base(0x14F0)
         {

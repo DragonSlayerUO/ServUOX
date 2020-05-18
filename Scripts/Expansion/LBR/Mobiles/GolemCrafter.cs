@@ -6,7 +6,7 @@ namespace Server.Mobiles
     public class GolemCrafter : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public GolemCrafter()
             : base("the golem crafter")
         {

@@ -16,7 +16,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBMystic());
         }
 
-        [Constructable]
+        [Constructible]
         public Ortlem()
             : base("Ortlem", "the Mystic")
         {

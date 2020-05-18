@@ -38,7 +38,7 @@ namespace Server.Items
             typeof(DecorativePlantFlax),     typeof(DecorativePlantPoppies),          typeof(DecorativePlantLilypad)
         };
 
-        [Constructable]
+        [Constructible]
         public EnchantedWheelbarrow()
             : base(0xA0E6)
         {
@@ -180,13 +180,13 @@ namespace Server.Items
             0xA0E1, 0xA0E2, 0xA0E3, 0xA0E4, 0xA0E5, 0xA0ED, 0xA11B, 0xA11C, 0xA11F, 0xA120, 0xA121, 0xA122, 0xA123, 0xA124, 0xA125, 0xA128, 0xA12B
         };
 
-        [Constructable]
+        [Constructible]
         public DecorativePlant()
             : base(DecorativePlants[Utility.Random(DecorativePlants.Length)])
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DecorativePlant(int id)
             : base(id)
         {
@@ -213,7 +213,7 @@ namespace Server.Items
     [Flipable(0xA0DD, 0xA0DE)]
     public class DecorativePlantWhiteFlowers : DecorativePlant
     {
-        [Constructable]
+        [Constructible]
         public DecorativePlantWhiteFlowers()
             : base(0xA0DD)
         {
@@ -240,7 +240,7 @@ namespace Server.Items
     [Flipable(0xA0DF, 0xA0E0)]
     public class DecorativePlantVines : DecorativePlant
     {
-        [Constructable]
+        [Constructible]
         public DecorativePlantVines()
             : base(0xA0DF)
         {
@@ -267,7 +267,7 @@ namespace Server.Items
     [Flipable(0xA11D, 0xA11E)]
     public class DecorativePlantFlax : DecorativePlant
     {
-        [Constructable]
+        [Constructible]
         public DecorativePlantFlax()
             : base(0xA11D)
         {
@@ -294,7 +294,7 @@ namespace Server.Items
     [Flipable(0xA126, 0xA127)]
     public class DecorativePlantPoppies : DecorativePlant
     {
-        [Constructable]
+        [Constructible]
         public DecorativePlantPoppies()
             : base(0xA126)
         {
@@ -321,7 +321,7 @@ namespace Server.Items
     [Flipable(0xA129, 0xA12A)]
     public class DecorativePlantLilypad : DecorativePlant
     {
-        [Constructable]
+        [Constructible]
         public DecorativePlantLilypad()
             : base(0xA129)
         {

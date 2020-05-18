@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class ParalyzeFieldScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public ParalyzeFieldScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ParalyzeFieldScroll(int amount)
             : base(46, 0x1F5B, amount)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1159215);  // Commander
 
-        [Constructable]
+        [Constructible]
         public CommanderTitleDeed()
         {
         }

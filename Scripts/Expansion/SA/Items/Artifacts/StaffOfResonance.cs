@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113527;  // Staff of Resonance
 
-        [Constructable]
+        [Constructible]
         public StaffOfResonance()
         {
             switch (Utility.Random(5)) // Random resonance property

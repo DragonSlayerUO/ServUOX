@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class GuildDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public GuildDeed()
             : base(0x14F0)
         {

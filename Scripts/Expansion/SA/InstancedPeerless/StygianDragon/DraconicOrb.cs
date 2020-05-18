@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113515;  // Draconic Orb (Lesser)
 
-        [Constructable]
+        [Constructible]
         public DraconicOrb()
             : base(0x573E)
         {

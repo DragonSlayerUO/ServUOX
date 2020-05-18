@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Lowel : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Lowel()
             : base("Lowel", "the Carpenter")
         {

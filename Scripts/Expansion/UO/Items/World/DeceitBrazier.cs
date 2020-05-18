@@ -84,7 +84,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1023633;// Brazier
 
-        [Constructable]
+        [Constructible]
         public DeceitBrazier()
             : base(0xE31)
         {

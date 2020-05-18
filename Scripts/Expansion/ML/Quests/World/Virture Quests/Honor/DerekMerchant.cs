@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(HonorOfDeBoorsQuest) };
 
-        [Constructable]
+        [Constructible]
         public DerekMerchant()
             : base("Derek", "the Merchant")
         {

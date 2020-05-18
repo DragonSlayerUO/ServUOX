@@ -5,7 +5,7 @@ namespace Server.Items
     public class RingOfTheSavant : GoldRing
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RingOfTheSavant()
         {
             LootType = LootType.Blessed;

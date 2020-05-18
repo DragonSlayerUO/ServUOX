@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Turnip : Food
     {
-        [Constructable]
+        [Constructible]
         public Turnip()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Turnip(int amount)
             : base(amount, 0xD3A)
         {

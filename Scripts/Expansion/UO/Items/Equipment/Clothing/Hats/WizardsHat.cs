@@ -11,13 +11,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public WizardsHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WizardsHat(int hue)
             : base(0x1718, hue)
         {

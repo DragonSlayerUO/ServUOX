@@ -18,7 +18,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public DecorativeCarpet(int itemId)
             : base(itemId)
         {

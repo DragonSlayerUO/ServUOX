@@ -64,13 +64,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public SpecialNaturalDye(DyeType type)
             : this(type, false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpecialNaturalDye(DyeType type, bool booksonly)
             : base(0x182B)
         {

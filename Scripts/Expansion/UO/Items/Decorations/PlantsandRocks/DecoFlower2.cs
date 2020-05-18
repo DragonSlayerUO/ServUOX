@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoFlower2 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoFlower2()
             : base(0x18D9)
         {

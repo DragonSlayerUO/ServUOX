@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x422A, 0x422C)]
     public class GargishOrderShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public GargishOrderShield()
             : base(0x422A)
         {

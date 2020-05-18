@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoNightshade2 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoNightshade2()
             : base(0x18E5)
         {

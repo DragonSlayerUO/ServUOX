@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a myrmidex corpse")]
     public class DescicatedMyrmidexLarvae : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DescicatedMyrmidexLarvae()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .2, .4)
         {

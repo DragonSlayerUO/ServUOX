@@ -8,7 +8,7 @@ namespace Server.Engines.SorcerersDungeon
     [CorpseName("the corpse of jack the pumpkin king")]
     public class JackThePumpkinKing : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public JackThePumpkinKing()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -141,7 +141,7 @@ namespace Server.Engines.SorcerersDungeon
     {
         private SpawnTimer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public UnholyPumpkin()
             : base(0xF7E)
         {

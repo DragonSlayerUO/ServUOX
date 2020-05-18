@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override string DefaultName => "brightly colored eggs";//Rare Item Needs more research so far only holiday item
 
-        [Constructable]
+        [Constructible]
         public BrightlyColoredEggs()
             : base(0x9B5, 15)
         {

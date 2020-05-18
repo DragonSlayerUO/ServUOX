@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Prassel : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Prassel()
             : base("Prassel", "the Security Liason")
         {

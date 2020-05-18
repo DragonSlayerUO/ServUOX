@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158797);  // Naughty
 
-        [Constructable]
+        [Constructible]
         public NaughtyTitleDeed()
         {
         }

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PlateHatsuburi : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public PlateHatsuburi()
             : base(0x2775)
         {

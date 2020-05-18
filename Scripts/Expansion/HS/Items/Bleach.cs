@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Bleach : PigmentsOfTokuno
     {
-        [Constructable]
+        [Constructible]
         public Bleach()
             : base(PigmentType.None)
         {

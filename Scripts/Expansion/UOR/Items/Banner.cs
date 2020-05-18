@@ -10,7 +10,7 @@ namespace Server.Items
     public class Banner : Item, IAddon, IDyable, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public Banner(int itemID)
             : base(itemID)
         {
@@ -122,7 +122,7 @@ namespace Server.Items
     public class BannerDeed : Item, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public BannerDeed()
             : base(0x14F0)
         {

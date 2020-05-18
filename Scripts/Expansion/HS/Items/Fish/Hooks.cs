@@ -149,13 +149,13 @@ namespace Server.Items
         public override HookType HookType => HookType.Lava;
         public override int LabelNumber => 1150888;
 
-        [Constructable]
+        [Constructible]
         public LavaHook(int uses) : base(uses)
         {
             Hue = 2075;
         }
 
-        [Constructable]
+        [Constructible]
         public LavaHook()
         {
             Hue = 2075;
@@ -182,13 +182,13 @@ namespace Server.Items
         public override HookType HookType => HookType.Dredging;
         public override int LabelNumber => 1150890;
 
-        [Constructable]
+        [Constructible]
         public DredgingHook(int uses) : base(uses)
         {
             Hue = 33;
         }
 
-        [Constructable]
+        [Constructible]
         public DredgingHook()
         {
             Hue = 33;
@@ -215,13 +215,13 @@ namespace Server.Items
         public override HookType HookType => HookType.JunkProof;
         public override int LabelNumber => 1150883;
 
-        [Constructable]
+        [Constructible]
         public JunkProofHook(int uses) : base(uses)
         {
             Hue = 99;
         }
 
-        [Constructable]
+        [Constructible]
         public JunkProofHook()
         {
             Hue = 99;

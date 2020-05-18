@@ -17,7 +17,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBKeeperOfChivalry());
         }
 
-        [Constructable]
+        [Constructible]
         public Aelorn()
             : base("Aelorn", "the Chivalry Instructor")
         {

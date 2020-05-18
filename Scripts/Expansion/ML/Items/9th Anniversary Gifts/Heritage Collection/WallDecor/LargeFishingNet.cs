@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class LargeFishingNetAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public LargeFishingNetAddon()
             : base()
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class LargeFishingNetDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public LargeFishingNetDeed()
             : base()
         {

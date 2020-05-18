@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LissithsSilk : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public LissithsSilk()
             : base(0x2001)
         {

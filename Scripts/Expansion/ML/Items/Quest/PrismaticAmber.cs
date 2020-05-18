@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PrismaticAmber : Amber
     {
-        [Constructable]
+        [Constructible]
         public PrismaticAmber()
             : base()
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1157347;  // bow of the infinite swarm
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BowOfTheInfiniteSwarm()
         {
             ExtendedWeaponAttributes.HitSwarm = 20;
@@ -56,7 +56,7 @@ namespace Server.Items
         public override int LabelNumber => 1157366;  // Glaive of the Infinite Swarm
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GlaiveOfTheInfiniteSwarm()
         {
             ExtendedWeaponAttributes.HitSwarm = 20;

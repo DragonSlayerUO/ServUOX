@@ -5,7 +5,7 @@ namespace Server.Items
     public class TheTaskmaster : WarFork
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TheTaskmaster()
         {
             Hue = 0x4F8;

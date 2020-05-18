@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public bool Burning => ItemID == 0xA12;
 
-        [Constructable]
+        [Constructible]
         public CandlewoodTorch()
             : base(0xF6B)
         {

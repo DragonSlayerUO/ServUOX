@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1115444;  // Basilisk Hide Breastplate
 
-        [Constructable]
+        [Constructible]
         public BasiliskHideBreastplate()
         {
             Resource = CraftResource.None;

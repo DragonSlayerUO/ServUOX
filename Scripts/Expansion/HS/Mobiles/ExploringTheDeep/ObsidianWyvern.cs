@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public static List<ObsidianWyvern> Instances { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ObsidianWyvern()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

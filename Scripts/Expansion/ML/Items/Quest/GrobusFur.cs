@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GrobusFur : Item
     {
-        [Constructable]
+        [Constructible]
         public GrobusFur()
             : base(0x11F4)
         {

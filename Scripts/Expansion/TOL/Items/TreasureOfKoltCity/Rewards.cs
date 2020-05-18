@@ -13,7 +13,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => new SkeletalHangmanAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public SkeletalHangmanAddon()
             : this(null)
         {
@@ -111,7 +111,7 @@ namespace Server.Items
 
         private Mobile _Clicker;
 
-        [Constructable]
+        [Constructible]
         public SkeletalHangmanAddonDeed()
         {
         }
@@ -146,7 +146,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new KotlSacraficialAltarAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public KotlSacraficialAltarAddon()
         {
             AddComponent(new AddonComponent(0x9D5F), 0, 0, 0);
@@ -197,7 +197,7 @@ namespace Server.Items
         public override BaseAddon Addon => new KotlSacraficialAltarAddon();
         public override int LabelNumber => 1124311;  // Kotl Sacrificial Altar
 
-        [Constructable]
+        [Constructible]
         public KotlSacraficialAltarAddonDeed()
         {
         }
@@ -257,7 +257,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156989;
 
-        [Constructable]
+        [Constructible]
         public KatalkotlsRing()
         {
             Hue = 2591;
@@ -404,7 +404,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public TribalBanner(EodonTribe tribe) : base(GetTribeID(tribe))
         {
             _Tribe = tribe;

@@ -12,7 +12,7 @@ namespace Server.Mobiles
                 typeof( ScrapingtheBottom )
             };
 
-        [Constructable]
+        [Constructible]
         public Xenrr()
             : base()
         {

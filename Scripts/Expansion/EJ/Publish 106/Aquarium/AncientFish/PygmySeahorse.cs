@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PygmySeahorse : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public PygmySeahorse()
             : base(0xA372)
         {

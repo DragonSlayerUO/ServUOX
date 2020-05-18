@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("Vitavi [Renowned] corpse")]
     public class VitaviRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public VitaviRenowned()
             : base(AIType.AI_Mystic)
         {

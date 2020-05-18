@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x27AE, 0x27F9)]
     public class Nunchaku : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public Nunchaku()
             : base(0x27AE)
         {

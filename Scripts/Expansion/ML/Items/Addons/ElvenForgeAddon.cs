@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ElvenForgeAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ElvenForgeAddon()
         {
             AddComponent(new ForgeComponent(0x2DD8), 0, 0, 0);
@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class ElvenForgeDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public ElvenForgeDeed()
         {
         }

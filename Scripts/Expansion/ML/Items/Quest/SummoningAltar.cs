@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Doom
     public class SummoningAltar : AbbatoirAddon
     {
         private BoneDemon m_Daemon;
-        [Constructable]
+        [Constructible]
         public SummoningAltar()
         {
         }

@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class CleanupTrashBarrel : BaseTrash
     {
-        [Constructable]
+        [Constructible]
         public CleanupTrashBarrel()
             : base(0xFAE)
         {

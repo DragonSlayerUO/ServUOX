@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x90C, 0x4073)]
     public class GlassSword : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public GlassSword()
             : base(0x90C)
         {

@@ -8,7 +8,7 @@ namespace Server.Items
         {
             0x280, 0x281, 0x282, 0x283, 0x284
         };
-        [Constructable]
+        [Constructible]
         public OphidianArchMageStatuette()
             : base(0x25A9)
         {

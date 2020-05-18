@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x13FD, 0x13FC)]
     public class HeavyCrossbow : BaseRanged
     {
-        [Constructable]
+        [Constructible]
         public HeavyCrossbow()
             : base(0x13FD)
         {

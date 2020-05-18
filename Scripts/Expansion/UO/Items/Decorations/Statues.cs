@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class StatueSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueSouth()
             : base(0x139A)
         {
@@ -31,7 +31,7 @@ namespace Server.Items
 
     public class StatueSouth2 : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueSouth2()
             : base(0x1227)
         {
@@ -60,7 +60,7 @@ namespace Server.Items
 
     public class StatueNorth : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueNorth()
             : base(0x139B)
         {
@@ -89,7 +89,7 @@ namespace Server.Items
 
     public class StatueWest : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueWest()
             : base(0x1226)
         {
@@ -118,7 +118,7 @@ namespace Server.Items
 
     public class StatueEast : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueEast()
             : base(0x139C)
         {
@@ -147,7 +147,7 @@ namespace Server.Items
 
     public class StatueEast2 : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueEast2()
             : base(0x1224)
         {
@@ -176,7 +176,7 @@ namespace Server.Items
 
     public class StatueSouthEast : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueSouthEast()
             : base(0x1225)
         {
@@ -205,7 +205,7 @@ namespace Server.Items
 
     public class BustSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public BustSouth()
             : base(0x12CB)
         {
@@ -234,7 +234,7 @@ namespace Server.Items
 
     public class BustEast : Item
     {
-        [Constructable]
+        [Constructible]
         public BustEast()
             : base(0x12CA)
         {
@@ -266,7 +266,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1044510;  // pegasus statuette
 
-        [Constructable]
+        [Constructible]
         public StatuePegasusSouth()
             : base(0x139D)
         {
@@ -298,7 +298,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1044510;  // pegasus statuette
 
-        [Constructable]
+        [Constructible]
         public StatuePegasusEast()
             : base(0x1228)
         {
@@ -327,7 +327,7 @@ namespace Server.Items
 
     public class SmallTowerSculpture : Item
     {
-        [Constructable]
+        [Constructible]
         public SmallTowerSculpture()
             : base(0x241A)
         {
@@ -355,7 +355,7 @@ namespace Server.Items
     [Flipable(0x493C, 0x493B)]
     public class StatueGryphonEast : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueGryphonEast()
             : base(0x493C)
         {
@@ -385,7 +385,7 @@ namespace Server.Items
     [Flipable(0x493B, 0x493C)]
     public class StatueGryphonSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public StatueGryphonSouth()
             : base(0x493B)
         {

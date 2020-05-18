@@ -15,7 +15,7 @@ namespace Server.Mobiles
     {
         public virtual bool IsInvulnerable => true;
 
-        [Constructable]
+        [Constructible]
         public ExodusArchZealot()
         {
             Name = "Hunter";

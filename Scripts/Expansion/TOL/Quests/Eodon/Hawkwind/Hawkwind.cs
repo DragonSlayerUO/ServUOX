@@ -13,7 +13,7 @@ namespace Server.Engines.Quests.TimeLord
 {
     public class Hawkwind : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public Hawkwind()
             : base("the Time Lord")
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class GauntletsOfAnger : PlateGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GauntletsOfAnger()
         {
             Hue = 0x29b;

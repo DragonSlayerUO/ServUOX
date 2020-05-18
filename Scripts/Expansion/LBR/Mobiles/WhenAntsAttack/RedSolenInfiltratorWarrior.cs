@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a solen infiltrator corpse")]
     public class RedSolenInfiltratorWarrior : BaseCreature, IRedSolen
     {
-        [Constructable]
+        [Constructible]
         public RedSolenInfiltratorWarrior()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

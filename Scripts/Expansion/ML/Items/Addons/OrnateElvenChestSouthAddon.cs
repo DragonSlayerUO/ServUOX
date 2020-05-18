@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class OrnateElvenChestSouthAddon : BaseAddonContainer
     {
-        [Constructable]
+        [Constructible]
         public OrnateElvenChestSouthAddon()
             : base(0x3098)
         {
@@ -38,7 +38,7 @@ namespace Server.Items
 
     public class OrnateElvenChestSouthDeed : BaseAddonContainerDeed
     {
-        [Constructable]
+        [Constructible]
         public OrnateElvenChestSouthDeed()
             : base()
         {

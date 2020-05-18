@@ -5,7 +5,7 @@ namespace Server.Items
     public class PixieSwatter : Scepter
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PixieSwatter()
         {
             Hue = 0x8A;

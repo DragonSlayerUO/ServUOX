@@ -5,7 +5,7 @@ namespace Server.Items
     public class LightsRampart : MetalShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LightsRampart()
         {
             Hue = 1272;

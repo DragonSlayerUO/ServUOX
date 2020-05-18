@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Hag
 {
     public class MagicFlute : Item
     {
-        [Constructable]
+        [Constructible]
         public MagicFlute()
             : base(0x1421)
         {

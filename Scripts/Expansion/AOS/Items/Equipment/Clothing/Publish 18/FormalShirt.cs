@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x2310, 0x230F)]
     public class FormalShirt : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public FormalShirt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FormalShirt(int hue)
             : base(0x2310, hue)
         {

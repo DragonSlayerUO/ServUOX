@@ -16,7 +16,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Grinder()
             : base(0x9A97)
         {

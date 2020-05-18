@@ -5,7 +5,7 @@ namespace Server.Items
     public class LeggingsOfEmbers : PlateLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LeggingsOfEmbers()
         {
             Hue = 0x2C;

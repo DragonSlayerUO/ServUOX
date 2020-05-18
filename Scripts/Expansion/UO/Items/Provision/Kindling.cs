@@ -6,13 +6,13 @@ namespace Server.Items
 {
     public class Kindling : Item
     {
-        [Constructable]
+        [Constructible]
         public Kindling()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Kindling(int amount)
             : base(0xDE1)
         {

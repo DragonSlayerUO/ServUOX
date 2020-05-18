@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2D07, 0x2D08)]
     public class FancyElvenArmoire : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public FancyElvenArmoire()
             : base(0x2D07)
         {

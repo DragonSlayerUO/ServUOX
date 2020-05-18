@@ -12,7 +12,7 @@ namespace Server.Mobiles
             typeof( Curiosities )
         };
 
-        [Constructable]
+        [Constructible]
         public Gretchen() : base("Gretchen", "the Alchemist")
         {
         }

@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Necro
 {
     public class DarkTidesTeleporter : DynamicTeleporter
     {
-        [Constructable]
+        [Constructible]
         public DarkTidesTeleporter()
         {
         }

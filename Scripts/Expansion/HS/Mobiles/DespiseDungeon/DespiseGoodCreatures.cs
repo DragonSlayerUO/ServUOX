@@ -9,12 +9,12 @@ namespace Server.Engines.Despise
 {
     public class Silenii : DespiseCreature
     {
-        [Constructable]
+        [Constructible]
         public Silenii() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Silenii(int powerLevel) : base(AIType.AI_Melee, FightMode.Evil)
         {
             Name = "Silenii";
@@ -90,12 +90,12 @@ namespace Server.Engines.Despise
 
     public class ForestNymph : DespiseCreature
     {
-        [Constructable]
+        [Constructible]
         public ForestNymph() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ForestNymph(int powerLevel) : base(AIType.AI_Mage, FightMode.Evil)
         {
             Name = "Forest Nymph";
@@ -131,12 +131,12 @@ namespace Server.Engines.Despise
 
     public class DespiseUnicorn : DespiseCreature
     {
-        [Constructable]
+        [Constructible]
         public DespiseUnicorn() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DespiseUnicorn(int powerLevel) : base(AIType.AI_Melee, FightMode.Evil)
         {
             Name = "Unicorn";
@@ -184,12 +184,12 @@ namespace Server.Engines.Despise
     [TypeAlias("Server.Engines.Despise.Sagittari")]
     public class Sagittarri : DespiseCreature
     {
-        [Constructable]
+        [Constructible]
         public Sagittarri() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Sagittarri(int powerLevel) : base(AIType.AI_Archer, FightMode.Evil)
         {
             Name = "Sagittarri";
@@ -235,12 +235,12 @@ namespace Server.Engines.Despise
 
     public class Ursadane : DespiseCreature
     {
-        [Constructable]
+        [Constructible]
         public Ursadane() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Ursadane(int powerLevel) : base(AIType.AI_Melee, FightMode.Evil)
         {
             Name = "Ursadane";
@@ -289,12 +289,12 @@ namespace Server.Engines.Despise
 
     public class DivineGuardian : DespiseCreature
     {
-        [Constructable]
+        [Constructible]
         public DivineGuardian() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DivineGuardian(int powerLevel) : base(AIType.AI_Melee, FightMode.Evil)
         {
             Name = "Divine Guardian";
@@ -342,12 +342,12 @@ namespace Server.Engines.Despise
 
     public class Dendrite : DespiseCreature
     {
-        [Constructable]
+        [Constructible]
         public Dendrite() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Dendrite(int powerLevel) : base(AIType.AI_Melee, FightMode.Evil)
         {
             Name = "Dendrite";
@@ -415,12 +415,12 @@ namespace Server.Engines.Despise
         public virtual int MinHeal => Math.Max(10, Power * 3);
         public virtual int MaxHeal => Math.Max(25, Power * 5);
 
-        [Constructable]
+        [Constructible]
         public Fairy() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Fairy(int powerLevel) : base(AIType.AI_Melee, FightMode.Evil)
         {
             Name = "Fairy";

@@ -5,7 +5,7 @@ namespace Server.Items
     public class ArcticDeathDealer : WarMace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ArcticDeathDealer()
         {
             Hue = 0x480;

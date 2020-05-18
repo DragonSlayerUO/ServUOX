@@ -8,7 +8,7 @@ namespace Server.Items
 {
     public class HolidayTreeDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public HolidayTreeDeed()
             : base(0x14F0)
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BarrelSponge : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public BarrelSponge()
             : base(0xA38A)
         {

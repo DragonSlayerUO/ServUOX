@@ -5,7 +5,7 @@ namespace Server.Items
     public class Luckblade : Leafblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Luckblade()
         {
             Attributes.Luck = 20;

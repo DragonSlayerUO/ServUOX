@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FieldStoneHouseDeed : HouseDeed
     {
-        [Constructable]
+        [Constructible]
         public FieldStoneHouseDeed()
             : base(0x66, new Point3D(0, 4, 0))
         {

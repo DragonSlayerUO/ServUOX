@@ -86,7 +86,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextResourceCount { get; set; }
 
-        [Constructable]
+        [Constructible]
         public MiningCart(MiningCartType type)
             : base()
         {
@@ -501,7 +501,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public MiningCartDeed()
             : base()
         {

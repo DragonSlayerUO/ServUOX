@@ -749,7 +749,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => null;
 
-        [Constructable]
+        [Constructible]
         public ShadowguardFountainAddon()
         {
 

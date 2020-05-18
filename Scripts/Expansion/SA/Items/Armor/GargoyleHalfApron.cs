@@ -4,13 +4,13 @@ namespace Server.Items
     [Flipable(0x50D8, 0x50D9)]
     public class GargoyleHalfApron : BaseWaist
     {
-        [Constructable]
+        [Constructible]
         public GargoyleHalfApron()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargoyleHalfApron(int hue)
             : base(0x50D8, hue)
         {

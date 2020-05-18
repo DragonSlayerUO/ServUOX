@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TravestysFineTeakwoodTray : Item
     {
-        [Constructable]
+        [Constructible]
         public TravestysFineTeakwoodTray()
             : base(Utility.Random(0x991, 2))
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1156990;  // kotl black rod
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public KotlBlackRod()
         {
             Hue = 1150;
@@ -45,7 +45,7 @@ namespace Server.Items
         public override int LabelNumber => 1156994;  // gargish kotl black rod
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishKotlBlackRod()
         {
             Hue = 1150;

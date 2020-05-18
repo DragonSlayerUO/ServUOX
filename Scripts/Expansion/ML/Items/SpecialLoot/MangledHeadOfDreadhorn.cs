@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x3156, 0x3157)]
     public class MangledHeadOfDreadhorn : Item
     {
-        [Constructable]
+        [Constructible]
         public MangledHeadOfDreadhorn()
             : base(0x3156)
         {

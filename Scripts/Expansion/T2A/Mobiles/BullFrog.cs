@@ -4,7 +4,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Bullfrog")]
     public class BullFrog : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public BullFrog()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

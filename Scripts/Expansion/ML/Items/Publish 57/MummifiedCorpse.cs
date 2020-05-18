@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112400;  //a mummified corpse
 
-        [Constructable]
+        [Constructible]
         public MummifiedCorpse() : base(0x1C20)
         {
         }

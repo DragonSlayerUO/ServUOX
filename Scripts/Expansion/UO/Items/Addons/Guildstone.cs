@@ -330,13 +330,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Guild Guild { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public GuildstoneDeed()
             : this(null, null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GuildstoneDeed(string guildName, string abbrev)
             : this(null, guildName, abbrev)
         {

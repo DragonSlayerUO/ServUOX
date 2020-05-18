@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158481;  // 21st Anniversary Gift Bag
 
-        [Constructable]
+        [Constructible]
         public AnniversaryBag21st(Mobile m)
         {
             Hue = 1151;

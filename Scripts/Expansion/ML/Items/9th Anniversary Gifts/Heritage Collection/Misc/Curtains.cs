@@ -90,7 +90,7 @@ namespace Server.Items
     public class CurtainsAddon : BaseAddon
     {
         public override BaseAddonDeed Deed => new CurtainsDeed();
-        [Constructable]
+        [Constructible]
         public CurtainsAddon(bool east)
             : base()
         {
@@ -137,7 +137,7 @@ namespace Server.Items
 
         private bool m_East;
 
-        [Constructable]
+        [Constructible]
         public CurtainsDeed()
             : base()
         {

@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class TavaraSewel : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TavaraSewel()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

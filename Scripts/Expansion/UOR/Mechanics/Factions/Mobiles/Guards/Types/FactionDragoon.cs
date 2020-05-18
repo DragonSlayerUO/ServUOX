@@ -5,7 +5,7 @@ namespace Server.Factions
 {
     public class FactionDragoon : BaseFactionGuard
     {
-        [Constructable]
+        [Constructible]
         public FactionDragoon()
             : base("the dragoon")
         {

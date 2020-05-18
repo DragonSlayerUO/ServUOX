@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         private Mobile m_Queen;
         private bool m_SpawnedQueen;
-        [Constructable]
+        [Constructible]
         public LordOaks()
             : base(AIType.AI_Paladin, FightMode.Evil)
         {

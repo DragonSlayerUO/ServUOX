@@ -9,7 +9,7 @@ namespace Server.Factions
         public const int SilverPrice = 500;
         public const int GoldPrice = 3000;
         private Faction m_Faction;
-        [Constructable]
+        [Constructible]
         public FactionWarHorse()
             : this(null)
         {

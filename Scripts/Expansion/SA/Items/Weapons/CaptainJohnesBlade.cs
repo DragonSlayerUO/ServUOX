@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154475;  // CaptainJohnesBlade
 
-        [Constructable]
+        [Constructible]
         public CaptainJohnesBlade()
         {
             Slayer2 = BaseRunicTool.GetRandomSlayer();
@@ -52,7 +52,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154475;  // GargishCaptainJohnesBlade
 
-        [Constructable]
+        [Constructible]
         public GargishCaptainJohnesBlade()
         {
             Slayer2 = BaseRunicTool.GetRandomSlayer();

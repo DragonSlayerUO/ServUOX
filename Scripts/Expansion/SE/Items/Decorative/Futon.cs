@@ -6,7 +6,7 @@ namespace Server.Items
     public class Futon : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Futon()
             : base(Utility.RandomDouble() > 0.5 ? 0x295C : 0x295E)
         {

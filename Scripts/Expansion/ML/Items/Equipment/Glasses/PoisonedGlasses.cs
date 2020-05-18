@@ -5,7 +5,7 @@ namespace Server.Items
     public class PoisonedGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PoisonedGlasses()
         {
             Attributes.BonusStam = 3;

@@ -5,7 +5,7 @@ namespace Server.Items
     public class MacheteOfDefense : ElvenMachete
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MacheteOfDefense()
         {
             Attributes.DefendChance = 5;

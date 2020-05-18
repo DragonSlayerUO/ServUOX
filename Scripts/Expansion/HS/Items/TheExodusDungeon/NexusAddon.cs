@@ -34,7 +34,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new NexusAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public NexusAddon()
         {
             AddComponent(new NexusComponent(19324), -1, 1, 0);
@@ -73,7 +73,7 @@ namespace Server.Items
     {
         public override BaseAddon Addon => new NexusAddon();
 
-        [Constructable]
+        [Constructible]
         public NexusAddonDeed()
         {
             Name = "Nexus Deed";

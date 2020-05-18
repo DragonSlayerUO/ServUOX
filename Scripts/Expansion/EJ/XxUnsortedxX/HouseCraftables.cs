@@ -132,7 +132,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CraftableHouseItem(CraftableItemType type)
             : base(IDs[(int)type][1])
         {

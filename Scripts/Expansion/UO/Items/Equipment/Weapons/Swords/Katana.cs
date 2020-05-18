@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x13FF, 0x13FE)]
     public class Katana : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Katana()
             : base(0x13FF)
         {

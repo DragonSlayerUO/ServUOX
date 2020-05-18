@@ -6,7 +6,7 @@ namespace Server.Items
     public class SpiritualityHelm : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SpiritualityHelm()
             : base(0x2B10)
         {

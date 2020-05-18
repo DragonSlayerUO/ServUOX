@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a dragon turtle hatchling corpse")]
     public class DragonTurtleHatchling : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DragonTurtleHatchling()
             : base(AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

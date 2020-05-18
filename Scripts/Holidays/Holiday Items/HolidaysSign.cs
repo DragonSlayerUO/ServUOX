@@ -13,7 +13,7 @@ namespace Server.Items
 
         public int GumpID { get; set; }
 
-        [Constructable]
+        [Constructible]
         public HolidaysSign()
             : base(0xA130)
         {

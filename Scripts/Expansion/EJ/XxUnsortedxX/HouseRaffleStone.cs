@@ -90,7 +90,7 @@ namespace Server.Items
         private HouseRaffleExpireAction m_ExpireAction;
         private int m_TicketPrice;
         private List<RaffleEntry> m_Entries;
-        [Constructable]
+        [Constructible]
         public HouseRaffleStone()
             : base(0xEDD)
         {

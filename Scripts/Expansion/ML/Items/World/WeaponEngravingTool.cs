@@ -10,7 +10,7 @@ namespace Server.Items
         public override int LowSkillMessage => 1076178;  // // Your tinkering skill is too low to fix this yourself.  An NPC tinkerer can help you repair this for a fee.
         public override int VeteranRewardCliloc => 1076224;  // 8th Year Veteran Reward
 
-        [Constructable]
+        [Constructible]
         public WeaponEngravingTool()
             : base(0x32F8, 10)
         {

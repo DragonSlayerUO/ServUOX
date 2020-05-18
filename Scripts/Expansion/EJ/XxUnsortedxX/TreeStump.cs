@@ -16,7 +16,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextResourceCount { get; set; }
 
-        [Constructable]
+        [Constructible]
         public TreeStump(int itemID)
             : base()
         {
@@ -225,7 +225,7 @@ namespace Server.Items
         private bool m_IsRewardItem;
         private int m_Logs;
 
-        [Constructable]
+        [Constructible]
         public TreeStumpDeed()
             : base()
         {

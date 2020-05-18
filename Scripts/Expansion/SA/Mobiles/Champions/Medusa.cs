@@ -20,7 +20,7 @@ namespace Server.Mobiles
         private DateTime m_StoneDelay;
         private DateTime m_NextCarve;
 
-        [Constructable]
+        [Constructible]
         public Medusa()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.1, 0.2)
         {

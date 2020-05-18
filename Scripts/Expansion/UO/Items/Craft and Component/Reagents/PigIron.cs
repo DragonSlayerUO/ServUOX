@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class PigIron : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public PigIron()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PigIron(int amount)
             : base(0xF8A, amount)
         {

@@ -6,13 +6,13 @@ namespace Server.Items
 
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public FishSteak()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FishSteak(int amount)
             : base(amount, 0x97B)
         {

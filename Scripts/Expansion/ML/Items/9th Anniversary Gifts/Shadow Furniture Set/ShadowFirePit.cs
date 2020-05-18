@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ShadowFirePitAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ShadowFirePitAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x3653, 1076680), 1, 0, 0);
@@ -58,7 +58,7 @@ namespace Server.Items
 
         public override bool ExcludeDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public ShadowFirePitDeed()
         {
             LootType = LootType.Blessed;

@@ -7,7 +7,7 @@ namespace Server.Items
     public class CrimsonCincture : HalfApron
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CrimsonCincture()
             : base()
         {
@@ -42,7 +42,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishCrimsonCincture()
             : base()
         {

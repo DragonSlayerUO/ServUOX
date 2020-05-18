@@ -6,7 +6,7 @@ namespace Server.Items
     {
         private Item m_Spurt;
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public FlameSpurtTrap()
             : base(0x1B71)
         {

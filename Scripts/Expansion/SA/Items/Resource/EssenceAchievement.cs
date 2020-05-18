@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class EssenceAchievement : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public EssenceAchievement()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EssenceAchievement(int amount)
             : base(0x571C)
         {

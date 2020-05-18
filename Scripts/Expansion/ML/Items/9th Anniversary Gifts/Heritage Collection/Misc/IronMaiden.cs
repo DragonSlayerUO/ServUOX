@@ -120,7 +120,7 @@ namespace Server.Items
 
     public class IronMaidenDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public IronMaidenDeed()
             : base()
         {

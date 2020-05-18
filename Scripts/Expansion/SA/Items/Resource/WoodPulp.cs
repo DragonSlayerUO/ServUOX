@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class WoodPulp : Item
     {
-        [Constructable]
+        [Constructible]
         public WoodPulp()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WoodPulp(int amount)
             : base(0x103D)
         {

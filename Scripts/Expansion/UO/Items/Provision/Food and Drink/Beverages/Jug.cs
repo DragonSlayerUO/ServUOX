@@ -16,7 +16,7 @@ namespace Server.Items
             return 0;
         }
 
-        [Constructable]
+        [Constructible]
         public Jug(BeverageType type)
             : base(type)
         {

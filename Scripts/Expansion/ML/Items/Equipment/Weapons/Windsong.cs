@@ -5,7 +5,7 @@ namespace Server.Items
     public class Windsong : MagicalShortbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Windsong()
             : base()
         {

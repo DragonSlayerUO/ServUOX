@@ -18,7 +18,7 @@ namespace Server.Items
 
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public SkillMasteryPrimer(SkillName skill, int volume) : base(7714)
         {
             Skill = skill;

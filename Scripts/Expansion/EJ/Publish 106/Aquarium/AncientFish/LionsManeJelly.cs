@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class LionsManeJelly : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public LionsManeJelly()
             : base(0xA387)
         {

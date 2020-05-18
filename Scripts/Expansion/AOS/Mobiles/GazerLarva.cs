@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a gazer larva corpse")]
     public class GazerLarva : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GazerLarva()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

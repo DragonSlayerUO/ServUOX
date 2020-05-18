@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Strongroot : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Strongroot()
             : base("Strongroot")
         {

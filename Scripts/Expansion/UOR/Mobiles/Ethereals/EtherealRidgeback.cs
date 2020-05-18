@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealRidgeback : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealRidgeback()
             : base(0x2615, 0x3E9A, 0x3EBA, DefaultEtherealHue)
         { }

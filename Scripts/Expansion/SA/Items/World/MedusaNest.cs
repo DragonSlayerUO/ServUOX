@@ -12,7 +12,7 @@ namespace Server.Items
             ,
             { 7065, 1, -1, 0 }, { 7054, 0, 1, 0 }, { 7054, 0, -1, 0 }// 7	8	9	
         };
-        [Constructable]
+        [Constructible]
         public MedusaSNestAddon()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)
@@ -40,7 +40,7 @@ namespace Server.Items
 
     public class MedusaSNestAddonDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public MedusaSNestAddonDeed()
         {
             Name = "MedusaSNest";

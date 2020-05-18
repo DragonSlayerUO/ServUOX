@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Brigand Cannibal corpse")]
     public class BrigandCannibal : Brigand
     {
-        [Constructable]
+        [Constructible]
         public BrigandCannibal()
             : base()
         {

@@ -3,7 +3,7 @@ namespace Server.Items
     public class SilverBracelet : BaseBracelet
     {
 
-        [Constructable]
+        [Constructible]
         public SilverBracelet()
             : base(0x1F06)
         {

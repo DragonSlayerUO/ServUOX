@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a coil corpse")]
     public class Coil : SilverSerpent
     {
-        [Constructable]
+        [Constructible]
         public Coil()
             : base()
         {

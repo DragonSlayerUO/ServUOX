@@ -6,7 +6,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.Easle")]
     public class EasleSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public EasleSouth()
             : base(0xF66)
         {
@@ -39,7 +39,7 @@ namespace Server.Items
     [Furniture]
     public class EasleEast : Item
     {
-        [Constructable]
+        [Constructible]
         public EasleEast()
             : base(0xF68)
         {
@@ -72,7 +72,7 @@ namespace Server.Items
     [Furniture]
     public class EasleNorth : Item
     {
-        [Constructable]
+        [Constructible]
         public EasleNorth()
             : base(0xF6A)
         {

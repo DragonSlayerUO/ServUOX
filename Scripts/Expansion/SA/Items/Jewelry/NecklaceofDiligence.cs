@@ -5,7 +5,7 @@ namespace Server.Items
     public class NecklaceofDiligence : SilverNecklace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public NecklaceofDiligence()
         {
             Hue = 221;

@@ -7,7 +7,7 @@ namespace Server.Engines.BulkOrders
     {
         public override BODType BODType => BODType.Inscription;
 
-        [Constructable]
+        [Constructible]
         public LargeInscriptionBOD()
         {
             LargeBulkEntry[] entries;

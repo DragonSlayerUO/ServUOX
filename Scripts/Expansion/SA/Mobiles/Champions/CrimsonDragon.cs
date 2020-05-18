@@ -9,7 +9,7 @@ namespace Server.Mobiles
         public override bool GiveMLSpecial => false;
 
         private DateTime m_NextTerror;
-        [Constructable]
+        [Constructible]
         public CrimsonDragon()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

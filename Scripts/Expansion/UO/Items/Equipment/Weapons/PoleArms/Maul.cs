@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x143B, 0x143A)]
     public class Maul : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public Maul()
             : base(0x143B)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoBottlesOfLiquor : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoBottlesOfLiquor()
             : base(0x99E)
         {

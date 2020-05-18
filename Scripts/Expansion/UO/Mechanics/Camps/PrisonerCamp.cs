@@ -7,7 +7,7 @@ namespace Server.Multis
     {
         private BaseDoor m_Gate;
 
-        [Constructable]
+        [Constructible]
         public PrisonerCamp() : base(0x1D4C)
         {
         }

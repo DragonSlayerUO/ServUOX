@@ -8,12 +8,12 @@ namespace Server.Items
     {
         public override int LabelNumber => 1124032;  // foil sheet
 
-        [Constructable]
+        [Constructible]
         public GoldFoil() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GoldFoil(int amount)
             : base(0x9C48)
         {

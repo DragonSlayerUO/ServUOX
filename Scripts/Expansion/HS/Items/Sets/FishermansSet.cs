@@ -48,7 +48,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansHat()
         {
             Hue = 2578;
@@ -111,7 +111,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansTrousers()
         {
             Hue = 2578;
@@ -177,7 +177,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansVest()
         {
             Hue = 2578;
@@ -241,7 +241,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansEelskinGloves()
         {
             Hue = 2578;
@@ -305,7 +305,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansChestguard()
         {
             ItemID = 0x4052;
@@ -370,7 +370,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansKilt()
         {
             Hue = 2578;
@@ -434,7 +434,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansArms()
         {
             Hue = 2578;
@@ -498,7 +498,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FishermansEarrings()
         {
             Hue = 2578;

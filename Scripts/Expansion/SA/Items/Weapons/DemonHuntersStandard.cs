@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113864;  // Demon Hunter's Standard
 
-        [Constructable]
+        [Constructible]
         public DemonHuntersStandard()
         {
             Hue = 1377;

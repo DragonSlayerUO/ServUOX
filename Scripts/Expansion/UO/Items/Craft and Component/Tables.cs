@@ -3,7 +3,7 @@ namespace Server.Items
     [Furniture]
     public class ElegantLowTable : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public ElegantLowTable()
             : base(0x2819)
         {
@@ -31,7 +31,7 @@ namespace Server.Items
     [Furniture]
     public class PlainLowTable : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public PlainLowTable()
             : base(0x281A)
         {
@@ -60,7 +60,7 @@ namespace Server.Items
     [Flipable(0xB90, 0xB7D)]
     public class LargeTable : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public LargeTable()
             : base(0xB90)
         {
@@ -89,7 +89,7 @@ namespace Server.Items
     [Flipable(0xB35, 0xB34)]
     public class Nightstand : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public Nightstand()
             : base(0xB35)
         {
@@ -118,7 +118,7 @@ namespace Server.Items
     [Flipable(0xB8F, 0xB7C)]
     public class YewWoodTable : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public YewWoodTable()
             : base(0xB8F)
         {

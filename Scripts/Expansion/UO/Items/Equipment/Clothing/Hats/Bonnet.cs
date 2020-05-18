@@ -11,13 +11,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public Bonnet()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Bonnet(int hue)
             : base(0x1719, hue)
         {

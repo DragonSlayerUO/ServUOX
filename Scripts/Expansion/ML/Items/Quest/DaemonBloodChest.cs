@@ -6,7 +6,7 @@ namespace Server.Engines.Quests.Haven
 {
     public class DaemonBloodChest : MetalChest
     {
-        [Constructable]
+        [Constructible]
         public DaemonBloodChest()
         {
             Movable = false;

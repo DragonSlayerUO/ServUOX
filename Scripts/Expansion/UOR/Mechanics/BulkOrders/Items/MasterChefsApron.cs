@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1157228;  // Master Chef's Apron
 
-        [Constructable]
+        [Constructible]
         public MasterChefsApron()
         {
             Hue = 1990;

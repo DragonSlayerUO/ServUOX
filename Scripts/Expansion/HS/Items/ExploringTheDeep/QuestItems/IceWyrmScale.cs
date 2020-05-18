@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154224;  // Ice Wyrm Scale
 
-        [Constructable]
+        [Constructible]
         public IceWyrmScale()
             : base(0x26B2)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class UnderstandingAnimals : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public UnderstandingAnimals()
             : base("Margo", "the Animal Trainer")
         {

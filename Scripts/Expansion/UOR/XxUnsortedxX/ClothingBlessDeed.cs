@@ -62,7 +62,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041008;  // A clothing bless deed
 
-        [Constructable]
+        [Constructible]
         public ClothingBlessDeed()
             : base(0x14F0)
         {

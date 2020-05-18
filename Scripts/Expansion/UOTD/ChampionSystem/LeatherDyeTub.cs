@@ -5,7 +5,7 @@ namespace Server.Items
     public class LeatherDyeTub : DyeTub, Engines.VeteranRewards.IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public LeatherDyeTub()
         {
             LootType = LootType.Blessed;

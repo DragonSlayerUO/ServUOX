@@ -30,13 +30,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile LockingPerson { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SecretChest()
             : this(0x9707)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SecretChest(int id)
             : base(id)
         {

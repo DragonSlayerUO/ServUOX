@@ -84,7 +84,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SpiralStaircaseAddon(bool topper)
         {
             if (topper)
@@ -166,7 +166,7 @@ namespace Server.Items
 
         private bool m_Topper;
 
-        [Constructable]
+        [Constructible]
         public SpiralStaircaseDeed()
         {
             LootType = LootType.Blessed;

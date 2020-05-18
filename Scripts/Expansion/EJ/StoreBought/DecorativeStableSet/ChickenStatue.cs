@@ -18,7 +18,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ChickenStatue()
             : base(0xA513)
         {

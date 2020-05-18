@@ -4,7 +4,7 @@ namespace Server.Items.Holiday
 {
     public class PaintedEvilJesterMask : BasePaintedMask
     {
-        [Constructable]
+        [Constructible]
         public PaintedEvilJesterMask()
             : base(0x4BA5)
         {

@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0x1765, 0x1767)]
     public class AbyssalCloth : Item, ICommodity, IScissorable
     {
-        [Constructable]
+        [Constructible]
         public AbyssalCloth()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AbyssalCloth(int amount)
             : base(0x1767)
         {

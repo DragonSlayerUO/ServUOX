@@ -46,13 +46,13 @@ namespace Server.Items
         public static readonly int MaxCharges = 2000;
         private int m_Charges;
 
-        [Constructable]
+        [Constructible]
         public BroadcastCrystal()
             : this(2000)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BroadcastCrystal(int charges)
             : base(0x1ED0)
         {
@@ -292,7 +292,7 @@ namespace Server.Items
     public class ReceiverCrystal : Item
     {
         private BroadcastCrystal m_Sender;
-        [Constructable]
+        [Constructible]
         public ReceiverCrystal()
             : base(0x1ED0)
         {

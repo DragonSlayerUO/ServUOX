@@ -7,7 +7,7 @@ namespace Server.Mobiles
     {
         public Type RepairResource => typeof(Server.Items.IronIngot);
 
-        [Constructable]
+        [Constructible]
         public ClockworkScorpion()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.4, 0.8)
         {

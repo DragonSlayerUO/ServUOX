@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1157344;  // the deceiver
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public TheDeceiver()
         {
             ExtendedWeaponAttributes.HitSparks = 20;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Sextant : Item
     {
-        [Constructable]
+        [Constructible]
         public Sextant()
             : base(0x1058)
         {

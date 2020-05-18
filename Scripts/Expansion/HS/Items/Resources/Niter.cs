@@ -47,12 +47,12 @@ namespace Server.Items
 
         public override bool Decays => true;
 
-        [Constructable]
+        [Constructible]
         public NiterDeposit() : this(Utility.RandomMinMax(1, 5))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public NiterDeposit(int size)
         {
             if (size < 1) size = 1;

@@ -7,13 +7,13 @@ namespace Server.Items
     public class OrangePetals : Item, ICommodity
     {
         private static readonly Hashtable m_Table = new Hashtable();
-        [Constructable]
+        [Constructible]
         public OrangePetals()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public OrangePetals(int amount)
             : base(0x1021)
         {

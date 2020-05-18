@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("the remains of Tempest")]
     public class Tempest : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Tempest()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

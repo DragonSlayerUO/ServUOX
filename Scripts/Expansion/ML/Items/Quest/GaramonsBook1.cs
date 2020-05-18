@@ -39,7 +39,7 @@ namespace Server.Items
                 "from my mind. They are",
                 "like poison. We cannot let",
                 "this fiend divide us."));
-        [Constructable]
+        [Constructible]
         public GaramonsBook1()
             : base(false)
         {

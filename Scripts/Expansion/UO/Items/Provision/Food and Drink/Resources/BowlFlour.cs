@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BowlFlour : Item
     {
-        [Constructable]
+        [Constructible]
         public BowlFlour()
             : base(0xa1e)
         {

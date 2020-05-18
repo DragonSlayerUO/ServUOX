@@ -15,12 +15,12 @@ namespace Server.Items
 
         public bool IsLight { get { return m_IsLight; } set { m_IsLight = value; } }
 
-        [Constructable]
+        [Constructible]
         public Matches() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Matches(int amount) : base(3947)
         {
             Stackable = true;

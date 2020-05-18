@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class SlabOfBacon : Food
     {
-        [Constructable]
+        [Constructible]
         public SlabOfBacon()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SlabOfBacon(int amount)
             : base(amount, 0x976)
         {

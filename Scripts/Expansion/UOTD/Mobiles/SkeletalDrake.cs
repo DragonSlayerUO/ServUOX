@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a skeletal drake corpse")]
     public class SkeletalDrake : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SkeletalDrake()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable]
     public class WhiteHangingLantern : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public WhiteHangingLantern()
             : base(0x24C6)
         {

@@ -10,12 +10,12 @@ namespace Server.Items
 {
     public class HiddenTreasuresTreasureMap : TreasureMap
     {
-        [Constructable]
+        [Constructible]
         public HiddenTreasuresTreasureMap() : this(2, GetMap())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HiddenTreasuresTreasureMap(int level, Map map)
             : base(level, map)
         {
@@ -76,12 +76,12 @@ namespace Server.Items
 
     public class SaltySeaMIB : MessageInABottle
     {
-        [Constructable]
+        [Constructible]
         public SaltySeaMIB() : this(Utility.RandomBool() ? Map.Trammel : Map.Felucca, 3)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SaltySeaMIB(Map map, int level)
             : base(map, level)
         {
@@ -134,7 +134,7 @@ namespace Server.Items
 
     public class SaltySeaSOS : SOS
     {
-        [Constructable]
+        [Constructible]
         public SaltySeaSOS(Map map, int level) : base(map, level)
         {
             //AssignLocation();
@@ -225,7 +225,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156623;
 
-        [Constructable]
+        [Constructible]
         public StasisChamberPowerCore()
             : base(40155)
         {
@@ -252,7 +252,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156624;
 
-        [Constructable]
+        [Constructible]
         public StasisChamberActivator()
             : base(40158)
         {
@@ -280,7 +280,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156626;
 
-        [Constructable]
+        [Constructible]
         public StasisChamberRegulator()
             : base(40157)
         {
@@ -308,7 +308,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156628;
 
-        [Constructable]
+        [Constructible]
         public StasisChamberStator()
             : base(40156)
         {
@@ -336,7 +336,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156620;
 
-        [Constructable]
+        [Constructible]
         public BottledMyrmidexPheromone()
             : base(3836)
         {
@@ -364,7 +364,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156617;
 
-        [Constructable]
+        [Constructible]
         public BottleOfConcentratedInsecticide()
             : base(22344)
         {
@@ -392,7 +392,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156775;
 
-        [Constructable]
+        [Constructible]
         public MyrmidexPopulationReport()
             : base(18098)
         {
@@ -421,7 +421,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156721;  // Unabridged Atlas of Eodon
 
-        [Constructable]
+        [Constructible]
         public UnabridgedAtlasOfEodon()
             : base(7185)
         {

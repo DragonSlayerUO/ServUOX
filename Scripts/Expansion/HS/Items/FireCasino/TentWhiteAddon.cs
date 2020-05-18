@@ -32,7 +32,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => new tent_whiteAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public tent_whiteAddon()
         {
 
@@ -169,7 +169,7 @@ namespace Server.Items
     {
         public override BaseAddon Addon => new tent_whiteAddon();
 
-        [Constructable]
+        [Constructible]
         public tent_whiteAddonDeed()
         {
             Name = "tent_white";

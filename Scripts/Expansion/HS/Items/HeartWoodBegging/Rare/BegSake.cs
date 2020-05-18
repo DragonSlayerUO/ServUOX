@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BegSake : Item
     {
-        [Constructable]
+        [Constructible]
         public BegSake()
             : base(9442)
         {

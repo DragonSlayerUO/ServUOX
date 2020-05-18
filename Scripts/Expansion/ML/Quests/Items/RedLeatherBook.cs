@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class RedLeatherBook : BaseBook
     {
-        [Constructable]
+        [Constructible]
         public RedLeatherBook()
             : base(0xFF2)
         {

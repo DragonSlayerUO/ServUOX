@@ -5,12 +5,12 @@ namespace Server.Items
 {
     public class GargishClothArmsArmor : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public GargishClothArmsArmor() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothArmsArmor(int hue)
             : base(0x404)
         {
@@ -110,12 +110,12 @@ namespace Server.Items
 
     public class FemaleGargishClothArmsArmor : GargishClothArmsArmor
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothArmsArmor() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothArmsArmor(int hue)
             : base(0x403)
         {
@@ -143,13 +143,13 @@ namespace Server.Items
 
     public class GargishClothChestArmor : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public GargishClothChestArmor()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothChestArmor(int hue)
             : base(0x406)
         {
@@ -249,13 +249,13 @@ namespace Server.Items
 
     public class FemaleGargishClothChestArmor : GargishClothChestArmor
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothChestArmor()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothChestArmor(int hue)
             : base(0x405)
         {
@@ -283,13 +283,13 @@ namespace Server.Items
 
     public class GargishClothLegsArmor : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public GargishClothLegsArmor()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothLegsArmor(int hue)
             : base(0x40A)
         {
@@ -389,13 +389,13 @@ namespace Server.Items
 
     public class FemaleGargishClothLegsArmor : GargishClothLegsArmor
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothLegsArmor()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothLegsArmor(int hue)
             : base(0x409)
         {
@@ -423,13 +423,13 @@ namespace Server.Items
 
     public class GargishClothKiltArmor : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public GargishClothKiltArmor()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothKiltArmor(int hue)
             : base(0x408)
         {
@@ -529,13 +529,13 @@ namespace Server.Items
 
     public class FemaleGargishClothKiltArmor : GargishClothKiltArmor
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothKiltArmor()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothKiltArmor(int hue)
             : base(0x407)
         {

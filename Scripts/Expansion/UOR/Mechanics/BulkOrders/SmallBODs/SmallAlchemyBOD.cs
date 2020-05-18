@@ -13,7 +13,7 @@ namespace Server.Engines.BulkOrders
     {
         public override BODType BODType => BODType.Alchemy;
 
-        [Constructable]
+        [Constructible]
         public SmallAlchemyBOD()
         {
             SmallBulkEntry[] entries = SmallBulkEntry.AlchemySmalls;

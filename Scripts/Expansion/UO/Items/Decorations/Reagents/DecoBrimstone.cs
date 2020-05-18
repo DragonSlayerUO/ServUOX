@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoBrimstone : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoBrimstone()
             : base(0xF7F)
         {

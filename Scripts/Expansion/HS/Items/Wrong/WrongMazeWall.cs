@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class WrongMazeWall : BaseWall
     {
-        [Constructable]
+        [Constructible]
         public WrongMazeWall()
             : base(578)
         {

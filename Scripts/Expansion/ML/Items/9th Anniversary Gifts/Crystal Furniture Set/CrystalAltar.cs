@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CrystalAltarAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CrystalAltarAddon()
         {
             AddComponent(new LocalizedAddonComponent(13826, 1076672), 1, 1, 0);
@@ -42,7 +42,7 @@ namespace Server.Items
 
         public override BaseAddon Addon => new CrystalAltarAddon();
 
-        [Constructable]
+        [Constructible]
         public CrystalAltarDeed()
             : base()
         {

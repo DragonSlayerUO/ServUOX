@@ -17,17 +17,17 @@ namespace Server.Items
         private int m_SoundID;
         private TimeSpan m_Delay;
 
-        [Constructable]
+        [Constructible]
         public Teleporter()
             : this(new Point3D(0, 0, 0), null, false)
         { }
 
-        [Constructable]
+        [Constructible]
         public Teleporter(Point3D pointDest, Map mapDest)
             : this(pointDest, mapDest, false)
         { }
 
-        [Constructable]
+        [Constructible]
         public Teleporter(Point3D pointDest, Map mapDest, bool creatures)
             : base(0x1BC3)
         {
@@ -432,7 +432,7 @@ namespace Server.Items
         private string m_MessageString;
         private int m_MessageNumber;
 
-        [Constructable]
+        [Constructible]
         public SkillTeleporter()
         { }
 
@@ -587,7 +587,7 @@ namespace Server.Items
         private int m_Keyword;
         private int m_Range;
 
-        [Constructable]
+        [Constructible]
         public KeywordTeleporter()
         {
             m_Keyword = -1;
@@ -737,7 +737,7 @@ namespace Server.Items
         private string m_ProgressMessage;
         private bool m_ShowTimeRemaining;
 
-        [Constructable]
+        [Constructible]
         public WaitTeleporter()
         { }
 
@@ -908,17 +908,17 @@ namespace Server.Items
         private TimeSpan m_TimeoutDelay;
         private Dictionary<Mobile, Timer> m_Teleporting;
 
-        [Constructable]
+        [Constructible]
         public TimeoutTeleporter()
             : this(new Point3D(0, 0, 0), null, false)
         { }
 
-        [Constructable]
+        [Constructible]
         public TimeoutTeleporter(Point3D pointDest, Map mapDest)
             : this(pointDest, mapDest, false)
         { }
 
-        [Constructable]
+        [Constructible]
         public TimeoutTeleporter(Point3D pointDest, Map mapDest, bool creatures)
             : base(pointDest, mapDest, creatures)
         {
@@ -1020,7 +1020,7 @@ namespace Server.Items
     {
         private TimeoutTeleporter m_Teleporter;
 
-        [Constructable]
+        [Constructible]
         public TimeoutGoal()
             : base(0x1822)
         {
@@ -1071,7 +1071,7 @@ namespace Server.Items
     {
         private ConditionFlag m_Flags;
 
-        [Constructable]
+        [Constructible]
         public ConditionTeleporter()
         { }
 
@@ -1432,7 +1432,7 @@ namespace Server.Items
 
     public class ClickTeleporter : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public ClickTeleporter(int itemID)
             : this(itemID, new Point3D(0, 0, 0), null)
         { }

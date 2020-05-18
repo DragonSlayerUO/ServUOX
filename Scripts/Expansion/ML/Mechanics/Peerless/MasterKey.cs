@@ -13,7 +13,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public PeerlessAltar Altar { get; set; }
 
-        [Constructable]
+        [Constructible]
         public MasterKey(int itemID)
             : base(itemID)
         {

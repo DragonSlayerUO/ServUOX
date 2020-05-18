@@ -5,7 +5,7 @@ namespace Server.Items
     public class RoyalGuardSurvivalKnife : SkinningKnife
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalGuardSurvivalKnife()
         {
             Attributes.SpellChanneling = 1;

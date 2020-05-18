@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1075034; // Bloodwood Spirit
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public BloodwoodSpirit()
             : base(0x2F5A)
         {

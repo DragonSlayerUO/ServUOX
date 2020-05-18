@@ -41,7 +41,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedTimepiece() : base(0x9BC6)
         {
             _TimePieces.Add(this);

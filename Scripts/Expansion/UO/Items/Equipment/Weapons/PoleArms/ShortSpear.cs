@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x1403, 0x1402)]
     public class ShortSpear : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public ShortSpear()
             : base(0x1403)
         {

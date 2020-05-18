@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PrimitiveFetish : Item
     {
-        [Constructable]
+        [Constructible]
         public PrimitiveFetish()
             : base(0x23F)
         {

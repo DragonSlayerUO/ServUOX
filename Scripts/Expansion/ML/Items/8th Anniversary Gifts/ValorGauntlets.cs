@@ -6,7 +6,7 @@ namespace Server.Items
     public class ValorGauntlets : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ValorGauntlets()
             : base(0x2B0C)
         {

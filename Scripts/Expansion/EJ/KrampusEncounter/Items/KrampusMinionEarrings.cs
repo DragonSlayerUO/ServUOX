@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125645;  // krampus minion earrings        
 
-        [Constructable]
+        [Constructible]
         public KrampusMinionEarrings()
             : base(0xA295)
         {

@@ -9,19 +9,19 @@ namespace Server.Items
         private MarkContainerTimer m_RelockTimer;
         private Point3D m_Target;
 
-        [Constructable]
+        [Constructible]
         public MarkContainer()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MarkContainer(bool bone)
             : this(bone, false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MarkContainer(bool bone, bool locked)
             : base(bone ? 0xECA : 0xE79)
         {

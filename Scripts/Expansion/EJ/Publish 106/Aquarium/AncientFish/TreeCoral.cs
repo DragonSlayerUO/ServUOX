@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class TreeCoral : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public TreeCoral()
             : base(0xA38F)
         {

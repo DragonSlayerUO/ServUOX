@@ -5,7 +5,7 @@ namespace Server.Items
     public class CastOffZombieSkin : GargishLeatherArms
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CastOffZombieSkin()
         {
             Hue = 1893;

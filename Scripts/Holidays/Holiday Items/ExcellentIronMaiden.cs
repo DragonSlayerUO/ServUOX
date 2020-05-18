@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ExcellentIronMaiden : Item
     {
-        [Constructable]
+        [Constructible]
         public ExcellentIronMaiden()
             : base(0x3f15)
         {

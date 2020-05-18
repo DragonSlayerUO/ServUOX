@@ -5,7 +5,7 @@ namespace Server.Items
     public class LongbowOfMight : ElvenCompositeLongbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LongbowOfMight()
         {
             Attributes.WeaponDamage = 5;

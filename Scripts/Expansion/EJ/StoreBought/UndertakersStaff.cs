@@ -25,7 +25,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public UndertakersStaff()
         {
             if (!Siege.SiegeShard)

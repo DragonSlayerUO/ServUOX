@@ -8,13 +8,13 @@ namespace Server.Items
     {
         private int m_Bonus;
         private SkillMod m_SkillMod;
-        [Constructable]
+        [Constructible]
         public AncientSmithyHammer(int bonus)
             : this(bonus, 600)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AncientSmithyHammer(int bonus, int uses)
             : base(uses, 0x13E4)
         {

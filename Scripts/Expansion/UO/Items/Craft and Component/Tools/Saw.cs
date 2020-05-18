@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0x1034, 0x1035)]
     public class Saw : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public Saw()
             : base(0x1034)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public Saw(int uses)
             : base(uses, 0x1034)
         {

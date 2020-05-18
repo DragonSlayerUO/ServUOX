@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class MandrakeRoot : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public MandrakeRoot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MandrakeRoot(int amount)
             : base(0xF86, amount)
         {

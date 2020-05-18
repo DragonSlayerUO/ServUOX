@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Thallary : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Thallary()
             : base("Thallary", "the Cloth Weaver")
         {

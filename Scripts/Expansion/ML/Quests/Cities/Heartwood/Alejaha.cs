@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Alejaha : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Alejaha()
             : base("Elder Alejaha", "the Wise")
         {

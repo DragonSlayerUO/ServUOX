@@ -314,7 +314,7 @@ namespace Server.Items
 #if false
 	public class Pizza : Food
 	{
-		[Constructable]
+		[Constructible]
 		public Pizza() : base( 0x1040 )
 		{
 			Stackable = false;

@@ -18,7 +18,7 @@ namespace Server.Engines.HuntsmasterChallenge
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HuntMaster() : base("the huntmaster")
         {
             SpeechHue = 0x3B2;

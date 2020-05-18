@@ -97,12 +97,12 @@ namespace Server.Items
         private SlayerName m_Slayer;
         private SlayerName m_Slayer2;
         //Currently though there are no dual slayer spellbooks, OSI has a habit of putting dual slayer stuff in later
-        [Constructable]
+        [Constructible]
         public Spellbook()
             : this((ulong)0)
         { }
 
-        [Constructable]
+        [Constructible]
         public Spellbook(ulong content)
             : this(content, 0xEFA)
         { }

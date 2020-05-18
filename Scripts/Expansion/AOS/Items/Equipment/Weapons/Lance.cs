@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x26C0, 0x26CA)]
     public class Lance : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Lance()
             : base(0x26C0)
         {

@@ -58,7 +58,7 @@ namespace Server.Items
 
         private ChestQuality _Quality;
 
-        [Constructable]
+        [Constructible]
         public TreasureMapChest(int level)
             : this(null, level, false)
         {

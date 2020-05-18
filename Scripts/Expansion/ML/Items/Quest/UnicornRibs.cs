@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class UnicornRibs : Item
     {
-        [Constructable]
+        [Constructible]
         public UnicornRibs()
             : base(0x9F1)
         {

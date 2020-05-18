@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class AddonContainerComponent : Item, IChopable
     {
-        [Constructable]
+        [Constructible]
         public AddonContainerComponent(int itemID)
             : base(itemID)
         {

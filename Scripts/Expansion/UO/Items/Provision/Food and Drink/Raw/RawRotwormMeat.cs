@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class RawRotwormMeat : CookableFood
     {
-        [Constructable]
+        [Constructible]
         public RawRotwormMeat()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RawRotwormMeat(int amount)
             : base(0x2DB9, 10)
         {

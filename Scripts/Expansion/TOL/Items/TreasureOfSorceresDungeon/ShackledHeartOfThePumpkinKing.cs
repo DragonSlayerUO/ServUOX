@@ -11,7 +11,7 @@ namespace Server.Items
 
         private Timer Timer { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ShackledHeartOfThePumpkinKing()
             : base(0x4A9C)
         {

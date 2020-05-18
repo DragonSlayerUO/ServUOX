@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SosariaSap : Item
     {
-        [Constructable]
+        [Constructible]
         public SosariaSap()
             : base(0x1848)
         {

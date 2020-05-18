@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ResGate : Item
     {
-        [Constructable]
+        [Constructible]
         public ResGate()
             : base(0xF6C)
         {

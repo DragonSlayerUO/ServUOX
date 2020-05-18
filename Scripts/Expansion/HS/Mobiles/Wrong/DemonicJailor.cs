@@ -8,7 +8,7 @@ namespace Server.Mobiles
 {
     public class DemonicJailor : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DemonicJailor()
             : base(AIType.AI_Melee, FightMode.Closest, 15, 1, 0.1, 0.3)
         {

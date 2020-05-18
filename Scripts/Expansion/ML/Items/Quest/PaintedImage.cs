@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Collector
     public class PaintedImage : Item
     {
         private ImageType m_Image;
-        [Constructable]
+        [Constructible]
         public PaintedImage(ImageType image)
             : base(0xFF3)
         {

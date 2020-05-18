@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ArtsSection : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public ArtsSection()
             : base("Zorda", "the artist")
         {

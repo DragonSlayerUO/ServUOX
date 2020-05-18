@@ -45,7 +45,7 @@ namespace Server.Items
 
         public MoonstonePowerGenerator Generator { get; set; }
 
-        [Constructable]
+        [Constructible]
         public MoonstonePowerGeneratorAddon(bool link)
         {
             AddonComponent c = new AddonComponent(39759);
@@ -468,7 +468,7 @@ namespace Server.Items
             set;
         }
 
-        [Constructable]
+        [Constructible]
         public MoonstonePowerGenerator(MoonstonePowerGeneratorAddon addon = null)
             : base(40147, 40153)
         {

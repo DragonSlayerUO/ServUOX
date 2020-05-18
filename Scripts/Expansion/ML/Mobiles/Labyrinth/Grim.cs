@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("the remains of Grim")]
     public class Grim : Drake
     {
-        [Constructable]
+        [Constructible]
         public Grim()
             : base()
         {

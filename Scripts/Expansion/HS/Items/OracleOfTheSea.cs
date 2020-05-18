@@ -15,7 +15,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int UsesRemaining { get { return m_UsesRemaining; } set { m_UsesRemaining = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public OracleOfTheSea()
         {
             Hue = 1265;

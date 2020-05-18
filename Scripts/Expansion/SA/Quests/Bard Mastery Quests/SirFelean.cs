@@ -8,7 +8,7 @@ namespace Server.Engines.Quests
 {
     public class SirFelean : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public SirFelean()
         {
             Name = "Sir Felean";

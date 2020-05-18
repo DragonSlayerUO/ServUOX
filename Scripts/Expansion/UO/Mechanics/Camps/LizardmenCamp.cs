@@ -6,7 +6,7 @@ namespace Server.Multis
 {
     public class LizardmenCamp : BaseCamp
     {
-        [Constructable]
+        [Constructible]
         public LizardmenCamp()
             : base(0x1F6D)
         {

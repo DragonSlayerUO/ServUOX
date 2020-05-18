@@ -7,13 +7,13 @@ namespace Server.Items
         public override int LabelNumber => 1113334;  // void core
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public VoidCore()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public VoidCore(int amount)
             : base(0x5728)
         {

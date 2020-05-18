@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113008;  // Elixir of Agapite Conversion
 
-        [Constructable]
+        [Constructible]
         public ElixirofAgapiteConversion()
             : base(0x99B)
         {

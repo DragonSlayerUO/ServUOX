@@ -38,12 +38,12 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public BookOfMasteries() : this(0x1FFFFFFFFFFF)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BookOfMasteries(ulong content) : base(content, 0x225A)
         {
             Layer = Layer.OneHanded;

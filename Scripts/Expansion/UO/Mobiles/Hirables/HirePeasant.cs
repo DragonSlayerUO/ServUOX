@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class HirePeasant : BaseHire
     {
-        [Constructable]
+        [Constructible]
         public HirePeasant()
         {
             SpeechHue = Utility.RandomDyedHue();

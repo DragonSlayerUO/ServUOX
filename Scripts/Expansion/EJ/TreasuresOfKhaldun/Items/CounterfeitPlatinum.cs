@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158686;  // counterfeit platinum
 
-        [Constructable]
+        [Constructible]
         public CounterfeitPlatinum()
             : base(0x1BF9)
         {

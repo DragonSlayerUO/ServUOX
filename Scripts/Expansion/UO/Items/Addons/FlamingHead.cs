@@ -9,13 +9,13 @@ namespace Server.Items
     public class FlamingHead : StoneFaceTrapNoDamage, IAddon, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public FlamingHead()
             : this(StoneFaceTrapType.NorthWall)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FlamingHead(StoneFaceTrapType type)
             : base()
         {
@@ -132,7 +132,7 @@ namespace Server.Items
     public class FlamingHeadDeed : Item, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public FlamingHeadDeed()
             : base(0x14F0)
         {

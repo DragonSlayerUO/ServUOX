@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool CanBeWornByGargoyles => true;
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public RobeOfTheEclipse()
             : base(0x1F03, 0x486)
         {

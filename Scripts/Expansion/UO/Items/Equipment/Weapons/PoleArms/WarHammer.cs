@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x1439, 0x1438)]
     public class WarHammer : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public WarHammer()
             : base(0x1439)
         {

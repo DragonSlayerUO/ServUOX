@@ -8,7 +8,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new LongWoodenTableEastDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public LongWoodenTableEastAddon()
         {
             AddComponent(new AddonComponent(0x4CD3), 1, -1, 0);
@@ -42,7 +42,7 @@ namespace Server.Items
         public override BaseAddon Addon => new LongWoodenTableEastAddon();
         public override int LabelNumber => 1154167;  // Long Wooden Table (East)
 
-        [Constructable]
+        [Constructible]
         public LongWoodenTableEastDeed()
         {
         }

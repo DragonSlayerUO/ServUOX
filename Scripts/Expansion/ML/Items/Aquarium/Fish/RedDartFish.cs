@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class RedDartFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public RedDartFish()
             : base(0x3B00)
         {

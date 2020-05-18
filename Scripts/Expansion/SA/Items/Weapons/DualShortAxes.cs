@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x8FD, 0x4068)]
     public class DualShortAxes : BaseAxe
     {
-        [Constructable]
+        [Constructible]
         public DualShortAxes()
             : base(0x8FD)
         {

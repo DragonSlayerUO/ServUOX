@@ -7,13 +7,13 @@ namespace Server.Items
 {
     public class PowerGenerator : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PowerGenerator()
             : this(Utility.RandomMinMax(3, 6))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PowerGenerator(int sideLength)
         {
             AddGeneratorComponent(0x73, 0, 0, 0);

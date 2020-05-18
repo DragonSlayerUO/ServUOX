@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class ElwoodMcCarrin : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public ElwoodMcCarrin()
             : base("the well-known collector")
         {

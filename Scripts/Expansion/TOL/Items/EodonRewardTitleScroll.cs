@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class EodonTribeRewardTitleToken : BaseRewardTitleToken
     {
-        [Constructable]
+        [Constructible]
         public EodonTribeRewardTitleToken() : base(18098)
         {
             Hue = 467;
@@ -45,7 +45,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Defender of Eodon");
 
-        [Constructable]
+        [Constructible]
         public DefenderOfEodonTitleDeed()
         {
         }
@@ -71,7 +71,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Defender of the Myrmidex");
 
-        [Constructable]
+        [Constructible]
         public DefenderOfTheMyrmidexTitleDeed()
         {
         }
@@ -97,7 +97,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Flame of the Jukari");
 
-        [Constructable]
+        [Constructible]
         public FlameOfTheJukariTitleDeed()
         {
         }
@@ -123,7 +123,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Ambusher of the Kurak");
 
-        [Constructable]
+        [Constructible]
         public AmbusherOfTheKurakTitleDeed()
         {
         }
@@ -149,7 +149,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Trooper of the Barako");
 
-        [Constructable]
+        [Constructible]
         public TrooperOfTheBarakoTitleDeed()
         {
         }
@@ -175,7 +175,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Thunder of the Urali");
 
-        [Constructable]
+        [Constructible]
         public ThunderOfTheUraliTitleDeed()
         {
         }
@@ -201,7 +201,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Herder of the Sakkhra");
 
-        [Constructable]
+        [Constructible]
         public HerderOfTheSakkhraTitleDeed()
         {
         }
@@ -227,7 +227,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Colonizer of the Barrab");
 
-        [Constructable]
+        [Constructible]
         public ColonizerOfTheBarrabTitleDeed()
         {
         }

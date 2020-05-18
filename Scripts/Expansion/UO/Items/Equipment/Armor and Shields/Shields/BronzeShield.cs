@@ -15,7 +15,7 @@ namespace Server.Items
         public override int AosStrReq => 35;
         public override int ArmorBase => 10;
 
-        [Constructable]
+        [Constructible]
         public BronzeShield()
             : base(0x1B72)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Bluekeyfragment : Item
     {
-        [Constructable]
+        [Constructible]
         public Bluekeyfragment()
             : base(0x1012)
         {

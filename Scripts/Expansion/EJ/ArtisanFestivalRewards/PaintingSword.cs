@@ -5,7 +5,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023744;  // painting
 
-        [Constructable]
+        [Constructible]
         public PaintingSword()
             : base(0xA48B)
         {

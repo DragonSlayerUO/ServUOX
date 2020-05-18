@@ -5,7 +5,7 @@ namespace Server.Items
     public class MessageInABottle : Item
     {
         private int m_Level;
-        [Constructable]
+        [Constructible]
         public MessageInABottle()
             : this(Map.Trammel)
         {
@@ -16,7 +16,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MessageInABottle(Map map, int level)
             : base(0x099F)
         {

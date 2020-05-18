@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SongsOfNote : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public SongsOfNote()
             : base("Xanthe", "the musician")
         {

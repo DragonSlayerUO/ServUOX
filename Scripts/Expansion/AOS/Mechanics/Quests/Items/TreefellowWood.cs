@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class TreefellowWood : Item
     {
-        [Constructable]
+        [Constructible]
         public TreefellowWood()
             : base(0x1BDD)
         {

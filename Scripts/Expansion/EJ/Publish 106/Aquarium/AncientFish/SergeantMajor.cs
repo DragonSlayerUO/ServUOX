@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SergeantMajor : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SergeantMajor()
             : base(0xA360)
         {

@@ -95,13 +95,13 @@ namespace Server.Items
 
         #endregion
 
-        [Constructable]
+        [Constructible]
         public Robe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Robe(int hue)
             : base(0x1F03, hue)
         {

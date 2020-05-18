@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SummonFamiliarScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public SummonFamiliarScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SummonFamiliarScroll(int amount)
             : base(111, 0x226B, amount)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         private bool m_Active;
         private string m_Word;
         private Rectangle2D m_Destination;
-        [Constructable]
+        [Constructible]
         public SerpentPillar()
             : this(null, new Rectangle2D(), false)
         {

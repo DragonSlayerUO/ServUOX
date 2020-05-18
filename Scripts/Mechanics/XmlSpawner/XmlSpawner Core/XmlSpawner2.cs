@@ -1,5 +1,5 @@
 //#define TRACE
-//#define RESTRICTCONSTRUCTABLE
+//#define RESTRICTConstructible
 
 using System;
 using System.Collections;
@@ -111,8 +111,8 @@ namespace Server.Mobiles
         private const string XmlTableName = "Properties";
         private const string XmlDataSetName = "XmlSpawner";
         public static AccessLevel DiskAccessLevel = AccessLevel.Administrator; // minimum access level required by commands that can access the disk such as XmlLoad, XmlSave, and the Save function of XmlEdit
-#if (RESTRICTCONSTRUCTABLE)
-		public static AccessLevel ConstructableAccessLevel = AccessLevel.GameMaster; // only allow spawning of objects that have Constructable access restrictions at this level or lower. Must define RESTRICTCONSTRUCTABLE to enable this.
+#if (RESTRICTConstructible)
+		public static AccessLevel ConstructibleAccessLevel = AccessLevel.GameMaster; // only allow spawning of objects that have Constructible access restrictions at this level or lower. Must define RESTRICTConstructible to enable this.
 #endif
         private static int MaxMoveCheck = 10; // limit number of players that can be checked for triggering in a single OnMovement tick
 
@@ -2244,9 +2244,9 @@ namespace Server.Mobiles
 
         #region Utility Methods
 
-        private static bool IsConstructable(ConstructorInfo ctor)
+        private static bool IsConstructible(ConstructorInfo ctor)
         {
-            return ctor.IsDefined(typeof(ConstructableAttribute), false);
+            return ctor.IsDefined(typeof(ConstructibleAttribute), false);
         }
 
         public static int ConvertToInt(string value)
@@ -7767,7 +7767,7 @@ namespace Server.Mobiles
 
         #region Constructors
 
-        [Constructable]
+        [Constructible]
         public XmlSpawner()
             : base(BaseItemId)
         {
@@ -7781,7 +7781,7 @@ namespace Server.Mobiles
                 defKillReset, false, -1, null, false, false, false, null, defDespawnTime, null, false, null);
         }
 
-        [Constructable]
+        [Constructible]
         public XmlSpawner(int amount, int minDelay, int maxDelay, int team, int homeRange, string creatureName)
             : base(BaseItemId)
         {
@@ -7797,7 +7797,7 @@ namespace Server.Mobiles
                 defKillReset, false, -1, null, false, false, false, null, defDespawnTime, null, false, null);
         }
 
-        [Constructable]
+        [Constructible]
         public XmlSpawner(int amount, int minDelay, int maxDelay, int team, int homeRange, int spawnRange, string creatureName)
             : base(BaseItemId)
         {
@@ -7813,7 +7813,7 @@ namespace Server.Mobiles
                 defKillReset, false, -1, null, false, false, false, null, defDespawnTime, null, false, null);
         }
 
-        [Constructable]
+        [Constructible]
         public XmlSpawner(string creatureName)
             : base(BaseItemId)
         {
@@ -11213,23 +11213,23 @@ namespace Server.Mobiles
             return CreateObject(type, itemtypestring, true);
         }
 
-        public static object CreateObject(Type type, string itemtypestring, bool requireconstructable)
+        public static object CreateObject(Type type, string itemtypestring, bool requireConstructible)
         {
             // look for constructor arguments to be passed to it with the syntax type,arg1,arg2,.../
             string[] typewordargs = BaseXmlSpawner.ParseObjectArgs(itemtypestring);
 
-            return CreateObject(type, typewordargs, requireconstructable, false);
+            return CreateObject(type, typewordargs, requireConstructible, false);
         }
 
-        public static object CreateObject(Type type, string itemtypestring, bool requireconstructable, bool requireattachable)
+        public static object CreateObject(Type type, string itemtypestring, bool requireConstructible, bool requireattachable)
         {
             // look for constructor arguments to be passed to it with the syntax type,arg1,arg2,.../
             string[] typewordargs = BaseXmlSpawner.ParseObjectArgs(itemtypestring);
 
-            return CreateObject(type, typewordargs, requireconstructable, requireattachable);
+            return CreateObject(type, typewordargs, requireConstructible, requireattachable);
         }
 
-        public static object CreateObject(Type type, string[] typewordargs, bool requireconstructable, bool requireattachable)
+        public static object CreateObject(Type type, string[] typewordargs, bool requireConstructible, bool requireattachable)
         {
             if (type == null) return null;
 
@@ -11251,12 +11251,12 @@ namespace Server.Mobiles
 
                 if (ctor == null) continue;
 
-                // if both requireconstructable and requireattachable are true, then allow either condition
-#if (RESTRICTCONSTRUCTABLE)
-			   if (!(requireconstructable && Add.IsConstructable(ctor,requester)) && !(requireattachable && XmlAttach.IsAttachable(ctor, requester)))
+                // if both requireConstructible and requireattachable are true, then allow either condition
+#if (RESTRICTConstructible)
+			   if (!(requireConstructible && Add.IsConstructible(ctor,requester)) && !(requireattachable && XmlAttach.IsAttachable(ctor, requester)))
 					continue;
 #else
-                if (!(requireconstructable && IsConstructable(ctor)) && !(requireattachable && XmlAttach.IsAttachable(ctor)))
+                if (!(requireConstructible && IsConstructible(ctor)) && !(requireattachable && XmlAttach.IsAttachable(ctor)))
                     continue;
 #endif
 

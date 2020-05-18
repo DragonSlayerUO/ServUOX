@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public CloakOfLife()
             : base(0x2FB9)
         {

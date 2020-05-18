@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a Tyball Shadow corpse")]
     public class TyballsShadow : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TyballsShadow()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.15, 0.4)
         {

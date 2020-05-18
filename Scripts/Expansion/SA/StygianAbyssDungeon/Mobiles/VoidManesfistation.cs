@@ -11,12 +11,12 @@ namespace Server.Mobiles
     {
         private int m_Type;
 
-        [Constructable]
+        [Constructible]
         public VoidManifestation() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public VoidManifestation(int type) : base(AIType.AI_Mystic, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             m_Type = type;

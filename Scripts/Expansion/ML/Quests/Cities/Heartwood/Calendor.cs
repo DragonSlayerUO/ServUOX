@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Calendor : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Calendor()
             : base("Lorekeeper Calendor", "the Keeper of Tradition")
         {

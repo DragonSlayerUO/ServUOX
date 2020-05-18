@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         private const double SpeedBoostScalar = 1.2;
         private bool m_SpeedBoost;
-        [Constructable]
+        [Constructible]
         public Neira()
             : base(AIType.AI_Mage)
         {

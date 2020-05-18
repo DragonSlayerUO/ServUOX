@@ -9,7 +9,7 @@ namespace Server.Mobiles
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
         protected override List<SBInfo> SBInfos => m_SBInfos;
 
-        [Constructable]
+        [Constructible]
         public Weaponsmith()
             : base("the weaponsmith")
         {

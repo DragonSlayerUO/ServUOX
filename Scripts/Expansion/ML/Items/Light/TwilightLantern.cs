@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TwilightLantern : Lantern
     {
-        [Constructable]
+        [Constructible]
         public TwilightLantern()
             : base()
         {

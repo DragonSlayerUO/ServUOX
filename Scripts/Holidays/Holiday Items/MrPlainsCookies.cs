@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MrPlainsCookies : Food
     {
-        [Constructable]
+        [Constructible]
         public MrPlainsCookies()
             : base(0x160C)
         {

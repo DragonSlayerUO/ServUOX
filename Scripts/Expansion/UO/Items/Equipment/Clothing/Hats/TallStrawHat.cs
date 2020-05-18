@@ -11,13 +11,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public TallStrawHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TallStrawHat(int hue)
             : base(0x1716, hue)
         {

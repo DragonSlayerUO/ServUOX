@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x26C2, 0x26CC)]
     public class CompositeBow : BaseRanged
     {
-        [Constructable]
+        [Constructible]
         public CompositeBow()
             : base(0x26C2)
         {

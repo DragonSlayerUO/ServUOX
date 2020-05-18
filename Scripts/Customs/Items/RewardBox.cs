@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RewardBox : WoodenBox
     {
-        [Constructable]
+        [Constructible]
         public RewardBox()
             : base()
         {

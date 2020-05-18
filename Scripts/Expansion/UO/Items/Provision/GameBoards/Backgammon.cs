@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0xE1C, 0xFAD)]
     public class Backgammon : BaseBoard
     {
-        [Constructable]
+        [Constructible]
         public Backgammon()
             : base(0xE1C)
         {

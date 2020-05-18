@@ -15,13 +15,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int ResourceCount { get { return m_ResourceCount; } set { m_ResourceCount = value; UpdateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public BarrelSpongeAddon()
            : this(0, DateTime.UtcNow + TimeSpan.FromDays(7))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BarrelSpongeAddon(int resCount, DateTime nextuse)
         {
             NextResourceCount = nextuse;
@@ -153,7 +153,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098376;  // Barrel Sponge
 
-        [Constructable]
+        [Constructible]
         public BarrelSpongeDeed()
         {
             LootType = LootType.Blessed;

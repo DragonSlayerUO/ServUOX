@@ -29,7 +29,7 @@ namespace Server.Engines.VvV
 
         public override double DefaultWeight => 10 + _Charges * 1.8;
 
-        [Constructable]
+        [Constructible]
         public VvVPotionKeg(PotionType type)
             : base(6870)
         {
@@ -369,7 +369,7 @@ namespace Server.Engines.VvV
     {
         public override PotionType CooldownType => PotionType.AntiParalysis;
 
-        [Constructable]
+        [Constructible]
         public AntiParalysisPotion()
         {
             Hue = 2543;
@@ -423,7 +423,7 @@ namespace Server.Engines.VvV
         public override TimeSpan CooldownDuration => TimeSpan.FromMinutes(2);
         public override PotionType CooldownType => PotionType.Supernova;
 
-        [Constructable]
+        [Constructible]
         public SupernovaPotion()
         {
             Hue = 13;
@@ -499,7 +499,7 @@ namespace Server.Engines.VvV
         public override TimeSpan CooldownDuration => TimeSpan.FromMinutes(20);
         public override PotionType CooldownType => PotionType.StatLossRemoval;
 
-        [Constructable]
+        [Constructible]
         public StatLossRemovalPotion()
         {
             Hue = 2500;
@@ -554,7 +554,7 @@ namespace Server.Engines.VvV
         public override TimeSpan CooldownDuration => TimeSpan.FromSeconds(10);
         public override PotionType CooldownType => PotionType.GreaterStamina;
 
-        [Constructable]
+        [Constructible]
         public GreaterStaminaPotion()
         {
             Hue = 437;

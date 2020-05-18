@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class QuartermasterFlint : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public QuartermasterFlint()
             : base("Quartermaster Flint", "")
         {

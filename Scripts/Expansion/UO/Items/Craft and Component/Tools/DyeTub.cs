@@ -15,7 +15,7 @@ namespace Server.Items
     {
         private int m_DyedHue;
 
-        [Constructable]
+        [Constructible]
         public DyeTub()
             : base(0xFAB)
         {

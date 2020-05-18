@@ -16,7 +16,7 @@ namespace Server.Engines.CleanUpBritannia
         protected override List<SBInfo> SBInfos => m_SBInfos;
         public override void InitSBInfo() { }
 
-        [Constructable]
+        [Constructible]
         public TheCleanupOfficer()
             : base("the Cleanup Officer")
         {

@@ -18,7 +18,7 @@ namespace Server.Items
 
         public override bool UseSeconds => false;
 
-        [Constructable]
+        [Constructible]
         public UnderworldPuzzleItem()
             : base(0x2AAA)
         {

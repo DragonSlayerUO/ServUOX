@@ -21,7 +21,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1152602;  // Magical Fish Finder
 
-        [Constructable]
+        [Constructible]
         public MagicalFishFinder() : base(5366)
         {
             Hue = 2500;

@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x13eb, 0x13f2)]
     public class RingmailGloves : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public RingmailGloves()
             : base(0x13EB)
         {

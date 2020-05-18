@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Koole : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Koole()
             : base("Koole", "the Arcanist")
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1125986;  // jack o' lantern helm
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public JackOLanternHelm()
             : base(0xA3EA)
         {

@@ -15,7 +15,7 @@ namespace Server.Engines.ArenaSystem
         [CommandProperty(AccessLevel.GameMaster)]
         public PVPArena Arena { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ArenaExitBanner(int itemid, PVPArena arena)
             : base(itemid)
         {

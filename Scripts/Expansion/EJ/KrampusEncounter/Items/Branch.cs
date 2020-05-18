@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158835;  // branch
 
-        [Constructable]
+        [Constructible]
         public GoldBranch()
             : base(Utility.RandomList(3458, 3473))
         {
@@ -34,7 +34,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158835;  // branch
 
-        [Constructable]
+        [Constructible]
         public SilverBranch()
             : base(Utility.RandomList(3458, 3473))
         {

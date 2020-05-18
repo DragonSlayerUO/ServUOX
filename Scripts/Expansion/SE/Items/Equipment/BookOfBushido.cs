@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class BookOfBushido : Spellbook
     {
-        [Constructable]
+        [Constructible]
         public BookOfBushido()
             : this((ulong)0x3F)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BookOfBushido(ulong content)
             : base(content, 0x238C)
         {

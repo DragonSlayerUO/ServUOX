@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an ogre corpse")]
     public class Ogre : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Ogre()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -83,7 +83,7 @@ namespace Server.Mobiles
     [CorpseName("an ogre lords corpse")]
     public class OgreLord : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OgreLord()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

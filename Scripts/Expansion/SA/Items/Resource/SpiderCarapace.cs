@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SpiderCarapace : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SpiderCarapace()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpiderCarapace(int amount)
             : base(0x5720)
         {

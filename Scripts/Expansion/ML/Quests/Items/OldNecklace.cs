@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class OldNecklace : BaseNecklace
     {
-        [Constructable]
+        [Constructible]
         public OldNecklace()
             : base(0x1085)
         {

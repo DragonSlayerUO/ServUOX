@@ -11,7 +11,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Dices()
             : base(0xFA7)
         {

@@ -8,7 +8,7 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public GrapesOfWrath()
             : base(0x2FD7)
         {

@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Naturalist
 {
     public class Naturalist : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public Naturalist()
             : base("the Naturalist")
         {

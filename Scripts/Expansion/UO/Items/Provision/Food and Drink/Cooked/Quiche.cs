@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041345;// baked quiche
 
-        [Constructable]
+        [Constructible]
         public Quiche()
             : base(0x1041)
         {

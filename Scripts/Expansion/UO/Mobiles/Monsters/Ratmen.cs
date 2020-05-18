@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a ratman's corpse")]
     public class Ratman : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Ratman()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -71,7 +71,7 @@ namespace Server.Mobiles
     [CorpseName("a ratman archer corpse")]
     public class RatmanArcher : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public RatmanArcher()
             : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -141,7 +141,7 @@ namespace Server.Mobiles
     [CorpseName("a glowing ratman corpse")]
     public class RatmanMage : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public RatmanMage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

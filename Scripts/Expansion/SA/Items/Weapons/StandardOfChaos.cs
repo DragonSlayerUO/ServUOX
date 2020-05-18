@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113522;  // Standard of Chaos
 
-        [Constructable]
+        [Constructible]
         public StandardOfChaos()
         {
             Hue = 2209;

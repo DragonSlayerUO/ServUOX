@@ -30,13 +30,13 @@ namespace Server.Items
             return 0;
         }
 
-        [Constructable]
+        [Constructible]
         public GlassMug()
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public GlassMug(BeverageType type)
             : base(type)
         {

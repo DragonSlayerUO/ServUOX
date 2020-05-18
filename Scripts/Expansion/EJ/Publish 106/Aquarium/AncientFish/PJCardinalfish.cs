@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PJCardinalfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public PJCardinalfish()
             : base(0xA366)
         {

@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a greater phoenix corpse")]
     public class GreaterPhoenix : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GreaterPhoenix()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, .2, .4)
         {

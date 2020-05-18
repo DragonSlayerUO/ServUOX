@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class OilAndOubliette : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public OilAndOubliette()
             : base("Odell", "the necromancer")
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class RewardBlackDyeTub : DyeTub, Engines.VeteranRewards.IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public RewardBlackDyeTub()
         {
             Hue = DyedHue = 0x0001;

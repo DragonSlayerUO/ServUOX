@@ -8,7 +8,7 @@ namespace Server.Mobiles
     public class Bowyer : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Bowyer()
             : base("the bowyer")
         {

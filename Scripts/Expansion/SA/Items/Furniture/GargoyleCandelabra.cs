@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LitItemID => 0x40BE;
         public override int UnlitItemID => 0x4039;
 
-        [Constructable]
+        [Constructible]
         public GargoyleCandelabra()
             : base(0x4039)
         {

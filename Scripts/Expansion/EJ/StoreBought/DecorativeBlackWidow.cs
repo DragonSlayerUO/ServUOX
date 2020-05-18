@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new DecorativeBlackwidowDeed();
 
-        [Constructable]
+        [Constructible]
         public DecorativeBlackwidowAddon()
         {
             AddComponent(new AddonComponent(40360), 1, 1, 0);
@@ -41,7 +41,7 @@ namespace Server.Items
         public override BaseAddon Addon => new DecorativeBlackwidowAddon();
         public override int LabelNumber => 1157897;
 
-        [Constructable]
+        [Constructible]
         public DecorativeBlackwidowDeed()
         {
         }

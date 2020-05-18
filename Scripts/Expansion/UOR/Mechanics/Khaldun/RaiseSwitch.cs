@@ -7,7 +7,7 @@ namespace Server.Items
     {
         private RaisableItem m_RaisableItem;
         private ResetTimer m_ResetTimer;
-        [Constructable]
+        [Constructible]
         public RaiseSwitch()
             : this(0x1093)
         {
@@ -152,7 +152,7 @@ namespace Server.Items
 
     public class DisappearingRaiseSwitch : RaiseSwitch
     {
-        [Constructable]
+        [Constructible]
         public DisappearingRaiseSwitch()
             : base(0x108F)
         {

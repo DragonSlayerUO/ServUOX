@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SpidersSilk : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SpidersSilk()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpidersSilk(int amount)
             : base(0xF8D, amount)
         {

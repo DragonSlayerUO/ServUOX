@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int DefaultGumpID => 0x9;
 
-        [Constructable]
+        [Constructible]
         public UnknownBardSkeleton()
             : base(0xECA + Utility.Random(9))
         {
@@ -59,7 +59,7 @@ namespace Server.Items
     {
         public override int DefaultGumpID => 0x9;
 
-        [Constructable]
+        [Constructible]
         public UnknownRogueSkeleton()
             : base(0xECA + Utility.Random(9))
         {
@@ -110,7 +110,7 @@ namespace Server.Items
     {
         public override int DefaultGumpID => 0x9;
 
-        [Constructable]
+        [Constructible]
         public UnknownMageSkeleton()
             : base(0xECA + Utility.Random(9))
         {

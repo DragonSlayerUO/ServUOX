@@ -52,7 +52,7 @@ namespace Server.Items
             get { return m_LinkedItem; }
         }
 
-        [Constructable]
+        [Constructible]
         public SimpleLever()
             : base(0x108C)
         {
@@ -413,7 +413,7 @@ namespace Server.Items
             get { return m_SwitchState; }
         }
 
-        [Constructable]
+        [Constructible]
         public SimpleSwitch()
             : base(0x108F)
         {
@@ -685,7 +685,7 @@ namespace Server.Items
         private string m_TargetProperty = null;
         private int m_CombinationSound = 940;
 
-        [Constructable]
+        [Constructible]
         public CombinationLock()
             : base(0x1BBF)
         {

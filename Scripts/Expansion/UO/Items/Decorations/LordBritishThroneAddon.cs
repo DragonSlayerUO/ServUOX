@@ -5,7 +5,7 @@ namespace Server.Items
     public class LordBritishThroneAddon : BaseAddon
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LordBritishThroneAddon()
         {
             AddComponent(new AddonComponent(0x1526), 0, 0, 0);
@@ -35,7 +35,7 @@ namespace Server.Items
 
     public class LordBritishThroneDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public LordBritishThroneDeed()
         {
             LootType = LootType.Blessed;

@@ -5,7 +5,7 @@ namespace Server.Items
     public class ThornedWildStaff : WildStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ThornedWildStaff()
         {
             Attributes.ReflectPhysical = 12;

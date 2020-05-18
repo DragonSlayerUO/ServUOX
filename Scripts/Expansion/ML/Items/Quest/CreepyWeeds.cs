@@ -10,7 +10,7 @@ namespace Server.Items
 {
     public class CreepyWeeds : Item
     {
-        [Constructable]
+        [Constructible]
         public CreepyWeeds()
             : base(0x0CB8)
         {

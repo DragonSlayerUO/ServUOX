@@ -5,7 +5,7 @@ namespace Server.Items
     public class Swiftflight : Bow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Swiftflight()
             : base()
         {

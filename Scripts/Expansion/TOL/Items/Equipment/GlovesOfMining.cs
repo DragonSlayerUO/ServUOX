@@ -7,7 +7,7 @@ namespace Server.Items
     public class LeatherGlovesOfMining : BaseGlovesOfMining
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LeatherGlovesOfMining(int bonus)
             : base(bonus, 0x13C6)
         {
@@ -49,7 +49,7 @@ namespace Server.Items
     [Flipable(0x13d5, 0x13dd)]
     public class StuddedGlovesOfMining : BaseGlovesOfMining
     {
-        [Constructable]
+        [Constructible]
         public StuddedGlovesOfMining(int bonus)
             : base(bonus, 0x13D5)
         {
@@ -91,7 +91,7 @@ namespace Server.Items
     [Flipable(0x13eb, 0x13f2)]
     public class RingmailGlovesOfMining : BaseGlovesOfMining
     {
-        [Constructable]
+        [Constructible]
         public RingmailGlovesOfMining(int bonus)
             : base(bonus, 0x13EB)
         {
@@ -135,12 +135,12 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public GargishKiltOfMining() : this(5)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishKiltOfMining(int bonus)
             : base(bonus, 0x030C)
         {

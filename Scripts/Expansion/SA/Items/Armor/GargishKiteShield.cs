@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x4201, 0x4206)]
     public class GargishKiteShield : BaseShield, IDyable
     {
-        [Constructable]
+        [Constructible]
         public GargishKiteShield()
             : base(0x4201)
         {

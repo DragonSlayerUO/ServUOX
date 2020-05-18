@@ -5,7 +5,7 @@ namespace Server.Items
     public class StolenRing : SilverRing
     {
 
-        [Constructable]
+        [Constructible]
         public StolenRing()
             : base()
         {

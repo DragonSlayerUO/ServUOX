@@ -21,7 +21,7 @@ namespace Server.Engines.Quests.Doom
             1, 1
         };
 
-        [Constructable]
+        [Constructible]
         public Chyloth()
             : base("the Ferryman")
         {

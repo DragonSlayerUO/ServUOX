@@ -44,7 +44,7 @@ namespace Server.Items
     [Flipable(0x46A5, 0x46A6)]
     public class GiftBoxRectangle : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public GiftBoxRectangle()
             : base(Utility.RandomBool() ? 0x46A5 : 0x46A6)
         {
@@ -72,7 +72,7 @@ namespace Server.Items
 
     public class GiftBoxCube : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public GiftBoxCube()
             : base(0x46A2)
         {
@@ -100,7 +100,7 @@ namespace Server.Items
 
     public class GiftBoxCylinder : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public GiftBoxCylinder()
             : base(0x46A3)
         {
@@ -128,7 +128,7 @@ namespace Server.Items
 
     public class GiftBoxOctogon : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public GiftBoxOctogon()
             : base(0x46A4)
         {
@@ -156,7 +156,7 @@ namespace Server.Items
 
     public class GiftBoxAngel : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public GiftBoxAngel()
             : base(0x46A7)
         {
@@ -185,7 +185,7 @@ namespace Server.Items
     [Flipable(0x232A, 0x232B)]
     public class GiftBoxNeon : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public GiftBoxNeon()
             : base(Utility.RandomBool() ? 0x232A : 0x232B)
         {

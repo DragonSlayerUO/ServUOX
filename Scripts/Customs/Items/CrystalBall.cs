@@ -9,7 +9,7 @@ namespace Server.Items
 {
     public class MagicCrystalBall : Item
     {
-        [Constructable]
+        [Constructible]
         public MagicCrystalBall() : base(0xE2E)
         {
             Name = "a crystal ball";

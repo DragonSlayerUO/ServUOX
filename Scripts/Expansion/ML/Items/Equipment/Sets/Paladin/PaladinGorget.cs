@@ -5,7 +5,7 @@ namespace Server.Items
     public class PaladinGorget : PlateGorget
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PaladinGorget()
             : base()
         {

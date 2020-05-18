@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BegLantern : Lantern
     {
-        [Constructable]
+        [Constructible]
         public BegLantern()
         {
         }

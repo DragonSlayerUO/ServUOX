@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StringOfPartsOfParoxysmusVictims : Item
     {
-        [Constructable]
+        [Constructible]
         public StringOfPartsOfParoxysmusVictims()
             : base(0xFD2)
         {

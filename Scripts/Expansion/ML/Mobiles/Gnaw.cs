@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Gnaw corpse")]
     public class Gnaw : DireWolf
     {
-        [Constructable]
+        [Constructible]
         public Gnaw()
         {
             Name = "Gnaw";

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116118;
 
-        [Constructable]
+        [Constructible]
         public AbyssalDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
@@ -33,7 +33,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116099;
 
-        [Constructable]
+        [Constructible]
         public BlackMarlin()
             : base(Utility.RandomMinMax(17156, 17157))
         {
@@ -59,7 +59,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116097;
 
-        [Constructable]
+        [Constructible]
         public BlueMarlin()
             : base(Utility.RandomMinMax(17156, 17157))
         {
@@ -85,7 +85,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116107;
 
-        [Constructable]
+        [Constructible]
         public DungeonPike()
             : base(Utility.RandomMinMax(17603, 17604))
         {
@@ -111,7 +111,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116103;
 
-        [Constructable]
+        [Constructible]
         public GiantSamuraiFish()
             : base(Utility.RandomMinMax(17158, 17159))
         {
@@ -137,7 +137,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116102;
 
-        [Constructable]
+        [Constructible]
         public GoldenTuna()
             : base(Utility.RandomMinMax(17154, 17155))
         {
@@ -163,7 +163,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116085;
 
-        [Constructable]
+        [Constructible]
         public Kingfish()
             : base(Utility.RandomMinMax(17158, 17159))
         {
@@ -189,7 +189,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116106;
 
-        [Constructable]
+        [Constructible]
         public LanternFish()
             : base(Utility.RandomMinMax(17605, 17606))
         {
@@ -215,7 +215,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116108;
 
-        [Constructable]
+        [Constructible]
         public RainbowFish()
             : base(Utility.RandomMinMax(17154, 17155))
         {
@@ -241,7 +241,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116109;
 
-        [Constructable]
+        [Constructible]
         public SeekerFish()
             : base(Utility.RandomMinMax(17158, 17159))
         {
@@ -267,7 +267,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116104;
 
-        [Constructable]
+        [Constructible]
         public SpringDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
@@ -293,7 +293,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116110;
 
-        [Constructable]
+        [Constructible]
         public StoneFish()
             : base(Utility.RandomMinMax(17605, 17606))
         {
@@ -319,7 +319,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116105;
 
-        [Constructable]
+        [Constructible]
         public WinterDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
@@ -345,7 +345,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116101;
 
-        [Constructable]
+        [Constructible]
         public ZombieFish()
             : base(Utility.RandomMinMax(17603, 17604))
         {

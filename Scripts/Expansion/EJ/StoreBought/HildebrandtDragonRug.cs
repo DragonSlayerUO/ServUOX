@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new HildebrandtDragonRugDeed();
 
-        [Constructable]
+        [Constructible]
         public HildebrandtDragonRugAddon()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HildebrandtDragonRugAddon(bool south)
         {
             if (south)
@@ -109,7 +109,7 @@ namespace Server.Items
                 from.SendLocalizedMessage(1062334); // This item must be in your backpack to be used.       	
         }
 
-        [Constructable]
+        [Constructible]
         public HildebrandtDragonRugDeed()
         {
         }

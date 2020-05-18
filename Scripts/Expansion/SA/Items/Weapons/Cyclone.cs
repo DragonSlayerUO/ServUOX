@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Cyclone : BaseThrown
     {
-        [Constructable]
+        [Constructible]
         public Cyclone()
             : base(0x901)
         {

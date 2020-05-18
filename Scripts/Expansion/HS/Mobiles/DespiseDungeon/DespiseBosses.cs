@@ -164,7 +164,7 @@ namespace Server.Engines.Despise
 
     public class AdrianTheGloriousLord : DespiseBoss
     {
-        [Constructable]
+        [Constructible]
         public AdrianTheGloriousLord() : base(AIType.AI_Mage, FightMode.Closest)
         {
             Name = "Adrian";
@@ -249,7 +249,7 @@ namespace Server.Engines.Despise
 
     public class AndrosTheDreadLord : DespiseBoss
     {
-        [Constructable]
+        [Constructible]
         public AndrosTheDreadLord() : base(AIType.AI_Mage, FightMode.Closest)
         {
             Name = "Andros";

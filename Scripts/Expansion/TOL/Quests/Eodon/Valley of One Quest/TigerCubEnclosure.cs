@@ -17,7 +17,7 @@ namespace Server.Items
         public static readonly Point3D DoorOffset = new Point3D(2, 2, 0);
         public static readonly Point3D HomeLocation = new Point3D(354, 1894, 2);
 
-        [Constructable]
+        [Constructible]
         public CubEnclosure()
         {
             AddComponent(new AddonComponent(2103), 0, 0, 0);

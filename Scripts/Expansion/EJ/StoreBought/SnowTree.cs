@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new SnowTreeDeed();
 
-        [Constructable]
+        [Constructible]
         public SnowTreeAddon(bool trunk)
         {
             AddComponent(new LocalizedAddonComponent(0xDA0, 1071103), 0, 0, 0);
@@ -49,7 +49,7 @@ namespace Server.Items
 
         private bool m_Trunk;
 
-        [Constructable]
+        [Constructible]
         public SnowTreeDeed()
         {
             LootType = LootType.Blessed;

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class UnmadeBedAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public UnmadeBedAddon(bool east)
             : base()
         {
@@ -49,7 +49,7 @@ namespace Server.Items
     public class UnmadeBedDeed : BaseAddonDeed
     {
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public UnmadeBedDeed()
             : base()
         {

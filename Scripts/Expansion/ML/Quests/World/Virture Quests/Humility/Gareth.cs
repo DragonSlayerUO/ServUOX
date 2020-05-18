@@ -6,7 +6,7 @@ namespace Server.Engines.Quests
 {
     public class Gareth : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Gareth()
             : base("Gareth", "the Emissary of the RBC")
         {

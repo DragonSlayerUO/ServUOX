@@ -34,7 +34,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098388;  // trumpet
 
-        [Constructable]
+        [Constructible]
         public TrumpetDeed()
         {
         }
@@ -64,7 +64,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new TrumpetDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public TrumpetAddon()
         {
             AddComponent(new TrumpetComponent(), 0, 0, 0);

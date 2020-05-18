@@ -5,13 +5,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.BouraFur", "Server.Items.KepetchFur")]
     public class Fur : Item
     {
-        [Constructable]
+        [Constructible]
         public Fur()
             : this(FurType.None, 1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Fur(FurType type, int amount)
             : base(0x1875)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class GoldBricks : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GoldBricks()
             : base(0x1BEB)
         {

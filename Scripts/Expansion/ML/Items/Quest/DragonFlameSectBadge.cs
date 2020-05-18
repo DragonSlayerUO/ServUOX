@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DragonFlameSectBadge : Item
     {
-        [Constructable]
+        [Constructible]
         public DragonFlameSectBadge()
             : base(0x23E)
         {

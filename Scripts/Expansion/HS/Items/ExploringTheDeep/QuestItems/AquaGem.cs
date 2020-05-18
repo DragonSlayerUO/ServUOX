@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154244;  // Aqua Gem
 
-        [Constructable]
+        [Constructible]
         public AquaGem() : base(0x4B48)
         {
             Stackable = false;

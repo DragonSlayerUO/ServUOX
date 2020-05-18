@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StuddedSuneate : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public StuddedSuneate()
             : base(0x27D2)
         {

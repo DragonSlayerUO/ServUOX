@@ -18,7 +18,7 @@ namespace Server.Items
         private BraceletOfBinding m_Bound;
         private TransportTimer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public BraceletOfBinding()
             : base(0x1086)
         {

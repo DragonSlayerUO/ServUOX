@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MonsterousInterredGrizzleMaggots : Item
     {
-        [Constructable]
+        [Constructible]
         public MonsterousInterredGrizzleMaggots()
             : base(0x2633)
         {

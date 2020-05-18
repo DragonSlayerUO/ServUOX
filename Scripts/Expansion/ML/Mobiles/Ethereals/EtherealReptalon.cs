@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealReptalon : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealReptalon()
             : base(0x2d95, 0x3e90, 0x3e90, DefaultEtherealHue)
         {

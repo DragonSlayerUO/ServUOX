@@ -17,7 +17,7 @@ namespace Server.Mobiles
 
         public override ChampionSkullType SkullType => ChampionSkullType.None;
 
-        [Constructable]
+        [Constructible]
         public DragonTurtle() : base(AIType.AI_Mage)
         {
             Name = "a dragon turtle";

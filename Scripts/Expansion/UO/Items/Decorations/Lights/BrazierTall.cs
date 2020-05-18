@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BrazierTall : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public BrazierTall()
             : base(0x19AA)
         {

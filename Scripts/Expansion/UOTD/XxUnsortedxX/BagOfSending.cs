@@ -19,13 +19,13 @@ namespace Server.Items
         private int m_Charges;
         private int m_Recharges;
         private BagOfSendingHue m_BagOfSendingHue;
-        [Constructable]
+        [Constructible]
         public BagOfSending()
             : this(RandomHue())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BagOfSending(BagOfSendingHue hue)
             : base(0xE76)
         {

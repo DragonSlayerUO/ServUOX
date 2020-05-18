@@ -11,7 +11,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBTinker(this));
         }
 
-        [Constructable]
+        [Constructible]
         public Aliabeth()
             : base("Aliabeth", "the Tinker")
         {

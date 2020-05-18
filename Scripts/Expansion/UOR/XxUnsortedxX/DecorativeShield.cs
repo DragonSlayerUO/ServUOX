@@ -10,13 +10,13 @@ namespace Server.Items
     public class DecorativeShield : Item, IAddon, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public DecorativeShield()
             : this(0x156C)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DecorativeShield(int itemID)
             : base(itemID)
         {
@@ -126,7 +126,7 @@ namespace Server.Items
     public class DecorativeShieldDeed : Item, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public DecorativeShieldDeed()
             : base(0x14F0)
         {

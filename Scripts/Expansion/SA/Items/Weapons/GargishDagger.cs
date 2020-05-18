@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x902, 0x406A)]
     public class GargishDagger : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public GargishDagger()
             : base(0x902)
         {

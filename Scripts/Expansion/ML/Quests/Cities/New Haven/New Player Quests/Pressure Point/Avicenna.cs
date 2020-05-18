@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(BruisesBandagesAndBloodQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Avicenna()
             : base("Avicenna", "the Healing Instructor")
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113007;  // Elixir of Gold Conversion
 
-        [Constructable]
+        [Constructible]
         public ElixirofGoldConversion()
             : base(0x99B)
         {

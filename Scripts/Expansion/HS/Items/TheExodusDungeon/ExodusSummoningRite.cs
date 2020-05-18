@@ -10,7 +10,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153498;  // exodus summoning rite 
 
-        [Constructable]
+        [Constructible]
         public ExodusSummoningRite() : base(0x2258)
         {
             Weight = 1;

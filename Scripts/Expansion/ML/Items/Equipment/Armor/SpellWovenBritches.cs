@@ -5,7 +5,7 @@ namespace Server.Items
     public class SpellWovenBritches : LeafLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SpellWovenBritches()
         {
             Hue = 0x487;

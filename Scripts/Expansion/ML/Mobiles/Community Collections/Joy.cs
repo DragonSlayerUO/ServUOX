@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PastTreasures : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public PastTreasures()
             : base("Joy", "the treasure hunter")
         {

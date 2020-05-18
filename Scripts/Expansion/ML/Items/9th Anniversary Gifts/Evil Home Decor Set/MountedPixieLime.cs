@@ -71,7 +71,7 @@ namespace Server.Items
 
     public class MountedPixieLimeDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public MountedPixieLimeDeed()
             : base()
         {

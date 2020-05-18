@@ -17,7 +17,7 @@ namespace Server.Mobiles
             m_SBInfos.Add(new SBKeeperOfNinjitsu());
         }
 
-        [Constructable]
+        [Constructible]
         public Ryuichi()
             : base("Ryuichi", "the Ninjitsu Instructor")
         {

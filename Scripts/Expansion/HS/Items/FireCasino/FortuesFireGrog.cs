@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int MaxQuantity => 1;
 
-        [Constructable]
+        [Constructible]
         public FortunesFireGrog() : base(BeverageType.Liquor)
         {
         }

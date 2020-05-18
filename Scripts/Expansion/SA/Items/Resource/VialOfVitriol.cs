@@ -5,13 +5,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.VialVitirol")]
     public class VialOfVitriol : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public VialOfVitriol()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public VialOfVitriol(int amount)
             : base(0x5722)
         {

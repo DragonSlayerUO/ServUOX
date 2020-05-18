@@ -29,13 +29,13 @@ namespace Server.Items
             return false;
         }
 
-        [Constructable]
+        [Constructible]
         public SavageMask()
             : this(GetRandomHue())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SavageMask(int hue)
             : base(0x154B, hue)
         {

@@ -6,13 +6,13 @@ namespace Server.Factions
     public class TownStone : BaseSystemController
     {
         private Town m_Town;
-        [Constructable]
+        [Constructible]
         public TownStone()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TownStone(Town town)
             : base(0xEDE)
         {

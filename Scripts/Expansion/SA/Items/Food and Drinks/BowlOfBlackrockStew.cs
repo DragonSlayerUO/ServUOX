@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1115752;  // blackrock stew
 
-        [Constructable]
+        [Constructible]
         public BowlOfBlackrockStew()
             : base(0x2DBA)
         {

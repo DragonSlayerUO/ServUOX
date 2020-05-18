@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ParoxysmusCorrodedStein : Item
     {
-        [Constructable]
+        [Constructible]
         public ParoxysmusCorrodedStein()
             : base(0x9D6)
         {

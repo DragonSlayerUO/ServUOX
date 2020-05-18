@@ -9,7 +9,7 @@ namespace Server.Mobiles
 
         public Type CreatureType => typeof(SkeletalCat);
 
-        [Constructable]
+        [Constructible]
         public SkeletalCatStatue()
             : base(0xA138)
         {
@@ -44,13 +44,13 @@ namespace Server.Mobiles
     [CorpseName("a Skeletal Cat corpse")]
     public class SkeletalCat : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public SkeletalCat()
             : this("Skeletal Cat")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkeletalCat(string name)
             : base(name, 1441, 16080, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

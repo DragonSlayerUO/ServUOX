@@ -7,13 +7,13 @@ namespace Server.Items
     {
         private bool m_IsRewardItem;
 
-        [Constructable]
+        [Constructible]
         public ContestMiniHouse()
             : base(MiniHouseType.MalasMountainPass)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ContestMiniHouse(MiniHouseType type)
             : base(type)
         {
@@ -66,13 +66,13 @@ namespace Server.Items
     {
         private bool m_IsRewardItem;
 
-        [Constructable]
+        [Constructible]
         public ContestMiniHouseDeed()
             : base(MiniHouseType.MalasMountainPass)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ContestMiniHouseDeed(MiniHouseType type)
             : base(type)
         {

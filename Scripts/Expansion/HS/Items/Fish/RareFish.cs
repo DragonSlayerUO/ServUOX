@@ -56,7 +56,7 @@ namespace Server.Items
         public override int LabelNumber => 1116090;
         public override Item GetCarved => new AutumnDragonfishSteak();
 
-        [Constructable]
+        [Constructible]
         public AutumnDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
@@ -83,7 +83,7 @@ namespace Server.Items
         public override int LabelNumber => 1116095;
         public override Item GetCarved => new BullFishSteak();
 
-        [Constructable]
+        [Constructible]
         public BullFish()
             : base(Utility.RandomMinMax(17605, 17606))
         {
@@ -110,7 +110,7 @@ namespace Server.Items
         public override int LabelNumber => 1116092;
         public override Item GetCarved => new CrystalFishSteak();
 
-        [Constructable]
+        [Constructible]
         public CrystalFish()
             : base(Utility.RandomMinMax(17154, 17155))
         {
@@ -137,7 +137,7 @@ namespace Server.Items
         public override int LabelNumber => 1116089;
         public override Item GetCarved => new FairySalmonSteak();
 
-        [Constructable]
+        [Constructible]
         public FairySalmon()
             : base(Utility.RandomMinMax(17154, 17155))
         {
@@ -164,7 +164,7 @@ namespace Server.Items
         public override int LabelNumber => 1116093;
         public override Item GetCarved => new FireFishSteak();
 
-        [Constructable]
+        [Constructible]
         public FireFish()
             : base(Utility.RandomMinMax(17158, 17159))
         {
@@ -191,7 +191,7 @@ namespace Server.Items
         public override int LabelNumber => 1116088;
         public override Item GetCarved => new GiantKoiSteak();
 
-        [Constructable]
+        [Constructible]
         public GiantKoi()
             : base(Utility.RandomMinMax(17605, 17606))
         {
@@ -218,7 +218,7 @@ namespace Server.Items
         public override int LabelNumber => 1116100;
         public override Item GetCarved => new GreatBarracudaSteak();
 
-        [Constructable]
+        [Constructible]
         public GreatBarracuda()
             : base(Utility.RandomMinMax(17603, 17604))
         {
@@ -245,7 +245,7 @@ namespace Server.Items
         public override int LabelNumber => 1116087;
         public override Item GetCarved => new HolyMackerelSteak();
 
-        [Constructable]
+        [Constructible]
         public HolyMackerel()
             : base(Utility.RandomMinMax(17154, 17155))
         {
@@ -272,7 +272,7 @@ namespace Server.Items
         public override int LabelNumber => 1116096;
         public override Item GetCarved => new LavaFishSteak();
 
-        [Constructable]
+        [Constructible]
         public LavaFish()
             : base(Utility.RandomMinMax(17156, 17157))
         {
@@ -299,7 +299,7 @@ namespace Server.Items
         public override int LabelNumber => 1116094;
         public override Item GetCarved => new ReaperFishSteak();
 
-        [Constructable]
+        [Constructible]
         public ReaperFish()
             : base(Utility.RandomMinMax(17603, 17604))
         {
@@ -326,7 +326,7 @@ namespace Server.Items
         public override int LabelNumber => 1116091;
         public override Item GetCarved => new SummerDragonfishSteak();
 
-        [Constructable]
+        [Constructible]
         public SummerDragonfish()
             : base(Utility.RandomMinMax(17637, 17638))
         {
@@ -353,7 +353,7 @@ namespace Server.Items
         public override int LabelNumber => 1116086;
         public override Item GetCarved => new UnicornFishSteak();
 
-        [Constructable]
+        [Constructible]
         public UnicornFish()
             : base(Utility.RandomMinMax(17156, 17157))
         {
@@ -380,7 +380,7 @@ namespace Server.Items
         public override int LabelNumber => 1116098;
         public override Item GetCarved => new YellowtailBarracudaSteak();
 
-        [Constructable]
+        [Constructible]
         public YellowtailBarracuda()
             : base(Utility.RandomMinMax(17603, 17604))
         {
@@ -406,7 +406,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116314;
 
-        [Constructable]
+        [Constructible]
         public AutumnDragonfishSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(AutumnDragonfish));
@@ -432,7 +432,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116310;
 
-        [Constructable]
+        [Constructible]
         public BullFishSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(BullFish));
@@ -458,7 +458,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116309;
 
-        [Constructable]
+        [Constructible]
         public CrystalFishSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(CrystalFish));
@@ -483,7 +483,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116312;
 
-        [Constructable]
+        [Constructible]
         public FairySalmonSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(FairySalmon));
@@ -509,7 +509,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116307;
 
-        [Constructable]
+        [Constructible]
         public FireFishSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(FireFish));
@@ -535,7 +535,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116306;
 
-        [Constructable]
+        [Constructible]
         public GiantKoiSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(GiantKoi));
@@ -560,7 +560,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116298;
 
-        [Constructable]
+        [Constructible]
         public GreatBarracudaSteak()
         {
             Hue = 1287; // FishInfo.GetFishHue(typeof(GreatBarracuda));
@@ -586,7 +586,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116315;
 
-        [Constructable]
+        [Constructible]
         public HolyMackerelSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(HolyMackerel));
@@ -612,7 +612,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116313;
 
-        [Constructable]
+        [Constructible]
         public LavaFishSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(LavaFish));
@@ -638,7 +638,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116308;
 
-        [Constructable]
+        [Constructible]
         public ReaperFishSteak()
         {
             Hue = 1152; // FishInfo.GetFishHue(typeof(ReaperFish));
@@ -664,7 +664,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116311;
 
-        [Constructable]
+        [Constructible]
         public SummerDragonfishSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(SummerDragonfish));
@@ -690,7 +690,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116316;
 
-        [Constructable]
+        [Constructible]
         public UnicornFishSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(UnicornFish));
@@ -715,7 +715,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116301;
 
-        [Constructable]
+        [Constructible]
         public YellowtailBarracudaSteak()
         {
             Hue = FishInfo.GetFishHue(typeof(YellowtailBarracuda));

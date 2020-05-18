@@ -18,7 +18,7 @@ namespace Server.Items
 
         private int offset;
 
-        [Constructable]
+        [Constructible]
         public SpiritualityVirtueTileAddon(SpiritualityTileType type)
         {
             m_SpiritualityTileType = type;
@@ -63,7 +63,7 @@ namespace Server.Items
 
         private SpiritualityTileType m_SpiritualityTileType;
 
-        [Constructable]
+        [Constructible]
         public SpiritualityVirtueTileDeed()
         {
             LootType = LootType.Blessed;

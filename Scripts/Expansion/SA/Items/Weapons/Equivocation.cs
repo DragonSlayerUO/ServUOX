@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154473;  // Equivocation
 
-        [Constructable]
+        [Constructible]
         public Equivocation()
         {
             Attributes.BalancedWeapon = 1;
@@ -53,7 +53,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154473;  // Equivocation
 
-        [Constructable]
+        [Constructible]
         public GargishEquivocation()
         {
             Attributes.BalancedWeapon = 1;

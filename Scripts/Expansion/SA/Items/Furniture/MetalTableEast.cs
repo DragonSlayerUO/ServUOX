@@ -8,7 +8,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new MetalTableEastDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public MetalTableEastAddon()
         {
             AddComponent(new AddonComponent(0x4CBA), 0, 0, 0);
@@ -40,7 +40,7 @@ namespace Server.Items
         public override BaseAddon Addon => new MetalTableEastAddon();
         public override int LabelNumber => 1154155;  // Metal Table (East)
 
-        [Constructable]
+        [Constructible]
         public MetalTableEastDeed()
         {
         }

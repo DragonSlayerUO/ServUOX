@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ParasiticPotion : BasePoisonPotion
     {
-        [Constructable]
+        [Constructible]
         public ParasiticPotion()
             : base(PotionEffect.Parasitic)
         {

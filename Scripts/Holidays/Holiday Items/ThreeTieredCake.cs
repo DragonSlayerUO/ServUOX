@@ -30,7 +30,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1098235;  // A Three Tiered Cake 
 
-        [Constructable]
+        [Constructible]
         public ThreeTieredCake()
             : base(0x4BA3)
         {

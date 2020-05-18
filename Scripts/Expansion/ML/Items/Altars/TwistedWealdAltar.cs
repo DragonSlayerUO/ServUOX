@@ -17,7 +17,7 @@ namespace Server.Items
 
         public override BasePeerless Boss => new DreadHorn();
 
-        [Constructable]
+        [Constructible]
         public TwistedWealdAltar() : base(0x207C)
         {
             BossLocation = new Point3D(2137, 1247, -60);

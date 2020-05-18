@@ -5,7 +5,7 @@ namespace Server.Items
     public class WindSpirit : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public WindSpirit()
             : base(0x1F1F)
         {

@@ -4,13 +4,13 @@ namespace Server.Items
     {
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public CheeseWheel()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CheeseWheel(int amount)
             : base(amount, 0x97E)
         {

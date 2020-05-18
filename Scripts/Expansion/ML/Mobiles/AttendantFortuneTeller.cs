@@ -9,13 +9,13 @@ namespace Server.Mobiles
 {
     public class AttendantFortuneTeller : PersonalAttendant
     {
-        [Constructable]
+        [Constructible]
         public AttendantFortuneTeller()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AttendantFortuneTeller(bool female)
             : base("the Fortune Teller")
         {

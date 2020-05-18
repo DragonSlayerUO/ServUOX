@@ -202,13 +202,13 @@ namespace Server.Items
         private MonsterStatuetteType m_Type;
         private bool m_TurnedOn;
 
-        [Constructable]
+        [Constructible]
         public MonsterStatuette()
             : this(MonsterStatuetteType.Crocodile)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MonsterStatuette(MonsterStatuetteType type)
             : base(MonsterStatuetteInfo.GetInfo(type).ItemID)
         {

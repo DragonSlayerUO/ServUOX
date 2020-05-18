@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x27A0, 0x27EB)]
     public class Obi : BaseWaist
     {
-        [Constructable]
+        [Constructible]
         public Obi()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Obi(int hue)
             : base(0x27A0, hue)
         {

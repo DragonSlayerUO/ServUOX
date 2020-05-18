@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1075300; // Portrait of the Bride
 
-        [Constructable]
+        [Constructible]
         public PortraitOfTheBride()
             : base(0xE9F)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LampPost2 : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public LampPost2()
             : base(0xB23)
         {

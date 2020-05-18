@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BullTapestryAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public BullTapestryAddon(DirectionType type)
         {
             switch (type)
@@ -56,7 +56,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public BullTapestryDeed()
             : base()
         {

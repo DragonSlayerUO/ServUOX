@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class OrderGuard : BaseShieldGuard
     {
-        [Constructable]
+        [Constructible]
         public OrderGuard()
         {
         }

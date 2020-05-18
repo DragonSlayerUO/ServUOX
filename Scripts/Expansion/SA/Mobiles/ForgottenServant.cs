@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class ForgottenServant : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ForgottenServant()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

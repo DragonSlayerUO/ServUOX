@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class BlueMarbleFireplaceAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BlueMarbleFireplaceAddon(DirectionType type)
         {
             switch (type)
@@ -100,7 +100,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public BlueMarbleFireplaceDeed()
             : base()
         {

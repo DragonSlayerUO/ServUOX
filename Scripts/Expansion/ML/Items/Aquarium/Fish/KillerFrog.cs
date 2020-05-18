@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class KillerFrog : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public KillerFrog()
             : base(0x3B0D)
         {

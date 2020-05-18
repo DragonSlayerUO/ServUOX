@@ -30,7 +30,7 @@ namespace Server.Mobiles
         private Timer m_DeleteTimer;
         private DateTime m_LastSeenEscorter;
 
-        [Constructable]
+        [Constructible]
         public BaseEscortable()
             : base(AIType.AI_Melee, FightMode.Aggressor, 22, 1, 0.2, 1.0)
         {

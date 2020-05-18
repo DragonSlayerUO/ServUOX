@@ -11,7 +11,7 @@ namespace Server.Mobiles
         private double msgevery = 1.0; //Recurring message. Change to 0 to disable.
         private DateTime m_NextMsgTime;
 
-        [Constructable]
+        [Constructible]
         public Drelgor()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

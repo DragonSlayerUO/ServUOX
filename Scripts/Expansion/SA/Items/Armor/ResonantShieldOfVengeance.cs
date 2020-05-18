@@ -11,7 +11,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public ResonantShieldOfVengeance()
         {
             Hue = 2076;
@@ -63,7 +63,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public ResonantShieldOfVengeanceHuman()
         {
             Hue = 2076;

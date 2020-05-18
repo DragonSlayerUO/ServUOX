@@ -5,7 +5,7 @@ namespace Server.Items
     public class BladeOfTheRighteous : Longsword
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BladeOfTheRighteous()
         {
             Hue = 0x47E;

@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class NewHavenBrideGroom : NewHavenEscortable
     {
-        [Constructable]
+        [Constructible]
         public NewHavenBrideGroom()
         {
             if (Female)

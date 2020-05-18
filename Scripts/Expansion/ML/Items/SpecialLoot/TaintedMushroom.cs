@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TaintedMushroom : Item
     {
-        [Constructable]
+        [Constructible]
         public TaintedMushroom()
             : base(Utility.RandomMinMax(0x222E, 0x2231))
         {

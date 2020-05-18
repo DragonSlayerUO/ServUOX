@@ -9,13 +9,13 @@ namespace Server.Items
         public const int DefaultArcaneHue = 2117;
         public override int LabelNumber => 1114115;  // Arcane Gem
 
-        [Constructable]
+        [Constructible]
         public ArcaneGem()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ArcaneGem(int amount)
             : base(0x1EA7)
         {

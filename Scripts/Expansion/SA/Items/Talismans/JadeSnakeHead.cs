@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1115647;  // Jade Snake Head
         public override int PoisonResistance => 3;
 
-        [Constructable]
+        [Constructible]
         public JadeSnakeHead()
             : base(0x2F59)
         {

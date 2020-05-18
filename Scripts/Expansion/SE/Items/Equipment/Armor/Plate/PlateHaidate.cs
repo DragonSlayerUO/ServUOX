@@ -6,7 +6,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(GargishPlateLegs))]
     public class PlateHaidate : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public PlateHaidate()
             : base(0x278D)
         {

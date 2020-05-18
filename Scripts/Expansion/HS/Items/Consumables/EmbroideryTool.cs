@@ -19,7 +19,7 @@ namespace Server.Items
         public override int CannotEngraveMessage => 1158843;  // The selected item cannot be embroidered by this tool.
         public override int ObjectWasNotMessage => 1158840;  // The object was not embroidered.
 
-        [Constructable]
+        [Constructible]
         public EmbroideryTool()
             : base(0xA20A, 10)
         {

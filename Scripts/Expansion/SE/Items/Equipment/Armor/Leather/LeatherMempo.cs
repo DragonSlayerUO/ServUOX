@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LeatherMempo : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeatherMempo()
             : base(0x277A)
         {

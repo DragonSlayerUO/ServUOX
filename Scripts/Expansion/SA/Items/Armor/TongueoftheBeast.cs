@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1112405;  // Tongue of the Beast [Replica]
 
-        [Constructable]
+        [Constructible]
         public TongueOfTheBeast()
         {
             Hue = 153;

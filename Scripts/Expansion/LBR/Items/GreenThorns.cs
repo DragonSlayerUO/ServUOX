@@ -7,13 +7,13 @@ namespace Server.Items
 {
     public class GreenThorns : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public GreenThorns()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GreenThorns(int amount)
             : base(0xF42)
         {

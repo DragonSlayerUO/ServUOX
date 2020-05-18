@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B73, 0x316A)]
     public class WingedHelm : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public WingedHelm()
             : base(0x2B73)
         {

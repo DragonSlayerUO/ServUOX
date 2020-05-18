@@ -9,7 +9,7 @@ namespace Server.Mobiles
         private static Type[] m_Quests = new Type[] { typeof(PerfectTimingQuest) };
         public override Type[] Quests => m_Quests;
 
-        [Constructable]
+        [Constructible]
         public Sutek()
             : base("Sutek", "the Mage")
         {

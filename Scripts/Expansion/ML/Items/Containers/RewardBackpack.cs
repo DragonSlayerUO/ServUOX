@@ -81,7 +81,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113189;  // Dusty Adventurer's Backpack
 
-        [Constructable]
+        [Constructible]
         public DustyAdventurersBackpack()
             : base()
         {
@@ -112,7 +112,7 @@ namespace Server.Items
         public override int LabelNumber => 1113190;  // Dusty Explorer's Backpack
         public override int Level => 2;
 
-        [Constructable]
+        [Constructible]
         public DustyExplorersBackpack()
             : base()
         {
@@ -143,7 +143,7 @@ namespace Server.Items
         public override int LabelNumber => 1113191;  // Dusty Hunter's Backpack
         public override int Level => 3;
 
-        [Constructable]
+        [Constructible]
         public DustyHuntersBackpack()
             : base()
         {

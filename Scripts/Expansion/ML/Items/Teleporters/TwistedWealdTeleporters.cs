@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class TwistedWealdTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public TwistedWealdTele()
             : base(new Point3D(2189, 1253, 0), Map.Ilshenar)
         {

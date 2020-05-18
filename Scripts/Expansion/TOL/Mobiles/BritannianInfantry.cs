@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         public override double HealChance => 1.0;
 
-        [Constructable]
+        [Constructible]
         public BritannianInfantry()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .15, .3)
         {

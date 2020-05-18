@@ -104,7 +104,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public WinchAssembly() : base(0x280E)
         {
             Movable = false;
@@ -194,7 +194,7 @@ namespace Server.Items
             set { m_hatch = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public WinchAssemblyLever(WinchAssembly winch, Hatch hatch)
             : base(0x108E)
         {
@@ -249,7 +249,7 @@ namespace Server.Items
     {
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public Hatch()
             : base()
         {

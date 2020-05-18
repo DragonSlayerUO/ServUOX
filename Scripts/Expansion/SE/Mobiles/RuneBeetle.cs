@@ -9,7 +9,7 @@ namespace Server.Mobiles
     public class RuneBeetle : BaseCreature
     {
         private static readonly Hashtable m_Table = new Hashtable();
-        [Constructable]
+        [Constructible]
         public RuneBeetle()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

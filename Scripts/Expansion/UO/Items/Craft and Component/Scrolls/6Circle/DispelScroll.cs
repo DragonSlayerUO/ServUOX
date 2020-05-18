@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class DispelScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public DispelScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DispelScroll(int amount)
             : base(40, 0x1F55, amount)
         {

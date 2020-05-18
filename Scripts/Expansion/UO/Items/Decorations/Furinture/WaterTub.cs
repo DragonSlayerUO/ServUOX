@@ -4,13 +4,13 @@ namespace Server.Items
     {
         private static readonly int vItemID = 0xe83;
         private static readonly int fItemID = 0xe7b;
-        [Constructable]
+        [Constructible]
         public Tub()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Tub(bool filled)
             : base(filled ? fItemID : vItemID, filled)
         {

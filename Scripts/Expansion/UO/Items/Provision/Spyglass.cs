@@ -25,7 +25,7 @@ namespace Server.Items
 
         public bool PlayerConstructed => true;
 
-        [Constructable]
+        [Constructible]
         public Spyglass()
             : base(0x14F5)
         {

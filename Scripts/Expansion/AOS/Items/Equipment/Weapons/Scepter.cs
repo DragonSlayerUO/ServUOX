@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x26BC, 0x26C6)]
     public class Scepter : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public Scepter()
             : base(0x26BC)
         {

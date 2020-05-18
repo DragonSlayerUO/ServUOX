@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BrownBearRugEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrownBearRugEastAddon()
         {
             AddComponent(new AddonComponent(0x1E40), 1, 1, 0);
@@ -38,7 +38,7 @@ namespace Server.Items
 
     public class BrownBearRugEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BrownBearRugEastDeed()
         {
         }
@@ -65,7 +65,7 @@ namespace Server.Items
 
     public class BrownBearRugSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrownBearRugSouthAddon()
         {
             AddComponent(new AddonComponent(0x1E36), 1, 1, 0);
@@ -100,7 +100,7 @@ namespace Server.Items
 
     public class BrownBearRugSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BrownBearRugSouthDeed()
         {
         }
@@ -127,7 +127,7 @@ namespace Server.Items
 
     public class PolarBearRugEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PolarBearRugEastAddon()
         {
             AddComponent(new AddonComponent(0x1E53), 1, 1, 0);
@@ -162,7 +162,7 @@ namespace Server.Items
 
     public class PolarBearRugEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public PolarBearRugEastDeed()
         {
         }
@@ -189,7 +189,7 @@ namespace Server.Items
 
     public class PolarBearRugSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PolarBearRugSouthAddon()
         {
             AddComponent(new AddonComponent(0x1E49), 1, 1, 0);
@@ -224,7 +224,7 @@ namespace Server.Items
 
     public class PolarBearRugSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public PolarBearRugSouthDeed()
         {
         }

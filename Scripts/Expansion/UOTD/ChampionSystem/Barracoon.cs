@@ -8,7 +8,7 @@ namespace Server.Mobiles
 {
     public class Barracoon : BaseChampion
     {
-        [Constructable]
+        [Constructible]
         public Barracoon()
             : base(AIType.AI_Melee)
         {

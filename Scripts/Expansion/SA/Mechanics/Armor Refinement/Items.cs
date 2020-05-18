@@ -90,7 +90,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public ModType ModType { get { return m_ModType; } set { m_ModType = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public RefinementComponent()
             : this(RefinementType.Reinforcing, RefinementCraftType.Blacksmith, ModType.Defense)
         {
@@ -344,7 +344,7 @@ namespace Server.Items
 
         public ModEntry Entry => m_Entry;
 
-        [Constructable]
+        [Constructible]
         public RefinementItem()
             : this(RefinementType.Reinforcing, RefinementCraftType.Blacksmith, RefinementSubCraftType.Ringmail, ModType.Defense)
         {
@@ -598,12 +598,12 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154003;  // Leather braid
 
-        [Constructable]
+        [Constructible]
         public LeatherBraid() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LeatherBraid(int amount) : base(5152)
         {
             Stackable = true;
@@ -633,13 +633,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154005;  // Melleable Alloy
 
-        [Constructable]
+        [Constructible]
         public MalleableAlloy()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MalleableAlloy(int amount)
             : base(0x1BE9)
         {
@@ -670,13 +670,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154004;  // Solvent Flask
 
-        [Constructable]
+        [Constructible]
         public SolventFlask()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SolventFlask(int amount)
             : base(7192)
         {

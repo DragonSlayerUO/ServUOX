@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BegDates : Dates
     {
-        [Constructable]
+        [Constructible]
         public BegDates()
         {
         }

@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1073353; // Library Talisman - Treatise on Alchemy
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public TreatiseonAlchemyTalisman()
             : base(0x2F58)
         {
@@ -44,7 +44,7 @@ namespace Server.Items
         public override int LabelNumber => 1073354; // Library Talisman - A Primer on Arms
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public PrimerOnArmsTalisman()
             : base(0x2F59)
         {
@@ -80,7 +80,7 @@ namespace Server.Items
         public override int LabelNumber => 1073355; // Library Talisman - My Book
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public MyBookTalisman()
             : base(0x2F5A)
         {
@@ -116,7 +116,7 @@ namespace Server.Items
         public override int LabelNumber => 1073356; // Library Talisman - Talking to Wisps
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public TalkingtoWispsTalisman()
             : base(0x2F5B)
         {
@@ -151,7 +151,7 @@ namespace Server.Items
         public override int LabelNumber => 1073358; // Library Talisman - a Grammar of Orchish (Summoner)
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public GrammarOfOrchishTalisman()
             : base(0x2F59)
         {
@@ -188,7 +188,7 @@ namespace Server.Items
         public override bool ForceShowName => true;
         public override Type GetSummoner() { return GetRandomSummonType(); }
 
-        [Constructable]
+        [Constructible]
         public BirdsofBritanniaTalisman()
             : base(0x2F5A)
         {
@@ -223,7 +223,7 @@ namespace Server.Items
         public override int LabelNumber => 1073360; // Library Talisman - The Life of a Traveling Minstrel
         public override bool ForceShowName => true;
 
-        [Constructable]
+        [Constructible]
         public TheLifeOfTravelingMinstrelTalisman()
             : base(0x2F5B)
         {

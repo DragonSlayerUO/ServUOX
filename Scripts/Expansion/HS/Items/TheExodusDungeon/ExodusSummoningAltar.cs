@@ -12,7 +12,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153502;  // exodus summoning altar
 
-        [Constructable]
+        [Constructible]
         public ExodusSummoningAlter() : base(0x14F0)
         {
             LootType = LootType.Regular;

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an impaler corpse")]
     public class Impaler : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Impaler()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

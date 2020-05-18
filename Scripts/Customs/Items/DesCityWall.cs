@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DesCityWallSouth : DamageableItem
     {
-        [Constructable]
+        [Constructible]
         public DesCityWallSouth()
             : base(641, 631)
         {
@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class DesCityWallEast : DamageableItem
     {
-        [Constructable]
+        [Constructible]
         public DesCityWallEast()
             : base(642, 636)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x905, 0x4070)]
     public class GlassStaff : BaseStaff
     {
-        [Constructable]
+        [Constructible]
         public GlassStaff()
             : base(0x905)
         {

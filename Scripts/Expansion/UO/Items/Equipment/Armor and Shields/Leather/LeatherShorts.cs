@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x1c00, 0x1c01)]
     public class LeatherShorts : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeatherShorts()
             : base(0x1C00)
         {

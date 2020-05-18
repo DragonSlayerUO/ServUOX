@@ -11,7 +11,7 @@ namespace Server.Items
         {
             0x3, 0xD, 0x13, 0x1C, 0x21, 0x30, 0x3F, 0x44, 0x59, 0x62, 0x71
         };
-        [Constructable]
+        [Constructible]
         public ParrotItem()
             : base(0x20EE)
         {

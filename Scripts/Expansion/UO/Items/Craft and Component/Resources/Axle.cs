@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x105B, 0x105C)]
     public class Axle : Item
     {
-        [Constructable]
+        [Constructible]
         public Axle()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Axle(int amount)
             : base(0x105B)
         {

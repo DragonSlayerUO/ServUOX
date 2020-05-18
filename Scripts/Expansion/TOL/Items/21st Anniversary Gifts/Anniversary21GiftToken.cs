@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158485;  // 21st Anniversary Gift Token
 
-        [Constructable]
+        [Constructible]
         public Anniversary21GiftToken()
             : base(19398)
         {

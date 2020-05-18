@@ -5,7 +5,7 @@ namespace Server.Items
     public class ShardThrasher : DiamondMace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ShardThrasher()
         {
             Hue = 0x4F2;

@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x230C, 0x230B)]
     public class FurSarong : BaseOuterLegs
     {
-        [Constructable]
+        [Constructible]
         public FurSarong()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FurSarong(int hue)
             : base(0x230C, hue)
         {

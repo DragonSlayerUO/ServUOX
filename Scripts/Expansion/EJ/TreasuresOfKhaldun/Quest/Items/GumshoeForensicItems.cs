@@ -68,7 +68,7 @@ namespace Server.Engines.Khaldun
         public override string ItemName => "bottles of wine";
         public override int Cliloc => 1158572;
 
-        [Constructable]
+        [Constructible]
         public GumshoeBottles()
             : base(0x9C5)
         {
@@ -99,7 +99,7 @@ namespace Server.Engines.Khaldun
         public override string ItemName => "deed";
         public override int Cliloc => 1158575;
 
-        [Constructable]
+        [Constructible]
         public GumshoeDeed()
             : base(0x14EF)
         {
@@ -130,7 +130,7 @@ namespace Server.Engines.Khaldun
         public override string ItemName => "rope";
         public override int Cliloc => 1158573;
 
-        [Constructable]
+        [Constructible]
         public GumshoeRope()
             : base(0x14FA)
         {
@@ -161,7 +161,7 @@ namespace Server.Engines.Khaldun
         public override string ItemName => "map";
         public override int Cliloc => 1158574;
 
-        [Constructable]
+        [Constructible]
         public GumshoeMap()
             : base(0x14EB)
         {
@@ -192,7 +192,7 @@ namespace Server.Engines.Khaldun
         public override string ItemName => "tools";
         public override int Cliloc => 1158576;
 
-        [Constructable]
+        [Constructible]
         public GumshoeTools()
             : base(0x1EBB)
         {

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Fire Elemental [Renowned] corpse")]
     public class FireElementalRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public FireElementalRenowned()
             : base(AIType.AI_Mage)
         {

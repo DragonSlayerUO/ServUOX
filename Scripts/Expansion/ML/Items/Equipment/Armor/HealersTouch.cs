@@ -5,7 +5,7 @@ namespace Server.Items
     public class HealersTouch : LeatherGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HealersTouch()
         {
             LootType = LootType.Blessed;

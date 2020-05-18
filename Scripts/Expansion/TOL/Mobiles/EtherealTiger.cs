@@ -9,13 +9,13 @@ namespace Server.Mobiles
 {
     public class EtherealTiger : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealTiger()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EtherealTiger(bool light = false)
             : base(0x9844, light ? 0x3EC7 : 0x3EC8, light ? 0x3EC7 : 0x3EC8, DefaultEtherealHue)
         {

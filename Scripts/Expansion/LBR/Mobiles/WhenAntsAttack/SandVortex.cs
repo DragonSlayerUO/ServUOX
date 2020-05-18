@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class SandVortex : BaseCreature
     {
         private DateTime m_NextAttack;
-        [Constructable]
+        [Constructible]
         public SandVortex()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

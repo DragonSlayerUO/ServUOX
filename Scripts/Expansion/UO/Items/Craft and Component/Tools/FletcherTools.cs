@@ -8,13 +8,13 @@ namespace Server.Items
         public override CraftSystem CraftSystem => DefBowFletching.CraftSystem;
         public override int LabelNumber => 1044559;  // Fletcher's Tools
 
-        [Constructable]
+        [Constructible]
         public FletcherTools()
             : base(0x1022)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FletcherTools(int uses)
             : base(uses, 0x1022)
         {

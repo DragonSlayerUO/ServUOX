@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class Monk : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Monk()
             : base("the Monk")
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FishBones : Item
     {
-        [Constructable]
+        [Constructible]
         public FishBones()
             : base(0x3B0C)
         {

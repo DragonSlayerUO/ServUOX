@@ -216,7 +216,7 @@ namespace Server.Items
             new BookPageInfo(
                 "human.",
                 "  You will be freed."));
-        [Constructable]
+        [Constructible]
         public BlackthornWelcomeBook()
             : base(false)
         {

@@ -16,7 +16,7 @@ namespace Server.Items
 
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public SheepStatue(int itemID)
             : base()
         {
@@ -222,7 +222,7 @@ namespace Server.Items
         private bool m_IsRewardItem;
         private int m_ResourceCount;
 
-        [Constructable]
+        [Constructible]
         public SheepStatueDeed()
             : base()
         {

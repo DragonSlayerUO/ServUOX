@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class WaterloggedBoots : BaseShoes
     {
-        [Constructable]
+        [Constructible]
         public WaterloggedBoots()
             : base(0x1711)
         {

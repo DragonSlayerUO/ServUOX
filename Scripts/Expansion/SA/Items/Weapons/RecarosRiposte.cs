@@ -5,7 +5,7 @@ namespace Server.Items
     public class RecarosRiposte : WarFork
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RecarosRiposte()
         {
             LootType = LootType.Blessed;

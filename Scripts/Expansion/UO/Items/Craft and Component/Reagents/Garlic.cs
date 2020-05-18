@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class Garlic : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Garlic()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Garlic(int amount)
             : base(0xF84, amount)
         {

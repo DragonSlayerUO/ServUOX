@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x13FB, 0x13FA)]
     public class LargeBattleAxe : BaseAxe
     {
-        [Constructable]
+        [Constructible]
         public LargeBattleAxe()
             : base(0x13FB)
         {

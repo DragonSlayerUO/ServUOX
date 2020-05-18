@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x26BF, 0x26C9)]
     public class DoubleBladedStaff : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public DoubleBladedStaff()
             : base(0x26BF)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1078148; // Ossian Grimoire
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public OssianGrimoire()
         {
             LootType = LootType.Blessed;

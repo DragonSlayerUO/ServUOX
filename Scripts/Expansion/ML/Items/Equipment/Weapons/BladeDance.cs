@@ -5,7 +5,7 @@ namespace Server.Items
     public class BladeDance : RuneBlade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BladeDance()
         {
             Hue = 0x66C;

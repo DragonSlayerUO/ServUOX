@@ -8,7 +8,7 @@ namespace Server.Items
         public CraftSystem RepairSystem => DefTailoring.CraftSystem;
 
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RangerChest()
             : base(0x13DB)
         {

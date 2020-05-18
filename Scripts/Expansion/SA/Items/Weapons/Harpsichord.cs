@@ -38,13 +38,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public HarpsichordRoll()
             : this((MusicName)Utility.Random(88, 15))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HarpsichordRoll(MusicName music)
             : base(0x4BA1)
         {
@@ -136,7 +136,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => new HarpsichordAddonDeed((HarpsichordColor)Hue, List);
 
-        [Constructable]
+        [Constructible]
         public HarpsichordAddon(HarpsichordColor hue, DirectionType type, List<MusicName> list)
         {
             if (list == null)
@@ -291,19 +291,19 @@ namespace Server.Items
 
         public override BaseAddon Addon => new HarpsichordAddon((HarpsichordColor)Hue, _Direction, _List);
 
-        [Constructable]
+        [Constructible]
         public HarpsichordAddonDeed()
             : this((HarpsichordColor)Utility.RandomList(1168, 1177, 1195, 1910, 1922, 1933, 2498, 2584, 2541, 2609))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HarpsichordAddonDeed(HarpsichordColor hue)
             : this(hue, null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HarpsichordAddonDeed(HarpsichordColor hue, List<MusicName> list)
         {
             _List = list;

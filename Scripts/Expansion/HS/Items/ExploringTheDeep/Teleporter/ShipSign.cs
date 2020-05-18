@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => m_Cliloc;
 
 
-        [Constructable]
+        [Constructible]
         public ShipSign(int id, int cliloc)
             : base(0xBD2)
         {

@@ -10,12 +10,12 @@ namespace Server.Items
         public override int LabelNumber => 1152909;  // Hephaestus
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public Hephaestus() : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Hephaestus(bool antique)
         {
             Hue = 1910;
@@ -64,12 +64,12 @@ namespace Server.Items
         public override int LabelNumber => 1152909;  // Hephaestus
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishHephaestus() : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishHephaestus(bool antique)
         {
             Hue = 1910;

@@ -5,7 +5,7 @@ namespace Server.Items
     {
         public override int DefaultGumpID => 0x49;
 
-        [Constructable]
+        [Constructible]
         public TreasureLevel1() : base(Utility.RandomList(0xE3C, 0xE3E, 0x9a9))
         {
             RequiredSkill = 52;
@@ -51,7 +51,7 @@ namespace Server.Items
     {
         public override int DefaultGumpID => 0x49;
 
-        [Constructable]
+        [Constructible]
         public TreasureLevel1h() : base(Utility.RandomList(0xE3C, 0xE3E, 0x9a9))
         {
             RequiredSkill = 56;
@@ -101,7 +101,7 @@ namespace Server.Items
     [Flipable(0xe43, 0xe42)]
     public class TreasureLevel2 : BaseTreasureChestMod
     {
-        [Constructable]
+        [Constructible]
         public TreasureLevel2() : base(Utility.RandomList(0xe3c, 0xE3E, 0x9a9, 0xe42, 0x9ab, 0xe40, 0xe7f, 0xe77))
         {
             RequiredSkill = 72;
@@ -153,7 +153,7 @@ namespace Server.Items
     {
         public override int DefaultGumpID => 0x4A;
 
-        [Constructable]
+        [Constructible]
         public TreasureLevel3() : base(Utility.RandomList(0x9ab, 0xe40, 0xe42))
         {
             RequiredSkill = 84;
@@ -247,7 +247,7 @@ namespace Server.Items
     [Flipable(0xe41, 0xe40)]
     public class TreasureLevel4 : BaseTreasureChestMod
     {
-        [Constructable]
+        [Constructible]
         public TreasureLevel4() : base(Utility.RandomList(0xe40, 0xe42, 0x9ab))
         {
             RequiredSkill = 92;

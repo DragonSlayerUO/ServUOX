@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a myrmidex corpse")]
     public class SpectralMyrmidexWarrior : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SpectralMyrmidexWarrior(bool weak)
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, .2, .4)
         {

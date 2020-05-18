@@ -10,7 +10,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new SewingMachineDeed(Tools.Count > 0 ? Tools[0].UsesRemaining : 0);
         public override CraftSystem CraftSystem => DefTailoring.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public SewingMachine(bool south, int uses)
         {
             if (south)
@@ -52,12 +52,12 @@ namespace Server.Items
 
         private bool _South;
 
-        [Constructable]
+        [Constructible]
         public SewingMachineDeed() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SewingMachineDeed(int uses) : base(uses)
         {
         }

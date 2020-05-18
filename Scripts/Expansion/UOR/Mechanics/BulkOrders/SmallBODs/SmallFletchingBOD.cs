@@ -20,7 +20,7 @@ namespace Server.Engines.BulkOrders
 
         public override BODType BODType => BODType.Fletching;
 
-        [Constructable]
+        [Constructible]
         public SmallFletchingBOD()
         {
             SmallBulkEntry[] entries;

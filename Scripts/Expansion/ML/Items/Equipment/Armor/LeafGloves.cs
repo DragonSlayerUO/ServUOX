@@ -25,7 +25,7 @@ namespace Server.Items
 
         public override ArmorMeditationAllowance DefMedAllowance => ArmorMeditationAllowance.All;
 
-        [Constructable]
+        [Constructible]
         public LeafGloves()
             : base(0x2FC6)
         {

@@ -27,19 +27,19 @@ namespace Server.Items
     {
         private HaochisPigmentType m_Type;
 
-        [Constructable]
+        [Constructible]
         public HaochisPigment()
             : this(HaochisPigmentType.None, 50)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HaochisPigment(HaochisPigmentType type)
             : this(type, 50)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HaochisPigment(HaochisPigmentType type, int uses)
             : base(uses)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1080189;  // Nocturne Earrings
 
-        [Constructable]
+        [Constructible]
         public NocturneEarrings()
         {
             Hue = 0x3E5;

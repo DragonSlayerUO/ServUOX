@@ -11,7 +11,7 @@ namespace Server.Items
 
         public override string DefaultName => "Pet Training Gate - You Must Start Pet Training Before Bringing Your Pet Through The Gate!";
 
-        [Constructable]
+        [Constructible]
         public PetTrainingGate()
             : base(3948)
         {
@@ -71,7 +71,7 @@ namespace Server.Items
 
         public override string DefaultName => "Pet Bond Timer Remover";
 
-        [Constructable]
+        [Constructible]
         public PetBondRemoveGate()
             : base(3948)
         {
@@ -121,7 +121,7 @@ namespace Server.Items
 
         public override string DefaultName => "+20 Power Scrolls";
 
-        [Constructable]
+        [Constructible]
         public PowerScrollGiver()
             : base(0x1183)
         {

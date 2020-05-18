@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class Rikktor : BaseChampion
     {
-        [Constructable]
+        [Constructible]
         public Rikktor()
             : base(AIType.AI_Melee)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class GauntletsOfNobility : RingmailGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GauntletsOfNobility()
         {
             Hue = 0x4FE;

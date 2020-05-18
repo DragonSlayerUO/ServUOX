@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class RecallScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public RecallScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RecallScroll(int amount)
             : base(31, 0x1F4C, amount)
         {

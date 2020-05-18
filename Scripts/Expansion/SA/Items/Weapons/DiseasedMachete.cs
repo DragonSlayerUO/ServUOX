@@ -5,7 +5,7 @@ namespace Server.Items
     public class DiseasedMachete : ElvenMachete
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DiseasedMachete()
         {
             WeaponAttributes.HitPoisonArea = 25;

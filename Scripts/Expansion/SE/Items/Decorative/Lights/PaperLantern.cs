@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable]
     public class PaperLantern : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public PaperLantern()
             : base(0x24BE)
         {

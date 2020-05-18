@@ -5,7 +5,7 @@ namespace Server.Items
     public class BraveKnightOfTheBritannia : Katana
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BraveKnightOfTheBritannia()
         {
             Hue = 0x47e;

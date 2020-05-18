@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2DF1, 0x2DF2)]
     public class RarewoodChest : LockableContainer
     {
-        [Constructable]
+        [Constructible]
         public RarewoodChest()
             : base(0x2DF1)
         {

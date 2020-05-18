@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FluffySpongeAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public FluffySpongeAddon()
         {
             AddComponent(new AddonComponent(0x4C31), 0, 0, 0);
@@ -43,7 +43,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098377;  // Fluffy Sponge
 
-        [Constructable]
+        [Constructible]
         public FluffySpongeDeed()
         {
             LootType = LootType.Blessed;

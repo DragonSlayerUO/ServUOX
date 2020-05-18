@@ -14,7 +14,7 @@ namespace Server.Engines.BulkOrders
             0.015625000, // Horned
             0.001953125  // Barbed
         };
-        [Constructable]
+        [Constructible]
         public LargeTailorBOD()
         {
             LargeBulkEntry[] entries;

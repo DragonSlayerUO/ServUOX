@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class FemaleGargishPlateLegs : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishPlateLegs()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishPlateLegs(int hue)
             : base(0x30D)
         {

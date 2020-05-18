@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SmallForgeAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SmallForgeAddon()
         {
             AddComponent(new ForgeComponent(0xFB1), 0, 0, 0);
@@ -28,7 +28,7 @@ namespace Server.Items
 
     public class SmallForgeDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SmallForgeDeed()
         {
         }

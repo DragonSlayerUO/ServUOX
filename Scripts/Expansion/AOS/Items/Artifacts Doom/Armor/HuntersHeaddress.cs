@@ -5,7 +5,7 @@ namespace Server.Items
     public class HuntersHeaddress : DeerMask
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HuntersHeaddress()
         {
             Hue = 0x594;

@@ -6,7 +6,7 @@ namespace Server.Items
     public class HonorLegs : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HonorLegs()
             : base(0x2B06)
         {

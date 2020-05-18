@@ -28,7 +28,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1109630;  // Tiger Pelt Long Skirt
 
-        [Constructable]
+        [Constructible]
         public TigerPeltLongSkirt()
             : base(0x7826)
         {

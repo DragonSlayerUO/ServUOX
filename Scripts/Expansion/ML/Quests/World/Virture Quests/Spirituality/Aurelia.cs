@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Aurelia : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Aurelia()
             : base("Aurelia", "the Architect's Daughter")
         {

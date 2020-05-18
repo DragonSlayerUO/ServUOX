@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PrismaticCrystal : Item
     {
-        [Constructable]
+        [Constructible]
         public PrismaticCrystal()
             : base(0x2DA)
         {

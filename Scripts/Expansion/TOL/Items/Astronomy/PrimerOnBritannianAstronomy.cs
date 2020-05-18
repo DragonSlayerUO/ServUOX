@@ -13,7 +13,7 @@ namespace Server.Engines.Astronomy
     {
         public override int LabelNumber => 1158515;  // Looking to the Heavens: A Primer on Britannian Astronomy
 
-        [Constructable]
+        [Constructible]
         public PrimerOnBritannianAstronomy()
             : base(0xFF0)
         {

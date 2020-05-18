@@ -7,7 +7,7 @@ namespace Server.Items
     public class GuildTeleporter : Item
     {
         private Item m_Stone;
-        [Constructable]
+        [Constructible]
         public GuildTeleporter()
             : this(null)
         {

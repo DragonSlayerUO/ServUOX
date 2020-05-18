@@ -4,19 +4,19 @@ namespace Server.Factions
 {
     public class Silver : Item
     {
-        [Constructable]
+        [Constructible]
         public Silver()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Silver(int amountFrom, int amountTo)
             : this(Utility.RandomMinMax(amountFrom, amountTo))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Silver(int amount)
             : base(0xEF0)
         {

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an orcish corpse")]
     public class Orc : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Orc()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -154,7 +154,7 @@ namespace Server.Mobiles
     [CorpseName("an orcish corpse")]
     public class OrcCaptain : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OrcCaptain()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -283,7 +283,7 @@ namespace Server.Mobiles
     [CorpseName("an orcish corpse")]
     public class OrcishLord : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OrcishLord()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -411,7 +411,7 @@ namespace Server.Mobiles
     [CorpseName("a glowing orc corpse")]
     public class OrcishMage : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OrcishMage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HoveringWisp : Item
     {
-        [Constructable]
+        [Constructible]
         public HoveringWisp()
             : base(0x2100)
         {

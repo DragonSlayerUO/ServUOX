@@ -49,7 +49,7 @@ namespace Server.Items
     public class SolenAntHole : BaseAddon
     {
         private List<Mobile> m_Spawned;
-        [Constructable]
+        [Constructible]
         public SolenAntHole()
             : base()
         {

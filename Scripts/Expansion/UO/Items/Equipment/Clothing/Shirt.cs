@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1517, 0x1518)]
     public class Shirt : BaseShirt
     {
-        [Constructable]
+        [Constructible]
         public Shirt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Shirt(int hue)
             : base(0x1517, hue)
         {

@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Thalia : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Thalia()
             : base("Thaliae", "the Bride")
         {

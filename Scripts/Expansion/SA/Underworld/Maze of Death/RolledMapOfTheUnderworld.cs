@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class RolledMapOfTheUnderworld : Item
     {
-        [Constructable]
+        [Constructible]
         public RolledMapOfTheUnderworld() : base(5357)
         {
         }

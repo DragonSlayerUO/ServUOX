@@ -5,7 +5,7 @@ namespace Server.Items
     public class BlackthornsKryss : Kryss
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BlackthornsKryss()
             : base()
         {
@@ -43,7 +43,7 @@ namespace Server.Items
     public class SwordOfJustice : VikingSword
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SwordOfJustice()
             : base()
         {
@@ -83,7 +83,7 @@ namespace Server.Items
     public class GeoffreysAxe : ExecutionersAxe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GeoffreysAxe()
             : base()
         {

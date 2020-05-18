@@ -5,13 +5,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.MaleGargishStoneKilt")]
     public class GargishStoneKilt : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public GargishStoneKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishStoneKilt(int hue)
             : base(0x288)
         {

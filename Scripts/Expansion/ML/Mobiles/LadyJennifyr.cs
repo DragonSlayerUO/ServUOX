@@ -8,7 +8,7 @@ namespace Server.Mobiles
     public class LadyJennifyr : SkeletalKnight
     {
         private static readonly Dictionary<Mobile, ExpireTimer> m_Table = new Dictionary<Mobile, ExpireTimer>();
-        [Constructable]
+        [Constructible]
         public LadyJennifyr()
         {
             Name = "Lady Jennifyr";

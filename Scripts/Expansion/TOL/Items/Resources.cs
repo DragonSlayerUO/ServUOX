@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1123908;
 
-        [Constructable]
+        [Constructible]
         public TigerPelt()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TigerPelt(int amount) : base(0x9BCC)
         {
             Weight = 1.0;
@@ -50,13 +50,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156201;
 
-        [Constructable]
+        [Constructible]
         public WhiteTigerPelt()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WhiteTigerPelt(int amount)
             : base(0x9BCC)
         {
@@ -93,13 +93,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156200;
 
-        [Constructable]
+        [Constructible]
         public BlackTigerPelt()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BlackTigerPelt(int amount)
             : base(0x9BCC)
         {
@@ -136,13 +136,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1123910;
 
-        [Constructable]
+        [Constructible]
         public DragonTurtleScute()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DragonTurtleScute(int amount)
             : base(0x9BCE)
         {

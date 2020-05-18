@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PersonalLetterAhie : BaseQuestItem
     {
-        [Constructable]
+        [Constructible]
         public PersonalLetterAhie()
             : base(0x14ED)
         {

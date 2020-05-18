@@ -11,7 +11,7 @@ namespace Server.Mobiles
             typeof( DoughtyWarriorsQuest )
         };
 
-        [Constructable]
+        [Constructible]
         public Kane()
             : base("Kane", "the Master of Arms")
         {

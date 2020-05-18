@@ -30,7 +30,7 @@ namespace Server.Engines.VvV
             }
         }
 
-        [Constructable]
+        [Constructible]
         public VvVSteedStatuette(SteedType mounttype, int hue)
             : base(mounttype == SteedType.Ostard ? 8501 : 8484)
         {

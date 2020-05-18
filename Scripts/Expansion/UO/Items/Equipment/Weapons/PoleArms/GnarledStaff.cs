@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x13F8, 0x13F9)]
     public class GnarledStaff : BaseStaff
     {
-        [Constructable]
+        [Constructible]
         public GnarledStaff()
             : base(0x13F8)
         {

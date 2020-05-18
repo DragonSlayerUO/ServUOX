@@ -5,7 +5,7 @@ namespace Server.Items
     public class TradeGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TradeGlasses()
         {
             Attributes.BonusStr = 10;

@@ -4,13 +4,13 @@ namespace Server.Items
     [Flipable(0x1721, 0x1722)]
     public class Bananas : Food
     {
-        [Constructable]
+        [Constructible]
         public Bananas()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Bananas(int amount)
             : base(amount, 0x1721)
         {

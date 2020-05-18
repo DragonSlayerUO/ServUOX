@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113537;  // Giant Steps
 
-        [Constructable]
+        [Constructible]
         public GiantSteps()
             : base()
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PentagramAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PentagramAddon()
         {
             AddComponent(new AddonComponent(0xFE7), -1, -1, 0);
@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class PentagramDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public PentagramDeed()
         {
         }

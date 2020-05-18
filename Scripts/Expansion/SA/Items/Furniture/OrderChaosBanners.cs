@@ -16,7 +16,7 @@ namespace Server.Items
             set { m_IsRewardItem = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public OrderBanner()
             : base(0x42CD)
         {
@@ -55,7 +55,7 @@ namespace Server.Items
             set { m_IsRewardItem = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public ChaosBanner()
             : base(0x42CB)
         {

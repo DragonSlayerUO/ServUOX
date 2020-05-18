@@ -14,13 +14,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public HornedTribalMask()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HornedTribalMask(int hue)
             : base(0x1549, hue)
         {

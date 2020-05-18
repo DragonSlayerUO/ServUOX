@@ -58,7 +58,7 @@ namespace Server.Items
 
     public class SmallTrinketBag : BaseRewardBag
     {
-        [Constructable]
+        [Constructible]
         public SmallTrinketBag()
             : base()
         {
@@ -87,7 +87,7 @@ namespace Server.Items
 
     public class TrinketBag : BaseRewardBag
     {
-        [Constructable]
+        [Constructible]
         public TrinketBag()
             : base()
         {
@@ -116,7 +116,7 @@ namespace Server.Items
 
     public class TreasureBag : BaseRewardBag
     {
-        [Constructable]
+        [Constructible]
         public TreasureBag()
             : base()
         {
@@ -145,7 +145,7 @@ namespace Server.Items
 
     public class LargeTreasureBag : BaseRewardBag
     {
-        [Constructable]
+        [Constructible]
         public LargeTreasureBag()
             : base()
         {

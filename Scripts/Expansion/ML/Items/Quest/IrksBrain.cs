@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class IrksBrain : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public IrksBrain()
             : base(0x1CF0)
         {

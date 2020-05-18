@@ -6,7 +6,7 @@ namespace Server.Items
     {
         private int m_OpenedID;
         private int m_ClosedID;
-        [Constructable]
+        [Constructible]
         public BaseSliding(int closedID, int openedID)
             : base(closedID)
         {

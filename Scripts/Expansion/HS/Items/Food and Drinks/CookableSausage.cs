@@ -5,7 +5,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125198;  // sausage
 
-        [Constructable]
+        [Constructible]
         public CookableSausage()
             : base(0xA0D6)
         {

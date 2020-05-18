@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023637;  // scroll
 
-        [Constructable]
+        [Constructible]
         public JosefSkimmonsScroll() : base(0x46AF)
         {
             Movable = false;

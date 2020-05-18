@@ -45,13 +45,13 @@ namespace Server.Items
     public class StoneAnkh : BaseAddon, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public StoneAnkh()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StoneAnkh(bool east)
             : base()
         {
@@ -155,7 +155,7 @@ namespace Server.Items
     {
         private bool m_East;
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public StoneAnkhDeed()
             : base()
         {

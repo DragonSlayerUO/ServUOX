@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Ansikart : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Ansikart()
             : base("Ansikart", "the Artificer")
         {

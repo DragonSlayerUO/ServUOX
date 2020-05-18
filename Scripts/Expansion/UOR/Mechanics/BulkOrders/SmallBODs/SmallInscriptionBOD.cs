@@ -8,7 +8,7 @@ namespace Server.Engines.BulkOrders
     {
         public override BODType BODType => BODType.Inscription;
 
-        [Constructable]
+        [Constructible]
         public SmallInscriptionBOD()
         {
             SmallBulkEntry[] entries = SmallBulkEntry.InscriptionSmalls;

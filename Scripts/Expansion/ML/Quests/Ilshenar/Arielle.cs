@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Arielle : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Arielle()
             : base("Arielle")
         {

@@ -4,7 +4,7 @@ namespace Server.Mobiles
     [CorpseName("a cave troll corpse")]
     public class CaveTrollWrong : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public CaveTrollWrong()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

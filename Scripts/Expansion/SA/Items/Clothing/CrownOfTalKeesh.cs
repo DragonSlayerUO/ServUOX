@@ -5,7 +5,7 @@ namespace Server.Items
     public class CrownOfTalKeesh : Bandana
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CrownOfTalKeesh()
         {
             Hue = 0x4F2;

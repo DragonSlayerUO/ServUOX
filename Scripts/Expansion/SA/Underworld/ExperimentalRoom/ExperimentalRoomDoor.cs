@@ -19,7 +19,7 @@ namespace Server.Items
             set { m_Room = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public ExperimentalRoomDoor(Room room, DoorFacing facing) : base(facing)
         {
             m_Room = room;
@@ -99,7 +99,7 @@ namespace Server.Items
             set { m_Room = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public ExperimentalRoomBlocker(Room room) : base(7107)
         {
             m_Room = room;

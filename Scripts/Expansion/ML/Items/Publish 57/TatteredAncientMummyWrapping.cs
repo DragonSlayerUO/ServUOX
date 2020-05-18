@@ -5,7 +5,7 @@ namespace Server.Items
     public class TatteredAncientMummyWrapping : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TatteredAncientMummyWrapping()
             : base(0xE21)
         {

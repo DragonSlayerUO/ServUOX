@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class LeafySeaDragon : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public LeafySeaDragon()
             : base(0xA390)
         {

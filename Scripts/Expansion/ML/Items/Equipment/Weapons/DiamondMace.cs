@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x2D24, 0x2D30)]
     public class DiamondMace : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public DiamondMace()
             : base(0x2D24)
         {

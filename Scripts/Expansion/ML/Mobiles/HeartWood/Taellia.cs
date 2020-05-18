@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
         private DateTime m_Spoken;
-        [Constructable]
+        [Constructible]
         public Taellia()
             : base("the Wise")
         {

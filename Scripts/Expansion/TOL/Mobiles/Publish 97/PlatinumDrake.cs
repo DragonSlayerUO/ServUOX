@@ -9,13 +9,13 @@ namespace Server.Mobiles
 
         public ElementType ElementType => m_Type;
 
-        [Constructable]
+        [Constructible]
         public PlatinumDrake()
             : this((ElementType)Utility.Random(5))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlatinumDrake(ElementType type)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

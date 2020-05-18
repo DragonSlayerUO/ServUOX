@@ -13,7 +13,7 @@ namespace Server.Mobiles
 
         public TimeSpan ManaDrainInterval => TimeSpan.FromSeconds(Utility.RandomMinMax(15, 120));
 
-        [Constructable]
+        [Constructible]
         public CoraTheSorceress() : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.1)
         {
             Body = 0x191;

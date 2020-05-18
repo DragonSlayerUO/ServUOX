@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoCrystalBall : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoCrystalBall()
             : base(0xE2E)
         {

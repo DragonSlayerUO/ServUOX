@@ -5,7 +5,7 @@ namespace Server.Items
     public class AnthropomorphistGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AnthropomorphistGlasses()
         {
             Attributes.BonusHits = 5;

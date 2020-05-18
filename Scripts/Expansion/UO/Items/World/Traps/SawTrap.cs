@@ -13,13 +13,13 @@ namespace Server.Items
 
     public class SawTrap : BaseTrap
     {
-        [Constructable]
+        [Constructible]
         public SawTrap()
             : this(SawTrapType.NorthFloor)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SawTrap(SawTrapType type)
             : base(GetBaseID(type))
         {

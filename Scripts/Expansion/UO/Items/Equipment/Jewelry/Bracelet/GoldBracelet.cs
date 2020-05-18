@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class GoldBracelet : BaseBracelet
     {
-        [Constructable]
+        [Constructible]
         public GoldBracelet()
             : base(0x1086)
         {

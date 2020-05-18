@@ -84,13 +84,13 @@ namespace Server.Items
 
     public class Granite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public Granite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Granite(int amount)
             : base(CraftResource.Iron)
         {
@@ -122,13 +122,13 @@ namespace Server.Items
 
     public class DullCopperGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public DullCopperGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DullCopperGranite(int amount)
             : base(CraftResource.DullCopper)
         {
@@ -160,13 +160,13 @@ namespace Server.Items
 
     public class ShadowIronGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public ShadowIronGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ShadowIronGranite(int amount)
             : base(CraftResource.ShadowIron)
         {
@@ -198,13 +198,13 @@ namespace Server.Items
 
     public class CopperGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public CopperGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CopperGranite(int amount)
             : base(CraftResource.Copper)
         {
@@ -236,13 +236,13 @@ namespace Server.Items
 
     public class BronzeGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public BronzeGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BronzeGranite(int amount)
             : base(CraftResource.Bronze)
         {
@@ -274,13 +274,13 @@ namespace Server.Items
 
     public class GoldGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public GoldGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GoldGranite(int amount)
             : base(CraftResource.Gold)
         {
@@ -312,13 +312,13 @@ namespace Server.Items
 
     public class AgapiteGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public AgapiteGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AgapiteGranite(int amount)
             : base(CraftResource.Agapite)
         {
@@ -350,13 +350,13 @@ namespace Server.Items
 
     public class VeriteGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public VeriteGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public VeriteGranite(int amount)
             : base(CraftResource.Verite)
         {
@@ -388,13 +388,13 @@ namespace Server.Items
 
     public class ValoriteGranite : BaseGranite
     {
-        [Constructable]
+        [Constructible]
         public ValoriteGranite()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ValoriteGranite(int amount)
             : base(CraftResource.Valorite)
         {

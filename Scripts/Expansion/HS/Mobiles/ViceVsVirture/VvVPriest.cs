@@ -25,7 +25,7 @@ namespace Server.Engines.VvV
         [CommandProperty(AccessLevel.GameMaster)]
         public VvVBattle Battle { get; set; }
 
-        [Constructable]
+        [Constructible]
         public VvVPriest(VvVType type, VvVBattle battle) : base(type == VvVType.Vice ? "the Priest of Vice" : "the Priest of Virtue")
         {
             VvVType = type;

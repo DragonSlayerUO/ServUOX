@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113528;  // Petrified Snake
 
-        [Constructable]
+        [Constructible]
         public PetrifiedSnake()
             : base()
         {

@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class CrystallineBlackrock : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public CrystallineBlackrock()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CrystallineBlackrock(int amount)
             : base(0x5732)
         {

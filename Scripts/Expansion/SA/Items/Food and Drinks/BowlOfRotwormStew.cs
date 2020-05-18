@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1031706;  // bowl of rotworm stew
 
-        [Constructable]
+        [Constructible]
         public BowlOfRotwormStew()
             : base(0x2DBA)
         {

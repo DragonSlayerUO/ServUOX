@@ -12,7 +12,7 @@ namespace Server.Mobiles
     [CorpseName("a bloodworm corpse")]
     public class BloodWorm : BaseCreature, IBloodCreature
     {
-        [Constructable]
+        [Constructible]
         public BloodWorm()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

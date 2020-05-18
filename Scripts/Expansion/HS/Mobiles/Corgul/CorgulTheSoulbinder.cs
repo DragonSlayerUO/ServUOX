@@ -47,7 +47,7 @@ namespace Server.Mobiles
             new Point3D(6461, 1237, 10),
         };
 
-        [Constructable]
+        [Constructible]
         public CorgulTheSoulBinder()
             : this(null)
         {

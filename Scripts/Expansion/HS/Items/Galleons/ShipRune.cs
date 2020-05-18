@@ -26,12 +26,12 @@ namespace Server.Items
 
         public override int LabelNumber => 1149570;  //A Ship Rune
 
-        [Constructable]
+        [Constructible]
         public ShipRune() : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ShipRune(BaseGalleon galleon) : base(0x1F14)
         {
             m_Galleon = galleon;

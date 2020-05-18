@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public BackpackArtifact()
             : base(0x9B2)
         {
@@ -41,7 +41,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public BloodyWaterArtifact()
             : base(0xE23)
         {
@@ -74,7 +74,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 3;
 
-        [Constructable]
+        [Constructible]
         public BooksWestArtifact()
             : base(0x1E25)
         {
@@ -107,7 +107,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 3;
 
-        [Constructable]
+        [Constructible]
         public BooksNorthArtifact()
             : base(0x1E24)
         {
@@ -140,7 +140,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 3;
 
-        [Constructable]
+        [Constructible]
         public BooksFaceDownArtifact()
             : base(0x1E21)
         {
@@ -173,7 +173,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 1;
 
-        [Constructable]
+        [Constructible]
         public BottleArtifact()
             : base(0xE28)
         {
@@ -206,7 +206,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 2;
 
-        [Constructable]
+        [Constructible]
         public BrazierArtifact()
             : base(0xE31)
         {
@@ -240,7 +240,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public CocoonArtifact()
             : base(0x10DA)
         {
@@ -273,7 +273,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 1;
 
-        [Constructable]
+        [Constructible]
         public DamagedBooksArtifact()
             : base(0xC16)
         {
@@ -306,7 +306,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public EggCaseArtifact()
             : base(0x10D9)
         {
@@ -339,7 +339,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public GruesomeStandardArtifact()
             : base(0x428)
         {
@@ -372,7 +372,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 3;
 
-        [Constructable]
+        [Constructible]
         public LampPostArtifact()
             : base(0xB24)
         {
@@ -406,7 +406,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 9;
 
-        [Constructable]
+        [Constructible]
         public LeatherTunicArtifact()
             : base(0x13CA)
         {
@@ -439,7 +439,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 1;
 
-        [Constructable]
+        [Constructible]
         public RockArtifact()
             : base(0x1363)
         {
@@ -472,7 +472,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 12;
 
-        [Constructable]
+        [Constructible]
         public RuinedPaintingArtifact()
             : base(0xC2C)
         {
@@ -505,7 +505,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 9;
 
-        [Constructable]
+        [Constructible]
         public SaddleArtifact()
             : base(0xF38)
         {
@@ -538,7 +538,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public SkinnedDeerArtifact()
             : base(0x1E91)
         {
@@ -571,7 +571,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public SkinnedGoatArtifact()
             : base(0x1E88)
         {
@@ -604,7 +604,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 1;
 
-        [Constructable]
+        [Constructible]
         public SkullCandleArtifact()
             : base(0x1858)
         {
@@ -638,7 +638,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 2;
 
-        [Constructable]
+        [Constructible]
         public StretchedHideArtifact()
             : base(0x106B)
         {
@@ -671,7 +671,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public StuddedLeggingsArtifact()
             : base(0x13D8)
         {
@@ -704,7 +704,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public StuddedTunicArtifact()
             : base(0x13D9)
         {
@@ -737,7 +737,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public TarotCardsArtifact()
             : base(0x12A5)
         {
@@ -772,7 +772,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public HangingPlatemailArms()
             : base(40681)
         {
@@ -803,7 +803,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public HangingPlatemailLeggings()
             : base(40683)
         {
@@ -834,7 +834,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public HangingPlatemailTunic()
             : base(40679)
         {
@@ -865,7 +865,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 9;
 
-        [Constructable]
+        [Constructible]
         public ArcaneTable()
             : base(40677)
         {
@@ -896,7 +896,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 9;
 
-        [Constructable]
+        [Constructible]
         public ArtifactBookshelf()
             : base(40675)
         {
@@ -927,7 +927,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 12;
 
-        [Constructable]
+        [Constructible]
         public IncenseBurner() : base(40685)
         {
             Duration = TimeSpan.Zero;
@@ -985,7 +985,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public BambooStoolArtifact()
             : base(0x11FC)
         {

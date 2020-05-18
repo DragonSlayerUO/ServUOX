@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class MerchantGuildmaster : BaseGuildmaster
     {
-        [Constructable]
+        [Constructible]
         public MerchantGuildmaster()
             : base("merchant")
         {

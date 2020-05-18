@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BegBedRoll : Bedroll
     {
-        [Constructable]
+        [Constructible]
         public BegBedRoll()
         {
         }

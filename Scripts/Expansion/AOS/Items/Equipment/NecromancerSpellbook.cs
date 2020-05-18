@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class NecromancerSpellbook : Spellbook
     {
-        [Constructable]
+        [Constructible]
         public NecromancerSpellbook()
             : this((ulong)0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public NecromancerSpellbook(ulong content)
             : base(content, 0x2253)
         {
@@ -45,7 +45,7 @@ namespace Server.Items
 
     public class CompleteNecromancerSpellbook : NecromancerSpellbook
     {
-        [Constructable]
+        [Constructible]
         public CompleteNecromancerSpellbook()
             : base((ulong)0x1FFFF)
         {

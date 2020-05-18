@@ -8,7 +8,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => new EnchantedVortexDeed();
 
-        [Constructable]
+        [Constructible]
         public EnchantedVortexAddon()
         {
             AddonComponent comp = new AddonComponent(14284);
@@ -38,7 +38,7 @@ namespace Server.Items
     {
         public override BaseAddon Addon => new EnchantedVortexAddon();
 
-        [Constructable]
+        [Constructible]
         public EnchantedVortexDeed()
         {
             Name = "A deed for an enchanted vortex";

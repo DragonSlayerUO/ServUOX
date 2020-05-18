@@ -25,7 +25,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1094943;  // Balm of Protection
 
-        [Constructable]
+        [Constructible]
         public BalmOfProtection()
             : base(0x1C18)
         {

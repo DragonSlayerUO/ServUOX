@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class RawLambLeg : CookableFood
     {
-        [Constructable]
+        [Constructible]
         public RawLambLeg()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RawLambLeg(int amount)
             : base(0x1609, 10)
         {

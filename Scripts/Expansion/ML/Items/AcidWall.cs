@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AcidWall : BaseWall
     {
-        [Constructable]
+        [Constructible]
         public AcidWall()
             : base(969)
         {

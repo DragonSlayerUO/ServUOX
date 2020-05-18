@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class PowderedIron : Item
     {
-        [Constructable]
+        [Constructible]
         public PowderedIron()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PowderedIron(int amount)
             : base(0x573D)
         {

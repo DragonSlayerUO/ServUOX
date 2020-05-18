@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class MapFragment : BaseQuestItem
     {
-        [Constructable]
+        [Constructible]
         public MapFragment()
             : base(0x14ED)
         {

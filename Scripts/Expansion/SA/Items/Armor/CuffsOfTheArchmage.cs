@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1157348;  // cuffs of the archmage
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public CuffsOfTheArchmage()
         {
             SkillBonuses.SetValues(0, SkillName.MagicResist, 15.0);
@@ -50,7 +50,7 @@ namespace Server.Items
         public override int LabelNumber => 1157348;  // cuffs of the archmage
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishCuffsOfTheArchmage()
         {
             SkillBonuses.SetValues(0, SkillName.MagicResist, 15.0);

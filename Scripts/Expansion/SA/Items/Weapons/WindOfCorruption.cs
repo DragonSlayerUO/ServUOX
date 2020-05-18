@@ -11,7 +11,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public WindOfCorruption()
         {
             WeaponAttributes.HitLeechStam = 40;
@@ -48,7 +48,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public WindOfCorruptionHuman()
         {
             WeaponAttributes.HitLeechStam = 40;

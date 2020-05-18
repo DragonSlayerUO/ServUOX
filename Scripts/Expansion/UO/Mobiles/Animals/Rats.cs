@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a rat corpse")]
     public class Rat : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Rat()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -68,7 +68,7 @@ namespace Server.Mobiles
     [CorpseName("a sewer rat corpse")]
     public class Sewerrat : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Sewerrat()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -135,7 +135,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Giantrat")]
     public class GiantRat : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GiantRat()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

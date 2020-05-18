@@ -7,7 +7,7 @@ namespace Server.Items
     public class NewPlayerTicket : Item
     {
         private Mobile m_Owner;
-        [Constructable]
+        [Constructible]
         public NewPlayerTicket()
             : base(0x14EF)
         {

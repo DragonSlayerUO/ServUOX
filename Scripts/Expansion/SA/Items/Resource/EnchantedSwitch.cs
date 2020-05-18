@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EnchantedSwitch : Item
     {
-        [Constructable]
+        [Constructible]
         public EnchantedSwitch()
             : base(0x2F5C)
         {

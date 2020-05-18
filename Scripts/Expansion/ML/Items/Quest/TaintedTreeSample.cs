@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TaintedTreeSample : Item
     {
-        [Constructable]
+        [Constructible]
         public TaintedTreeSample()
             : base(0xDE2)
         {

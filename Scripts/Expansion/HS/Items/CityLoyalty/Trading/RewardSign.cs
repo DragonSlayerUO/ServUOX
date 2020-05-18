@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public string EngravedText { get; set; }
 
-        [Constructable]
+        [Constructible]
         public RewardSign() : base((SignType)Utility.RandomMinMax(31, 58), Utility.RandomBool() ? SignFacing.North : SignFacing.West)
         {
             Movable = true;

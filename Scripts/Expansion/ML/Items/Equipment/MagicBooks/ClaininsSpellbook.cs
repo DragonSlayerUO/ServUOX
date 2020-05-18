@@ -5,7 +5,7 @@ namespace Server.Items
     public class ClaininsSpellbook : Spellbook
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ClaininsSpellbook()
             : base()
         {

@@ -27,7 +27,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157034;  // The Journal of Dr. Spector - Collection I
 
-        [Constructable]
+        [Constructible]
         public JournalDrSpector1()
         {
         }
@@ -71,7 +71,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157035;  // The Journal of Dr. Spector - Collection II
 
-        [Constructable]
+        [Constructible]
         public JournalDrSpector2()
         {
         }
@@ -116,7 +116,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157052;  // The Journal of Dr. Spector - Collection III
 
-        [Constructable]
+        [Constructible]
         public JournalDrSpector3()
         {
         }
@@ -161,7 +161,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157053;  // The Journal of Dr. Spector - Collection IV
 
-        [Constructable]
+        [Constructible]
         public JournalDrSpector4()
         {
         }
@@ -202,7 +202,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157056;  // History of the Great Work I
 
-        [Constructable]
+        [Constructible]
         public HistoryOfTheGreatWok1()
         {
         }
@@ -243,7 +243,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157057;  // History of the Great Work II
 
-        [Constructable]
+        [Constructible]
         public HistoryOfTheGreatWok2()
         {
         }
@@ -286,7 +286,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157058;  // History of the Great Work III
 
-        [Constructable]
+        [Constructible]
         public HistoryOfTheGreatWok3()
         {
         }
@@ -329,7 +329,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override TextDefinition Title => 1157059;  // History of the Great Work IV
 
-        [Constructable]
+        [Constructible]
         public HistoryOfTheGreatWok4()
         {
         }

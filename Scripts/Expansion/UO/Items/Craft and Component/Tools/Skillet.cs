@@ -4,14 +4,14 @@ namespace Server.Items
 {
     public class Skillet : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public Skillet()
             : base(0x97F)
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public Skillet(int uses)
             : base(uses, 0x97F)
         {

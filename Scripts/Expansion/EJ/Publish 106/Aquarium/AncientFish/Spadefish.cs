@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Spadefish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Spadefish()
             : base(0xA379)
         {

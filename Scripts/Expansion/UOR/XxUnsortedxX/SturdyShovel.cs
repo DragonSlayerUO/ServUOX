@@ -5,13 +5,13 @@ namespace Server.Items
 {
     public class SturdyShovel : BaseHarvestTool
     {
-        [Constructable]
+        [Constructible]
         public SturdyShovel()
             : this(180)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SturdyShovel(int uses)
             : base(uses, 0xF39)
         {

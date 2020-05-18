@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HeavyOrnateAxe : OrnateAxe
     {
-        [Constructable]
+        [Constructible]
         public HeavyOrnateAxe()
         {
             Attributes.WeaponDamage = 8;

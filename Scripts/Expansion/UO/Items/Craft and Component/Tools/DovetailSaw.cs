@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0x1028, 0x1029)]
     public class DovetailSaw : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public DovetailSaw()
             : base(0x1028)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public DovetailSaw(int uses)
             : base(uses, 0x1028)
         {

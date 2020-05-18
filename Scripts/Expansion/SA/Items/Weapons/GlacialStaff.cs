@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GlacialStaff : BlackStaff
     {
-        [Constructable]
+        [Constructible]
         public GlacialStaff()
         {
             Hue = 0x480;

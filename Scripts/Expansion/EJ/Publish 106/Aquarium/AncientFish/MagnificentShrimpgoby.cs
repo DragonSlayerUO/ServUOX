@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class MagnificentShrimpgoby : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public MagnificentShrimpgoby()
             : base(0xA368)
         {

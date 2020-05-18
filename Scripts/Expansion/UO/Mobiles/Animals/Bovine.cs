@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a bull corpse")]
     public class Bull : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Bull()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -69,7 +69,7 @@ namespace Server.Mobiles
     [CorpseName("a cow corpse")]
     public class Cow : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Cow()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

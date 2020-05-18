@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishDupresSword()
         {
             Hue = 0xA91;

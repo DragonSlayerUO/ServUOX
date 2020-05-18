@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoMandrakeRoot2 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoMandrakeRoot2()
             : base(0x18DD)
         {

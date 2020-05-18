@@ -5,7 +5,7 @@ namespace Server.Items
     public class EvilIdolSkull : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public EvilIdolSkull()
             : base(0x1F18)
         {

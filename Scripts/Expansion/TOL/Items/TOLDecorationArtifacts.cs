@@ -9,7 +9,7 @@ namespace Server.Items
         public override bool ShowArtifactRarity => false;
         public override bool DisplayWeight => false;
 
-        [Constructable]
+        [Constructible]
         public StretchedDinosaurHide() : base(4202)
         {
             Name = "Stretched Dinosaur Hide";
@@ -41,7 +41,7 @@ namespace Server.Items
         public override bool ShowArtifactRarity => false;
         public override bool DisplayWeight => false;
 
-        [Constructable]
+        [Constructible]
         public CarvedMyrmydexGlyph() : base(4676)
         {
             Name = "Carved Myrmydex Glyph";
@@ -73,7 +73,7 @@ namespace Server.Items
         public override bool ShowArtifactRarity => false;
         public override bool DisplayWeight => false;
 
-        [Constructable]
+        [Constructible]
         public WakuOnASpit() : base(7832)
         {
             Name = "Waku on a Spit";
@@ -104,7 +104,7 @@ namespace Server.Items
         public override bool ShowArtifactRarity => false;
         public override bool DisplayWeight => false;
 
-        [Constructable]
+        [Constructible]
         public SacredLavaRock() : base(4962)
         {
             Name = "Sacred Lava Rock";
@@ -136,7 +136,7 @@ namespace Server.Items
         public override bool ShowArtifactRarity => false;
         public override bool DisplayWeight => false;
 
-        [Constructable]
+        [Constructible]
         public WhiteTigerFigurine() : base(38980)
         {
             Name = "Hand Carved White Tiger Figurine";
@@ -168,7 +168,7 @@ namespace Server.Items
         public override bool ShowArtifactRarity => false;
         public override bool DisplayWeight => false;
 
-        [Constructable]
+        [Constructible]
         public DragonTurtleHatchlingNet() : base(3574)
         {
             Name = "Dragon Turtle Hatchling Net";

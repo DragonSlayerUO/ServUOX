@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Paladin : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Paladin()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, .2, .4)
         {

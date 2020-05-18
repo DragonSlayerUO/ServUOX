@@ -53,7 +53,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public Beehive()
             : base(2330)
         {

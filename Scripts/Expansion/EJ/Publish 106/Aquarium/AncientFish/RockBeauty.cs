@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class RockBeauty : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public RockBeauty()
             : base(0xA376)
         {

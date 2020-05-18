@@ -5,7 +5,7 @@ namespace Server.Engines.Quests
     {
         public override int LabelNumber => 1075788;  // Iron Chain
 
-        [Constructable]
+        [Constructible]
         public IronChain() : base(0x1A07)
         {
         }
@@ -118,13 +118,13 @@ namespace Server.Engines.Quests
 
         #endregion
 
-        [Constructable]
+        [Constructible]
         public GreyCloak()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GreyCloak(int hue)
             : base(0x1515, hue)
         {
@@ -190,7 +190,7 @@ namespace Server.Engines.Quests
     {
         public override int LabelNumber => 1075774;  // Seasoned Skillet
 
-        [Constructable]
+        [Constructible]
         public SeasonedSkillet() : base(0x097F)
         {
         }
@@ -219,7 +219,7 @@ namespace Server.Engines.Quests
     {
         public override int LabelNumber => 1075775;  // Village Cauldron
 
-        [Constructable]
+        [Constructible]
         public VillageCauldron()
             : base(Utility.RandomMinMax(0x0974, 0x0975))
         {
@@ -249,7 +249,7 @@ namespace Server.Engines.Quests
     {
         public override int LabelNumber => 1075776;  // Short Stool
 
-        [Constructable]
+        [Constructible]
         public ShortStool()
             : base(0xA2A)
         {
@@ -295,13 +295,13 @@ namespace Server.Engines.Quests
             return 0x995;
         }
 
-        [Constructable]
+        [Constructible]
         public FriendshipMug()
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public FriendshipMug(BeverageType type)
             : base(type)
         {
@@ -330,7 +330,7 @@ namespace Server.Engines.Quests
     {
         public override int LabelNumber => 1075778;  // Brass Ring
 
-        [Constructable]
+        [Constructible]
         public BrassRing()
             : base(0x108a)
         {
@@ -360,7 +360,7 @@ namespace Server.Engines.Quests
     {
         public override int LabelNumber => 1075779;  // Worn Hammer
 
-        [Constructable]
+        [Constructible]
         public WornHammer() : base(0x102A)
         {
         }
@@ -407,7 +407,7 @@ namespace Server.Engines.Quests
 
         public override ArmorMeditationAllowance DefMedAllowance => ArmorMeditationAllowance.All;
 
-        [Constructable]
+        [Constructible]
         public PairOfWorkGloves()
             : base(0x13C6)
         {

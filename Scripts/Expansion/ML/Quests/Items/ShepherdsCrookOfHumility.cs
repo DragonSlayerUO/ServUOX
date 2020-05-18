@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1075856;  // Shepherd's Crook of Humility (Replica)
 
-        [Constructable]
+        [Constructible]
         public ShepherdsCrookOfHumility()
             : base(0xE81)
         {

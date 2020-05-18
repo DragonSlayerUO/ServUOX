@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BegStew : WoodenBowlOfStew
     {
-        [Constructable]
+        [Constructible]
         public BegStew()
         {
         }

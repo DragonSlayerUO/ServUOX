@@ -5,7 +5,7 @@ namespace Server.Items
     public class DragonsEnd : Longsword
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DragonsEnd()
             : base()
         {

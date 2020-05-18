@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class RevealScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public RevealScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RevealScroll(int amount)
             : base(47, 0x1F5C, amount)
         {

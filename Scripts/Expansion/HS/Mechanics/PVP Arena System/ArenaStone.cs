@@ -23,7 +23,7 @@ namespace Server.Engines.ArenaSystem
             set { if (value) DoArenaEffects(); if (!value) HideArenaEffects(); }
         }
 
-        [Constructable]
+        [Constructible]
         public ArenaStone(PVPArena arena)
             : base(0xEDD)
         {

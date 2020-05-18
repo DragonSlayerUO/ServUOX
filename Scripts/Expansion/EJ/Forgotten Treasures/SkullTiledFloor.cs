@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SkullTiledFloorAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SkullTiledFloorAddon(bool east)
             : base()
         {
@@ -58,7 +58,7 @@ namespace Server.Items
     {
         private bool m_East;
 
-        [Constructable]
+        [Constructible]
         public SkullTiledFloorAddonDeed()
         {
         }

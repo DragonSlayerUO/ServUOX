@@ -78,7 +78,7 @@ namespace Server.Engines.Fellowship
         [CommandProperty(AccessLevel.GameMaster)]
         public FellowshipChain Chain { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Worker(FellowshipChain chain)
             : base("the Worker")
         {

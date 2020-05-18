@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class WhiteClothDyeTub : DyeTub
     {
-        [Constructable]
+        [Constructible]
         public WhiteClothDyeTub()
         {
             Hue = DyedHue = 2498;

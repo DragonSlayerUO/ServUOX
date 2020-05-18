@@ -5,7 +5,7 @@ namespace Server.Items
     public class NecromanticGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public NecromanticGlasses()
         {
             Attributes.LowerManaCost = 15;

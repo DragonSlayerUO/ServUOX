@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113865;  // Spined Bloodworm Bracers
 
-        [Constructable]
+        [Constructible]
         public SpinedBloodwormBracers()
         {
             Hue = 1642;

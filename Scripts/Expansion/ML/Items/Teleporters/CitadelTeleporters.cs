@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class CitadelTele : Item
     {
-        [Constructable]
+        [Constructible]
         public CitadelTele()
             : base(0xE3F)
         {

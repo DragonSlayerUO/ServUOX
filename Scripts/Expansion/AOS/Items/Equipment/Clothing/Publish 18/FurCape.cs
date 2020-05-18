@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x230A, 0x2309)]
     public class FurCape : BaseCloak
     {
-        [Constructable]
+        [Constructible]
         public FurCape()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FurCape(int hue)
             : base(0x230A, hue)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SamplesOfCorruptedWater : Item
     {
-        [Constructable]
+        [Constructible]
         public SamplesOfCorruptedWater()
             : base(0xEFE)
         {

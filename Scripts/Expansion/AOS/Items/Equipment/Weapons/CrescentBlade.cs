@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x26C1, 0x26CB)]
     public class CrescentBlade : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public CrescentBlade()
             : base(0x26C1)
         {

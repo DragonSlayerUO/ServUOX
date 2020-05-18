@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1097968;  // santa statue
 
-        [Constructable]
+        [Constructible]
         public SantaStatue()
             : base(MonsterStatuetteType.Santa)
         {

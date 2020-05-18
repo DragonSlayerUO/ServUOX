@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154246;  // Aqua Pendant
 
-        [Constructable]
+        [Constructible]
         public AquaPendant()
         {
             Hue = 1916;

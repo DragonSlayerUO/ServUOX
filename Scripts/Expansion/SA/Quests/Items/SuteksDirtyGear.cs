@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1115722;  // Sutek's Dirty Gear
 
-        [Constructable]
+        [Constructible]
         public SuteksDirtyGear()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SuteksDirtyGear(int amount)
             : base(0x1053)
         {

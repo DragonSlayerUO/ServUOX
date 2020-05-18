@@ -24,7 +24,7 @@ namespace Server.Mobiles
             m_SBInfos.Add(new SBFisherman());
         }
 
-        [Constructable]
+        [Constructible]
         public DockMaster() : base("the dockmaster")
         {
         }

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a pixie corpse")]
     public class Pixie : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Pixie()
             : base(AIType.AI_Mage, FightMode.Evil, 10, 1, 0.2, 0.4)
         {

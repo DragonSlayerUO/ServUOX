@@ -5,13 +5,13 @@ namespace Server.Items
 {
     public class GargoylesPickaxe : BaseAxe, IUsesRemaining
     {
-        [Constructable]
+        [Constructible]
         public GargoylesPickaxe()
             : this(Utility.RandomMinMax(101, 125))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargoylesPickaxe(int uses)
             : base(0xE85 + Utility.Random(2))
         {

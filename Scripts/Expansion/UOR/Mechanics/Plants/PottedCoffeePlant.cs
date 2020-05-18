@@ -11,13 +11,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155735;  // Coffee Grounds
 
-        [Constructable]
+        [Constructible]
         public CoffeeGrounds()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CoffeeGrounds(int amount)
             : base(0x573B)
         {
@@ -48,13 +48,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1123484;  // Coffee Pod
 
-        [Constructable]
+        [Constructible]
         public CoffeePod()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CoffeePod(int amount)
             : base(Utility.RandomBool() ? 0x9A24 : 0x9A25)
         {
@@ -113,7 +113,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public PottedCoffeePlant()
             : base(0x9A20)
         {

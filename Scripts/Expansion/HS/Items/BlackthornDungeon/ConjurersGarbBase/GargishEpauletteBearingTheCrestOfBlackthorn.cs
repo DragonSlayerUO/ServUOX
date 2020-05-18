@@ -11,7 +11,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1123326;  // Gargish Epaulette
 
-        [Constructable]
+        [Constructible]
         public GargishEpauletteBearingTheCrestOfBlackthorn7()
         {
             ReforgedSuffix = ReforgedSuffix.Blackthorn;

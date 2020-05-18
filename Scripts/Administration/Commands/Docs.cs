@@ -489,7 +489,7 @@ namespace Server.Commands
             }
 
             DocumentLoadedTypes();
-            DocumentConstructableObjects();
+            DocumentConstructibleObjects();
 
             return true;
         }
@@ -556,8 +556,8 @@ namespace Server.Commands
                 AddIndexLink(
                     html,
                     "objects.html",
-                    "Constructable Objects",
-                    "Every constructable item or npc. This contains object name and usage. Hover mouse over parameters to see type description.");
+                    "Constructible Objects",
+                    "Every Constructible item or npc. This contains object name and usage. Hover mouse over parameters to see type description.");
                 AddIndexLink(
                     html,
                     "keywords.html",
@@ -2286,13 +2286,13 @@ namespace Server.Commands
             return asms.Any(a => a == t.Assembly);
         }
 
-        #region Constructable Objects
+        #region Constructible Objects
         private static readonly Type typeofItem = typeof(Item);
         private static readonly Type typeofMobile = typeof(Mobile);
         private static readonly Type typeofMap = typeof(Map);
         private static readonly Type typeofCustomEnum = typeof(CustomEnumAttribute);
 
-        private static bool IsConstructable(Type t, out bool isItem)
+        private static bool IsConstructible(Type t, out bool isItem)
         {
             isItem = typeofItem.IsAssignableFrom(t);
 
@@ -2304,12 +2304,12 @@ namespace Server.Commands
             return typeofMobile.IsAssignableFrom(t);
         }
 
-        private static bool IsConstructable(ConstructorInfo ctor)
+        private static bool IsConstructible(ConstructorInfo ctor)
         {
-            return ctor.IsDefined(typeof(ConstructableAttribute), false);
+            return ctor.IsDefined(typeof(ConstructibleAttribute), false);
         }
 
-        private static void DocumentConstructableObjects()
+        private static void DocumentConstructibleObjects()
         {
             var types = new List<TypeInfo>(m_Types.Values);
             types.Sort(new TypeComparer());
@@ -2320,20 +2320,20 @@ namespace Server.Commands
             {
                 bool isItem;
 
-                if (t.IsAbstract || !IsConstructable(t, out isItem))
+                if (t.IsAbstract || !IsConstructible(t, out isItem))
                 {
                     continue;
                 }
 
                 var ctors = t.GetConstructors();
-                var anyConstructable = false;
+                var anyConstructible = false;
 
-                for (var j = 0; !anyConstructable && j < ctors.Length; ++j)
+                for (var j = 0; !anyConstructible && j < ctors.Length; ++j)
                 {
-                    anyConstructable = IsConstructable(ctors[j]);
+                    anyConstructible = IsConstructible(ctors[j]);
                 }
 
-                if (!anyConstructable)
+                if (!anyConstructible)
                 {
                     continue;
                 }
@@ -2347,7 +2347,7 @@ namespace Server.Commands
                 html.WriteLine("<!DOCTYPE html>");
                 html.WriteLine("<html>");
                 html.WriteLine("   <head>");
-                html.WriteLine("      <title>servuox Documentation - Constructable Objects</title>");
+                html.WriteLine("      <title>servuox Documentation - Constructible Objects</title>");
                 html.WriteLine("      <style type=\"text/css\">");
                 html.WriteLine("      body { background-color: white; font-family: Tahoma; color: #000000; }");
                 html.WriteLine("      a, a:visited { color: #000000; }");
@@ -2358,7 +2358,7 @@ namespace Server.Commands
                 html.WriteLine("   </head>");
                 html.WriteLine("   <body>");
                 html.WriteLine("      <h4><a href=\"index.html\">Back to the index</a></h4>");
-                html.WriteLine("      <h2>Constructable <a href=\"#items\">Items</a> and <a href=\"#mobiles\">Mobiles</a></h2>");
+                html.WriteLine("      <h2>Constructible <a href=\"#items\">Items</a> and <a href=\"#mobiles\">Mobiles</a></h2>");
 
                 html.WriteLine("      <a name=\"items\" />");
                 html.WriteLine("      <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\">");
@@ -2368,7 +2368,7 @@ namespace Server.Commands
 
                 for (var i = 0; i < items.Count; i += 2)
                 {
-                    DocumentConstructableObject(html, (Type)items[i], (ConstructorInfo[])items[i + 1]);
+                    DocumentConstructibleObject(html, (Type)items[i], (ConstructorInfo[])items[i + 1]);
                 }
 
                 html.WriteLine("      </table></td></tr></table><br /><br />");
@@ -2381,7 +2381,7 @@ namespace Server.Commands
 
                 for (var i = 0; i < mobiles.Count; i += 2)
                 {
-                    DocumentConstructableObject(html, (Type)mobiles[i], (ConstructorInfo[])mobiles[i + 1]);
+                    DocumentConstructibleObject(html, (Type)mobiles[i], (ConstructorInfo[])mobiles[i + 1]);
                 }
 
                 html.WriteLine("      </table></td></tr></table>");
@@ -2391,13 +2391,13 @@ namespace Server.Commands
             }
         }
 
-        private static void DocumentConstructableObject(StreamWriter html, Type t, IEnumerable<ConstructorInfo> ctors)
+        private static void DocumentConstructibleObject(StreamWriter html, Type t, IEnumerable<ConstructorInfo> ctors)
         {
             html.Write("         <tr><td class=\"lentry\">{0}</td><td class=\"rentry\">", t.Name);
 
             var first = true;
 
-            foreach (var ctor in ctors.Where(IsConstructable))
+            foreach (var ctor in ctors.Where(IsConstructible))
             {
                 if (!first)
                 {

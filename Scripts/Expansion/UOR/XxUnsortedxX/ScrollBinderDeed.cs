@@ -39,7 +39,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1113135;  // Scroll Binder
 
-        [Constructable]
+        [Constructible]
         public ScrollBinderDeed()
             : base(0x14F0)
         {

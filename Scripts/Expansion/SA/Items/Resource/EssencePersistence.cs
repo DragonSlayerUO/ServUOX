@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class EssencePersistence : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public EssencePersistence()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EssencePersistence(int amount)
             : base(0x571C)
         {

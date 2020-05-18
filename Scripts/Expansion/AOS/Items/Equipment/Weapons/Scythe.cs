@@ -8,7 +8,7 @@ namespace Server.Items
     [Flipable(0x26BA, 0x26C4)]
     public class Scythe : BasePoleArm
     {
-        [Constructable]
+        [Constructible]
         public Scythe()
             : base(0x26BA)
         {

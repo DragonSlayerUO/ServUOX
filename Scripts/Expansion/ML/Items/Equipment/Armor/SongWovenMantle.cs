@@ -5,7 +5,7 @@ namespace Server.Items
     public class SongWovenMantle : LeafArms
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SongWovenMantle()
         {
             Hue = 0x493;

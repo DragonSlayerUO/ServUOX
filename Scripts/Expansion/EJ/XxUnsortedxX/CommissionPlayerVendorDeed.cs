@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159156;  // A Commission Contract of Employment
 
-        [Constructable]
+        [Constructible]
         public CommissionContractOfEmployment()
             : base(0x14F0)
         {

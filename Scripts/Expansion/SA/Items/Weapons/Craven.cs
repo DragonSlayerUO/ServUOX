@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154474;  // Craven
 
-        [Constructable]
+        [Constructible]
         public Craven()
         {
             Slayer2 = BaseRunicTool.GetRandomSlayer();

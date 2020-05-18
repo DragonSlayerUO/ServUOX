@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class YuccaTree : Item
     {
-        [Constructable]
+        [Constructible]
         public YuccaTree()
             : base(0x0D37)
         {

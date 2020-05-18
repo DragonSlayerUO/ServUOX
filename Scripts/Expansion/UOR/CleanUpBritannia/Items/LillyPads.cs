@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class LillyPads : Item
     {
-        [Constructable]
+        [Constructible]
         public LillyPads()
             : base(0xDBE)
         {

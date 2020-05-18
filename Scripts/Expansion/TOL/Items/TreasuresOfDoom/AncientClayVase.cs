@@ -15,7 +15,7 @@ namespace Server.Items
         public override int LabelNumber => 1155625;  // Ancient Clay Vase
         public bool DoomEvent { get; set; }
 
-        [Constructable]
+        [Constructible]
         public AncientClayVase()
             : this(false)
         {

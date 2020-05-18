@@ -14,7 +14,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150233;  // Helm of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public HelmOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -84,7 +84,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150234;  // Gorget of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GorgetOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -154,7 +154,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150235;  // Breastplate of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public BreastplateOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -224,7 +224,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150236;  // Arms of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public ArmsOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -294,7 +294,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150237;  // Gauntlets of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GauntletsOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -364,7 +364,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150238;  // Leggings of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public LegsOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -434,7 +434,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150262;  // Kilt of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public KiltOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -504,7 +504,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150262;  // Earrings of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public EarringsOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -574,7 +574,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150235;  // Breastplate of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GargishBreastplateOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -643,7 +643,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150236;  // Arms of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GargishArmsOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -712,7 +712,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150261;  // Necklace of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public NecklaceOfVirtuousEpiphany()
         {
             Hue = 2076;
@@ -781,7 +781,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150238;  // Legs of Virtuous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GargishLegsOfVirtuousEpiphany()
         {
             Hue = 2076;

@@ -15,7 +15,7 @@ namespace Server.Engines.CityLoyalty
     {
         public override bool IsInvulnerable => true;
 
-        [Constructable]
+        [Constructible]
         public SlimTheFence() : base(AIType.AI_Vendor, FightMode.None, 10, 1, .4, .2)
         {
             Body = 0x190;

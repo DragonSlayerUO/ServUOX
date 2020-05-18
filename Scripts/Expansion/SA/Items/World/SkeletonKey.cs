@@ -15,7 +15,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int Uses { get { return m_Uses; } set { m_Uses = value; InvalidateProperties(); if (m_Uses <= 0) Delete(); } }
 
-        [Constructable]
+        [Constructible]
         public Skeletonkey() : base(1)
         {
             Stackable = false;

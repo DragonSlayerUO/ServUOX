@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Andros : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Andros()
             : base("Andros", "the Blacksmith")
         {

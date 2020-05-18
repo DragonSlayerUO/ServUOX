@@ -49,13 +49,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public BaseEngravingTool(int itemID)
             : this(itemID, 1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaseEngravingTool(int itemID, int uses)
             : base(itemID)
         {
@@ -495,7 +495,7 @@ namespace Server.Items
 
     public class LeatherContainerEngraver : BaseEngravingTool
     {
-        [Constructable]
+        [Constructible]
         public LeatherContainerEngraver()
             : base(0xF9D, 1)
         {
@@ -528,7 +528,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1072153;  // wooden container engraving tool
 
-        [Constructable]
+        [Constructible]
         public WoodenContainerEngraver()
             : base(0x1026, 1)
         {
@@ -568,7 +568,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1072154;  // metal container engraving tool
 
-        [Constructable]
+        [Constructible]
         public MetalContainerEngraver()
             : base(0x1EB8, 1)
         {
@@ -600,7 +600,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1072951;  // food decoration tool
 
-        [Constructable]
+        [Constructible]
         public FoodEngraver()
             : base(0x1BD1, 1)
         {
@@ -633,7 +633,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1072151;  // spellbook engraving tool
 
-        [Constructable]
+        [Constructible]
         public SpellbookEngraver()
             : base(0xFBF, 1)
         {
@@ -665,7 +665,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1080201;  // Statuette Engraving Tool
 
-        [Constructable]
+        [Constructible]
         public StatuetteEngravingTool()
             : base(0x12B3, 10)
         {
@@ -698,7 +698,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1080547; // Armor Engraving Tool
 
-        [Constructable]
+        [Constructible]
         public ArmorEngravingTool()
             : base(0x32F8, 30)
         {
@@ -747,7 +747,7 @@ namespace Server.Items
         public override int LowSkillMessage => 1076178;  // // Your tinkering skill is too low to fix this yourself.  An NPC tinkerer can help you repair this for a fee.
         public override int VeteranRewardCliloc => 0;
 
-        [Constructable]
+        [Constructible]
         public ShieldEngravingTool()
             : base(0x1EB8, 10)
         {

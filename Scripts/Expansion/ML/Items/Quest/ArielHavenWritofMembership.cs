@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ArielHavenWritofMembership : Item
     {
-        [Constructable]
+        [Constructible]
         public ArielHavenWritofMembership()
             : base(0x2831)
         {

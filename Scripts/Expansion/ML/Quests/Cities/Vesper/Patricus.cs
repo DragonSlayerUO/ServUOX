@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Patricus : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Patricus()
             : base("Patricus", "the Trader")
         {

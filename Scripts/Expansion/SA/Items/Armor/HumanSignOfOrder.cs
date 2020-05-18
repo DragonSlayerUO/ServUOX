@@ -5,7 +5,7 @@ namespace Server.Items
     public class HumanSignOfOrder : OrderShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HumanSignOfOrder()
             : base()
         {

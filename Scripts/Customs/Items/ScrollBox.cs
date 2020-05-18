@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ScrollBox : WoodenBox
     {
-        [Constructable]
+        [Constructible]
         public ScrollBox()
             : base()
         {

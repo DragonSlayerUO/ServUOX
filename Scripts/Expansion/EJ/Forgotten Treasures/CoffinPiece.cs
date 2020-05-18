@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1116783;
 
-        [Constructable]
+        [Constructible]
         public CoffinPiece() : base(Utility.RandomList(7481, 7480, 7479, 7452, 7451, 7450))
         {
         }

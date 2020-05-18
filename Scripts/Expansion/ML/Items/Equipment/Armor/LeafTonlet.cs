@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x2FCA, 0x3180)]
     public class LeafTonlet : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeafTonlet()
             : base(0x2FCA)
         {

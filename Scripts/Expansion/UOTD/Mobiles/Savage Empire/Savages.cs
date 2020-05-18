@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a savage corpse")]
     public class Savage : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Savage()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -124,7 +124,7 @@ namespace Server.Mobiles
     [CorpseName("a savage corpse")]
     public class SavageRider : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SavageRider()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.15, 0.4)
         {
@@ -246,7 +246,7 @@ namespace Server.Mobiles
     [CorpseName("a savage corpse")]
     public class SavageShaman : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SavageShaman()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

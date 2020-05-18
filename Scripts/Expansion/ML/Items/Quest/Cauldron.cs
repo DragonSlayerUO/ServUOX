@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153777;  // a cauldron
 
-        [Constructable]
+        [Constructible]
         public Cauldron()
             : base(0x9ED)
         {

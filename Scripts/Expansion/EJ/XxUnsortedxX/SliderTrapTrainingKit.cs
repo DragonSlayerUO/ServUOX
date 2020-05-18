@@ -58,7 +58,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public SliderTrapTrainingKit()
             : base(41875)
         {

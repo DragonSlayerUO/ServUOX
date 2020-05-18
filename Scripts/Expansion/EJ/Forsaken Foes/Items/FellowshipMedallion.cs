@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159248;  // Fellowship Medallion
 
-        [Constructable]
+        [Constructible]
         public FellowshipMedallion()
             : base(0xA429)
         {

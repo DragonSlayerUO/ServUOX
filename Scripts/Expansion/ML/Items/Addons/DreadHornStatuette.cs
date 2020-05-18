@@ -8,7 +8,7 @@ namespace Server.Items
         {
             0xA8, 0xA9, 0xAA, 0xAB, 0xAC
         };
-        [Constructable]
+        [Constructible]
         public DreadHornStatuette()
             : base(0x2D83)
         {

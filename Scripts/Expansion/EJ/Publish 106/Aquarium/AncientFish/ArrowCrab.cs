@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class ArrowCrab : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public ArrowCrab()
             : base(0xA37E)
         {

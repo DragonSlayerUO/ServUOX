@@ -1132,7 +1132,7 @@ namespace Server.Items
         public override BaseAddonContainer Addon => new Aquarium(0x3062);
         public override int LabelNumber => 1074501;// Large Aquarium (east)
 
-        [Constructable]
+        [Constructible]
         public AquariumEastDeed()
             : base()
         {
@@ -1163,7 +1163,7 @@ namespace Server.Items
         public override BaseAddonContainer Addon => new Aquarium(0x3060);
         public override int LabelNumber => 1074497;// Large Aquarium (north)
 
-        [Constructable]
+        [Constructible]
         public AquariumNorthDeed()
             : base()
         {

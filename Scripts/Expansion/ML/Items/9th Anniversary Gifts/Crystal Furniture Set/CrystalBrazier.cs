@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CrystalBrazierAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CrystalBrazierAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x35EF, 1076667), 0, 0, 0);
@@ -39,7 +39,7 @@ namespace Server.Items
 
         public override BaseAddon Addon => new CrystalBrazierAddon();
 
-        [Constructable]
+        [Constructible]
         public CrystalBrazierDeed()
             : base()
         {

@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SpellweavingBook : Spellbook
     {
-        [Constructable]
+        [Constructible]
         public SpellweavingBook()
             : this((ulong)0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpellweavingBook(ulong content)
             : base(content, 0x2D50)
         {

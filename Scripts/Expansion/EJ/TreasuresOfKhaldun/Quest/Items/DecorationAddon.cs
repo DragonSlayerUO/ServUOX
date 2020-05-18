@@ -222,7 +222,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => null;
 
-        [Constructable]
+        [Constructible]
         public KhaldunDecorationAddon()
         {
             Instance = this;
@@ -324,7 +324,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => null;
 
-        [Constructable]
+        [Constructible]
         public KhaldunWorkshop()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

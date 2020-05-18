@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class VillaDeed : HouseDeed
     {
-        [Constructable]
+        [Constructible]
         public VillaDeed()
             : base(0x9E, new Point3D(3, 6, 0))
         {

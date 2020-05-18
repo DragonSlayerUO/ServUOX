@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B69, 0x3160)]
     public class WoodlandGorget : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public WoodlandGorget()
             : base(0x2B69)
         {

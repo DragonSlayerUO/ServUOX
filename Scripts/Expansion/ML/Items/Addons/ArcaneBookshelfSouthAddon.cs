@@ -11,7 +11,7 @@ namespace Server.Items
 
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public ArcaneBookShelfAddonSouth()
             : base(0x3084)
         {
@@ -43,7 +43,7 @@ namespace Server.Items
         public override BaseAddonContainer Addon => new ArcaneBookShelfAddonSouth();
         public override int LabelNumber => 1072871;  // arcane bookshelf (south)
 
-        [Constructable]
+        [Constructible]
         public ArcaneBookShelfDeedSouth()
             : base()
         {
@@ -71,7 +71,7 @@ namespace Server.Items
 
     public class ArcaneBookshelfSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ArcaneBookshelfSouthAddon()
         {
             AddComponent(new AddonComponent(0x3087), 0, 0, 0);
@@ -121,7 +121,7 @@ namespace Server.Items
 
     public class ArcaneBookshelfSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public ArcaneBookshelfSouthDeed()
         {
         }

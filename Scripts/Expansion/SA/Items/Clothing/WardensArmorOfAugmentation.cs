@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1115515;  // Warden's Armor Of Augmentation
 
-        [Constructable]
+        [Constructible]
         public WardensArmorOfAugmentation()
         {
             Hue = 0x9C2;

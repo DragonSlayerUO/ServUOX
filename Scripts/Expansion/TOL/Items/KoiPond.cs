@@ -16,7 +16,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new KoiPondDeed();
 
-        [Constructable]
+        [Constructible]
         public KoiPondAddon(KoiPondSize size)
         {
             switch (size)
@@ -111,7 +111,7 @@ namespace Server.Items
         public override BaseAddon Addon => new KoiPondAddon(m_Size);
         public KoiPondSize m_Size;
 
-        [Constructable]
+        [Constructible]
         public KoiPondDeed()
         {
             LootType = LootType.Blessed;

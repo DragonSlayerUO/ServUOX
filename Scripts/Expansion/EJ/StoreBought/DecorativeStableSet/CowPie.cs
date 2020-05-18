@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1126237;  // cow pie
 
-        [Constructable]
+        [Constructible]
         public CowPie()
             : base(0xA4E5)
         {

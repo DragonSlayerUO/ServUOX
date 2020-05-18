@@ -63,7 +63,7 @@ namespace Server.Items
         }
         public override int LabelNumber => 1095066;
 
-        [Constructable]
+        [Constructible]
         public XenrrFishingPole()
         {
             LootType = LootType.Blessed;

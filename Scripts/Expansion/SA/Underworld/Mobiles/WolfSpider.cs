@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a wolf spider corpse")]
     public class WolfSpider : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public WolfSpider()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

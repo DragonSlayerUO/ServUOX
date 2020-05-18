@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Olla : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Olla()
             : base("Olla", "the metal weaver")
         {

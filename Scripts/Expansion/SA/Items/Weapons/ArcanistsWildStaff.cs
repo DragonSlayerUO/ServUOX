@@ -5,7 +5,7 @@ namespace Server.Items
     public class ArcanistsWildStaff : WildStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ArcanistsWildStaff()
         {
             Attributes.BonusMana = 3;

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ShadowBannerAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ShadowBannerAddon(DirectionType type)
         {
             switch (type)
@@ -51,7 +51,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public ShadowBannerDeed()
             : base()
         {

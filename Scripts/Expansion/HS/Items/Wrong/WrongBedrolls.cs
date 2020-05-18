@@ -21,7 +21,7 @@ namespace Server.Items
             set { m_Spawner = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public WrongBedrollBase(int id)
             : base(id)
         {
@@ -156,7 +156,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1022645;  // bedroll
 
-        [Constructable]
+        [Constructible]
         public WrongBedrollSouth()
             : base(0x0A56)
         {
@@ -184,7 +184,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1022645;  // bedroll
 
-        [Constructable]
+        [Constructible]
         public WrongBedrollEast()
             : base(0xA55)
         {

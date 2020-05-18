@@ -13,7 +13,7 @@ namespace Server.Mobiles
     {
         public static Dictionary<Mobile, Timer> _Table = new Dictionary<Mobile, Timer>();
 
-        [Constructable]
+        [Constructible]
         public HarborMaster()
             : base(AIType.AI_Animal, FightMode.None, 10, 1, 0.2, 0.4)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EmptyWoodenBowl : Item
     {
-        [Constructable]
+        [Constructible]
         public EmptyWoodenBowl()
             : base(0x15F8)
         {

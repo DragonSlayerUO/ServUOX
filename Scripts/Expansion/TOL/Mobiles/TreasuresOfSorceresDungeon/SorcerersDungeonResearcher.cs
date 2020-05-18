@@ -15,7 +15,7 @@ namespace Server.Engines.SorcerersDungeon
 
         public static SorcerersDungeonResearcher Instance { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SorcerersDungeonResearcher() : base("the Researcher")
         {
         }

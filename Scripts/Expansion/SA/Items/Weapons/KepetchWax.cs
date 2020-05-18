@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class KepetchWax : Item
     {
-        [Constructable]
+        [Constructible]
         public KepetchWax()
             : base(0x5745)
         {

@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a giant ice worm corpse")]
     public class GiantIceWorm : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GiantIceWorm()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

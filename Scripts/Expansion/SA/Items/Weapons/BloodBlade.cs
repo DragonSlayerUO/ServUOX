@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x8FE, 0x4072)]
     public class BloodBlade : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public BloodBlade()
             : base(0x8FE)
         {

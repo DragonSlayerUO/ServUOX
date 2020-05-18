@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Onallan : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Onallan()
             : base("Elder Onallan", "the Wise")
         {

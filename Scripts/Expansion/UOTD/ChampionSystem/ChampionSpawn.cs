@@ -59,7 +59,7 @@ namespace Server.Engines.CannedEvil
         [CommandProperty(AccessLevel.GameMaster)]
         public bool HasBeenAdvanced { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ChampionSpawn()
             : base(0xBD2)
         {

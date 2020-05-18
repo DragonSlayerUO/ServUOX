@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a black order mage corpse")]
     public class DragonsFlameMage : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DragonsFlameMage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a fire daemon corpse")]
     public class FireDaemon : BaseCreature, IAuraCreature
     {
-        [Constructable]
+        [Constructible]
         public FireDaemon()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

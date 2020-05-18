@@ -7,13 +7,13 @@ namespace Server.Items
     public class DawnsMusicGear : Item
     {
         private MusicName m_Music;
-        [Constructable]
+        [Constructible]
         public DawnsMusicGear()
             : this(DawnsMusicBox.RandomTrack(DawnsMusicRarity.Common))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DawnsMusicGear(MusicName music)
             : base(0x1053)
         {

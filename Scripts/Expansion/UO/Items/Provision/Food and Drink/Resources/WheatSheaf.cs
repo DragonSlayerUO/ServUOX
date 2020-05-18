@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class WheatSheaf : Item
     {
-        [Constructable]
+        [Constructible]
         public WheatSheaf()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WheatSheaf(int amount)
             : base(7869)
         {

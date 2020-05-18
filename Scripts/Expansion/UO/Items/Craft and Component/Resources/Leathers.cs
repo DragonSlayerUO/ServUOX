@@ -119,13 +119,13 @@ namespace Server.Items
     }
     public class Leather : BaseLeather
     {
-        [Constructable]
+        [Constructible]
         public Leather()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Leather(int amount)
             : base(CraftResource.RegularLeather, amount)
         {

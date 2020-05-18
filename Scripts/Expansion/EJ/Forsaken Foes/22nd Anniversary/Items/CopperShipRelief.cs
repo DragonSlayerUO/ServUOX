@@ -14,7 +14,7 @@ namespace Server.Items
 
         public AddonFacing Facing { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CopperShipReliefAddon(AddonFacing facing, string name)
         {
             DisplayName = name;
@@ -119,13 +119,13 @@ namespace Server.Items
 
         public override int LabelNumber => 1159148;  // Copper Ship Relief
 
-        [Constructable]
+        [Constructible]
         public CopperShipReliefAddonDeed()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CopperShipReliefAddonDeed(string name)
         {
             LootType = LootType.Blessed;

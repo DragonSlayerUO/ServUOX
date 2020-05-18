@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ShelfSpongeAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public ShelfSpongeAddon()
         {
             AddComponent(new AddonComponent(0x4C2F), 0, 0, 0);
@@ -43,7 +43,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098375;  // Shelf Sponge
 
-        [Constructable]
+        [Constructible]
         public ShelfSpongeDeed()
         {
             LootType = LootType.Blessed;

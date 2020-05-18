@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class Mushrooms1 : Item
     {
-        [Constructable]
+        [Constructible]
         public Mushrooms1()
             : base(0x0D0F)
         {
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class Mushrooms2 : Item
     {
-        [Constructable]
+        [Constructible]
         public Mushrooms2()
             : base(0x0D12)
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class Mushrooms3 : Item
     {
-        [Constructable]
+        [Constructible]
         public Mushrooms3()
             : base(0x0D10)
         {
@@ -92,7 +92,7 @@ namespace Server.Items
 
     public class Mushrooms4 : Item
     {
-        [Constructable]
+        [Constructible]
         public Mushrooms4()
             : base(0x0D13)
         {

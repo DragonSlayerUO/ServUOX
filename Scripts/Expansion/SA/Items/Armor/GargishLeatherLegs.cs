@@ -6,13 +6,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.MaleGargishLeatherLegs")]
     public class GargishLeatherLegs : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public GargishLeatherLegs()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishLeatherLegs(int hue)
             : base(0x305)
         {

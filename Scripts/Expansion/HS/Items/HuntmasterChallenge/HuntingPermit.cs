@@ -47,7 +47,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1155704;  // Hunting Permit
 
-        [Constructable]
+        [Constructible]
         public HuntingPermit(Mobile from)
             : base(5360)
         {

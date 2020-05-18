@@ -33,7 +33,7 @@ namespace Server.Mobiles
             "Tisawful! Death! Ah!"
         };
 
-        [Constructable]
+        [Constructible]
         public Neville()
             : base()
         {

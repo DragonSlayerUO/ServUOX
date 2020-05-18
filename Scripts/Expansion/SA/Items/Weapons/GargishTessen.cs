@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48CC, 0x48CD)]
     public class GargishTessen : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public GargishTessen()
             : base(0x48CC)
         {

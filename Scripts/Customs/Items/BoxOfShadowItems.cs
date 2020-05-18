@@ -10,7 +10,7 @@ namespace Server.Items
 
         public override int DefaultGumpID => 0x43;
 
-        [Constructable]
+        [Constructible]
         public BoxOfShadowItems()
             : base(0x9AA)
         {

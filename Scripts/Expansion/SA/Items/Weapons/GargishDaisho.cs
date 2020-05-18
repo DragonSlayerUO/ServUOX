@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48D0, 0x48D1)]
     public class GargishDaisho : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public GargishDaisho()
             : base(0x48D0)
         {

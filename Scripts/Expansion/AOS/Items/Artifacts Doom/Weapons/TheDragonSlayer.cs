@@ -5,7 +5,7 @@ namespace Server.Items
     public class TheDragonSlayer : Lance
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TheDragonSlayer()
         {
             Hue = 0x530;

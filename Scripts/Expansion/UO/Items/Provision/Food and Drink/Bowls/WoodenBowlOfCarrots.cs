@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class WoodenBowlOfCarrots : Food
     {
-        [Constructable]
+        [Constructible]
         public WoodenBowlOfCarrots()
             : base(0x15F9)
         {

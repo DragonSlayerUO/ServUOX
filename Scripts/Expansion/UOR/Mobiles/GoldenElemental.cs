@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an ore elemental corpse")]
     public class GoldenElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GoldenElemental()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

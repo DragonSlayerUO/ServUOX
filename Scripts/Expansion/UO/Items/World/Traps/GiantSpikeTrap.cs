@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GiantSpikeTrap : BaseTrap
     {
-        [Constructable]
+        [Constructible]
         public GiantSpikeTrap()
             : base(1)
         {

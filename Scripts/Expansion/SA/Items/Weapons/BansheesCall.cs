@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113529;  // Banshee's Call
 
-        [Constructable]
+        [Constructible]
         public BansheesCall()
         {
             Hue = 1266;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GlobeOfSosariaAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GlobeOfSosariaAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x3657, 1076681), 1, 1, 0);
@@ -39,7 +39,7 @@ namespace Server.Items
 
         public override bool ExcludeDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public GlobeOfSosariaDeed()
         {
             LootType = LootType.Blessed;

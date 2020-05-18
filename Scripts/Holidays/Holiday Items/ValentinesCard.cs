@@ -10,7 +10,7 @@ namespace Server.Items
         private int m_LabelNumber;
         private string m_From;
         private string m_To;
-        [Constructable]
+        [Constructible]
         public ValentinesCard(int itemid)
             : base(itemid)
         {
@@ -140,7 +140,7 @@ namespace Server.Items
 
     public class ValentinesCardSouth : ValentinesCard
     {
-        [Constructable]
+        [Constructible]
         public ValentinesCardSouth()
             : base(0x0EBD)
         {
@@ -168,7 +168,7 @@ namespace Server.Items
 
     public class ValentinesCardEast : ValentinesCard
     {
-        [Constructable]
+        [Constructible]
         public ValentinesCardEast()
             : base(0x0EBE)
         {

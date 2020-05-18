@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoObsidian : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoObsidian()
             : base(0xF89)
         {

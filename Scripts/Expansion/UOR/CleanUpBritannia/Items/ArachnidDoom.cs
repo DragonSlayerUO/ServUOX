@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ArachnidDoom : BaseInstrument
     {
-        [Constructable]
+        [Constructible]
         public ArachnidDoom()
         {
             Hue = 1944;

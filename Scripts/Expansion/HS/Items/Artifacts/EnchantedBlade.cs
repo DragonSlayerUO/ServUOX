@@ -8,7 +8,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => new EnchantedBladeDeed();
 
-        [Constructable]
+        [Constructible]
         public EnchantedBladeAddon()
         {
             AddComponent(new LocalizedAddonComponent(14240, 1034240), 0, 0, 0);
@@ -36,7 +36,7 @@ namespace Server.Items
     {
         public override BaseAddon Addon => new EnchantedBladeAddon();
 
-        [Constructable]
+        [Constructible]
         public EnchantedBladeDeed()
         {
             Name = "A deed for an enchanted blade";

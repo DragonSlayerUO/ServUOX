@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154430;  // Bearing Assembly
 
-        [Constructable]
+        [Constructible]
         public BearingAssembly()
             : base(0xE74)
         {

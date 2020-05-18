@@ -4,13 +4,13 @@ namespace Server.Items
     {
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public CheeseSlice()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CheeseSlice(int amount)
             : base(amount, 0x97C)
         {

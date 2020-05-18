@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B6B, 0x3162)]
     public class WoodlandLegs : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public WoodlandLegs()
             : base(0x2B6B)
         {

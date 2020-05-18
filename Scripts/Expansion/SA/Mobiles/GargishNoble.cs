@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class GargishNoble : BaseEscortable
     {
-        [Constructable]
+        [Constructible]
         public GargishNoble() //: base(AIType.AI_Animal, FightMode.None, 10, 1, 0.2, 0.4)
         {
             Title = "a Gargish noble";

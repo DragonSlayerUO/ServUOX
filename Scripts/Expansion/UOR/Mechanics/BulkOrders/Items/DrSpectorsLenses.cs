@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1156991;  // Dr. Spector's lenses
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public DrSpectorsLenses()
         {
             Attributes.BonusInt = 8;

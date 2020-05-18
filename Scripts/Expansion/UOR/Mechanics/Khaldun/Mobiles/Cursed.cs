@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an inhuman corpse")]
     public class Cursed : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Cursed()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

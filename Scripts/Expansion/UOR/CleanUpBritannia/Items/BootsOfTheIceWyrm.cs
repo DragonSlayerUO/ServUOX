@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1151208;  // Boots of the Ice Wyrm
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BootsOfTheIceWyrm()
         {
             Hue = 0x482;

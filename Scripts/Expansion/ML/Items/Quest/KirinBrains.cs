@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class KirinBrains : Item
     {
-        [Constructable]
+        [Constructible]
         public KirinBrains()
             : base(0x1CF0)
         {

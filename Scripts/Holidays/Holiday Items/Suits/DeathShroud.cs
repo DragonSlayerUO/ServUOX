@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DeathShroud : BaseSuit
     {
-        [Constructable]
+        [Constructible]
         public DeathShroud()
             : base(AccessLevel.GameMaster, 0x0, 0x204E)
         {

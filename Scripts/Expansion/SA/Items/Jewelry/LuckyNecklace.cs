@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1075239;  //Lucky Necklace
 
-        [Constructable]
+        [Constructible]
         public LuckyNecklace()
             : base(0x1088, Layer.Neck)
         {

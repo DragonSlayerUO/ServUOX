@@ -13,7 +13,7 @@ namespace Server.Mobiles
             m_SBInfos.Add(new SBCarpets());
         }
 
-        [Constructable]
+        [Constructible]
         public Laifem() : base("Laifem", "the Weaver")
         {
         }
@@ -81,7 +81,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => null;
 
-        [Constructable]
+        [Constructible]
         public Dermott() : base("Dermott", "the Weaver")
         {
             SetSkill(SkillName.Magery, 60.0, 90.0);

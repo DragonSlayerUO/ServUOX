@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158140);  // Hunter
 
-        [Constructable]
+        [Constructible]
         public HuntmastersQuestRewardTitleDeed()
         {
         }
@@ -34,7 +34,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158090);  // Paladin of Trinsic
 
-        [Constructable]
+        [Constructible]
         public PaladinOfTrinsicRewardTitleDeed()
         {
         }
@@ -61,7 +61,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158161);  // Warden of Wrong
 
-        [Constructable]
+        [Constructible]
         public RightingWrongRewardTitleDeed()
         {
         }
@@ -88,7 +88,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158389);  // Treasure Hunter
 
-        [Constructable]
+        [Constructible]
         public TreasureHunterRewardTitleDeed()
         {
         }
@@ -115,7 +115,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158278);  // Hero of Minoc
 
-        [Constructable]
+        [Constructible]
         public HeroOfMincRewardTitleDeed()
         {
         }
@@ -142,7 +142,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158303);  // The Battle of Wisps TODO: Correct cliloc
 
-        [Constructable]
+        [Constructible]
         public DespiseTitleDeed()
         {
         }
@@ -169,7 +169,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1154505);  // Salvager of the Deep
 
-        [Constructable]
+        [Constructible]
         public ExploringTheDeedTitleDeed()
         {
         }

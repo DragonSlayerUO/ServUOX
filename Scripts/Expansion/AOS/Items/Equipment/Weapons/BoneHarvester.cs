@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x26BB, 0x26C5)]
     public class BoneHarvester : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public BoneHarvester()
             : base(0x26BB)
         {

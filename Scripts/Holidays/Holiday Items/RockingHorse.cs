@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x4214, 0x4215)]
     public class RockingHorse : Item
     {
-        [Constructable]
+        [Constructible]
         public RockingHorse()
             : base(0x4214)
         {

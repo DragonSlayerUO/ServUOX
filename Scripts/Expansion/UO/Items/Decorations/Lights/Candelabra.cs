@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LitItemID => 0xB1D;
         public override int UnlitItemID => 0xA27;
 
-        [Constructable]
+        [Constructible]
         public Candelabra()
             : base(0xA27)
         {

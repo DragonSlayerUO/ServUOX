@@ -21,7 +21,7 @@ namespace Server.Items
         public override int InitMinHits => 125;
         public override int InitMaxHits => 125;
 
-        [Constructable]
+        [Constructible]
         public BestialArms()
         {
             ItemID = 0x4052;

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SerpentPillarAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SerpentPillarAddon()
         {
             AddComponent(new AddonComponent(9020), -2, +1, 0);

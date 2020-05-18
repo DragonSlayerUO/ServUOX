@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0x2307, 0x2308)]
     public class FurBoots : BaseShoes
     {
-        [Constructable]
+        [Constructible]
         public FurBoots()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FurBoots(int hue)
             : base(0x2307, hue)
         {

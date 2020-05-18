@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0x13B6, 0x13B5)]
     public class Scimitar : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Scimitar()
             : base(0x13B6)
         {

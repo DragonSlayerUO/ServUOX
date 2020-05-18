@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1022448;  //basket
 
-        [Constructable]
+        [Constructible]
         public BasketCraftable() : base(9431)
         {
         }

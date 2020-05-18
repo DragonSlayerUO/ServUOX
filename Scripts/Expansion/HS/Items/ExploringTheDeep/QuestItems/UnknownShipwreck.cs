@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154269;  // Map to an Unknown Shipwreck
 
-        [Constructable]
+        [Constructible]
         public UnknownShipwreck() : base(0x14ED)
         {
             Weight = 1.0;

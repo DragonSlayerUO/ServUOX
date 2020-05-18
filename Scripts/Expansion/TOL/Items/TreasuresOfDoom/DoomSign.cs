@@ -17,7 +17,7 @@ namespace Server.Items
         public override bool ForceShowProperties => true;
         public bool CheckWhenHidden => false;
 
-        [Constructable]
+        [Constructible]
         public DoomSign()
             : base(0xBD0)
         {

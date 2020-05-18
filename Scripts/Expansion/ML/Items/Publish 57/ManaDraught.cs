@@ -13,7 +13,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1094938;  // Mana Draught
 
-        [Constructable]
+        [Constructible]
         public ManaDraught()
             : base(0xFFB)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RunicSewingKit : BaseRunicTool
     {
-        [Constructable]
+        [Constructible]
         public RunicSewingKit(CraftResource resource)
             : base(resource, 0xF9D)
         {
@@ -13,7 +13,7 @@ namespace Server.Items
             Hue = CraftResources.GetHue(resource);
         }
 
-        [Constructable]
+        [Constructible]
         public RunicSewingKit(CraftResource resource, int uses)
             : base(resource, uses, 0xF9D)
         {

@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1055, 0x1056)]
     public class Hinge : Item
     {
-        [Constructable]
+        [Constructible]
         public Hinge()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Hinge(int amount)
             : base(0x1055)
         {

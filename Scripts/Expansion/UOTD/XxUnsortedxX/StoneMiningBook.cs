@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153530;  // Mining For Quality Stone
 
-        [Constructable]
+        [Constructible]
         public StoneMiningBook()
             : base(0xFBE)
         {

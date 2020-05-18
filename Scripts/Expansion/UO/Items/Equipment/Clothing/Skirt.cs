@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1516, 0x1531)]
     public class Skirt : BaseOuterLegs
     {
-        [Constructable]
+        [Constructible]
         public Skirt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Skirt(int hue)
             : base(0x1516, hue)
         {

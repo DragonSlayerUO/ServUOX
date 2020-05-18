@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class EscortableMage : BaseEscortable
     {
-        [Constructable]
+        [Constructible]
         public EscortableMage()
         {
             Title = "the mage";

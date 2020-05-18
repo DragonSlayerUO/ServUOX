@@ -8,7 +8,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new LongMetalTableSouthDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public LongMetalTableSouthAddon()
         {
             AddComponent(new AddonComponent(0x4CC1), -1, 1, 0);
@@ -42,7 +42,7 @@ namespace Server.Items
         public override BaseAddon Addon => new LongMetalTableSouthAddon();
         public override int LabelNumber => 1154164;  // Long Metal Table (South)
 
-        [Constructable]
+        [Constructible]
         public LongMetalTableSouthDeed()
         {
         }

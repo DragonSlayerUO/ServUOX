@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoBloodspawn : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoBloodspawn()
             : base(0xF7C)
         {

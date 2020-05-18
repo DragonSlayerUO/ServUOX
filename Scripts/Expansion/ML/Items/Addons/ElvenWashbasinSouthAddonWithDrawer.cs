@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ElvenWashBasinSouthAddonWithDrawer : BaseAddonContainer
     {
-        [Constructable]
+        [Constructible]
         public ElvenWashBasinSouthAddonWithDrawer()
             : base(0x30E2)
         {
@@ -37,7 +37,7 @@ namespace Server.Items
 
     public class ElvenWashBasinSouthWithDrawerDeed : BaseAddonContainerDeed
     {
-        [Constructable]
+        [Constructible]
         public ElvenWashBasinSouthWithDrawerDeed()
         {
         }

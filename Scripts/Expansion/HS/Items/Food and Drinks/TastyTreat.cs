@@ -17,13 +17,13 @@ namespace Server.Items
         public virtual TimeSpan CoolDown => TimeSpan.FromMinutes(2);
         public virtual int DamageBonus => 0;
 
-        [Constructable]
+        [Constructible]
         public TastyTreat()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TastyTreat(int amount) : base(2424)
         {
             Stackable = true;

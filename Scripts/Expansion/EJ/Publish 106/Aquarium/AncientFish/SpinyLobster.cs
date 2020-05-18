@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SpinyLobster : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SpinyLobster()
             : base(0xA37A)
         {

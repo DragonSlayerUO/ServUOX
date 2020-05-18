@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class ChaosGuard : BaseShieldGuard
     {
-        [Constructable]
+        [Constructible]
         public ChaosGuard()
         {
         }

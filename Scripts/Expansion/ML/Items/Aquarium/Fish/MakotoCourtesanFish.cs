@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MakotoCourtesanFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public MakotoCourtesanFish()
             : base(0x3AFD)
         {

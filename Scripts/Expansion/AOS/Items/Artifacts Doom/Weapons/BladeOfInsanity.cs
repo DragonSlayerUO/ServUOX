@@ -5,7 +5,7 @@ namespace Server.Items
     public class BladeOfInsanity : Katana
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BladeOfInsanity()
         {
             Hue = 0x76D;

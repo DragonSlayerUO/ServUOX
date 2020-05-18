@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ArcanicRuneStone : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public ArcanicRuneStone()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ArcanicRuneStone(int amount)
             : base(0x573C)
         {

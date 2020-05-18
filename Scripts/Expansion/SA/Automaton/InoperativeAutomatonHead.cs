@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157002;  // Inoperative Automaton Head
 
-        [Constructable]
+        [Constructible]
         public InoperativeAutomatonHead()
             : base(0x9DB1)
         {

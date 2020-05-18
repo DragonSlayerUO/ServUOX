@@ -8,7 +8,7 @@ namespace Server.Items
 {
     public class NaxMarker : Item
     {
-        [Constructable]
+        [Constructible]
         public NaxMarker()
             : base(0x176B)
         {

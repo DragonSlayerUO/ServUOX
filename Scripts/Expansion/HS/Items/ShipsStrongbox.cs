@@ -7,13 +7,13 @@ namespace Server.Items
     [Flipable(0xE80, 0x9A8)]
     public class ShipsStrongbox : LockableContainer
     {
-        [Constructable]
+        [Constructible]
         public ShipsStrongbox()
             : this(Utility.RandomMinMax(1, 3))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ShipsStrongbox(int level)
             : base(0xE80)
         {

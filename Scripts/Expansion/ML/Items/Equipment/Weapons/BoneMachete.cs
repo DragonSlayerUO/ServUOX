@@ -8,7 +8,7 @@ namespace Server.Items
         public override int InitMaxHits => 3;
         public override int LabelNumber => 1020526; // bone machete
 
-        [Constructable]
+        [Constructible]
         public BoneMachete()
         {
         }

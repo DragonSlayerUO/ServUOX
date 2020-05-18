@@ -5,7 +5,7 @@ namespace Server.Factions
 {
     public class FactionHenchman : BaseFactionGuard
     {
-        [Constructable]
+        [Constructible]
         public FactionHenchman()
             : base("the henchman")
         {

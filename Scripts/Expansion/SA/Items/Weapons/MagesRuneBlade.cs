@@ -5,7 +5,7 @@ namespace Server.Items
     public class MagesRuneBlade : RuneBlade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MagesRuneBlade()
         {
             Attributes.CastSpeed = 1;

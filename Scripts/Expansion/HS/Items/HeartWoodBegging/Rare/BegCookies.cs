@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BegCookies : Cookies
     {
-        [Constructable]
+        [Constructible]
         public BegCookies()
         {
         }

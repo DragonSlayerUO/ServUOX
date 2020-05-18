@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SpeckledCrab : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SpeckledCrab()
             : base(0x3AFC)
         {

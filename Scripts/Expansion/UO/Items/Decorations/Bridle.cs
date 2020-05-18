@@ -5,7 +5,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.DecoBridle")]
     public class DecoBridleSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoBridleSouth()
             : base(0x1374)
         {
@@ -34,7 +34,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.DecoBridle2")]
     public class DecoBridleEast : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoBridleEast()
             : base(0x1375)
         {

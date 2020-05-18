@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Nibbet : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Nibbet()
             : base("Nibbet", "the Tinker")
         {

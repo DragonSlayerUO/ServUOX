@@ -100,7 +100,7 @@ namespace Server.Items
         public override object Author => "unknown";
         public override int[] Contents => new int[] { 1150915, 1150916, 1150917, 1150918, 1150919, 1150920, 1150921, 1150922 };
 
-        [Constructable]
+        [Constructible]
         public ChallengeRite()
         {
             Hue = 1007;
@@ -129,7 +129,7 @@ namespace Server.Items
         public override object Author => "Prugyilonus";
         public override int[] Contents => new int[] { 1150894, 1150895, 1150896 };
 
-        [Constructable]
+        [Constructible]
         public OnTheVoid()
         {
             Hue = 404;
@@ -158,7 +158,7 @@ namespace Server.Items
         public override object Author => "Queen Zhah";
         public override int[] Contents => new int[] { 1151071, 1151072, 1151073 };
 
-        [Constructable]
+        [Constructible]
         public InMemory()
         {
             Hue = 375;
@@ -207,7 +207,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int Charges { get { return m_Charges; } set { m_Charges = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public ChronicleOfTheGargoyleQueen1()
         {
             Hue = 567;
@@ -245,7 +245,7 @@ namespace Server.Items
     {
         public override int Title => 1150905;  // Athenaeum Decree
 
-        [Constructable]
+        [Constructible]
         public AnthenaeumDecree() : base(1150891)
         {
         }
@@ -273,7 +273,7 @@ namespace Server.Items
 
         private string m_Content = "To Her Honor the High Broodmother, Lady Zhah from his majesty, King Trajalem:<br><br>	High Broodmother, I have received your latest petition regarding your desires and I once again must remind you that I have absolutely no interest in altering tradition or granting you the freedom from the slavery you have deluded yourself into believing makes up your life.<br><br>Please remember that your office may be stripped by me if you are deemed unfit to lead the other Broodmothers. Be happy with your place and do not forget it; this is the last time I will lower myself to respond to these ridiculous accusations and requests.";
 
-        [Constructable]
+        [Constructible]
         public LetterFromTheKing() : base()
         {
             NoteString = m_Content;
@@ -300,7 +300,7 @@ namespace Server.Items
     {
         public override int Title => 1150908;  // Shilaxrinar's Memorial
 
-        [Constructable]
+        [Constructible]
         public ShilaxrinarsMemorial() : base(1150899)
         {
         }
@@ -326,7 +326,7 @@ namespace Server.Items
     {
         public override int Title => 1150909;  // To the High Scholar
 
-        [Constructable]
+        [Constructible]
         public ToTheHighScholar() : base(1151062)
         {
         }
@@ -352,7 +352,7 @@ namespace Server.Items
     {
         public override int Title => 1150910;  // To the High Broodmother
 
-        [Constructable]
+        [Constructible]
         public ToTheHighBroodmother() : base(1151064)
         {
         }
@@ -378,7 +378,7 @@ namespace Server.Items
     {
         public override int Title => 1150911;  // Reply to the High Scholar
 
-        [Constructable]
+        [Constructible]
         public ReplyToTheHighScholar() : base(1151066)
         {
         }
@@ -404,7 +404,7 @@ namespace Server.Items
     {
         public override int Title => 1150912;  // Access to the Isle
 
-        [Constructable]
+        [Constructible]
         public AccessToTheIsle() : base(1151069)
         {
         }

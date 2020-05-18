@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Gervis : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Gervis()
             : base("Gervis", "the Blacksmith Trainer")
         {

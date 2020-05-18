@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
 
-        [Constructable]
+        [Constructible]
         public Armorer()
             : base("the armourer")
         {

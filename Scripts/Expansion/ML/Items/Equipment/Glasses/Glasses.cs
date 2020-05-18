@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public CraftSystem RepairSystem => DefTinkering.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public Glasses()
             : base(0x2FB8)
         {

@@ -39,12 +39,12 @@ namespace Server.Engines.TreasuresOfKotlCity
             }
         }
 
-        [Constructable]
+        [Constructible]
         public PowerCoreDockingStation() : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PowerCoreDockingStation(bool link)
         {
             Link = link;

@@ -16,7 +16,7 @@ namespace Server.Items
 
         public ClockworkCreatureDef CreatureDef => ClockworkCreature.Definitions[m_CreatureDef];
 
-        [Constructable]
+        [Constructible]
         public ClockworkMechanism()
             : base(0x1EAE)
         {

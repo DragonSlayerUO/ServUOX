@@ -15,7 +15,7 @@ namespace Server.Engines.Quests.Doom
 
         public static List<BellOfTheDead> Instances { get; set; } // Just incase someone has more than 1
 
-        [Constructable]
+        [Constructible]
         public BellOfTheDead()
             : base(0x91A)
         {

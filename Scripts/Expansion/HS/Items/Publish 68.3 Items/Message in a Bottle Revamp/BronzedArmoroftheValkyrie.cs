@@ -5,7 +5,7 @@ namespace Server.Items
     public class BronzedArmorValkyrie : FemaleLeatherChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BronzedArmorValkyrie()
         {
             Attributes.BonusHits = 5;

@@ -6,7 +6,7 @@ namespace Server.Items
     public class LeafweaveChest : HideChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LeafweaveChest()
             : base()
         {

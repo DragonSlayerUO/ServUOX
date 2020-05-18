@@ -15,7 +15,7 @@ namespace Server.Engines.VvV
 
         private int offset;
 
-        [Constructable]
+        [Constructible]
         public CovetousTileAddon(TileType type)
         {
             TileType = type;
@@ -60,7 +60,7 @@ namespace Server.Engines.VvV
 
         public TileType TileType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CovetousTileDeed()
         {
             LootType = LootType.Blessed;

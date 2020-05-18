@@ -25,7 +25,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150453;  // yeast
 
-        [Constructable]
+        [Constructible]
         public Yeast() : base(3624)
         {
             Hue = 2418;
@@ -43,7 +43,7 @@ namespace Server.Items
                 m_BacterialResistance = 1;
         }
 
-        [Constructable]
+        [Constructible]
         public Yeast(int resistance) : base(3624)
         {
             BacterialResistance = resistance;

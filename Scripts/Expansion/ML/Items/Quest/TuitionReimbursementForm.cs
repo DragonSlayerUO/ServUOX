@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TuitionReimbursementForm : Item
     {
-        [Constructable]
+        [Constructible]
         public TuitionReimbursementForm()
             : base(0xE3A)
         {

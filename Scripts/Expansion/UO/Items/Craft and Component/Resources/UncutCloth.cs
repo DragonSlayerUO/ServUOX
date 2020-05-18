@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x1765, 0x1767)]
     public class UncutCloth : Item, IScissorable, IDyable, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public UncutCloth()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public UncutCloth(int amount)
             : base(0x1767)
         {

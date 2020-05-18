@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Fireclam : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Fireclam()
             : base(0xA385)
         {

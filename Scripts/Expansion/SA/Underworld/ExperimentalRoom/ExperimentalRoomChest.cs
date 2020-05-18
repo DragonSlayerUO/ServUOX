@@ -15,7 +15,7 @@ namespace Server.Items
         public override bool Decays => true;
         public override TimeSpan DecayTime => TimeSpan.FromMinutes(10.0);
 
-        [Constructable]
+        [Constructible]
         public ExperimentalRoomChest()
         {
             Movable = false;

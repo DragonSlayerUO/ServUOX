@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PeachTrunkAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PeachTrunkAddon()
             : base()
         {
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class PeachTrunkDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public PeachTrunkDeed()
             : base()
         {

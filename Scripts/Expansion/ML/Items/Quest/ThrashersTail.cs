@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ThrashersTail : Item
     {
-        [Constructable]
+        [Constructible]
         public ThrashersTail()
             : base(0x1A9D)
         {

@@ -11,7 +11,7 @@ namespace Server.Mobiles
         public override double DispelDifficulty => 0.0;
         public override double DispelFocus => 20.0;
 
-        [Constructable]
+        [Constructible]
         public AnimatedWeapon(Mobile caster, int level)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.3, 0.6)
         {

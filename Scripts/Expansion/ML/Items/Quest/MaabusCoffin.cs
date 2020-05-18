@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Necro
     {
         private Maabus m_Maabus;
         private Point3D m_SpawnLocation;
-        [Constructable]
+        [Constructible]
         public MaabusCoffin()
         {
             AddComponent(new MaabusCoffinComponent(0x1C2B, 0x1C2B), -1, -1, 0);

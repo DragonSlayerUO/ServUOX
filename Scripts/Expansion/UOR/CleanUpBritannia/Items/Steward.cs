@@ -40,7 +40,7 @@ namespace Server.Mobiles
             }
         }
 
-        [Constructable]
+        [Constructible]
         public Steward(Mobile owner, BaseHouse house)
             : base(AIType.AI_Use_Default, FightMode.None, 1, 1, 0.2, 0.2)
         {
@@ -775,7 +775,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1153344;  // Steward Deed
 
-        [Constructable]
+        [Constructible]
         public StewardDeed()
             : base(0x14F0)
         {

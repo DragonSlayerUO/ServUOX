@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2FB7, 0x3171)]
     public class ElvenQuiver : BaseQuiver
     {
-        [Constructable]
+        [Constructible]
         public ElvenQuiver()
             : base()
         {

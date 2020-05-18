@@ -4,12 +4,12 @@ namespace Server.Items
 {
     public class SmallPieceofBlackrock : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SmallPieceofBlackrock() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SmallPieceofBlackrock(int amount) : base(0x0F28)
         {
             Hue = 1175;

@@ -4,7 +4,7 @@ namespace Server.Mobiles
 {
     public class WanderingHealer : BaseHealer
     {
-        [Constructable]
+        [Constructible]
         public WanderingHealer()
         {
             Title = "the wandering healer";

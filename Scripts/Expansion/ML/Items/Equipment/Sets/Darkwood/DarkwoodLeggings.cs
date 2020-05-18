@@ -6,7 +6,7 @@ namespace Server.Items
     public class DarkwoodLegs : WoodlandLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DarkwoodLegs()
             : base()
         {

@@ -10,13 +10,13 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public PowderCharge()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PowderCharge(int amount)
             : base(0xA2BE)
         {
@@ -49,12 +49,12 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public LightPowderCharge() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightPowderCharge(int amount) : base(16932)
         {
             Hue = 2031;
@@ -90,12 +90,12 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public HeavyPowderCharge() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyPowderCharge(int amount)
             : base(16932)
         {

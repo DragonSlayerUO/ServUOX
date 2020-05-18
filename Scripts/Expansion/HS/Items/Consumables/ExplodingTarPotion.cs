@@ -9,7 +9,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1095147;  // a Greater Confusion Blast potion
 
-        [Constructable]
+        [Constructible]
         public ExplodingTarPotion() : base(PotionEffect.ExplodingTarPotion)
         {
         }

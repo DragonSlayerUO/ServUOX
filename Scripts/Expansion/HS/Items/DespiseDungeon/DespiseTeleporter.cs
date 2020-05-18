@@ -9,7 +9,7 @@ namespace Server.Items
 {
     public class DespiseTeleporter : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public DespiseTeleporter()
         {
         }
@@ -136,7 +136,7 @@ namespace Server.Items
 
         public List<InternalTeleporter> Teleporters { get; set; }
 
-        [Constructable]
+        [Constructible]
         public GateTeleporter()
             : this(19343, 0, Point3D.Zero, null)
         {

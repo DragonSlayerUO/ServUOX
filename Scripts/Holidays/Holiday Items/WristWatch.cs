@@ -3,7 +3,7 @@ namespace Server.Items
 {
     public class WristWatch : Clock
     {
-        [Constructable]
+        [Constructible]
         public WristWatch()
             : base(0x1086)
         {

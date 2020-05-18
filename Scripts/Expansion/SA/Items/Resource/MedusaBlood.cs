@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class MedusaBlood : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public MedusaBlood()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MedusaBlood(int amount)
             : base(0x2DB6)
         {

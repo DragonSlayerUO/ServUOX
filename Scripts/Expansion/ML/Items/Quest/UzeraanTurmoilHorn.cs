@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Haven
 {
     public class UzeraanTurmoilHorn : HornOfRetreat
     {
-        [Constructable]
+        [Constructible]
         public UzeraanTurmoilHorn()
         {
             DestLoc = new Point3D(3597, 2582, 0);

@@ -4,13 +4,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150866;  // empty oil flask
 
-        [Constructable]
+        [Constructible]
         public EmptyOilFlask()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EmptyOilFlask(int amount)
             : base(0x1C18)
         {
@@ -39,13 +39,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.FlaskOfOil ")]
     public class OilFlask : Item
     {
-        [Constructable]
+        [Constructible]
         public OilFlask()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public OilFlask(int amount)
             : base(0x1C18)
         {

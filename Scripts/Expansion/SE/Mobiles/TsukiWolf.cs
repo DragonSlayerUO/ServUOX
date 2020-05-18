@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class TsukiWolf : BaseCreature
     {
         private static readonly Hashtable m_Table = new Hashtable();
-        [Constructable]
+        [Constructible]
         public TsukiWolf()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

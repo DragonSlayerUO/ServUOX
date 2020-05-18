@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Tholef : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Tholef()
             : base("Tholef", "the Grape Tender")
         {

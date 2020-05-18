@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an alligator corpse")]
     public class WarAlligator : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public WarAlligator() : base(AIType.AI_Melee)
         {
             Name = "a war alligator";
@@ -14,7 +14,7 @@ namespace Server.Mobiles
             BaseSoundID = 660;
         }
 
-        [Constructable]
+        [Constructible]
         public WarAlligator(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "a war alligator";
@@ -42,7 +42,7 @@ namespace Server.Mobiles
     [CorpseName("a magma lizard corpse")]
     public class MagmaLizard : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public MagmaLizard() : base(AIType.AI_Melee)
         {
             Name = "a magma lizard";
@@ -51,7 +51,7 @@ namespace Server.Mobiles
             BaseSoundID = 0x5A;
         }
 
-        [Constructable]
+        [Constructible]
         public MagmaLizard(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "a magma lizard";
@@ -80,7 +80,7 @@ namespace Server.Mobiles
     [CorpseName("a drake corpse")]
     public class ViciousDrake : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public ViciousDrake() : base(AIType.AI_Melee)
         {
             Name = "a vicious drake";
@@ -88,7 +88,7 @@ namespace Server.Mobiles
             BaseSoundID = 362;
         }
 
-        [Constructable]
+        [Constructible]
         public ViciousDrake(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "a vicious drake";
@@ -116,7 +116,7 @@ namespace Server.Mobiles
     [CorpseName("a wyvern corpse")]
     public class CorruptedWyvern : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public CorruptedWyvern() : base(AIType.AI_Mage)
         {
             Name = "a corrupted wyvern";
@@ -124,7 +124,7 @@ namespace Server.Mobiles
             BaseSoundID = 362;
         }
 
-        [Constructable]
+        [Constructible]
         public CorruptedWyvern(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a corrupted wyvern";
@@ -152,7 +152,7 @@ namespace Server.Mobiles
     [CorpseName("a covetous wyrm corpse")]
     public class CovetousWyrm : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public CovetousWyrm()
             : base(AIType.AI_Necro)
         {
@@ -161,7 +161,7 @@ namespace Server.Mobiles
             BaseSoundID = 362;
         }
 
-        [Constructable]
+        [Constructible]
         public CovetousWyrm(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a covetous wyrm";

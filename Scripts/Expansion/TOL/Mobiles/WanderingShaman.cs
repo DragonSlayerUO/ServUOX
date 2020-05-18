@@ -6,7 +6,7 @@ namespace Server.Mobiles
     {
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public WanderingShaman()
         {
             Name = NameList.RandomName("savage");

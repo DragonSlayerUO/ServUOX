@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SmallStretchedHideEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SmallStretchedHideEastAddon()
         {
             AddComponent(new AddonComponent(0x1069), 0, 0, 0);
@@ -29,7 +29,7 @@ namespace Server.Items
 
     public class SmallStretchedHideEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SmallStretchedHideEastDeed()
         {
         }
@@ -56,7 +56,7 @@ namespace Server.Items
 
     public class SmallStretchedHideSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SmallStretchedHideSouthAddon()
         {
             AddComponent(new AddonComponent(0x107A), 0, 0, 0);
@@ -83,7 +83,7 @@ namespace Server.Items
 
     public class SmallStretchedHideSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SmallStretchedHideSouthDeed()
         {
         }
@@ -110,7 +110,7 @@ namespace Server.Items
 
     public class MediumStretchedHideEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public MediumStretchedHideEastAddon()
         {
             AddComponent(new AddonComponent(0x106B), 0, 0, 0);
@@ -137,7 +137,7 @@ namespace Server.Items
 
     public class MediumStretchedHideEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public MediumStretchedHideEastDeed()
         {
         }
@@ -164,7 +164,7 @@ namespace Server.Items
 
     public class MediumStretchedHideSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public MediumStretchedHideSouthAddon()
         {
             AddComponent(new AddonComponent(0x107C), 0, 0, 0);
@@ -191,7 +191,7 @@ namespace Server.Items
 
     public class MediumStretchedHideSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public MediumStretchedHideSouthDeed()
         {
         }

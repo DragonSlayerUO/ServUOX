@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SmallBedEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SmallBedEastAddon()
         {
             AddComponent(new AddonComponent(0xA5D), 0, 0, 0);
@@ -29,7 +29,7 @@ namespace Server.Items
 
     public class SmallBedEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SmallBedEastDeed()
         {
         }

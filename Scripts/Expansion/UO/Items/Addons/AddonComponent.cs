@@ -9,7 +9,7 @@ namespace Server.Items
     [Anvil]
     public class AnvilComponent : AddonComponent
     {
-        [Constructable]
+        [Constructible]
         public AnvilComponent(int itemID)
             : base(itemID)
         { }
@@ -34,7 +34,7 @@ namespace Server.Items
     [Forge]
     public class ForgeComponent : AddonComponent
     {
-        [Constructable]
+        [Constructible]
         public ForgeComponent(int itemID)
             : base(itemID)
         { }
@@ -60,7 +60,7 @@ namespace Server.Items
     {
         private int m_LabelNumber;
 
-        [Constructable]
+        [Constructible]
         public LocalizedAddonComponent(int itemID, int labelNumber)
             : base(itemID)
         {
@@ -165,7 +165,7 @@ namespace Server.Items
             new LightEntry(LightType.Circle300, 6526, 6538, 6571), new LightEntry(LightType.Circle150, 5703, 6587)
         };
 
-        [Constructable]
+        [Constructible]
         public AddonComponent(int itemID)
             : base(itemID)
         {
@@ -354,7 +354,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int SuccessSound { get; set; }
 
-        [Constructable]
+        [Constructible]
         public InstrumentedAddonComponent(int itemID, int wellSound)
             : base(itemID)
         {

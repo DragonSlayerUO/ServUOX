@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a terathan avenger corpse")]
     public class TerathanAvenger : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TerathanAvenger()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -78,7 +78,7 @@ namespace Server.Mobiles
     [CorpseName("a terathan drone corpse")]
     public class TerathanDrone : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TerathanDrone()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -147,7 +147,7 @@ namespace Server.Mobiles
     [CorpseName("a terathan matriarch corpse")]
     public class TerathanMatriarch : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TerathanMatriarch()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -217,7 +217,7 @@ namespace Server.Mobiles
     [CorpseName("a terathan warrior corpse")]
     public class TerathanWarrior : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TerathanWarrior()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

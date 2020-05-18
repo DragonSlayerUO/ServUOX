@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override bool PlaceInBank => false;
 
-        [Constructable]
+        [Constructible]
         public CharacterReincarnationToken()
         {
             LootType = LootType.Blessed;

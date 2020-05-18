@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class WrongPrisoner : BaseEscort
     {
-        [Constructable]
+        [Constructible]
         public WrongPrisoner()
             : base()
         {

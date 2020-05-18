@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Aurvidlem : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Aurvidlem()
             : base("Aurvidlem", "the Artificer")
         {

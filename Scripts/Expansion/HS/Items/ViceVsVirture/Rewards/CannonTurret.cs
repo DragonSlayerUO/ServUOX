@@ -41,7 +41,7 @@ namespace Server.Engines.VvV
 
         public override BaseAddonDeed Deed => null;
 
-        [Constructable]
+        [Constructible]
         public CannonTurret()
             : this(null)
         {
@@ -270,7 +270,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1155503;  // Plans for a Cannon Turret
 
-        [Constructable]
+        [Constructible]
         public CannonTurretPlans() : base(5630)
         {
         }

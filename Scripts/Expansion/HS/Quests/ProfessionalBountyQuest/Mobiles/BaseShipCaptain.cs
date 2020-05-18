@@ -58,7 +58,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public virtual TimeSpan ShootFrequency => TimeSpan.FromSeconds(Math.Min(20, 20.0 - (m_Crew.Count * 2.5)));
 
-        [Constructable]
+        [Constructible]
         public BaseShipCaptain() : this(null) { }
 
         public BaseShipCaptain(BaseGalleon galleon)

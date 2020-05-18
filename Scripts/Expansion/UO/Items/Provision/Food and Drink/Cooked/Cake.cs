@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Cake : Food
     {
-        [Constructable]
+        [Constructible]
         public Cake()
             : base(0x9E9)
         {

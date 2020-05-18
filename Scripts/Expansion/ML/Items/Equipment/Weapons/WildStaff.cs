@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2D25, 0x2D31)]
     public class WildStaff : BaseStaff
     {
-        [Constructable]
+        [Constructible]
         public WildStaff()
             : base(0x2D25)
         {

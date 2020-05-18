@@ -8,12 +8,12 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150275;  // wheat wort
 
-        [Constructable]
+        [Constructible]
         public WheatWort() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WheatWort(int num)
             : base(0x1848)
         {

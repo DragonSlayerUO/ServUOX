@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class StoneFountainAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public StoneFountainAddon()
         {
             int itemID = 0x1731;

@@ -185,7 +185,7 @@ namespace Server.Items
                 "did they die?  And more",
                 "importantly, where is",
                 "Dasha?"));
-        [Constructable]
+        [Constructible]
         public KaburJournal()
             : base(false)
         {

@@ -9,7 +9,7 @@ namespace Server.Mobiles
     {
         public virtual double BoostedSpeed => 0.1;
 
-        [Constructable]
+        [Constructible]
         public Beetle()
             : this("a giant beetle")
         {
@@ -18,7 +18,7 @@ namespace Server.Mobiles
         public override bool SubdueBeforeTame => true;
         public override bool ReduceSpeedWithDamage => false;
 
-        [Constructable]
+        [Constructible]
         public Beetle(string name)
             : base(name, 0x317, 0x3EBC, AIType.AI_Melee, FightMode.Closest, 10, 1, 0.25, 0.5)
         {

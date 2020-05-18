@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class PeerlessTeleporter : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public PeerlessTeleporter()
             : this(null)
         {

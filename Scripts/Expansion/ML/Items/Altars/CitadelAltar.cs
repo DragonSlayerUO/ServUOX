@@ -16,7 +16,7 @@ namespace Server.Items
 
         public override BasePeerless Boss => new Travesty();
 
-        [Constructable]
+        [Constructible]
         public CitadelAltar() : base(0x207E)
         {
             BossLocation = new Point3D(86, 1955, 0);

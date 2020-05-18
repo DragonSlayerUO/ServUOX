@@ -9,7 +9,7 @@ namespace Server.Items
 {
     public class FabledFishingNet : SpecialFishingNet
     {
-        [Constructable]
+        [Constructible]
         public FabledFishingNet()
         {
             Hue = 0x481;

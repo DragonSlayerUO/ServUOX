@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Haven
 {
     public class Dryad : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public Dryad()
             : base("the Dryad")
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     public class PersonalBlessDeed : Item
     {
         private Mobile m_Owner;
-        [Constructable]
+        [Constructible]
         public PersonalBlessDeed()
             : base(0x14F0)
         {
@@ -14,7 +14,7 @@ namespace Server.Items
             LootType = LootType.Blessed;
         }
 
-        [Constructable]
+        [Constructible]
         public PersonalBlessDeed(Mobile owner)
             : base(0x14F0)
         {

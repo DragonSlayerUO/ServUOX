@@ -8,13 +8,13 @@ namespace Server.Items
 {
     public class Bola : Item
     {
-        [Constructable]
+        [Constructible]
         public Bola()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Bola(int amount)
             : base(0x26AC)
         {

@@ -55,7 +55,7 @@ namespace Server.Items
 
         public override double DefaultWeight => 5.0;
 
-        [Constructable]
+        [Constructible]
         public LiquorBarrel()
             : base(4014)
         {

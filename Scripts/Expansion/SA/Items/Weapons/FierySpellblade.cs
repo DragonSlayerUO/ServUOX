@@ -5,7 +5,7 @@ namespace Server.Items
     public class FierySpellblade : ElvenSpellblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public FierySpellblade()
         {
             WeaponAttributes.ResistFireBonus = 5;

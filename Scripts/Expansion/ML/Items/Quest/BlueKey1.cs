@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BlueKey1 : AbyssKey
     {
-        [Constructable]
+        [Constructible]
         public BlueKey1()
             : base(0x1012)
         {

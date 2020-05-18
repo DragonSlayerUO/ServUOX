@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(TheDeluciansLostMineQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Jacob()
             : base("Jacob Waltzt", "the Miner Instructor")
         {

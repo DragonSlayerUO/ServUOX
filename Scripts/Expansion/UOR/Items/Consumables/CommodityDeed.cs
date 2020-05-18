@@ -110,7 +110,7 @@ namespace Server.Items
             LootType = LootType.Blessed;
         }
 
-        [Constructable]
+        [Constructible]
         public CommodityDeed()
             : this(null)
         {

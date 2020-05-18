@@ -5,7 +5,7 @@ namespace Server.Items
     public class SapphireMace : DiamondMace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SapphireMace()
         {
             WeaponAttributes.ResistEnergyBonus = 5;

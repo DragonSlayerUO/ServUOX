@@ -51,7 +51,7 @@ namespace Server.Items
 
     public class TrollStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public TrollStatuette()
             : base(0x20E9)
         {
@@ -80,7 +80,7 @@ namespace Server.Items
 
     public class CrystalBallStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public CrystalBallStatuette()
             : base(0xE2E)
         {
@@ -109,7 +109,7 @@ namespace Server.Items
 
     public class DevourerStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public DevourerStatuette()
             : base(0x2623)
         {
@@ -138,7 +138,7 @@ namespace Server.Items
 
     public class SnowLadyStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public SnowLadyStatuette()
             : base(0x276C)
         {
@@ -167,7 +167,7 @@ namespace Server.Items
 
     public class GolemStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public GolemStatuette()
             : base(0x2610)
         {
@@ -196,7 +196,7 @@ namespace Server.Items
 
     public class ExodusOverseerStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public ExodusOverseerStatuette()
             : base(0x260C)
         {
@@ -225,7 +225,7 @@ namespace Server.Items
 
     public class JukaLordStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public JukaLordStatuette()
             : base(0x25FC)
         {
@@ -254,7 +254,7 @@ namespace Server.Items
 
     public class MeerCaptainStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public MeerCaptainStatuette()
             : base(0x25FA)
         {
@@ -283,7 +283,7 @@ namespace Server.Items
 
     public class MeerEternalStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public MeerEternalStatuette()
             : base(0x25F8)
         {
@@ -312,7 +312,7 @@ namespace Server.Items
 
     public class SolenQueenStatuette : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public SolenQueenStatuette()
             : base(0x2602)
         {
@@ -341,7 +341,7 @@ namespace Server.Items
 
     public class VesperSpecialAchievementReplica : VesperCollectionStatuette
     {
-        [Constructable]
+        [Constructible]
         public VesperSpecialAchievementReplica()
             : base(0x2D4E)
         {

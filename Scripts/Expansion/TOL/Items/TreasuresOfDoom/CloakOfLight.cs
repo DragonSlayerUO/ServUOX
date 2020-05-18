@@ -7,7 +7,7 @@ namespace Server.Items
     public class CloakOfLight : Cloak
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CloakOfLight()
         {
             Attributes.NightSight = 1;
@@ -39,7 +39,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public WingArmorOfLight()
         {
             Attributes.NightSight = 1;

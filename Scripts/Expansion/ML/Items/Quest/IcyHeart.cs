@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class IcyHeart : Item
     {
-        [Constructable]
+        [Constructible]
         public IcyHeart()
             : base(0x24B)
         {

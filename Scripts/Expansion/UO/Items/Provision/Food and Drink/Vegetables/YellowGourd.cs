@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0xC64, 0xC65)]
     public class YellowGourd : Food
     {
-        [Constructable]
+        [Constructible]
         public YellowGourd()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public YellowGourd(int amount)
             : base(amount, 0xC64)
         {

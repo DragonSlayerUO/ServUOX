@@ -5,7 +5,7 @@ namespace Server.Items
     public class LightOfWayGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LightOfWayGlasses()
         {
             Attributes.BonusStr = 7;

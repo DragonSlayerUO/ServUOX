@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SheafOfHay : Item
     {
-        [Constructable]
+        [Constructible]
         public SheafOfHay()
             : base(0xF36)
         {

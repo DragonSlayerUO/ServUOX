@@ -7,13 +7,13 @@ namespace Server.Items
         public override int LabelNumber => 1113332;  // fey wings
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public FeyWings()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FeyWings(int amount)
             : base(0x5726)
         {

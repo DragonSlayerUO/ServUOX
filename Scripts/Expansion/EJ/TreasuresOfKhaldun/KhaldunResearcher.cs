@@ -16,7 +16,7 @@ namespace Server.Engines.Khaldun
         public static KhaldunResearcher InstanceTram { get; set; }
         public static KhaldunResearcher InstanceFel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public KhaldunResearcher() : base("the Researcher")
         {
         }

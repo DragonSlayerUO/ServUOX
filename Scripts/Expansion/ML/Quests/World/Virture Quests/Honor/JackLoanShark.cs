@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => null;   //JackTheVillainQuest
 
-        [Constructable]
+        [Constructible]
         public JackLoanShark()
             : base("Jack", "the Loan Shark")
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     public class BrightsightLenses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BrightsightLenses()
         {
             Hue = 0x501;
@@ -55,7 +55,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishBrightsightLenses()
         {
             Hue = 0x501;

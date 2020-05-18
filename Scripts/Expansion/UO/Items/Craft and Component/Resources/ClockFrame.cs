@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x104D, 0x104E)]
     public class ClockFrame : Item
     {
-        [Constructable]
+        [Constructible]
         public ClockFrame()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ClockFrame(int amount)
             : base(0x104D)
         {

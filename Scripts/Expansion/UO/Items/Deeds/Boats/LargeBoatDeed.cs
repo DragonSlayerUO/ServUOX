@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1041209;  // large ship deed
         public override BaseBoat Boat => new LargeBoat(BoatDirection);
 
-        [Constructable]
+        [Constructible]
         public LargeBoatDeed() : base(0x10, new Point3D(0, -1, 0))
         {
         }

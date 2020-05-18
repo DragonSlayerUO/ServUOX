@@ -32,13 +32,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Clock()
             : this(0x104B)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Clock(int itemID)
             : base(itemID)
         {
@@ -205,13 +205,13 @@ namespace Server.Items
     {
         private static readonly List<ClockTime> Instances = new List<ClockTime>();
 
-        [Constructable]
+        [Constructible]
         public ClockTime()
             : this(0x104B)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ClockTime(int itemID)
             : base(itemID)
         {
@@ -277,7 +277,7 @@ namespace Server.Items
     [Flipable(0x104B, 0x104C)]
     public class ClockRight : Clock
     {
-        [Constructable]
+        [Constructible]
         public ClockRight()
             : base(0x104B)
         {
@@ -304,7 +304,7 @@ namespace Server.Items
     [Flipable(0x104B, 0x104C)]
     public class ClockLeft : Clock
     {
-        [Constructable]
+        [Constructible]
         public ClockLeft()
             : base(0x104C)
         {

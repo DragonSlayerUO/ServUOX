@@ -5,7 +5,7 @@ namespace Server.Mobiles
     public class LeatherWorker : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public LeatherWorker()
             : base("the leather worker")
         {

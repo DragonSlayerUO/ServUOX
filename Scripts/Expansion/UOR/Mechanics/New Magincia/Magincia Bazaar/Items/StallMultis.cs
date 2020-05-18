@@ -96,7 +96,7 @@ namespace Server.Engines.NewMagincia
 
     public class CommodityStyle1 : BaseBazaarMulti
     {
-        [Constructable]
+        [Constructible]
         public CommodityStyle1() : base(0x1772)
         {
             Item comp = new Static(1801);
@@ -123,7 +123,7 @@ namespace Server.Engines.NewMagincia
 
     public class CommodityStyle2 : BaseBazaarMulti
     {
-        [Constructable]
+        [Constructible]
         public CommodityStyle2() : base(0x1773)
         {
             Item comp = new Static(9272);
@@ -150,7 +150,7 @@ namespace Server.Engines.NewMagincia
 
     public class CommodityStyle3 : BaseBazaarMulti
     {
-        [Constructable]
+        [Constructible]
         public CommodityStyle3() : base(0x1774)
         {
             Item comp = new Static(16527);
@@ -177,7 +177,7 @@ namespace Server.Engines.NewMagincia
 
     public class PetStyle1 : BaseBazaarMulti
     {
-        [Constructable]
+        [Constructible]
         public PetStyle1() : base(0x1775)
         {
             Item comp = new Static(1036);
@@ -204,7 +204,7 @@ namespace Server.Engines.NewMagincia
 
     public class PetStyle2 : BaseBazaarMulti
     {
-        [Constructable]
+        [Constructible]
         public PetStyle2() : base(0x1777)
         {
             Item comp = new Static(6013);
@@ -235,7 +235,7 @@ namespace Server.Engines.NewMagincia
 
     public class PetStyle3 : BaseBazaarMulti
     {
-        [Constructable]
+        [Constructible]
         public PetStyle3() : base(0x177B)
         {
             Item comp = new Static(2324);

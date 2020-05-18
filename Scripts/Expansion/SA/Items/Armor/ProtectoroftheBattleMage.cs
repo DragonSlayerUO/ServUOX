@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113761;  // Protector of the Battle Mage
 
-        [Constructable]
+        [Constructible]
         public ProtectoroftheBattleMage()
             : base()
         {

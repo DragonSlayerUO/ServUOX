@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new DungeonBullDeed();
 
-        [Constructable]
+        [Constructible]
         public DungeonBullAddon()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DungeonBullAddon(bool east)
             : base()
         {
@@ -61,7 +61,7 @@ namespace Server.Items
 
         private bool m_East;
 
-        [Constructable]
+        [Constructible]
         public DungeonBullDeed()
             : base()
         {

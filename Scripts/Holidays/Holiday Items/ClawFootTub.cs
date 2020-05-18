@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class ClawFootTubAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ClawFootTubAddon(DirectionType type)
         {
             switch (type)
@@ -99,7 +99,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public ClawFootTubDeed()
             : base()
         {

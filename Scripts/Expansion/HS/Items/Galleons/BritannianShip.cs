@@ -46,10 +46,10 @@ namespace Server.Multis
             }
         }
 
-        [Constructable]
+        [Constructible]
         public BritannianShip() : this(Direction.North) { }
 
-        [Constructable]
+        [Constructible]
         public BritannianShip(Direction facing)
             : base(facing)
         {
@@ -306,7 +306,7 @@ namespace Server.Multis
         public override int LabelNumber => 1150017;
         public override BaseBoat Boat => new BritannianShip(BoatDirection);
 
-        [Constructable]
+        [Constructible]
         public BritannianShipDeed()
             : base(0x40, Point3D.Zero)
         {

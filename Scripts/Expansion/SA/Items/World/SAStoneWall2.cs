@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SAStoneWall2South : DamageableItem
     {
-        [Constructable]
+        [Constructible]
         public SAStoneWall2South()
             : base(88, 631)
         {
@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class SAStoneWall2East : DamageableItem
     {
-        [Constructable]
+        [Constructible]
         public SAStoneWall2East()
             : base(87, 636)
         {

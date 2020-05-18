@@ -25,7 +25,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedSculptingToolAddon(DirectionType type, int uses)
         {
             switch (type)
@@ -95,13 +95,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedSculptingToolDeed()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedSculptingToolDeed(int uses)
             : base(uses)
         {

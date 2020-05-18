@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x1c04, 0x1c05)]
     public class FemalePlateChest : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public FemalePlateChest()
             : base(0x1C04)
         {

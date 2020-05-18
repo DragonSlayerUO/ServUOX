@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153531;  // Find Glass-Quality Sand
 
-        [Constructable]
+        [Constructible]
         public SandMiningBook()
             : base(0xFF4)
         {

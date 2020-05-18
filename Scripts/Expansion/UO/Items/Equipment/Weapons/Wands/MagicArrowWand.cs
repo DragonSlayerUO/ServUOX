@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MagicArrowWand : BaseWand
     {
-        [Constructable]
+        [Constructible]
         public MagicArrowWand()
             : base(WandEffect.MagicArrow, 5, Core.ML ? 109 : 30)
         {

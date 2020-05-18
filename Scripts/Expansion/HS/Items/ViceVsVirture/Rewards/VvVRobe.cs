@@ -22,7 +22,7 @@ namespace Server.Engines.VvV
             }
         }
 
-        [Constructable]
+        [Constructible]
         public VvVRobe(int hue)
             : base(0x2684, hue)
         {

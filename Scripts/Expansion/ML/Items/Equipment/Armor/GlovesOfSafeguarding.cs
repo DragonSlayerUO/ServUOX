@@ -5,7 +5,7 @@ namespace Server.Items
     public class GlovesOfSafeguarding : LeatherGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GlovesOfSafeguarding()
         {
             LootType = LootType.Blessed;

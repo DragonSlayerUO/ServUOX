@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class Healer : BaseHealer
     {
-        [Constructable]
+        [Constructible]
         public Healer()
         {
             Title = "the healer";

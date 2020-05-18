@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B6F, 0x3166)]
     public class RoyalCirclet : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public RoyalCirclet()
             : base(0x2B6F)
         {

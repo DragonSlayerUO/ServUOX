@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Aeluva : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Aeluva()
             : base("Aeluva", "the Arcanist")
         {

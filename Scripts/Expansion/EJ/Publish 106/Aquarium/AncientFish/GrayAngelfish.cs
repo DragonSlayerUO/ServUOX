@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class GrayAngelfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public GrayAngelfish()
             : base(0xA375)
         {

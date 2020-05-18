@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48C4, 0x48C5)]
     public class GargishScythe : BasePoleArm
     {
-        [Constructable]
+        [Constructible]
         public GargishScythe()
             : base(0x48C4)
         {

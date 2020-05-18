@@ -26,21 +26,21 @@ namespace Server.Items
 
         public virtual bool TeleportPets => true;
 
-        [Constructable]
+        [Constructible]
         public Moongate()
             : this(Point3D.Zero, null)
         {
             Dispellable = true;
         }
 
-        [Constructable]
+        [Constructible]
         public Moongate(bool bDispellable)
             : this(Point3D.Zero, null)
         {
             Dispellable = bDispellable;
         }
 
-        [Constructable]
+        [Constructible]
         public Moongate(Point3D target, Map targetMap)
             : base(0xF6C)
         {
@@ -302,12 +302,12 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string MessageString { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ConfirmationMoongate()
             : this(Point3D.Zero, null)
         { }
 
-        [Constructable]
+        [Constructible]
         public ConfirmationMoongate(Point3D target, Map targetMap)
             : base(target, targetMap)
         { }

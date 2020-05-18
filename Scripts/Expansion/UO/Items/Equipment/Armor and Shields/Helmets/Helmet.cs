@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Helmet : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public Helmet()
             : base(0x140A)
         {

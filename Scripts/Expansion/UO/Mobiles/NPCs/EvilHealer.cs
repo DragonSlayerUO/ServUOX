@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class EvilHealer : BaseHealer
     {
-        [Constructable]
+        [Constructible]
         public EvilHealer()
         {
             Title = "the healer";

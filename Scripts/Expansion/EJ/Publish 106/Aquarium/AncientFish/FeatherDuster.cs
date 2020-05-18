@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class FeatherDuster : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public FeatherDuster()
             : base(0xA381)
         {

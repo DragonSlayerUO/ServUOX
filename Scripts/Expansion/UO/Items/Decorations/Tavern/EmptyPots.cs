@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SmallEmptyPot : Item
     {
-        [Constructable]
+        [Constructible]
         public SmallEmptyPot()
             : base(0x11C6)
         {
@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class LargeEmptyPot : Item
     {
-        [Constructable]
+        [Constructible]
         public LargeEmptyPot()
             : base(0x11C7)
         {

@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1157995;  // Ethereal Dragon Statuette
 
-        [Constructable]
+        [Constructible]
         public EtherealSerpentineDragon()
             : base(0xA010, 0x3ECE, 0x3ECE, DefaultEtherealHue)
         {

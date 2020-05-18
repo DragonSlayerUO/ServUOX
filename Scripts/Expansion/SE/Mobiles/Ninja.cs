@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Ninja : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Ninja()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

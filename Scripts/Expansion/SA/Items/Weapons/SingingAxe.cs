@@ -5,7 +5,7 @@ namespace Server.Items
     public class SingingAxe : OrnateAxe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SingingAxe()
         {
             SkillBonuses.SetValues(0, SkillName.Musicianship, 5);

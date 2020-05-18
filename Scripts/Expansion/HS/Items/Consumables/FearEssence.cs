@@ -13,7 +13,7 @@ namespace Server.Items
         public virtual int Radius => 20;
         public override bool RequireFreeHand => false;
 
-        [Constructable]
+        [Constructible]
         public FearEssence()
             : base(0xF0D, PotionEffect.FearEssence)
         {

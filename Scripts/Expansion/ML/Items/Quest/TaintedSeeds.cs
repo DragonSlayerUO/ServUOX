@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TaintedSeeds : Item
     {
-        [Constructable]
+        [Constructible]
         public TaintedSeeds()
             : base(0xDFA)
         {

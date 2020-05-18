@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Regina : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Regina()
             : base("Regina", "the Noble")
         {

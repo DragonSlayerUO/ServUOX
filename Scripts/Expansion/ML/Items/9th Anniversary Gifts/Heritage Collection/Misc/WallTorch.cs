@@ -90,7 +90,7 @@ namespace Server.Items
 
     public class WallTorchDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public WallTorchDeed()
             : base()
         {

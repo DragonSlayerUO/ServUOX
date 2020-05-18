@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Redkeyfragment : Item
     {
-        [Constructable]
+        [Constructible]
         public Redkeyfragment()
             : base(0x1012)
         {

@@ -33,7 +33,7 @@ namespace Server.Items
 				"Nosfentor"
 	    };
 
-        [Constructable]
+        [Constructible]
         public BarHandTowl()
             : base(0x9C48)
         {

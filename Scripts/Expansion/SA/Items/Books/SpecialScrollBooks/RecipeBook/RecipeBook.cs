@@ -222,7 +222,7 @@ namespace Server.Items
             new RecipeScrollDefinition(152, 463, Expansion.SA, RecipeSkillName.Tinkering)
         };
 
-        [Constructable]
+        [Constructible]
         public RecipeBook()
             : base(0xA266)
         {

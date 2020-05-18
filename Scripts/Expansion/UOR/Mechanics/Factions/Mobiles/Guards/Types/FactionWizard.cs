@@ -5,7 +5,7 @@ namespace Server.Factions
 {
     public class FactionWizard : BaseFactionGuard
     {
-        [Constructable]
+        [Constructible]
         public FactionWizard()
             : base("the wizard")
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MiniatureMushroom : Food
     {
-        [Constructable]
+        [Constructible]
         public MiniatureMushroom()
             : base(0xD16)
         {

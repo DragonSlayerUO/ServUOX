@@ -13,7 +13,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public JollyHolidayTreeAddon(string name)
         {
             DisplayName = name;
@@ -101,13 +101,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public JollyHolidayTreeDeed()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public JollyHolidayTreeDeed(string name)
         {
             LootType = LootType.Blessed;

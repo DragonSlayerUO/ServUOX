@@ -15,13 +15,13 @@ namespace Server.Items
             return 0x99A;
         }
 
-        [Constructable]
+        [Constructible]
         public Goblet()
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public Goblet(BeverageType type)
             : base(type)
         {

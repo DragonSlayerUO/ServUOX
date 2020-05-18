@@ -10,7 +10,7 @@ namespace Server.Items
     {
         public Allegiance Allegiance { get; set; }
 
-        [Constructable]
+        [Constructible]
         public MyrmidexPitTeleporter(Allegiance allegiance, Point3D dest, Map map)
             : base(dest, map)
         {
@@ -51,7 +51,7 @@ namespace Server.Items
 
     public class MyrmidexQueenTeleporter : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public MyrmidexQueenTeleporter(Point3D p, Map map)
             : base(p, map)
         {

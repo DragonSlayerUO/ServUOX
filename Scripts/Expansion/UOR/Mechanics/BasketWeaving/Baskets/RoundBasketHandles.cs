@@ -6,7 +6,7 @@ public class RoundBasketHandles : BaseContainer
 {
     public override int LabelNumber => 1112293;  // round basket
 
-    [Constructable]
+    [Constructible]
     public RoundBasketHandles()
         : base(0x9AC)
     {

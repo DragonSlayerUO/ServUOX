@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1075096;  // Crystalline Ring
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public CrystallineRing()
         {
             Hue = 0x480;

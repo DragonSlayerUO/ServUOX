@@ -5,13 +5,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.Lollipop")]
     public class Lollipops : CandyCane
     {
-        [Constructable]
+        [Constructible]
         public Lollipops()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Lollipops(int amount)
             : base(0x468D + Utility.Random(3))
         {

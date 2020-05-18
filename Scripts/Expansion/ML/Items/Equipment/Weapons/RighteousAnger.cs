@@ -5,7 +5,7 @@ namespace Server.Items
     public class RighteousAnger : ElvenMachete
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RighteousAnger()
         {
             Hue = 0x284;

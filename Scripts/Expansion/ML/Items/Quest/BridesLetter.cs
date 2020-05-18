@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BridesLetter : Item
     {
-        [Constructable]
+        [Constructible]
         public BridesLetter()
             : base(0x14ED)
         {

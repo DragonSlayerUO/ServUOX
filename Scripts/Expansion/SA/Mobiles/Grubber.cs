@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a grubber corpse")]
     public class Grubber : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Grubber()
             : base(AIType.AI_Animal, FightMode.None, 10, 1, 0.06, 0.1)
         {

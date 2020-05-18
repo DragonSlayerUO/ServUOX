@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class HippoTang : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public HippoTang()
             : base(0xA391)
         {

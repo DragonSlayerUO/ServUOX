@@ -5,13 +5,13 @@ namespace Server.Items
 {
     public class FemaleGargishLeatherKilt : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishLeatherKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishLeatherKilt(int hue)
             : base(0x310)
         {

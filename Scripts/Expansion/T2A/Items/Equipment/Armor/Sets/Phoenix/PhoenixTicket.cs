@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PhoenixTicket : Item
     {
-        [Constructable]
+        [Constructible]
         public PhoenixTicket() : base(0x14F0)
         {
             LootType = LootType.Blessed;

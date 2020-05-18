@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1114770;  //Skin Tingeing Tincture
 
-        [Constructable]
+        [Constructible]
         public SkinTingeingTincture()
             : base(0xEFF)
         {

@@ -8,7 +8,7 @@ namespace Server.Mobiles
     public class DiabolicalSeaweed : BaseCreature
     {
         private PullTimer m_Timer;
-        [Constructable]
+        [Constructible]
 
         public DiabolicalSeaweed()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.0, 0.0)

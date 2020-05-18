@@ -62,7 +62,7 @@ namespace Server.Items
 
     public class DisturbingPortraitAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public DisturbingPortraitAddon()
             : base()
         {
@@ -92,7 +92,7 @@ namespace Server.Items
 
     public class DisturbingPortraitDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public DisturbingPortraitDeed()
             : base()
         {

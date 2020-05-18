@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48C0, 0x481)]
     public class GargishWarHammer : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public GargishWarHammer()
             : base(0x48C0)
         {

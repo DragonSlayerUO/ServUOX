@@ -5,7 +5,7 @@ namespace Server.Items
     public class Calm : Halberd
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Calm()
         {
             Hue = 0x2cb;

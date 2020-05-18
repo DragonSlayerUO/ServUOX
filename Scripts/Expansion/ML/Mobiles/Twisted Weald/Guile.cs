@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a Guile corpse")]
     public class Guile : Changeling
     {
-        [Constructable]
+        [Constructible]
         public Guile()
         {
             Hue = DefaultHue;

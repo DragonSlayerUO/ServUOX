@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073352; // Friends of the Library Kilt
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendSkirt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendSkirt(int hue)
             : base(hue)
         {
@@ -41,13 +41,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073349; // Friends of the Library Pants
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendPants()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendPants(int hue)
             : base(hue)
         {
@@ -75,13 +75,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073251; // Malabelle's Dress - Museum of Vesper Replica
 
-        [Constructable]
+        [Constructible]
         public MalabellesDress()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MalabellesDress(int hue)
             : base(hue)
         {

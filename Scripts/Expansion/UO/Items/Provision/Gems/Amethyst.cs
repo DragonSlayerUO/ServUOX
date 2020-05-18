@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Amethyst : Item, IGem
     {
-        [Constructable]
+        [Constructible]
         public Amethyst()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Amethyst(int amount)
             : base(0xF16)
         {

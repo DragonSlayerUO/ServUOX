@@ -5,7 +5,7 @@ namespace Server.Items
     public class MaritimeGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MaritimeGlasses()
         {
             Attributes.Luck = 150;

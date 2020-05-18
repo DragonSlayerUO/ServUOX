@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Axem : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Axem()
             : base("Axem", "the Curator")
         {

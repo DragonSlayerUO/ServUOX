@@ -66,7 +66,7 @@ namespace Server.Engines.VeteranRewards
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public GadgetryTableAddon(DirectionType type)
         {
             NextGolemTime = DateTime.UtcNow + TimeSpan.FromDays(1);
@@ -253,7 +253,7 @@ namespace Server.Engines.VeteranRewards
             }
         }
 
-        [Constructable]
+        [Constructible]
         public GadgetryTableAddonDeed()
             : base()
         {
@@ -320,7 +320,7 @@ namespace Server.Engines.VeteranRewards
     [CorpseName("a golem corpse")]
     public class GadgetryTableGolem : Golem, IRepairableMobile
     {
-        [Constructable]
+        [Constructible]
         public GadgetryTableGolem(double scalar)
             : base(true, 0)
         {

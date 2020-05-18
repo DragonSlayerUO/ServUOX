@@ -12,7 +12,7 @@ namespace Server.Items
 
         public bool SouthFacing => ItemID == 0x2D03 || ItemID == 0x2D04;
 
-        [Constructable]
+        [Constructible]
         public FreshGreenLadyBug()
             : base(0x2D04)
         {

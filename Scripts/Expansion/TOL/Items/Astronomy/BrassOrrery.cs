@@ -9,7 +9,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Active { get; set; }
 
-        [Constructable]
+        [Constructible]
         public BrassOrrery()
             : base(0xA17C)
         {

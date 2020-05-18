@@ -5,7 +5,7 @@ namespace Server.Items
     public class VioletCourage : FemalePlateChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public VioletCourage()
         {
             Hue = Utility.RandomBool() ? 0x486 : 0x490;

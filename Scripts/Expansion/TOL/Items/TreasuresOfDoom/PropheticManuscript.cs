@@ -11,7 +11,7 @@ namespace Server.Items
         public override TextDefinition Title => 1155638 + Index;
         public override TextDefinition Body => 1155632 + Index;
 
-        [Constructable]
+        [Constructible]
         public PropheticManuscript()
             : this(Utility.RandomMinMax(0, 4))
         {

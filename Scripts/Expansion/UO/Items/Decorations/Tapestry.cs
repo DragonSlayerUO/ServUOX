@@ -3,7 +3,7 @@ namespace Server.Items
     public class Tapestry1N : Item
     {
         private Tapestry1NItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry1N()
             : base(0xEAA)
         {
@@ -122,7 +122,7 @@ namespace Server.Items
     public class Tapestry2N : Item
     {
         private Tapestry2NItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry2N()
             : base(0xEAC)
         {
@@ -239,7 +239,7 @@ namespace Server.Items
     public class Tapestry2W : Item
     {
         private Tapestry2WItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry2W()
             : base(0xEAE)
         {
@@ -356,7 +356,7 @@ namespace Server.Items
     public class Tapestry3N : Item
     {
         private Tapestry3NItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry3N()
             : base(0xFD6)
         {
@@ -473,7 +473,7 @@ namespace Server.Items
     public class Tapestry3W : Item
     {
         private Tapestry3WItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry3W()
             : base(0xFD7)
         {
@@ -590,7 +590,7 @@ namespace Server.Items
     public class Tapestry4N : Item
     {
         private InternalItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry4N()
             : base(0xFDA)
         {
@@ -710,7 +710,7 @@ namespace Server.Items
     public class Tapestry4W : Item
     {
         private InternalItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry4W()
             : base(0xFDB)
         {
@@ -833,7 +833,7 @@ namespace Server.Items
     public class Tapestry5N : Item
     {
         private InternalItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry5N()
             : base(0xFDE)
         {
@@ -956,7 +956,7 @@ namespace Server.Items
     public class Tapestry5W : Item
     {
         private InternalItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry5W()
             : base(0xFDF)
         {
@@ -1079,7 +1079,7 @@ namespace Server.Items
     public class Tapestry6N : Item
     {
         private InternalItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry6N()
             : base(0xFE2)
         {
@@ -1202,7 +1202,7 @@ namespace Server.Items
     public class Tapestry6W : Item
     {
         private InternalItem m_Item;
-        [Constructable]
+        [Constructible]
         public Tapestry6W()
             : base(0xFE3)
         {

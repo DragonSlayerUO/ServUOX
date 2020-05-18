@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2643, 0x2644)]
     public class DragonGloves : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public DragonGloves()
             : base(0x2643)
         {

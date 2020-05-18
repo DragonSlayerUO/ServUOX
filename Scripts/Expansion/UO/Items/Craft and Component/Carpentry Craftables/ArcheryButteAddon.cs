@@ -324,7 +324,7 @@ namespace Server.Items
 
     public class ArcheryButteAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ArcheryButteAddon(AddonFacing facing)
         {
             switch (facing)
@@ -357,7 +357,7 @@ namespace Server.Items
     {
         private AddonFacing Facing { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ArcheryButteDeed()
         {
         }

@@ -5,13 +5,13 @@ namespace Server.Items
 {
     public class RedLeaves : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public RedLeaves()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RedLeaves(int amount)
             : base(0x1E85)
         {

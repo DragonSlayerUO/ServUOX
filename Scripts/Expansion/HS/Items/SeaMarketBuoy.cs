@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class SeaMarketBuoy : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SeaMarketBuoy()
         {
             AddonComponent comp1 = new AddonComponent(18102);

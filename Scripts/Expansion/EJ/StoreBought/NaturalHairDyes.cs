@@ -28,7 +28,7 @@ namespace Server.Items
         private HairDyeType m_Type;
         private TextDefinition m_Label;
 
-        [Constructable]
+        [Constructible]
         public NaturalHairDye(HairDyeType type)
             : base(0xEFE)
         {

@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1149958;
 
-        [Constructable]
+        [Constructible]
         public AntiqueWeddingDress()
         {
             Hue = 2953;

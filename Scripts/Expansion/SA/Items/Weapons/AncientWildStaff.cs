@@ -5,7 +5,7 @@ namespace Server.Items
     public class AncientWildStaff : WildStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AncientWildStaff()
         {
             WeaponAttributes.ResistPoisonBonus = 5;

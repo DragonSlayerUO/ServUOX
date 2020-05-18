@@ -16,12 +16,12 @@ namespace Server.Items
         public override int LabelNumber => 1113296;  // Armed Floor Trap
         public bool CheckWhenHidden => true;
 
-        [Constructable]
+        [Constructible]
         public GoblinFloorTrap() : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GoblinFloorTrap(Mobile from) : base(0x4004)
         {
             m_Owner = from;
@@ -126,7 +126,7 @@ namespace Server.Items
 
     public class GoblinFloorTrapKit : Item
     {
-        [Constructable]
+        [Constructible]
         public GoblinFloorTrapKit() : base(16704)
         {
         }

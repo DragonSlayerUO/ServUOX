@@ -10,7 +10,7 @@ namespace Server.Items
         public override int LabelNumber => 1152732;  // Brightblade
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public Brightblade()
         {
             WeaponAttributes.HitLeechStam = 100;
@@ -50,7 +50,7 @@ namespace Server.Items
         public override int LabelNumber => 1152732;  // Brightblade
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishBrightblade()
         {
             WeaponAttributes.HitLeechStam = 100;

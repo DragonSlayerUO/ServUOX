@@ -15,7 +15,7 @@ namespace Server.Mobiles
         private List<Mobile> m_Fellows = new List<Mobile>();
         private Timer m_FellowsTimer;
 
-        [Constructable]
+        [Constructible]
         public LeatherWolf()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -181,7 +181,7 @@ namespace Server.Mobiles
 
     public class LeatherWolfFellow : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LeatherWolfFellow()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -65,13 +65,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public WineRack()
             : this(0xA567)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WineRack(int id)
             : base(id)
         {

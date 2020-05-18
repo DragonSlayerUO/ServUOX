@@ -5,7 +5,7 @@ namespace Server.Items
     public class OrcChieftainHelm : OrcHelm
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public OrcChieftainHelm()
         {
             Hue = 0x2a3;

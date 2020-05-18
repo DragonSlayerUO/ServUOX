@@ -4,7 +4,7 @@ using Server.Items;
 
 public class SmallRoundBasket : BaseContainer
 {
-    [Constructable]
+    [Constructible]
     public SmallRoundBasket()
         : base(0x24DD)
     {

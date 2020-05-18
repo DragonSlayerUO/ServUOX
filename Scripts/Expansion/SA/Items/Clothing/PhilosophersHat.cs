@@ -5,7 +5,7 @@ namespace Server.Items
     public class PhilosophersHat : WizardsHat
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PhilosophersHat()
         {
             LootType = LootType.Blessed;

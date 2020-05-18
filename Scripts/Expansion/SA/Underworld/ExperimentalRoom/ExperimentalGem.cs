@@ -85,7 +85,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public ExperimentalGem() : base(6463)
         {
             m_LastIndex = -1;

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154232;  // Schematic for an Orcish Drilling Machine
 
-        [Constructable]
+        [Constructible]
         public OrcishSchematics() : base(0x2258)
         {
             Hue = 1945;

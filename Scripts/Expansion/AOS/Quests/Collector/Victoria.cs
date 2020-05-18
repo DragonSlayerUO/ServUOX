@@ -8,7 +8,7 @@ namespace Server.Engines.Quests.Doom
     {
         private const int AltarRange = 24;
         private SummoningAltar m_Altar;
-        [Constructable]
+        [Constructible]
         public Victoria()
             : base("the Sorceress")
         {

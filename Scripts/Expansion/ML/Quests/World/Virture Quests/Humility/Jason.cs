@@ -23,7 +23,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBHealer());
         }
 
-        [Constructable]
+        [Constructible]
         public Jason()
             : base("Jason", "the Healer")
         {

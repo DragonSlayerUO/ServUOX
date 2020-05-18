@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xf45, 0xf46)]
     public class ExecutionersAxe : BaseAxe
     {
-        [Constructable]
+        [Constructible]
         public ExecutionersAxe()
             : base(0xF45)
         {

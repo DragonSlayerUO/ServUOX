@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150675;
 
-        [Constructable]
+        [Constructible]
         public MetalKeg()
         {
         }

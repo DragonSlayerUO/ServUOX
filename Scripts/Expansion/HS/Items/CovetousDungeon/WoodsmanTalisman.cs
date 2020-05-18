@@ -50,7 +50,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime Expires { get; set; }
 
-        [Constructable]
+        [Constructible]
         public WoodsmansTalisman(CraftResource resource)
             : base(0x2F5A)
         {

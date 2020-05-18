@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class BedlamTele : Item
     {
-        [Constructable]
+        [Constructible]
         public BedlamTele()
             : base(0x124D)
         {

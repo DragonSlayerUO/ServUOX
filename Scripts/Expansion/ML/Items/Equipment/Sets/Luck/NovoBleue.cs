@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1080239;  // Novo Bleue
         public override SetItem SetID => SetItem.Luck;
         public override int Pieces => 2;
-        [Constructable]
+        [Constructible]
         public NovoBleue() : base()
         {
             Weight = 1.0;

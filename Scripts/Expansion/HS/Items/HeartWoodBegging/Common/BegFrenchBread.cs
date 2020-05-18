@@ -2,7 +2,7 @@
 {
     public class BegFrenchBread : FrenchBread
     {
-        [Constructable]
+        [Constructible]
         public BegFrenchBread()
         {
         }

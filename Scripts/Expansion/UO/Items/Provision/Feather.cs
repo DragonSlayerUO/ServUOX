@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Feather : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Feather()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Feather(int amount)
             : base(0x1BD1)
         {

@@ -34,7 +34,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098390;  // cello
 
-        [Constructable]
+        [Constructible]
         public CelloDeed()
         {
         }
@@ -64,7 +64,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new CelloDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public CelloAddon()
         {
             AddComponent(new CelloComponent(), 0, 0, 0);

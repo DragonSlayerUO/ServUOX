@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BrineShrimp : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public BrineShrimp()
             : base(0x3B11)
         {

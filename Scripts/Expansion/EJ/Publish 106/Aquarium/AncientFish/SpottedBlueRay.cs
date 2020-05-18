@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SpottedBlueRay : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SpottedBlueRay()
             : base(0xA374)
         {

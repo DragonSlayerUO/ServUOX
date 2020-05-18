@@ -6,7 +6,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(GargishPlateChest))]
     public class PlateDo : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public PlateDo()
             : base(0x277D)
         {

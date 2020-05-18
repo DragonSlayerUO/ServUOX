@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class Frazer : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Frazer()
             : base("Frazer", "the Vagabond")
         {

@@ -8,7 +8,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new SmallSoulForgeDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public SmallSoulForge()
         {
             AddComponent(new ForgeComponent(17607), 0, 0, 0);
@@ -37,7 +37,7 @@ namespace Server.Items
         public override BaseAddon Addon => new SmallSoulForge();
         public override int LabelNumber => 1149695;
 
-        [Constructable]
+        [Constructible]
         public SmallSoulForgeDeed()
         {
         }

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class WoodenKiteShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public WoodenKiteShield()
             : base(0x1B78)
         {

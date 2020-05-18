@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113863;  // Axe of Abandon
 
-        [Constructable]
+        [Constructible]
         public AxeOfAbandon()
         {
             Hue = 556;

@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealOstard : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealOstard()
             : base(0x2135, 0x3EAC, 0x3EA5)
         { }

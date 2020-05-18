@@ -19,7 +19,7 @@ namespace Server.Items
 
         public override BaseAddonContainerDeed Deed => new EnormousVenusFlytrapAddonDeed(Hue);
 
-        [Constructable]
+        [Constructible]
         public EnormousVenusFlytrapAddon(int hue)
             : base(0x9967)
         {
@@ -229,13 +229,13 @@ namespace Server.Items
 
         public override BaseAddonContainer Addon => new EnormousVenusFlytrapAddon(Hue);
 
-        [Constructable]
+        [Constructible]
         public EnormousVenusFlytrapAddonDeed()
             : this(Utility.RandomList(26, 33, 233, 1931, 2067))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnormousVenusFlytrapAddonDeed(int hue)
         {
             Hue = hue;

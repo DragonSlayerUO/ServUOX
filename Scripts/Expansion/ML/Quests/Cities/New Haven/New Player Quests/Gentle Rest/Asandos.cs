@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Asandos : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Asandos()
             : base("Asandos", "the Chef")
         {

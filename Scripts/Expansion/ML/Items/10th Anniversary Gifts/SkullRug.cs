@@ -104,19 +104,19 @@ namespace Server.Items
 
         public RugType RugType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SkullRugAddon()
             : this(RugType.EastLarge)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkullRugAddon(RugType type)
             : this(type, 0, DateTime.UtcNow)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkullRugAddon(RugType type, int resCount, DateTime nextuse)
         {
             NextResourceCount = nextuse;
@@ -339,19 +339,19 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public RugType RugType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SkullRugAddonDeed()
             : this(RugType.EastLarge)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkullRugAddonDeed(RugType type)
             : this(type, 0, DateTime.UtcNow)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkullRugAddonDeed(RugType type, int resCount, DateTime nextuse)
         {
             RugType = type;

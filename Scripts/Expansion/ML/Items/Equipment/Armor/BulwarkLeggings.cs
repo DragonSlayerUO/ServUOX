@@ -5,7 +5,7 @@ namespace Server.Items
     public class BulwarkLeggings : RingmailLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BulwarkLeggings()
         {
             LootType = LootType.Blessed;

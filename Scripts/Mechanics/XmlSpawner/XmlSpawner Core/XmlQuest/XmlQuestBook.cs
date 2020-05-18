@@ -27,7 +27,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlayerQuestBoard() : base(0x1e5e)
         {
             Movable = false;
@@ -100,13 +100,13 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public XmlQuestBook(int itemid) : this()
         {
             ItemID = itemid;
         }
 
-        [Constructable]
+        [Constructible]
         public XmlQuestBook() : base(0x2259)
         {
             //LootType = LootType.Blessed;

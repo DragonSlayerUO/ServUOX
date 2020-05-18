@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1114784;  // Tangle
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public Tangle1()
             : base()
         {
@@ -44,7 +44,7 @@ namespace Server.Items
         public override int LabelNumber => 1114784;  // Tangle
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishTangle1()
             : base()
         {

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a Miasma corpse")]
     public class Miasma : Scorpion
     {
-        [Constructable]
+        [Constructible]
         public Miasma()
         {
 

@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class FarmerNash : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public FarmerNash()
             : base("Farmer Nash")
         {

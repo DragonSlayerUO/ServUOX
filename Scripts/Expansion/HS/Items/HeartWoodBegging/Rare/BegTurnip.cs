@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BegTurnip : Turnip
     {
-        [Constructable]
+        [Constructible]
         public BegTurnip()
         {
         }

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class VesperReefTiger : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public VesperReefTiger()
             : base(0x3B08)
         {

@@ -3,7 +3,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.Dressform")]
     public class DressformFront : Item
     {
-        [Constructable]
+        [Constructible]
         public DressformFront()
             : base(0xec6)
         {
@@ -30,7 +30,7 @@ namespace Server.Items
 
     public class DressformSide : Item
     {
-        [Constructable]
+        [Constructible]
         public DressformSide()
             : base(0xec7)
         {

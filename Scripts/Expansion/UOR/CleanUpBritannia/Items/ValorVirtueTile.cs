@@ -18,7 +18,7 @@ namespace Server.Items
 
         private int offset;
 
-        [Constructable]
+        [Constructible]
         public ValorVirtueTileAddon(ValorTileType type)
         {
             m_ValorTileType = type;
@@ -63,7 +63,7 @@ namespace Server.Items
 
         private ValorTileType m_ValorTileType;
 
-        [Constructable]
+        [Constructible]
         public ValorVirtueTileDeed()
         {
             LootType = LootType.Blessed;

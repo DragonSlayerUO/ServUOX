@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class AlbinoSquirrelImprisonedInCrystal : BaseImprisonedMobile
     {
-        [Constructable]
+        [Constructible]
         public AlbinoSquirrelImprisonedInCrystal()
             : base(0x1F1C)
         {
@@ -40,7 +40,7 @@ namespace Server.Mobiles
 {
     public class AlbinoSquirrel : Squirrel
     {
-        [Constructable]
+        [Constructible]
         public AlbinoSquirrel()
             : base()
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113649;  // Mystic's Garb
 
-        [Constructable]
+        [Constructible]
         public MysticsGarb()
             : base()
         {

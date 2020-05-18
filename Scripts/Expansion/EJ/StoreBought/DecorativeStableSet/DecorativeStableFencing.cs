@@ -44,7 +44,7 @@ namespace Server.Items
             return true;
         }
 
-        [Constructable]
+        [Constructible]
         public DecorativeStableFencing(FencingType type)
             : base(IDs[(int)type][1])
         {

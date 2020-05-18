@@ -17,13 +17,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public Kasa()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Kasa(int hue)
             : base(0x2798, hue)
         {
@@ -61,13 +61,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public ClothNinjaHood()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ClothNinjaHood(int hue)
             : base(0x278F, hue)
         {

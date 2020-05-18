@@ -5,7 +5,7 @@ namespace Server.Items
     public class GhostShipAnchor : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GhostShipAnchor()
             : base(0x14F7)
         {

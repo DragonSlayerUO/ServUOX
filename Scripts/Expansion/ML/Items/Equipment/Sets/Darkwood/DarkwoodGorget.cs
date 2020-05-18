@@ -7,7 +7,7 @@ namespace Server.Items
     public class DarkwoodGorget : WoodlandGorget
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DarkwoodGorget()
             : base()
         {

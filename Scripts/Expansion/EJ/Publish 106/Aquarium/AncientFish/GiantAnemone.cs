@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class GiantAnemone : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public GiantAnemone()
             : base(0xA386)
         {

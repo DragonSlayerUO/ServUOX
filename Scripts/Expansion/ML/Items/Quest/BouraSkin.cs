@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112900; // Boura Skin
 
-        [Constructable]
+        [Constructible]
         public BouraSkin()
             : base(0x11F4)
         {

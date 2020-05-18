@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a clan scratch henchrat corpse")]
     public class ClanSH : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ClanSH()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(CrushingBonesAndTakingNamesQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Churchill()
             : base("Churchill", "the Mace Fighting Instructor")
         {

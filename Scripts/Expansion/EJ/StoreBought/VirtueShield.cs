@@ -19,7 +19,7 @@ namespace Server.Items
         public override int InitMaxHits => 255;
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public VirtueShield()
             : base(0x7818)
         {

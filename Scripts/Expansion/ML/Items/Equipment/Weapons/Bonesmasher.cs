@@ -5,7 +5,7 @@ namespace Server.Items
     public class Bonesmasher : DiamondMace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Bonesmasher()
         {
             Hue = 0x482;

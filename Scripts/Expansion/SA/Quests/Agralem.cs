@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Agralem : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Agralem()
             : base("Agralem", "the Bladeweaver")
         {

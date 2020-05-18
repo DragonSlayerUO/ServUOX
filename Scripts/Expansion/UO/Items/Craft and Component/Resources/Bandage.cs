@@ -21,12 +21,12 @@ namespace Server.Items
 
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public Bandage()
             : this(1)
         { }
 
-        [Constructable]
+        [Constructible]
         public Bandage(int amount)
             : base(0xE21)
         {

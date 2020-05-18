@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Jellyfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Jellyfish()
             : base(0x3B0E)
         {

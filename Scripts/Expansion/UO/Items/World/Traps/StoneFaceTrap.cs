@@ -11,7 +11,7 @@ namespace Server.Items
 
     public class StoneFaceTrap : BaseTrap
     {
-        [Constructable]
+        [Constructible]
         public StoneFaceTrap()
             : base(0x10FC)
         {
@@ -153,7 +153,7 @@ namespace Server.Items
 
     public class StoneFaceTrapNoDamage : StoneFaceTrap
     {
-        [Constructable]
+        [Constructible]
         public StoneFaceTrapNoDamage()
         {
         }

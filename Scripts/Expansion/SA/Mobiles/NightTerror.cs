@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a night terror corpse")]
     public class NightTerror : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public NightTerror()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

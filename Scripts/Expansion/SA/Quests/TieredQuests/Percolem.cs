@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public TierQuestInfo TierInfo => TierQuestInfo.Percolem;
 
-        [Constructable]
+        [Constructible]
         public Percolem()
             : base("Percolem", "the Hunter")
         {

@@ -35,7 +35,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public AnniversaryType Type { get; set; }
 
-        [Constructable]
+        [Constructible]
         public AnniversaryPromotionalToken(AnniversaryType type)
             : base(0x2AAA)
         {

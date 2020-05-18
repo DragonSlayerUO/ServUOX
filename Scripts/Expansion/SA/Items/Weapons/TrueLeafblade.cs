@@ -5,7 +5,7 @@ namespace Server.Items
     public class TrueLeafblade : Leafblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TrueLeafblade()
         {
             WeaponAttributes.ResistPoisonBonus = 5;

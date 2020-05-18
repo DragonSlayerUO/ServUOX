@@ -4,7 +4,7 @@ namespace Server.Engines.Quests.Doom
 {
     public class GrandGrimoire : Item
     {
-        [Constructable]
+        [Constructible]
         public GrandGrimoire()
             : base(0xEFA)
         {

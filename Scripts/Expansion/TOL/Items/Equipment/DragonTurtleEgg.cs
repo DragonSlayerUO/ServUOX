@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override bool CanMutate => false;
 
-        [Constructable]
+        [Constructible]
         public DragonTurtleEgg()
         {
         }

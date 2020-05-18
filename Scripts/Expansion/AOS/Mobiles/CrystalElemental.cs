@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a crystal elemental corpse")]
     public class CrystalElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public CrystalElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

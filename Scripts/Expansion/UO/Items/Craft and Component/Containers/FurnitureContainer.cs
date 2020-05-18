@@ -152,7 +152,7 @@ namespace Server.Items
     [Flipable(0x2815, 0x2816)]
     public class TallCabinet : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public TallCabinet()
             : base(0x2815)
         {
@@ -181,7 +181,7 @@ namespace Server.Items
     [Flipable(0x2817, 0x2818)]
     public class ShortCabinet : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public ShortCabinet()
             : base(0x2817)
         {
@@ -210,7 +210,7 @@ namespace Server.Items
     [Flipable(0x2857, 0x2858)]
     public class RedArmoire : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public RedArmoire()
             : base(0x2857)
         {
@@ -239,7 +239,7 @@ namespace Server.Items
     [Flipable(0x285D, 0x285E)]
     public class CherryArmoire : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public CherryArmoire()
             : base(0x285D)
         {
@@ -268,7 +268,7 @@ namespace Server.Items
     [Flipable(0x285B, 0x285C)]
     public class MapleArmoire : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public MapleArmoire()
             : base(0x285B)
         {
@@ -297,7 +297,7 @@ namespace Server.Items
     [Flipable(0x2859, 0x285A)]
     public class ElegantArmoire : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public ElegantArmoire()
             : base(0x2859)
         {
@@ -326,7 +326,7 @@ namespace Server.Items
     [Flipable(0xa97, 0xa99, 0xa98, 0xa9a, 0xa9b, 0xa9c)]
     public class FullBookcase : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public FullBookcase()
             : base(0xA97)
         {
@@ -355,7 +355,7 @@ namespace Server.Items
     [Flipable(0xa9d, 0xa9e)]
     public class EmptyBookcase : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public EmptyBookcase()
             : base(0xA9D)
         {
@@ -384,7 +384,7 @@ namespace Server.Items
     [Flipable(0xa2c, 0xa34)]
     public class Drawer : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public Drawer()
             : base(0xA2C)
         {
@@ -413,7 +413,7 @@ namespace Server.Items
     [Flipable(0xa30, 0xa38)]
     public class FancyDrawer : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public FancyDrawer()
             : base(0xA30)
         {
@@ -442,7 +442,7 @@ namespace Server.Items
     [Flipable(0xa4f, 0xa53)]
     public class Armoire : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public Armoire()
             : base(0xA4F)
         {
@@ -481,7 +481,7 @@ namespace Server.Items
     [Flipable(0xa4d, 0xa51)]
     public class FancyArmoire : FurnitureContainer
     {
-        [Constructable]
+        [Constructible]
         public FancyArmoire()
             : base(0xA4D)
         {
@@ -609,7 +609,7 @@ namespace Server.Items
         public override int LabelNumber => 1158974;  // China Cabinet
         public override int DefaultGumpID => 0x4F;
 
-        [Constructable]
+        [Constructible]
         public ChinaCabinet()
             : base(0xA29F)
         {
@@ -677,7 +677,7 @@ namespace Server.Items
         public override int LabelNumber => 1158973;  // Pie Safe
         public override int DefaultGumpID => 0x4F;
 
-        [Constructable]
+        [Constructible]
         public PieSafe()
             : base(0xA29B)
         {

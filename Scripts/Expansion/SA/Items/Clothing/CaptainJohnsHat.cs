@@ -5,7 +5,7 @@ namespace Server.Items
     public class CaptainJohnsHat : TricorneHat
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CaptainJohnsHat()
         {
             Hue = 0x455;

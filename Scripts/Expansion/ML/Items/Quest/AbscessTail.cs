@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AbscessTail : Item
     {
-        [Constructable]
+        [Constructible]
         public AbscessTail()
             : base(0x1A9D)
         {

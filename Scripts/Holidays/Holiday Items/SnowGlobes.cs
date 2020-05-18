@@ -101,13 +101,13 @@ namespace Server.Items
     public class SnowGlobeOne : SnowGlobe
     {
         private SnowGlobeTypeOne m_Type;
-        [Constructable]
+        [Constructible]
         public SnowGlobeOne()
             : this((SnowGlobeTypeOne)Utility.Random(19))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SnowGlobeOne(SnowGlobeTypeOne type)
         {
             m_Type = type;
@@ -183,13 +183,13 @@ namespace Server.Items
             /* ShrineofValor */ 		"Shrine of Valor"
         };
         private SnowGlobeTypeTwo m_Type;
-        [Constructable]
+        [Constructible]
         public SnowGlobeTwo()
             : this((SnowGlobeTypeTwo)Utility.Random(19))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SnowGlobeTwo(SnowGlobeTypeTwo type)
         {
             m_Type = type;
@@ -253,13 +253,13 @@ namespace Server.Items
     public class SnowGlobeThree : SnowGlobe
     {
         private SnowGlobeTypeThree m_Type;
-        [Constructable]
+        [Constructible]
         public SnowGlobeThree()
             : this((SnowGlobeTypeThree)Utility.Random(16))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SnowGlobeThree(SnowGlobeTypeThree type)
         {
             m_Type = type;

@@ -141,7 +141,7 @@ namespace Server.Engines.Events
 
     public class PlayerBones : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public PlayerBones(string name)
             : base(Utility.RandomMinMax(0x0ECA, 0x0ED2))
         {

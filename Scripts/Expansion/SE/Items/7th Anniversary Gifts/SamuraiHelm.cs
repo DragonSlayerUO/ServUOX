@@ -6,7 +6,7 @@ namespace Server.Items
     public class SamuraiHelm : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SamuraiHelm()
             : base(0x236C)
         {

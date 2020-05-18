@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class LargeForgeEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public LargeForgeEastAddon()
         {
             AddComponent(new ForgeComponent(0x1986), 0, 0, 0);
@@ -31,7 +31,7 @@ namespace Server.Items
 
     public class LargeForgeEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public LargeForgeEastDeed()
         {
         }

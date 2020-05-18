@@ -20,7 +20,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041280;  // an interior decorator
 
-        [Constructable]
+        [Constructible]
         public InteriorDecorator()
             : base(0xFC1)
         {

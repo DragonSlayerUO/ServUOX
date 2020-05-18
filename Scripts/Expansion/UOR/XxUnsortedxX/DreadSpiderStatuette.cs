@@ -8,7 +8,7 @@ namespace Server.Items
         {
             0x493, 0x494, 0x495, 0x496, 0x497
         };
-        [Constructable]
+        [Constructible]
         public DreadSpiderStatuette()
             : base(0x25C4)
         {

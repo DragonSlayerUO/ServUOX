@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x903, 0x406E)]
     public class DiscMace : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public DiscMace()
             : base(0x903)
         {

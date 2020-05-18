@@ -4,7 +4,7 @@ namespace Server.Factions
 {
     public class FactionSpikeTrap : BaseFactionTrap
     {
-        [Constructable]
+        [Constructible]
         public FactionSpikeTrap()
             : this(null)
         {

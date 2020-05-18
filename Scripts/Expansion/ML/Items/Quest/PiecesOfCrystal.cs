@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PiecesOfCrystal : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public PiecesOfCrystal()
             : base(0x2245)
         {

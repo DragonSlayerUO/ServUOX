@@ -281,7 +281,7 @@ namespace Server.Engines.Quests.Matriarch
 
     public class RedSolenMatriarch : BaseSolenMatriarch
     {
-        [Constructable]
+        [Constructible]
         public RedSolenMatriarch()
         {
         }
@@ -308,7 +308,7 @@ namespace Server.Engines.Quests.Matriarch
 
     public class BlackSolenMatriarch : BaseSolenMatriarch
     {
-        [Constructable]
+        [Constructible]
         public BlackSolenMatriarch()
         {
         }

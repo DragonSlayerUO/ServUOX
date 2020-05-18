@@ -5,7 +5,7 @@ namespace Server.Items
     public class GamblingStone : Item
     {
         private int m_GamblePot = 2500;
-        [Constructable]
+        [Constructible]
         public GamblingStone()
             : base(0xED4)
         {

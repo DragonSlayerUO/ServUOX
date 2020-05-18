@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a mongbat corpse")]
     public class DaemonMongbat : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public DaemonMongbat()
             : base(AIType.AI_Necro)
         {
@@ -15,7 +15,7 @@ namespace Server.Mobiles
             BaseSoundID = 422;
         }
 
-        [Constructable]
+        [Constructible]
         public DaemonMongbat(int level, bool voidSpawn)
             : base(AIType.AI_Melee, level, voidSpawn)
         {
@@ -45,7 +45,7 @@ namespace Server.Mobiles
     [CorpseName("a gargoyle corpse")]
     public class GargoyleAssassin : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public GargoyleAssassin()
             : base(AIType.AI_Mage)
         {
@@ -54,7 +54,7 @@ namespace Server.Mobiles
             BaseSoundID = 0x174;
         }
 
-        [Constructable]
+        [Constructible]
         public GargoyleAssassin(int level, bool voidSpawn)
             : base(AIType.AI_Mage, level, voidSpawn)
         {
@@ -84,7 +84,7 @@ namespace Server.Mobiles
     [CorpseName("a doppleganger corpse")]
     public class CovetousDoppleganger : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public CovetousDoppleganger()
             : base(AIType.AI_Melee)
         {
@@ -93,7 +93,7 @@ namespace Server.Mobiles
             BaseSoundID = 0x451;
         }
 
-        [Constructable]
+        [Constructible]
         public CovetousDoppleganger(int level, bool voidSpawn)
             : base(AIType.AI_Melee, level, voidSpawn)
         {
@@ -123,7 +123,7 @@ namespace Server.Mobiles
     [CorpseName("an oni corpse")]
     public class LesserOni : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public LesserOni()
             : base(AIType.AI_Mage)
         {
@@ -133,7 +133,7 @@ namespace Server.Mobiles
             SetSpecialAbility(SpecialAbility.AngryFire);
         }
 
-        [Constructable]
+        [Constructible]
         public LesserOni(int level, bool voidSpawn)
             : base(AIType.AI_Mage, level, voidSpawn)
         {
@@ -168,7 +168,7 @@ namespace Server.Mobiles
     [CorpseName("a fire daemon corpse")]
     public class CovetousFireDaemon : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public CovetousFireDaemon()
             : base(AIType.AI_Mage)
         {
@@ -177,7 +177,7 @@ namespace Server.Mobiles
             BaseSoundID = 357;
         }
 
-        [Constructable]
+        [Constructible]
         public CovetousFireDaemon(int level, bool voidSpawn)
             : base(AIType.AI_Mage, level, voidSpawn)
         {

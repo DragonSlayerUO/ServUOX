@@ -13,7 +13,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => new CustomizableSquaredDoorMatDeed();
 
-        [Constructable]
+        [Constructible]
         public CustomizableSquaredDoorMatAddon(DirectionType type)
         {
             Lines = new string[3];
@@ -127,7 +127,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1151806;  // squared door mat deed
 
-        [Constructable]
+        [Constructible]
         public CustomizableSquaredDoorMatDeed()
         {
             LootType = LootType.Blessed;

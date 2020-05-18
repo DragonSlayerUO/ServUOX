@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LeafGorget : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeafGorget()
             : base(0x2FC7)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class IolosLute : Lute
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public IolosLute()
         {
             Hue = 0x47E;

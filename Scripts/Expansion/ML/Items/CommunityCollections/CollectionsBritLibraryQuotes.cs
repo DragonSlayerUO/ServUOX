@@ -7,7 +7,7 @@ namespace Server.Items
     public class SherryTheMouseQuotes : BaseStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SherryTheMouseQuotes()
             : base(0xFBD)
         {
@@ -55,7 +55,7 @@ namespace Server.Items
     public class WyrdBeastmasterQuotes : BaseStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public WyrdBeastmasterQuotes()
             : base(0xFBD)
         {
@@ -103,7 +103,7 @@ namespace Server.Items
     public class MercenaryJustinQuotes : BaseStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MercenaryJustinQuotes()
             : base(0xFBD)
         {
@@ -151,7 +151,7 @@ namespace Server.Items
     public class HeigelOfMoonglowQuotes : BaseStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HeigelOfMoonglowQuotes()
             : base(0xFBD)
         {
@@ -199,7 +199,7 @@ namespace Server.Items
     public class TraderHoraceQuotes : BaseStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TraderHoraceQuotes()
             : base(0xFBD)
         {

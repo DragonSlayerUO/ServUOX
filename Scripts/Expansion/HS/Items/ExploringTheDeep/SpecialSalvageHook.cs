@@ -43,7 +43,7 @@ namespace Server.Items
         private int _Tick;
         private Timer _EffectTimer;
 
-        [Constructable]
+        [Constructible]
         public SpecialSalvageHook()
               : base(0x14F7)
         {

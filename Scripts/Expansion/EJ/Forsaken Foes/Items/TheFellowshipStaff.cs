@@ -10,7 +10,7 @@ namespace Server.Items
         public static TheFellowshipStaff InstanceTram { get; set; }
         public static TheFellowshipStaff InstanceFel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public TheFellowshipStaff()
             : base(0xA343)
         {

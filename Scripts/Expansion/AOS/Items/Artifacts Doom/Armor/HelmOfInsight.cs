@@ -5,7 +5,7 @@ namespace Server.Items
     public class HelmOfInsight : PlateHelm
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HelmOfInsight()
         {
             Hue = 0x554;

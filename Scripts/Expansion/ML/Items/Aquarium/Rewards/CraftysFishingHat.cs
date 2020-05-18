@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CraftysFishingHat : BaseHat
     {
-        [Constructable]
+        [Constructible]
         public CraftysFishingHat()
             : base(0x1713)
         {

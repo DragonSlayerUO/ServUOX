@@ -7,7 +7,7 @@ namespace Server.Items
     public class LieutenantOfTheBritannianRoyalGuard : BodySash
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LieutenantOfTheBritannianRoyalGuard()
         {
             Hue = 0xe8;
@@ -44,7 +44,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishLieutenantOfTheBritannianRoyalGuard()
         {
             Hue = 0xe8;

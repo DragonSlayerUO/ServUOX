@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BoneTableAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BoneTableAddon()
             : base()
         {
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class BoneTableDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BoneTableDeed()
             : base()
         {

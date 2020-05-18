@@ -311,7 +311,7 @@ namespace Server.Mobiles
             AddItem(item);
         }
 
-        [Constructable]
+        [Constructible]
         public IharaSoko()
             : base("the Imperial Minister of Trade")
         {

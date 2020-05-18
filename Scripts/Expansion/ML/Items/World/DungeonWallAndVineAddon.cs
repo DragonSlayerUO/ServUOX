@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class DungeonWallAndVineAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public DungeonWallAndVineAddon()
         {
             AddComponent(new MagicVinesComponent(), 1, 0, 0);
@@ -32,7 +32,7 @@ namespace Server.Items
 
     public class DungeonWallComponent : AddonComponent
     {
-        [Constructable]
+        [Constructible]
         public DungeonWallComponent()
             : base(0x0242)
         {

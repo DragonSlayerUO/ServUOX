@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class InspectedKegofTotalRefreshment : Item
     {
-        [Constructable]
+        [Constructible]
         public InspectedKegofTotalRefreshment()
             : base(0x1940)
         {

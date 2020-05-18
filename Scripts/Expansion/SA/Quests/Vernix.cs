@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Vernix : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Vernix()
             : base("Vernix")
         {

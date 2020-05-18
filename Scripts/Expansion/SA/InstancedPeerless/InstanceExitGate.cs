@@ -21,13 +21,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D LocDest { get { return m_LocDest; } set { m_LocDest = value; } }
 
-        [Constructable]
+        [Constructible]
         public InstanceExitGate()
             : this(Map.Internal, Point3D.Zero)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public InstanceExitGate(Map mapDest, Point3D locDest)
             : base(0xF6C)
         {

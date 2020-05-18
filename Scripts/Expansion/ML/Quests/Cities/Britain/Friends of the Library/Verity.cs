@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Verity : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Verity()
             : base("Verity", "the Librarian")
         {

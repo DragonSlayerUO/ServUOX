@@ -5,7 +5,7 @@ namespace Server.Items
     public class LunaLance : Lance
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LunaLance()
         {
             Hue = 0x47E;

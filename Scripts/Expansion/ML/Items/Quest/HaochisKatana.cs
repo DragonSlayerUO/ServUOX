@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Samurai
     {
         public override int LabelNumber => 1063165; // Daimyo Haochi's Katana
 
-        [Constructable]
+        [Constructible]
         public HaochisKatana()
             : base(0x13FF)
         {

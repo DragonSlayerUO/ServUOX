@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(EnGuardeQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Recaro()
             : base("Recaro", "the Fencer Instructor")
         {

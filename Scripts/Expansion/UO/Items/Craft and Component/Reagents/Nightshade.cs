@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class Nightshade : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Nightshade()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Nightshade(int amount)
             : base(0xF88, amount)
         {

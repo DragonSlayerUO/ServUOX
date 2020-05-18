@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class BrokenFallenChairAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrokenFallenChairAddon()
             : base()
         {
@@ -66,7 +66,7 @@ namespace Server.Items
 
     public class BrokenFallenChairDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BrokenFallenChairDeed()
             : base()
         {

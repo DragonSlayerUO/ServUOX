@@ -5,7 +5,7 @@ namespace Server.Mobiles
     public class Wanderer : Mobile
     {
         private readonly Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public Wanderer()
         {
             Name = "Me";

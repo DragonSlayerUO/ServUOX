@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class SmallFish : Item
     {
-        [Constructable]
+        [Constructible]
         public SmallFish()
             : base(Utility.Random(0x0DD6, 2))
         {

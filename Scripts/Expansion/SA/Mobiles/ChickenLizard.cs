@@ -11,7 +11,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextEgg => m_NextEgg;
 
-        [Constructable]
+        [Constructible]
         public ChickenLizard()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

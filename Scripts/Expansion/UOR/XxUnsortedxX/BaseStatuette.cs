@@ -8,7 +8,7 @@ namespace Server.Items
     public class BaseStatuette : Item
     {
         private bool m_TurnedOn;
-        [Constructable]
+        [Constructible]
         public BaseStatuette(int itemID)
             : base(itemID)
         {

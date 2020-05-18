@@ -6,13 +6,13 @@ namespace Server.Mobiles
     [CorpseName("a unicorn corpse")]
     public class Unicorn : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public Unicorn()
             : this("a unicorn")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Unicorn(string name)
             : base(name, 0x7A, 0x3EB4, AIType.AI_Mage, FightMode.Evil, 10, 1, 0.2, 0.4)
         {

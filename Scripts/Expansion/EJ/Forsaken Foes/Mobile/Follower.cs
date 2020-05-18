@@ -11,7 +11,7 @@ namespace Server.Engines.Fellowship
         public static Follower InstanceTram { get; set; }
         public static Follower InstanceFel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Follower()
             : base("the Follower")
         {

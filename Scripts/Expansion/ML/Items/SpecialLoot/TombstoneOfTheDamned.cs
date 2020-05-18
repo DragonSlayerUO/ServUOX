@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TombstoneOfTheDamned : Item
     {
-        [Constructable]
+        [Constructible]
         public TombstoneOfTheDamned()
             : base(Utility.RandomMinMax(0xED7, 0xEDE))
         {

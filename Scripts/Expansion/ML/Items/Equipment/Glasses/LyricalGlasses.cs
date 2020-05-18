@@ -5,7 +5,7 @@ namespace Server.Items
     public class LyricalGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LyricalGlasses()
         {
             WeaponAttributes.HitLowerDefend = 20;

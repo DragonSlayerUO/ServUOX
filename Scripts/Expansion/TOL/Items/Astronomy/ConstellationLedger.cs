@@ -13,7 +13,7 @@ namespace Server.Engines.Astronomy
     {
         public override int LabelNumber => 1158520;  // Constellation Ledger
 
-        [Constructable]
+        [Constructible]
         public ConstellationLedger()
             : base(0xFF4)
         {

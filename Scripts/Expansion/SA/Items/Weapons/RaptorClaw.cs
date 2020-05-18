@@ -5,7 +5,7 @@ namespace Server.Items
     public class RaptorClaw : Boomerang
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RaptorClaw()
         {
             Hue = 53;

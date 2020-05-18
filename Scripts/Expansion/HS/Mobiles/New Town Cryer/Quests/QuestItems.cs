@@ -24,7 +24,7 @@ namespace Server.Engines.Quests
 
         public override int LabelNumber => 1158171;  // orders
 
-        [Constructable]
+        [Constructible]
         public RoyalBritannianGuardOrders()
         {
             LootType = LootType.Blessed;
@@ -139,7 +139,7 @@ namespace Server.Engines.Quests
 
     public class TreasureHuntingBook : Item
     {
-        [Constructable]
+        [Constructible]
         public TreasureHuntingBook()
             : base(0xFBE)
         {

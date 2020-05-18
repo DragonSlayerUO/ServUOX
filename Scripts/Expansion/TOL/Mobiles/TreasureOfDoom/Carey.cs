@@ -18,7 +18,7 @@ namespace Server.Engines.TreasuresOfDoom
         public static Carey Instance { get; set; }
         public static readonly Point3D SpawnLocation = new Point3D(2373, 1278, -90);
 
-        [Constructable]
+        [Constructible]
         public Carey() : base("the Researcher")
         {
             Instance = this;

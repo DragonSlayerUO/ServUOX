@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Ruby : Item, IGem
     {
-        [Constructable]
+        [Constructible]
         public Ruby()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Ruby(int amount)
             : base(0xF13)
         {

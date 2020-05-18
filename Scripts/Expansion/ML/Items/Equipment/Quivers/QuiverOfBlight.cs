@@ -5,7 +5,7 @@ namespace Server.Items
     public class QuiverOfBlight : ElvenQuiver
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public QuiverOfBlight()
             : base()
         {

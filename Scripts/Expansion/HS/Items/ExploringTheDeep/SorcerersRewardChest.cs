@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023712;  // strong box
 
-        [Constructable]
+        [Constructible]
         public SorcerersRewardChest() : base(0x9AA)
         {
             Movable = false;
@@ -44,7 +44,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154227;  // Strongbox Key        
 
-        [Constructable]
+        [Constructible]
         public StrongboxKey() : base(0x410A)
         {
             Stackable = false;

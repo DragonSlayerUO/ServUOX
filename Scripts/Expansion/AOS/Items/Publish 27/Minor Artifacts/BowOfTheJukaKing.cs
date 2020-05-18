@@ -5,7 +5,7 @@ namespace Server.Items
     public class BowOfTheJukaKing : Bow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BowOfTheJukaKing()
         {
             Hue = 0x460;

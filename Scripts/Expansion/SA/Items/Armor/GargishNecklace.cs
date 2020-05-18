@@ -19,7 +19,7 @@ namespace Server.Items
         public override int InitMinHits => 30;
         public override int InitMaxHits => 40;
 
-        [Constructable]
+        [Constructible]
         public GargishNecklace()
             : base(0x4210)
         {
@@ -62,7 +62,7 @@ namespace Server.Items
 
     public class GargishAmulet : GargishNecklace
     {
-        [Constructable]
+        [Constructible]
         public GargishAmulet()
             : base(0x4D0B)
         {
@@ -92,7 +92,7 @@ namespace Server.Items
         public override int AosStrReq => 40;
         public override int OldStrReq => 20;
 
-        [Constructable]
+        [Constructible]
         public GargishStoneAmulet()
             : base(0x4D0A)
         {

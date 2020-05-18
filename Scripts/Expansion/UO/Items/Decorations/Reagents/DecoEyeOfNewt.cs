@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoEyeOfNewt : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoEyeOfNewt()
             : base(0xF87)
         {

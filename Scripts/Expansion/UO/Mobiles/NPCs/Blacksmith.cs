@@ -11,7 +11,7 @@ namespace Server.Mobiles
 
         public override NpcGuild NpcGuild => NpcGuild.BlacksmithsGuild;
 
-        [Constructable]
+        [Constructible]
         public Blacksmith()
             : base("the blacksmith")
         {

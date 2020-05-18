@@ -30,7 +30,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public WaterContainerComponent(int itemID, int fullitemid, int maxquantity)
             : base(itemID)
         {
@@ -73,7 +73,7 @@ namespace Server.Items
 
     public class WashBasinAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public WashBasinAddon(DirectionType type)
         {
             switch (type)
@@ -127,7 +127,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public WashBasinDeed()
             : base()
         {

@@ -43,7 +43,7 @@ namespace Server.Items
     [FlipableAddon(Direction.South, Direction.East)]
     public class BoneCouchAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BoneCouchAddon()
             : base()
         {
@@ -91,7 +91,7 @@ namespace Server.Items
 
     public class BoneCouchDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BoneCouchDeed()
             : base()
         {

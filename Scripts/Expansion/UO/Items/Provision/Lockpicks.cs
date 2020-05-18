@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Lockpicks : Item
     {
-        [Constructable]
+        [Constructible]
         public Lockpicks()
             : base(Utility.Random(2) + 0x14FD)
         {

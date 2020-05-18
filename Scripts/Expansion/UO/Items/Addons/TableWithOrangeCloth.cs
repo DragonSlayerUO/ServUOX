@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class TableWithOrangeClothAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public TableWithOrangeClothAddon()
             : base()
         {
@@ -30,7 +30,7 @@ namespace Server.Items
 
     public class TableWithOrangeClothDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public TableWithOrangeClothDeed()
             : base()
         {

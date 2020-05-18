@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0xC10, 0xC11)]
     public class RuinedFallenChairA : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedFallenChairA()
             : base(0xC10)
         {
@@ -31,7 +31,7 @@ namespace Server.Items
     [Flipable(0xC13, 0xC12)]
     public class RuinedArmoire : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedArmoire()
             : base(0xC13)
         {
@@ -59,7 +59,7 @@ namespace Server.Items
     [Flipable(0xC14, 0xC15)]
     public class RuinedBookcase : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedBookcase()
             : base(0xC14)
         {
@@ -86,7 +86,7 @@ namespace Server.Items
 
     public class RuinedBooks : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedBooks()
             : base(0xC16)
         {
@@ -114,7 +114,7 @@ namespace Server.Items
     [Flipable(0xC17, 0xC18)]
     public class CoveredChair : Item
     {
-        [Constructable]
+        [Constructible]
         public CoveredChair()
             : base(0xC17)
         {
@@ -142,7 +142,7 @@ namespace Server.Items
     [Flipable(0xC19, 0xC1A)]
     public class RuinedFallenChairB : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedFallenChairB()
             : base(0xC19)
         {
@@ -170,7 +170,7 @@ namespace Server.Items
     [Flipable(0xC1B, 0xC1C, 0xC1E, 0xC1D)]
     public class RuinedChair : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedChair()
             : base(0xC1B)
         {
@@ -197,7 +197,7 @@ namespace Server.Items
 
     public class RuinedClock : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedClock()
             : base(0xC1F)
         {
@@ -225,7 +225,7 @@ namespace Server.Items
     [Flipable(0xC24, 0xC25)]
     public class RuinedDrawers : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedDrawers()
             : base(0xC24)
         {
@@ -252,7 +252,7 @@ namespace Server.Items
 
     public class RuinedPainting : Item
     {
-        [Constructable]
+        [Constructible]
         public RuinedPainting()
             : base(0xC2C)
         {
@@ -280,7 +280,7 @@ namespace Server.Items
     [Flipable(0xC2D, 0xC2F, 0xC2E, 0xC30)]
     public class WoodDebris : Item
     {
-        [Constructable]
+        [Constructible]
         public WoodDebris()
             : base(0xC2D)
         {

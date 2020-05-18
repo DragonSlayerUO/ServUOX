@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LightningWand : BaseWand
     {
-        [Constructable]
+        [Constructible]
         public LightningWand()
             : base(WandEffect.Lightning, 5, Core.ML ? 109 : 20)
         {

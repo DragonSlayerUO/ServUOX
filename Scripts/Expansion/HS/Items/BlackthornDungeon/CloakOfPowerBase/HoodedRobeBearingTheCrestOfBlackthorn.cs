@@ -11,7 +11,7 @@ namespace Server.Items
         public override int LabelNumber => 1029863;  // Hooded Robe
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public HoodedRobeBearingTheCrestOfBlackthorn4()
             : base(0x2683)
         {

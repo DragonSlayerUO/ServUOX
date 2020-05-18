@@ -19,7 +19,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new MetalLadderDeed();
 
-        [Constructable]
+        [Constructible]
         public MetalLadderAddon(MetalLadderType type)
         {
             switch (type)
@@ -87,7 +87,7 @@ namespace Server.Items
 
         private MetalLadderType _Direction;
 
-        [Constructable]
+        [Constructible]
         public MetalLadderDeed()
         {
         }

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125155;  // Hooded Britannia Robe
 
-        [Constructable]
+        [Constructible]
         public HoodedBritanniaRobe(int id)
             : base(id)
         {

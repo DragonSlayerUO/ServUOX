@@ -29,7 +29,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public PendantOfKhalAnkur()
             : base(0xA1C9)
         {

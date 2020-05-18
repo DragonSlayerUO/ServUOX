@@ -22,10 +22,10 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public LenseType LenseType { get { return m_LenseType; } set { m_LenseType = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public GorgonLense() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public GorgonLense(int amount)
             : base(9905)
         {

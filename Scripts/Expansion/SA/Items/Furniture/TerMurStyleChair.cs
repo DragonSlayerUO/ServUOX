@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1095291;  // Ter-Mur style chair
 
-        [Constructable]
+        [Constructible]
         public TerMurStyleChair()
             : base(0x4023)
         {

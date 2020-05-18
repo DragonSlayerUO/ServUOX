@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SlithTongue : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SlithTongue()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SlithTongue(int amount)
             : base(0x5746)
         {

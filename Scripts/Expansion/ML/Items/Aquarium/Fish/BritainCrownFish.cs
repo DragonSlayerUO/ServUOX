@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BritainCrownFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public BritainCrownFish()
             : base(0x3AFF)
         {

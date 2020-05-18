@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x4025, 0x4026)]
     public class GargoyleWoodenChest : LockableContainer
     {
-        [Constructable]
+        [Constructible]
         public GargoyleWoodenChest()
             : base(0x4025)
         {

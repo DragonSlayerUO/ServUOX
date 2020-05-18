@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.SavagePackwolf")]
     public class SavagePackWolf : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SavagePackWolf()
             : base(AIType.AI_Melee, FightMode.Weakest, 10, 1, 0.2, 0.4)
         {

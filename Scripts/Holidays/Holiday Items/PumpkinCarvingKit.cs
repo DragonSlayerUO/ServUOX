@@ -23,7 +23,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154271;  // Jack O' Lantern Carving Kit
 
-        [Constructable]
+        [Constructible]
         public PumpkinCarvingKit()
             : base(0x992D)
         {
@@ -104,7 +104,7 @@ namespace Server.Items
 
         public virtual PumpkinDefinition[] PumpkinDefinition { get; }
 
-        [Constructable]
+        [Constructible]
         public BaseCarvablePumpkin(int id)
             : base(id)
         {
@@ -165,7 +165,7 @@ namespace Server.Items
                      new PumpkinDefinition(0x9951, 0x9952),
                 };
 
-        [Constructable]
+        [Constructible]
         public CarvablePumpkinTall()
             : base(0x992F)
         {
@@ -198,7 +198,7 @@ namespace Server.Items
                      new PumpkinDefinition(0x9D27, 0x9D28),
                 };
 
-        [Constructable]
+        [Constructible]
         public CarvableGordPumpkinTall()
             : base(0x9D22)
         {
@@ -231,7 +231,7 @@ namespace Server.Items
                      new PumpkinDefinition(0x9F27, 0x9F28),
                 };
 
-        [Constructable]
+        [Constructible]
         public CarvablePlainPumpkin()
             : base(0x9F51)
         {

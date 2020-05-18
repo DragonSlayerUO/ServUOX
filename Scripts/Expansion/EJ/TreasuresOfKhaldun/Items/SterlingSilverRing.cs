@@ -15,7 +15,7 @@ namespace Server.Items
 
         public bool HasSkillBonus => SkillBonuses.Skill_1_Value != 0;
 
-        [Constructable]
+        [Constructible]
         public SterlingSilverRing()
         {
             Attributes.RegenHits = 3;

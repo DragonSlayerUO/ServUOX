@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class RightLeg : Item
     {
-        [Constructable]
+        [Constructible]
         public RightLeg()
             : base(0x1DA4)
         {

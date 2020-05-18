@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1149868;  // Forged Metal of Artifacts
 
-        [Constructable]
+        [Constructible]
         public ForgedMetalOfArtifacts(int uses)
             : base(0xE8A)
         {
@@ -23,7 +23,7 @@ namespace Server.Items
             LootType = LootType.Blessed;
         }
 
-        [Constructable]
+        [Constructible]
         public ForgedMetalOfArtifacts()
             : this(5)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48C8, 0x48C9)]
     public class GargishPike : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public GargishPike()
             : base(0x48C8)
         {

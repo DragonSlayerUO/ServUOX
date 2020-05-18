@@ -4,7 +4,7 @@ namespace Server.Mobiles
 {
     public class EvilWanderingHealer : BaseHealer
     {
-        [Constructable]
+        [Constructible]
         public EvilWanderingHealer()
         {
             Title = (Core.AOS) ? "the Priest Of Mondain" : "the evil wandering healer";

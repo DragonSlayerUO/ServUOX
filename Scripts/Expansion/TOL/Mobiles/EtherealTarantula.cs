@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1157081;  // Tarantula Statuette
 
-        [Constructable]
+        [Constructible]
         public EtherealTarantula()
             : base(0x9DD6, 0x3ECA, 0x3ECA, DefaultEtherealHue)
         {

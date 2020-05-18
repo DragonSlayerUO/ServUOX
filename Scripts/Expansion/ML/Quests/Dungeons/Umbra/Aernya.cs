@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Aernya : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Aernya()
             : base("Aernya", "the Mistress of Admissions")
         {

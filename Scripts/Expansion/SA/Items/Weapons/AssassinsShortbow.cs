@@ -5,7 +5,7 @@ namespace Server.Items
     public class AssassinsShortbow : MagicalShortbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AssassinsShortbow()
         {
             Attributes.AttackChance = 3;

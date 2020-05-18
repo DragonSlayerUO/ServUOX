@@ -5,7 +5,7 @@ namespace Server.Items
     public class BraceletOfResilience : GoldBracelet
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BraceletOfResilience()
         {
             LootType = LootType.Blessed;

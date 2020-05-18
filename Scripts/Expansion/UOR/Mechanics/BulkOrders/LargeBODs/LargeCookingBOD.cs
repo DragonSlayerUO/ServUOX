@@ -7,7 +7,7 @@ namespace Server.Engines.BulkOrders
     {
         public override BODType BODType => BODType.Cooking;
 
-        [Constructable]
+        [Constructible]
         public LargeCookingBOD()
         {
             LargeBulkEntry[] entries;

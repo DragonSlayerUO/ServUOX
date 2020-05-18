@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0xE81, 0xE82)]
     public class ShepherdsCrook : BaseStaff
     {
-        [Constructable]
+        [Constructible]
         public ShepherdsCrook()
             : base(0xE81)
         {

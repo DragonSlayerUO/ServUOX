@@ -5,7 +5,7 @@ namespace Server.Items
     public class KnightsWarCleaver : WarCleaver
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public KnightsWarCleaver()
         {
             Attributes.RegenHits = 3;

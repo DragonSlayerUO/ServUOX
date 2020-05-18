@@ -7,13 +7,13 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public GargishClothLegs()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothLegs(int hue)
             : base(0x040A, Layer.Pants, hue)
         {
@@ -56,13 +56,13 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothLegs()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothLegs(int hue)
             : base(0x0409, Layer.Pants, hue)
         {
@@ -92,13 +92,13 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public MaleGargishClothLegs()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaleGargishClothLegs(int hue)
             : base(0x040A, Layer.Pants, hue)
         {

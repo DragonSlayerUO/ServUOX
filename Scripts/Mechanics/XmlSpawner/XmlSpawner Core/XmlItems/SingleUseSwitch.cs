@@ -6,7 +6,7 @@ namespace Server.Items
     public class SingleUseSwitch : SimpleSwitch
     {
 
-        [Constructable]
+        [Constructible]
         public SingleUseSwitch()
         {
         }

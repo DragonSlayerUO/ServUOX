@@ -10,7 +10,7 @@ namespace Server.Engines.Quests.Haven
     {
         private static int m_HairHue;
         private Lantern m_Lantern;
-        [Constructable]
+        [Constructible]
         public SchmendrickApprenticeCorpse()
             : base(GetOwner(), GetHair(), GetFacialHair(), GetEquipment())
         {

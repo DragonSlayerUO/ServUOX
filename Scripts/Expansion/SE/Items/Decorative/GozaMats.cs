@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class GozaMatEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GozaMatEastAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GozaMatEastAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28a4, 1030688), 1, 0, 0);
@@ -42,7 +42,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public GozaMatEastDeed()
         {
         }
@@ -71,13 +71,13 @@ namespace Server.Items
 
     public class GozaMatSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GozaMatSouthAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GozaMatSouthAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28a6, 1030688), 0, 1, 0);
@@ -111,7 +111,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public GozaMatSouthDeed()
         {
         }
@@ -140,13 +140,13 @@ namespace Server.Items
 
     public class SquareGozaMatEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SquareGozaMatEastAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SquareGozaMatEastAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28a8, 1030688), 0, 0, 0);
@@ -180,7 +180,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public SquareGozaMatEastDeed()
         {
         }
@@ -209,13 +209,13 @@ namespace Server.Items
 
     public class SquareGozaMatSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SquareGozaMatSouthAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SquareGozaMatSouthAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28a9, 1030688), 0, 0, 0);
@@ -248,7 +248,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public SquareGozaMatSouthDeed()
         {
         }
@@ -277,13 +277,13 @@ namespace Server.Items
 
     public class BrocadeGozaMatEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrocadeGozaMatEastAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BrocadeGozaMatEastAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28AB, 1030688), 0, 0, 0);
@@ -317,7 +317,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public BrocadeGozaMatEastDeed()
         {
         }
@@ -346,13 +346,13 @@ namespace Server.Items
 
     public class BrocadeGozaMatSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrocadeGozaMatSouthAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BrocadeGozaMatSouthAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28AD, 1030688), 0, 0, 0);
@@ -386,7 +386,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public BrocadeGozaMatSouthDeed()
         {
         }
@@ -415,13 +415,13 @@ namespace Server.Items
 
     public class BrocadeSquareGozaMatEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrocadeSquareGozaMatEastAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BrocadeSquareGozaMatEastAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28AE, 1030688), 0, 0, 0);
@@ -454,7 +454,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public BrocadeSquareGozaMatEastDeed()
         {
         }
@@ -483,13 +483,13 @@ namespace Server.Items
 
     public class BrocadeSquareGozaMatSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrocadeSquareGozaMatSouthAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BrocadeSquareGozaMatSouthAddon(int hue)
         {
             AddComponent(new LocalizedAddonComponent(0x28AF, 1030688), 0, 0, 0);
@@ -522,7 +522,7 @@ namespace Server.Items
     {
         public override bool UseCraftResource => false;
 
-        [Constructable]
+        [Constructible]
         public BrocadeSquareGozaMatSouthDeed()
         {
         }

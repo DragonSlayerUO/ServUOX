@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a chief paroxysmus corpse")]
     public class ChiefParoxysmus : BasePeerless
     {
-        [Constructable]
+        [Constructible]
         public ChiefParoxysmus()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

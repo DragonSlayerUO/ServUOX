@@ -7,19 +7,19 @@ namespace Server.Items
         public override int LabelNumber => 1125984;  // ethereal sand
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public EtherealSand(int amountFrom, int amountTo)
             : this(Utility.RandomMinMax(amountFrom, amountTo))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EtherealSand()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EtherealSand(int amount)
             : base(0xA3E8)
         {

@@ -34,7 +34,7 @@ namespace Server.Items
 
         private int m_Title, m_Label;
 
-        [Constructable]
+        [Constructible]
         public ValentineChocolate()
             : base(2538)
         {

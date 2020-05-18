@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Bamboo : Item
     {
-        [Constructable]
+        [Constructible]
         public Bamboo()
             : base(0x246D)
         {

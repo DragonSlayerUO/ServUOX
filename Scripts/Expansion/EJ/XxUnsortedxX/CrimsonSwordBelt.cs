@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159212;  // crimson sword belt
 
-        [Constructable]
+        [Constructible]
         public CrimsonSwordBelt()
             : base()
         {

@@ -9,7 +9,7 @@ namespace Server.Engines.ResortAndCasino
 {
     public class CasinoCashier : Banker
     {
-        [Constructable]
+        [Constructible]
         public CasinoCashier()
         {
             Title = "the casino cashier";
@@ -174,7 +174,7 @@ namespace Server.Engines.ResortAndCasino
 
     public class ChucklesLuckDealer : CasinoDealer
     {
-        [Constructable]
+        [Constructible]
         public ChucklesLuckDealer()
             : base("The Chuckles' Luck Dealer")
         {
@@ -220,7 +220,7 @@ namespace Server.Engines.ResortAndCasino
 
     public class HiMiddleLowDealer : CasinoDealer
     {
-        [Constructable]
+        [Constructible]
         public HiMiddleLowDealer()
             : base("The Hi-Middle-Low Dealer")
         {
@@ -266,7 +266,7 @@ namespace Server.Engines.ResortAndCasino
 
     public class DiceRiderDealer : CasinoDealer
     {
-        [Constructable]
+        [Constructible]
         public DiceRiderDealer()
             : base("The Dice Rider Dealer")
         {
@@ -326,7 +326,7 @@ namespace Server.Engines.ResortAndCasino
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CasinoWaitress()
             : base("The drinks girl")
         {

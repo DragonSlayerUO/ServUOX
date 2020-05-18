@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class CunningScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public CunningScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CunningScroll(int amount)
             : base(9, 0x1F36, amount)
         {

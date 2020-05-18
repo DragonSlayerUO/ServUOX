@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AlchemistTableSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public AlchemistTableSouthAddon()
         {
             AddComponent(new AddonComponent(0x3079), 0, 0, 0);
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class AlchemistTableSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public AlchemistTableSouthDeed()
         {
         }

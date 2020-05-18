@@ -20,7 +20,7 @@ namespace Server.Mobiles
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ArmorRefiner(RefinementCraftType type) : base("the armor refiner")
         {
             m_RefineType = type;

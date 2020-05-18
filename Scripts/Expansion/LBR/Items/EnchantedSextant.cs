@@ -68,7 +68,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1046226; // an enchanted sextant
 
-        [Constructable]
+        [Constructible]
         public EnchantedSextant()
             : base(0x1058)
         {

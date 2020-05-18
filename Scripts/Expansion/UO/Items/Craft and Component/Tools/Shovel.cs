@@ -6,13 +6,13 @@ namespace Server.Items
     {
         public override HarvestSystem HarvestSystem => Mining.System;
 
-        [Constructable]
+        [Constructible]
         public Shovel()
             : this(50)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Shovel(int uses)
             : base(uses, 0xF39)
         {

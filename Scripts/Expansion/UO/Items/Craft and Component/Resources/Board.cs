@@ -18,13 +18,13 @@ namespace Server.Items
 
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public BaseWoodBoard()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaseWoodBoard(int amount)
             : this(CraftResource.RegularWood, amount)
         {
@@ -35,12 +35,12 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaseWoodBoard(CraftResource resource) : this(resource, 1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaseWoodBoard(CraftResource resource, int amount)
             : base(0x1BD7)
         {
@@ -112,13 +112,13 @@ namespace Server.Items
 
     public class Board : BaseWoodBoard
     {
-        [Constructable]
+        [Constructible]
         public Board()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Board(int amount)
             : base(CraftResource.RegularWood, amount)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class ThunderingAxe : OrnateAxe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ThunderingAxe()
         {
             WeaponAttributes.HitLightning = 10;

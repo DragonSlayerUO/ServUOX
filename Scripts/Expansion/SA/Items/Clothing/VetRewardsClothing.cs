@@ -60,19 +60,19 @@ namespace Server.Items
             return !IsRewardItem || RewardSystem.CheckIsUsableBy(m, this, new object[] { Hue, m_LabelNumber });
         }
 
-        [Constructable]
+        [Constructible]
         public RewardGargishRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardGargishRobe(int hue)
             : this(hue, 0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardGargishRobe(int hue, int labelNumber)
             : base(0x4000, hue)
         {
@@ -171,19 +171,19 @@ namespace Server.Items
             return !IsRewardItem || RewardSystem.CheckIsUsableBy(m, this, new object[] { Hue, m_LabelNumber });
         }
 
-        [Constructable]
+        [Constructible]
         public RewardGargishFancyRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardGargishFancyRobe(int hue)
             : this(hue, 0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardGargishFancyRobe(int hue, int labelNumber)
             : base(0x4002, hue)
         {

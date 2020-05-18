@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF61, 0xF60)]
     public class Longsword : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Longsword()
             : base(0xF61)
         {

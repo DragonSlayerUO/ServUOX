@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class BravehornsMate : Hind
     {
-        [Constructable]
+        [Constructible]
         public BravehornsMate()
             : base()
         {

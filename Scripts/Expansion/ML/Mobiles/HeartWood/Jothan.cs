@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class Jothan : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Jothan()
             : base("the wise")
         {

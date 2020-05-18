@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1115445;  // Jade War Axe
 
-        [Constructable]
+        [Constructible]
         public JadeWarAxe()
         {
             Hue = 1162;

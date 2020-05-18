@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class OctopusNecklace : BaseNecklace
     {
-        [Constructable]
+        [Constructible]
         public OctopusNecklace()
             : base(0xA349)
         {

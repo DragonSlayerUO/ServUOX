@@ -23,7 +23,7 @@ namespace Server.Items
         public override int LabelNumber => 1113379;  // Puzzle Board
         public override int Lifespan => 600;
 
-        [Constructable]
+        [Constructible]
         public MazePuzzleItem(MagicKey key) : base(0x2AAA)
         {
             Hue = 914;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GoldRing : BaseRing
     {
-        [Constructable]
+        [Constructible]
         public GoldRing()
             : base(0x108a)
         {

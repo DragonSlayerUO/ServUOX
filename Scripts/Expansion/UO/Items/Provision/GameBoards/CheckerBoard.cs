@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class CheckerBoard : BaseBoard
     {
-        [Constructable]
+        [Constructible]
         public CheckerBoard()
             : base(0xFA6)
         {

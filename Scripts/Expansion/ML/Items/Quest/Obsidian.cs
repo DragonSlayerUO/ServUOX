@@ -75,7 +75,7 @@ namespace Server.Engines.Quests.Collector
         private const int m_Completed = 10;
         private int m_Quantity;
         private string m_StatueName;
-        [Constructable]
+        [Constructible]
         public Obsidian()
             : base(0x1EA7)
         {

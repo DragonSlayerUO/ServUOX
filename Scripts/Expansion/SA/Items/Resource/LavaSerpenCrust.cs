@@ -5,13 +5,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.LavaSerpenCrust")]
     public class LavaSerpentCrust : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public LavaSerpentCrust()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LavaSerpentCrust(int amount)
             : base(0x572D)
         {

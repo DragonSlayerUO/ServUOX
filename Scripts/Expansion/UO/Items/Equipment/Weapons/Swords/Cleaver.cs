@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xEC3, 0xEC2)]
     public class Cleaver : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public Cleaver()
             : base(0xEC3)
         {

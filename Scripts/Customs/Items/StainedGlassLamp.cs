@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LitItemID => 0x4C51;
         public override int UnlitItemID => 0x4C50;
 
-        [Constructable]
+        [Constructible]
         public StainedGlassLamp()
             : base(0x4C50)
         {

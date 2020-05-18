@@ -11,7 +11,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1152304;  // Blanket Of Darkness	
 
-        [Constructable]
+        [Constructible]
         public BlanketOfDarkness()
             : base(0xA57)
         {

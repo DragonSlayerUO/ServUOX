@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BrilliantAmberBracelet : GoldBracelet
     {
-        [Constructable]
+        [Constructible]
         public BrilliantAmberBracelet()
             : base()
         {

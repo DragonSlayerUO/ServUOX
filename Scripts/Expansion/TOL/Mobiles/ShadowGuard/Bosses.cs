@@ -369,7 +369,7 @@ namespace Server.Engines.Shadowguard
             }
         }
 
-        [Constructable]
+        [Constructible]
         public Anon() : base(AIType.AI_Mage)
         {
             Name = "Anon";
@@ -642,7 +642,7 @@ namespace Server.Engines.Shadowguard
 
         private DateTime _NextTeleport;
 
-        [Constructable]
+        [Constructible]
         public Juonar()
             : base(AIType.AI_NecroMage)
         {
@@ -740,7 +740,7 @@ namespace Server.Engines.Shadowguard
         private DateTime _NextNuke;
         private DateTime _NextDismount;
 
-        [Constructable]
+        [Constructible]
         public Virtuebane() : base(AIType.AI_Mage)
         {
             Name = "Virtuebane";
@@ -956,7 +956,7 @@ namespace Server.Engines.Shadowguard
 
         public override double WeaponAbilityChance => 0.4;
 
-        [Constructable]
+        [Constructible]
         public Ozymandias() : base(AIType.AI_Melee)
         {
             Name = "Ozymandias";

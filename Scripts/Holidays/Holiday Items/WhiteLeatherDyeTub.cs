@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1149900;  // White Leather Dye Tub
 
-        [Constructable]
+        [Constructible]
         public WhiteLeatherDyeTub()
         {
             Hue = DyedHue = 2498;

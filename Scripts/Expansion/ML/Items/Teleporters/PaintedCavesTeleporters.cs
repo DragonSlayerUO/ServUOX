@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PaintedCavesTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public PaintedCavesTele()
             : base(new Point3D(6308, 892, 0), Map.Trammel)
         {

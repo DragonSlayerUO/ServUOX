@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PhoenixGorget : StuddedGorget
     {
-        [Constructable]
+        [Constructible]
         public PhoenixGorget()
         {
             Hue = 0x8E;

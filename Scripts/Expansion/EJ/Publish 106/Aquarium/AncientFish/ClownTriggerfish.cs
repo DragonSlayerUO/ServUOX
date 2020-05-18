@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class ClownTriggerfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public ClownTriggerfish()
             : base(0xA36C)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B77, 0x316E)]
     public class HidePauldrons : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public HidePauldrons()
             : base(0x2B77)
         {

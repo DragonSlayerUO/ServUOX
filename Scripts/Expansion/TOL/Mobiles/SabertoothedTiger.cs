@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override double HealChance => .167;
 
-        [Constructable]
+        [Constructible]
         public SabertoothedTiger()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

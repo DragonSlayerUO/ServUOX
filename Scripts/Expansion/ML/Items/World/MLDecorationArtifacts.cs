@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1063476;
 
-        [Constructable]
+        [Constructible]
         public AncientShipModelOfTheHMSCape()
             : base(0x14F3)
         {

@@ -11,13 +11,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new DragonCannonDeed();
 
-        [Constructable]
+        [Constructible]
         public DragonCannon()
             : this(DirectionType.South)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DragonCannon(DirectionType direction)
         {
             switch (direction)
@@ -70,7 +70,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public DragonCannonDeed()
         {
         }
@@ -135,7 +135,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string MasterName { get { return _MasterName; } set { _MasterName = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public ShoulderParrot()
             : base(0xA2CA)
         {
@@ -248,7 +248,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158938;  // Pirate Wall Map
 
-        [Constructable]
+        [Constructible]
         public PirateWallMap()
             : base(0xA2C8)
         {
@@ -287,7 +287,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158935;  // Mysterious Statue
 
-        [Constructable]
+        [Constructible]
         public MysteriousStatue()
             : base(0xA2C6)
         {
@@ -336,7 +336,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string ShipName { get { return _ShipName; } set { _ShipName = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public DecorativeWoodCarving()
             : base(0x4C26)
         {
@@ -434,7 +434,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158951;  // Quartermaster
 
-        [Constructable]
+        [Constructible]
         public QuartermasterRewardDeed()
         {
         }
@@ -461,7 +461,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158950;  // Sailing Master
 
-        [Constructable]
+        [Constructible]
         public SailingMasterRewardDeed()
         {
         }
@@ -488,7 +488,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158949;  // Botswain
 
-        [Constructable]
+        [Constructible]
         public BotswainRewardDeed()
         {
         }
@@ -515,7 +515,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158948;  // Powder Monkey
 
-        [Constructable]
+        [Constructible]
         public PowderMonkeyRewardDeed()
         {
         }
@@ -542,7 +542,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158925;  // Spiked Whip of Plundering
 
-        [Constructable]
+        [Constructible]
         public SpikedWhipOfPlundering()
         {
             ExtendedWeaponAttributes.HitExplosion = 15;
@@ -574,7 +574,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158924;  // Bladed Whip of Plundering
 
-        [Constructable]
+        [Constructible]
         public BladedWhipOfPlundering()
         {
             ExtendedWeaponAttributes.HitExplosion = 15;
@@ -606,7 +606,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158923;  // Barbed Whip of Plundering
 
-        [Constructable]
+        [Constructible]
         public BarbedWhipOfPlundering()
         {
             ExtendedWeaponAttributes.HitExplosion = 15;

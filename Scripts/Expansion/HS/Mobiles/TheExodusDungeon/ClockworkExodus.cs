@@ -34,7 +34,7 @@ namespace Server.Mobiles
 
         private Point3D m_LastTarget;
 
-        [Constructable]
+        [Constructible]
         public ClockworkExodus() : base(AIType.AI_Mystic, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "Clockwork Exodus";

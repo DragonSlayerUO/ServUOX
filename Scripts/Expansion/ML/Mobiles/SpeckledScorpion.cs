@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a speckled scorpion corpse")]
     public class SpeckledScorpion : Scorpion
     {
-        [Constructable]
+        [Constructible]
         public SpeckledScorpion()
             : base()
         {

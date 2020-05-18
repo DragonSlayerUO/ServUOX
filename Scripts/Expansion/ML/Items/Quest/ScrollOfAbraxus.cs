@@ -6,7 +6,7 @@ namespace Server.Engines.Quests.Necro
 {
     public class ScrollOfAbraxus : QuestItem
     {
-        [Constructable]
+        [Constructible]
         public ScrollOfAbraxus()
             : base(0x227B)
         {

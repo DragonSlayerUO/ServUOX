@@ -127,7 +127,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1124143;  // Moonstone Crystal
 
-        [Constructable]
+        [Constructible]
         public MoonstoneCrystal() : base(0x9CBB)
         {
             Weight = 10;
@@ -259,7 +259,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1124179;  // Kotl Power Core
 
-        [Constructable]
+        [Constructible]
         public KotlPowerCore() : base(40147)
         {
         }
@@ -286,7 +286,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156690;  // Wall Map of Eodon
 
-        [Constructable]
+        [Constructible]
         public EodonianWallMap()
             : base(40253)
         {
@@ -324,7 +324,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new RawMoonstoneLargeAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public RawMoonstoneLargeAddon()
         {
             AddComponent(new LocalizedAddonComponent(40129, 1124130), 0, 0, 0);
@@ -354,7 +354,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1156703;
 
-        [Constructable]
+        [Constructible]
         public RawMoonstoneLargeAddonDeed()
         {
         }
@@ -381,7 +381,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new RawMoonstoneSmallAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public RawMoonstoneSmallAddon()
         {
             AddComponent(new LocalizedAddonComponent(40136, 1124130), 0, 0, 0);
@@ -411,7 +411,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1156702;
 
-        [Constructable]
+        [Constructible]
         public RawMoonstoneSmallAddonDeed()
         {
         }

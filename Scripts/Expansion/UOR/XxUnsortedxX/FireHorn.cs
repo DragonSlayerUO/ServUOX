@@ -10,7 +10,7 @@ namespace Server.Items
 {
     public class FireHorn : Item
     {
-        [Constructable]
+        [Constructible]
         public FireHorn()
             : base(0xFC7)
         {

@@ -13,7 +13,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1158680;  // khaldun tasty treat
 
-        [Constructable]
+        [Constructible]
         public KhaldunTastyTreat()
             : this(1)
         {

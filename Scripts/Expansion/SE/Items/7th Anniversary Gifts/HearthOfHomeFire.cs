@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class HearthOfHomeFire : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public HearthOfHomeFire(bool east)
         {
             if (east)
@@ -52,7 +52,7 @@ namespace Server.Items
     public class HearthOfHomeFireDeed : BaseAddonDeed
     {
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public HearthOfHomeFireDeed()
         {
             LootType = LootType.Blessed;

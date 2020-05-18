@@ -8,7 +8,7 @@ namespace Server.Engines.SorcerersDungeon
     [CorpseName("a jack in the box corpse")]
     public class JackInTheBox : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public JackInTheBox()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -16,13 +16,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public FlowerGarland()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FlowerGarland(int hue)
             : base(0x2306, hue)
         {

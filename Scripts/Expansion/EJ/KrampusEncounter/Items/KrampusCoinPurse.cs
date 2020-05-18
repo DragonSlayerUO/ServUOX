@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class KrampusCoinPurse : Bag
     {
-        [Constructable]
+        [Constructible]
         public KrampusCoinPurse()
             : this(0)
         {

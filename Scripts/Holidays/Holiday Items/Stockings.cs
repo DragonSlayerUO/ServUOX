@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2bd9, 0x2bda)]
     public class GreenStocking : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public GreenStocking()
             : base(Utility.Random(0x2BD9, 2))
         {
@@ -38,7 +38,7 @@ namespace Server.Items
     [Flipable(0x2bdb, 0x2bdc)]
     public class RedStocking : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public RedStocking()
             : base(Utility.Random(0x2BDB, 2))
         {

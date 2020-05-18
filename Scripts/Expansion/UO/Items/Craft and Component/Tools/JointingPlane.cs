@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0x1030, 0x1031)]
     public class JointingPlane : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public JointingPlane()
             : base(0x1030)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public JointingPlane(int uses)
             : base(uses, 0x1030)
         {

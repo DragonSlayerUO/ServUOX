@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FetidEssenceStatuette : ShimmeringEffusionStatuette
     {
-        [Constructable]
+        [Constructible]
         public FetidEssenceStatuette()
             : base(0x2D94)
         {

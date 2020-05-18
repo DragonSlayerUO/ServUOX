@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF4D, 0xF4E)]
     public class Bardiche : BasePoleArm
     {
-        [Constructable]
+        [Constructible]
         public Bardiche()
             : base(0xF4D)
         {

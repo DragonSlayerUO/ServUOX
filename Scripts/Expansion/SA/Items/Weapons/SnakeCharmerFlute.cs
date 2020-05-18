@@ -16,7 +16,7 @@ namespace Server.Items
         public override int InitMinUses => 50;
         public override int InitMaxUses => 80;
 
-        [Constructable]
+        [Constructible]
         public SnakeCharmerFlute()
         {
             Hue = 0x187;

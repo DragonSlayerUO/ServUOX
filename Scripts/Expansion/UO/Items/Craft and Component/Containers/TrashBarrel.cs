@@ -10,7 +10,7 @@ namespace Server.Items
     {
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public TrashBarrel()
             : base(0xE77)
         {

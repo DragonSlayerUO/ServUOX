@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class Blackrock : Item
     {
-        [Constructable]
+        [Constructible]
         public Blackrock()
             : base(Utility.RandomList(0x136C, 0x1EA7))
         {

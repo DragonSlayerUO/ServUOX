@@ -20,7 +20,7 @@ namespace Server.Items
 
         public override BasePeerless Boss => new ChiefParoxysmus();
 
-        [Constructable]
+        [Constructible]
         public ParoxysmusAltar() : base(0x207A)
         {
             Hue = 0x465;
@@ -132,13 +132,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public PeerlessAltar Altar { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ParoxysmusIronGate()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ParoxysmusIronGate(PeerlessAltar altar)
             : base(0x857)
         {

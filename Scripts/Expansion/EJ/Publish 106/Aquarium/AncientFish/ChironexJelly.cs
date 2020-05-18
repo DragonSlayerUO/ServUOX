@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class ChironexJelly : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public ChironexJelly()
             : base(0xA392)
         {

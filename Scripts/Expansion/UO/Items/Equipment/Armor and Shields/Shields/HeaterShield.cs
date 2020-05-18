@@ -5,7 +5,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(LargePlateShield))]
     public class HeaterShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public HeaterShield()
             : base(0x1B76)
         {

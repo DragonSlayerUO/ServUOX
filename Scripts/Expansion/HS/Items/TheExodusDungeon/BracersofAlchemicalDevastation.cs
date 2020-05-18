@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1153523; //Bracers of Alchemical Devastation [Replica]
 
-        [Constructable]
+        [Constructible]
         public BracersofAlchemicalDevastation()
         {
             Attributes.RegenMana = 4;

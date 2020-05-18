@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class SpecialBeardDye : Item
     {
-        [Constructable]
+        [Constructible]
         public SpecialBeardDye()
             : base(0xE26)
         {

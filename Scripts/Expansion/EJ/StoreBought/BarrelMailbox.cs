@@ -13,7 +13,7 @@ namespace Server.Items
         public override int EastMailBoxID => 0xA1F5;
         public override int EastEmptyMailBoxID => 0xA1F7;
 
-        [Constructable]
+        [Constructible]
         public BarrelMailbox()
             : base(0xA1F7)
         {

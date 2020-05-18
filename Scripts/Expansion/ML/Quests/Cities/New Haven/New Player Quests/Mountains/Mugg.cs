@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Mugg : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Mugg()
             : base("Mugg", "the Miner")
         {

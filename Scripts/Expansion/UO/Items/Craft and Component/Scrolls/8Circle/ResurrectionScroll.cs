@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ResurrectionScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public ResurrectionScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ResurrectionScroll(int amount)
             : base(58, 0x1F67, amount)
         {

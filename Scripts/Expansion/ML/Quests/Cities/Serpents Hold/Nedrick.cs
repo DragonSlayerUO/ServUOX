@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Nedrick : HeritageQuester
     {
-        [Constructable]
+        [Constructible]
         public Nedrick()
             : base("Nedrick", "the Iron Worker")
         {

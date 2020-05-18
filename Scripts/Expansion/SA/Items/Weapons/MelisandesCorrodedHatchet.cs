@@ -5,7 +5,7 @@ namespace Server.Items
     public class MelisandesCorrodedHatchet : Hatchet
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MelisandesCorrodedHatchet()
         {
             Hue = 0x494;

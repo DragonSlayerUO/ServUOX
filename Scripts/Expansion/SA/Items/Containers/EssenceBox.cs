@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EssenceBox : WoodenBox
     {
-        [Constructable]
+        [Constructible]
         public EssenceBox()
             : base()
         {

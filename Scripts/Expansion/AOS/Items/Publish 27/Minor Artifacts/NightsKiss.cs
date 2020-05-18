@@ -5,7 +5,7 @@ namespace Server.Items
     public class NightsKiss : Dagger
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public NightsKiss()
         {
             Hue = 0x455;

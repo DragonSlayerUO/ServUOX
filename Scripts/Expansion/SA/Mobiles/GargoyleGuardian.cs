@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a gargoyle corpse")]
     public class GargoyleGuardian : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GargoyleGuardian()
             : base(AIType.AI_Mage, FightMode.None, 10, 1, 0.2, 0.4)
         {

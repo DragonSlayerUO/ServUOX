@@ -39,7 +39,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public SurgeShield()
         {
             if (0.90 > Utility.RandomDouble())

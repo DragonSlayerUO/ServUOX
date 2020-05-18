@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class IcicleLargeSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public IcicleLargeSouth()
             : base(0x4572)
         {
@@ -32,7 +32,7 @@ namespace Server.Items
 
     public class IcicleMedSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public IcicleMedSouth()
             : base(0x4573)
         {
@@ -60,7 +60,7 @@ namespace Server.Items
 
     public class IcicleSmallSouth : Item
     {
-        [Constructable]
+        [Constructible]
         public IcicleSmallSouth()
             : base(0x4574)
         {
@@ -88,7 +88,7 @@ namespace Server.Items
 
     public class IcicleLargeEast : Item
     {
-        [Constructable]
+        [Constructible]
         public IcicleLargeEast()
             : base(0x4575)
         {
@@ -116,7 +116,7 @@ namespace Server.Items
 
     public class IcicleMedEast : Item
     {
-        [Constructable]
+        [Constructible]
         public IcicleMedEast()
             : base(0x4576)
         {
@@ -144,7 +144,7 @@ namespace Server.Items
 
     public class IcicleSmallEast : Item
     {
-        [Constructable]
+        [Constructible]
         public IcicleSmallEast()
             : base(0x4577)
         {

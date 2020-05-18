@@ -163,7 +163,7 @@ namespace Server.Engines.Quests.Ambitious
 
     public class RedAmbitiousSolenQueen : BaseAmbitiousSolenQueen
     {
-        [Constructable]
+        [Constructible]
         public RedAmbitiousSolenQueen()
         {
         }
@@ -189,7 +189,7 @@ namespace Server.Engines.Quests.Ambitious
 
     public class BlackAmbitiousSolenQueen : BaseAmbitiousSolenQueen
     {
-        [Constructable]
+        [Constructible]
         public BlackAmbitiousSolenQueen()
         {
         }

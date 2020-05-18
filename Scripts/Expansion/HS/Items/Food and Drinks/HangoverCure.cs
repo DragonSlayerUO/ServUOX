@@ -6,7 +6,7 @@ namespace Server.Engines.Quests.Hag
     {
         public override bool IsArtifact => true;
         private int m_Uses;
-        [Constructable]
+        [Constructible]
         public HangoverCure()
             : base(0xE2B)
         {

@@ -10,7 +10,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextEatTime { get; set; }
 
-        [Constructable]
+        [Constructible]
         public RoastingPigOnASpitAddon(DirectionType type)
         {
             NextEatTime = DateTime.UtcNow + TimeSpan.FromDays(1);
@@ -125,7 +125,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public RoastingPigOnASpitDeed()
             : base()
         {

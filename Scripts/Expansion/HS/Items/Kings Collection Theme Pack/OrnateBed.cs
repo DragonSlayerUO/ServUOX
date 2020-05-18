@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class OrnateBedAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public OrnateBedAddon(DirectionType type)
         {
             switch (type)
@@ -64,7 +64,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public OrnateBedDeed()
             : base()
         {

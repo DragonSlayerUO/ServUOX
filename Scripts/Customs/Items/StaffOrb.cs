@@ -20,7 +20,7 @@ namespace Server.Items
         private Mobile m_Owner;
         private AccessLevel m_StaffLevel;
         private bool m_AutoRes = true;
-        [Constructable]
+        [Constructible]
         public StaffOrb()
             : base(0x0E2F)
         {
@@ -29,7 +29,7 @@ namespace Server.Items
             Name = "Unassigned Staff Orb";
         }
 
-        [Constructable]
+        [Constructible]
         public StaffOrb(Mobile player)
             : base(0x0E2F)
         {

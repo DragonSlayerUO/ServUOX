@@ -25,7 +25,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public GlassKilnAddon(DirectionType type, int uses)
         {
             switch (type)
@@ -95,13 +95,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public GlassKilnDeed()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GlassKilnDeed(int uses)
             : base(uses)
         {

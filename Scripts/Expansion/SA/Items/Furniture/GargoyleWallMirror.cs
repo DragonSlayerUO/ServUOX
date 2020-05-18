@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x4044, 0x4045)]
     public class GargoyleWallMirror : Item
     {
-        [Constructable]
+        [Constructible]
         public GargoyleWallMirror()
             : base(0x4044)
         {

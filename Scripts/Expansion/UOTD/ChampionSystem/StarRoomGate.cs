@@ -7,13 +7,13 @@ namespace Server.Items
         private bool m_Decays;
         private DateTime m_DecayTime;
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public StarRoomGate()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StarRoomGate(bool decays, Point3D loc, Map map)
             : this(decays)
         {
@@ -21,7 +21,7 @@ namespace Server.Items
             Effects.PlaySound(loc, map, 0x20E);
         }
 
-        [Constructable]
+        [Constructible]
         public StarRoomGate(bool decays)
             : base(new Point3D(5143, 1774, 0), Map.Felucca)
         {

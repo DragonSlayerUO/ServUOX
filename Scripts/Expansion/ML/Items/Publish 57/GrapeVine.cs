@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1149954;
 
-        [Constructable]
+        [Constructible]
         public GrapeVine() : base(Utility.Random(3355, 10))
         {
             m_NextHarvest = DateTime.UtcNow;

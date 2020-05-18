@@ -3,14 +3,14 @@ namespace Server.Items
     public class SubtextSign : Sign
     {
         private string m_Subtext;
-        [Constructable]
+        [Constructible]
         public SubtextSign(SignType type, SignFacing facing, string subtext)
             : base(type, facing)
         {
             m_Subtext = subtext;
         }
 
-        [Constructable]
+        [Constructible]
         public SubtextSign(int itemID, string subtext)
             : base(itemID)
         {

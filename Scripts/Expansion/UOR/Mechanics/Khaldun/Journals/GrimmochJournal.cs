@@ -51,7 +51,7 @@ namespace Server.Items
                 "timeline for",
                 "excavating the Tomb's",
                 "entrance."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal1()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -142,7 +142,7 @@ namespace Server.Items
                 "be open, rather than",
                 "shocked that they'd",
                 "finally given way."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal2()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -230,7 +230,7 @@ namespace Server.Items
             new BookPageInfo(
                 "shut up, and got back",
                 "to work."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal3()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -315,7 +315,7 @@ namespace Server.Items
                 "main antechamber, so",
                 "there's no use moaning",
                 "about it now."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal6()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -390,7 +390,7 @@ namespace Server.Items
                 "access to this primeval",
                 "crypt, seal it up again",
                 "for all eternity."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal7()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -450,7 +450,7 @@ namespace Server.Items
                 "laughter from behind"),
             new BookPageInfo(
                 "the stones."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal11()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -525,7 +525,7 @@ namespace Server.Items
                 "undead legions struck",
                 "again.  I cannot go on...",
                 "I cannot go on."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal14()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -603,7 +603,7 @@ namespace Server.Items
                 "his or mine, I can no"),
             new BookPageInfo(
                 "longer tell."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal17()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -639,7 +639,7 @@ namespace Server.Items
                 "",
                 "We no longer bury the",
                 "dead."));
-        [Constructable]
+        [Constructible]
         public GrimmochJournal23()
             : base(Utility.Random(0xFF1, 2), false)
         {

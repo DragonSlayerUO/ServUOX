@@ -77,19 +77,19 @@ namespace Server.Items
             return !IsRewardItem || RewardSystem.CheckIsUsableBy(m, this, new object[] { Hue, m_LabelNumber });
         }
 
-        [Constructable]
+        [Constructible]
         public RewardRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardRobe(int hue)
             : this(hue, 0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardRobe(int hue, int labelNumber)
             : base(0x1F03, hue)
         {

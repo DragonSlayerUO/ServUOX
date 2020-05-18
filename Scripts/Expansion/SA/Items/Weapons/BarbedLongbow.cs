@@ -5,7 +5,7 @@ namespace Server.Items
     public class BarbedLongbow : ElvenCompositeLongbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BarbedLongbow()
         {
             Attributes.ReflectPhysical = 12;

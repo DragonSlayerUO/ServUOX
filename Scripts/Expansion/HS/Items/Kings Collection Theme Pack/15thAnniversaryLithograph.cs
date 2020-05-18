@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class FifteenthAnniversaryLithographAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public FifteenthAnniversaryLithographAddon(DirectionType type)
         {
             switch (type)
@@ -49,7 +49,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public FifteenthAnniversaryLithographDeed()
             : base()
         {

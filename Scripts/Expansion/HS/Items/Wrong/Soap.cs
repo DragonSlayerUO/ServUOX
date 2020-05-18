@@ -6,13 +6,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1152267;  // soap
 
-        [Constructable]
+        [Constructible]
         public Soap()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Soap(int amount)
             : base(0x1422)
         {

@@ -112,18 +112,18 @@ namespace Server.Items
 
         public RugType RugType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public RoseRugAddon()
             : this(RugType.EastLarge)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RoseRugAddon(RugType type) : this(type, 0, DateTime.UtcNow)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RoseRugAddon(RugType type, int resCount, DateTime nextuse)
         {
             NextResourceCount = nextuse;
@@ -333,19 +333,19 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public RugType RugType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public RoseRugAddonDeed()
             : this(RugType.EastLarge)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RoseRugAddonDeed(RugType type)
             : this(type, 0, DateTime.UtcNow)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RoseRugAddonDeed(RugType type, int resCount, DateTime nextuse)
         {
             RugType = type;

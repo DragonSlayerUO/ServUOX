@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1114096;  // Harvester's Blade
 
-        [Constructable]
+        [Constructible]
         public HarvestersBlade()
         {
             Hue = 1191;
@@ -40,7 +40,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155744;  // Member of the Skara Brae Ranger's Guild
 
-        [Constructable]
+        [Constructible]
         public RangersGuildSash()
         {
             LootType = LootType.Blessed;
@@ -67,7 +67,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155744;  // Member of the Skara Brae Ranger's Guild
 
-        [Constructable]
+        [Constructible]
         public GargishRangersGuildSash()
         {
             LootType = LootType.Blessed;
@@ -95,7 +95,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1155727);  // Huntmaster's Champion
 
-        [Constructable]
+        [Constructible]
         public HuntmastersRewardTitleDeed()
         {
         }
@@ -143,7 +143,7 @@ namespace Server.Items
             set { _NextRecharge = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public HornOfPlenty() : base(18080)
         {
             UsesRemaining = 10;
@@ -273,7 +273,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int Charges { get { return _Charges; } set { _Charges = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public HarvestersAxe()
         {
             Charges = 1000;

@@ -5,7 +5,7 @@ namespace Server.Items
     public class HumanSignOfChaos : ChaosShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HumanSignOfChaos()
             : base()
         {

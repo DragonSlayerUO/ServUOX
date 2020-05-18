@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PyramidAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public PyramidAddon()
         {
             AddComponent(new AddonComponent(1006), 0, 0, 5);

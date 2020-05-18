@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class Daelas : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Daelas()
             : base("the aborist")
         {

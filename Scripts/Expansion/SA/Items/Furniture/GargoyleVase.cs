@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x4042, 0x4043)]
     public class GargoyleVase : Item
     {
-        [Constructable]
+        [Constructible]
         public GargoyleVase()
             : base(0x4042)
         {

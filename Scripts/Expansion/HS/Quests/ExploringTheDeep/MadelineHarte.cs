@@ -12,7 +12,7 @@ namespace Server.Mobiles
     {
         public virtual bool IsInvulnerable => true;
 
-        [Constructable]
+        [Constructible]
         public MadelineHarte()
         {
             Name = "Madeline Harte";

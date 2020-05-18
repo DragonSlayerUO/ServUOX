@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1157214;  // Lasher
 
-        [Constructable]
+        [Constructible]
         public EtherealLasher()
             : base(0x9E35, 0x3ECB, 0x3ECB, DefaultEtherealHue)
         {

@@ -16,7 +16,7 @@ namespace Server.Items
 
         public override BasePeerless Boss => new MonstrousInterredGrizzle();
 
-        [Constructable]
+        [Constructible]
         public BedlamAltar() : base(0x207E)
         {
             BossLocation = new Point3D(106, 1615, 90);

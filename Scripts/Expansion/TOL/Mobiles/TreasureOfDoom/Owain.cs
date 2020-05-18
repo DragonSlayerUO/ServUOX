@@ -22,7 +22,7 @@ namespace Server.Engines.TreasuresOfDoom
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Owain() : base("the blind")
         {
             Instance = this;

@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0xEC4, 0xEC5)]
     public class SkinningKnife : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public SkinningKnife()
             : base(0xEC4)
         {

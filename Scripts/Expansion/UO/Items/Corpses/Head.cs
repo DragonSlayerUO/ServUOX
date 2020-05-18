@@ -11,19 +11,19 @@ namespace Server.Items
 
     public class Head : Item
     {
-        [Constructable]
+        [Constructible]
         public Head()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Head(string playerName)
             : this(HeadType.Regular, playerName)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Head(HeadType headType, string playerName)
             : base(0x1DA0)
         {

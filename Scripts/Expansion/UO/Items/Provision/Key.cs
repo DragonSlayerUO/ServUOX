@@ -39,25 +39,25 @@ namespace Server.Items
 
         public bool PlayerConstructed => true;
 
-        [Constructable]
+        [Constructible]
         public Key()
             : this(KeyType.Iron, 0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Key(KeyType type)
             : this(type, 0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Key(uint val)
             : this(KeyType.Iron, val)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Key(KeyType type, uint LockVal)
             : this(type, LockVal, null)
         {

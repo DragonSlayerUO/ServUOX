@@ -5,7 +5,7 @@ namespace Server.Items
     public class GlovesOfThePugilist : LeatherGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GlovesOfThePugilist()
         {
             Hue = 0x6D1;

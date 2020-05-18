@@ -9,7 +9,7 @@ namespace Server.Items
         private NoHousingDelayTimer m_Timer;
         private Rectangle3D[] m_Area;
         private SimpleNoHousingRegion m_Region;
-        [Constructable]
+        [Constructible]
         public NoHousingItem(BaseHouse house)
             : base(0x2FD5)
         {

@@ -13,7 +13,7 @@ namespace Server.Engines.Quests.Ninja
             1063192  // Ah, a quiet hideout.
         };
         private int m_Message;
-        [Constructable]
+        [Constructible]
         public HiddenFigure()
         {
             m_Message = Utility.RandomList(Messages);

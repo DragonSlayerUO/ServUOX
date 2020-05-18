@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125809;  // hourglass
 
-        [Constructable]
+        [Constructible]
         public DecorativeHourglass()
             : base(0xA339)
         {

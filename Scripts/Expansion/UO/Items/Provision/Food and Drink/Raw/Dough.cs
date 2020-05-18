@@ -13,7 +13,7 @@ namespace Server.Items
 
         public bool PlayerConstructed => true;
 
-        [Constructable]
+        [Constructible]
         public Dough()
             : base(0x103d)
         {

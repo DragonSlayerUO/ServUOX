@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class EagleRay : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public EagleRay()
             : base(0xA373)
         {

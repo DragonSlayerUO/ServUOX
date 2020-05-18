@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113819; // Mantle of the Fallen
 
-        [Constructable]
+        [Constructible]
         public MantleOfTheFallen()
         {
             Hue = 1512;

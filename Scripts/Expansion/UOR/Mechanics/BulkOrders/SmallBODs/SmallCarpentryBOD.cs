@@ -19,7 +19,7 @@ namespace Server.Engines.BulkOrders
 
         public override BODType BODType => BODType.Carpentry;
 
-        [Constructable]
+        [Constructible]
         public SmallCarpentryBOD()
         {
             SmallBulkEntry[] entries;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DisintegratingThesisNotes : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public DisintegratingThesisNotes()
             : base(0xE36)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Shrimp : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Shrimp()
             : base(0x3B14)
         {

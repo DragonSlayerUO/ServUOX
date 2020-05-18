@@ -13,13 +13,13 @@ namespace Server.Items
         };
         private bool m_IsRewardItem;
         private Item m_Fire;
-        [Constructable]
+        [Constructible]
         public RewardBrazier()
             : this(Utility.RandomList(m_Art))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardBrazier(int itemID)
             : base(itemID)
         {
@@ -144,7 +144,7 @@ namespace Server.Items
     public class RewardBrazierDeed : Item, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public RewardBrazierDeed()
             : base(0x14F0)
         {

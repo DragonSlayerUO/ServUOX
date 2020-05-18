@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SealingWaxOrder : Item
     {
-        [Constructable]
+        [Constructible]
         public SealingWaxOrder()
             : base(0xEBF)
         {

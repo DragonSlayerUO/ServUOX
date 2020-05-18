@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1149781;
 
-        [Constructable]
+        [Constructible]
         public CorgulsEnchantedSash()
         {
             Attributes.BonusStam = 1;

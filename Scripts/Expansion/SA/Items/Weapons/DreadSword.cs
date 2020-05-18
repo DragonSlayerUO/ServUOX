@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x90B, 0x4074)]
     public class DreadSword : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public DreadSword()
             : base(0x90B)
         {

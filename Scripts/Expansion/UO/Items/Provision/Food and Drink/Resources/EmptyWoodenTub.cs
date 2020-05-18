@@ -5,7 +5,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.EmptyLargeWoodenBowl")]
     public class EmptyWoodenTub : Item
     {
-        [Constructable]
+        [Constructible]
         public EmptyWoodenTub()
             : base(0x1605)
         {

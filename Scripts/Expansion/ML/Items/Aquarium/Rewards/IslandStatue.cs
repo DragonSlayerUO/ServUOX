@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class IslandStatue : Item
     {
-        [Constructable]
+        [Constructible]
         public IslandStatue()
             : base(0x3B0F)
         {

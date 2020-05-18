@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ArcanistStatueSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ArcanistStatueSouthAddon()
         {
             AddComponent(new AddonComponent(0x2D0F), 0, 0, 0);
@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class ArcanistStatueSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public ArcanistStatueSouthDeed()
         {
         }

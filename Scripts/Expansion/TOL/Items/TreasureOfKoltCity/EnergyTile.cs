@@ -15,7 +15,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public override BaseAddonDeed Deed => null;
 
-        [Constructable]
+        [Constructible]
         public EnergyTileAddon(int count, Direction direction)
         {
             int x = 0;

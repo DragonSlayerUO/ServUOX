@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class Bone : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Bone()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Bone(int amount)
             : base(0xf7e)
         {

@@ -26,7 +26,7 @@ namespace Server.Items
                 "Thee, a thousand"),
             new BookPageInfo(
                 "fortunes in the night."));
-        [Constructable]
+        [Constructible]
         public LysanderNotebook1()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -107,7 +107,7 @@ namespace Server.Items
                 "my lessons well.  I",
                 "have learned from",
                 "Thee, Master, I have."));
-        [Constructable]
+        [Constructible]
         public LysanderNotebook2()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -183,7 +183,7 @@ namespace Server.Items
                 "feel Thine presence",
                 "even now.  Soon,",
                 "Master.  Soon."));
-        [Constructable]
+        [Constructible]
         public LysanderNotebook3()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -272,7 +272,7 @@ namespace Server.Items
                 "Thee with many",
                 "sacrifices, soon",
                 "enough."));
-        [Constructable]
+        [Constructible]
         public LysanderNotebook7()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -353,7 +353,7 @@ namespace Server.Items
                 "purpose and I kneel",
                 "before Thee, covered",
                 "in their blood."));
-        [Constructable]
+        [Constructible]
         public LysanderNotebook8()
             : base(Utility.Random(0xFF1, 2), false)
         {
@@ -431,7 +431,7 @@ namespace Server.Items
                 "member of the"),
             new BookPageInfo(
                 "Khaldun at last!"));
-        [Constructable]
+        [Constructible]
         public LysanderNotebook11()
             : base(Utility.Random(0xFF1, 2), false)
         {

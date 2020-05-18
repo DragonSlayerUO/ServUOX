@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class RawChickenLeg : CookableFood
     {
-        [Constructable]
+        [Constructible]
         public RawChickenLeg()
             : base(0x1607, 10)
         {

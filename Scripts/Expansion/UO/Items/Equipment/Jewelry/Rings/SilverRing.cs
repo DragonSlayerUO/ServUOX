@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SilverRing : BaseRing, IRepairable
     {
-        [Constructable]
+        [Constructible]
         public SilverRing()
             : base(0x1F09)
         {

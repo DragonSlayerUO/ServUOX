@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Lurg corpse")]
     public class Lurg : Troglodyte
     {
-        [Constructable]
+        [Constructible]
         public Lurg()
         {
             Name = "Lurg";

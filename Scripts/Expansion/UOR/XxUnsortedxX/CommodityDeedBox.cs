@@ -8,7 +8,7 @@ namespace Server.Items
     public class CommodityDeedBox : BaseContainer, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public CommodityDeedBox()
             : base(0x9AA)
         {

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an air elemental corpse")]
     public class AirElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public AirElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -91,7 +91,7 @@ namespace Server.Mobiles
     [CorpseName("a blood elemental corpse")]
     public class BloodElemental : BaseCreature, IBloodCreature
     {
-        [Constructable]
+        [Constructible]
         public BloodElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -159,7 +159,7 @@ namespace Server.Mobiles
     [CorpseName("an earth elemental corpse")]
     public class EarthElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public EarthElemental()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -236,7 +236,7 @@ namespace Server.Mobiles
     [CorpseName("a fire elemental corpse")]
     public class FireElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public FireElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -314,7 +314,7 @@ namespace Server.Mobiles
     [CorpseName("a poison elementals corpse")]
     public class PoisonElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public PoisonElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -399,7 +399,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public bool HasDecanter { get; set; } = true;
 
-        [Constructable]
+        [Constructible]
         public WaterElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

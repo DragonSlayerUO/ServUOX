@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CrystalSupplicantStatueAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CrystalSupplicantStatueAddon(DirectionType type)
         {
             switch (type)
@@ -49,7 +49,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public CrystalSupplicantStatueDeed()
             : base()
         {

@@ -21,7 +21,7 @@ namespace Server.Items
         public override int InitMinHits => 125;
         public override int InitMaxHits => 125;
 
-        [Constructable]
+        [Constructible]
         public BestialNecklace()
         {
             Hue = 2010;

@@ -12,7 +12,7 @@ namespace Server.Mobiles
             "an ophidian zealot"
         };
 
-        [Constructable]
+        [Constructible]
         public OphidianArchmage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -92,7 +92,7 @@ namespace Server.Mobiles
             "an ophidian avenger"
         };
 
-        [Constructable]
+        [Constructible]
         public OphidianKnight()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -171,7 +171,7 @@ namespace Server.Mobiles
             "an ophidian shaman"
         };
 
-        [Constructable]
+        [Constructible]
         public OphidianMage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -250,7 +250,7 @@ namespace Server.Mobiles
     [CorpseName("an ophidian corpse")]
     public class OphidianMatriarch : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OphidianMatriarch()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -327,7 +327,7 @@ namespace Server.Mobiles
             "an ophidian enforcer"
         };
 
-        [Constructable]
+        [Constructible]
         public OphidianWarrior()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

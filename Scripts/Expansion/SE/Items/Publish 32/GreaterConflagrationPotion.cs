@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GreaterConflagrationPotion : BaseConflagrationPotion
     {
-        [Constructable]
+        [Constructible]
         public GreaterConflagrationPotion()
             : base(PotionEffect.ConflagrationGreater)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1159023;  //Legendary Mapmaker's Glasses
 
-        [Constructable]
+        [Constructible]
         public LegendaryMapmakersGlasses()
         {
             SkillBonuses.SetValues(0, SkillName.Cartography, Utility.RandomMinMax(1, 5));

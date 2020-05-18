@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DragonFlameKey : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public DragonFlameKey()
             : base(0x2002)
         {

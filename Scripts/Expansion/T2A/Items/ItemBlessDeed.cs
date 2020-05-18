@@ -53,7 +53,7 @@ namespace Server.Items
 
     public class ItemBlessDeed : Item // Create the item class which is derived from the base item class
     {
-        [Constructable]
+        [Constructible]
         public ItemBlessDeed()
             : base(0x14F0)
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PicassoTriggerfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public PicassoTriggerfish()
             : base(0xA36E)
         {

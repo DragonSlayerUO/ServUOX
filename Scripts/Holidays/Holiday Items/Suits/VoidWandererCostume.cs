@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override string CreatureName => "wanderer of the void";
 
-        [Constructable]
+        [Constructible]
         public VoidWandererCostume() : base()
         {
             CostumeBody = 316;

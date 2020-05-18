@@ -223,7 +223,7 @@ namespace Server.Engines.Auction
 
         public bool IsRewardItem { get; set; }
 
-        [Constructable]
+        [Constructible]
         public AuctionSafeDeed()
         {
             LootType = LootType.Blessed;

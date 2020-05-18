@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a black order grand mage corpse")]
     public class DragonsFlameGrandMage : DragonsFlameMage
     {
-        [Constructable]
+        [Constructible]
         public DragonsFlameGrandMage()
             : base()
         {

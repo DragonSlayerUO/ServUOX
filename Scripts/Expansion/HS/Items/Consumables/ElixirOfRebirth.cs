@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class ElixirOfRebirth : Item
     {
-        [Constructable]
+        [Constructible]
         public ElixirOfRebirth() : base(0x24E2)
         {
             Hue = 0x48E;

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an ossein ram corpse")]
     public class OsseinRam : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OsseinRam() : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "Ossein Ram";

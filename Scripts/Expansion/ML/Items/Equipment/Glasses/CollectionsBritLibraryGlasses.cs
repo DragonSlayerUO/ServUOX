@@ -7,7 +7,7 @@ namespace Server.Items
     public class MaceAndShieldGlasses : Glasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MaceAndShieldGlasses()
             : base()
         {
@@ -48,7 +48,7 @@ namespace Server.Items
     public class GargishMaceAndShieldGlasses : GargishGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GargishMaceAndShieldGlasses()
         {
             Hue = 0x1DD;
@@ -88,7 +88,7 @@ namespace Server.Items
     [Alterable(typeof(DefTinkering), typeof(GargishGlassesOfTheArts))]
     public class GlassesOfTheArts : Glasses
     {
-        [Constructable]
+        [Constructible]
         public GlassesOfTheArts()
             : base()
         {
@@ -128,7 +128,7 @@ namespace Server.Items
 
     public class GargishGlassesOfTheArts : GargishGlasses
     {
-        [Constructable]
+        [Constructible]
         public GargishGlassesOfTheArts()
         {
             Hue = 0x73;
@@ -168,7 +168,7 @@ namespace Server.Items
     [Alterable(typeof(DefTinkering), typeof(GargishTradesGlasses))]
     public class TradesGlasses : Glasses
     {
-        [Constructable]
+        [Constructible]
         public TradesGlasses()
         {
             Attributes.BonusStr = 10;
@@ -204,7 +204,7 @@ namespace Server.Items
 
     public class GargishTradesGlasses : GargishGlasses
     {
-        [Constructable]
+        [Constructible]
         public GargishTradesGlasses()
         {
             Attributes.BonusStr = 10;
@@ -242,7 +242,7 @@ namespace Server.Items
     [Alterable(typeof(DefTinkering), typeof(GargishWizardsCrystalGlasses))]
     public class WizardsCrystalGlasses : Glasses
     {
-        [Constructable]
+        [Constructible]
         public WizardsCrystalGlasses()
         {
             Hue = 0x2B0;
@@ -281,7 +281,7 @@ namespace Server.Items
 
     public class GargishWizardsCrystalGlasses : GargishGlasses
     {
-        [Constructable]
+        [Constructible]
         public GargishWizardsCrystalGlasses()
         {
             Hue = 0x2B0;
@@ -321,7 +321,7 @@ namespace Server.Items
     [Alterable(typeof(DefTinkering), typeof(GargishTreasuresAndTrinketsGlasses))]
     public class TreasuresAndTrinketsGlasses : Glasses
     {
-        [Constructable]
+        [Constructible]
         public TreasuresAndTrinketsGlasses()
         {
             Hue = 0x5A6; // TODO check		
@@ -360,7 +360,7 @@ namespace Server.Items
 
     public class GargishTreasuresAndTrinketsGlasses : GargishGlasses
     {
-        [Constructable]
+        [Constructible]
         public GargishTreasuresAndTrinketsGlasses()
         {
             Hue = 0x5A6; // TODO check

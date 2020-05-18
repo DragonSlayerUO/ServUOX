@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class MantisShrimp : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public MantisShrimp()
             : base(0xA37D)
         {

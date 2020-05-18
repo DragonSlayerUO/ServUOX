@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1159146;  // Copper Wings
 
-        [Constructable]
+        [Constructible]
         public CopperWings()
             : base(0xA3DE)
         {

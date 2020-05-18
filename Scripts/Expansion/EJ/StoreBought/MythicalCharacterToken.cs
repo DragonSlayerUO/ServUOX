@@ -13,7 +13,7 @@ namespace Server.Items
 
         public Type GumpType => typeof(MythicCharacterToken.InternalGump);
 
-        [Constructable]
+        [Constructible]
         public MythicCharacterToken()
             : base(0x2AAA)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158641;  // RBG Detective Branch Official Credential
 
-        [Constructable]
+        [Constructible]
         public DetectiveCredentials()
             : base(0x1088)
         {

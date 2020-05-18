@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113651;  // Demon Bridle Ring
 
-        [Constructable]
+        [Constructible]
         public DemonBridleRing()
         {
             Hue = 39;

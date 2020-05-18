@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1113578;  // a golden compass
 
-        [Constructable]
+        [Constructible]
         public GoldenCompass()
             : base(0x1CB)
         {

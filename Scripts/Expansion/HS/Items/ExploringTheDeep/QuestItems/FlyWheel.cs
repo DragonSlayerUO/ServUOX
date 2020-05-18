@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154427;  // Flywheel
 
-        [Constructable]
+        [Constructible]
         public FlyWheel()
             : base(0x46FE)
         {

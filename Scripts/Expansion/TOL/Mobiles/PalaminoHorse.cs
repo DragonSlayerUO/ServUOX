@@ -6,12 +6,12 @@ namespace Server.Mobiles
     [CorpseName("a horse corpse")]
     public class Palomino : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public Palomino() : this("a horse")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Palomino(string name) : base(name, 1408, 0x3ECD, AIType.AI_Animal, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             BaseSoundID = 0xA8;

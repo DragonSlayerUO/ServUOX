@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2D05, 0x2D06)]
     public class SimpleElvenArmoire : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public SimpleElvenArmoire()
             : base(0x2D05)
         {

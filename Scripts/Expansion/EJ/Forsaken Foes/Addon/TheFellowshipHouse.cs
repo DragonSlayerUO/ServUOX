@@ -228,7 +228,7 @@ namespace Server.Items
 			, {6021, -4, -4, 32}// 679	
 		};
 
-        [Constructable]
+        [Constructible]
         public TheFellowshipHouse()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1095838;  // ramrod
 
-        [Constructable]
+        [Constructible]
         public Ramrod()
             : base(0x4246)
         {

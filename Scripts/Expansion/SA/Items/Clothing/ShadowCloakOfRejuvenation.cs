@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1115649;  // Shadow Cloak Of Rejuvenation
 
-        [Constructable]
+        [Constructible]
         public ShadowCloakOfRejuvenation()
         {
             Hue = 1884;
@@ -45,7 +45,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1115649;  // Shadow Cloak Of Rejuvenation
 
-        [Constructable]
+        [Constructible]
         public GargishShadowCloakOfRejuvenation()
         {
             Hue = 1884;

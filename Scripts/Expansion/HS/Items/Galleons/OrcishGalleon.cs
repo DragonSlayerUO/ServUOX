@@ -28,10 +28,10 @@ namespace Server.Multis
 
         public override BaseDockedBoat DockedBoat => new DockedOrcishGalleon(this);
 
-        [Constructable]
+        [Constructible]
         public OrcishGalleon() : this(Direction.North) { }
 
-        [Constructable]
+        [Constructible]
         public OrcishGalleon(Direction facing) : base(facing)
         {
         }
@@ -289,7 +289,7 @@ namespace Server.Multis
         public override int LabelNumber => 1116738;  // small dragon ship deed
         public override BaseBoat Boat => new OrcishGalleon(BoatDirection);
 
-        [Constructable]
+        [Constructible]
         public OrcishGalleonDeed()
             : base(0x18, Point3D.Zero)
         {

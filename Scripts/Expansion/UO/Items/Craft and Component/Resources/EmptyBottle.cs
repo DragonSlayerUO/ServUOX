@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class EmptyBottle : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public EmptyBottle()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EmptyBottle(int amount)
             : base(0xF0E)
         {

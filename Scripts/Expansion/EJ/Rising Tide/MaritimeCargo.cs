@@ -74,19 +74,19 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public City City { get { return _City; } set { _City = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public MaritimeCargo()
             : this(RandomQuality(), RandomCity(), RandomType())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaritimeCargo(CargoQuality quality)
             : this(quality, RandomCity(), RandomType())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaritimeCargo(CargoQuality quality, City city, CargoType type)
             : base(0xA2C4)
         {

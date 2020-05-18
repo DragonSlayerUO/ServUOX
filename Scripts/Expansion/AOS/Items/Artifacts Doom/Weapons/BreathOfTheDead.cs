@@ -5,7 +5,7 @@ namespace Server.Items
     public class BreathOfTheDead : BoneHarvester
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BreathOfTheDead()
         {
             Hue = 0x455;

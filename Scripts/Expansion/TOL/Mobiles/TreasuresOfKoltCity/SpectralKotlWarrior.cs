@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a kotl warrior corpse")]
     public class SpectralKotlWarrior : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SpectralKotlWarrior(bool weak)
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, .2, .4)
         {

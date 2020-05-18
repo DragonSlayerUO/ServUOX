@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Huntsman : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Huntsman()
             : base("Huntsman")
         {

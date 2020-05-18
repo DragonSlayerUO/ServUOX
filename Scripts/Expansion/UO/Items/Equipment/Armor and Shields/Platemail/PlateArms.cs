@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x1410, 0x1417)]
     public class PlateArms : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public PlateArms()
             : base(0x1410)
         {

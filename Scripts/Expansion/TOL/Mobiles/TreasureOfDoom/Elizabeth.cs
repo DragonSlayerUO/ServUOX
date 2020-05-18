@@ -22,7 +22,7 @@ namespace Server.Engines.TreasuresOfDoom
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Elizabeth() : base("the Professor")
         {
             Instance = this;

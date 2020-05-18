@@ -35,7 +35,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public AlterContract(RepairSkillType type, Mobile crafter)
             : base(0x14F0)
         {

@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => ItemID == 17095 ? 1095967 : 1095968;  // silver sapling replica - potted silver sapling replica
 
-        [Constructable]
+        [Constructible]
         public SilverSaplingReplica(int id)
             : base(id)
         {
@@ -37,7 +37,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113934;  // Silver Sapling Deed
 
-        [Constructable]
+        [Constructible]
         public SilverSaplingReplicaDeed()
             : base(0x14F0)
         {

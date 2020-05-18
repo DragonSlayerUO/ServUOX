@@ -33,12 +33,12 @@ namespace Server.Items
 
         public List<Point2D> Pins { get; } = new List<Point2D>();
 
-        [Constructable]
+        [Constructible]
         public MapItem() : this(Map.Trammel)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MapItem(Map map) : base(0x14EC)
         {
             Weight = 1.0;

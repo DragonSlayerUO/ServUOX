@@ -17,7 +17,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112117;  // clippers
 
-        [Constructable]
+        [Constructible]
         public Clippers()
             : base(0x0DFC)
         {
@@ -25,7 +25,7 @@ namespace Server.Items
             Hue = 1168;
         }
 
-        [Constructable]
+        [Constructible]
         public Clippers(int uses)
             : base(uses, 0x0DFC)
         {

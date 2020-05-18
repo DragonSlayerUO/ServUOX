@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override bool InitialInnocent => true;
 
-        [Constructable]
+        [Constructible]
         public SAPixie()
             : base(AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

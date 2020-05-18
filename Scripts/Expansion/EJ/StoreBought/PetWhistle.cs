@@ -25,7 +25,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsUsable => NextLinkedTime < DateTime.UtcNow;
 
-        [Constructable]
+        [Constructible]
         public PetWhistle()
             : base(0xA4E7)
         {

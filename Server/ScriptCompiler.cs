@@ -811,8 +811,8 @@ namespace Server
 
             if (a && b)
             {
-                a = IsConstructable(l, out var x);
-                b = IsConstructable(r, out var y);
+                a = IsConstructible(l, out var x);
+                b = IsConstructible(r, out var y);
 
                 if (a && !b)
                 {
@@ -835,11 +835,11 @@ namespace Server
             return type.GetInterface("IEntity") != null;
         }
 
-        private static bool IsConstructable(Type type, out AccessLevel access)
+        private static bool IsConstructible(Type type, out AccessLevel access)
         {
             foreach (var ctor in type.GetConstructors().OrderBy(o => o.GetParameters().Length))
             {
-                var attr = ctor.GetCustomAttribute<ConstructableAttribute>(false);
+                var attr = ctor.GetCustomAttribute<ConstructibleAttribute>(false);
 
                 if (attr != null)
                 {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GnawsFang : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public GnawsFang()
             : base(0x10E8)
         {

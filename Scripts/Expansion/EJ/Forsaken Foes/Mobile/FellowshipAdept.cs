@@ -22,7 +22,7 @@ namespace Server.Engines.Fellowship
         public static FellowshipAdept InstanceTram { get; set; }
         public static FellowshipAdept InstanceFel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public FellowshipAdept()
             : base("the Fellowship Adept")
         {

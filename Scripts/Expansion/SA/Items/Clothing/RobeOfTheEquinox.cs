@@ -14,7 +14,7 @@ namespace Server.Items
         public bool ElfOnly { get { return _ElfOnly; } set { _ElfOnly = value; InvalidateProperties(); } }
 
 
-        [Constructable]
+        [Constructible]
         public RobeOfTheEquinox()
             : base(0x1F04, 0xD6)
         {

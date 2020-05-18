@@ -5,13 +5,13 @@ namespace Server.Items
         private static readonly int EmptyID = 0xE77;
         private static readonly int FilledID = 0x154D;
 
-        [Constructable]
+        [Constructible]
         public WaterBarrel()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WaterBarrel(bool filled)
             : base(filled ? FilledID : EmptyID, filled)
         {

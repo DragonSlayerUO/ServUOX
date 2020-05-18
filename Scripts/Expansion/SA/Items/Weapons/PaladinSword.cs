@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x26CE, 0x26CF)]
     public class PaladinSword : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public PaladinSword()
             : base(0x26CE)
         {

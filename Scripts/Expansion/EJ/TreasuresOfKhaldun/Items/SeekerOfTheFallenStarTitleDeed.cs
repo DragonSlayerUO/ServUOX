@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158682;  // Seeker of the Fallen Star
 
-        [Constructable]
+        [Constructible]
         public SeekerOfTheFallenStarTitleDeed()
         {
         }

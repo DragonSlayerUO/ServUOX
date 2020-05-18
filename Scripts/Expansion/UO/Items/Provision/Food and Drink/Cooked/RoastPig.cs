@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class RoastPig : Food
     {
-        [Constructable]
+        [Constructible]
         public RoastPig()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RoastPig(int amount)
             : base(amount, 0x9BB)
         {

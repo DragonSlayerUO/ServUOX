@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B72, 0x3169)]
     public class VultureHelm : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public VultureHelm()
             : base(0x2B72)
         {

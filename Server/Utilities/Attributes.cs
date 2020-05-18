@@ -158,15 +158,15 @@ namespace Server
     }
 
     [AttributeUsage(AttributeTargets.Constructor)]
-    public class ConstructableAttribute : Attribute
+    public class ConstructibleAttribute : Attribute
     {
         public AccessLevel AccessLevel { get; set; }
 
-        public ConstructableAttribute()
+        public ConstructibleAttribute()
             : this(AccessLevel.Player) //Lowest accesslevel for current functionality (Level determined by access to [add)
         { }
 
-        public ConstructableAttribute(AccessLevel accessLevel)
+        public ConstructibleAttribute(AccessLevel accessLevel)
         {
             AccessLevel = accessLevel;
         }

@@ -10,7 +10,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new WritingDeskDeed(Tools.Count > 0 ? Tools[0].UsesRemaining : 0);
         public override CraftSystem CraftSystem => DefInscription.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public WritingDesk(bool south, int uses)
         {
             if (south)
@@ -52,12 +52,12 @@ namespace Server.Items
 
         private bool _South;
 
-        [Constructable]
+        [Constructible]
         public WritingDeskDeed() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WritingDeskDeed(int uses) : base(uses)
         {
         }

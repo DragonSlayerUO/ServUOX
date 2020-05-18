@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class FrightenedDryad : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public FrightenedDryad()
             : base("The Frightened Dryad")
         {

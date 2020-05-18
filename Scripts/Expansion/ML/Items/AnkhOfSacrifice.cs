@@ -168,7 +168,7 @@ namespace Server.Items
     public class AnkhOfSacrificeAddon : BaseAddon, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public AnkhOfSacrificeAddon(bool east)
             : base()
         {
@@ -250,13 +250,13 @@ namespace Server.Items
     {
         private bool m_East;
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public AnkhOfSacrificeDeed()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AnkhOfSacrificeDeed(bool isRewardItem)
             : base()
         {

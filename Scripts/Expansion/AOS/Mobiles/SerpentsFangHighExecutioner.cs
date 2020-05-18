@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a black order high executioner corpse")]
     public class SerpentsFangHighExecutioner : SerpentsFangAssassin
     {
-        [Constructable]
+        [Constructible]
         public SerpentsFangHighExecutioner()
             : base()
         {

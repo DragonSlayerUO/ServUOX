@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1062474;  // Tribal Spear
 
-        [Constructable]
+        [Constructible]
         public TribalSpear()
             : base(0xF62)
         {

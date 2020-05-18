@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class GargishClothKilt : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public GargishClothKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothKilt(int hue)
             : base(0x0408, Layer.Gloves, hue)
         {
@@ -55,13 +55,13 @@ namespace Server.Items
 
     public class FemaleGargishClothKilt : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothKilt(int hue)
             : base(0x0407, Layer.Gloves, hue)
         {
@@ -93,13 +93,13 @@ namespace Server.Items
 
     public class MaleGargishClothKilt : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public MaleGargishClothKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaleGargishClothKilt(int hue)
             : base(0x0408, Layer.Gloves, hue)
         {
@@ -133,13 +133,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1109619;  // Guilded Kilt
 
-        [Constructable]
+        [Constructible]
         public GuildedKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GuildedKilt(int hue)
             : base(0x781B, hue)
         {
@@ -167,13 +167,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1109620;  // Checkered Kilt
 
-        [Constructable]
+        [Constructible]
         public CheckeredKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CheckeredKilt(int hue)
             : base(0x781C, hue)
         {
@@ -201,13 +201,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1109621;  // Fancy Kilt
 
-        [Constructable]
+        [Constructible]
         public FancyKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FancyKilt(int hue)
             : base(0x781D, hue)
         {

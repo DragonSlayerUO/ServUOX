@@ -5,7 +5,7 @@ namespace Server.Items
     public class Subdue : Scythe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Subdue()
         {
             Hue = 0x2cb;

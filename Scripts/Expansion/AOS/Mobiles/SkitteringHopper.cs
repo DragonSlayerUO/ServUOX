@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a skittering hopper corpse")]
     public class SkitteringHopper : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SkitteringHopper()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

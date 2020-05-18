@@ -5,7 +5,7 @@ namespace Server.Items
     public class LegacyOfTheDreadLord : Bardiche
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LegacyOfTheDreadLord()
         {
             Hue = 0x676;

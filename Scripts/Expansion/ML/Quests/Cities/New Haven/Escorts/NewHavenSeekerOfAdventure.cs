@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class NewHavenSeekerOfAdventure : NewHavenEscortable
     {
-        [Constructable]
+        [Constructible]
         public NewHavenSeekerOfAdventure()
         {
             Title = "the seeker of adventure";

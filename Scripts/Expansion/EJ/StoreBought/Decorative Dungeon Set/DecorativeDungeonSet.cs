@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159468;  // Decorative Dungeon Set
 
-        [Constructable]
+        [Constructible]
         public DecorativeDungeonSet()
         {
             DropItem(new DecorativeWallHook());

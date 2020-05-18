@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113010;  // Elixir of Valorite Conversion
 
-        [Constructable]
+        [Constructible]
         public ElixirofValoriteConversion()
             : base(0x99B)
         {

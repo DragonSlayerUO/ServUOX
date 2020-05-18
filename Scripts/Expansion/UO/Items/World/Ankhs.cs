@@ -114,13 +114,13 @@ namespace Server.Items
     public class AnkhWest : Item
     {
         private AnkhWestItem m_Item;
-        [Constructable]
+        [Constructible]
         public AnkhWest()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AnkhWest(bool bloodied)
             : base(bloodied ? 0x1D98 : 0x3)
         {
@@ -308,13 +308,13 @@ namespace Server.Items
     public class AnkhNorth : Item
     {
         private AnkhNorthItem m_Item;
-        [Constructable]
+        [Constructible]
         public AnkhNorth()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AnkhNorth(bool bloodied)
             : base(bloodied ? 0x1E5D : 0x4)
         {

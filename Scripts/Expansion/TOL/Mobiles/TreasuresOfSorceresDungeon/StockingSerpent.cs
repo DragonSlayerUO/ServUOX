@@ -7,7 +7,7 @@ namespace Server.Engines.SorcerersDungeon
     [CorpseName("a stocking serpent corpse")]
     public class StockingSerpent : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public StockingSerpent()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

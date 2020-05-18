@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public AlchemistsBookshelfAddon(DirectionType type)
             : base(type == DirectionType.South ? 0x4C24 : 0x4C25)
         {
@@ -43,7 +43,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public AlchemistsBookshelfDeed()
             : base()
         {

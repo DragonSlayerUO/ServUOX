@@ -12,7 +12,7 @@ namespace Server.Mobiles
                 typeof( SomethingFishy )
             };
 
-        [Constructable]
+        [Constructible]
         public Barreraak()
             : base()
         {

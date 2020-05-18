@@ -24,7 +24,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime EditEnd { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ValentineBear(Mobile owner)
             : base(Utility.RandomList(0x48E0, 0x48E2))
         {

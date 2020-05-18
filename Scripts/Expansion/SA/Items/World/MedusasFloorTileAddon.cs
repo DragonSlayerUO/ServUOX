@@ -16,7 +16,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new MedusaFloorTileAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public MedusaFloorTileAddon()
         {
             AddComponent(new LocalizedAddonComponent(16589, 1113922), 0, 0, 0);// 1
@@ -70,7 +70,7 @@ namespace Server.Items
 
         public override BaseAddon Addon => new MedusaFloorTileAddon();
 
-        [Constructable]
+        [Constructible]
         public MedusaFloorTileAddonDeed()
         {
         }

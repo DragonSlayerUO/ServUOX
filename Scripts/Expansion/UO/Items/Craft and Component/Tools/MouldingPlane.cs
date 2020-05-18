@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0x102C, 0x102D)]
     public class MouldingPlane : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public MouldingPlane()
             : base(0x102C)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public MouldingPlane(int uses)
             : base(uses, 0x102C)
         {

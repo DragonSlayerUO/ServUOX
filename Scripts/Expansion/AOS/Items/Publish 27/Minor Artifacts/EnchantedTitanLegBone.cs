@@ -5,7 +5,7 @@ namespace Server.Items
     public class EnchantedTitanLegBone : ShortSpear
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public EnchantedTitanLegBone()
         {
             Hue = 0x8A5;

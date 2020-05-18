@@ -4,13 +4,13 @@ namespace Server.Items
     [Flipable(0x2B68, 0x315F)]
     public class WoodlandBelt : BaseWaist
     {
-        [Constructable]
+        [Constructible]
         public WoodlandBelt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WoodlandBelt(int hue)
             : base(0x2B68, hue)
         {

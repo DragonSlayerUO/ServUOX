@@ -9,7 +9,7 @@ namespace Server.Mobiles
 
         public Type CreatureType => typeof(Windrunner);
 
-        [Constructable]
+        [Constructible]
         public WindrunnerStatue()
             : base(0x9ED5)
         {
@@ -44,13 +44,13 @@ namespace Server.Mobiles
     [CorpseName("a Windrunner corpse")]
     public class Windrunner : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public Windrunner()
             : this("Windrunner")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Windrunner(string name)
             : base(name, 1410, 16076, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

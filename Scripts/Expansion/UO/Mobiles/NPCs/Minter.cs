@@ -4,7 +4,7 @@ namespace Server.Mobiles
 {
     public class Minter : Banker
     {
-        [Constructable]
+        [Constructible]
         public Minter()
         {
             Title = "the minter";

@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class DeadWood : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public DeadWood()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DeadWood(int amount)
             : base(0xF90, amount)
         {

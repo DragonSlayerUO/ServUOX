@@ -7,7 +7,7 @@ namespace Server.Items
         private PotionEffect m_Type;
         private int m_Held;
 
-        [Constructable]
+        [Constructible]
         public PotionKeg()
             : base(0x1940)
         {

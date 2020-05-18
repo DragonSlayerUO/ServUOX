@@ -5,7 +5,7 @@ namespace Server.Items
     public class JaanasStaff : GnarledStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public JaanasStaff()
             : base()
         {

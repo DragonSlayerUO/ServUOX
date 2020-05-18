@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class MonkRobe : BaseOuterTorso
     {
-        [Constructable]
+        [Constructible]
         public MonkRobe()
             : this(0x21E)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MonkRobe(int hue)
             : base(0x2687, hue)
         {

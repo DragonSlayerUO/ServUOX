@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SpiritBottle : Item
     {
-        [Constructable]
+        [Constructible]
         public SpiritBottle()
             : base(0xEFB)
         {

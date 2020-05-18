@@ -7,7 +7,7 @@ namespace Server.Items
     public class DarkwoodCrown : RavenHelm
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DarkwoodCrown()
             : base()
         {

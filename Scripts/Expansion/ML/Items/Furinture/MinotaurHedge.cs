@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MinotaurHedge : Item
     {
-        [Constructable]
+        [Constructible]
         public MinotaurHedge()
             : base(Utility.Random(3215, 4))
         {

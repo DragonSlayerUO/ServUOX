@@ -12,7 +12,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1123383;
 
-        [Constructable]
+        [Constructible]
         public JusticeBanner() : base(39359)
         {
         }

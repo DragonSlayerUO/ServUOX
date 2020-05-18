@@ -29,7 +29,7 @@ namespace Server.Items
             return 0x0FF6;
         }
 
-        [Constructable]
+        [Constructible]
         public EndlessDecanter() : base(BeverageType.Water)
         {
             Weight = 2.0;

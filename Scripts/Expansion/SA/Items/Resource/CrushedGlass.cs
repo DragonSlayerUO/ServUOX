@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class CrushedGlass : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public CrushedGlass()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CrushedGlass(int amount)
             : base(0x573B)
         {

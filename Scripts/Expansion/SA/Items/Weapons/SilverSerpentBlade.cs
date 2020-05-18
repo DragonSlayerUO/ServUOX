@@ -5,7 +5,7 @@ namespace Server.Items
     public class SilverSerpentBlade : Kryss
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SilverSerpentBlade()
         {
             LootType = LootType.Blessed;

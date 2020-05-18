@@ -68,7 +68,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public StorageLocker(Parts type)
             : base(0x285E)
         {

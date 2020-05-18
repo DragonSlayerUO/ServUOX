@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x2D28, 0x2D34)]
     public class OrnateAxe : BaseAxe
     {
-        [Constructable]
+        [Constructible]
         public OrnateAxe()
             : base(0x2D28)
         {

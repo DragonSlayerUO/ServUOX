@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Frogfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Frogfish()
             : base(0xA36A)
         {

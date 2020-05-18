@@ -10,7 +10,7 @@ namespace Server.Engines.VoidPool
     {
         public override bool IsInvulnerable => true;
 
-        [Constructable]
+        [Constructible]
         public VelaTheSorceress()
             : base(AIType.AI_Vendor, FightMode.None, 2, 1, 0.5, 2)
         {

@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Xeninlor : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Xeninlor()
             : base("Xeninlor", "the Security Advisor")
         {

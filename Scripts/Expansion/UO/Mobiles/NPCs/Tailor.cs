@@ -10,7 +10,7 @@ namespace Server.Mobiles
         protected override List<SBInfo> SBInfos => m_SBInfos;
         public override NpcGuild NpcGuild => NpcGuild.TailorsGuild;
 
-        [Constructable]
+        [Constructible]
         public Tailor()
             : base("the tailor")
         {

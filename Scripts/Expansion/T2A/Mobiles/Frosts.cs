@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a frost ooze corpse")]
     public class FrostOoze : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public FrostOoze()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -64,7 +64,7 @@ namespace Server.Mobiles
     [CorpseName("a frost spider corpse")]
     public class FrostSpider : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public FrostSpider()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -139,7 +139,7 @@ namespace Server.Mobiles
     [CorpseName("a frost troll corpse")]
     public class FrostTroll : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public FrostTroll()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

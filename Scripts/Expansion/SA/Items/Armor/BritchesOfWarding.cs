@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1157345; // britches of warding
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BritchesOfWarding()
         {
             switch (Utility.Random(6))
@@ -58,7 +58,7 @@ namespace Server.Items
         public override int LabelNumber => 1157345; // britches of warding
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishBritchesOfWarding()
         {
             switch (Utility.Random(6))

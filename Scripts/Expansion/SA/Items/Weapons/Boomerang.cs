@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Boomerang : BaseThrown
     {
-        [Constructable]
+        [Constructible]
         public Boomerang()
             : base(0x8FF)
         {

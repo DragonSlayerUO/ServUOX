@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a clan scratch savage wolf corpse")]
     public class ClanSSW : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ClanSSW()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

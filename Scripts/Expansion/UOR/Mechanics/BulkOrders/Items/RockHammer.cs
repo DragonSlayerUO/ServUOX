@@ -9,13 +9,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1124598;
 
-        [Constructable]
+        [Constructible]
         public RockHammer()
             : this(500)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RockHammer(int uses)
             : base(uses, 0x9E7E)
         {

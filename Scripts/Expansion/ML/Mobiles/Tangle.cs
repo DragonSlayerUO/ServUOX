@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a tangle corpse")]
     public class Tangle : BogThing
     {
-        [Constructable]
+        [Constructible]
         public Tangle()
             : base()
         {

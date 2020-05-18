@@ -23,7 +23,7 @@ namespace Server.Mobiles
 
         private readonly DateTime m_NextDrop = DateTime.UtcNow;
 
-        [Constructable]
+        [Constructible]
         public MonstrousInterredGrizzle()
             : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -183,7 +183,7 @@ namespace Server.Mobiles
         {
         }
 
-        [Constructable]
+        [Constructible]
         public InfernalOoze(Mobile owner, bool corrosive, int damage = 40)
             : base(0x122A)
         {

@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class DazzledHarpy : Harpy
     {
-        [Constructable]
+        [Constructible]
         public DazzledHarpy()
         {
             Name = "a dazzled harpy";
@@ -46,7 +46,7 @@ namespace Server.Mobiles
 
     public class VampireMongbat : Mongbat
     {
-        [Constructable]
+        [Constructible]
         public VampireMongbat()
         {
             Name = "a vampire mongbat";
@@ -94,7 +94,7 @@ namespace Server.Mobiles
 
     public class HeadlessMiner : HeadlessOne
     {
-        [Constructable]
+        [Constructible]
         public HeadlessMiner()
         {
             Name = "headless miner";
@@ -139,7 +139,7 @@ namespace Server.Mobiles
 
     public class StrangeGazer : Gazer
     {
-        [Constructable]
+        [Constructible]
         public StrangeGazer()
         {
             Name = "a strange gazer";

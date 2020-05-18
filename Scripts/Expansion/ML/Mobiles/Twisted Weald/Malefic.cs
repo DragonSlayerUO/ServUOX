@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Malefic corpse")]
     public class Malefic : DreadSpider
     {
-        [Constructable]
+        [Constructible]
         public Malefic()
         {
             Name = "Malefic";

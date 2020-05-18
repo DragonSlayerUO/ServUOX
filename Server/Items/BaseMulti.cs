@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BaseMulti : Item
     {
-        [Constructable]
+        [Constructible]
         public BaseMulti(int itemID)
             : base(itemID)
         {

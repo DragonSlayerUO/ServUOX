@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class ScarecrowAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ScarecrowAddon()
             : base()
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class ScarecrowDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public ScarecrowDeed()
             : base()
         {

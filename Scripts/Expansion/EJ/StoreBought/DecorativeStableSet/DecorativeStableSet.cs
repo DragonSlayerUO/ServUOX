@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159272;  // Decorative Stable Set
 
-        [Constructable]
+        [Constructible]
         public DecorativeStableSet()
         {
             DropItem(new CowStatue());

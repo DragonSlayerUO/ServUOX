@@ -9,7 +9,7 @@ namespace Server.Items
 
         private List<FireBarrier> m_Barriers;
 
-        [Constructable]
+        [Constructible]
         public FlameOfChaos(Point3D location, Map map)
             : base(0x19AB)
         {

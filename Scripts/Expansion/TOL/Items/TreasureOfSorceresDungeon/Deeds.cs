@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1157649;  // Hero of the Unloved
 
-        [Constructable]
+        [Constructible]
         public HeroOfTheUnlovedTitleDeed()
         {
         }
@@ -34,7 +34,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1157651;  // Savior of the Demented
 
-        [Constructable]
+        [Constructible]
         public SaviorOfTheDementedTitleDeed()
         {
         }
@@ -61,7 +61,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1157650;  // Slayer of the Pumpkin King
 
-        [Constructable]
+        [Constructible]
         public SlayerOfThePumpkinKingTitleDeed()
         {
         }

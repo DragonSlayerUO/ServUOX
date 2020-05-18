@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class Poinsettia : Item
     {
-        [Constructable]
+        [Constructible]
         public Poinsettia()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Poinsettia(int hue)
             : base(0x2331)
         {
@@ -40,7 +40,7 @@ namespace Server.Items
 
     public class RedPoinsettia : Item
     {
-        [Constructable]
+        [Constructible]
         public RedPoinsettia()
             : base(0x2330)
         {
@@ -70,7 +70,7 @@ namespace Server.Items
 
     public class WhitePoinsettia : Item
     {
-        [Constructable]
+        [Constructible]
         public WhitePoinsettia()
             : base(0x2331)
         {

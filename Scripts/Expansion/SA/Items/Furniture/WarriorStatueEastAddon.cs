@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class WarriorStatueEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public WarriorStatueEastAddon()
         {
             AddComponent(new AddonComponent(0x2D12), 0, 0, 0);
@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class WarriorStatueEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public WarriorStatueEastDeed()
         {
         }

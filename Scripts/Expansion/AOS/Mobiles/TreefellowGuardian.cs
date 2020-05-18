@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a treefellow guardian corpse")]
     public class TreefellowGuardian : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TreefellowGuardian()
             : base(AIType.AI_Mystic, FightMode.Evil, 10, 1, 0.2, 0.4)
         {

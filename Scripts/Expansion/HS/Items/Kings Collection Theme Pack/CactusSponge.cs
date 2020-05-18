@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CactusSpongeAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public CactusSpongeAddon()
         {
             AddComponent(new AddonComponent(0x4C2E), 0, 0, 0);
@@ -43,7 +43,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098374;  // Cactus Sponge
 
-        [Constructable]
+        [Constructible]
         public CactusSpongeDeed()
         {
             LootType = LootType.Blessed;

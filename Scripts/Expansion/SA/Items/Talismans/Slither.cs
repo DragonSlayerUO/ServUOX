@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1114782; // Slither
 
-        [Constructable]
+        [Constructible]
         public Slither()
             : base(0x2F5B)
         {

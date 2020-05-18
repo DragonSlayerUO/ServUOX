@@ -11,7 +11,7 @@ namespace Server.Items
     {
         private static readonly TimeSpan FailDelay = TimeSpan.FromHours(2);
 
-        [Constructable]
+        [Constructible]
         public ShrineOfSingularity() : base(0x48A8)
         {
             Movable = false;

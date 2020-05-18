@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an arcane daemon corpse")]
     public class ArcaneDaemon : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ArcaneDaemon()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

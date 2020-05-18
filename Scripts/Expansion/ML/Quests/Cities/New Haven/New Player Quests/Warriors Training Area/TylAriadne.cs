@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(ThouAndThineShieldQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public TylAriadne()
             : base("Tyl Ariadne", "the Parrying Instructor")
         {

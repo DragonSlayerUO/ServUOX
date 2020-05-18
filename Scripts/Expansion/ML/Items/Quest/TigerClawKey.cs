@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TigerClawKey : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public TigerClawKey()
             : base(0x2002)
         {

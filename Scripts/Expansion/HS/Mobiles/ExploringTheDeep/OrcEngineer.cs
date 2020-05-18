@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public static List<OrcEngineer> Instances { get; set; }
 
-        [Constructable]
+        [Constructible]
         public OrcEngineer()
             : base()
         {

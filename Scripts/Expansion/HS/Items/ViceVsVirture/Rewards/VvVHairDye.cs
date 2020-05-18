@@ -19,7 +19,7 @@ namespace Server.Engines.VvV
             }
         }
 
-        [Constructable]
+        [Constructible]
         public VvVHairDye(int hue)
             : base(3838)
         {

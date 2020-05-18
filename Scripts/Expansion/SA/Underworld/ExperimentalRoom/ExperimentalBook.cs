@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113479;  // 
 
-        [Constructable]
+        [Constructible]
         public ExperimentalBook() : base(false)
         {
             ItemID = 4030;

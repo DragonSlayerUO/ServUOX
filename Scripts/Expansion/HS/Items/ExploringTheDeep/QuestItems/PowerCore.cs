@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154429;  // Power Core
 
-        [Constructable]
+        [Constructible]
         public PowerCore()
             : base(0x47E6)
         {

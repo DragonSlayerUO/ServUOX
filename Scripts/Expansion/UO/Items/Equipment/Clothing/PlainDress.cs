@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1f01, 0x1f02)]
     public class PlainDress : BaseOuterTorso
     {
-        [Constructable]
+        [Constructible]
         public PlainDress()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlainDress(int hue)
             : base(0x1F01, hue)
         {

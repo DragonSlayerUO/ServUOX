@@ -9,7 +9,7 @@ namespace Server.Mobiles
     {
         public override bool AttacksFocus => true;
 
-        [Constructable]
+        [Constructible]
         public Allosaurus() : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .2, .4)
         {
             Name = "an allosaurus";

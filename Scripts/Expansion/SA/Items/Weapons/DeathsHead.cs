@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113526;  // Death's Head
 
-        [Constructable]
+        [Constructible]
         public DeathsHead()
         {
             Hue = 1154;

@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1041340;// sweet dough
 
-        [Constructable]
+        [Constructible]
         public SweetDough()
             : base(0x103d)
         {

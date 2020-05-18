@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Brazier : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public Brazier()
             : base(0xE31)
         {

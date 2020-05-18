@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153759;  // a healthy gland
 
-        [Constructable]
+        [Constructible]
         public PlagueBeastGland()
             : base(0x1CEF)
         {

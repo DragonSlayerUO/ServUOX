@@ -411,7 +411,7 @@ namespace Server.Misc
 
     public class WeatherMap : MapItem
     {
-        [Constructable]
+        [Constructible]
         public WeatherMap()
         {
             SetDisplay(0, 0, 5119, 4095, 400, 400);

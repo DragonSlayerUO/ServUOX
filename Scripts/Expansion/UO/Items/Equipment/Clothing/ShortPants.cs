@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x152e, 0x152f)]
     public class ShortPants : BasePants
     {
-        [Constructable]
+        [Constructible]
         public ShortPants()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ShortPants(int hue)
             : base(0x152E, hue)
         {

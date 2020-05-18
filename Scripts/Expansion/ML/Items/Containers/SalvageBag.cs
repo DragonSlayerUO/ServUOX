@@ -13,13 +13,13 @@ namespace Server.Items
 
         public override int LabelNumber => 1079931;// Salvage Bag
 
-        [Constructable]
+        [Constructible]
         public SalvageBag()
             : this(Utility.RandomBlueHue())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SalvageBag(int hue)
         {
             Weight = 2.0;

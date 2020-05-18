@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159471;  // decorative dungeon stool
 
-        [Constructable]
+        [Constructible]
         public DecorativeDungeonStool()
             : base(0xA4EC)
         {

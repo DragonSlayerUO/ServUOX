@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an ice hound corpse")]
     public class IceHound : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public IceHound()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Samurai
     public class HonorCandle : CandleLong
     {
         private static readonly TimeSpan LitDuration = TimeSpan.FromSeconds(20.0);
-        [Constructable]
+        [Constructible]
         public HonorCandle()
         {
             Movable = false;

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Rend corpse")]
     public class Rend : Reptalon
     {
-        [Constructable]
+        [Constructible]
         public Rend()
         {
             Name = "Rend";

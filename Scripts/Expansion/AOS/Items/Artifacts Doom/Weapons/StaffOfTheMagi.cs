@@ -5,7 +5,7 @@ namespace Server.Items
     public class StaffOfTheMagi : BlackStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public StaffOfTheMagi()
         {
             Hue = 0x481;

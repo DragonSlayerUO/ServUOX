@@ -5,7 +5,7 @@ namespace Server.Items
     public class SpellbladeOfDefense : ElvenSpellblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SpellbladeOfDefense()
         {
             Attributes.DefendChance = 5;

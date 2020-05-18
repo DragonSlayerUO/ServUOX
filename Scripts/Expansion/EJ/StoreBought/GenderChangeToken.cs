@@ -12,7 +12,7 @@ namespace Server.Items
 
         public Type GumpType => typeof(GenderChangeConfirmGump);
 
-        [Constructable]
+        [Constructible]
         public GenderChangeToken()
             : base(0x2AAA)
         {

@@ -9,7 +9,7 @@ namespace Server.Mobiles
     [CorpseName("an acid elementals corpse")]
     public class AcidElemental : BaseCreature, IAcidCreature
     {
-        [Constructable]
+        [Constructible]
         public AcidElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

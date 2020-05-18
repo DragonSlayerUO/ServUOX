@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MeltedWax : Item
     {
-        [Constructable]
+        [Constructible]
         public MeltedWax()
             : base(0x122A)
         {

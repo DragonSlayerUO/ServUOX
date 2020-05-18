@@ -17,7 +17,7 @@ namespace Server.Items
 
         public bool Moving { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public MacawSpawner()
             : base(0x9C48)
         {
@@ -193,7 +193,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public MacawSpawner Foil { get; set; }
 
-        [Constructable]
+        [Constructible]
         public MacawNest()
         {
             AddComponent(new AddonComponent(3235), 0, 0, 0);

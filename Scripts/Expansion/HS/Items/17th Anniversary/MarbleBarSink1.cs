@@ -6,13 +6,13 @@
         private static readonly int vItemID = 0x99CA;
         private static readonly int fItemID = 0x9A14;
 
-        [Constructable]
+        [Constructible]
         public MarbelBarSink1()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MarbelBarSink1(bool filled)
             : base((filled) ? MarbelBarSink1.fItemID : MarbelBarSink1.vItemID, filled)
         {

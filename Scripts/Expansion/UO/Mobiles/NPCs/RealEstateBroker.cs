@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
         private DateTime m_NextCheckPack;
-        [Constructable]
+        [Constructible]
         public RealEstateBroker()
             : base("the real estate broker")
         {

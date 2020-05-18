@@ -96,7 +96,7 @@ namespace Server.Mobiles
     [CorpseName("a quartz elemental corpse")]
     public class QuartzElemental : ShameGuardian
     {
-        [Constructable]
+        [Constructible]
         public QuartzElemental()
             : base(AIType.AI_Melee)
         {
@@ -166,7 +166,7 @@ namespace Server.Mobiles
     [CorpseName("a flame elemental corpse")]
     public class FlameElemental : ShameGuardian, IAuraCreature
     {
-        [Constructable]
+        [Constructible]
         public FlameElemental()
             : base(AIType.AI_Mage)
         {
@@ -249,7 +249,7 @@ namespace Server.Mobiles
     [CorpseName("a wind elemental corpse")]
     public class WindElemental : ShameGuardian
     {
-        [Constructable]
+        [Constructible]
         public WindElemental()
             : base(AIType.AI_Mage)
         {

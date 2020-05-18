@@ -61,13 +61,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public Mailbox()
             : this(0x4142)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Mailbox(int id)
             : base(id)
         {

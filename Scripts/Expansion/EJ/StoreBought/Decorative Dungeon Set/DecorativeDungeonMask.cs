@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159473;  // decorative dungeon mask
 
-        [Constructable]
+        [Constructible]
         public DecorativeDungeonMask()
             : base(0xA4EF)
         {

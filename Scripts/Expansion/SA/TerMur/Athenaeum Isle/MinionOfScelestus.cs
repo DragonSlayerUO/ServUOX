@@ -9,7 +9,7 @@ namespace Server.Mobiles
     {
         private static readonly int MaxWanderDistance = 45;
 
-        [Constructable]
+        [Constructible]
         public MinionOfScelestus()
             : base(AIType.AI_Mage, FightMode.Weakest, 10, 1, 0.2, 0.4)
         {

@@ -9,7 +9,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(JourneyToTheAthenaeumIsleQuest) };
 
-        [Constructable]
+        [Constructible]
         public QueenZhah() : base("Zhah", "the Gargoyle Queen")
         {
         }

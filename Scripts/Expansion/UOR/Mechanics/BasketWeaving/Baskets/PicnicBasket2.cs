@@ -4,7 +4,7 @@ using Server.Items;
 
 public class PicnicBasket2 : BaseContainer
 {
-    [Constructable]
+    [Constructible]
     public PicnicBasket2()
         : base(0xE7A)
     {

@@ -15,12 +15,12 @@ namespace Server.Items
         private readonly int m_MinDamage;
         private readonly Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public ExplosiveGoo() : this(TimeSpan.FromSeconds(10.0), 5, 10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ExplosiveGoo(TimeSpan duration, int minDamage, int maxDamage)
             : base(0x122A)
         {

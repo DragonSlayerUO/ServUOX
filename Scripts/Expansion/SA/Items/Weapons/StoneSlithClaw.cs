@@ -5,7 +5,7 @@ namespace Server.Items
     public class StoneSlithClaw : Cyclone
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public StoneSlithClaw()
         {
             Hue = 1150;

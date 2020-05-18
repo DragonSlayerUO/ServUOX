@@ -5,7 +5,7 @@ namespace Server.Items
     public class PhillipsWoodenSteed : MonsterStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PhillipsWoodenSteed()
             : base(MonsterStatuetteType.PhillipsWoodenSteed)
         {

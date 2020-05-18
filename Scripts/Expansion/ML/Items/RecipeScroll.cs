@@ -13,7 +13,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RecipeScroll(int recipeID)
             : base(0x2831)
         {
@@ -125,7 +125,7 @@ namespace Server.Items
 
     public class DoomRecipeScroll : RecipeScroll
     {
-        [Constructable]
+        [Constructible]
         public DoomRecipeScroll()
             : base(Utility.RandomList(355, 356, 456, 585))
         {

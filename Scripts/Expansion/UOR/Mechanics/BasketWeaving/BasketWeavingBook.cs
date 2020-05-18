@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153529;  // Making valuables with Basket Weaving
 
-        [Constructable]
+        [Constructible]
         public BasketWeavingBook()
             : base(0xFBE)
         {

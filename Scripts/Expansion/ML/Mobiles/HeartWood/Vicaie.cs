@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class Vicaie : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Vicaie()
             : base("the Wise")
         {

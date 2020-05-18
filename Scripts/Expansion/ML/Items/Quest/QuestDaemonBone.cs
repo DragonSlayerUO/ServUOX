@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Haven
 {
     public class QuestDaemonBone : QuestItem
     {
-        [Constructable]
+        [Constructible]
         public QuestDaemonBone()
             : base(0xF80)
         {

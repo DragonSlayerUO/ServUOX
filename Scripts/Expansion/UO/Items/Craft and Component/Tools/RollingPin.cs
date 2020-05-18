@@ -4,14 +4,14 @@ namespace Server.Items
 {
     public class RollingPin : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public RollingPin()
             : base(0x1043)
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public RollingPin(int uses)
             : base(uses, 0x1043)
         {

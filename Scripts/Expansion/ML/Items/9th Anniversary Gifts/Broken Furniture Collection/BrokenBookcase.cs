@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class BrokenBookcaseAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrokenBookcaseAddon()
             : base()
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class BrokenBookcaseDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BrokenBookcaseDeed()
             : base()
         {

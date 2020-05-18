@@ -5,7 +5,7 @@ namespace Server.Items
     public class RingOfTheVile : GoldRing
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RingOfTheVile()
         {
             Hue = 0x4F7;

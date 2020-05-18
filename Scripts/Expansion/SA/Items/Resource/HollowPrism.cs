@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HollowPrism : Item
     {
-        [Constructable]
+        [Constructible]
         public HollowPrism()
             : base(0x2F5D)
         {

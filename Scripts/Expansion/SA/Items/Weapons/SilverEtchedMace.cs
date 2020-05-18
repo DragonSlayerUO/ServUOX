@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SilverEtchedMace : DiamondMace
     {
-        [Constructable]
+        [Constructible]
         public SilverEtchedMace()
         {
             Slayer = SlayerName.Exorcism;

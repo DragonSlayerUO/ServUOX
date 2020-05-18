@@ -50,7 +50,7 @@ namespace Server.Items
     {
         private bool m_IsRewardItem;
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public WallBanner(int bannerID)
             : base()
         {
@@ -263,7 +263,7 @@ namespace Server.Items
     {
         private int m_BannerID;
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public WallBannerDeed()
             : base()
         {

@@ -8,7 +8,7 @@ namespace Server.Items
         {
             0x1BF, 0x1C0, 0x1C1, 0x1C2
         };
-        [Constructable]
+        [Constructible]
         public PlagueBeastStatuette()
             : base(0x2613)
         {

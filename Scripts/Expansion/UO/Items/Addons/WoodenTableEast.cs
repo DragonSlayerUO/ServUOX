@@ -5,7 +5,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new WoodenTableEastDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public WoodenTableEastAddon()
         {
             AddComponent(new AddonComponent(0x4CCB), 0, 0, 0);
@@ -35,7 +35,7 @@ namespace Server.Items
         public override BaseAddon Addon => new WoodenTableEastAddon();
         public override int LabelNumber => 1154157;  // Wooden Table (East)
 
-        [Constructable]
+        [Constructible]
         public WoodenTableEastDeed()
         {
         }

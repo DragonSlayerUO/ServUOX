@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x908, 0x4075)]
     public class GargishTalwar : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public GargishTalwar()
             : base(0x908)
         {

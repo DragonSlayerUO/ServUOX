@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1123474;  // Crystal Skull
 
-        [Constructable]
+        [Constructible]
         public CrystalSkull()
             : base(0x9A1A)
         {

@@ -37,7 +37,7 @@ namespace Server.Mobiles
 
         public override bool NoGoodies => true;
 
-        [Constructable]
+        [Constructible]
         public Osiredon()
             : this(null)
         {

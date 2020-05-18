@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class CloseHelm : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public CloseHelm()
             : base(0x1408)
         {

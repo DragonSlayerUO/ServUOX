@@ -14,7 +14,7 @@ namespace Server.Items
         public int NorthID => Burning ? 0x4C41 : 0x4C40;
         public int WestID => Burning ? 0x4C43 : 0x4C42;
 
-        [Constructable]
+        [Constructible]
         public DragonLantern()
             : base(0x4C40)
         {
@@ -83,7 +83,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098392;  // dragon lantern
 
-        [Constructable]
+        [Constructible]
         public DragonLanternDeed()
             : base(0x14F0)
         {

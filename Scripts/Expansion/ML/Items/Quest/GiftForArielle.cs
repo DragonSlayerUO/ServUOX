@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GiftForArielle : Item
     {
-        [Constructable]
+        [Constructible]
         public GiftForArielle()
             : base(0x1882)
         {

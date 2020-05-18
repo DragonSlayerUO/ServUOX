@@ -5,7 +5,7 @@ namespace Server.Items
     public class BrambleCoat : WoodlandChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BrambleCoat()
         {
             Hue = 0x1;

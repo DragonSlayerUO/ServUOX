@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x26BE, 0x26C8)]
     public class Pike : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public Pike()
             : base(0x26BE)
         {

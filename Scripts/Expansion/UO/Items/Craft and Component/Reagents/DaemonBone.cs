@@ -5,13 +5,13 @@ namespace Server.Items
     // TODO: Commodity?
     public class DaemonBone : BaseReagent
     {
-        [Constructable]
+        [Constructible]
         public DaemonBone()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DaemonBone(int amount)
             : base(0xF80, amount)
         {

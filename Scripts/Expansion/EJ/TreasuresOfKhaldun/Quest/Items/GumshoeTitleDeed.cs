@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158638;  // Gumpshoe
 
-        [Constructable]
+        [Constructible]
         public GumshoeTitleDeed()
         {
         }

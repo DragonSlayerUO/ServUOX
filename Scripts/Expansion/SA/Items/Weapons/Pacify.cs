@@ -5,7 +5,7 @@ namespace Server.Items
     public class Pacify : Pike
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Pacify()
         {
             Hue = 0x835;

@@ -13,7 +13,7 @@ namespace Server.Items
         private string[] m_Topic;
         private List<Mobile> m_Yes;
         private List<Mobile> m_No;
-        [Constructable]
+        [Constructible]
         public BallotBox()
             : base(0x9A8)
         {
@@ -371,7 +371,7 @@ namespace Server.Items
 
     public class BallotBoxDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BallotBoxDeed()
         {
         }

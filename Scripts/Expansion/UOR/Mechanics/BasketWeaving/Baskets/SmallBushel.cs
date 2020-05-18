@@ -4,7 +4,7 @@ using Server.Items;
 
 public class SmallBushel : BaseContainer
 {
-    [Constructable]
+    [Constructible]
     public SmallBushel()
         : base(0x09B1)
     {

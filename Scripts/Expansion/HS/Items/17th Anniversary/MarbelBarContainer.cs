@@ -5,7 +5,7 @@ namespace Server.Items
     [Furniture]
     public class MarbelBarContainer : LockableContainer, IEngravable
     {
-        [Constructable]
+        [Constructible]
         public MarbelBarContainer()
             : base(0x99C9)
         {

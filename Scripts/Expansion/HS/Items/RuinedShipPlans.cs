@@ -28,12 +28,12 @@ namespace Server.Items
 
         public override int LabelNumber => 1116784;
 
-        [Constructable]
+        [Constructible]
         public RuinedShipPlans() : this((PlanType)Utility.RandomMinMax(1, 8))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RuinedShipPlans(PlanType type) : base(5360)
         {
             m_PlanType = type;

@@ -25,7 +25,7 @@ namespace Server.Items
 
         public override BaseAddonDeed Deed => null;
 
-        [Constructable]
+        [Constructible]
         public KhaldunCampAddon()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

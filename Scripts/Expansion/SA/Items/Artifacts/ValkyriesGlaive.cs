@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113531;  // Valkyrie's Glaive
 
-        [Constructable]
+        [Constructible]
         public ValkyriesGlaive()
         {
             Attributes.SpellChanneling = 1;

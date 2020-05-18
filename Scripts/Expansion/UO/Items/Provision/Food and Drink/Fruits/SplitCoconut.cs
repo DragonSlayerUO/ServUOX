@@ -3,13 +3,13 @@ namespace Server.Items
 {
     public class SplitCoconut : Food
     {
-        [Constructable]
+        [Constructible]
         public SplitCoconut()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SplitCoconut(int amount)
             : base(amount, 0x1725)
         {

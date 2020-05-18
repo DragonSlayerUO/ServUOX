@@ -26,7 +26,7 @@ namespace Server.Items
         public override int DefaultGumpID => 1156;
         public override int DefaultDropSound => 66;
 
-        [Constructable]
+        [Constructible]
         public Incubator()
             : base(0x407C)
         {

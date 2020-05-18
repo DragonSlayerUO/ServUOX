@@ -12,7 +12,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public Yar() : base("Yar", "the Barrab Tinker")
         {
         }
@@ -64,7 +64,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public Carroll() : base("Carroll", "the Gemologist")
         {
         }
@@ -113,7 +113,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public Bront() : base("Bront", "the Captain")
         {
         }
@@ -162,7 +162,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public Eriathwen() : base("Eriathwen", "the Golem Maker")
         {
         }
@@ -212,7 +212,7 @@ namespace Server.Mobiles
             m_SBInfos.Add(new InternalSB());
         }
 
-        [Constructable]
+        [Constructible]
         public CollectorOfOddities() : base("the collector of oddities")
         {
         }
@@ -295,7 +295,7 @@ namespace Server.Mobiles
             _SBInfos.Add(new InternalSB());
         }
 
-        [Constructable]
+        [Constructible]
         public EllieRafkin() : base("Ellie Rafkin", "the Professor")
         {
         }
@@ -379,7 +379,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public Foxx() : base("Foxx", "the Lieutenant")
         {
         }
@@ -431,7 +431,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public Yero() : base("Yero", "the Gambler")
         {
         }
@@ -475,7 +475,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public Alida() : base("Alida", "the Gardener")
         {
         }

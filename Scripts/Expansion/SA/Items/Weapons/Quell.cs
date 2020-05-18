@@ -5,7 +5,7 @@ namespace Server.Items
     public class Quell : Bardiche
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Quell()
         {
             Hue = 0x225;

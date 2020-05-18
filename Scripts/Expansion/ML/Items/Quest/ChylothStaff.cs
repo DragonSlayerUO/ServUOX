@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Doom
 {
     public class ChylothStaff : BlackStaff
     {
-        [Constructable]
+        [Constructible]
         public ChylothStaff()
         {
             Hue = 0x482;

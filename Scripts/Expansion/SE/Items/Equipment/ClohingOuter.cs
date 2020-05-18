@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x2799, 0x27E4)]
     public class Kamishimo : BaseOuterTorso
     {
-        [Constructable]
+        [Constructible]
         public Kamishimo()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Kamishimo(int hue)
             : base(0x2799, hue)
         {
@@ -41,13 +41,13 @@ namespace Server.Items
     [Flipable(0x279C, 0x27E7)]
     public class HakamaShita : BaseOuterTorso
     {
-        [Constructable]
+        [Constructible]
         public HakamaShita()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HakamaShita(int hue)
             : base(0x279C, hue)
         {
@@ -77,13 +77,13 @@ namespace Server.Items
     [Flipable(0x2782, 0x27CD)]
     public class MaleKimono : BaseOuterTorso
     {
-        [Constructable]
+        [Constructible]
         public MaleKimono()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaleKimono(int hue)
             : base(0x2782, hue)
         {
@@ -115,13 +115,13 @@ namespace Server.Items
     [Flipable(0x2783, 0x27CE)]
     public class FemaleKimono : BaseOuterTorso
     {
-        [Constructable]
+        [Constructible]
         public FemaleKimono()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleKimono(int hue)
             : base(0x2783, hue)
         {

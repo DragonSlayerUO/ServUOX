@@ -127,7 +127,7 @@ namespace Server.Items
         public override bool HandlesOnMovement => true;
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public PublicMoongate()
             : base(0xF6C)
         {

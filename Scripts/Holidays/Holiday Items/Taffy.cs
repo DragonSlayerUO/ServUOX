@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Taffy : CandyCane
     {
-        [Constructable]
+        [Constructible]
         public Taffy()
             : this(1)
         {

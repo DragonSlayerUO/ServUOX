@@ -129,7 +129,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116402;
 
-        [Constructable]
+        [Constructible]
         public Amberjack() : base(17606)
         {
         }
@@ -153,7 +153,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116396;
 
-        [Constructable]
+        [Constructible]
         public BlackSeabass()
             : base(2510)
         {
@@ -178,7 +178,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116411;
 
-        [Constructable]
+        [Constructible]
         public BlueGrouper()
             : base(17158)
         {
@@ -203,7 +203,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116406;
 
-        [Constructable]
+        [Constructible]
         public BlueFish()
             : base(2508)
         {
@@ -228,7 +228,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116417;
 
-        [Constructable]
+        [Constructible]
         public BluegillSunfish()
             : base(17158)
         {
@@ -253,7 +253,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116409;
 
-        [Constructable]
+        [Constructible]
         public Bonefish()
             : base(17603)
         {
@@ -278,7 +278,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116405;
 
-        [Constructable]
+        [Constructible]
         public Bonito()
             : base(17155)
         {
@@ -303,7 +303,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116415;
 
-        [Constructable]
+        [Constructible]
         public BrookTrout()
             : base(2508)
         {
@@ -328,7 +328,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116395;
 
-        [Constructable]
+        [Constructible]
         public CapeCod()
             : base(17158)
         {
@@ -353,7 +353,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116408;
 
-        [Constructable]
+        [Constructible]
         public CaptainSnook()
             : base(17605)
         {
@@ -378,7 +378,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116400;
 
-        [Constructable]
+        [Constructible]
         public Cobia()
             : base(17155)
         {
@@ -403,7 +403,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116432;
 
-        [Constructable]
+        [Constructible]
         public CragSnapper()
             : base(17604)
         {
@@ -428,7 +428,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116427;
 
-        [Constructable]
+        [Constructible]
         public CutThroatTrout()
             : base(17155)
         {
@@ -453,7 +453,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116431;
 
-        [Constructable]
+        [Constructible]
         public DarkFish()
             : base(17159)
         {
@@ -478,7 +478,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116425;
 
-        [Constructable]
+        [Constructible]
         public DemonTrout()
             : base(17154)
         {
@@ -503,7 +503,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116429;
 
-        [Constructable]
+        [Constructible]
         public DrakeFish()
             : base(17605)
         {
@@ -528,7 +528,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116424;
 
-        [Constructable]
+        [Constructible]
         public DungeonChub()
             : base(17158)
         {
@@ -553,7 +553,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116399;
 
-        [Constructable]
+        [Constructible]
         public GraySnapper()
             : base(17159)
         {
@@ -578,7 +578,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116421;
 
-        [Constructable]
+        [Constructible]
         public GreenCatfish()
             : base(17606)
         {
@@ -603,7 +603,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116428;
 
-        [Constructable]
+        [Constructible]
         public GrimCisco()
             : base(17603)
         {
@@ -628,7 +628,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116394;
 
-        [Constructable]
+        [Constructible]
         public Haddock()
             : base(2508)
         {
@@ -653,7 +653,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116433;
 
-        [Constructable]
+        [Constructible]
         public InfernalTuna()
             : base(17159)
         {
@@ -678,7 +678,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116423;
 
-        [Constructable]
+        [Constructible]
         public KokaneeSalmon()
             : base(17155)
         {
@@ -703,7 +703,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116435;
 
-        [Constructable]
+        [Constructible]
         public LurkerFish()
             : base(2510)
         {
@@ -728,7 +728,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116401;
 
-        [Constructable]
+        [Constructible]
         public MahiMahi()
             : base(17606)
         {
@@ -753,7 +753,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116430;
 
-        [Constructable]
+        [Constructible]
         public OrcBass()
             : base(2508)
         {
@@ -778,7 +778,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116414;
 
-        [Constructable]
+        [Constructible]
         public PikeFish()
             : base(17604)
         {
@@ -803,7 +803,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116412;
 
-        [Constructable]
+        [Constructible]
         public PumpkinSeedSunfish()
             : base(17159)
         {
@@ -828,7 +828,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116416;
 
-        [Constructable]
+        [Constructible]
         public RainbowTrout()
             : base(17159)
         {
@@ -853,7 +853,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116410;
 
-        [Constructable]
+        [Constructible]
         public RedDrum()
             : base(17159)
         {
@@ -878,7 +878,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116407;
 
-        [Constructable]
+        [Constructible]
         public RedGrouper()
             : base(17159)
         {
@@ -903,7 +903,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116398;
 
-        [Constructable]
+        [Constructible]
         public RedSnook()
             : base(2509)
         {
@@ -928,7 +928,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116418;
 
-        [Constructable]
+        [Constructible]
         public RedbellyBream()
             : base(17159)
         {
@@ -953,7 +953,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116403;
 
-        [Constructable]
+        [Constructible]
         public Shad()
             : base(17159)
         {
@@ -978,7 +978,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116419;
 
-        [Constructable]
+        [Constructible]
         public SmallmouthBass()
             : base(2509)
         {
@@ -1003,7 +1003,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116426;
 
-        [Constructable]
+        [Constructible]
         public SnaggletoothBass()
             : base(2511)
         {
@@ -1028,7 +1028,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116397;
 
-        [Constructable]
+        [Constructible]
         public Tarpon()
             : base(17603)
         {
@@ -1053,7 +1053,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116434;
 
-        [Constructable]
+        [Constructible]
         public TormentedPike()
             : base(17603)
         {
@@ -1078,7 +1078,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116420;
 
-        [Constructable]
+        [Constructible]
         public UncommonShiner()
             : base(2510)
         {
@@ -1103,7 +1103,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116422;
 
-        [Constructable]
+        [Constructible]
         public Walleye()
             : base(2511)
         {
@@ -1128,7 +1128,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116413;
 
-        [Constructable]
+        [Constructible]
         public YellowPerch()
             : base(17155)
         {
@@ -1153,7 +1153,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116404;
 
-        [Constructable]
+        [Constructible]
         public YellowfinTuna()
             : base(17604)
         {

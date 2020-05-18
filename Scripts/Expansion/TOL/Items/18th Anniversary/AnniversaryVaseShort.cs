@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156148;  // Short 18th Anniversary Vase
 
-        [Constructable]
+        [Constructible]
         public AnniversaryVaseShort() : base(0x9BCA)
         {
         }

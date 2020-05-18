@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1154372;  // Lune Rouge
         public override SetItem SetID => SetItem.Luck2;
         public override int Pieces => 2;
-        [Constructable]
+        [Constructible]
         public LuneRouge() : base()
         {
             Weight = 1.0;

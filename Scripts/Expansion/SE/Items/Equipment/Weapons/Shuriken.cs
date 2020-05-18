@@ -9,13 +9,13 @@ namespace Server.Items
         private int m_UsesRemaining;
         private Poison m_Poison;
         private int m_PoisonCharges;
-        [Constructable]
+        [Constructible]
         public Shuriken()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Shuriken(int amount)
             : base(0x27AC)
         {

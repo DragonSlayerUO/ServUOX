@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LargeMarbleDeed : HouseDeed
     {
-        [Constructable]
+        [Constructible]
         public LargeMarbleDeed()
             : base(0x96, new Point3D(-4, 7, 0))
         {

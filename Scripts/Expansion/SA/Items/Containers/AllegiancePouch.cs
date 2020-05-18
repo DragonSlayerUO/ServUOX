@@ -17,7 +17,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1113953;  //Allegiance Pouch
 
-        [Constructable]
+        [Constructible]
         public AllegiancePouch()
         {
             Hue = 2958;

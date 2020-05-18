@@ -5,7 +5,7 @@ namespace Server.Items
     public class TrueWarCleaver : WarCleaver
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TrueWarCleaver()
         {
             Attributes.WeaponDamage = 4;

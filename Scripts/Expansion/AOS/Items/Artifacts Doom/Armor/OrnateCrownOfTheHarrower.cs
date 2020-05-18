@@ -5,7 +5,7 @@ namespace Server.Items
     public class OrnateCrownOfTheHarrower : BoneHelm
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public OrnateCrownOfTheHarrower()
         {
             Hue = 0x4F6;

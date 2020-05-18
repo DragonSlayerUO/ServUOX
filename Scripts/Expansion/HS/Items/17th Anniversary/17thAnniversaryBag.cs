@@ -5,13 +5,13 @@ namespace Server.Items
     public class Anniversary17thBag : Bag
     {
         public override int LabelNumber { get { return 1155416; } }/* 17th Anniversary Gift Bag*/
-        [Constructable]
+        [Constructible]
         public Anniversary17thBag()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Anniversary17thBag(int amount)
         {
         }

@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1016105;// Easter Eggs
 
-        [Constructable]
+        [Constructible]
         public EasterEggs()
             : base(0x9B5, 15)
         {

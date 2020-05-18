@@ -16,7 +16,7 @@ namespace Server.Items
         public override int RemoveMessage => 1155690;   // You remove a Power Scroll and put it in your pack.
         public override int GumpTitle => 1155689;   // Power Scrolls
 
-        [Constructable]
+        [Constructible]
         public PowerScrollBook()
             : base(0x9A95)
         {

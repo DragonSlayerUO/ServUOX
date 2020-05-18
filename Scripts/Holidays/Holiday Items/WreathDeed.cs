@@ -8,13 +8,13 @@ namespace Server.Items
 {
     public class WreathAddon : Item, IDyable, IAddon
     {
-        [Constructable]
+        [Constructible]
         public WreathAddon()
             : this(Utility.RandomDyedHue())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WreathAddon(int hue)
             : base(0x232C)
         {
@@ -172,13 +172,13 @@ namespace Server.Items
     [Flipable(0x14F0, 0x14EF)]
     public class WreathDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public WreathDeed()
             : this(Utility.RandomDyedHue())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WreathDeed(int hue)
             : base(0x14F0)
         {

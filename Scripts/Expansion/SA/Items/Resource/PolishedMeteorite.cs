@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158693;  // polished meteorite
 
-        [Constructable]
+        [Constructible]
         public PolishedMeteorite()
             : base(41422 + Utility.Random(12))
         {

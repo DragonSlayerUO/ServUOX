@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112811;  // power crystal
 
-        [Constructable]
+        [Constructible]
         public PowerCrystal()
             : base(0x1F1C)
         {

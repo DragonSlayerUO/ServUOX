@@ -10,7 +10,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.RotWorm")]
     public class Rotworm : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Rotworm()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.25, 0.5)
         {

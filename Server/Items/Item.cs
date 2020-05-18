@@ -306,7 +306,7 @@ namespace Server
             Timer.DelayCall(EventSink.InvokeItemCreated, new ItemCreatedEventArgs(this));
         }
 
-        [Constructable]
+        [Constructible]
         public Item(int itemID)
             : this()
         {

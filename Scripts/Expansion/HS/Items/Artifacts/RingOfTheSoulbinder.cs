@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116620;
 
-        [Constructable]
+        [Constructible]
         public RingOfTheSoulbinder()
         {
             Hue = 288;

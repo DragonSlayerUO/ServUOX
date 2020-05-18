@@ -32,7 +32,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public CrystalBallOfKnowledge()
             : base(0xE2E)
         {

@@ -8,13 +8,13 @@ namespace Server.Items
     public class PersonalAttendantDeed : Item
     {
         private Mobile m_Owner;
-        [Constructable]
+        [Constructible]
         public PersonalAttendantDeed()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PersonalAttendantDeed(Mobile owner)
             : base(0x14F0)
         {

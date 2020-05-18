@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecorativeTopiary : Item
     {
-        [Constructable]
+        [Constructible]
         public DecorativeTopiary()
             : base(0x2378)
         {

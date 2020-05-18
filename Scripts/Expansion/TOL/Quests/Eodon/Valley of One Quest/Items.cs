@@ -17,7 +17,7 @@ namespace Server.Items
         public override int LabelNumber => 1156516;   // Orders from King Blackthorn to Sir Geoffrey
         public override int Lifespan => 360;
 
-        [Constructable]
+        [Constructible]
         public KingBlackthornOrders()
             : base(8792)
         {
@@ -44,7 +44,7 @@ namespace Server.Items
     {
         public override int LabelNumber { get { return 1151166; } }  // lava rock
 
-        [Constructable]
+        [Constructible]
         public LavaStone()
             : base(39638)
         {
@@ -71,7 +71,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156467;   // Mosaic of Heluzz
 
-        [Constructable]
+        [Constructible]
         public MosaicOfHeluzz() : base(39638)
         {
             Hue = 2952;
@@ -99,7 +99,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156468;   // Totem Of Faboz
 
-        [Constructable]
+        [Constructible]
         public TotemOfFabozz() : base(40092)
         {
             Hue = 2576;
@@ -127,7 +127,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156469;   // Fires of Kukuzz
 
-        [Constructable]
+        [Constructible]
         public FiresOfKukuzz() : base(40014)
         {
         }
@@ -154,7 +154,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156470;   // The Skull of Motazz
 
-        [Constructable]
+        [Constructible]
         public SkullOfMotazz() : base(40051)
         {
             Hue = 2500;
@@ -182,7 +182,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156471;   // The Skull of Aphazz
 
-        [Constructable]
+        [Constructible]
         public SkullOfAphazz() : base(8707)
         {
         }
@@ -218,12 +218,12 @@ namespace Server.Items
 
         public RugHue RugType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public TigerRugAddon() : this(RugHue.Regular, true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TigerRugAddon(RugHue type, bool south)
         {
             RugType = type;
@@ -312,12 +312,12 @@ namespace Server.Items
         public RugHue RugType { get; set; }
         public bool SouthFacing { get; set; }
 
-        [Constructable]
+        [Constructible]
         public TigerRugAddonDeed() : this(RugHue.Regular)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TigerRugAddonDeed(RugHue type)
         {
             RugType = type;
@@ -370,7 +370,7 @@ namespace Server.Items
 
         public BananaHoardSize BananaHoardSize { get; set; }
 
-        [Constructable]
+        [Constructible]
         public BananaHoardAddon()
         {
         }
@@ -430,7 +430,7 @@ namespace Server.Items
 
         public BananaHoardSize BananaHoardSize { get; set; }
 
-        [Constructable]
+        [Constructible]
         public BananaHoardAddonDeed()
         {
         }
@@ -505,7 +505,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition("Dinosaur Hunter");
 
-        [Constructable]
+        [Constructible]
         public DinosaurHunterRewardTitleDeed()
         {
         }
@@ -532,7 +532,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1124033;   // lava rock display
 
-        [Constructable]
+        [Constructible]
         public LavaRockDisplay() : base(40009)
         {
             Weight = 5.0;
@@ -560,7 +560,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new DragonTurtleFountainAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public DragonTurtleFountainAddon(bool south)
         {
             if (south)
@@ -604,7 +604,7 @@ namespace Server.Items
 
         public bool SouthFacing { get; set; }
 
-        [Constructable]
+        [Constructible]
         public DragonTurtleFountainAddonDeed()
         {
         }
@@ -643,7 +643,7 @@ namespace Server.Items
     {
         public bool HasUsed { get; set; }
 
-        [Constructable]
+        [Constructible]
         public PetTigerCubStatuette() : base(MonsterStatuetteType.TigerCub)
         {
             IsRewardItem = false;
@@ -710,7 +710,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156581;   // A bag with a unique treasure
 
-        [Constructable]
+        [Constructible]
         public UniqueTreasureBag()
         {
             switch (Utility.Random(6))

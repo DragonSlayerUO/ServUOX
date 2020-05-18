@@ -8,13 +8,13 @@ namespace Server.Items
         public override CraftSystem CraftSystem => DefInscription.CraftSystem;
         public override int LabelNumber => 1044168; // scribe's pen
 
-        [Constructable]
+        [Constructible]
         public ScribesPen()
             : base(0x0FBF)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ScribesPen(int uses)
             : base(uses, 0x0FBF)
         {

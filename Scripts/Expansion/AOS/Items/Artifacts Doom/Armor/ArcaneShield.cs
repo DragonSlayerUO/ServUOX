@@ -5,7 +5,7 @@ namespace Server.Items
     public class ArcaneShield : WoodenKiteShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ArcaneShield()
         {
             Hue = 0x556;

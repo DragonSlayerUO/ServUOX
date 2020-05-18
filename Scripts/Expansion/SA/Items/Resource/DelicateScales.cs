@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class DelicateScales : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public DelicateScales()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DelicateScales(int amount)
             : base(0x573A)
         {

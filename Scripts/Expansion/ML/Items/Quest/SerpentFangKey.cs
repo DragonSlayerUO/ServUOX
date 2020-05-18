@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SerpentFangKey : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public SerpentFangKey()
             : base(0x2002)
         {

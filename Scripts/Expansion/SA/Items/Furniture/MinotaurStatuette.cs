@@ -8,7 +8,7 @@ namespace Server.Items
         {
             0x596, 0x597, 0x598, 0x599, 0x59A, 0x59B, 0x59C, 0x59D
         };
-        [Constructable]
+        [Constructible]
         public MinotaurStatuette()
             : base(0x2D89)
         {

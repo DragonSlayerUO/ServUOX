@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class StarSapphire : Item, IGem
     {
-        [Constructable]
+        [Constructible]
         public StarSapphire()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StarSapphire(int amount)
             : base(0x0F0F)
         {

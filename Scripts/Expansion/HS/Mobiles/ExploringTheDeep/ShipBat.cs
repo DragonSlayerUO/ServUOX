@@ -4,7 +4,7 @@ namespace Server.Mobiles
     [CorpseName("a ship bat corpse")]
     public class ShipBat : VampireBat
     {
-        [Constructable]
+        [Constructible]
         public ShipBat()
             : base()
         {

@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override bool ConvertsMageArmor => true;
 
-        [Constructable]
+        [Constructible]
         public Gnosos()
             : base("Master Gnosos", "the Necromancer")
         {

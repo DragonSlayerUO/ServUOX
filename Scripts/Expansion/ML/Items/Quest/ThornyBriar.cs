@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ThornyBriar : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public ThornyBriar()
             : base(Utility.RandomList(0x3020, 0x3021, 0x3022, 0x3023, 0x3024))
         {

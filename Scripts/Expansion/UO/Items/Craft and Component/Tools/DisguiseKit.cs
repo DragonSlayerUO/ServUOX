@@ -13,7 +13,7 @@ namespace Server.Items
 {
     public class DisguiseKit : Item
     {
-        [Constructable]
+        [Constructible]
         public DisguiseKit()
             : base(0xE05)
         {

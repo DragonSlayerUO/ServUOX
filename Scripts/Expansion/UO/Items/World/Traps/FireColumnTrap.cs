@@ -7,7 +7,7 @@ namespace Server.Items
         private int m_MinDamage;
         private int m_MaxDamage;
         private bool m_WarningFlame;
-        [Constructable]
+        [Constructible]
         public FireColumnTrap()
             : base(0x1B71)
         {

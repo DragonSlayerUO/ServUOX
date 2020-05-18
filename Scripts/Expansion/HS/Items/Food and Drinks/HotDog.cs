@@ -5,13 +5,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125201;  // hot dog
 
-        [Constructable]
+        [Constructible]
         public HotDog()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HotDog(int amount)
             : base(amount, 0xA0D8)
         {

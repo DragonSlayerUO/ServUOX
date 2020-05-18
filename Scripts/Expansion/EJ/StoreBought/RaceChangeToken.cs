@@ -14,7 +14,7 @@ namespace Server.Items
         public TextDefinition ItemName => 1113656;  // race change
 
         public Type GumpType => typeof(RaceChangeConfirmGump);
-        [Constructable]
+        [Constructible]
         public RaceChangeToken()
             : base(0x2AAA)
         {

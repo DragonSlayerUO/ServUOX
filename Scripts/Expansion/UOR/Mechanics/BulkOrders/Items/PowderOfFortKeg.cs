@@ -14,13 +14,13 @@ namespace Server.Items
 
         public override int LabelNumber => 1157221;  // A specially lined keg for powder of fortification.
 
-        [Constructable]
+        [Constructible]
         public PowderOfFortKeg()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PowderOfFortKeg(int uses)
             : base(0x1940)
         {

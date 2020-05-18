@@ -22,13 +22,13 @@ namespace Server.Items
 
         public override string DefaultName => "a mask of orcish kin";
 
-        [Constructable]
+        [Constructible]
         public OrcishKinMask()
             : this(0x8A4)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public OrcishKinMask(int hue)
             : base(0x141B, hue)
         {
@@ -96,13 +96,13 @@ namespace Server.Items
             return false;
         }
 
-        [Constructable]
+        [Constructible]
         public OrcMask()
             : this(0x8A4)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public OrcMask(int hue)
             : base(0x141B, hue)
         {

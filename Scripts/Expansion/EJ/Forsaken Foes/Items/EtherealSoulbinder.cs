@@ -67,7 +67,7 @@ namespace Server.Items
                 return 1159172; // Mythical
         }
 
-        [Constructable]
+        [Constructible]
         public EtherealSoulbinder()
             : base(0xA1E7)
         {

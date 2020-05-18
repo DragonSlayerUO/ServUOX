@@ -5,7 +5,7 @@ namespace Server.Items
     public class OrnamentOfTheMagician : GoldBracelet
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public OrnamentOfTheMagician()
         {
             Hue = 0x554;

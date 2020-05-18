@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ChairInAGhostCostume : Item
     {
-        [Constructable]
+        [Constructible]
         public ChairInAGhostCostume()
             : base(0x3F26)
         {

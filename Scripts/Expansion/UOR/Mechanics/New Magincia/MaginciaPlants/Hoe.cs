@@ -10,7 +10,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150482;  // hoe
 
-        [Constructable]
+        [Constructible]
         public Hoe()
             : base(0xE86)
         {

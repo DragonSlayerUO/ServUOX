@@ -5,7 +5,7 @@ namespace Server.Items
     public class TwinklingScimitar : RadiantScimitar
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TwinklingScimitar()
         {
             Attributes.DefendChance = 6;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ManaDrainWand : BaseWand
     {
-        [Constructable]
+        [Constructible]
         public ManaDrainWand()
             : base(WandEffect.ManaDraining, 5, 30)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x900, 0x4071)]
     public class StoneWarSword : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public StoneWarSword()
             : base(0x900)
         {

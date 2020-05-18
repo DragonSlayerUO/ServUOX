@@ -149,7 +149,7 @@ namespace Server.Items
 			, {12906, -13, -21, 0}, {4971, -14, -22, 0}// 658	667	
 		};
 
-        [Constructable]
+        [Constructible]
         public BlackthornStep2()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

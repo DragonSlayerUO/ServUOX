@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0x1541, 0x1542)]
     public class BodySash : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public BodySash()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BodySash(int hue)
             : base(0x1541, hue)
         {

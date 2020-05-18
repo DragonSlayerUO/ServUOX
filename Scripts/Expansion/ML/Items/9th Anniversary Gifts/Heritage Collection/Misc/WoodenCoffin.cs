@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class WoodenCoffinAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public WoodenCoffinAddon(bool east)
             : base()
         {
@@ -76,7 +76,7 @@ namespace Server.Items
     public class WoodenCoffinDeed : BaseAddonDeed
     {
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public WoodenCoffinDeed()
             : base()
         {

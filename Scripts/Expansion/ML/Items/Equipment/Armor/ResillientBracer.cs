@@ -5,7 +5,7 @@ namespace Server.Items
     public class ResilientBracer : GoldBracelet
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ResilientBracer()
         {
             Hue = 0x488;

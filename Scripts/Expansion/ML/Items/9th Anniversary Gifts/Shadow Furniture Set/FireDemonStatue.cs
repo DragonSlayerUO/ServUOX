@@ -5,7 +5,7 @@ namespace Server.Items
     [FlipableAddon(Direction.South, Direction.East)]
     public class FireDemonStatueAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public FireDemonStatueAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x364B, 1076674), 0, 0, 0);
@@ -50,7 +50,7 @@ namespace Server.Items
 
         public override bool ExcludeDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public FireDemonStatueDeed()
         {
             LootType = LootType.Blessed;

@@ -8,7 +8,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new RusticBenchSouthDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public RusticBenchSouthAddon()
         {
             AddComponent(new AddonComponent(0x0E50), 0, 0, 0);
@@ -38,7 +38,7 @@ namespace Server.Items
         public override BaseAddon Addon => new RusticBenchSouthAddon();
         public override int LabelNumber => 1150593;  // rustic bench (south)
 
-        [Constructable]
+        [Constructible]
         public RusticBenchSouthDeed()
         {
         }

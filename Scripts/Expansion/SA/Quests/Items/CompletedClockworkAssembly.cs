@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1112879;  // completed clockwork assembly
         public override int Lifespan => 600;
 
-        [Constructable]
+        [Constructible]
         public CompletedClockworkAssembly()
             : base(0x1EAE)
         {

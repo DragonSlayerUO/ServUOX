@@ -7,13 +7,13 @@ namespace Server.Items
         public override int LabelNumber => 1113333;  // vile tentacles
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public VileTentacles()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public VileTentacles(int amount)
             : base(0x5727)
         {

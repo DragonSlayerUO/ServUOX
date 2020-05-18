@@ -15,7 +15,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1159149;  // Copper Sunflower
 
-        [Constructable]
+        [Constructible]
         public CopperSunflower()
             : base(0xA35D)
         {

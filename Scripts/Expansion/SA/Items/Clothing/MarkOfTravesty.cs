@@ -5,7 +5,7 @@ namespace Server.Items
     public class MarkOfTravesty : SavageMask
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MarkOfTravesty()
             : base()
         {

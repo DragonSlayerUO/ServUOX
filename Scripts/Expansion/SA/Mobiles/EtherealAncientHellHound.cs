@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1155723;  // Ancient Hell Hound Statuette
 
-        [Constructable]
+        [Constructible]
         public EtherealAncientHellHound()
             : base(0x3FFD, 0x3EC9, 0x3EC9, DefaultEtherealHue)
         {

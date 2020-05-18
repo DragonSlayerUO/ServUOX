@@ -4,13 +4,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125202;  // hamburger
 
-        [Constructable]
+        [Constructible]
         public Hamburger()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Hamburger(int amount)
             : base(amount, 0xA0DA)
         {

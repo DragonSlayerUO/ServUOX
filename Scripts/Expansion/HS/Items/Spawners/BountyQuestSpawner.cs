@@ -161,7 +161,7 @@ namespace Server.Engines.Quests
             }
         }
 
-        [Constructable]
+        [Constructible]
         public BountyQuestSpawner() : base(0xED4)
         {
             if (m_Instance != null && !m_Instance.Deleted)

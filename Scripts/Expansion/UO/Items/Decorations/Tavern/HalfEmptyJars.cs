@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class HalfEmptyJar : Item
     {
-        [Constructable]
+        [Constructible]
         public HalfEmptyJar()
             : base(0x1007)
         {
@@ -30,7 +30,7 @@ namespace Server.Items
 
     public class HalfEmptyJars : Item
     {
-        [Constructable]
+        [Constructible]
         public HalfEmptyJars()
             : base(0xe4c)
         {
@@ -58,7 +58,7 @@ namespace Server.Items
 
     public class Jars2 : Item
     {
-        [Constructable]
+        [Constructible]
         public Jars2()
             : base(0xE4d)
         {
@@ -86,7 +86,7 @@ namespace Server.Items
 
     public class Jars3 : Item
     {
-        [Constructable]
+        [Constructible]
         public Jars3()
             : base(0xE4e)
         {
@@ -114,7 +114,7 @@ namespace Server.Items
 
     public class Jars4 : Item
     {
-        [Constructable]
+        [Constructible]
         public Jars4()
             : base(0xE4f)
         {

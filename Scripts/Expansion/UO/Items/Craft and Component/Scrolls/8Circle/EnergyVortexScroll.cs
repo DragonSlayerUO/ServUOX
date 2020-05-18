@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class EnergyVortexScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public EnergyVortexScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnergyVortexScroll(int amount)
             : base(57, 0x1F66, amount)
         {

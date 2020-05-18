@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ToxicVenomSac : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public ToxicVenomSac()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ToxicVenomSac(int amount)
             : base(0x4005)
         {

@@ -3,13 +3,13 @@ namespace Server.Mobiles
     [CorpseName("an undead horse corpse")]
     public class SkeletalSteed : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public SkeletalSteed()
             : this("a skeletal steed")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkeletalSteed(string name)
             : base(name, 793, 0x3EBB, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

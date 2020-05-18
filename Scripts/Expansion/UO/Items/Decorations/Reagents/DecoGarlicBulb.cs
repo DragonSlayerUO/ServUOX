@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoGarlicBulb : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoGarlicBulb()
             : base(0x18E3)
         {

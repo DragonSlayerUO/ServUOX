@@ -5,7 +5,7 @@ namespace Server.Items
     public class VoiceOfTheFallenKing : LeatherGorget
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public VoiceOfTheFallenKing()
         {
             Hue = 0x76D;

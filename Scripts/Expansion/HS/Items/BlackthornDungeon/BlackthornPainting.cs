@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1023744;  // painting
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BlackthornPainting1()
             : base(0x4C62)
         {
@@ -40,7 +40,7 @@ namespace Server.Items
         public override int LabelNumber => 1023744;  // painting
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BlackthornPainting2()
             : base(0x4C64)
         {

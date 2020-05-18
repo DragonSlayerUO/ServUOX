@@ -12,7 +12,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public CorgulAltar Altar { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CorgulIslandMap(Point3D pnt, CorgulAltar altar)
         {
             Name = "Island Map";

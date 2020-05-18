@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class FishBowl : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public FishBowl()
             : base(0x241C)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113521;  // Light in the Void
 
-        [Constructable]
+        [Constructible]
         public LightInTheVoid()
         {
             Slayer = SlayerName.Silver;

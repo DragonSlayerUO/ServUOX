@@ -17,7 +17,7 @@ namespace Server.Items
         public override int BasePoisonResistance => 7;
         public override int BaseEnergyResistance => 7;
 
-        [Constructable]
+        [Constructible]
         public DardensTunic()
         {
             AbsorptionAttributes.EaterKinetic = 2;

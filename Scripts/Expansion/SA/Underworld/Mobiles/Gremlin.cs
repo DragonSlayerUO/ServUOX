@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a gremlin corpse")]
     public class Gremlin : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Gremlin()
             : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

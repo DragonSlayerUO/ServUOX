@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class BloodOfTheDarkFather : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public BloodOfTheDarkFather()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BloodOfTheDarkFather(int amount)
             : base(0x9D7F)
         {

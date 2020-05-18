@@ -7,12 +7,12 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154216;  // Broken Remains of a Shipwreck
 
-        [Constructable]
+        [Constructible]
         public BrokenShipwreckRemains() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BrokenShipwreckRemains(int amount) : base(0xC2D)
         {
             Hue = 2969;

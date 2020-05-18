@@ -56,7 +56,7 @@ namespace Server.Items
 
     public class HaunterMirrorAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public HaunterMirrorAddon()
             : base()
         {
@@ -87,7 +87,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.HaunterMirrorDeed")]
     public class HauntedMirrorDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public HauntedMirrorDeed()
             : base()
         {

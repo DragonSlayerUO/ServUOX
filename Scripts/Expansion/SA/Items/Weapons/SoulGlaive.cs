@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SoulGlaive : BaseThrown
     {
-        [Constructable]
+        [Constructible]
         public SoulGlaive()
             : base(0x090A)
         {

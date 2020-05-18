@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1080171;  // Sherry the Mouse Statue
         private Timer m_NewsTimer;
 
-        [Constructable]
+        [Constructible]
         public SherryTheMouseStatue()
             : base(0x20D0)
         {

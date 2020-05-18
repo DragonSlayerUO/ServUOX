@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a maggoty corpse")] // TODO: Corpse name?
     public class MoundOfMaggots : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public MoundOfMaggots()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

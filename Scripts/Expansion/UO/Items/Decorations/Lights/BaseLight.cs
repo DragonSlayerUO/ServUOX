@@ -33,7 +33,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public BaseLight(int itemID)
             : base(itemID)
         {

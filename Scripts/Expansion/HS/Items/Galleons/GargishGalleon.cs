@@ -27,10 +27,10 @@ namespace Server.Multis
 
         public override BaseDockedBoat DockedBoat => new DockedGargishGalleon(this);
 
-        [Constructable]
+        [Constructible]
         public GargishGalleon() : this(Direction.North) { }
 
-        [Constructable]
+        [Constructible]
         public GargishGalleon(Direction facing)
             : base(facing)
         {
@@ -237,7 +237,7 @@ namespace Server.Multis
         public override int LabelNumber => 1116739;
         public override BaseBoat Boat => new GargishGalleon(BoatDirection);
 
-        [Constructable]
+        [Constructible]
         public GargishGalleonDeed()
             : base(0x24, Point3D.Zero)
         {

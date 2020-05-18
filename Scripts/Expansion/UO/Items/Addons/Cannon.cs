@@ -57,7 +57,7 @@ namespace Server.Items
         };
         private int m_Charges;
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public CannonAddon(CannonDirection direction)
         {
             CannonDirection = direction;
@@ -400,7 +400,7 @@ namespace Server.Items
         private CannonDirection m_Direction;
         private int m_Charges;
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public CannonDeed()
             : base()
         {

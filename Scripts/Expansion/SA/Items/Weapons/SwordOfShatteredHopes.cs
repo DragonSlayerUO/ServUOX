@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1112770;  // Sword of Shattered Hopes
 
-        [Constructable]
+        [Constructible]
         public SwordOfShatteredHopes()
             : base()
         {

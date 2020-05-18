@@ -8,12 +8,12 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1153496;  // 15th Anniversary Commemorative Robe
 
-        [Constructable]
+        [Constructible]
         public AnniversaryRobe() : this(0x455)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AnniversaryRobe(int hue) : base(0x4B9D, hue)
         {
             LootType = LootType.Blessed;

@@ -3,13 +3,13 @@ namespace Server.Items
 {
     public class Pear : Food
     {
-        [Constructable]
+        [Constructible]
         public Pear()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Pear(int amount)
             : base(amount, 0x994)
         {

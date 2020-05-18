@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a gore fiend corpse")]
     public class GoreFiend : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GoreFiend()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

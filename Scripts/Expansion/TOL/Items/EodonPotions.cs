@@ -295,10 +295,10 @@ namespace Server.Items
 
     public class BarrabHemolymphConcentrate : EodonianPotion
     {
-        [Constructable]
+        [Constructible]
         public BarrabHemolymphConcentrate() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public BarrabHemolymphConcentrate(int amount)
             : base(3846, PotionEffect.Barrab)
         {
@@ -365,10 +365,10 @@ namespace Server.Items
 
     public class JukariBurnPoiltice : EodonianPotion
     {
-        [Constructable]
+        [Constructible]
         public JukariBurnPoiltice() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public JukariBurnPoiltice(int amount)
             : base(3846, PotionEffect.Jukari)
         {
@@ -419,10 +419,10 @@ namespace Server.Items
     {
         public override TimeSpan Cooldown => TimeSpan.FromMinutes(10);
 
-        [Constructable]
+        [Constructible]
         public KurakAmbushersEssence() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public KurakAmbushersEssence(int amount)
             : base(3846, PotionEffect.Kurak)
         {
@@ -451,10 +451,10 @@ namespace Server.Items
 
     public class BarakoDraftOfMight : EodonianPotion
     {
-        [Constructable]
+        [Constructible]
         public BarakoDraftOfMight() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public BarakoDraftOfMight(int amount)
             : base(3846, PotionEffect.Barako)
         {
@@ -498,10 +498,10 @@ namespace Server.Items
 
     public class UraliTranceTonic : EodonianPotion
     {
-        [Constructable]
+        [Constructible]
         public UraliTranceTonic() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public UraliTranceTonic(int amount)
             : base(3846, PotionEffect.Urali)
         {
@@ -558,10 +558,10 @@ namespace Server.Items
 
     public class SakkhraProphylaxisPotion : EodonianPotion
     {
-        [Constructable]
+        [Constructible]
         public SakkhraProphylaxisPotion() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public SakkhraProphylaxisPotion(int amount)
             : base(3846, PotionEffect.Sakkhra)
         {
@@ -608,10 +608,10 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156725;  // Myrmidex Eggsac
 
-        [Constructable]
+        [Constructible]
         public MyrmidexEggsac() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public MyrmidexEggsac(int amount)
             : base(10248)
         {
@@ -646,10 +646,10 @@ namespace Server.Items
         // TODO: Harvested near Jukari Village
         public override int LabelNumber => 1156727;  // Lava Berry
 
-        [Constructable]
+        [Constructible]
         public LavaBerry() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public LavaBerry(int amount)
             : base(22326)
         {
@@ -682,7 +682,7 @@ namespace Server.Items
         // TODO: Harvested near Jukari Village
         public override int LabelNumber => 1156735;  // Lava Berry Bush
 
-        [Constructable]
+        [Constructible]
         public LavaBerryBush()
             : base(Utility.RandomBool() ? 0xDC4 : 0xDC5)
         {
@@ -727,10 +727,10 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156730;  // Perfect Bananas
 
-        [Constructable]
+        [Constructible]
         public PerfectBanana() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public PerfectBanana(int amount)
             : base(5922)
         {
@@ -762,7 +762,7 @@ namespace Server.Items
         // TODO: Harvested near Urali Village
         public override int LabelNumber => 1156731;  // River Moss
 
-        [Constructable]
+        [Constructible]
         public RiverMossDecorate()
             : base(3378)
         {
@@ -808,10 +808,10 @@ namespace Server.Items
         // TODO: Harvested near Urali Village
         public override int LabelNumber => 1156731;  // River Moss
 
-        [Constructable]
+        [Constructible]
         public RiverMoss() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public RiverMoss(int amount)
             : base(22333)
         {
@@ -846,10 +846,10 @@ namespace Server.Items
         // TODO: Harvestable from Sakkhra corn fields
         public override int LabelNumber => 1156733;  // Blue Corn
 
-        [Constructable]
+        [Constructible]
         public BlueCorn() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public BlueCorn(int amount)
         {
             Hue = 1284;
@@ -886,7 +886,7 @@ namespace Server.Items
             set { m_Used = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public CornStalk()
             : base(3197)
         {
@@ -954,10 +954,10 @@ namespace Server.Items
     {
         public override int LabelNumber => 1124142;  // Moonstone Crystal Shards
 
-        [Constructable]
+        [Constructible]
         public MoonstoneCrystalShard() : this(1) { }
 
-        [Constructable]
+        [Constructible]
         public MoonstoneCrystalShard(int amount)
             : base(40118)
         {

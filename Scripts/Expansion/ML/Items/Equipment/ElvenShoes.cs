@@ -12,13 +12,13 @@ namespace Server.Items
 
         public override Race RequiredRace => Race.Elf;
 
-        [Constructable]
+        [Constructible]
         public ElvenBoots()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ElvenBoots(int hue)
             : base(0x2FC4, hue)
         {
@@ -55,13 +55,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1109617;  // Jester Shoes
 
-        [Constructable]
+        [Constructible]
         public JesterShoes()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public JesterShoes(int hue)
             : base(0x7819, hue)
         {

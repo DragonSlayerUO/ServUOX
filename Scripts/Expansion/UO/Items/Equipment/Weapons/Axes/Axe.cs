@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF49, 0xF4a)]
     public class Axe : BaseAxe
     {
-        [Constructable]
+        [Constructible]
         public Axe()
             : base(0xF49)
         {

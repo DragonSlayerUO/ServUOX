@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class HealerGuildmaster : BaseGuildmaster
     {
-        [Constructable]
+        [Constructible]
         public HealerGuildmaster()
             : base("healer")
         {

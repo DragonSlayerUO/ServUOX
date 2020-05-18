@@ -11,13 +11,13 @@ namespace Server.Items
 
         private string[] _Staff = new string[] { Server.Misc.ServerList.ServerName }; // TODO: Get More
 
-        [Constructable]
+        [Constructible]
         public AnniversaryCard()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AnniversaryCard(Mobile m) : base(0x9C14)
         {
             Hue = 124;

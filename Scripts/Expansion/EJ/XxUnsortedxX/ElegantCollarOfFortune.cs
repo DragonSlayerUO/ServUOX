@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1159225;  // elegant collar of fortune
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public ElegantCollarOfFortune()
             : base()
         {

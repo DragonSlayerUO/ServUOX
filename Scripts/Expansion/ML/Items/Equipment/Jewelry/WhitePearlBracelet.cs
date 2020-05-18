@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class WhitePearlBracelet : GoldBracelet
     {
-        [Constructable]
+        [Constructible]
         public WhitePearlBracelet()
             : base()
         {

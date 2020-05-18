@@ -5,7 +5,7 @@ namespace Server.Items
     public class BurglarsBandana : Bandana
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BurglarsBandana()
         {
             Hue = Utility.RandomBool() ? 0x58C : 0x10;

@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class MysticBook : Spellbook
     {
-        [Constructable]
+        [Constructible]
         public MysticBook()
             : this((ulong)0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MysticBook(ulong content)
             : base(content, 0x2D9D)
         {

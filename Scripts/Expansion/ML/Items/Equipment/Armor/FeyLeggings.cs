@@ -12,7 +12,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool ElfOnly { get { return _ElfOnly; } set { _ElfOnly = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public FeyLeggings()
         {
             Attributes.BonusHits = 6;

@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1150006;  // Rideable Boura Statuette
 
-        [Constructable]
+        [Constructible]
         public EtherealBoura()
             : base(0x46F8, 0x3EC6, 0x3EC6, DefaultEtherealHue)
         {

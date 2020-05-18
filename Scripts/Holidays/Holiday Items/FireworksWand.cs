@@ -5,13 +5,13 @@ namespace Server.Items
     public class FireworksWand : MagicWand
     {
         private int m_Charges;
-        [Constructable]
+        [Constructible]
         public FireworksWand()
             : this(100)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FireworksWand(int charges)
         {
             m_Charges = charges;

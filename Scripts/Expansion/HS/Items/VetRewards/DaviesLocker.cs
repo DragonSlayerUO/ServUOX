@@ -31,7 +31,7 @@ namespace Server.Engines.VeteranRewards
             set { m_Level = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public DaviesLockerAddon(bool south, List<DaviesLockerEntry> list)
         {
             m_South = south;
@@ -263,7 +263,7 @@ namespace Server.Engines.VeteranRewards
         [CommandProperty(AccessLevel.GameMaster)]
         public bool South => m_South;
 
-        [Constructable]
+        [Constructible]
         public DaviesLockerAddonDeed() : this(null)
         {
         }

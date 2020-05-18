@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2068, 0x207A)]
     public class BoilingCauldronAddon : BaseAddonContainer
     {
-        [Constructable]
+        [Constructible]
         public BoilingCauldronAddon()
             : base(0x2068)
         {
@@ -39,7 +39,7 @@ namespace Server.Items
 
     public class BoilingCauldronDeed : BaseAddonContainerDeed
     {
-        [Constructable]
+        [Constructible]
         public BoilingCauldronDeed()
             : base()
         {

@@ -6,13 +6,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157208;  // plum
 
-        [Constructable]
+        [Constructible]
         public Plum()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Plum(int amount)
             : base(amount, 0x9E86)
         {

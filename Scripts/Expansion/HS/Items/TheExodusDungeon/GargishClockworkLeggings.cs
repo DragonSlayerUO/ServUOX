@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishClockworkLeggings()
         {
             Hue = 0xA91;

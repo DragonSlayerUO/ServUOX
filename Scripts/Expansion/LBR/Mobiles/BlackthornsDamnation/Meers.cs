@@ -9,7 +9,7 @@ namespace Server.Mobiles
     public class MeerCaptain : BaseCreature
     {
         private DateTime m_NextAbilityTime;
-        [Constructable]
+        [Constructible]
         public MeerCaptain()
             : base(AIType.AI_Paladin, FightMode.Evil, 10, 1, 0.2, 0.4)
         {
@@ -171,7 +171,7 @@ namespace Server.Mobiles
     public class MeerEternal : BaseCreature
     {
         private DateTime m_NextAbilityTime;
-        [Constructable]
+        [Constructible]
         public MeerEternal()
             : base(AIType.AI_Spellweaving, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -392,7 +392,7 @@ namespace Server.Mobiles
     {
         private static readonly Hashtable m_Table = new Hashtable();
         private DateTime m_NextAbilityTime;
-        [Constructable]
+        [Constructible]
         public MeerMage()
             : base(AIType.AI_Spellweaving, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -617,7 +617,7 @@ namespace Server.Mobiles
     [CorpseName("a meer corpse")]
     public class MeerWarrior : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public MeerWarrior()
             : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MagicalRope : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public MagicalRope()
             : base(0x20D)
         {

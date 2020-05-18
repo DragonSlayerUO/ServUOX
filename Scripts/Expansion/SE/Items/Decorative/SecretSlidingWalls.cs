@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SecretShadowWallNS : BaseSliding
     {
-        [Constructable]
+        [Constructible]
         public SecretShadowWallNS()
             : base(0x363A, 0x3619)
         {
@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class SecretDungeonWallNS : BaseSliding
     {
-        [Constructable]
+        [Constructible]
         public SecretDungeonWallNS()
             : base(0x0242, 0x0244)
         {
@@ -62,7 +62,7 @@ namespace Server.Items
 
     public class SecretStoneWallNS : BaseSliding
     {
-        [Constructable]
+        [Constructible]
         public SecretStoneWallNS()
             : base(0x3C9, 0x3CA)
         {

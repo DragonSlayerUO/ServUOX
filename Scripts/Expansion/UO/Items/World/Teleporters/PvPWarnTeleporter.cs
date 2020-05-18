@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class PvPWarnTeleporter : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public PvPWarnTeleporter()
         {
         }

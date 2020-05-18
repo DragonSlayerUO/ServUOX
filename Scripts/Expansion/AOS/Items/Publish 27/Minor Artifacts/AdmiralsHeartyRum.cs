@@ -6,7 +6,7 @@ namespace Server.Items
     public class AdmiralsHeartyRum : BeverageBottle
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AdmiralsHeartyRum()
             : base(BeverageType.Ale)
         {

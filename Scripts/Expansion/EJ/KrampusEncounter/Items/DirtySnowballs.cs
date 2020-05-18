@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158833;  // dirty snowballs
 
-        [Constructable]
+        [Constructible]
         public DirtySnowballs()
         {
             ItemID = 0xE74;

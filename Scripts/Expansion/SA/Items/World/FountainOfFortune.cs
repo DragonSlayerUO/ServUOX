@@ -27,7 +27,7 @@ namespace Server.Items
 
         private static Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public FountainOfFortune()
         {
             int itemID = 0x1731;

@@ -23,7 +23,7 @@ namespace Server.Items
         public override ArmorMeditationAllowance DefMedAllowance => ArmorMeditationAllowance.All;
 
 
-        [Constructable]
+        [Constructible]
         public ElegantCollar()
             : base(0xA40F)
         {

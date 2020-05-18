@@ -5,7 +5,7 @@ namespace Server.Items
     public class Runesabre : RuneBlade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Runesabre()
         {
             SkillBonuses.SetValues(0, SkillName.MagicResist, 5.0);

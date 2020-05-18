@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a devourer of souls corpse")]
     public class Devourer : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Devourer()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -4,13 +4,13 @@ namespace Server.Items
     {
         public override ItemQuality Quality { get => ItemQuality.Normal; set { } }
 
-        [Constructable]
+        [Constructible]
         public CookedBird()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CookedBird(int amount)
             : base(amount, 0x9B7)
         {

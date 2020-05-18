@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an ore elemental corpse")]
     public class VeriteElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public VeriteElemental()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

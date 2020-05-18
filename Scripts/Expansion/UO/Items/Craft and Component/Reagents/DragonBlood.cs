@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class DragonBlood : BaseReagent, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public DragonBlood()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DragonBlood(int amount)
             : base(0x4077, amount)
         {

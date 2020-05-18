@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class JarHoney : Item
     {
-        [Constructable]
+        [Constructible]
         public JarHoney()
             : base(0x9ec)
         {

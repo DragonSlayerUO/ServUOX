@@ -25,7 +25,7 @@ namespace Server.Items
         public virtual Type QuestItemType => null;
         public virtual int DefaultRange => 8;
 
-        [Constructable]
+        [Constructible]
         public QuestHintItem(int num)
             : base(7108)
         {
@@ -38,7 +38,7 @@ namespace Server.Items
             Name = "Quest Hint Item";
         }
 
-        [Constructable]
+        [Constructible]
         public QuestHintItem(string str)
             : base(7108)
         {

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Garamons Corpse")]
     public class Garamon : Mobile
     {
-        [Constructable]
+        [Constructible]
         public Garamon()
         {
             Str = 100;

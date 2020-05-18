@@ -6,7 +6,7 @@ namespace Server.Engines.Quests
 {
     public class BatteredBucket : BaseQuestItem
     {
-        [Constructable]
+        [Constructible]
         public BatteredBucket()
             : base(0x2004)
         {

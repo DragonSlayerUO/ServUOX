@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ProtectionScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public ProtectionScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ProtectionScroll(int amount)
             : base(14, 0x1F3B, amount)
         {

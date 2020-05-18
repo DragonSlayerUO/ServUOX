@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113243;  // Laifem's Letter of Introduction
 
-        [Constructable]
+        [Constructible]
         public LetterOfIntroduction()
             : base(0x1F23)
         {
@@ -37,7 +37,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113244;  // Mastering the Art of Weaving
 
-        [Constructable]
+        [Constructible]
         public MasteringWeaving()
             : base(0x1E20)
         {

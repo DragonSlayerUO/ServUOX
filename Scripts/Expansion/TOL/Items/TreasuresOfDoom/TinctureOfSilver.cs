@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155619;  // Tincture of Silver
 
-        [Constructable]
+        [Constructible]
         public TinctureOfSilver()
             : base(0x183B)
         {

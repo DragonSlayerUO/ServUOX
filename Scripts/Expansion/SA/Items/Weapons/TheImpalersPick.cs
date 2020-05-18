@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113822;  // The Impaler's Pick
 
-        [Constructable]
+        [Constructible]
         public TheImpalersPick()
         {
             Hue = 2101;

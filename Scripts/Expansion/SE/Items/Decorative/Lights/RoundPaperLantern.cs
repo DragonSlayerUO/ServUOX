@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable]
     public class RoundPaperLantern : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public RoundPaperLantern()
             : base(0x24CA)
         {

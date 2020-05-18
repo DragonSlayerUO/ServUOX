@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x907, 0x4076)]
     public class Shortblade : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Shortblade()
             : base(0x907)
         {

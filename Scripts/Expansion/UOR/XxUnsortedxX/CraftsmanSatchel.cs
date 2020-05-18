@@ -66,7 +66,7 @@ namespace Server.Items
 
     public class AlchemistCraftsmanSatchel : BaseCraftsmanSatchel
     {
-        [Constructable]
+        [Constructible]
         public AlchemistCraftsmanSatchel()
             : base()
         {
@@ -108,7 +108,7 @@ namespace Server.Items
 
     public class FletcherCraftsmanSatchel : BaseCraftsmanSatchel
     {
-        [Constructable]
+        [Constructible]
         public FletcherCraftsmanSatchel()
             : base()
         {
@@ -157,7 +157,7 @@ namespace Server.Items
 
     public class TailorsCraftsmanSatchel : BaseCraftsmanSatchel
     {
-        [Constructable]
+        [Constructible]
         public TailorsCraftsmanSatchel()
             : base()
         {
@@ -199,7 +199,7 @@ namespace Server.Items
 
     public class SmithsCraftsmanSatchel : BaseCraftsmanSatchel
     {
-        [Constructable]
+        [Constructible]
         public SmithsCraftsmanSatchel()
             : base()
         {
@@ -241,7 +241,7 @@ namespace Server.Items
 
     public class TinkersCraftsmanSatchel : BaseCraftsmanSatchel
     {
-        [Constructable]
+        [Constructible]
         public TinkersCraftsmanSatchel()
             : base()
         {
@@ -283,7 +283,7 @@ namespace Server.Items
 
     public class CarpentersCraftsmanSatchel : BaseCraftsmanSatchel
     {
-        [Constructable]
+        [Constructible]
         public CarpentersCraftsmanSatchel()
             : base()
         {

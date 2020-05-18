@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a ghostly corpse")]
     public class Spellbinder : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Spellbinder()
             : base(AIType.AI_Spellbinder, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

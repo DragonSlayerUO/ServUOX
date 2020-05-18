@@ -6,7 +6,7 @@ namespace Server.Items
     public class CloakOfDeath : BaseOuterTorso
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CloakOfDeath()
             : base(0x2FB9)
         {

@@ -44,7 +44,7 @@ namespace Server.Items
     public class BedOfNailsAddon : BaseAddon
     {
         private InternalTimer m_Timer;
-        [Constructable]
+        [Constructible]
         public BedOfNailsAddon()
             : base()
         {
@@ -159,7 +159,7 @@ namespace Server.Items
 
     public class BedOfNailsDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BedOfNailsDeed()
             : base()
         {

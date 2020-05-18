@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BasinOfCrystalClearWater : Item
     {
-        [Constructable]
+        [Constructible]
         public BasinOfCrystalClearWater()
             : base(0x1008)
         {

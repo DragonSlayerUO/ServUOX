@@ -6,7 +6,7 @@ namespace Server.Mobiles
     public class KeeperOfChivalry : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public KeeperOfChivalry()
             : base("the Keeper of Chivalry")
         {

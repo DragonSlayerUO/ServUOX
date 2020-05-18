@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x13d5, 0x13dd)]
     public class StuddedGloves : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public StuddedGloves()
             : base(0x13D5)
         {

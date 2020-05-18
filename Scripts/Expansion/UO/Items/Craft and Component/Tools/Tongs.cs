@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0xfbb, 0xfbc)]
     public class Tongs : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public Tongs()
             : base(0xFBB)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public Tongs(int uses)
             : base(uses, 0xFBB)
         {

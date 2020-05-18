@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PlateMempo : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public PlateMempo()
             : base(0x2779)
         {

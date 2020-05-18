@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FancyElvenTableSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public FancyElvenTableSouthAddon()
         {
             AddComponent(new AddonComponent(0x3095), 0, 1, 0);
@@ -35,7 +35,7 @@ namespace Server.Items
 
     public class FancyElvenTableSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public FancyElvenTableSouthDeed()
         {
         }

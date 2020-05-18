@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1022513;
 
-        [Constructable]
+        [Constructible]
         public GrapeBunch() : base(1, 3354)
         {
             Weight = 1.0;

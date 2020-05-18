@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LibrariansKey : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public LibrariansKey()
             : base(0xFF3)
         {

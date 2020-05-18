@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1153288;  // Compassion's Eye
 
-        [Constructable]
+        [Constructible]
         public CompassionsEye()
         {
             Hue = 1174;
@@ -43,7 +43,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1153289;  // Unicorn Mane Woven Sandals 
 
-        [Constructable]
+        [Constructible]
         public UnicornManeWovenSandals()
         {
             Hue = 1154;
@@ -83,7 +83,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1153314;  // Unicorn Mane Woven Talons
 
-        [Constructable]
+        [Constructible]
         public UnicornManeWovenTalons()
         {
             Hue = 1154;
@@ -123,7 +123,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1153290;  // Despicable Quiver
 
-        [Constructable]
+        [Constructible]
         public DespicableQuiver() : base(0x2B02)
         {
             Hue = 2671;
@@ -177,7 +177,7 @@ namespace Server.Items
         public override int PoisonResistance => PoisonBonus;
         public override int EnergyResistance => EnergyBonus;
 
-        [Constructable]
+        [Constructible]
         public UnforgivenVeil()
         {
             Hue = 2671;
@@ -222,7 +222,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public HailstormHuman()
         {
             Hue = 2714;
@@ -258,7 +258,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1153292;  // Hailstorm
 
-        [Constructable]
+        [Constructible]
         public HailstormGargoyle()
         {
             Hue = 2714;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StrengthPotion : BaseStrengthPotion
     {
-        [Constructable]
+        [Constructible]
         public StrengthPotion()
             : base(PotionEffect.Strength)
         {

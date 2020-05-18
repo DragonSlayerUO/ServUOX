@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         private readonly DateTime m_NextDrop = DateTime.UtcNow;
 
-        [Constructable]
+        [Constructible]
         public Ilhenir()
             : base(AIType.AI_Mage)
         {
@@ -182,13 +182,13 @@ namespace Server.Mobiles
         private Timer m_Timer;
         private int m_Ticks;
 
-        [Constructable]
+        [Constructible]
         public StainedOoze()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StainedOoze(bool corrosive)
             : base(0x122A)
         {

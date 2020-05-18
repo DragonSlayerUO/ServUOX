@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1094940;  // Balm of Strength
 
-        [Constructable]
+        [Constructible]
         public BalmOfStrength()
             : base(0xEFB)
         {

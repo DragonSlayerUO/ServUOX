@@ -238,7 +238,7 @@ namespace Server.Items
         public override int BuffAmount => 10;
         public override FishPieEffect Effect => FishPieEffect.MedBoost;
 
-        [Constructable]
+        [Constructible]
         public AutumnDragonfishPie()
         {
             Hue = FishInfo.GetFishHue(typeof(AutumnDragonfish));
@@ -267,7 +267,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.WeaponDam;
 
-        [Constructable]
+        [Constructible]
         public BullFishPie()
         {
             Hue = FishInfo.GetFishHue(typeof(BullFish));
@@ -296,7 +296,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.EnergySoak;
 
-        [Constructable]
+        [Constructible]
         public CrystalFishPie()
         {
             Hue = FishInfo.GetFishHue(typeof(CrystalFish));
@@ -324,7 +324,7 @@ namespace Server.Items
         public override int BuffAmount => 2;
         public override FishPieEffect Effect => FishPieEffect.CastFocus;
 
-        [Constructable]
+        [Constructible]
         public FairySalmonPie()
         {
             Hue = FishInfo.GetFishHue(typeof(FairySalmon));
@@ -353,7 +353,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.FireSoak;
 
-        [Constructable]
+        [Constructible]
         public FireFishPie()
         {
             Hue = FishInfo.GetFishHue(typeof(FireFish));
@@ -382,7 +382,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.DefChance;
 
-        [Constructable]
+        [Constructible]
         public GiantKoiPie()
         {
             Hue = FishInfo.GetFishHue(typeof(GiantKoi));
@@ -410,7 +410,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.HitChance;
 
-        [Constructable]
+        [Constructible]
         public GreatBarracudaPie()
         {
             Hue = 1287;// FishInfo.GetFishHue(typeof(GreatBarracuda));
@@ -439,7 +439,7 @@ namespace Server.Items
         public override int BuffAmount => 3;
         public override FishPieEffect Effect => FishPieEffect.ManaRegen;
 
-        [Constructable]
+        [Constructible]
         public HolyMackerelPie()
         {
             Hue = FishInfo.GetFishHue(typeof(HolyMackerel));
@@ -468,7 +468,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.SoulCharge;
 
-        [Constructable]
+        [Constructible]
         public LavaFishPie()
         {
             Hue = FishInfo.GetFishHue(typeof(LavaFish));
@@ -497,7 +497,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.PoisonSoak;
 
-        [Constructable]
+        [Constructible]
         public ReaperFishPie()
         {
             Hue = 1152;// FishInfo.GetFishHue(typeof(ReaperFish));
@@ -526,7 +526,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.SpellDamage;
 
-        [Constructable]
+        [Constructible]
         public SummerDragonfishPie()
         {
             Hue = FishInfo.GetFishHue(typeof(SummerDragonfish));
@@ -555,7 +555,7 @@ namespace Server.Items
         public override int BuffAmount => 3;
         public override FishPieEffect Effect => FishPieEffect.StamRegen;
 
-        [Constructable]
+        [Constructible]
         public UnicornFishPie()
         {
             Hue = FishInfo.GetFishHue(typeof(UnicornFish));
@@ -583,7 +583,7 @@ namespace Server.Items
         public override int BuffAmount => 3;
         public override FishPieEffect Effect => FishPieEffect.HitsRegen;
 
-        [Constructable]
+        [Constructible]
         public YellowtailBarracudaPie()
         {
             Hue = FishInfo.GetFishHue(typeof(YellowtailBarracuda));
@@ -611,7 +611,7 @@ namespace Server.Items
         public override int BuffAmount => 3;
         public override FishPieEffect Effect => FishPieEffect.PhysicalSoak;
 
-        [Constructable]
+        [Constructible]
         public StoneCrabPie()
         {
             Hue = FishInfo.GetFishHue(typeof(StoneCrab));
@@ -639,7 +639,7 @@ namespace Server.Items
         public override int BuffAmount => 10;
         public override FishPieEffect Effect => FishPieEffect.FocusBoost;
 
-        [Constructable]
+        [Constructible]
         public SpiderCrabPie()
         {
             Hue = FishInfo.GetFishHue(typeof(SpiderCrab));
@@ -667,7 +667,7 @@ namespace Server.Items
         public override int BuffAmount => 5;
         public override FishPieEffect Effect => FishPieEffect.ColdSoak;
 
-        [Constructable]
+        [Constructible]
         public BlueLobsterPie()
         {
             Hue = FishInfo.GetFishHue(typeof(BlueLobster));

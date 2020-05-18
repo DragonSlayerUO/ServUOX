@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041002;// cake mix
 
-        [Constructable]
+        [Constructible]
         public CakeMix()
             : base(0x103F, 40)
         {

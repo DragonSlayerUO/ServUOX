@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PhoenixLegs : RingmailLegs
     {
-        [Constructable]
+        [Constructible]
         public PhoenixLegs()
         {
             Hue = 0x8E;

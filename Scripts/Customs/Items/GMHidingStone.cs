@@ -40,7 +40,7 @@ namespace Server.Items
         private int mAppearEffectHue;
         private int mHideEffectHue;
 
-        [Constructable]
+        [Constructible]
         public GMHidingStone()
             : base(0x1870)
         {

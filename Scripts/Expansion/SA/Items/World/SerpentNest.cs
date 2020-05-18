@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112582;  // a serpent's nest
 
-        [Constructable]
+        [Constructible]
         public SerpentNest()
             : base(0x2233)
         {

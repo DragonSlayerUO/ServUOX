@@ -11,7 +11,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1155524;  // Forged Royal Pardon
 
-        [Constructable]
+        [Constructible]
         public ForgedRoyalPardon()
             : base(18098)
         {

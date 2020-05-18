@@ -15,7 +15,7 @@ namespace Server.Mobiles
         private DateTime m_NextAbilityTime;
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public PrimevalLich()
             : base(AIType.AI_NecroMage)
         {

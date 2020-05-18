@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class HitchingRope : Item
     {
-        [Constructable]
+        [Constructible]
         public HitchingRope()
             : base(0x14F8)
         {

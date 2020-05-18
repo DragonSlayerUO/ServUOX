@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a gazer corpse")]
     public class Gazer : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Gazer()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -73,7 +73,7 @@ namespace Server.Mobiles
     [CorpseName("an elder gazer corpse")]
     public class ElderGazer : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ElderGazer()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

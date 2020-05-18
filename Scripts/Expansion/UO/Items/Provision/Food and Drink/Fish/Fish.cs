@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Fish : Item, ICarvable
     {
-        [Constructable]
+        [Constructible]
         public Fish()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Fish(int amount)
             : base(Utility.Random(0x09CC, 4))
         {

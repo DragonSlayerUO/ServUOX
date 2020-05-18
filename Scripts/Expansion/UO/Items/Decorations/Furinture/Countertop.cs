@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125714;  // countertop
 
-        [Constructable]
+        [Constructible]
         public Countertop()
             : base(0xA2DA)
         {

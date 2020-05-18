@@ -66,7 +66,7 @@ namespace Server.Items
 
     public class UnsettlingPortraitAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public UnsettlingPortraitAddon()
             : base()
         {
@@ -96,7 +96,7 @@ namespace Server.Items
 
     public class UnsettlingPortraitDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public UnsettlingPortraitDeed()
             : base()
         {

@@ -8,7 +8,7 @@ namespace Server.Mobiles
     public class HarrowerTentacles : BaseCreature
     {
         private DrainTimer m_Timer;
-        [Constructable]
+        [Constructible]
         public HarrowerTentacles()
             : this(null)
         {

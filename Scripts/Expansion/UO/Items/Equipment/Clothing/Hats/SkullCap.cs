@@ -11,13 +11,13 @@ namespace Server.Items
         public override int InitMinHits => (Core.ML ? 14 : 7);
         public override int InitMaxHits => (Core.ML ? 28 : 12);
 
-        [Constructable]
+        [Constructible]
         public SkullCap()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkullCap(int hue)
             : base(0x1544, hue)
         {

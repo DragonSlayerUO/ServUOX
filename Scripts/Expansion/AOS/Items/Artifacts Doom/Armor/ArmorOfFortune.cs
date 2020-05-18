@@ -5,7 +5,7 @@ namespace Server.Items
     public class ArmorOfFortune : StuddedChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ArmorOfFortune()
         {
             Hue = 0x501;

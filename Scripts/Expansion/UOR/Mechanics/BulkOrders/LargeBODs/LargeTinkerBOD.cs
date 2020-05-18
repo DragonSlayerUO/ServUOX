@@ -39,7 +39,7 @@ namespace Server.Engines.BulkOrders
             0.001953125  // Valorite
         };
 
-        [Constructable]
+        [Constructible]
         public LargeTinkerBOD()
         {
             LargeBulkEntry[] entries;

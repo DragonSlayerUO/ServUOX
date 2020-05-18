@@ -5,7 +5,7 @@ namespace Server.Items
     public class HolyKnightsBreastplate : PlateChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HolyKnightsBreastplate()
         {
             Hue = 0x47E;

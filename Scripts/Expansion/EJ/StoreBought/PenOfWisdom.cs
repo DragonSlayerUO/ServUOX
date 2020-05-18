@@ -20,12 +20,12 @@ namespace Server.Items
             set { m_UsesRemaining = value; InvalidateProperties(); }
         }
 
-        [Constructable]
+        [Constructible]
         public PenOfWisdom() : this(100)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PenOfWisdom(int uses)
             : base(0x0FC0)
         {

@@ -32,13 +32,13 @@ namespace Server.Mobiles
             new EtherealInfo(0x46f8, 0x3EC6)
         };
         private EtherealTypes m_EthyType;
-        [Constructable]
+        [Constructible]
         public GMEthereal()
             : this(EtherealTypes.Horse)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GMEthereal(EtherealTypes type)
             : base(0, 0, 0)
         {

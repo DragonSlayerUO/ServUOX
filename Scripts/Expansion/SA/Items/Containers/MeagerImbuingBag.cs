@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MeagerImbuingBag : BaseRewardBag
     {
-        [Constructable]
+        [Constructible]
         public MeagerImbuingBag()
         {
             switch (Utility.Random(4))

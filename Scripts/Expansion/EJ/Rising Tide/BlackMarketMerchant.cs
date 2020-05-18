@@ -20,7 +20,7 @@ namespace Server.Engines.RisingTide
 
         public override bool IsShrineHealer => false;
 
-        [Constructable]
+        [Constructible]
         public BlackMarketMerchant() : base("the Pirate")
         {
         }

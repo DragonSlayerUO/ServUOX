@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SlithEye : Item
     {
-        [Constructable]
+        [Constructible]
         public SlithEye()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SlithEye(int amount)
             : base(0x5749)
         {

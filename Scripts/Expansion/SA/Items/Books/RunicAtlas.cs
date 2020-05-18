@@ -16,7 +16,7 @@ namespace Server.Items
 
         public int Selected { get; set; }
 
-        [Constructable]
+        [Constructible]
         public RunicAtlas() : base(100, 39958)
         {
             Selected = -1;

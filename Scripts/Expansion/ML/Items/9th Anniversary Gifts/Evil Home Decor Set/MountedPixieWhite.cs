@@ -71,7 +71,7 @@ namespace Server.Items
 
     public class MountedPixieWhiteDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public MountedPixieWhiteDeed()
             : base()
         {

@@ -4,13 +4,13 @@ namespace Server.Items
     {
         public override ItemQuality Quality { get => ItemQuality.Normal; set { } }
 
-        [Constructable]
+        [Constructible]
         public ChickenLeg()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ChickenLeg(int amount)
             : base(amount, 0x1608)
         {

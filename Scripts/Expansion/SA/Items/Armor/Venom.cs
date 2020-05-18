@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1114783;  // Venom
 
-        [Constructable]
+        [Constructible]
         public Venom()
         {
             Hue = 1371;

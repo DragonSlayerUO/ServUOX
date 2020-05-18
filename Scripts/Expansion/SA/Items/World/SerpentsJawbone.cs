@@ -47,7 +47,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1157654;  // Serpent's Jawbone
 
-        [Constructable]
+        [Constructible]
         public SerpentsJawbone()
             : base(0x9F74)
         {

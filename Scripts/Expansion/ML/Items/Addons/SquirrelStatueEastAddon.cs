@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SquirrelStatueEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SquirrelStatueEastAddon()
         {
             AddComponent(new AddonComponent(0x2D10), 0, 0, 0);
@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class SquirrelStatueEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SquirrelStatueEastDeed()
         {
         }

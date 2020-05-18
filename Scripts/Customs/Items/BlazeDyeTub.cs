@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BlazeDyeTub : DyeTub
     {
-        [Constructable]
+        [Constructible]
         public BlazeDyeTub()
         {
             Hue = DyedHue = 0x489;

@@ -33,7 +33,7 @@ namespace Server.Items
 
         public override int LabelNumber => _Polished ? 1125446 : 1158640;  // Polished/Rough Meteorite
 
-        [Constructable]
+        [Constructible]
         public Meteorite()
             : base(Utility.Random(0x1364, 3))
         {

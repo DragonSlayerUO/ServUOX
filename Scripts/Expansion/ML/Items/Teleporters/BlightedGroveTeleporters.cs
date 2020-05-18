@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BlightedGroveTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public BlightedGroveTele()
             : base()
         {
@@ -81,7 +81,7 @@ namespace Server.Items
 
     public class BlightedGroveTreeInTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public BlightedGroveTreeInTele()
             : base()
         {
@@ -115,7 +115,7 @@ namespace Server.Items
 
     public class BlightedGroveTreeOutTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public BlightedGroveTreeOutTele()
             : base()
         {

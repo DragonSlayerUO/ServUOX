@@ -13,13 +13,13 @@ namespace Server.Items
 
         public bool PlayerConstructed => true;
 
-        [Constructable]
+        [Constructible]
         public SackFlour()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SackFlour(int amount)
             : base(0x1039)
         {

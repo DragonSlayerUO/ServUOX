@@ -290,7 +290,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime Expires { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CauldronOfTransmutationDeed(CraftResource resource)
         {
             Resource = resource;

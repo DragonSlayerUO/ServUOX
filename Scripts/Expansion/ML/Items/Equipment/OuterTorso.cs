@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override Race RequiredRace => Race.Elf;
 
-        [Constructable]
+        [Constructible]
         public MaleElvenRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaleElvenRobe(int hue)
             : base(0x2FB9, hue)
         {
@@ -45,13 +45,13 @@ namespace Server.Items
     public class FemaleElvenRobe : BaseOuterTorso
     {
         public override Race RequiredRace => Race.Elf;
-        [Constructable]
+        [Constructible]
         public FemaleElvenRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleElvenRobe(int hue)
             : base(0x2FBA, hue)
         {
@@ -84,13 +84,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1109622;  // Flowered Dress
 
-        [Constructable]
+        [Constructible]
         public FloweredDress()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FloweredDress(int hue)
             : base(0x781E, hue)
         {
@@ -118,13 +118,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1109625;  // Evening Gown
 
-        [Constructable]
+        [Constructible]
         public EveningGown()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EveningGown(int hue)
             : base(0x7821, hue)
         {
@@ -152,13 +152,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1123325;  // Epaulette
 
-        [Constructable]
+        [Constructible]
         public Epaulette()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Epaulette(int hue)
             : base(0x9985, Layer.OuterTorso, hue)
         {

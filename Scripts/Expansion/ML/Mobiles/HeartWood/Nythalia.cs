@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class Nythalia : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Nythalia()
             : base("the Student")
         {

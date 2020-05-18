@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CrystalTableAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CrystalTableAddon(DirectionType type)
         {
             switch (type)
@@ -51,7 +51,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public CrystalTableDeed()
             : base()
         {

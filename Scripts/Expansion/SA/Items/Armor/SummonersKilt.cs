@@ -11,7 +11,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113540;  // Summoner's Kilt
 
-        [Constructable]
+        [Constructible]
         public SummonersKilt()
         {
             Hue = 1266;

@@ -16,7 +16,7 @@ namespace Server.Items
               {739, 1, -2, 0}
         };
 
-        [Constructable]
+        [Constructible]
         public CousteauPerronAddon()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

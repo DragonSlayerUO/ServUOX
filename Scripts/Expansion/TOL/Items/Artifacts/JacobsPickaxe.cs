@@ -29,7 +29,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1077758;  // Jacob's Pickaxe
 
-        [Constructable]
+        [Constructible]
         public JacobsPickaxe()
             : base()
         {

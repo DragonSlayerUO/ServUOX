@@ -9,7 +9,7 @@ namespace Server.Mobiles
         public override double DispelDifficulty => m_DispelDifficulty;
         public override double DispelFocus => 45.0;
 
-        [Constructable]
+        [Constructible]
         public RisingColossus(Mobile m, double baseskill, double boostskill)
             : base(AIType.AI_Mystic, FightMode.Closest, 10, 1, 0.4, 0.5)
         {

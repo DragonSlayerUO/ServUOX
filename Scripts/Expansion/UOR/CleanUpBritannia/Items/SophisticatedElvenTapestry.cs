@@ -8,7 +8,7 @@ namespace Server.Items
     [Flipable(0x2D6F, 0x2D70)]
     public class SophisticatedElvenTapestry : Item
     {
-        [Constructable]
+        [Constructible]
         public SophisticatedElvenTapestry()
             : base(0x2D70)
         {

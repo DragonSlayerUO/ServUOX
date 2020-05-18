@@ -5,7 +5,7 @@ namespace Server.Items
     public class MyrmidonBascinet : Bascinet
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MyrmidonBascinet()
             : base()
         {

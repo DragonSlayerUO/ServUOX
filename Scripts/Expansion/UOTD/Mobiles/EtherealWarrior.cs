@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         private static readonly TimeSpan ResurrectDelay = TimeSpan.FromSeconds(2.0);
         private DateTime m_NextResurrect;
-        [Constructable]
+        [Constructible]
         public EtherealWarrior()
             : base(AIType.AI_Mage, FightMode.Evil, 10, 1, 0.2, 0.4)
         {

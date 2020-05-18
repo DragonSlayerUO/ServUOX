@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RunicFletcherTool : BaseRunicTool
     {
-        [Constructable]
+        [Constructible]
         public RunicFletcherTool(CraftResource resource)
             : base(resource, 0x1022)
         {
@@ -13,7 +13,7 @@ namespace Server.Items
             Hue = CraftResources.GetHue(resource);
         }
 
-        [Constructable]
+        [Constructible]
         public RunicFletcherTool(CraftResource resource, int uses)
             : base(resource, uses, 0x1022)
         {

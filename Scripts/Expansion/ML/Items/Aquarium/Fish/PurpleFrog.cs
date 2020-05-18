@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PurpleFrog : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public PurpleFrog()
             : base(0x3B0D)
         {

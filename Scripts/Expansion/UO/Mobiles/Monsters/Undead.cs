@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a skeletal corpse")]
     public class BoneKnight : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public BoneKnight()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -100,7 +100,7 @@ namespace Server.Mobiles
     [CorpseName("a skeletal corpse")]
     public class BoneMagi : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public BoneMagi()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -179,7 +179,7 @@ namespace Server.Mobiles
     [CorpseName("a ghostly corpse")]
     public class Ghoul : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Ghoul()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -245,7 +245,7 @@ namespace Server.Mobiles
     [CorpseName("a liche's corpse")]
     public class Lich : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Lich()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -335,7 +335,7 @@ namespace Server.Mobiles
     [CorpseName("a liche's corpse")]
     public class LichLord : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LichLord()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -425,7 +425,7 @@ namespace Server.Mobiles
     [CorpseName("a ghostly corpse")]
     public class Shade : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Shade()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -494,7 +494,7 @@ namespace Server.Mobiles
     [CorpseName("a skeletal corpse")]
     public class SkeletalKnight : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SkeletalKnight()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -589,7 +589,7 @@ namespace Server.Mobiles
     [CorpseName("a skeletal corpse")]
     public class SkeletalMage : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SkeletalMage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -667,7 +667,7 @@ namespace Server.Mobiles
     [CorpseName("a skeletal corpse")]
     public class Skeleton : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Skeleton()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -765,7 +765,7 @@ namespace Server.Mobiles
     [CorpseName("a ghostly corpse")]
     public class Spectre : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Spectre()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -834,7 +834,7 @@ namespace Server.Mobiles
     [CorpseName("a ghostly corpse")]
     public class Wraith : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Wraith()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -902,7 +902,7 @@ namespace Server.Mobiles
     [CorpseName("a rotting corpse")]
     public class Zombie : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Zombie()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

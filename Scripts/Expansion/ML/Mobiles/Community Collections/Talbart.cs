@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class MaceAndBlade : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public MaceAndBlade()
             : base("Talbart", "the warrior")
         {

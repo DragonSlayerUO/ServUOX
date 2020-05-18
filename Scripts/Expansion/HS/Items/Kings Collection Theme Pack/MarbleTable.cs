@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class MarbleTableAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public MarbleTableAddon(DirectionType type)
         {
             switch (type)
@@ -60,7 +60,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public MarbleTableDeed()
             : base()
         {

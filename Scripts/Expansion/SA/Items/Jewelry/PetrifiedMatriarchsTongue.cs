@@ -11,7 +11,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public PetrifiedMatriarchsTongue()
         {
             Hue = 2006; //TODO: get proper hue, this is a guess

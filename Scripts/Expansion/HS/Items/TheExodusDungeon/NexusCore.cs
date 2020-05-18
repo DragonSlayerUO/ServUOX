@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class NexusCore : Item
     {
-        [Constructable]
+        [Constructible]
         public NexusCore() : base(0x4B82)
         {
             Stackable = false;

@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48AE, 0x48AF)]
     public class GargishCleaver : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public GargishCleaver()
             : base(0x48AE)
         {

@@ -17,7 +17,7 @@ namespace Server.Engines.BulkOrders
         private string m_BookName;
         private SecureLevel m_Level;
         private int m_ItemCount;
-        [Constructable]
+        [Constructible]
         public BulkOrderBook()
             : base(0x2259)
         {

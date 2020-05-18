@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class TrulyRareFish : BaseMagicFish
     {
-        [Constructable]
+        [Constructible]
         public TrulyRareFish()
             : base(76)
         {

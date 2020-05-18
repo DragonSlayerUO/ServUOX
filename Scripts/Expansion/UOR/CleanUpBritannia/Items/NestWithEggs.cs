@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class NestWithEggs : Item
     {
-        [Constructable]
+        [Constructible]
         public NestWithEggs()
             : base(0x1AD4)
         {

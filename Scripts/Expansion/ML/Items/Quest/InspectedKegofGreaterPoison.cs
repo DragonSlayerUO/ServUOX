@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class InspectedKegofGreaterPoison : Item
     {
-        [Constructable]
+        [Constructible]
         public InspectedKegofGreaterPoison()
             : base(0x1940)
         {

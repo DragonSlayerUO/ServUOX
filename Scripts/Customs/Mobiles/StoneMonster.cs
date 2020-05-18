@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Stone Monster corpse")]
     public class StoneMonster : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public StoneMonster()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.6, 1.2)
         {

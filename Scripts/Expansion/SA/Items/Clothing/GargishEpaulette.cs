@@ -9,13 +9,13 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public GargishEpaulette()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishEpaulette(int hue)
             : base(0x9986, Layer.OuterTorso, hue)
         {

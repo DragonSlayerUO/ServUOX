@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SweatOfParoxysmus : Item
     {
-        [Constructable]
+        [Constructible]
         public SweatOfParoxysmus()
             : base(0xF01)
         {

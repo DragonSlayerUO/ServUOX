@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Shell : Item
     {
-        [Constructable]
+        [Constructible]
         public Shell()
             : base(Utility.RandomList(0x3B12, 0x3B13))
         {

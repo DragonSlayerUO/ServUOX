@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool RetainDeedHue => true;
         #endregion
 
-        [Constructable]
+        [Constructible]
         public GargishCouchEastAddon()
         {
             AddComponent(new AddonComponent(0x402A), 0, 0, 0);
@@ -42,7 +42,7 @@ namespace Server.Items
         public override BaseAddon Addon => new GargishCouchEastAddon();
         public override int LabelNumber => 1111776;// gargish couch (East)
 
-        [Constructable]
+        [Constructible]
         public GargishCouchEastDeed()
         {
         }

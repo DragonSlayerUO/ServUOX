@@ -19,7 +19,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new RaisedGardenDeed();
 
-        [Constructable]
+        [Constructible]
         public RaisedGardenAddon(RaisedGardenDirection direction)
         {
             switch (direction)
@@ -111,7 +111,7 @@ namespace Server.Items
         public override BaseAddon Addon => new RaisedGardenAddon(m_Direction);
         public RaisedGardenDirection m_Direction;
 
-        [Constructable]
+        [Constructible]
         public RaisedGardenDeed()
         {
             LootType = LootType.Blessed;

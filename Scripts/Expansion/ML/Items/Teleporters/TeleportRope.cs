@@ -16,7 +16,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.Administrator)]
         public Map ToMap { get; set; }
 
-        [Constructable]
+        [Constructible]
         public TeleportRope()
             : base(0x14FA)
         {

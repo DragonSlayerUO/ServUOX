@@ -5,7 +5,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1025015;  // pillow
 
-        [Constructable]
+        [Constructible]
         public PillowTear()
             : base(0xA493)
         {

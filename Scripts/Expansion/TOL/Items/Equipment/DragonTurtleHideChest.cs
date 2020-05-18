@@ -26,7 +26,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1109634;  // Dragon Turtle Hide Chest
 
-        [Constructable]
+        [Constructible]
         public DragonTurtleHideChest()
             : base(0x782A)
         {

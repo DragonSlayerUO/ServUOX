@@ -5,7 +5,7 @@ namespace Server.Items
     public class BoneCrusher : WarMace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BoneCrusher()
         {
             Hue = 0x60C;

@@ -24,7 +24,7 @@ namespace Server.Items
 
         public bool IsInCooldown => CooldownEnds != DateTime.MinValue && DateTime.UtcNow < CooldownEnds;
 
-        [Constructable]
+        [Constructible]
         public NestWithEgg()
         {
             AddonComponent comp = new LocalizedAddonComponent(3518, 1026869);

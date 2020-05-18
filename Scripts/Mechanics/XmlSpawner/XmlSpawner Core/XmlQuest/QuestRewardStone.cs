@@ -10,7 +10,7 @@ namespace Server.Items
 {
     public class QuestRewardStone : Item
     {
-        [Constructable]
+        [Constructible]
         public QuestRewardStone() : base(0xED4)
         {
             Movable = false;

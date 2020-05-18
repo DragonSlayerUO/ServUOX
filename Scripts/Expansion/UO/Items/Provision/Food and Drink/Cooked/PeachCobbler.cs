@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041344;// baked peach cobbler
 
-        [Constructable]
+        [Constructible]
         public PeachCobbler()
             : base(0x1041)
         {

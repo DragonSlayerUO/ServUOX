@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154472;  // Abhorrence
 
-        [Constructable]
+        [Constructible]
         public Abhorrence()
         {
             Attributes.SpellChanneling = 1;

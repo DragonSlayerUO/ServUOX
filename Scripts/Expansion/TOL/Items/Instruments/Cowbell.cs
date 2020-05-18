@@ -34,7 +34,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098418;  // cowbell
 
-        [Constructable]
+        [Constructible]
         public CowBellDeed()
         {
         }
@@ -64,7 +64,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new CowBellDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public CowBellAddon()
         {
             AddComponent(new CowBellComponent(), 0, 0, 0);

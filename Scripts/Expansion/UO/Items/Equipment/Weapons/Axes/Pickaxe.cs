@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0xE86, 0xE85)]
     public class Pickaxe : BaseAxe, IUsesRemaining, IHarvestTool
     {
-        [Constructable]
+        [Constructible]
         public Pickaxe()
             : base(0xE86)
         {

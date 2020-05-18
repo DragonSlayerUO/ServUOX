@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TravestysCollectionOfShells : Item
     {
-        [Constructable]
+        [Constructible]
         public TravestysCollectionOfShells()
             : base(0xFD3)
         {

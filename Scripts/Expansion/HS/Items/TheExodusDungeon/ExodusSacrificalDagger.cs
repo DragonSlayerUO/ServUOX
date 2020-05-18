@@ -14,7 +14,7 @@ namespace Server.Items
         private int m_Lifespan;
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public ExodusSacrificalDagger() : base(0x2D2D)
         {
             Weight = 4.0;
@@ -224,7 +224,7 @@ namespace Server.Items
     [Flipable(0x0902, 0x406A)]
     public class ExodusSacrificalGargishDagger : ExodusSacrificalDagger
     {
-        [Constructable]
+        [Constructible]
         public ExodusSacrificalGargishDagger()
         {
             ItemID = 0x406A;

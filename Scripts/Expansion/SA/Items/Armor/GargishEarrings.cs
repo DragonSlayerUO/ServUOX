@@ -19,7 +19,7 @@ namespace Server.Items
         public override int InitMinHits => 30;
         public override int InitMaxHits => 40;
 
-        [Constructable]
+        [Constructible]
         public GargishEarrings()
             : base(0x4213)
         {

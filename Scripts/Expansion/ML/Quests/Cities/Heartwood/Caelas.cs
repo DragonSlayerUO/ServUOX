@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Caelas : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Caelas()
             : base("Elder Caelas", "the Wise")
         {

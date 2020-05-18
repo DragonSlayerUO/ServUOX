@@ -10,7 +10,7 @@ namespace Server.Items
         public override int LitSound => 480;
         public override int UnlitSound => 482;
 
-        [Constructable]
+        [Constructible]
         public SculptureWoodScept()
             : base(0xA4A8)
         {

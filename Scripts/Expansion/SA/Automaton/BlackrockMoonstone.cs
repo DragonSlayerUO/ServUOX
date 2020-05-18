@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156993;  // Black Moonstone
 
-        [Constructable]
+        [Constructible]
         public BlackrockMoonstone()
             : base(0x9CAA)
         {

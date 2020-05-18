@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class SacredQuestBlocker : Item
     {
-        [Constructable]
+        [Constructible]
         public SacredQuestBlocker()
             : base(0x1BC3)
         {

@@ -20,13 +20,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string Account { get; set; }
 
-        [Constructable]
+        [Constructible]
         public StableSlotIncreaseToken()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StableSlotIncreaseToken(string account)
             : base(0x2AAA)
         {

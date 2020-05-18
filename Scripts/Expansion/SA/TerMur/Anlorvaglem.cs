@@ -8,7 +8,7 @@ namespace Server.Mobiles
         public override VoidEvolution Evolution => VoidEvolution.Grouping;
         public override int Stage => 3;
 
-        [Constructable]
+        [Constructible]
         public Anlorvaglem()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.6, 1.2)
         {

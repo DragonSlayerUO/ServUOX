@@ -66,7 +66,7 @@ namespace Server.Items
             set { m_Offset = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public GardenShedAddon(bool east) : base(east ? 0x4BEB : 0x4BE7)
         {
             SecondContainer = new GardenShedBarrel(this, east);
@@ -171,7 +171,7 @@ namespace Server.Items
     {
         public GardenShedAddon m_MainContainer;
 
-        [Constructable]
+        [Constructible]
         public GardenShedBarrel(GardenShedAddon container, bool east)
             : base(east ? 0x4BED : 0x4BE9)
         {
@@ -250,7 +250,7 @@ namespace Server.Items
 
         private bool m_East;
 
-        [Constructable]
+        [Constructible]
         public GardenShedDeed() : base()
         {
             LootType = LootType.Blessed;

@@ -6,12 +6,12 @@ namespace Server.Mobiles
     [CorpseName("an energy vortex corpse")]
     public class EnergyVortex : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public EnergyVortex() : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnergyVortex(bool summoned)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -105,19 +105,19 @@ namespace Server.Items
 
         public RugType RugType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public DolphinRugAddon()
             : this(RugType.EastLarge)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DolphinRugAddon(RugType type)
             : this(type, 0, DateTime.UtcNow)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DolphinRugAddon(RugType type, int resCount, DateTime nextuse)
         {
             NextResourceCount = nextuse;
@@ -326,19 +326,19 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public RugType RugType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public DolphinRugAddonDeed()
             : this(RugType.EastLarge)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DolphinRugAddonDeed(RugType type)
             : this(type, 0, DateTime.UtcNow)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DolphinRugAddonDeed(RugType type, int resCount, DateTime nextuse)
         {
             RugType = type;

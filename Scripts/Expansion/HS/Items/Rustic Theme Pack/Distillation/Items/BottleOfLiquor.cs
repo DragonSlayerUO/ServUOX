@@ -25,12 +25,12 @@ namespace Server.Engines.Distillation
 
         public override bool ShowQuantity => false;
 
-        [Constructable]
+        [Constructible]
         public BottleOfLiquor() : this(Liquor.Whiskey, null, false, null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BottleOfLiquor(Liquor liquor, string label, bool isstrong, Mobile distiller) : base(BeverageType.Liquor)
         {
             Quantity = MaxQuantity;

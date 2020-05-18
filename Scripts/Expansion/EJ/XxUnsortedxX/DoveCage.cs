@@ -12,7 +12,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public DoveCage()
             : base(0xA4B2)
         {

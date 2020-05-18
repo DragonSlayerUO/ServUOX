@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SmallPlateJingasa : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public SmallPlateJingasa()
             : base(0x2784)
         {

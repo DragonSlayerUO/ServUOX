@@ -16,7 +16,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBMage());
         }
 
-        [Constructable]
+        [Constructible]
         public Morganna()
             : base("Morganna", "the Spirit Speak Instructor")
         {

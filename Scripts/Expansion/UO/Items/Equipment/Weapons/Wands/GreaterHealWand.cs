@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GreaterHealWand : BaseWand
     {
-        [Constructable]
+        [Constructible]
         public GreaterHealWand()
             : base(WandEffect.GreaterHealing, 1, Core.ML ? 109 : 5)
         {

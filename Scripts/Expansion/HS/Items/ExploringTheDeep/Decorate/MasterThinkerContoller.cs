@@ -125,7 +125,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public MasterThinkerDecor(int id, int hue, DecorType type, MasterThinkerContoller controller)
             : base()
         {

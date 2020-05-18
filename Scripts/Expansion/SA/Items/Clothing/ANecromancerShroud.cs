@@ -5,7 +5,7 @@ namespace Server.Items
     public class ANecromancerShroud : Robe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ANecromancerShroud()
         {
             Hue = 0x455;

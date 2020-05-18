@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1097762;  // heart shaped box
 
-        [Constructable]
+        [Constructible]
         public HeartShapedBox()
             : base(0x49CC)
         {

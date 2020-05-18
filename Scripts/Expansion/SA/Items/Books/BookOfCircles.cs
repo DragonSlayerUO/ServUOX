@@ -58,7 +58,7 @@ namespace Server.Items
                 "with all members (and all",
                 "virtues) equal parts of",
                 "The unified whole."));
-        [Constructable]
+        [Constructible]
         public BookOfCircles()
             : base(false)
         {

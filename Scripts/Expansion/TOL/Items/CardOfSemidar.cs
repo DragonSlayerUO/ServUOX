@@ -26,13 +26,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public CardType Type { get { return _Type; } set { _Type = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public CardOfSemidar()
             : this((CardType)Utility.RandomMinMax(0, 3))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CardOfSemidar(CardType type)
             : base(0x9C14)
         {

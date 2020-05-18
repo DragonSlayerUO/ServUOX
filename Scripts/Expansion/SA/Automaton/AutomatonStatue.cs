@@ -12,7 +12,7 @@ namespace Server.Items
         public override int LabelNumber => 1124395;  // Automaton
         public override bool HandlesOnMovement => Automaton == null;
 
-        [Constructable]
+        [Constructible]
         public AutomatonStatue()
             : base(Utility.RandomBool() ? 0x9DB3 : 0x9DB4)
         {

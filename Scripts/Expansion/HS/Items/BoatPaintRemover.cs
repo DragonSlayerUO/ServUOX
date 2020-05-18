@@ -10,7 +10,7 @@ namespace Server.Items
         public override int LabelNumber => 1116766;
         public override double DefaultWeight => 10.0;
 
-        [Constructable]
+        [Constructible]
         public BoatPaintRemover() : base(4011)
         {
         }

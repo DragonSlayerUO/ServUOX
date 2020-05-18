@@ -5,7 +5,7 @@ namespace Server.Items
     public class ReginasRing : BaseRing, IRepairable
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ReginasRing()
             : base(0x1F09)
         {

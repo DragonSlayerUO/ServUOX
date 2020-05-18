@@ -15,7 +15,7 @@ namespace Server.Mobiles
         public override bool ReduceSpeedWithDamage => false;
         public override bool AlwaysMurderer => true;
 
-        [Constructable]
+        [Constructible]
         public Raider()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155627;  // Ancient Parchment
 
-        [Constructable]
+        [Constructible]
         public AncientParchment()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AncientParchment(int amount)
             : base(0x2269)
         {

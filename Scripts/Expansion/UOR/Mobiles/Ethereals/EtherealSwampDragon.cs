@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealSwampDragon : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealSwampDragon()
             : base(0x2619, 0x3E98, 0x3EBD, DefaultEtherealHue, 0x851)
         { }

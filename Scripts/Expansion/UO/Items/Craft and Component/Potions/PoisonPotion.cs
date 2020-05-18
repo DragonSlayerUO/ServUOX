@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PoisonPotion : BasePoisonPotion
     {
-        [Constructable]
+        [Constructible]
         public PoisonPotion()
             : base(PotionEffect.Poison)
         {

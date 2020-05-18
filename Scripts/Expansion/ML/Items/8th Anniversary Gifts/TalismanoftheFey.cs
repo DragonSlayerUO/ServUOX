@@ -77,7 +77,7 @@ namespace Server.Items
     {
         public override TalismanForm Form => TalismanForm.Ferret;
 
-        [Constructable]
+        [Constructible]
         public FerretFormTalisman()
             : base()
         {
@@ -105,7 +105,7 @@ namespace Server.Items
     {
         public override TalismanForm Form => TalismanForm.Squirrel;
 
-        [Constructable]
+        [Constructible]
         public SquirrelFormTalisman()
             : base()
         {
@@ -133,7 +133,7 @@ namespace Server.Items
     {
         public override TalismanForm Form => TalismanForm.CuSidhe;
 
-        [Constructable]
+        [Constructible]
         public CuSidheFormTalisman()
             : base()
         {
@@ -161,7 +161,7 @@ namespace Server.Items
     {
         public override TalismanForm Form => TalismanForm.Reptalon;
 
-        [Constructable]
+        [Constructible]
         public ReptalonFormTalisman()
             : base()
         {

@@ -10,7 +10,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new SpinningLatheDeed(Tools.Count > 0 ? Tools[0].UsesRemaining : 0);
         public override CraftSystem CraftSystem => DefCarpentry.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public SpinningLathe(bool south, int uses)
         {
             if (south)
@@ -52,12 +52,12 @@ namespace Server.Items
 
         private bool _South;
 
-        [Constructable]
+        [Constructible]
         public SpinningLatheDeed() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpinningLatheDeed(int uses) : base(uses)
         {
         }

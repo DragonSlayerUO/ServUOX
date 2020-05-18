@@ -4,7 +4,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Housecat")]
     public class Cat : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Cat()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -65,7 +65,7 @@ namespace Server.Mobiles
     [CorpseName("a cougar corpse")]
     public class Cougar : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Cougar()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -128,7 +128,7 @@ namespace Server.Mobiles
     [CorpseName("a panther corpse")]
     public class Panther : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Panther()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -193,7 +193,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Snowleopard")]
     public class SnowLeopard : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SnowLeopard()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

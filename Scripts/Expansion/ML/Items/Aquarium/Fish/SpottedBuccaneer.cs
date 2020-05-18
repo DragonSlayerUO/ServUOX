@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SpottedBuccaneer : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SpottedBuccaneer()
             : base(0x3B09)
         {

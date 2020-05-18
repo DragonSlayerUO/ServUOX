@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StrippedFlakeFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public StrippedFlakeFish()
             : base(0x3B0A)
         {

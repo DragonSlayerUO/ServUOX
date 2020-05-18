@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class RubyMace : DiamondMace
     {
-        [Constructable]
+        [Constructible]
         public RubyMace()
         {
             Attributes.WeaponDamage = 5;

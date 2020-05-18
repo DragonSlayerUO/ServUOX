@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1159230;  // Admiral Jack's Pumpkin Spice Ale
 
-        [Constructable]
+        [Constructible]
         public AdmiralJacksPumpkinSpiceAle()
             : base(0xA40B)
         {

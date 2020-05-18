@@ -10,7 +10,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new FletchingStationDeed(Tools.Count > 0 ? Tools[0].UsesRemaining : 0);
         public override CraftSystem CraftSystem => DefBowFletching.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public FletchingStation(bool south, int uses)
         {
             if (south)
@@ -52,12 +52,12 @@ namespace Server.Items
 
         private bool _South;
 
-        [Constructable]
+        [Constructible]
         public FletchingStationDeed() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FletchingStationDeed(int uses) : base(uses)
         {
         }

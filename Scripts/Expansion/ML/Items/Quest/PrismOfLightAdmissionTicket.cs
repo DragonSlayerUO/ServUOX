@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class PrismOfLightAdmissionTicket : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public PrismOfLightAdmissionTicket()
             : base(0x14EF)
         {

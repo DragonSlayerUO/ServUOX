@@ -5,7 +5,7 @@ namespace Server.Items
     public class StaffOfPower : BlackStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public StaffOfPower()
         {
             Hue = Utility.RandomBool() ? 0x4F2 : 0x4EF;

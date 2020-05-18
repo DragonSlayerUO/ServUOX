@@ -5,7 +5,7 @@ namespace Server.Items
     public class DarkglowScimitar : RadiantScimitar
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DarkglowScimitar()
         {
             WeaponAttributes.HitDispel = 10;

@@ -8,19 +8,19 @@ namespace Server.Items
         private bool m_Active;
         private SHTeleComponent m_TeleDest;
         private Point3D m_TeleOffset;
-        [Constructable]
+        [Constructible]
         public SHTeleComponent()
             : this(0x1775)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SHTeleComponent(int itemID)
             : this(itemID, new Point3D(0, 0, 0))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SHTeleComponent(int itemID, Point3D offset)
             : base(itemID)
         {
@@ -150,13 +150,13 @@ namespace Server.Items
     public class SHTeleporter : BaseAddon
     {
         private bool m_Changing;
-        [Constructable]
+        [Constructible]
         public SHTeleporter()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SHTeleporter(bool external)
         {
             m_Changing = false;

@@ -10,7 +10,7 @@ namespace Server.Mobiles
 
         private Timer m_SoundTimer;
         private bool m_HasTeleportedAway;
-        [Constructable]
+        [Constructible]
         public ShadowKnight()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

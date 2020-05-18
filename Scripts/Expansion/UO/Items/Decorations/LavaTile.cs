@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LavaTile : Item
     {
-        [Constructable]
+        [Constructible]
         public LavaTile()
             : base(0x12EE)
         {

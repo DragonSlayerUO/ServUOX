@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2D1E, 0x2D2A)]
     public class ElvenCompositeLongbow : BaseRanged
     {
-        [Constructable]
+        [Constructible]
         public ElvenCompositeLongbow()
             : base(0x2D1E)
         {

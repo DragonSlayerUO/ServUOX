@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a lizardman corpse")]
     public class LizardmanWitchdoctor : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public LizardmanWitchdoctor() : base(AIType.AI_Mage)
         {
             Name = "a lizardman witchdoctor";
@@ -14,7 +14,7 @@ namespace Server.Mobiles
             BaseSoundID = 417;
         }
 
-        [Constructable]
+        [Constructible]
         public LizardmanWitchdoctor(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a lizardman witchdoctor";
@@ -42,7 +42,7 @@ namespace Server.Mobiles
     [CorpseName("an orcish corpse")]
     public class OrcFootSoldier : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public OrcFootSoldier() : base(AIType.AI_Melee)
         {
             Name = "an orc foot soldier";
@@ -50,7 +50,7 @@ namespace Server.Mobiles
             BaseSoundID = 0x45A;
         }
 
-        [Constructable]
+        [Constructible]
         public OrcFootSoldier(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "an orc foot soldier";
@@ -78,7 +78,7 @@ namespace Server.Mobiles
     [CorpseName("a ratman corpse")]
     public class RatmanAssassin : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public RatmanAssassin() : base(AIType.AI_Melee)
         {
             Name = "ratman assassin";
@@ -86,7 +86,7 @@ namespace Server.Mobiles
             BaseSoundID = 437;
         }
 
-        [Constructable]
+        [Constructible]
         public RatmanAssassin(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "ratman assassin";
@@ -114,7 +114,7 @@ namespace Server.Mobiles
     [CorpseName("an ogre corpse")]
     public class OgreBoneCrusher : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public OgreBoneCrusher() : base(AIType.AI_Melee)
         {
             Name = "an ogre bone crusher";
@@ -122,7 +122,7 @@ namespace Server.Mobiles
             BaseSoundID = 427;
         }
 
-        [Constructable]
+        [Constructible]
         public OgreBoneCrusher(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "an ogre bone crusher";
@@ -150,7 +150,7 @@ namespace Server.Mobiles
     [CorpseName("a titan corpse")]
     public class TitanRockHunter : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public TitanRockHunter() : base(AIType.AI_Mage)
         {
             Name = "a titan rockhurler";
@@ -158,7 +158,7 @@ namespace Server.Mobiles
             BaseSoundID = 609;
         }
 
-        [Constructable]
+        [Constructible]
         public TitanRockHunter(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a titan rockhurler";

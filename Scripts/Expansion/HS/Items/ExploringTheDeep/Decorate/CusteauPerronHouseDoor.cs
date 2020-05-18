@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class CusteauPerronHouseDoor : DarkWoodDoor
     {
-        [Constructable]
+        [Constructible]
         public CusteauPerronHouseDoor() : base(DoorFacing.WestCCW)
         {
         }

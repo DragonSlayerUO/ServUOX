@@ -9,7 +9,7 @@ namespace Server.Items
         {
             0x314, 0x315, 0x316, 0x317  // TODO check
         };
-        [Constructable]
+        [Constructible]
         public TragicRemainsOfTravesty()
             : base(Utility.Random(0x122A, 6))
         {

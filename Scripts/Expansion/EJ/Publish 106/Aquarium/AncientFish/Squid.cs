@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Squid : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Squid()
             : base(0xA383)
         {

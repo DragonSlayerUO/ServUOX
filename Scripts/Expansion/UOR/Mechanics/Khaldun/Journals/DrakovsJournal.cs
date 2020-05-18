@@ -79,7 +79,7 @@ namespace Server.Items
                 "mercy and forsight",
                 "we would not be",
                 "in such dire peril."));
-        [Constructable]
+        [Constructible]
         public DrakovsJournal()
             : base(false)
         {

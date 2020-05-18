@@ -16,7 +16,7 @@ namespace Server.Mobiles
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Vrulkax()
             : base("the Exalted Artificer")
         {

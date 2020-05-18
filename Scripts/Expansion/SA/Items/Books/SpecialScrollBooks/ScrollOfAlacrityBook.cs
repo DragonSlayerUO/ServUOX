@@ -16,7 +16,7 @@ namespace Server.Items
         public override int RemoveMessage => 1154322;   // You remove a Scroll of Alacrity and put it in your pack.
         public override int GumpTitle => 1154324;   // Alacrity Scrolls
 
-        [Constructable]
+        [Constructible]
         public ScrollOfAlacrityBook()
             : base(0x9981)
         {

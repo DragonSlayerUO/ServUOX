@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class BlacksmithGuildmaster : BaseGuildmaster
     {
-        [Constructable]
+        [Constructible]
         public BlacksmithGuildmaster()
             : base("blacksmith")
         {

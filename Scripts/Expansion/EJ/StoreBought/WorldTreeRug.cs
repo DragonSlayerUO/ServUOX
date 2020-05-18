@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new SmallWorldTreeRugAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public SmallWorldTreeRugAddon()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SmallWorldTreeRugAddon(bool south)
         {
             if (south)
@@ -67,7 +67,7 @@ namespace Server.Items
         public override BaseAddon Addon => new SmallWorldTreeRugAddon(m_South);
         public override int LabelNumber => 1157206;  // Small World Tree
 
-        [Constructable]
+        [Constructible]
         public SmallWorldTreeRugAddonDeed()
         {
         }
@@ -126,13 +126,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new LargeWorldTreeRugAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public LargeWorldTreeRugAddon()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LargeWorldTreeRugAddon(bool south)
         {
             if (south)
@@ -226,7 +226,7 @@ namespace Server.Items
                 from.SendLocalizedMessage(1062334); // This item must be in your backpack to be used.       	
         }
 
-        [Constructable]
+        [Constructible]
         public LargeWorldTreeRugAddonDeed()
         {
         }

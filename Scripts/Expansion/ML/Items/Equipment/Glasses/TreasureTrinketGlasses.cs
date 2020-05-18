@@ -5,7 +5,7 @@ namespace Server.Items
     public class TreasureTrinketGlasses : ElvenGlasses
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TreasureTrinketGlasses()
         {
             Attributes.BonusInt = 10;

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a shadow dweller corpse")]
     public class ShadowDweller : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ShadowDweller()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class PuzzleRoomTeleporter : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public PuzzleRoomTeleporter()
         {
         }

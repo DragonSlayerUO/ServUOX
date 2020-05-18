@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Sliem : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Sliem()
             : base("Sliem", "the Fence")
         {

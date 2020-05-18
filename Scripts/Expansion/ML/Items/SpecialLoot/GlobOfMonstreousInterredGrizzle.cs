@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GlobOfMonstreousInterredGrizzle : Item
     {
-        [Constructable]
+        [Constructible]
         public GlobOfMonstreousInterredGrizzle()
             : base(0x2F3)
         {

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     public class Tanner : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Tanner()
             : base("the tanner")
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public CloakBearingTheCrestOfBlackthorn()
         {
             ReforgedSuffix = ReforgedSuffix.Blackthorn;

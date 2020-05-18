@@ -5,7 +5,7 @@ namespace Server.Items
     public class HardenedWildStaff : WildStaff
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HardenedWildStaff()
         {
             Attributes.WeaponDamage = 5;

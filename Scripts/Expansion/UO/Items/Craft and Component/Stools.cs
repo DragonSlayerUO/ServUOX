@@ -3,7 +3,7 @@ namespace Server.Items
     [Furniture]
     public class Stool : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public Stool()
             : base(0xA2A)
         {
@@ -31,7 +31,7 @@ namespace Server.Items
     [Furniture]
     public class FootStool : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public FootStool()
             : base(0xB5E)
         {

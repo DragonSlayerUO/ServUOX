@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override string DefaultName => "Invisible Tile";
 
-        [Constructable]
+        [Constructible]
         public InvisibleTile()
             : base(0x2198)
         {
@@ -46,7 +46,7 @@ namespace Server.Items
 
     public class RevealTile : Item
     {
-        [Constructable]
+        [Constructible]
         public RevealTile()
             : base(0x2e46)
         {

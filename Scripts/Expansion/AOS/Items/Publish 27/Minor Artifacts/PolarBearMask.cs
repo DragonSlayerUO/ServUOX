@@ -5,7 +5,7 @@ namespace Server.Items
     public class PolarBearMask : BearMask
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PolarBearMask()
         {
             Hue = Utility.RandomBool() ? 0x481 : 0x47E;

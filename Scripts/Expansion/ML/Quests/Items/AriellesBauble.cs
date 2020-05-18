@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AriellesBauble : Item
     {
-        [Constructable]
+        [Constructible]
         public AriellesBauble()
             : base(0x23B)
         {

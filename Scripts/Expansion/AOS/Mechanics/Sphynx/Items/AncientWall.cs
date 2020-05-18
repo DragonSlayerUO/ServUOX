@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class AncientWall : Item
     {
-        [Constructable]
+        [Constructible]
         public AncientWall()
             : base(0x175)
         {

@@ -77,7 +77,7 @@ namespace Server.Items
         private SutekIngredient m_Ingredient;
         private int m_TextId;
 
-        [Constructable]
+        [Constructible]
         public SutekIngredientItem(SutekIngredientInfo info)
             : base(info.ItemId)
         {

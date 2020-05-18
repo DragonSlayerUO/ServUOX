@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Tillanil : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Tillanil()
             : base("Tillanil", "the Wine Tender")
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class WaterTroughEastAddon : BaseAddon, IWaterSource
     {
-        [Constructable]
+        [Constructible]
         public WaterTroughEastAddon()
         {
             AddComponent(new AddonComponent(0xB41), 0, 0, 0);
@@ -38,7 +38,7 @@ namespace Server.Items
 
     public class WaterTroughEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public WaterTroughEastDeed()
         {
         }

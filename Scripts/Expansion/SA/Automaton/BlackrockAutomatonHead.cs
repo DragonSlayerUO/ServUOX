@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157220;  // Blackrock Automaton Head
 
-        [Constructable]
+        [Constructible]
         public BlackrockAutomatonHead()
         {
             Hue = 1175;

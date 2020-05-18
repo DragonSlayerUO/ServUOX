@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a lifestealer corpse")]
     public class Lifestealer : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Lifestealer()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -18,7 +18,7 @@ namespace Server.Items
         public override int ArmorBase => 28;
         public override ArmorMaterialType MaterialType => ArmorMaterialType.Chainmail;
 
-        [Constructable]
+        [Constructible]
         public ChainChest()
             : base(0x13BF)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1072910;// Mischief Maker
 
-        [Constructable]
+        [Constructible]
         public MischiefMaker()
             : base()
         {

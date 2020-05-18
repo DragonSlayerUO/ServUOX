@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LightAndMight : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public LightAndMight()
             : base("Corey", "the paladin")
         {

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     public class Gardener : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Gardener()
             : base("the Gardener")
         {

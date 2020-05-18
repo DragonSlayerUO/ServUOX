@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class WondrousFish : BaseMagicFish
     {
-        [Constructable]
+        [Constructible]
         public WondrousFish()
             : base(86)
         {

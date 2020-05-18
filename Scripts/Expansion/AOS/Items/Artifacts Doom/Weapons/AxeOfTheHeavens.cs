@@ -5,7 +5,7 @@ namespace Server.Items
     public class AxeOfTheHeavens : DoubleAxe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AxeOfTheHeavens()
         {
             Hue = 0x4D5;

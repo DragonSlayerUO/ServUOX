@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Squirrelfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Squirrelfish()
             : base(0xA365)
         {

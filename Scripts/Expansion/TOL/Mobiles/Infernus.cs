@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("an infernus corpse")]
     public class Infernus : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Infernus()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .2, .4)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041426;  // coal
 
-        [Constructable]
+        [Constructible]
         public Coal()
             : base(0x19b9)
         {
@@ -39,7 +39,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1041428; // Maybe next year youll get a better...
 
-        [Constructable]
+        [Constructible]
         public BadCard()
             : base(0x14ef)
         {
@@ -69,7 +69,7 @@ namespace Server.Items
 
     public class Spam : Food
     {
-        [Constructable]
+        [Constructible]
         public Spam()
             : base(0x1044)
         {

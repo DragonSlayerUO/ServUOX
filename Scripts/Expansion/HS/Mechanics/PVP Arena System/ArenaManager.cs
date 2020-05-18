@@ -16,7 +16,7 @@ namespace Server.Engines.ArenaSystem
         [CommandProperty(AccessLevel.GameMaster)]
         public PVPArena Arena { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ArenaManager(PVPArena arena)
         {
             Title = "The Arena Manager";

@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         public static Dictionary<Mobile, Timer> Table { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public MudPie()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.4, 0.2)
         {
@@ -90,7 +90,7 @@ namespace Server.Mobiles
     [CorpseName("a stone elemental corpse")]
     public class StoneElemental : EarthElemental
     {
-        [Constructable]
+        [Constructible]
         public StoneElemental()
         {
             Name = "a stone elemental";
@@ -168,12 +168,12 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public ShameWall Wall { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CaveTroll() : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CaveTroll(ShameWall wall)
         {
             Name = "a cave troll";
@@ -261,7 +261,7 @@ namespace Server.Mobiles
     [CorpseName("a clay golem corpse")]
     public class ClayGolem : Golem
     {
-        [Constructable]
+        [Constructible]
         public ClayGolem()
         {
             Name = "a clay golem";
@@ -333,7 +333,7 @@ namespace Server.Mobiles
     [CorpseName("a greater earth elemental corpse")]
     public class GreaterEarthElemental : EarthElemental
     {
-        [Constructable]
+        [Constructible]
         public GreaterEarthElemental()
         {
             Name = "a greater earth elemental";
@@ -393,7 +393,7 @@ namespace Server.Mobiles
     [CorpseName("a mud elemental corpse")]
     public class MudElemental : EarthElemental
     {
-        [Constructable]
+        [Constructible]
         public MudElemental()
         {
             Name = "a mud elemental";
@@ -459,7 +459,7 @@ namespace Server.Mobiles
 
     public class GreaterAirElemental : AirElemental
     {
-        [Constructable]
+        [Constructible]
         public GreaterAirElemental()
         {
             SetStr(250, 315);
@@ -520,7 +520,7 @@ namespace Server.Mobiles
     [CorpseName("a molten earth elemental corpse")]
     public class MoltenEarthElemental : GreaterEarthElemental
     {
-        [Constructable]
+        [Constructible]
         public MoltenEarthElemental()
         {
             Hue = 442;
@@ -585,7 +585,7 @@ namespace Server.Mobiles
     [CorpseName("a flame elemental corpse")]
     public class LesserFlameElemental : BaseCreature, IAuraCreature
     {
-        [Constructable]
+        [Constructible]
         public LesserFlameElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.4, 0.2)
         {
@@ -669,7 +669,7 @@ namespace Server.Mobiles
     [CorpseName("a wind elemental corpse")]
     public class LesserWindElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LesserWindElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.4, 0.2)
         {
@@ -741,7 +741,7 @@ namespace Server.Mobiles
     [CorpseName("an eternal gazer corpse")]
     public class EternalGazer : ElderGazer
     {
-        [Constructable]
+        [Constructible]
         public EternalGazer()
         {
             Name = "an eternal gazer";
@@ -825,7 +825,7 @@ namespace Server.Mobiles
     {
         public static Dictionary<Mobile, Timer> Table { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public BurningMage() : base(AIType.AI_Mage, FightMode.Weakest, 10, 1, 0.4, 0.2)
         {
             Name = NameList.RandomName("male");
@@ -975,7 +975,7 @@ namespace Server.Mobiles
     {
         public static Dictionary<Mobile, Timer> Table { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public CrazedMage() : base(AIType.AI_Mystic, FightMode.Weakest, 10, 1, 0.4, 0.2)
         {
             Name = NameList.RandomName("male");
@@ -1120,7 +1120,7 @@ namespace Server.Mobiles
     {
         public static Dictionary<Mobile, Timer> Table { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public CorruptedMage()
         {
             Title = "the corrupted mage";
@@ -1256,7 +1256,7 @@ namespace Server.Mobiles
     [CorpseName("a vile mage corpse")]
     public class VileMage : CorruptedMage
     {
-        [Constructable]
+        [Constructible]
         public VileMage()
         {
             Title = "the vile mage";
@@ -1318,7 +1318,7 @@ namespace Server.Mobiles
     [CorpseName("a chaos vortex corpse")]
     public class ChaosVortex : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ChaosVortex()
             : base(AIType.AI_Melee, FightMode.Weakest, 10, 1, 0.4, 0.2)
         {
@@ -1463,7 +1463,7 @@ namespace Server.Mobiles
     [CorpseName("an unbound energy vortex corpse")]
     public class UnboundEnergyVortex : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public UnboundEnergyVortex() : base(AIType.AI_Melee, FightMode.Weakest, 10, 1, 0.4, 0.2)
         {
             Name = "an unbound energy vortex";
@@ -1606,7 +1606,7 @@ namespace Server.Mobiles
     [CorpseName("a diseased blood elemental")]
     public class DiseasedBloodElemental : BloodElemental
     {
-        [Constructable]
+        [Constructible]
         public DiseasedBloodElemental()
         {
             Name = "a diseased blood elemental";
@@ -1693,7 +1693,7 @@ namespace Server.Mobiles
 
     public class GreaterWaterElemental : WaterElemental
     {
-        [Constructable]
+        [Constructible]
         public GreaterWaterElemental()
         {
             SetStr(400, 500);
@@ -1757,7 +1757,7 @@ namespace Server.Mobiles
 
     public class ShameGreaterPoisonElemental : PoisonElemental
     {
-        [Constructable]
+        [Constructible]
         public ShameGreaterPoisonElemental()
         {
             Hue = 32854;
@@ -1823,7 +1823,7 @@ namespace Server.Mobiles
 
     public class GreaterBloodElemental : BloodElemental
     {
-        [Constructable]
+        [Constructible]
         public GreaterBloodElemental()
         {
             SetStr(500, 600);
@@ -1886,7 +1886,7 @@ namespace Server.Mobiles
 
     public class ShameEarthElemental : EarthElemental
     {
-        [Constructable]
+        [Constructible]
         public ShameEarthElemental()
         {
             SetHits(300, 400);

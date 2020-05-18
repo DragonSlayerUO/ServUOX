@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153868;  // Keypunch Reader  
 
-        [Constructable]
+        [Constructible]
         public KeypunchReader()
             : base()
         {

@@ -32,7 +32,7 @@ namespace Server.Items
 			, {12906, 2, -8, 0}// 105	
 		};
 
-        [Constructable]
+        [Constructible]
         public BlackthornStep4()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

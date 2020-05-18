@@ -5,7 +5,7 @@ namespace Server.Items
     public class SentinelsGuard : OrderShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SentinelsGuard()
             : base()
         {

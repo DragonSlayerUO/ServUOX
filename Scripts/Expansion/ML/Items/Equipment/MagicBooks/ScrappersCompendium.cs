@@ -6,7 +6,7 @@ namespace Server.Items
     public class ScrappersCompendium : Spellbook
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ScrappersCompendium()
             : base()
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x13B2, 0x13B1)]
     public class JukaBow : Bow
     {
-        [Constructable]
+        [Constructible]
         public JukaBow()
         { }
 

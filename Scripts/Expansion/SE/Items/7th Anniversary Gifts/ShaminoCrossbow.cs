@@ -5,7 +5,7 @@ namespace Server.Items
     public class ShaminoCrossbow : RepeatingCrossbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ShaminoCrossbow()
         {
             Hue = 0x504;

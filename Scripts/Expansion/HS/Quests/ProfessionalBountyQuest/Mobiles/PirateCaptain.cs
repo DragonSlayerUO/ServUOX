@@ -45,7 +45,7 @@ namespace Server.Mobiles
         public ProfessionalBountyQuest Quest { get { return m_Quest; } set { m_Quest = value; } }
         #endregion
 
-        [Constructable]
+        [Constructible]
         public PirateCaptain()
             : this(null)
         {

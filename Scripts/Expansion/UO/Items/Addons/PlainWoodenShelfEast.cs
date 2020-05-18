@@ -5,7 +5,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new PlainWoodenShelfEastDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public PlainWoodenShelfEastAddon()
         {
             AddComponent(new AddonComponent(0x4C3B), 0, 0, 0);
@@ -34,7 +34,7 @@ namespace Server.Items
         public override BaseAddon Addon => new PlainWoodenShelfEastAddon();
         public override int LabelNumber => 1154161;  // Plain Wooden Shelf (East)
 
-        [Constructable]
+        [Constructible]
         public PlainWoodenShelfEastDeed()
         {
         }

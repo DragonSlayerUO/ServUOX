@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class AppleTrunkAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public AppleTrunkAddon()
             : base()
         {
@@ -32,7 +32,7 @@ namespace Server.Items
 
     public class AppleTrunkDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public AppleTrunkDeed()
             : base()
         {

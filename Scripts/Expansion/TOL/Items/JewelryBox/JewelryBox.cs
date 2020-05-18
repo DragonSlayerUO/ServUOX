@@ -21,7 +21,7 @@ namespace Server.Items
 
         public bool IsFull => DefaultMaxItems <= Items.Count;
 
-        [Constructable]
+        [Constructible]
         public JewelryBox()
             : base(0x9F1C)
         {

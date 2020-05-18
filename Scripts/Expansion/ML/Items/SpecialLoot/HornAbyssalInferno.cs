@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HornAbyssalInferno : Item
     {
-        [Constructable]
+        [Constructible]
         public HornAbyssalInferno()
             : base(0x2dB7)
         {

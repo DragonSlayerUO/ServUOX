@@ -24,7 +24,7 @@ namespace Server.Items
 
 
 
-        [Constructable]
+        [Constructible]
         public XmlLatch() : base(0x1BBF)
         {
             Movable = false;
@@ -237,7 +237,7 @@ namespace Server.Items
             get { return m_LinkedItem; }
         }
 
-        [Constructable]
+        [Constructible]
         public TimedLever() : base(0x108C)
         {
             Name = "A lever";
@@ -544,7 +544,7 @@ namespace Server.Items
             get { return m_LinkedItem; }
         }
 
-        [Constructable]
+        [Constructible]
         public TimedSwitch() : base(0x108F)
         {
             Name = "A switch";
@@ -822,7 +822,7 @@ namespace Server.Items
             get { return m_LinkedItem; }
         }
 
-        [Constructable]
+        [Constructible]
         public TimedSwitchableItem() : base(0x108F)
         {
             Name = "A switchable item";

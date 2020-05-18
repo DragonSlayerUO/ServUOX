@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BangaiCardinalfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public BangaiCardinalfish()
             : base(0xA367)
         {

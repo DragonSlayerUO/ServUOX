@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151202;  // Humans & Elves are our friends!
 
-        [Constructable]
+        [Constructible]
         public HumansAndElvesRobe()
         {
             LootType = LootType.Blessed;
@@ -39,7 +39,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151203;  // Gargoyles are our friends!
 
-        [Constructable]
+        [Constructible]
         public GargoylesAreOurFriendsRobe()
         {
             LootType = LootType.Blessed;
@@ -70,7 +70,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151204;  // We are pirates!
 
-        [Constructable]
+        [Constructible]
         public WeArePiratesRobe()
         {
             LootType = LootType.Blessed;
@@ -101,7 +101,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151205;  // Follower of Bane
 
-        [Constructable]
+        [Constructible]
         public FollowerOfBaneRobe()
         {
             LootType = LootType.Blessed;
@@ -132,7 +132,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151206;  // Queen Dawn Forever
 
-        [Constructable]
+        [Constructible]
         public QueenDawnForeverRobe()
         {
             LootType = LootType.Blessed;

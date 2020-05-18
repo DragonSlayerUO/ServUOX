@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159472;  // decorative stocks
 
-        [Constructable]
+        [Constructible]
         public DecorativeStocks()
             : base(0xA4ED)
         {

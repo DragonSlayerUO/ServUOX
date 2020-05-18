@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154234;  // Nictitating Lens
 
-        [Constructable]
+        [Constructible]
         public NictitatingLens()
             : base()
         {
@@ -61,7 +61,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154234;  // Nictitating Lens
 
-        [Constructable]
+        [Constructible]
         public GargishNictitatingLens()
             : base()
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1158970;  // Decorative Kitchen Set
 
-        [Constructable]
+        [Constructible]
         public DecorativeKitchenSet()
         {
             DropItem(new PieSafe());

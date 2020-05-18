@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113523;  // Stone Dragon's Tooth
 
-        [Constructable]
+        [Constructible]
         public StoneDragonsTooth()
             : base()
         {

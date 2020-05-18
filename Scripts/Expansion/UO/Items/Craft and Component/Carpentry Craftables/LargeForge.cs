@@ -5,7 +5,7 @@ namespace Server.Items
     {
         private LargeForgeWestItem m_Item;
         private LargeForgeWestItem2 m_Item2;
-        [Constructable]
+        [Constructible]
         public LargeForgeWest()
             : base(0x199A)
         {
@@ -202,7 +202,7 @@ namespace Server.Items
     {
         private LargeForgeEastItem m_Item;
         private LargeForgeEastItem2 m_Item2;
-        [Constructable]
+        [Constructible]
         public LargeForgeEast()
             : base(0x197A)
         {

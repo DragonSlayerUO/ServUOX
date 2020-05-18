@@ -7,7 +7,7 @@ namespace Server.Items
     public class DarkwoodChest : WoodlandChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DarkwoodChest()
             : base()
         {

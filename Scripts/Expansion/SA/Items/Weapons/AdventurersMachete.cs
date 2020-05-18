@@ -5,7 +5,7 @@ namespace Server.Items
     public class AdventurersMachete : ElvenMachete
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AdventurersMachete()
         {
             Attributes.Luck = 20;

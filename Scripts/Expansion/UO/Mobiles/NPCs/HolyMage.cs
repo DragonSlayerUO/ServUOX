@@ -6,7 +6,7 @@ namespace Server.Mobiles
     public class HolyMage : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public HolyMage()
             : base("the Holy Mage")
         {

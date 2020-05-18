@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x27A8, 0x27F3)]
     public class Bokuto : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Bokuto()
             : base(0x27A8)
         {

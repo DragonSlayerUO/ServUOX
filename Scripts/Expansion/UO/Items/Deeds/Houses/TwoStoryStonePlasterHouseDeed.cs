@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TwoStoryStonePlasterHouseDeed : HouseDeed
     {
-        [Constructable]
+        [Constructible]
         public TwoStoryStonePlasterHouseDeed()
             : base(0x78, new Point3D(-3, 7, 0))
         {

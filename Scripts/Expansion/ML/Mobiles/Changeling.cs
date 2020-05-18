@@ -23,7 +23,7 @@ namespace Server.Mobiles
         private Mobile m_MorphedInto;
         private DateTime m_LastMorph;
 
-        [Constructable]
+        [Constructible]
         public Changeling()
             : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

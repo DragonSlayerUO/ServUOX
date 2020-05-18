@@ -53,7 +53,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(KodarsRescueQuest) };
 
-        [Constructable]
+        [Constructible]
         public Kodar()
             : base()
         {

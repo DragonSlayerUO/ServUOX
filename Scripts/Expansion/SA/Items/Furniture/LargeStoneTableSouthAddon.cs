@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class LargeStoneTableSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public LargeStoneTableSouthAddon()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LargeStoneTableSouthAddon(int hue)
         {
             AddComponent(new AddonComponent(0x1205), 0, 0, 0);
@@ -43,7 +43,7 @@ namespace Server.Items
 
     public class LargeStoneTableSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public LargeStoneTableSouthDeed()
         {
         }

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     public class InnKeeper : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public InnKeeper()
             : base("the innkeeper")
         {

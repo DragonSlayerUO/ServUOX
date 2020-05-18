@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         private bool m_InHere;
 
-        [Constructable]
+        [Constructible]
         public DemonKnight()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Rope : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Rope()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Rope(int amount)
             : base(0x14F8)
         {
@@ -40,13 +40,13 @@ namespace Server.Items
 
     public class IronWire : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public IronWire()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public IronWire(int amount)
             : base(0x1876)
         {
@@ -78,13 +78,13 @@ namespace Server.Items
 
     public class SilverWire : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SilverWire()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SilverWire(int amount)
             : base(0x1877)
         {
@@ -116,13 +116,13 @@ namespace Server.Items
 
     public class GoldWire : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public GoldWire()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GoldWire(int amount)
             : base(0x1878)
         {
@@ -154,13 +154,13 @@ namespace Server.Items
 
     public class CopperWire : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public CopperWire()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CopperWire(int amount)
             : base(0x1879)
         {
@@ -192,13 +192,13 @@ namespace Server.Items
 
     public class WhiteDriedFlowers : Item
     {
-        [Constructable]
+        [Constructible]
         public WhiteDriedFlowers()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WhiteDriedFlowers(int amount)
             : base(0xC3C)
         {
@@ -227,13 +227,13 @@ namespace Server.Items
 
     public class GreenDriedFlowers : Item
     {
-        [Constructable]
+        [Constructible]
         public GreenDriedFlowers()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GreenDriedFlowers(int amount)
             : base(0xC3E)
         {
@@ -262,13 +262,13 @@ namespace Server.Items
 
     public class DriedOnions : Item
     {
-        [Constructable]
+        [Constructible]
         public DriedOnions()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DriedOnions(int amount)
             : base(0xC40)
         {
@@ -297,13 +297,13 @@ namespace Server.Items
 
     public class DriedHerbs : Item
     {
-        [Constructable]
+        [Constructible]
         public DriedHerbs()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DriedHerbs(int amount)
             : base(0xC42)
         {
@@ -332,7 +332,7 @@ namespace Server.Items
 
     public class HorseShoes : Item
     {
-        [Constructable]
+        [Constructible]
         public HorseShoes()
             : base(0xFB6)
         {
@@ -359,7 +359,7 @@ namespace Server.Items
 
     public class ForgedMetal : Item
     {
-        [Constructable]
+        [Constructible]
         public ForgedMetal()
             : base(0xFB8)
         {
@@ -386,7 +386,7 @@ namespace Server.Items
 
     public class Whip : Item
     {
-        [Constructable]
+        [Constructible]
         public Whip()
             : base(0x166E)
         {
@@ -413,7 +413,7 @@ namespace Server.Items
 
     public class PaintsAndBrush : Item
     {
-        [Constructable]
+        [Constructible]
         public PaintsAndBrush()
             : base(0xFC1)
         {
@@ -440,7 +440,7 @@ namespace Server.Items
 
     public class PenAndInk : Item
     {
-        [Constructable]
+        [Constructible]
         public PenAndInk()
             : base(0xFBF)
         {
@@ -467,7 +467,7 @@ namespace Server.Items
 
     public class ChiselsNorth : Item
     {
-        [Constructable]
+        [Constructible]
         public ChiselsNorth()
             : base(0x1026)
         {
@@ -494,7 +494,7 @@ namespace Server.Items
 
     public class ChiselsWest : Item
     {
-        [Constructable]
+        [Constructible]
         public ChiselsWest()
             : base(0x1027)
         {
@@ -521,7 +521,7 @@ namespace Server.Items
 
     public class DirtyPan : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtyPan()
             : base(0x9E8)
         {
@@ -548,7 +548,7 @@ namespace Server.Items
 
     public class DirtySmallRoundPot : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtySmallRoundPot()
             : base(0x9E7)
         {
@@ -575,7 +575,7 @@ namespace Server.Items
 
     public class DirtyPot : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtyPot()
             : base(0x9E6)
         {
@@ -602,7 +602,7 @@ namespace Server.Items
 
     public class DirtyRoundPot : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtyRoundPot()
             : base(0x9DF)
         {
@@ -629,7 +629,7 @@ namespace Server.Items
 
     public class DirtyFrypan : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtyFrypan()
             : base(0x9DE)
         {
@@ -656,7 +656,7 @@ namespace Server.Items
 
     public class DirtySmallPot : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtySmallPot()
             : base(0x9DD)
         {
@@ -683,7 +683,7 @@ namespace Server.Items
 
     public class DirtyKettle : Item
     {
-        [Constructable]
+        [Constructible]
         public DirtyKettle()
             : base(0x9DC)
         {

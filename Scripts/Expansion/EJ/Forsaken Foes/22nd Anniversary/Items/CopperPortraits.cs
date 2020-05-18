@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1159154;  // Copper Portrait
 
-        [Constructable]
+        [Constructible]
         public CopperPortrait1()
             : base(0xA3E0)
         {
@@ -71,7 +71,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1159154;  // Copper Portrait
 
-        [Constructable]
+        [Constructible]
         public CopperPortrait2()
             : base(0xA3E3)
         {

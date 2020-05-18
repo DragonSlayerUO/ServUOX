@@ -10,7 +10,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1094939;  // Gem of Salvation
 
-        [Constructable]
+        [Constructible]
         public GemOfSalvation()
             : base(0x1F13)
         {

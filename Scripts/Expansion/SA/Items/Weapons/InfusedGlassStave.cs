@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112909;  // infused glass stave
 
-        [Constructable]
+        [Constructible]
         public InfusedGlassStave()
             : base(0x905)
         {

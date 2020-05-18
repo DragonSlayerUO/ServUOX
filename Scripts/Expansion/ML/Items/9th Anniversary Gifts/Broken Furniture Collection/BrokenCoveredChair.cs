@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class BrokenCoveredChairAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrokenCoveredChairAddon()
             : base()
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class BrokenCoveredChairDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BrokenCoveredChairDeed()
             : base()
         {

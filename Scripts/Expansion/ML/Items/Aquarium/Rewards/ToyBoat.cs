@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x14F3, 0x14F4)]
     public class ToyBoat : Item
     {
-        [Constructable]
+        [Constructible]
         public ToyBoat()
             : base(0x14F4)
         {

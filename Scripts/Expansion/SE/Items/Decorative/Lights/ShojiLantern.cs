@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable]
     public class ShojiLantern : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public ShojiLantern()
             : base(0x24BC)
         {

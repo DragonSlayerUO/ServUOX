@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override bool AttacksFocus => !Controlled;
 
-        [Constructable]
+        [Constructible]
         public Saurosaurus() : base(AIType.AI_Mage, FightMode.Closest, 10, 1, .2, .4)
         {
             Name = "a saurosaurus";

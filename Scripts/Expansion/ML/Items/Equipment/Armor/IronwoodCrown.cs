@@ -5,7 +5,7 @@ namespace Server.Items
     public class IronwoodCrown : RavenHelm
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public IronwoodCrown()
         {
             Hue = 0x1;

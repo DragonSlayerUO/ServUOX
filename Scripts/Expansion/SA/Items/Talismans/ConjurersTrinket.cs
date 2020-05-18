@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1094800;  // Conjurer's Trinket
 
-        [Constructable]
+        [Constructible]
         public ConjurersTrinket()
             : base(0x2F58)
         {

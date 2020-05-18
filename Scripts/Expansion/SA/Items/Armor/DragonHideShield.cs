@@ -5,7 +5,7 @@ namespace Server.Items
     public class DragonHideShield : GargishKiteShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DragonHideShield()
             : base()
         {

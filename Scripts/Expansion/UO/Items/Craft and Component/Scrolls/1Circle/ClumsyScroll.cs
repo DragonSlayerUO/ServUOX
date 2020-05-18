@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class ClumsyScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public ClumsyScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ClumsyScroll(int amount)
             : base(0, 0x1F2E, amount)
         {

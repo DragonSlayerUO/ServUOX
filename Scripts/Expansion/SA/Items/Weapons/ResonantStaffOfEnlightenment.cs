@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113757;  // Resonant Staff of Enlightenment
 
-        [Constructable]
+        [Constructible]
         public ResonantStaffofEnlightenment()
         {
             Hue = 2401;

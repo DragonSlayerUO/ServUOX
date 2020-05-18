@@ -27,10 +27,10 @@ namespace Server.Multis
 
         public override BaseDockedBoat DockedBoat => new DockedTokunoGalleon(this);
 
-        [Constructable]
+        [Constructible]
         public TokunoGalleon() : this(Direction.North) { }
 
-        [Constructable]
+        [Constructible]
         public TokunoGalleon(Direction facing)
             : base(facing)
         {
@@ -206,7 +206,7 @@ namespace Server.Multis
         public override int LabelNumber => 1116740;
         public override BaseBoat Boat => new TokunoGalleon(BoatDirection);
 
-        [Constructable]
+        [Constructible]
         public TokunoGalleonDeed()
             : base(0x30, Point3D.Zero)
         {

@@ -38,7 +38,7 @@ namespace Server.Mobiles
             new ClockworkCreatureDef( ClockworkCreatureType.LeatherWolf,        "a leather wolf",       0x2E3 ),
         };
 
-        [Constructable]
+        [Constructible]
         public ClockworkCreature(ClockworkCreatureDef def)
         {
             Name = def.Name;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TerMurDresserSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public TerMurDresserSouthAddon()
         {
             AddComponent(new AddonComponent(0x402B), 0, 0, 0);
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class TerMurDresserSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public TerMurDresserSouthDeed()
         {
         }

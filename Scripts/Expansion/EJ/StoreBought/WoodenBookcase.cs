@@ -47,7 +47,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public WoodenBookcase()
             : base(0x0A9D)
         {

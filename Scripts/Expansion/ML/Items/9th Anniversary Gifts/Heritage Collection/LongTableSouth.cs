@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new LongTableSouthDeed();
 
-        [Constructable]
+        [Constructible]
         public LongTableSouthAddon()
         {
             AddComponent(new AddonComponent(0x402F), 0, 0, 0);
@@ -37,7 +37,7 @@ namespace Server.Items
         public override BaseAddon Addon => new LongTableSouthAddon();
         public override int LabelNumber => 1111781;  // long table (south)
 
-        [Constructable]
+        [Constructible]
         public LongTableSouthDeed()
         {
         }

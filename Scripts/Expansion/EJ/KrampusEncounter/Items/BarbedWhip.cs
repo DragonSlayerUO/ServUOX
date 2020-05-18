@@ -8,7 +8,7 @@ namespace Server.Items
         public Server.Engines.Craft.CraftSystem RepairSystem => Server.Engines.Craft.DefTinkering.CraftSystem;
         public override int LabelNumber => 1125641;  // Barbed Whip		
 
-        [Constructable]
+        [Constructible]
         public BarbedWhip()
             : base(0xA289)
         {

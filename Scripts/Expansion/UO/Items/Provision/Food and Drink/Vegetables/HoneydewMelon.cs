@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0xC74, 0xC75)]
     public class HoneydewMelon : Food
     {
-        [Constructable]
+        [Constructible]
         public HoneydewMelon()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HoneydewMelon(int amount)
             : base(amount, 0xC74)
         {

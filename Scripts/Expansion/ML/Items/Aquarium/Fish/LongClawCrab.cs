@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LongClawCrab : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public LongClawCrab()
             : base(0x3AFC)
         {

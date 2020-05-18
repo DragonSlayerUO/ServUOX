@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MirrorOfPurification : Item
     {
-        [Constructable]
+        [Constructible]
         public MirrorOfPurification()
             : base(0x1008)
         {

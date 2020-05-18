@@ -5,17 +5,17 @@ namespace Server.Items
     public class FaeryDust : Item, ICommodity
     {
 
-        [Constructable]
+        [Constructible]
         public FaeryDust() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FaeryDust(int amountFrom, int amountTo) : this(Utility.RandomMinMax(amountFrom, amountTo))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FaeryDust(int amount) : base(0x5745)
         {
             Stackable = true;

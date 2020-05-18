@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GreaterConfusionBlastPotion : BaseConfusionBlastPotion
     {
-        [Constructable]
+        [Constructible]
         public GreaterConfusionBlastPotion()
             : base(PotionEffect.ConfusionBlastGreater)
         {

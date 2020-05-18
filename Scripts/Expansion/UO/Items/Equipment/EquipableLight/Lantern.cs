@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Lantern : BaseEquipableLight
     {
-        [Constructable]
+        [Constructible]
         public Lantern()
             : base(0xA25)
         {

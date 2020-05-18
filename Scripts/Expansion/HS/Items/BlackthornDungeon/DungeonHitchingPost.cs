@@ -13,7 +13,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1025351; // hitching post
 
-        [Constructable]
+        [Constructible]
         public DungeonHitchingPost()
             : base(0x14E7)
         {

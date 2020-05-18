@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BegPizza : CheesePizza
     {
-        [Constructable]
+        [Constructible]
         public BegPizza()
         {
         }

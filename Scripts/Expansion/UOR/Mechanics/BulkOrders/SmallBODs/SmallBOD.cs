@@ -18,7 +18,7 @@ namespace Server.Engines.BulkOrders
         private bool m_RequireExceptional;
         private BulkMaterialType m_Material;
 
-        [Constructable]
+        [Constructible]
         public SmallBOD(int hue, int amountMax, Type type, int number, int graphic, bool requireExeptional, BulkMaterialType material, int graphichue = 0)
             : base(Core.AOS ? 0x2258 : 0x14EF)
         {

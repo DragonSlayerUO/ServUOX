@@ -20,7 +20,7 @@ namespace Server.Items
 
         public bool PlayerConstructed => true;
 
-        [Constructable]
+        [Constructible]
         public Globe()
             : base(0x1047)
         {

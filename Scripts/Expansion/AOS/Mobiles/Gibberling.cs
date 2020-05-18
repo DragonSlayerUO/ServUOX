@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a gibberling corpse")]
     public class Gibberling : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Gibberling()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

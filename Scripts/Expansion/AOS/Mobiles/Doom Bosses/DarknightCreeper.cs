@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a darknight creeper corpse")]
     public class DarknightCreeper : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DarknightCreeper()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

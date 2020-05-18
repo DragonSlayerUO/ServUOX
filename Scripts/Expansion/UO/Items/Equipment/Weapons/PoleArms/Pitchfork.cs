@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0xE87, 0xE88)]
     public class Pitchfork : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public Pitchfork()
             : base(0xE87)
         {

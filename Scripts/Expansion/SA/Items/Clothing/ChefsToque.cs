@@ -17,13 +17,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public ChefsToque()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ChefsToque(int hue)
             : base(0x781A, hue)
         {

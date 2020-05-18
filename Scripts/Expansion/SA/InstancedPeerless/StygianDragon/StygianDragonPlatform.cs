@@ -10,7 +10,7 @@ namespace Server.Engines.InstancedPeerless
         public override Type KeyType => typeof(DraconicOrb);
         public override Type BossType => typeof(StygianDragon);
 
-        [Constructable]
+        [Constructible]
         public StygianDragonPlatform()
         {
             ExitLocation = new Point3D(367, 158, 0);

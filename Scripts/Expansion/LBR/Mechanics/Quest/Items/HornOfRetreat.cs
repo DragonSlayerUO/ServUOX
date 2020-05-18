@@ -8,7 +8,7 @@ namespace Server.Engines.Quests
         private Point3D m_DestLoc;
         private int m_Charges;
         private Timer m_PlayTimer;
-        [Constructable]
+        [Constructible]
         public HornOfRetreat()
             : base(0xFC4)
         {

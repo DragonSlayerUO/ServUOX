@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GelatanousSkull : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public GelatanousSkull()
             : base(0x1AE0)
         {

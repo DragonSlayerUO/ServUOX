@@ -6,14 +6,14 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125637;  // krampus minion boots
 
-        [Constructable]
+        [Constructible]
         public KrampusMinionBoots()
             : this(0)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public KrampusMinionBoots(int hue)
             : base(0xA28D, hue)
         {

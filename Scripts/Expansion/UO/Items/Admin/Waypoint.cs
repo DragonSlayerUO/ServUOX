@@ -7,7 +7,7 @@ namespace Server.Items
     public class WayPoint : Item
     {
         private WayPoint m_Next;
-        [Constructable]
+        [Constructible]
         public WayPoint()
             : base(0x1f14)
         {

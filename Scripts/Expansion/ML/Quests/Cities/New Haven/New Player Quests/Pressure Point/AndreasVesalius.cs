@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(KnowThineEnemyQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public AndreasVesalius()
             : base("Andreas Vesalius", "the Anatomy Instructor")
         {

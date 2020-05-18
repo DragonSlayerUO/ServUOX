@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SpinedScratcherFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SpinedScratcherFish()
             : base(0x3B05)
         {

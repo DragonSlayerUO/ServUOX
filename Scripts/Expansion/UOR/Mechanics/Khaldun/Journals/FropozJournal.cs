@@ -114,7 +114,7 @@ namespace Server.Items
                 "care to log on earlier,",
                 "nor did I come straight",
                 "here. 2pm, Magus"));
-        [Constructable]
+        [Constructible]
         public FropozJournal()
             : base(false)
         {

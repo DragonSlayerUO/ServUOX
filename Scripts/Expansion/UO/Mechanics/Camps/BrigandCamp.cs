@@ -6,7 +6,7 @@ namespace Server.Multis
 {
     public class BrigandCamp : BaseCamp
     {
-        [Constructable]
+        [Constructible]
         public BrigandCamp()
             : base(0x1F6D)
         {

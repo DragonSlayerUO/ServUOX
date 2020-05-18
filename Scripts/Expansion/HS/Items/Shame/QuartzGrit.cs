@@ -9,13 +9,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151808;  // Quartz Grit
 
-        [Constructable]
+        [Constructible]
         public QuartzGrit()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public QuartzGrit(int amount) : base(0x423A)
         {
             Hue = 1151;

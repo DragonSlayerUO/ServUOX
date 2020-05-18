@@ -163,7 +163,7 @@ namespace Server.Mobiles
 
     public class AttendantMaleLuckyDealer : AttendantLuckyDealer
     {
-        [Constructable]
+        [Constructible]
         public AttendantMaleLuckyDealer()
             : base()
         {
@@ -214,7 +214,7 @@ namespace Server.Mobiles
 
     public class AttendantFemaleLuckyDealer : AttendantLuckyDealer
     {
-        [Constructable]
+        [Constructible]
         public AttendantFemaleLuckyDealer()
             : base()
         {

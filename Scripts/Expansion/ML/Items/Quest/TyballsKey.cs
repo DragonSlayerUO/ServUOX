@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TyballsKey : AbyssKey
     {
-        [Constructable]
+        [Constructible]
         public TyballsKey()
             : base(0x1012)
         {

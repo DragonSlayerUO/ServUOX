@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TableLamp : Item
     {
-        [Constructable]
+        [Constructible]
         public TableLamp()
             : base(0x49C2)
         {

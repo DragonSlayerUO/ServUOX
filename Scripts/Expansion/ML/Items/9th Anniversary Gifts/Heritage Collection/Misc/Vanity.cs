@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class VanityAddon : BaseAddonContainer
     {
-        [Constructable]
+        [Constructible]
         public VanityAddon(bool east)
             : base(east ? 0xA44 : 0xA3C)
         {
@@ -47,7 +47,7 @@ namespace Server.Items
     public class VanityDeed : BaseAddonContainerDeed
     {
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public VanityDeed()
             : base()
         {

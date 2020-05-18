@@ -47,7 +47,7 @@ namespace Server.Engines.Plants
         public override int DefaultMaxWeight => 10;
         public override double DefaultWeight => 10.0;
 
-        [Constructable]
+        [Constructible]
         public SeedBox()
             : base(19288)
         {

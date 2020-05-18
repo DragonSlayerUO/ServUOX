@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public virtual bool IsInvulnerable => true;
 
-        [Constructable]
+        [Constructible]
         public JosefSkimmons()
         {
             Name = "Josef Skimmons";

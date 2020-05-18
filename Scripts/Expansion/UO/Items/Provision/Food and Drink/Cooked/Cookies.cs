@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Cookies : Food
     {
-        [Constructable]
+        [Constructible]
         public Cookies()
             : base(0x160b)
         {

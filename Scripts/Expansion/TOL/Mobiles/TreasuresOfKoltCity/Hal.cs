@@ -16,7 +16,7 @@ namespace Server.Engines.TreasuresOfKotlCity
         public override int TurnInLocalization => 1155592;  // Turn In Artifacts of the Kotl
 
 
-        [Constructable]
+        [Constructible]
         public Hal() : base("the Researcher")
         {
         }

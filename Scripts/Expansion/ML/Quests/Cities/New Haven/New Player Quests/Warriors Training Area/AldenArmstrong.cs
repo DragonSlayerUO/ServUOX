@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(TheArtOfWarQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public AldenArmstrong()
             : base("Alden Armstrong", "the Tactics Instructor")
         {

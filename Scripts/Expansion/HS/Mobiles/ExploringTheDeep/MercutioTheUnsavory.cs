@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public static List<MercutioTheUnsavory> Instances { get; set; }
 
-        [Constructable]
+        [Constructible]
         public MercutioTheUnsavory()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

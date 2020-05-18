@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Landy : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Landy()
             : base("Landy", "the Soil Nurturer")
         {

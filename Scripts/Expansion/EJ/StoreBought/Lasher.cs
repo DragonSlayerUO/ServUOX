@@ -9,7 +9,7 @@ namespace Server.Mobiles
 
         public Type CreatureType => typeof(Lasher);
 
-        [Constructable]
+        [Constructible]
         public LasherStatue()
             : base(0x9E35)
         {
@@ -44,13 +44,13 @@ namespace Server.Mobiles
     [CorpseName("a Lasher corpse")]
     public class Lasher : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public Lasher()
             : this("Lasher")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Lasher(string name)
             : base(name, 1407, 16075, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

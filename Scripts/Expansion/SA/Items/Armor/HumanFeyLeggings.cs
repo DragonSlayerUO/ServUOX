@@ -5,7 +5,7 @@ namespace Server.Items
     public class HumanFeyLeggings : ChainLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HumanFeyLeggings()
         {
             Attributes.BonusHits = 6;

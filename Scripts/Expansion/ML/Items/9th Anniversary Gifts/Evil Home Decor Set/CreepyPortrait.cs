@@ -79,7 +79,7 @@ namespace Server.Items
 
     public class CreepyPortraitAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CreepyPortraitAddon()
             : base()
         {
@@ -109,7 +109,7 @@ namespace Server.Items
 
     public class CreepyPortraitDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public CreepyPortraitDeed()
             : base()
         {

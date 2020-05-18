@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an putrid undead guardian corpse")]
     public class PutridUndeadGuardian : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public PutridUndeadGuardian()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

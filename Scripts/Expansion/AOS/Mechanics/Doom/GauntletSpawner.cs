@@ -26,13 +26,13 @@ namespace Server.Engines.Doom
         private Rectangle2D m_RegionBounds;
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public GauntletSpawner()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GauntletSpawner(string typeName)
             : base(0x36FE)
         {

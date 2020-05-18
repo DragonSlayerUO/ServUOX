@@ -5,7 +5,7 @@ namespace Server.Items
     public class CavortingClub : Club
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CavortingClub()
         {
             Hue = 0x593;

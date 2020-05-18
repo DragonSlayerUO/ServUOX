@@ -14,7 +14,7 @@ namespace Server.Items
             SkillName.Chivalry,
             SkillName.Ninjitsu
         };
-        [Constructable]
+        [Constructible]
         public TheDryadBow()
         {
             Hue = 0x48F;

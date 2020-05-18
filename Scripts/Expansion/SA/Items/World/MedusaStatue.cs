@@ -5,7 +5,7 @@ namespace Server.Items
     public class MedusaStatue : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MedusaStatue()
             : base(0x40BC)
         {

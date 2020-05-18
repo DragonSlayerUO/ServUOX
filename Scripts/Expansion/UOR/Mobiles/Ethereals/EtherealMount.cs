@@ -213,7 +213,7 @@ namespace Server.Mobiles
 
         public IMount Mount => this;
 
-        [Constructable]
+        [Constructible]
         public EtherealMount(int itemID, int transMountedID, int nonTransMountedID, int transHue = 0, int nonTransHue = 0)
             : base(itemID)
         {

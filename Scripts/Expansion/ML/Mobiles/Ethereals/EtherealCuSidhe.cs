@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealCuSidhe : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealCuSidhe()
             : base(0x2D96, 0x3E91, 0x3E91, DefaultEtherealHue)
         {

@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class Tobin : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Tobin()
             : base("Fiddling Tobin", "the Tinkerer")
         {

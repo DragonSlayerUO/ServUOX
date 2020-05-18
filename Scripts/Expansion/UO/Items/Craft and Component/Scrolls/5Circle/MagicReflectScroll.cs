@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class MagicReflectScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public MagicReflectScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MagicReflectScroll(int amount)
             : base(35, 0x1F50, amount)
         {

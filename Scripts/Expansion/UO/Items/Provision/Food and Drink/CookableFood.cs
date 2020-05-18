@@ -222,7 +222,7 @@ namespace Server.Items
 	// ********** UncookedPizza **********
 	public class UncookedPizza : CookableFood
 	{
-		[Constructable]
+		[Constructible]
 		public UncookedPizza() : base( 0x1083, 20 )
 		{
 			Weight = 1.0;

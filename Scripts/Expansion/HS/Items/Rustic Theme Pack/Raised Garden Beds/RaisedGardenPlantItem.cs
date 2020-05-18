@@ -104,12 +104,12 @@ namespace Server.Engines.Plants
             }
         }
 
-        [Constructable]
+        [Constructible]
         public RaisedGardenPlantItem() : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RaisedGardenPlantItem(bool fertileDirt) : base(2323, fertileDirt)
         {
             Movable = false;

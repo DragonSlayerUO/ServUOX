@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class CrateForSledge : Item
     {
-        [Constructable]
+        [Constructible]
         public CrateForSledge()
             : base(0x1FFF)
         {

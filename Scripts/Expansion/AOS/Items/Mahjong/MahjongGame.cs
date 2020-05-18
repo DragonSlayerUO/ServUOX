@@ -19,7 +19,7 @@ namespace Server.Engines.Mahjong
         private bool m_SpectatorVision;
         private DateTime m_LastReset;
         private SecureLevel m_Level;
-        [Constructable]
+        [Constructible]
         public MahjongGame()
             : base(0xFAA)
         {

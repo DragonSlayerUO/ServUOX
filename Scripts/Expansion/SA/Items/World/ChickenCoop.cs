@@ -31,7 +31,7 @@ namespace Server.Items
 
         public Dictionary<Mobile, List<BaseCreature>> Stored => m_Stored;
 
-        [Constructable]
+        [Constructible]
         public ChickenCoop()
             : base(0x4513)
         {

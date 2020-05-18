@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Haven
     public class MilitiaCanoneer : BaseQuester
     {
         private bool m_Active;
-        [Constructable]
+        [Constructible]
         public MilitiaCanoneer()
             : base("the Militia Cannoneer")
         {

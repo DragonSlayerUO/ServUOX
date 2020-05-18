@@ -41,7 +41,7 @@ namespace Server.Items
             WhiteRoseZinfandel,
         }
 
-        [Constructable]
+        [Constructible]
         public SmugglersLiquor() : this((SmugglersLiquorType)Utility.Random(26))
         {
         }

@@ -18,7 +18,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public override int MaxRecharges => -1;
 
-        [Constructable]
+        [Constructible]
         public GreaterBraceletOfBinding()
         {
             Hue = 2575;

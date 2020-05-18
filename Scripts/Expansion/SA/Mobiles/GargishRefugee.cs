@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class GargishRefugee : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GargishRefugee()
             : base(AIType.AI_Animal, FightMode.None, 10, 1, 0.2, 0.4)
         {

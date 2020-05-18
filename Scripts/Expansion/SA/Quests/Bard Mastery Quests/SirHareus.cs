@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class SirHareus : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public SirHareus()
         {
             Name = "Sir Hareus";

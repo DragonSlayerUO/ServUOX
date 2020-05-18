@@ -10,7 +10,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new BBQSmokerDeed(Tools.Count > 0 ? Tools[0].UsesRemaining : 0);
         public override CraftSystem CraftSystem => DefCooking.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public BBQSmoker(bool south, int uses)
         {
             if (south)
@@ -52,12 +52,12 @@ namespace Server.Items
 
         private bool _South;
 
-        [Constructable]
+        [Constructible]
         public BBQSmokerDeed() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BBQSmokerDeed(int uses) : base(uses)
         {
         }

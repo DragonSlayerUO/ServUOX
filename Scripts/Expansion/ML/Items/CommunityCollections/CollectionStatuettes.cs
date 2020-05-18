@@ -47,7 +47,7 @@ namespace Server.Items
     public class SilverSteedZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SilverSteedZooStatuette()
             : base(0x259D)
         {
@@ -77,7 +77,7 @@ namespace Server.Items
     public class QuagmireZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public QuagmireZooStatuette()
             : base(0x2614)
         {
@@ -107,7 +107,7 @@ namespace Server.Items
     public class BakeKitsuneZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BakeKitsuneZooStatuette()
             : base(0x2763)
         {
@@ -137,7 +137,7 @@ namespace Server.Items
     public class DireWolfZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DireWolfZooStatuette()
             : base(0x25D0)
         {
@@ -167,7 +167,7 @@ namespace Server.Items
     public class CraneZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CraneZooStatuette()
             : base(0x2764)
         {
@@ -197,7 +197,7 @@ namespace Server.Items
     public class PolarBearZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PolarBearZooStatuette()
             : base(0x20E1)
         {
@@ -227,7 +227,7 @@ namespace Server.Items
     public class ChangelingZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ChangelingZooStatuette()
             : base(0x2D8A)
         {
@@ -257,7 +257,7 @@ namespace Server.Items
     public class ReptalonZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ReptalonZooStatuette()
             : base(0x2D95)
         {
@@ -287,7 +287,7 @@ namespace Server.Items
     public class SpecialAchievementZooStatuette : CollectionStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SpecialAchievementZooStatuette()
             : base(0x2FF6)
         {

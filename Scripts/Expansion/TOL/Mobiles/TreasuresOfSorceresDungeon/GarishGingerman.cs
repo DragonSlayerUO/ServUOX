@@ -7,7 +7,7 @@ namespace Server.Engines.SorcerersDungeon
     [CorpseName("a garish gingerman corpse")]
     public class GarishGingerman : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GarishGingerman()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

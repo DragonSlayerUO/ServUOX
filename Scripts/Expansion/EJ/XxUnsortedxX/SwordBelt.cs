@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1126021;  // sword belt
 
-        [Constructable]
+        [Constructible]
         public SwordBelt()
             : base(0xA40D)
         {

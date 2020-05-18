@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BegWinePitcher : Pitcher
     {
-        [Constructable]
+        [Constructible]
         public BegWinePitcher() : base(BeverageType.Wine)
         {
             ItemID = Utility.RandomDouble() > .5 ? 8091 : 8092;

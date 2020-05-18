@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SeaHorseFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SeaHorseFish()
             : base(0x3B10)
         {

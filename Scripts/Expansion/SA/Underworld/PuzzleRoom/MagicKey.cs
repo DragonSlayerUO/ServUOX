@@ -13,7 +13,7 @@ namespace Server.Items
         public override int LabelNumber => 1024114;  // magic key
         public override int Lifespan => m_Span;
 
-        [Constructable]
+        [Constructible]
         public MagicKey() : base(4114)
         {
             m_Span = 0;

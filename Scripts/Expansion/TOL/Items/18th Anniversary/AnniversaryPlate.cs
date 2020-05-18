@@ -10,13 +10,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public TextDefinition LabelType { get; set; }
 
-        [Constructable]
+        [Constructible]
         public AnniversaryPlate()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AnniversaryPlate(Mobile m) : base(0x9BC8)
         {
             if (m != null && .01 > Utility.RandomDouble())

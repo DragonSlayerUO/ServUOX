@@ -6,7 +6,7 @@ namespace Server.Items
     public class DreadFlute : BaseInstrument
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DreadFlute()
             : base(0x315C, 0x58B, 0x58C)// TODO check sounds
         {

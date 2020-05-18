@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new VendorMallAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public VendorMallAddon()
         {
             AddonComponent ac;
@@ -1034,7 +1034,7 @@ namespace Server.Items
     {
         public override BaseAddon Addon => new VendorMallAddon();
 
-        [Constructable]
+        [Constructible]
         public VendorMallAddonDeed()
         {
             Name = "VendorMall";

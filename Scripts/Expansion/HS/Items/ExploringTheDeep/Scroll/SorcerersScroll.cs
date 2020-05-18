@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023637;  // scroll
 
-        [Constructable]
+        [Constructible]
         public SorcerersScroll()
             : base(0x46B2)
         {

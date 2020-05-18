@@ -10,7 +10,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime Cooldown { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public FocusingGemOfVirtueBane()
             : base(0x1F1E)
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public abstract class BaseEquipableLight : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public BaseEquipableLight(int itemID)
             : base(itemID)
         {

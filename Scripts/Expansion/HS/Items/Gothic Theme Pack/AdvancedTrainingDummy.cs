@@ -6,12 +6,12 @@ namespace Server.Items
     [Flipable(0x971C, 0x9821)]
     public class AdvancedTrainingDummy : TrainingDummy
     {
-        [Constructable]
+        [Constructible]
         public AdvancedTrainingDummy() : this(0x971C)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AdvancedTrainingDummy(int itemID) : base(itemID)
         {
             MinSkill = -25.0;
@@ -58,7 +58,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new AdvancedTrainingDummyEastDeed();
 
-        [Constructable]
+        [Constructible]
         public AdvancedTrainingDummyEastAddon()
         {
             AddComponent(new AdvancedTrainingDummy(38945), 0, 0, 0);
@@ -97,7 +97,7 @@ namespace Server.Items
         public override BaseAddon Addon => new AdvancedTrainingDummyEastAddon();
         public override int LabelNumber => 1150596;  // advanced training dummy (east)
 
-        [Constructable]
+        [Constructible]
         public AdvancedTrainingDummyEastDeed()
         {
         }
@@ -126,7 +126,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new AdvancedTrainingDummySouthDeed();
 
-        [Constructable]
+        [Constructible]
         public AdvancedTrainingDummySouthAddon()
         {
             AddComponent(new AdvancedTrainingDummy(38940), 0, 0, 0);
@@ -166,7 +166,7 @@ namespace Server.Items
         public override BaseAddon Addon => new AdvancedTrainingDummySouthAddon();
         public override int LabelNumber => 1150595;  // advanced training dummy (south)
 
-        [Constructable]
+        [Constructible]
         public AdvancedTrainingDummySouthDeed()
         {
         }

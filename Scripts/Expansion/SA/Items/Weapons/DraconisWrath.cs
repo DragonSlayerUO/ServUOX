@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1114789;  // Draconi's Wrath
 
-        [Constructable]
+        [Constructible]
         public DraconisWrath()
         {
             Hue = 1177;

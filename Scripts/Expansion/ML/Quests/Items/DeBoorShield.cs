@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1075308;  // Ancestral Shield
         public override bool HiddenQuestItemHue => true;
 
-        [Constructable]
+        [Constructible]
         public DeBoorShield()
             : base(0x1B74)
         {

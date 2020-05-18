@@ -5,7 +5,7 @@ namespace Server.Items
     public class SoulSeeker : RadiantScimitar
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SoulSeeker()
         {
             Hue = 0x38C;

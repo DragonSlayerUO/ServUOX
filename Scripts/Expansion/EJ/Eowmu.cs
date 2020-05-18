@@ -9,7 +9,7 @@ namespace Server.Mobiles
 
         public Type CreatureType => typeof(Eowmu);
 
-        [Constructable]
+        [Constructible]
         public EowmuStatue()
             : base(0xA0C0)
         {
@@ -44,13 +44,13 @@ namespace Server.Mobiles
     [CorpseName("an eowmu corpse")]
     public class Eowmu : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public Eowmu()
             : this("Eowmu")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Eowmu(string name)
             : base(name, 1440, 16079, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

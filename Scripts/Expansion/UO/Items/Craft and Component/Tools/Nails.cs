@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0x102E, 0x102F)]
     public class Nails : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public Nails()
             : base(0x102E)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public Nails(int uses)
             : base(uses, 0x102C)
         {

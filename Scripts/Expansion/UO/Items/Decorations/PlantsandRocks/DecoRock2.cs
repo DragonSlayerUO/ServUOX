@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoRock2 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoRock2()
             : base(0x1363)
         {

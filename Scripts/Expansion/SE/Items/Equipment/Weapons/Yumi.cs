@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x27A5, 0x27F0)]
     public class Yumi : BaseRanged
     {
-        [Constructable]
+        [Constructible]
         public Yumi()
             : base(0x27A5)
         {

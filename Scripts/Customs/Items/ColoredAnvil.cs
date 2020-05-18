@@ -5,13 +5,13 @@ namespace Server.Items
     [Anvil, Flipable(0xFAF, 0xFB0)]
     public class ColoredAnvil : Item
     {
-        [Constructable]
+        [Constructible]
         public ColoredAnvil()
             : this(CraftResources.GetHue((CraftResource)Utility.RandomMinMax((int)CraftResource.DullCopper, (int)CraftResource.Valorite)))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ColoredAnvil(int hue)
             : base(0xFAF)
         {

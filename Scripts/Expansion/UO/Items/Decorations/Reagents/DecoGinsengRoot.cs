@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoGinsengRoot : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoGinsengRoot()
             : base(0x18EB)
         {

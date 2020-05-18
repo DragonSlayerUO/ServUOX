@@ -10,7 +10,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1113703;  // Shroud of the Condemned
 
-        [Constructable]
+        [Constructible]
         public ShroudOfTheCondemned()
             : base(0x1F04, 0xD6)
         {

@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class Olaeni : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Olaeni()
             : base("the Thaumaturgist")
         {

@@ -7,13 +7,13 @@ namespace Server.Mobiles
     [CorpseName("a ki-rin corpse")]
     public class Kirin : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public Kirin()
             : this("a ki-rin")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Kirin(string name)
             : base(name, 132, 0x3EAD, AIType.AI_Mage, FightMode.Evil, 10, 1, 0.2, 0.4)
         {

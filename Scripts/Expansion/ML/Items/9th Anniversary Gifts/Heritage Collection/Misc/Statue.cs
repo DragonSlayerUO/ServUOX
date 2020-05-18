@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class StoneStatueAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public StoneStatueAddon(bool east)
             : base()
         {
@@ -48,7 +48,7 @@ namespace Server.Items
     public class StoneStatueDeed : BaseAddonDeed
     {
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public StoneStatueDeed()
             : base()
         {

@@ -6,13 +6,13 @@ namespace Server.Items
     [Flipable(0x279B, 0x27E6)]
     public class TattsukeHakama : BasePants
     {
-        [Constructable]
+        [Constructible]
         public TattsukeHakama()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TattsukeHakama(int hue)
             : base(0x279B, hue)
         {

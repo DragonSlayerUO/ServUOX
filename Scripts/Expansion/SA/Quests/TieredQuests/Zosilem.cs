@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         public TierQuestInfo TierInfo => TierQuestInfo.Zosilem;
 
-        [Constructable]
+        [Constructible]
         public Zosilem()
             : base("Zosilem", "the Alchemist")
         {

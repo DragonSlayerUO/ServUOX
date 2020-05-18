@@ -29,7 +29,7 @@ namespace Server.Mobiles
         private DateTime _NextSpecial;
         private int _PowerDecay;
 
-        [Constructable]
+        [Constructible]
         public BaneDragon()
             : base("Bane Dragon", 0x31A, 0x3EBD, AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

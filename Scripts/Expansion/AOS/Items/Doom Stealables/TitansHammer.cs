@@ -5,7 +5,7 @@ namespace Server.Items
     public class TitansHammer : WarHammer
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TitansHammer()
         {
             Hue = 0x482;

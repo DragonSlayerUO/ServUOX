@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151983;  // Lucky Dagger
 
-        [Constructable]
+        [Constructible]
         public LuckyDagger()
             : base(0xF52)
         {

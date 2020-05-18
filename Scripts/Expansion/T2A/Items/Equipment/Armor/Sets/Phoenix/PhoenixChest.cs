@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PhoenixChest : RingmailChest
     {
-        [Constructable]
+        [Constructible]
         public PhoenixChest()
         {
             Hue = 0x8E;

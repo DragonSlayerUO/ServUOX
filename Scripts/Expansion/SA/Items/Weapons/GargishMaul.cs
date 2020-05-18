@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x48C2, 0x48C3)]
     public class GargishMaul : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public GargishMaul()
             : base(0x48C2)
         {

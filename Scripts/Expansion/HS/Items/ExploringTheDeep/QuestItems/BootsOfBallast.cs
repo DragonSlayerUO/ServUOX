@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1154242;  // Boots of Ballast
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public BootsOfBallast()
             : base()
         {

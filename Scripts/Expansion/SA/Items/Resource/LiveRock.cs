@@ -6,13 +6,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125985;  // live rock
 
-        [Constructable]
+        [Constructible]
         public LiveRock()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LiveRock(int amount)
             : base(0xA3E9)
         {

@@ -8,7 +8,7 @@ namespace Server.Items
 {
     public class LavaLobsterTrap : LobsterTrap
     {
-        [Constructable]
+        [Constructible]
         public LavaLobsterTrap()
         {
         }

@@ -13,7 +13,7 @@ namespace Server.Items
         public override int BasePoisonResistance => 3;
         public override int BaseEnergyResistance => 13;
 
-        [Constructable]
+        [Constructible]
         public ObsidianEarrings()
         {
             Attributes.BonusMana = 8;

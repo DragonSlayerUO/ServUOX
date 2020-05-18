@@ -18,7 +18,7 @@ namespace Server.Items
 
         private int offset;
 
-        [Constructable]
+        [Constructible]
         public JusticeVirtueTileAddon(JusticeTileType type)
         {
             m_JusticeTileType = type;
@@ -63,7 +63,7 @@ namespace Server.Items
 
         private JusticeTileType m_JusticeTileType;
 
-        [Constructable]
+        [Constructible]
         public JusticeVirtueTileDeed()
         {
             LootType = LootType.Blessed;

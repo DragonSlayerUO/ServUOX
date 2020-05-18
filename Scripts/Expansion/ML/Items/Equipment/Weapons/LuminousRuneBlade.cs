@@ -5,7 +5,7 @@ namespace Server.Items
     public class LuminousRuneBlade : RuneBlade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LuminousRuneBlade()
         {
             WeaponAttributes.HitLightning = 40;

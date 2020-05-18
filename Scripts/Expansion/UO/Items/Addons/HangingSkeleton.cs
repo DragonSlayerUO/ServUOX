@@ -9,13 +9,13 @@ namespace Server.Items
     public class HangingSkeleton : Item, IAddon, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public HangingSkeleton()
             : this(0x1596)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HangingSkeleton(int itemID)
             : base(itemID)
         {
@@ -137,7 +137,7 @@ namespace Server.Items
     public class HangingSkeletonDeed : Item, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public HangingSkeletonDeed()
             : base(0x14F0)
         {

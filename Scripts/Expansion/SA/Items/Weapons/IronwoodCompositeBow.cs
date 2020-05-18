@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113759;  // Ironwood Composite Bow
 
-        [Constructable]
+        [Constructible]
         public IronwoodCompositeBow()
             : base()
         {

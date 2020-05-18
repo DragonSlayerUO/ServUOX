@@ -5,7 +5,7 @@ namespace Server.Items
     public class VacationWafer : Item
     {
         public const int VacationDays = 7;
-        [Constructable]
+        [Constructible]
         public VacationWafer()
             : base(0x973)
         {

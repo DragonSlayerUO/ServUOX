@@ -4,7 +4,7 @@ namespace Server.Mobiles
 {
     public class ParoxysmusSwampDragon : SwampDragon
     {
-        [Constructable]
+        [Constructible]
         public ParoxysmusSwampDragon()
             : base()
         {

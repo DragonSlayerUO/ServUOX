@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B70, 0x3167)]
     public class GemmedCirclet : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public GemmedCirclet()
             : base(0x2B70)
         {

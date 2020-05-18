@@ -12,7 +12,7 @@ namespace Server.Items
     {
         public string[] Lines { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CustomizableWallSign()
             : base(0x4B20)
         {

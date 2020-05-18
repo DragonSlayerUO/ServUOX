@@ -15,7 +15,7 @@ namespace Server.Items
         public override int AosStrReq => 20;
         public override int ArmorBase => 7;
 
-        [Constructable]
+        [Constructible]
         public Buckler()
             : base(0x1B73)
         {

@@ -94,7 +94,7 @@ namespace Server.Items
         public override CannonPower CannonType => CannonPower.Light;
         public override int LabelNumber => 1095793;
 
-        [Constructable]
+        [Constructible]
         public CulverinDeed()
         {
             Hue = 1117;
@@ -120,7 +120,7 @@ namespace Server.Items
         public override CannonPower CannonType => CannonPower.Heavy;
         public override int LabelNumber => 1095794;
 
-        [Constructable]
+        [Constructible]
         public CarronadeDeed()
         {
             Hue = 1118;
@@ -146,7 +146,7 @@ namespace Server.Items
         public override CannonPower CannonType => CannonPower.Massive;
         public override int LabelNumber => 1095794;
 
-        [Constructable]
+        [Constructible]
         public BlundercannonDeed()
         {
             Hue = 1126;
@@ -172,7 +172,7 @@ namespace Server.Items
         public override CannonPower CannonType => CannonPower.Light;
         public override int LabelNumber => 1095793;
 
-        [Constructable]
+        [Constructible]
         public LightShipCannonDeed()
         {
             Hue = 1117;
@@ -198,7 +198,7 @@ namespace Server.Items
         public override CannonPower CannonType => CannonPower.Heavy;
         public override int LabelNumber => 1095794;
 
-        [Constructable]
+        [Constructible]
         public HeavyShipCannonDeed()
         {
             Hue = 1118;

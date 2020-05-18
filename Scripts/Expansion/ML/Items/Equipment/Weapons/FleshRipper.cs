@@ -5,7 +5,7 @@ namespace Server.Items
     public class FleshRipper : AssassinSpike
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public FleshRipper()
         {
             Hue = 0x341;

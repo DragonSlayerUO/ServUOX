@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Vines : Item
     {
-        [Constructable]
+        [Constructible]
         public Vines()
             : this(Utility.Random(8))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Vines(int v)
             : base(0xCEB)
         {

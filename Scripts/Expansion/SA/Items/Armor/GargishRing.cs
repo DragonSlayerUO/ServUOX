@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GargishRing : BaseRing
     {
-        [Constructable]
+        [Constructible]
         public GargishRing()
             : base(0x4212)
         {

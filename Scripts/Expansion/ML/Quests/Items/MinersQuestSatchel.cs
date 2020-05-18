@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class MinersQuestSatchel : BaseContainer, IDyable
     {
-        [Constructable]
+        [Constructible]
         public MinersQuestSatchel()
             : base(0xE75)
         {

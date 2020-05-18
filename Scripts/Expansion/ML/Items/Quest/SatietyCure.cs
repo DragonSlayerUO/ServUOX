@@ -17,7 +17,7 @@ namespace Server.Items
             set { m_Uses = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public SatietyCure() : base(0xEFC)
         {
             Weight = 1.0;

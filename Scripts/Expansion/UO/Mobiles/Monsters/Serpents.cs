@@ -9,7 +9,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Serpant")]
     public class GiantSerpent : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GiantSerpent()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -84,7 +84,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Seaserpant")]
     public class SeaSerpent : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SeaSerpent()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -169,7 +169,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Silverserpant")]
     public class SilverSerpent : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SilverSerpent()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -3,7 +3,7 @@ namespace Server.Items
 {
     public class AlbinoCourtesanFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public AlbinoCourtesanFish()
             : base(0x3B04)
         {

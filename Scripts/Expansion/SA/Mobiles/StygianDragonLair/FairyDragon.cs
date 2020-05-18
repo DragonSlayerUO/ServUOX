@@ -15,7 +15,7 @@ namespace Server.Mobiles
         public override double HitPoisonChance => 0.75;
         public override FoodType FavoriteFood => FoodType.Meat;
 
-        [Constructable]
+        [Constructible]
         public FairyDragon()
             : base(AIType.AI_Mystic, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

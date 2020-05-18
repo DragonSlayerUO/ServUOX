@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Nillaen : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Nillaen()
             : base("Lorekeeper Nillaen", "the Keeper of Tradition")
         {

@@ -10,7 +10,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151753;  // A Mysterious Note
 
-        [Constructable]
+        [Constructible]
         public MysteriousNote()
             : base(0x14ED)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1149903;  // White Grandfather Clock
 
-        [Constructable]
+        [Constructible]
         public WhiteGrandfatherClock()
             : base(0x48D4)
         {

@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1094942;  // Balm of Swiftness
 
-        [Constructable]
+        [Constructible]
         public BalmOfSwiftness()
             : base(0x1848)
         {

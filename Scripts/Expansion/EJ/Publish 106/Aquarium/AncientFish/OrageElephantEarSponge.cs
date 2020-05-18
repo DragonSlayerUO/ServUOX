@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class OrangeElephantEarSponge : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public OrangeElephantEarSponge()
             : base(0xA389)
         {

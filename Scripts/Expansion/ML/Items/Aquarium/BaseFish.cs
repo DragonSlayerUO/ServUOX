@@ -20,7 +20,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public BaseFish(int itemID)
             : base(itemID)
         {

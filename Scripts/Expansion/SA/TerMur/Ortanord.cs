@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an ortanord corpse")]
     public class Ortanord : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Ortanord()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.6, 1.2)
         {

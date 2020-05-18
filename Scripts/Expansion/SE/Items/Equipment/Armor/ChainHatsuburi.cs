@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ChainHatsuburi : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public ChainHatsuburi()
             : base(0x2774)
         {

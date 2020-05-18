@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(TheRudimentsOfSelfDefenseQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Dimethro()
             : base("Dimethro", "the Wrestling Instructor")
         {

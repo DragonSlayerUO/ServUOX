@@ -6,7 +6,7 @@ namespace Server.Items
     [Alterable(typeof(DefTailoring), typeof(GargishLeatherLegs))]
     public class LeatherSuneate : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeatherSuneate()
             : base(0x2786)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class DeathGloves : LeatherGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DeathGloves()
             : base()
         {

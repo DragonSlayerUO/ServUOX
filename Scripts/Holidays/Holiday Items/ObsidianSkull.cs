@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1123478;  // Obsidian Skull
 
-        [Constructable]
+        [Constructible]
         public ObsidianSkull()
             : base(0x9A1E)
         {

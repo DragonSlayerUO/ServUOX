@@ -5,7 +5,7 @@ namespace Server.Items
     public class PaladinHelm : PlateHelm
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PaladinHelm()
             : base()
         {

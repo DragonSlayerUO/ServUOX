@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Gypsy : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Gypsy()
             : base(AIType.AI_Animal, FightMode.None, 10, 1, 0.2, 0.4)
         {

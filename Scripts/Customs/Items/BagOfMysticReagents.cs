@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class BagOfMysticReagents : Bag
     {
-        [Constructable]
+        [Constructible]
         public BagOfMysticReagents()
             : this(50)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BagOfMysticReagents(int amount)
         {
             DropItem(new BlackPearl(amount));

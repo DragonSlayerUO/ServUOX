@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1f9f, 0x1fa0)]
     public class JesterSuit : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public JesterSuit()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public JesterSuit(int hue)
             : base(0x1F9F, hue)
         {

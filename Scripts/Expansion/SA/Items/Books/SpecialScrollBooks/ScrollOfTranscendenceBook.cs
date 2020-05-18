@@ -16,7 +16,7 @@ namespace Server.Items
         public override int RemoveMessage => 1151658;   // You remove a Scroll of Transcendence and put it in your pack. 
         public override int GumpTitle => 1151675;   // Scrolls of Transcendence
 
-        [Constructable]
+        [Constructible]
         public ScrollOfTranscendenceBook()
             : base(0x577E)
         {

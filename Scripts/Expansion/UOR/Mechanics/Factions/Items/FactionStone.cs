@@ -7,13 +7,13 @@ namespace Server.Factions
     public class FactionStone : BaseSystemController
     {
         private Faction m_Faction;
-        [Constructable]
+        [Constructible]
         public FactionStone()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FactionStone(Faction faction)
             : base(0xEDC)
         {

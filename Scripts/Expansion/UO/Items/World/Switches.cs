@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class UnderworldSwitchWE : BaseSwitch
     {
-        [Constructable]
+        [Constructible]
         public UnderworldSwitchWE()
             : base(0x1091, 0x1092, 1042901, 1042900, true)
         {

@@ -14,7 +14,7 @@ namespace Server.Mobiles
 
         private DateTime m_NextAbility;
 
-        [Constructable]
+        [Constructible]
         public AbyssalInfernal()
             : base(AIType.AI_Mage)
         {

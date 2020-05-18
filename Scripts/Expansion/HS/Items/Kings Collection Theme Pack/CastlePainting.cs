@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class CastlePaintingAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CastlePaintingAddon(DirectionType type)
         {
             switch (type)
@@ -45,7 +45,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public CastlePaintingDeed()
             : base()
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public CraftSystem RepairSystem => DefCarpentry.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public MagicWand()
             : base(0xDF2)
         {

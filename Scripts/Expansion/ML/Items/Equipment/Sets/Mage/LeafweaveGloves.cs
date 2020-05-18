@@ -6,7 +6,7 @@ namespace Server.Items
     public class LeafweaveGloves : HideGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LeafweaveGloves()
             : base()
         {

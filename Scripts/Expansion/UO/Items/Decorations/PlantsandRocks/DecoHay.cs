@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoHay : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoHay()
             : base(0xF35)
         {

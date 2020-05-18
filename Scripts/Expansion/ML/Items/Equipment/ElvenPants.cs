@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override Race RequiredRace => Race.Elf;
 
-        [Constructable]
+        [Constructible]
         public ElvenPants()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ElvenPants(int hue)
             : base(0x2FC3, hue)
         {

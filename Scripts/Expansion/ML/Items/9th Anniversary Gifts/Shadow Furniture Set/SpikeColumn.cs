@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SpikeColumnAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SpikeColumnAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x364C, 1076675), 0, 0, 0);
@@ -36,7 +36,7 @@ namespace Server.Items
 
         public override bool ExcludeDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public SpikeColumnDeed()
         {
             LootType = LootType.Blessed;

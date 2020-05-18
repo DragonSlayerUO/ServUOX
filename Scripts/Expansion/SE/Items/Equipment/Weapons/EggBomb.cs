@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class EggBomb : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public EggBomb()
             : base(0x2808)
         {

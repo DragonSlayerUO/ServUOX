@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FoldedSteel : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public FoldedSteel()
             : base("Arabella", "the samurai")
         {

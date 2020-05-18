@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Lefty : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Lefty()
             : base("Lefty", "the Ticket Seller")
         {

@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a dark wisp corpse")]
     public class DarkWisp : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DarkWisp()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

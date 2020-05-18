@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PrimordialDecay : BaseInstrument
     {
-        [Constructable]
+        [Constructible]
         public PrimordialDecay()
         {
             Hue = 1927;

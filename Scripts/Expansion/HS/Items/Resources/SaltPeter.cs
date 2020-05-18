@@ -10,13 +10,13 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public Saltpeter()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Saltpeter(int count)
             : base(0x423A)
         {

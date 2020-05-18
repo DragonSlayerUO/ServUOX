@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Emerillo : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Emerillo()
             : base("Emerillo", "the Cook")
         {

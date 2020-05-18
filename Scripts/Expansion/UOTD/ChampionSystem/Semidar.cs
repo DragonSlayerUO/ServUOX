@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class Semidar : BaseChampion
     {
-        [Constructable]
+        [Constructible]
         public Semidar()
             : base(AIType.AI_Mage)
         {

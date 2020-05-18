@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Sledge : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Sledge()
             : base("Sledge", "the Versatile")
         {

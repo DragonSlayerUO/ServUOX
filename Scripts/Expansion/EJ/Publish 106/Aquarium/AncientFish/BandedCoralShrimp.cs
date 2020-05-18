@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BandedCoralShrimp : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public BandedCoralShrimp()
             : base(0xA37B)
         {

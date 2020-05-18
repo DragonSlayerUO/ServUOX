@@ -15,13 +15,13 @@ namespace Server.Items
 
         public override int LabelNumber => _Greater ? 1156828 : 1156827;  // Merchant's Trinket - 5% / 10%
 
-        [Constructable]
+        [Constructible]
         public MerchantsTrinket()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MerchantsTrinket(bool greater)
         {
             Greater = greater;

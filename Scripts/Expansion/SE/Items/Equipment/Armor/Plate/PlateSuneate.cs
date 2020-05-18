@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PlateSuneate : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public PlateSuneate()
             : base(0x2788)
         {

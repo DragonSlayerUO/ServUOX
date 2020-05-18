@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Norton : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Norton()
             : base("Norton", "the Fisher")
         {

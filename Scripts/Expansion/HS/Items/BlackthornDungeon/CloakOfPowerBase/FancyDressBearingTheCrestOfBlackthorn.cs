@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public FancyDressBearingTheCrestOfBlackthorn4()
             : base()
         {

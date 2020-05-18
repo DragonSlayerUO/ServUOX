@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Checkers : Item
     {
-        [Constructable]
+        [Constructible]
         public Checkers()
             : base(0xE1A)
         {

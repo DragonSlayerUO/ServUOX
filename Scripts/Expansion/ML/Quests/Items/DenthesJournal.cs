@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class DenthesJournal : BaseQuestItem
     {
-        [Constructable]
+        [Constructible]
         public DenthesJournal()
             : base(0xFF2)
         {

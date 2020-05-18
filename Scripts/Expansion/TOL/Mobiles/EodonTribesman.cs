@@ -233,7 +233,7 @@ namespace Server.Mobiles
 
     public class TribeWarrior : BaseEodonTribesman
     {
-        [Constructable]
+        [Constructible]
         public TribeWarrior(EodonTribe type) : base(AIType.AI_Melee, type)
         {
         }
@@ -422,7 +422,7 @@ namespace Server.Mobiles
     {
         public override bool ShowSpellMantra => true;
 
-        [Constructable]
+        [Constructible]
         public TribeShaman(EodonTribe type) : base(AIType.AI_Mage, type)
         {
             RangeFight = 7;
@@ -588,7 +588,7 @@ namespace Server.Mobiles
 
     public class TribeChieftan : BaseEodonTribesman
     {
-        [Constructable]
+        [Constructible]
         public TribeChieftan(EodonTribe type) : base(AIType.AI_Melee, type)
         {
         }

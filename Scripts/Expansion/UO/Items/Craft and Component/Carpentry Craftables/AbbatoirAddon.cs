@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class AbbatoirAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public AbbatoirAddon()
         {
             AddComponent(new AddonComponent(0x120E), -1, -1, 0);
@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class AbbatoirDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public AbbatoirDeed()
         {
         }

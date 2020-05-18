@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1159423;  // Ethereal War Boar Statuette
 
-        [Constructable]
+        [Constructible]
         public EtherealWarBoar()
             : base(0xA554, 0x3ED2, 0x3ED2, DefaultEtherealHue)
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class PottedPlant : Item
     {
-        [Constructable]
+        [Constructible]
         public PottedPlant()
             : base(0x11CA)
         {
@@ -29,7 +29,7 @@ namespace Server.Items
 
     public class PottedPlant1 : Item
     {
-        [Constructable]
+        [Constructible]
         public PottedPlant1()
             : base(0x11CB)
         {
@@ -56,7 +56,7 @@ namespace Server.Items
 
     public class PottedPlant2 : Item
     {
-        [Constructable]
+        [Constructible]
         public PottedPlant2()
             : base(0x11CC)
         {

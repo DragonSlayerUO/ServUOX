@@ -67,7 +67,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PowerScroll(SkillName skill, double value)
             : base(skill, value)
         {

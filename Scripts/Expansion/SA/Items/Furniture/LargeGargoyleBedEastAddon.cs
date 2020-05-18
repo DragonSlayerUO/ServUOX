@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool RetainDeedHue => true;
         #endregion
 
-        [Constructable]
+        [Constructible]
         public LargeGargoyleBedEastAddon()
         {
             //Left Side
@@ -52,7 +52,7 @@ namespace Server.Items
         public override BaseAddon Addon => new LargeGargoyleBedEastAddon();
         public override int LabelNumber => 1111762;// large gargish bed (east)
 
-        [Constructable]
+        [Constructible]
         public LargeGargoyleBedEastDeed()
         {
         }

@@ -19,7 +19,7 @@ namespace Server.Items
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BoatPaint(int hue) : base(4011)
         {
             Hue = hue;
@@ -98,13 +98,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116768;
 
-        [Constructable]
+        [Constructible]
         public PermanentBoatPaint()
             : this(Utility.RandomMinMax(1954, 1997))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PermanentBoatPaint(int hue) : base(hue)
         {
             Permanent = true;

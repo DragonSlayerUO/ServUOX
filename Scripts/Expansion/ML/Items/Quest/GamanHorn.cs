@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class GamanHorns : Item
     {
-        [Constructable]
+        [Constructible]
         public GamanHorns()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GamanHorns(int amount)
             : base(0x1084)
         {

@@ -5,7 +5,7 @@ namespace Server.Factions
     public class FactionTrapRemovalKit : Item
     {
         private int m_Charges;
-        [Constructable]
+        [Constructible]
         public FactionTrapRemovalKit()
             : base(7867)
         {

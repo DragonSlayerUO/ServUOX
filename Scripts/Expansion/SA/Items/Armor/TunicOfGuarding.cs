@@ -5,7 +5,7 @@ namespace Server.Items
     public class TunicOfGuarding : LeatherChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TunicOfGuarding()
         {
             LootType = LootType.Blessed;

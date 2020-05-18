@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FertileDirt : Item
     {
-        [Constructable]
+        [Constructible]
         public FertileDirt()
             : this(1)
         {
@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override double DefaultWeight => 0.1;
 
-        [Constructable]
+        [Constructible]
         public FertileDirt(int amount)
             : base(0xF81)
         {

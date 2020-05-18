@@ -7,7 +7,7 @@ namespace Server.Items
         private TimeSpan m_LifeSpan;
         private DateTime m_CreationTime;
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public TransientItem(int itemID, TimeSpan lifeSpan)
             : base(itemID)
         {

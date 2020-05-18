@@ -157,7 +157,7 @@ namespace Server.Items
 
     public class CandyCane : BaseSweet
     {
-        [Constructable]
+        [Constructible]
         public CandyCane()
             : this(0x2bdd + Utility.Random(4))
         { }
@@ -201,7 +201,7 @@ namespace Server.Items
 			1077409 // Run, run as fast as you can! You can't catch me! I'm the gingerbread man!
 		};
 
-        [Constructable]
+        [Constructible]
         public GingerBreadCookie()
             : base(Utility.RandomBool() ? 0x2be1 : 0x2be2)
         {

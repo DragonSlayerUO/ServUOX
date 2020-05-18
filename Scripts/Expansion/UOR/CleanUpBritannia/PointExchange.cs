@@ -11,7 +11,7 @@ namespace Server.Engines.Points
         public override int LabelNumber => 1158449;  // Cleanup Point Exchange
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public PointExchanceStone()
             : base(0xEDD)
         {

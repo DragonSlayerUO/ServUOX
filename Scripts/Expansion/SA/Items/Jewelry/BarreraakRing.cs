@@ -9,7 +9,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1095049;  // Barreraak’s Old Beat Up Ring
 
-        [Constructable]
+        [Constructible]
         public BarreraaksRing()
         {
             //TODO: Get Hue

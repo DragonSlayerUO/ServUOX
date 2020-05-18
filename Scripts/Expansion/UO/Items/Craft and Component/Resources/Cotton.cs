@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class Cotton : Item, IDyable, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Cotton()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Cotton(int amount)
             : base(0xDF9)
         {

@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealBeetle : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealBeetle()
             : base(0x260F, 0x3E97, 0x3EBC, DefaultEtherealHue)
         { }

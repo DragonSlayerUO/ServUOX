@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Ancient Lich [Renowned] corpse")]
     public class AncientLichRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public AncientLichRenowned()
             : base(AIType.AI_NecroMage)
         {

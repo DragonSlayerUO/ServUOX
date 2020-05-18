@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SAShadowWall1South : DamageableItem
     {
-        [Constructable]
+        [Constructible]
         public SAShadowWall1South()
             : base(13883, 631)
         {
@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class SAShadowWall1East : DamageableItem
     {
-        [Constructable]
+        [Constructible]
         public SAShadowWall1East()
             : base(13882, 636)
         {

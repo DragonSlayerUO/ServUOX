@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x27A7, 0x27F2)]
     public class Lajatang : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public Lajatang()
             : base(0x27A7)
         {

@@ -112,7 +112,7 @@ namespace Server.Items
 
 
 
-        [Constructable]
+        [Constructible]
         public RepairBenchAddon(DirectionType type, List<RepairBenchDefinition> tools)
         {
             switch (type)
@@ -302,13 +302,13 @@ namespace Server.Items
 
         public List<RepairBenchDefinition> Tools;
 
-        [Constructable]
+        [Constructible]
         public RepairBenchDeed()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RepairBenchDeed(List<RepairBenchDefinition> tools)
             : base()
         {

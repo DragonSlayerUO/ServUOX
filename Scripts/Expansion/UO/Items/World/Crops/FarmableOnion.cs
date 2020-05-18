@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class FarmableOnion : FarmableCrop
     {
-        [Constructable]
+        [Constructible]
         public FarmableOnion()
             : base(GetCropID())
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class StitchersMittens : LeafGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public StitchersMittens()
         {
             Hue = 0x481;

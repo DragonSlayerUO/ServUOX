@@ -17,7 +17,7 @@ namespace Server.Items.MusicBox
         private MusicName m_ActualSong;
         private SecureLevel m_Level;
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public DawnsMusicBox()
             : base(0x2AF9)
         {

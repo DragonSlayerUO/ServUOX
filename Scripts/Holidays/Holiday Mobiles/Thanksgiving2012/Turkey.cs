@@ -7,12 +7,12 @@ namespace Server.Mobiles
     [CorpseName("an turkey corpse")]
     public class Turkey : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Turkey() : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Turkey(bool tamable) : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
             Name = "a turkey";

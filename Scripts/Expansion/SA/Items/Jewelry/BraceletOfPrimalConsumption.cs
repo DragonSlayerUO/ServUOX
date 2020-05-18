@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1157350;  // bracelet of primal consumption
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BraceletOfPrimalConsumption()
         {
             AbsorptionAttributes.EaterDamage = 6;

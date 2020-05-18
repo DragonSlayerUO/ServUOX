@@ -9,13 +9,13 @@ namespace Server.Items
         public override CraftSystem CraftSystem => DefGlassblowing.CraftSystem;
         public override int LabelNumber => 1044609;  // Blow Pipe
 
-        [Constructable]
+        [Constructible]
         public Blowpipe()
             : base(0xE8A)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Blowpipe(int uses)
             : base(uses, 0xE8A)
         {

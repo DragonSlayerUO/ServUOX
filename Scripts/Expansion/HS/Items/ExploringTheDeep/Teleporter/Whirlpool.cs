@@ -18,13 +18,13 @@ namespace Server.Items
         private int m_SoundID;
         private TimeSpan m_Delay;
 
-        [Constructable]
+        [Constructible]
         public Whirlpool(Point3D pointDest, Map mapDest)
             : this(pointDest, mapDest, false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Whirlpool(Point3D pointDest, Map mapDest, bool creatures)
             : base(0x3789)
         {

@@ -8,7 +8,7 @@ namespace Server.Mobiles
 {
     public class AlbertaGiacco : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public AlbertaGiacco()
             : base("the Respected Painter")
         {

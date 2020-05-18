@@ -9,13 +9,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151810;  // Cursed Oilstone
 
-        [Constructable]
+        [Constructible]
         public CursedOilstone()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CursedOilstone(int amount) : base(0x0F8B)
         {
             Weight = 1;

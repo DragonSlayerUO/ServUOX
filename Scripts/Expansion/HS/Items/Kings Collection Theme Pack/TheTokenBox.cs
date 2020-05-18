@@ -9,7 +9,7 @@ namespace Server.Items
 
         public override int DefaultGumpID => 0x4D0C;
 
-        [Constructable]
+        [Constructible]
         public TheTokenBox()
             : base(0x4D0C)
         {

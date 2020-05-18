@@ -13,7 +13,7 @@ namespace Server.Items
 
         public Type GumpType => typeof(NameChangeConfirmGump);
 
-        [Constructable]
+        [Constructible]
         public NameChangeToken()
             : base(0x2AAA)
         {

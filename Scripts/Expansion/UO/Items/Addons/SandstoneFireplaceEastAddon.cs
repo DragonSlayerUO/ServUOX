@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SandstoneFireplaceEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SandstoneFireplaceEastAddon()
         {
             AddComponent(new AddonComponent(0x489), 0, 0, 0);
@@ -31,7 +31,7 @@ namespace Server.Items
 
     public class SandstoneFireplaceEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public SandstoneFireplaceEastDeed()
         {
         }

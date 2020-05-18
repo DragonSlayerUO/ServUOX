@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class JaacarBox : WoodenBox
     {
-        [Constructable]
+        [Constructible]
         public JaacarBox()
             : base()
         {

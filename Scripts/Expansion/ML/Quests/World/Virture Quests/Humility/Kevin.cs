@@ -11,7 +11,7 @@ namespace Server.Mobiles
         public override bool IsActiveVendor => true;
         public override bool CanTeach => true;
 
-        [Constructable]
+        [Constructible]
         public Kevin()
             : base("Kevin", "the butcher")
         {

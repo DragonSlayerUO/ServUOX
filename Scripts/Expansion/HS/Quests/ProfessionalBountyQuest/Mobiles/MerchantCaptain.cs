@@ -12,7 +12,7 @@ namespace Server.Mobiles
         public override bool Aggressive => false;
         public override bool InitialInnocent => true;
 
-        [Constructable]
+        [Constructible]
         public MerchantCaptain(BaseGalleon galleon)
             : base(galleon, AIType.AI_Melee, FightMode.Aggressor, 1, 10, .2, .4)
         {

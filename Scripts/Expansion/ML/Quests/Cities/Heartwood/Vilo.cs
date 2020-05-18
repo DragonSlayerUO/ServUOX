@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Vilo : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Vilo()
             : base("Vilo", "the Guard")
         {

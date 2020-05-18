@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125458;  // relic of hydros
 
-        [Constructable]
+        [Constructible]
         public RelicOfHydros()
             : base(0xA1DA)
         {
@@ -33,7 +33,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125461;  // relic of lithos
 
-        [Constructable]
+        [Constructible]
         public RelicOfLithos()
             : base(0xA1DD)
         {
@@ -62,7 +62,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125459;  // relic of pyros
 
-        [Constructable]
+        [Constructible]
         public RelicOfPyros()
             : base(0xA1DB)
         {
@@ -91,7 +91,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125460;  // relic of stratos
 
-        [Constructable]
+        [Constructible]
         public RelicOfStratos()
             : base(0xA1DC)
         {

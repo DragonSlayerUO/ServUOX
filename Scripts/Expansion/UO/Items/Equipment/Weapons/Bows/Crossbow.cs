@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0xF50, 0xF4F)]
     public class Crossbow : BaseRanged
     {
-        [Constructable]
+        [Constructible]
         public Crossbow()
             : base(0xF50)
         {

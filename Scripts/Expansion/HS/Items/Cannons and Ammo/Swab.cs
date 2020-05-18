@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class Swab : Item
     {
-        [Constructable]
+        [Constructible]
         public Swab()
             : base(Utility.RandomMinMax(16968, 16969))
         {

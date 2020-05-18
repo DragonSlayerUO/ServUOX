@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class Dyes : Item
     {
-        [Constructable]
+        [Constructible]
         public Dyes()
             : base(0xFA9)
         {

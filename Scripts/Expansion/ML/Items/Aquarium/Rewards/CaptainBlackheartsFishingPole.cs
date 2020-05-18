@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CaptainBlackheartsFishingPole : FishingPole
     {
-        [Constructable]
+        [Constructible]
         public CaptainBlackheartsFishingPole()
             : base()
         {

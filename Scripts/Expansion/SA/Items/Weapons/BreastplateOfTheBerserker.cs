@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113539;  // Breastplate of the Berserker
 
-        [Constructable]
+        [Constructible]
         public BreastplateOfTheBerserker()
         {
             Hue = 1172;

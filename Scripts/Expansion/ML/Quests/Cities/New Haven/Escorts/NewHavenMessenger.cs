@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class NewHavenMessenger : NewHavenEscortable
     {
-        [Constructable]
+        [Constructible]
         public NewHavenMessenger()
         {
             Title = "the messenger";

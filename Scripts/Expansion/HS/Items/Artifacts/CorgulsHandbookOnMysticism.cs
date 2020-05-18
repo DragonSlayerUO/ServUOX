@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1149779;
 
-        [Constructable]
+        [Constructible]
         public CorgulsHandbookOnMysticism()
         {
             Hue = 1159;

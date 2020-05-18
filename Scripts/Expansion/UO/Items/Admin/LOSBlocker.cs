@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LOSBlocker : Item
     {
-        [Constructable]
+        [Constructible]
         public LOSBlocker()
             : base(0x21A2)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class HunterArms : LeafArms
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HunterArms()
             : base()
         {

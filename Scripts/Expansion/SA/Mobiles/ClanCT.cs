@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a clan scratch tinkerer corpse")]
     public class ClanCT : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ClanCT()
             : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

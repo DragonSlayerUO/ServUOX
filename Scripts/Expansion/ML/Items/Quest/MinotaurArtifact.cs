@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MinotaurArtifact : Item
     {
-        [Constructable]
+        [Constructible]
         public MinotaurArtifact()
             : base(Utility.RandomList(0xB46, 0xB48, 0x9ED))
         {

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an acid elemental corpse")]
     public class ToxicElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ToxicElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

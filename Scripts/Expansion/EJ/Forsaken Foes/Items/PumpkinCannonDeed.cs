@@ -9,7 +9,7 @@ namespace Server.Items
         public override CannonPower CannonType => CannonPower.Pumpkin;
         public override int LabelNumber => 1159232;  // Pumpkin Cannon
 
-        [Constructable]
+        [Constructible]
         public PumpkinDeed()
         {
             Hue = 1192;

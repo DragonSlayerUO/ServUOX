@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EyeOfNavrey : Item
     {
-        [Constructable]
+        [Constructible]
         public EyeOfNavrey()
             : base(0x318D)
         {

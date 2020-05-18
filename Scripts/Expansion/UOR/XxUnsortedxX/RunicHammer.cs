@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x13E4, 0x13E3)]
     public class RunicHammer : BaseRunicTool
     {
-        [Constructable]
+        [Constructible]
         public RunicHammer(CraftResource resource)
             : base(resource, 0x13E3)
         {
@@ -15,7 +15,7 @@ namespace Server.Items
             Hue = CraftResources.GetHue(resource);
         }
 
-        [Constructable]
+        [Constructible]
         public RunicHammer(CraftResource resource, int uses)
             : base(resource, uses, 0x13E3)
         {

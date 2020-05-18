@@ -4,7 +4,7 @@ namespace Server.Items
     [Flipable(0xB4F, 0xB4E, 0xB50, 0xB51)]
     public class FancyWoodenChairCushion : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public FancyWoodenChairCushion()
             : base(0xB4F)
         {
@@ -33,7 +33,7 @@ namespace Server.Items
     [Flipable(0xB53, 0xB52, 0xB54, 0xB55)]
     public class WoodenChairCushion : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public WoodenChairCushion()
             : base(0xB53)
         {
@@ -62,7 +62,7 @@ namespace Server.Items
     [Flipable(0xB57, 0xB56, 0xB59, 0xB58)]
     public class WoodenChair : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public WoodenChair()
             : base(0xB57)
         {
@@ -91,7 +91,7 @@ namespace Server.Items
     [Flipable(0xB5B, 0xB5A, 0xB5C, 0xB5D)]
     public class BambooChair : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public BambooChair()
             : base(0xB5B)
         {
@@ -121,7 +121,7 @@ namespace Server.Items
     [Flipable(0x1218, 0x1219, 0x121A, 0x121B)]
     public class StoneChair : Item
     {
-        [Constructable]
+        [Constructible]
         public StoneChair()
             : base(0x1218)
         {

@@ -14,7 +14,7 @@ namespace Server.Mobiles
     [CorpseName("a renegade changeling corpse")]
     public class RenegadeChangeling : Changeling
     {
-        [Constructable]
+        [Constructible]
         public RenegadeChangeling()
         {
             Name = "a renegade changeling";

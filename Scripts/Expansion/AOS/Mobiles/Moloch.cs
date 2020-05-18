@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a moloch corpse")]
     public class Moloch : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Moloch()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

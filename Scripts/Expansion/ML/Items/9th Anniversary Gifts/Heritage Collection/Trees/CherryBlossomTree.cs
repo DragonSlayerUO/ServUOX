@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CherryBlossomTreeAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CherryBlossomTreeAddon()
             : base()
         {
@@ -35,7 +35,7 @@ namespace Server.Items
 
     public class CherryBlossomTreeDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public CherryBlossomTreeDeed()
             : base()
         {

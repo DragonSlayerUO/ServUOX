@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1071563;  // Memorial Stone
 
-        [Constructable]
+        [Constructible]
         public MemorialStone()
             : base(0x117F)
         {

@@ -7,13 +7,13 @@ namespace Server.Items
     public class PlantPigment : Item, IPigmentHue
     {
         private PlantPigmentHue m_Hue;
-        [Constructable]
+        [Constructible]
         public PlantPigment()
             : this(PlantPigmentHue.None)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlantPigment(PlantPigmentHue hue)
             : base(0x0F02)
         {
@@ -21,7 +21,7 @@ namespace Server.Items
             PigmentHue = hue;
         }
 
-        [Constructable]
+        [Constructible]
         public PlantPigment(PlantHue hue)
             : base(0x0F02)
         {

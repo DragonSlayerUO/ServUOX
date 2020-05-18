@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PumpkinScarecrow : Item
     {
-        [Constructable]
+        [Constructible]
         public PumpkinScarecrow()
             : base(Utility.RandomBool() ? 0x469B : 0x469C)
         {

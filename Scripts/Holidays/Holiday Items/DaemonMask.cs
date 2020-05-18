@@ -4,7 +4,7 @@ namespace Server.Items.Holiday
 {
     public class PaintedDaemonMask : BasePaintedMask
     {
-        [Constructable]
+        [Constructible]
         public PaintedDaemonMask()
             : base(0x4a92)
         {

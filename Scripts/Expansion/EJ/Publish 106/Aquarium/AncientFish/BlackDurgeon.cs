@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class BlackDurgeon : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public BlackDurgeon()
             : base(0xA36D)
         {

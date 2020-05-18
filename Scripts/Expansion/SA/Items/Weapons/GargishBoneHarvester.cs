@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48C6, 0x48C7)]
     public class GargishBoneHarvester : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public GargishBoneHarvester()
             : base(0x48C6)
         {

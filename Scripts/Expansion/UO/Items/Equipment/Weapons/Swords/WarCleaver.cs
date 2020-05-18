@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2D2F, 0x2D23)]
     public class WarCleaver : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public WarCleaver()
             : base(0x2D2F)
         {

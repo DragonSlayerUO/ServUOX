@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TallElvenBedSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public TallElvenBedSouthAddon()
         {
             AddComponent(new AddonComponent(0x3058), 0, 0, 0); // angolo alto sx
@@ -36,7 +36,7 @@ namespace Server.Items
 
     public class TallElvenBedSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public TallElvenBedSouthDeed()
         {
         }

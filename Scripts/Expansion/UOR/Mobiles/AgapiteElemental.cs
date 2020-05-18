@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an ore elemental corpse")]
     public class AgapiteElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public AgapiteElemental()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

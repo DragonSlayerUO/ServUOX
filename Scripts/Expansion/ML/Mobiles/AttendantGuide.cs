@@ -869,7 +869,7 @@ namespace Server.Mobiles
 
     public class AttendantMaleGuide : AttendantGuide
     {
-        [Constructable]
+        [Constructible]
         public AttendantMaleGuide()
             : base()
         {
@@ -920,7 +920,7 @@ namespace Server.Mobiles
 
     public class AttendantFemaleGuide : AttendantGuide
     {
-        [Constructable]
+        [Constructible]
         public AttendantFemaleGuide()
             : base()
         {

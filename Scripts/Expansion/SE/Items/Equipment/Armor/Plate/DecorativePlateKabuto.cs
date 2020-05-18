@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecorativePlateKabuto : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public DecorativePlateKabuto()
             : base(0x2778)
         {

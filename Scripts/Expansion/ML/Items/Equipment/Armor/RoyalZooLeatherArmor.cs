@@ -5,7 +5,7 @@ namespace Server.Items
     public class RoyalZooLeatherLegs : LeatherLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalZooLeatherLegs()
             : base()
         {
@@ -47,7 +47,7 @@ namespace Server.Items
     public class RoyalZooLeatherGloves : LeatherGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalZooLeatherGloves()
             : base()
         {
@@ -89,7 +89,7 @@ namespace Server.Items
     public class RoyalZooLeatherGorget : LeatherGorget
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalZooLeatherGorget()
             : base()
         {
@@ -131,7 +131,7 @@ namespace Server.Items
     public class RoyalZooLeatherArms : LeatherArms
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalZooLeatherArms()
             : base()
         {
@@ -173,7 +173,7 @@ namespace Server.Items
     public class RoyalZooLeatherChest : LeatherChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalZooLeatherChest()
             : base()
         {
@@ -215,7 +215,7 @@ namespace Server.Items
     public class RoyalZooLeatherFemaleChest : FemaleLeatherChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalZooLeatherFemaleChest()
             : base()
         {

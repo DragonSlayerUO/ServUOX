@@ -8,7 +8,7 @@ namespace Server.Items
         public override int ArtifactRarity => 8;
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public ShipsBellOfBmvArarat()
             : base(0x4C5E)
         {

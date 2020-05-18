@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023744;  // painting
 
-        [Constructable]
+        [Constructible]
         public ZombiePainting()
             : base(0x4C62)
         {
@@ -37,7 +37,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023744;  // painting
 
-        [Constructable]
+        [Constructible]
         public SkeletonPortrait()
             : base(0xA1E0)
         {
@@ -67,7 +67,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1023744;  // painting
 
-        [Constructable]
+        [Constructible]
         public LichPainting()
             : base(0xA1E2)
         {

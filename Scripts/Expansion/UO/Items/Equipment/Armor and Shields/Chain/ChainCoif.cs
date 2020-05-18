@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x13BB, 0x13C0)]
     public class ChainCoif : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public ChainCoif()
             : base(0x13BB)
         {

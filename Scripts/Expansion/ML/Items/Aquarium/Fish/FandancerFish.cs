@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FandancerFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public FandancerFish()
             : base(0x3B02)
         {

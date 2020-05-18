@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ReflectiveWolfEye : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public ReflectiveWolfEye()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ReflectiveWolfEye(int amount)
             : base(0x5749)
         {

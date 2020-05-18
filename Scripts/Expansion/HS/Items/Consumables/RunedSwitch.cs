@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RunedSwitch : Item
     {
-        [Constructable]
+        [Constructible]
         public RunedSwitch()
             : base(0x2F61)
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class FlamingoTongue : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public FlamingoTongue()
             : base(0xA382)
         {

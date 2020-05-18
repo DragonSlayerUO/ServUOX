@@ -18,7 +18,7 @@ namespace Server.Items
 
         private int offset;
 
-        [Constructable]
+        [Constructible]
         public SacrificeVirtueTileAddon(SacrificeTileType type)
         {
             m_SacrificeTileType = type;
@@ -63,7 +63,7 @@ namespace Server.Items
 
         private SacrificeTileType m_SacrificeTileType;
 
-        [Constructable]
+        [Constructible]
         public SacrificeVirtueTileDeed()
         {
             LootType = LootType.Blessed;

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a maddening horror corpse")]
     public class MaddeningHorror : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public MaddeningHorror()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

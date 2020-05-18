@@ -5,7 +5,7 @@ namespace Server.Items
     public class ColdBlood : Cleaver
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ColdBlood()
         {
             Hue = 0x4F2;

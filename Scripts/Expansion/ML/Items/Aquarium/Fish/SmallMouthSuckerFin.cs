@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SmallMouthSuckerFin : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SmallMouthSuckerFin()
             : base(0x3B01)
         {

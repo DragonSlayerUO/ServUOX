@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class GreaterHealPotion : BaseHealPotion
     {
-        [Constructable]
+        [Constructible]
         public GreaterHealPotion()
             : base(PotionEffect.HealGreater)
         {

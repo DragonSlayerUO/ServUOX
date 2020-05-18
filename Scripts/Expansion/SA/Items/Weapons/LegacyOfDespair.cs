@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113519;  // Legacy of Despair
 
-        [Constructable]
+        [Constructible]
         public LegacyOfDespair()
         {
             Hue = 48;

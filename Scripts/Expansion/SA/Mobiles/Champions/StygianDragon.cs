@@ -12,7 +12,7 @@ namespace Server.Mobiles
     {
         private DateTime m_Delay;
 
-        [Constructable]
+        [Constructible]
         public StygianDragon()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.3, 0.5)
         {
@@ -299,7 +299,7 @@ namespace Server.Mobiles
             private Timer m_Timer;
             private DateTime m_Destroy;
 
-            [Constructable]
+            [Constructible]
             public FireField(Mobile owner, int duration, bool south)
                 : base(GetItemID(south))
             {

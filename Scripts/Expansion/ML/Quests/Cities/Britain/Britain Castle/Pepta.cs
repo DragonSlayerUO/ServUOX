@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Pepta : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Pepta()
             : base("Pepta", "the Royal Tastetester")
         {

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RewardCake : Item
     {
-        [Constructable]
+        [Constructible]
         public RewardCake()
             : base(0x9e9)
         {

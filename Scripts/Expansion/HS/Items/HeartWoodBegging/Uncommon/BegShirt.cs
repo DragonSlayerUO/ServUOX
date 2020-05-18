@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BegShirt : Shirt
     {
-        [Constructable]
+        [Constructible]
         public BegShirt()
         {
         }

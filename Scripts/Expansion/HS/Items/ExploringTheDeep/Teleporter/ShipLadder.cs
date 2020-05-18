@@ -7,7 +7,7 @@ namespace Server.Items
         private Point3D m_PointDest;
         private Map m_Map;
 
-        [Constructable]
+        [Constructible]
         public ShipLadder(Point3D point, Map map, int id)
             : base(0x08A6)
         {

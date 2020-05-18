@@ -5,7 +5,7 @@ namespace Server.Items
     public class JackalsCollar : PlateGorget
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public JackalsCollar()
         {
             Hue = 0x6D1;

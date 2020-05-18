@@ -77,7 +77,7 @@ namespace Server.Items
         public override int Title => 1153933;
         public override int Content => 1152698;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookYew()
         {
         }
@@ -105,7 +105,7 @@ namespace Server.Items
         public override int Title => 1153934;
         public override int Content => 1153436;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookJhelom()
         {
         }
@@ -133,7 +133,7 @@ namespace Server.Items
         public override int Title => 1153935;
         public override int Content => 1153437;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookMoonglow()
         {
         }
@@ -161,7 +161,7 @@ namespace Server.Items
         public override int Title => 1153727;
         public override int Content => 1151755;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookTrinsic()
         {
         }
@@ -189,7 +189,7 @@ namespace Server.Items
         public override int Title => 1153728;
         public override int Content => 1152317;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookMinoc()
         {
         }
@@ -217,7 +217,7 @@ namespace Server.Items
         public override int Title => 1153008;
         public override int Content => 1153723;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookNewMagincia()
         {
         }
@@ -245,7 +245,7 @@ namespace Server.Items
         public override int Title => 1153012;
         public override int Content => 1153724;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookVesper()
         {
         }
@@ -273,7 +273,7 @@ namespace Server.Items
         public override int Title => 0;
         public override int Content => 1153725;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookSkaraBrae()
         {
         }
@@ -301,7 +301,7 @@ namespace Server.Items
         public override int Title => 1153726;
         public override int Content => 1151754;
 
-        [Constructable]
+        [Constructible]
         public LoyaltyBookBritain()
         {
         }

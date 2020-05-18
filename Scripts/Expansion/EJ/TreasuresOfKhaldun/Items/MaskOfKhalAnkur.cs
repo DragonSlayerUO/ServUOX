@@ -29,13 +29,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public MaskOfKhalAnkur()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaskOfKhalAnkur(int hue)
             : base(0xA1C7, hue)
         {

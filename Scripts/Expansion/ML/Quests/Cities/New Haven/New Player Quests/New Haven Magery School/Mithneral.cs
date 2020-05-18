@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(ScholarlyTaskQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Mithneral()
             : base("Mithneral", "the Evaluating Intelligence Instructor")
         {

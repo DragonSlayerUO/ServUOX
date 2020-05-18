@@ -21,7 +21,7 @@ namespace Server.Engines.BulkOrders
             0.003906250, // Verite
             0.001953125  // Valorite
         };
-        [Constructable]
+        [Constructible]
         public SmallSmithBOD()
         {
             SmallBulkEntry[] entries;

@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new DistilleryEastAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public DistilleryEastAddon()
         {
             AddComponent(new LocalizedAddonComponent(15802, 1150640), 0, 0, 0);
@@ -49,7 +49,7 @@ namespace Server.Items
         public override BaseAddon Addon => new DistilleryEastAddon();
         public override int LabelNumber => 1150664;  // distillery (east)
 
-        [Constructable]
+        [Constructible]
         public DistilleryEastAddonDeed()
         {
         }
@@ -78,7 +78,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new DistillerySouthAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public DistillerySouthAddon()
         {
             AddComponent(new LocalizedAddonComponent(15800, 1150640), 0, 0, 0);
@@ -118,7 +118,7 @@ namespace Server.Items
         public override BaseAddon Addon => new DistillerySouthAddon();
         public override int LabelNumber => 1150663;  // distillery (south)
 
-        [Constructable]
+        [Constructible]
         public DistillerySouthAddonDeed()
         {
         }

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FruitBowl : Food, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public FruitBowl()
             : base(0x2D4F)
         {

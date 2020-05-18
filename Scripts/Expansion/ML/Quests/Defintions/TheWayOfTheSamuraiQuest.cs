@@ -95,7 +95,7 @@ namespace Server.Engines.Quests
             m_SBInfos.Add(new SBKeeperOfBushido());
         }
 
-        [Constructable]
+        [Constructible]
         public Hamato()
             : base("Hamato", "the Bushido Instructor")
         {

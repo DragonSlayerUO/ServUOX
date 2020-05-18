@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0xE89, 0xE8a)]
     public class QuarterStaff : BaseStaff
     {
-        [Constructable]
+        [Constructible]
         public QuarterStaff()
             : base(0xE89)
         {

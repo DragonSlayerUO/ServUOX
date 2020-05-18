@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StuddedGorget : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public StuddedGorget()
             : base(0x13D6)
         {

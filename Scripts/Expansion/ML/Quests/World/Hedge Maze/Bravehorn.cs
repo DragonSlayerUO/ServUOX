@@ -7,7 +7,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(DefendingTheHerdQuest) };
 
-        [Constructable]
+        [Constructible]
         public Bravehorn()
             : base()
         {

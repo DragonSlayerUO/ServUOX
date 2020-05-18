@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LeatherJingasa : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeatherJingasa()
             : base(0x2776)
         {

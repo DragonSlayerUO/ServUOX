@@ -11,13 +11,13 @@ namespace Server.Items
         public override int InitMinHits => 20;
         public override int InitMaxHits => 30;
 
-        [Constructable]
+        [Constructible]
         public FloppyHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FloppyHat(int hue)
             : base(0x1713, hue)
         {

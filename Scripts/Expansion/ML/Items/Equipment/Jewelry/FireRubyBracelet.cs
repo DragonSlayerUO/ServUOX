@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FireRubyBracelet : GoldBracelet
     {
-        [Constructable]
+        [Constructible]
         public FireRubyBracelet()
             : base()
         {

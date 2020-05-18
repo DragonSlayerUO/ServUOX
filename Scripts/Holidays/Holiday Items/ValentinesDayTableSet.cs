@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098492;  // table
 
-        [Constructable]
+        [Constructible]
         public ValentinesTable()
             : base(0xA004)
         {
@@ -45,7 +45,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1098456;  // chair
 
-        [Constructable]
+        [Constructible]
         public ValentinesChair()
             : base(0xA05C)
         {

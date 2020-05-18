@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class TeleportScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public TeleportScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TeleportScroll(int amount)
             : base(21, 0x1F42, amount)
         {

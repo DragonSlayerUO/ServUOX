@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1158717;  // Cultist's Ritual Tome
 
-        [Constructable]
+        [Constructible]
         public CultistsRitualTome()
             : base()
         {

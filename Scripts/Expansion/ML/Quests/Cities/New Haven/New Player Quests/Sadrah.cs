@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Sadrah : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Sadrah()
             : base("Sadrah", "the Courier")
         {

@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Beaugregory : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Beaugregory()
             : base(0xA378)
         {

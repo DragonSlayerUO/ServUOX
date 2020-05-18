@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155764;  // Gardening Contract
 
-        [Constructable]
+        [Constructible]
         public GardeningContract()
             : base(0x14F0)
         {

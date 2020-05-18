@@ -209,7 +209,7 @@ namespace Server.Engines.CityLoyalty
 
     public class CityItemDonation : CityDonationItem
     {
-        [Constructable]
+        [Constructible]
         public CityItemDonation(City city, TradeMinister minister) : base(city, minister, 0xE3C)
         {
             Table = ItemTable;
@@ -264,7 +264,7 @@ namespace Server.Engines.CityLoyalty
     {
         public override bool Animals => true;
 
-        [Constructable]
+        [Constructible]
         public CityPetDonation(City city, TradeMinister minister) : base(city, minister, 0x14E7)
         {
             Table = PetTable;

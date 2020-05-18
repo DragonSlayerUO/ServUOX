@@ -17,7 +17,7 @@ namespace Server.Misc
         private TimeSpan m_Duration;
         private DateTime m_StartTime;
         private bool m_Active;
-        [Constructable(AccessLevel.Administrator)]
+        [Constructible(AccessLevel.Administrator)]
         public ShardPoller()
             : base(0x1047)
         {

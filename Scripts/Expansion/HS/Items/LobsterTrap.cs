@@ -56,7 +56,7 @@ namespace Server.Items
         public override int LabelNumber { get { if (m_Owner == null) return 1096487; else return 0; } }
         public override bool DisplaysContent => false;
 
-        [Constructable]
+        [Constructible]
         public LobsterTrap() : base(17615)
         {
         }

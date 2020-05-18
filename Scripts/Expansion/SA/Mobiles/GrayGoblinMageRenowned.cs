@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("Gray Goblin Mage [Renowned] corpse")]
     public class GrayGoblinMageRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public GrayGoblinMageRenowned()
             : base(AIType.AI_Mage)
         {

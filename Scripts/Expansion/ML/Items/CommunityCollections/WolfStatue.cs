@@ -5,7 +5,7 @@ namespace Server.Items
     public class WolfStatue : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public WolfStatue()
             : base(0x25D3)
         {

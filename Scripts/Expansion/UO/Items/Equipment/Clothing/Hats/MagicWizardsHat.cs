@@ -17,13 +17,13 @@ namespace Server.Items
         public override int BaseDexBonus => -5;
         public override int BaseIntBonus => +5;
 
-        [Constructable]
+        [Constructible]
         public MagicWizardsHat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MagicWizardsHat(int hue)
             : base(0x1718, hue)
         {

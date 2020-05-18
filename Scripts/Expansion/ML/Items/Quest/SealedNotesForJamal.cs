@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SealedNotesForJamal : Item
     {
-        [Constructable]
+        [Constructible]
         public SealedNotesForJamal()
             : base(0xEF9)
         {

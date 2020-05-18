@@ -12,7 +12,7 @@ namespace Server.Items
         private List<LOSBlocker> m_LOSBlockers;
         private List<SBMessageTrigger> m_MsgTriggers;
 
-        [Constructable]
+        [Constructible]
         public FlameOfOrder(Point3D location, Map map)
             : base(0x19AB)
         {

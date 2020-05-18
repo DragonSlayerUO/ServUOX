@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StoneAnvilEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public StoneAnvilEastAddon()
         {
             AddComponent(new AnvilComponent(0x2DD6), 0, 0, 0);
@@ -34,7 +34,7 @@ namespace Server.Items
 
     public class StoneAnvilEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public StoneAnvilEastDeed()
         {
         }

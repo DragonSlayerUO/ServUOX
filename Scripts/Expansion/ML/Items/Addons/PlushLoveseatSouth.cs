@@ -9,7 +9,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new PlushLoveseatSouthDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public PlushLoveseatSouthAddon()
         {
             AddComponent(new AddonComponent(0x4C83), 0, 0, 0);
@@ -39,7 +39,7 @@ namespace Server.Items
         public override BaseAddon Addon => new PlushLoveseatSouthAddon();
         public override int LabelNumber => 1154135;  // Plush Loveseat (South)
 
-        [Constructable]
+        [Constructible]
         public PlushLoveseatSouthDeed()
         {
         }

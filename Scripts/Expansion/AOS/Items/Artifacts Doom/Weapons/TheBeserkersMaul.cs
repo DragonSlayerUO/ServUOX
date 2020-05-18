@@ -5,7 +5,7 @@ namespace Server.Items
     public class TheBeserkersMaul : Maul
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TheBeserkersMaul()
         {
             Hue = 0x21;

@@ -5,7 +5,7 @@ namespace Server.Items
     public class TrueAssassinSpike : AssassinSpike
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TrueAssassinSpike()
         {
             Attributes.AttackChance = 4;

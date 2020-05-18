@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158795);  // Punisher
 
-        [Constructable]
+        [Constructible]
         public PunisherTitleDeed()
         {
         }

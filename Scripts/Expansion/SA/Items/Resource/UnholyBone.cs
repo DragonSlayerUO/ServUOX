@@ -6,7 +6,7 @@ namespace Server.Items
     public class UnholyBone : Item, ICarvable
     {
         private SpawnTimer m_Timer;
-        [Constructable]
+        [Constructible]
         public UnholyBone()
             : base(0xF7E)
         {

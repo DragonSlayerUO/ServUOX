@@ -10,7 +10,7 @@ namespace Server.Mobiles
 
         public LenleyRegion _Region { get; set; }
 
-        [Constructable]
+        [Constructible]
         public Lenley()
             : base()
         {

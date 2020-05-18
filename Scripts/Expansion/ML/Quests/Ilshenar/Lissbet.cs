@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(ResponsibilityQuest) };
 
-        [Constructable]
+        [Constructible]
         public Lissbet()
             : base()
         {

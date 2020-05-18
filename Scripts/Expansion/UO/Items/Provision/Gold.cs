@@ -5,19 +5,19 @@ namespace Server.Items
 {
     public class Gold : Item
     {
-        [Constructable]
+        [Constructible]
         public Gold()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Gold(int amountFrom, int amountTo)
             : this(Utility.RandomMinMax(amountFrom, amountTo))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Gold(int amount)
             : base(0xEED)
         {

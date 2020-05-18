@@ -5,7 +5,7 @@ namespace Server.Items
     public class GuardianAxe : OrnateAxe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GuardianAxe()
         {
             Attributes.BonusHits = 4;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MarbleWorkshopDeed : HouseDeed
     {
-        [Constructable]
+        [Constructible]
         public MarbleWorkshopDeed()
             : base(0xA2, new Point3D(-1, 4, 0))
         {

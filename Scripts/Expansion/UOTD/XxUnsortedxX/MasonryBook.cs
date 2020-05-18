@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153527;  // Making valuables with Stonecrafting
 
-        [Constructable]
+        [Constructible]
         public MasonryBook()
             : base(0xFBE)
         {

@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1537, 0x1538)]
     public class Kilt : BaseOuterLegs
     {
-        [Constructable]
+        [Constructible]
         public Kilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Kilt(int hue)
             : base(0x1537, hue)
         {

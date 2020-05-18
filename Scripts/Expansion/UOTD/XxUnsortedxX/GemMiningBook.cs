@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112240;  // Mining for Quality Gems
 
-        [Constructable]
+        [Constructible]
         public GemMiningBook()
             : base(0xFBE)
         {

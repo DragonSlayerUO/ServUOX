@@ -13,7 +13,7 @@ namespace Server.Items
         private VendorRentalDuration m_Duration;
         private Mobile m_Offeree;
         private Timer m_OfferExpireTimer;
-        [Constructable]
+        [Constructible]
         public VendorRentalContract()
             : base(0x14F0)
         {

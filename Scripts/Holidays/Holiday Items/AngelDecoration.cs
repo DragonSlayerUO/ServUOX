@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x46FA, 0x46FB)]
     public class AngelDecoration : Item
     {
-        [Constructable]
+        [Constructible]
         public AngelDecoration()
             : base(0x46FA)
         {

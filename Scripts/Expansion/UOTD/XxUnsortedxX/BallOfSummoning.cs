@@ -16,7 +16,7 @@ namespace Server.Items
         private int m_Recharges;
         private BaseCreature m_Pet;
         private string m_PetName;
-        [Constructable]
+        [Constructible]
         public BallOfSummoning()
             : base(0xE2E)
         {

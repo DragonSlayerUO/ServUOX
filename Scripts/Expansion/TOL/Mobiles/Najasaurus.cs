@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override bool AttacksFocus => !Controlled;
 
-        [Constructable]
+        [Constructible]
         public Najasaurus()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .2, .4)
         {

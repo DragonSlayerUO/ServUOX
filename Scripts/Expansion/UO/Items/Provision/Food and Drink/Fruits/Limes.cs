@@ -3,13 +3,13 @@ namespace Server.Items
 {
     public class Limes : Food
     {
-        [Constructable]
+        [Constructible]
         public Limes()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Limes(int amount)
             : base(amount, 0x172B)
         {

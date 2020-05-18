@@ -3,7 +3,7 @@ namespace Server.Items
 {
     public class AudChar : BaseInstrument
     {
-        [Constructable]
+        [Constructible]
         public AudChar()
             : base(0x403B, 0x392, 0x44)
         {

@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(TimeIsOfTheEssenceQuest) };
 
-        [Constructable]
+        [Constructible]
         public Hawkwind2()
             : base("Hawkwind", "the Time Lord")
         {
@@ -81,7 +81,7 @@ namespace Server.Mobiles
 
         public override bool ChangeRace => false;
 
-        [Constructable]
+        [Constructible]
         public SirGeoffery()
             : base("Sir Geoffrey", "the Guardsman")
         {
@@ -158,7 +158,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(TheGreatHuntQuest) };
 
-        [Constructable]
+        [Constructible]
         public SakkhraHighChieftess()
             : base(BaseEodonTribesman.GetRandomName(), "the sakkhra high chieftess")
         {
@@ -212,7 +212,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(EmptyNestQuest) };
 
-        [Constructable]
+        [Constructible]
         public UraliHighChieftess()
             : base(BaseEodonTribesman.GetRandomName(), "the urali high chieftess")
         {
@@ -267,7 +267,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(TheGreatVolcanoQuest) };
 
-        [Constructable]
+        [Constructible]
         public JukariHighChief()
             : base(BaseEodonTribesman.GetRandomName(), "the jukari high chief")
         {
@@ -318,7 +318,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(PrideOfTheAmbushQuest) };
 
-        [Constructable]
+        [Constructible]
         public KurakHighChief()
             : base(BaseEodonTribesman.GetRandomName(), "the kurak high chief")
         {
@@ -370,7 +370,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(TheGreatApeQuest) };
 
-        [Constructable]
+        [Constructible]
         public BarakoHighChief()
             : base(BaseEodonTribesman.GetRandomName(), "the barako high chief")
         {

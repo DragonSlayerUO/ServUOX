@@ -19,13 +19,13 @@ namespace Server.Items
             return 0x995;
         }
 
-        [Constructable]
+        [Constructible]
         public CeramicMug()
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public CeramicMug(BeverageType type)
             : base(type)
         {

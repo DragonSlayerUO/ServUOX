@@ -26,7 +26,7 @@ namespace Server.Items
     public class QuestNote : XmlQuestToken
     {
 
-        [Constructable]
+        [Constructible]
         public QuestNote() : base(0x14EE)
         {
             Name = "A quest note";
@@ -105,7 +105,7 @@ namespace Server.Items
         private int m_TextColor = 0x3e8;
         private int m_TitleColor = 0xef0000;  // cyan 0xf70000, black 0x3e8, brown 0xef0000 darkblue 0x7fff
 
-        [Constructable]
+        [Constructible]
         public OriginalQuestNote() : base(0x14EE)
         {
             Name = "A quest note";

@@ -6,7 +6,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(GargishChaosShield))]
     public class ChaosShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public ChaosShield()
             : base(0x1BC3)
         {

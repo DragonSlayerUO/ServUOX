@@ -15,13 +15,13 @@ namespace Server.Items
 
         public override int LabelNumber => 1018143;  // slime
 
-        [Constructable]
+        [Constructible]
         public AcidSlime()
             : this(TimeSpan.FromSeconds(10.0), 5, 10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AcidSlime(TimeSpan duration, int minDamage, int maxDamage)
             : base(0x122A)
         {

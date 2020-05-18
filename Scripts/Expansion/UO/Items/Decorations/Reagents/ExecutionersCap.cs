@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class ExecutionersCap : Item
     {
-        [Constructable]
+        [Constructible]
         public ExecutionersCap()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ExecutionersCap(int amount)
             : base(0xF83)
         {

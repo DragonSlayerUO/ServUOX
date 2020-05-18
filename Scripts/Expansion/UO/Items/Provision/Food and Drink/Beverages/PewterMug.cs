@@ -15,13 +15,13 @@ namespace Server.Items
             return 0xFFF;
         }
 
-        [Constructable]
+        [Constructible]
         public PewterMug()
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public PewterMug(BeverageType type)
             : base(type)
         {

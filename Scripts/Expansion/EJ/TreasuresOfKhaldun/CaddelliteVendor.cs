@@ -21,7 +21,7 @@ namespace Server.Engines.Khaldun
         public static CaddelliteVendor InstanceTram { get; set; }
         public static CaddelliteVendor InstanceFel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CaddelliteVendor()
             : base("the Tinker")
         {

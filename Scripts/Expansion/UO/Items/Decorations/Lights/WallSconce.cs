@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable]
     public class WallSconce : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public WallSconce()
             : base(0x9FB)
         {

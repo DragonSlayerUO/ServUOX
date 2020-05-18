@@ -4,7 +4,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Greywolf")]
     public class GreyWolf : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GreyWolf()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -70,7 +70,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Timberwolf")]
     public class TimberWolf : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TimberWolf()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -136,7 +136,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Whitewolf")]
     public class WhiteWolf : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public WhiteWolf()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -202,7 +202,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Direwolf")]
     public class DireWolf : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DireWolf()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

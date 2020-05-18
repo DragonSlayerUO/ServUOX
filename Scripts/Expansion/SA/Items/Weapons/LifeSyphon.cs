@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113524;  // Life Syphon
 
-        [Constructable]
+        [Constructible]
         public LifeSyphon()
             : base()
         {

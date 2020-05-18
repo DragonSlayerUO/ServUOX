@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Necro
 {
     public class DarkTidesHorn : HornOfRetreat
     {
-        [Constructable]
+        [Constructible]
         public DarkTidesHorn()
         {
             DestLoc = new Point3D(2103, 1319, -68);

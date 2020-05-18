@@ -12,18 +12,18 @@ namespace Server.Items
         private int m_Number;
         public int Number { get { return m_Number; } set { m_Number = value; } }
 
-        [Constructable]
+        [Constructible]
         public Note() : base(5357)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Note(string content) : base(5357)
         {
             m_String = content;
         }
 
-        [Constructable]
+        [Constructible]
         public Note(int number) : base(5357)
         {
             m_Number = number;

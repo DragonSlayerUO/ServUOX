@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class LeatherGorget : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeatherGorget()
             : base(0x13C7)
         {

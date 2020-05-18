@@ -5,7 +5,7 @@ namespace Server.Items
     public class ShroudOfDeceit : BoneChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ShroudOfDeceit()
         {
             Hue = 0x38F;

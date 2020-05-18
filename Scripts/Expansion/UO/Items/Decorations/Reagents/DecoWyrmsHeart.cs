@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoWyrmsHeart : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoWyrmsHeart()
             : base(0xF91)
         {

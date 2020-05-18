@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         public TierQuestInfo TierInfo => TierQuestInfo.Thepem;
 
-        [Constructable]
+        [Constructible]
         public Thepem()
             : base("Thepem", "the Apprentice")
         {

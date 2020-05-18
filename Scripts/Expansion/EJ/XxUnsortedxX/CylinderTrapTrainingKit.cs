@@ -11,7 +11,7 @@ namespace Server.Items
         public override int LabelNumber => 1159015;  // Cylinder Trap Training Kit
         public int Title => 1159017;  // A Cylinder Trap
 
-        [Constructable]
+        [Constructible]
         public CylinderTrapTrainingKit()
             : base(41875)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CandelabraStand : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public CandelabraStand()
             : base(0xA29)
         {

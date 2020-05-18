@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class ChargerOfTheFallen : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public ChargerOfTheFallen()
             : base(0x2D9C, 0x3E92, 0x3E92, DefaultEtherealHue)
         {

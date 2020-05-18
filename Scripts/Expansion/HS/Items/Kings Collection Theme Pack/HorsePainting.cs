@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class HorsePaintingAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public HorsePaintingAddon(DirectionType type)
         {
             switch (type)
@@ -54,7 +54,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public HorsePaintingDeed()
             : base()
         {

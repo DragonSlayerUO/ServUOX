@@ -11,7 +11,7 @@ namespace Server.Items
         public override double DefaultWeight => 10.0;
         public override string DefaultName => "A Gilded Statue from the Personal Collection of the King";
 
-        [Constructable]
+        [Constructible]
         public KingsGildedStatue()
             : base(0x139D)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class ClaspOfConcentration : SilverBracelet
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ClaspOfConcentration()
         {
             LootType = LootType.Blessed;

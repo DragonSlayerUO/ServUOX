@@ -8,7 +8,7 @@ namespace Server.Items
         public override int Lifespan => 1800;
         public override int LabelNumber => 1024111;  // gold key
 
-        [Constructable]
+        [Constructible]
         public GoldPuzzleKey() : base(4114)
         {
             Hue = 1174;

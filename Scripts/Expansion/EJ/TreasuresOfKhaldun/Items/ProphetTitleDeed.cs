@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1158683;  // Prophet
 
-        [Constructable]
+        [Constructible]
         public ProphetTitleDeed()
         {
         }

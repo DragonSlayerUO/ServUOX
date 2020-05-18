@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PileofInspectedGoldIngots : Item
     {
-        [Constructable]
+        [Constructible]
         public PileofInspectedGoldIngots()
             : base(0x1BEA)
         {

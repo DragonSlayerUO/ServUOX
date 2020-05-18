@@ -4,14 +4,14 @@ namespace Server.Items
 {
     public class MortarPestle : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public MortarPestle()
             : base(0xE9B)
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public MortarPestle(int uses)
             : base(uses, 0xE9B)
         {

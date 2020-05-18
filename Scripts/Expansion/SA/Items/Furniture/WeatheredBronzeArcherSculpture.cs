@@ -36,7 +36,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new WeatheredBronzeArcherDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public WeatheredBronzeArcherAddon()
         {
             AddComponent(new WeatheredBronzeArcherComponent(), 0, 0, 0);
@@ -65,7 +65,7 @@ namespace Server.Items
         public override BaseAddon Addon => new WeatheredBronzeArcherAddon();
         public override int LabelNumber => 1156884;  // weathered bronze archer sculpture
 
-        [Constructable]
+        [Constructible]
         public WeatheredBronzeArcherDeed()
         {
         }

@@ -9,7 +9,7 @@ namespace Server.Mobiles
 
         public Type CreatureType => typeof(CoconutCrab);
 
-        [Constructable]
+        [Constructible]
         public CoconutCrabStatue()
             : base(0xA335)
         {
@@ -44,13 +44,13 @@ namespace Server.Mobiles
     [CorpseName("a Coconut Crab corpse")]
     public class CoconutCrab : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public CoconutCrab()
             : this("Coconut Crab")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CoconutCrab(string name)
             : base(name, 1510, 16081, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

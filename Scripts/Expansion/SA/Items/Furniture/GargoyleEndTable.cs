@@ -5,7 +5,7 @@ namespace Server.Items
     [Furniture]
     public class GargoyleEndTable : Item
     {
-        [Constructable]
+        [Constructible]
         public GargoyleEndTable()
             : base(0x4041)
         {

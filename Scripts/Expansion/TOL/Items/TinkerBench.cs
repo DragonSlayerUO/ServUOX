@@ -23,7 +23,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public TinkerBenchAddon(DirectionType type, int uses)
         {
             switch (type)
@@ -91,13 +91,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public TinkerBenchDeed()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TinkerBenchDeed(int uses)
             : base(uses)
         {

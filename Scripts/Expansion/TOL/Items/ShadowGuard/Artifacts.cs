@@ -15,7 +15,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public AnonsBoots()
         {
             Hue = 1325;
@@ -50,7 +50,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public AnonsBootsGargoyle()
         {
             Hue = 1325;
@@ -82,7 +82,7 @@ namespace Server.Items
 
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public AnonsSpellbook()
         {
             LootType = LootType.Blessed;
@@ -121,7 +121,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public BalakaisShamanStaff()
         {
             SkillBonuses.SetValues(0, SkillName.Meditation, 10.0);
@@ -156,7 +156,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public BalakaisShamanStaffGargoyle() : base(WandEffect.None, 0, 0)
         {
             SkillBonuses.SetValues(0, SkillName.Meditation, 10.0);
@@ -191,7 +191,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public EnchantressCameo() : base(0x2F5B)
         {
             Hue = 1645;
@@ -231,7 +231,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public GrugorsShield()
         {
             SkillBonuses.SetValues(0, SkillName.Parry, 10.0);
@@ -275,7 +275,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public GrugorsShieldGargoyle()
         {
             SkillBonuses.SetValues(0, SkillName.Parry, 10.0);
@@ -320,7 +320,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public HalawasHuntingBow()
         {
             Slayer = SlayerName.Eodon;
@@ -359,7 +359,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public HalawasHuntingBowGargoyle()
         {
             Slayer = SlayerName.Eodon;
@@ -400,7 +400,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public HawkwindsRobe() : base(0x7816, 0)
         {
             Attributes.RegenMana = 2;
@@ -436,7 +436,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public JumusSacredHide()
         {
             Attributes.SpellDamage = 5;
@@ -475,7 +475,7 @@ namespace Server.Items
 
         public override int FireResistance => 5;
 
-        [Constructable]
+        [Constructible]
         public JumusSacredHideGargoyle()
         {
             Attributes.SpellDamage = 5;
@@ -508,7 +508,7 @@ namespace Server.Items
 
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public JuonarsGrimoire()
         {
             Hue = 2500;
@@ -549,7 +549,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public LereisHuntingSpear()
         {
             WeaponAttributes.HitCurse = 10;
@@ -591,7 +591,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public LereisHuntingSpearGargoyle()
         {
             WeaponAttributes.HitCurse = 10;
@@ -634,7 +634,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public MinaxsSandles()
         {
             Hue = 1645;
@@ -678,7 +678,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public MinaxsSandlesGargoyle()
         {
             Hue = 1645;
@@ -723,7 +723,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public OzymandiasObi()
         {
             Hue = 2105;
@@ -758,7 +758,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public OzymandiasObiGargoyle()
         {
             Hue = 2105;
@@ -794,7 +794,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public ShantysWaders()
         {
             Attributes.AttackChance = 10;
@@ -827,7 +827,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public ShantysWadersGargoyle()
         {
             Attributes.AttackChance = 10;
@@ -857,7 +857,7 @@ namespace Server.Items
 
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public TotemOfTheTribe() : base(0x2F5A)
         {
             SAAbsorptionAttributes.EaterDamage = 5;
@@ -890,7 +890,7 @@ namespace Server.Items
 
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public WamapsBoneEarrings()
         {
             Hue = 2955;
@@ -943,7 +943,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public WamapsBoneEarringsGargoyle()
         {
             Hue = 2955;
@@ -991,7 +991,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156320;  // An Unstable Time Rift
 
-        [Constructable]
+        [Constructible]
         public UnstableTimeRift()
             : base(14068)
         {
@@ -1031,7 +1031,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public MocapotlsObsidianSword()
         {
             WeaponAttributes.HitHarm = 50;

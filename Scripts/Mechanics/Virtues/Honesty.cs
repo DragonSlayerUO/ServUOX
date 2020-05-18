@@ -422,7 +422,7 @@ namespace Server.Services.Virtues
     {
         public override int LabelNumber => 1151529;  // lost and found box
 
-        [Constructable]
+        [Constructible]
         public HonestyChest()
             : base(0x9A9)
         {

@@ -13,13 +13,13 @@ namespace Server.Mobiles
         private List<Mobile> m_Friends = new List<Mobile>();
         private InternalTimer m_FriendsTimer;
 
-        [Constructable]
+        [Constructible]
         public Raptor()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Raptor(bool isFriend)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.175, 0.350)
         {

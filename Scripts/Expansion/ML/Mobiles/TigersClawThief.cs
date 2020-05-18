@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a black order thief corpse")]
     public class TigersClawThief : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TigersClawThief()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

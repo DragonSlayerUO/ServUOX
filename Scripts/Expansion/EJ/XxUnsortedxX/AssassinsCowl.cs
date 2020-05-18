@@ -15,13 +15,13 @@ namespace Server.Items
         public override int InitMinHits => 40;
         public override int InitMaxHits => 60;
 
-        [Constructable]
+        [Constructible]
         public AssassinsCowl()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AssassinsCowl(int hue)
             : base(0xA410, hue)
         {

@@ -10,12 +10,12 @@ namespace Server.Items
         public override int LabelNumber => 1152727;  // Blight of the Tundra
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public BlightOfTheTundra() : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BlightOfTheTundra(bool antique)
         {
             Attributes.BonusStr = 5;
@@ -64,12 +64,12 @@ namespace Server.Items
         public override int LabelNumber => 1152727;  // Blight of the Tundra
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishBlightOfTheTundra() : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishBlightOfTheTundra(bool antique)
         {
             Attributes.BonusStr = 5;

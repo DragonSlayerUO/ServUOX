@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1126020;  // mace belt
 
-        [Constructable]
+        [Constructible]
         public MaceBelt()
             : base(0xA40C)
         {

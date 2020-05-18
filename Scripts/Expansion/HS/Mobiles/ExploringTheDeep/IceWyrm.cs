@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         public static List<IceWyrm> Instances { get; set; }
 
-        [Constructable]
+        [Constructible]
         public IceWyrm()
             : base()
         {

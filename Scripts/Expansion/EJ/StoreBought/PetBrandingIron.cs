@@ -19,13 +19,13 @@ namespace Server.Items
 
         public override Type[] Engraves => new Type[] { typeof(BaseCreature) };
 
-        [Constructable]
+        [Constructible]
         public PetBrandingIron()
             : this(30)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PetBrandingIron(int charges)
             : base(0x9E87, charges)
         {

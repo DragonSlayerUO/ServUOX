@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1152163;  // stinking cauldron
 
-        [Constructable]
+        [Constructible]
         public StinkingCauldron()
             : base(0x142A)
         {

@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x13E3, 0x13E4)]
     public class SmithHammer : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public SmithHammer()
             : base(0x13E3)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SmithHammer(int uses)
             : base(uses, 0x13E3)
         {
@@ -40,7 +40,7 @@ namespace Server.Items
 
     public class SmithyHammer : BaseBashing, ITool
     {
-        [Constructable]
+        [Constructible]
         public SmithyHammer()
             : base(0x13E3)
         {

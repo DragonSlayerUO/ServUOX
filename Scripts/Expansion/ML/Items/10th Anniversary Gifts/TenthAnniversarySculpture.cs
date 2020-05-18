@@ -21,7 +21,7 @@ namespace Server.Items
 
         private static readonly int MaxLuckBonus = 1000;
 
-        [Constructable]
+        [Constructible]
         public TenthAnniversarySculpture() : base(15283)
         {
             Weight = 1.0;

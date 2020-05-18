@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.DeathWatchBeetle")]
     public class DeathwatchBeetle : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DeathwatchBeetle()
             : base(AIType.AI_Melee, Core.ML ? FightMode.Aggressor : FightMode.Closest, 10, 1, 0.2, 0.4)
         {

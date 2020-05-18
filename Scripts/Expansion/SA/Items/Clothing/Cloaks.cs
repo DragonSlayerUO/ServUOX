@@ -7,13 +7,13 @@ namespace Server.Items
     [Flipable(0x45A4, 0x45A5)]
     public class GargishClothWingArmor : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public GargishClothWingArmor()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothWingArmor(int hue)
             : base(0x45A4, Layer.Cloak, hue)
         {
@@ -48,13 +48,13 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public GargishFancyRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishFancyRobe(int hue)
             : base(0x4002, Layer.OuterTorso, hue)
         {
@@ -87,13 +87,13 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public GargishRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishRobe(int hue)
             : base(0x4000, Layer.OuterTorso, hue)
         {

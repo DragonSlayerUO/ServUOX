@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SilverBeadNecklace : BaseNecklace
     {
-        [Constructable]
+        [Constructible]
         public SilverBeadNecklace()
             : base(0x1F05)
         {

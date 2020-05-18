@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class RunebookDyeTub : DyeTub, Engines.VeteranRewards.IRewardItem
     {
-        [Constructable]
+        [Constructible]
         public RunebookDyeTub()
         {
             LootType = LootType.Blessed;

@@ -5,7 +5,7 @@ namespace Server.Items
     public class Frostbringer : Bow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Frostbringer()
         {
             Hue = 0x4F2;

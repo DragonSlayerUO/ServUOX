@@ -8,7 +8,7 @@ namespace Server.Items
     {
         private static readonly Dictionary<Mobile, DateTime> m_Table = new Dictionary<Mobile, DateTime>();
 
-        [Constructable]
+        [Constructible]
         public UnderworldPuzzleBox()
         {
             Movable = false;

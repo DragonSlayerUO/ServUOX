@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Chessboard : BaseBoard
     {
-        [Constructable]
+        [Constructible]
         public Chessboard()
             : base(0xFA6)
         {

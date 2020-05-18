@@ -215,19 +215,19 @@ namespace Server.Items
 
         public override bool ForceShowProperties => false;
 
-        [Constructable]
+        [Constructible]
         public DamageableItem(int startID)
             : this(startID, startID, -1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DamageableItem(int startID, int halfID)
             : this(startID, halfID, -1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DamageableItem(int startID, int halfID, int destroyID = -1)
             : base(startID)
         {
@@ -638,7 +638,7 @@ namespace Server.Items
 
     public class TestDamageableItem : DamageableItem
     {
-        [Constructable]
+        [Constructible]
         public TestDamageableItem(int itemid)
             : base(itemid, itemid)
         {

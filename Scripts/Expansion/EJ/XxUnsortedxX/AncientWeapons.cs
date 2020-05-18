@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1125811;  // ancient weapon
 
-        [Constructable]
+        [Constructible]
         public AncientWeapon1()
             : base(0xA33B)
         {
@@ -40,7 +40,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1125811;  // ancient weapon
 
-        [Constructable]
+        [Constructible]
         public AncientWeapon2()
             : base(0xA33D)
         {
@@ -72,7 +72,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1125811;  // ancient weapon
 
-        [Constructable]
+        [Constructible]
         public AncientWeapon3()
             : base(0xA33F)
         {

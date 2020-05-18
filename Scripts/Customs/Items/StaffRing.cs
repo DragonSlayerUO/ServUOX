@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StaffRing : BaseRing
     {
-        [Constructable]
+        [Constructible]
         public StaffRing()
             : base(0x108a)
         {

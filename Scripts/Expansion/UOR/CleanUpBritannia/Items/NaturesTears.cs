@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class NaturesTears : BaseInstrument
     {
-        [Constructable]
+        [Constructible]
         public NaturesTears()
         {
             Hue = 2075;

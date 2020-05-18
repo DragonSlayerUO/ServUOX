@@ -22,19 +22,19 @@ namespace Server.Items
         private double m_SkillLevel;
         private Mobile m_Crafter;
 
-        [Constructable]
+        [Constructible]
         public RepairDeed()
             : this(RepairSkillType.Smithing, 100.0, null, true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RepairDeed(RepairSkillType skill, double level)
             : this(skill, level, null, true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RepairDeed(RepairSkillType skill, double level, bool normalizeLevel)
             : this(skill, level, null, normalizeLevel)
         {

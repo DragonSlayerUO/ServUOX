@@ -26,7 +26,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1109633;  // Tiger Collar
 
-        [Constructable]
+        [Constructible]
         public TigerPeltCollar()
             : base(0x7829)
         {

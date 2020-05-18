@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class FisherGuildmaster : BaseGuildmaster
     {
-        [Constructable]
+        [Constructible]
         public FisherGuildmaster()
             : base("fisher")
         {

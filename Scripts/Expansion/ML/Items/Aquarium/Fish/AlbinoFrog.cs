@@ -3,7 +3,7 @@ namespace Server.Items
 {
     public class AlbinoFrog : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public AlbinoFrog()
             : base(0x3B0D)
         {

@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a corpse of Twaulo")]
     public class Twaulo : BaseChampion
     {
-        [Constructable]
+        [Constructible]
         public Twaulo()
             : base(AIType.AI_Melee)
         {

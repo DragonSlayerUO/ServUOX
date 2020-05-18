@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an butcher corpse")]
     public class TheButcher : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TheButcher()
             : base(AIType.AI_Necro, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

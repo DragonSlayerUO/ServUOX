@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1018263;  // horse
 
-        [Constructable]
+        [Constructible]
         public HorseStatue()
             : base(MonsterStatuetteType.Horse)
         {

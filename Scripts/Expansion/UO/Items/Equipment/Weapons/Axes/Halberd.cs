@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x143E, 0x143F)]
     public class Halberd : BasePoleArm
     {
-        [Constructable]
+        [Constructible]
         public Halberd()
             : base(0x143E)
         {

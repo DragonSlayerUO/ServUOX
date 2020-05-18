@@ -32,7 +32,7 @@ namespace Server.Items
     public class BloodyPentagramAddon : BaseAddon, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public BloodyPentagramAddon()
             : base()
         {
@@ -123,7 +123,7 @@ namespace Server.Items
     public class BloodyPentagramDeed : BaseAddonDeed, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public BloodyPentagramDeed()
             : base()
         {

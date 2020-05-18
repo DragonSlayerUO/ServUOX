@@ -5,7 +5,7 @@ namespace Server.Items
     public class DjinnisRing : SilverRing
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DjinnisRing()
         {
             Attributes.BonusInt = 5;

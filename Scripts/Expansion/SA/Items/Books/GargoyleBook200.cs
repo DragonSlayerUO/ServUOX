@@ -4,19 +4,19 @@ namespace Server.Items
 {
     public class GargoyleBook200 : BaseBook
     {
-        [Constructable]
+        [Constructible]
         public GargoyleBook200()
             : base(0x42B8, 200, true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargoyleBook200(int pageCount, bool writable)
             : base(0x42B8, pageCount, writable)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargoyleBook200(string title, string author, int pageCount, bool writable)
             : base(0x42B8, title, author, pageCount, writable)
         {

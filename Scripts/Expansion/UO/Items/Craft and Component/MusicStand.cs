@@ -4,7 +4,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.TallMusicStand")]
     public class TallMusicStandLeft : Item
     {
-        [Constructable]
+        [Constructible]
         public TallMusicStandLeft()
             : base(0xEBB)
         {
@@ -32,7 +32,7 @@ namespace Server.Items
     [Furniture]
     public class TallMusicStandRight : Item
     {
-        [Constructable]
+        [Constructible]
         public TallMusicStandRight()
             : base(0xEBC)
         {
@@ -61,7 +61,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.ShortMusicStand")]
     public class ShortMusicStandLeft : Item
     {
-        [Constructable]
+        [Constructible]
         public ShortMusicStandLeft()
             : base(0xEB6)
         {
@@ -89,7 +89,7 @@ namespace Server.Items
     [Furniture]
     public class ShortMusicStandRight : Item
     {
-        [Constructable]
+        [Constructible]
         public ShortMusicStandRight()
             : base(0xEB8)
         {

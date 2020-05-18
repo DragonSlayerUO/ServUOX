@@ -5,7 +5,7 @@ namespace Server.Items
     public class RuneCarvingKnife : AssassinSpike
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RuneCarvingKnife()
         {
             Hue = 0x48D;

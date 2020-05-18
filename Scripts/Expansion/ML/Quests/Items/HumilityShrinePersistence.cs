@@ -28,7 +28,7 @@ namespace Server.Engines.Quests
         private static HumilityShrinePersistence m_TramInstance;
         private static HumilityShrinePersistence m_FelInstance;
         */
-        [Constructable]
+        [Constructible]
         public HumilityShrinePersistence() : base(219)
         {
             Movable = false;

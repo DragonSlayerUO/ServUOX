@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class UnderworldTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public UnderworldTele()
         {
         }

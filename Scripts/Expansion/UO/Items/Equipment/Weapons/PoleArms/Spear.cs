@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF62, 0xF63)]
     public class Spear : BaseSpear
     {
-        [Constructable]
+        [Constructible]
         public Spear()
             : base(0xF62)
         {

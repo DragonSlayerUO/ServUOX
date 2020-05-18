@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         public override int Greeting => 1075749;
 
-        [Constructable]
+        [Constructible]
         public Nelson()
             : base("Nelson", "the Shepherd")
         {

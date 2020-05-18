@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Harp : BaseInstrument
     {
-        [Constructable]
+        [Constructible]
         public Harp()
             : base(0xEB1, 0x43, 0x44)
         {

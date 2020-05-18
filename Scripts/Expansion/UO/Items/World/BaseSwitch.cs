@@ -11,7 +11,7 @@ namespace Server.Items
         private int m_LocMessageB;
         private bool m_Used;
         private bool m_Working;
-        [Constructable]
+        [Constructible]
         public BaseSwitch(int TurnOff, int TurnOn, int LocMessageA, int LocMessageB, bool Working)
             : base(TurnOff)
         {
@@ -24,7 +24,7 @@ namespace Server.Items
             m_Working = Working;
         }
 
-        [Constructable]
+        [Constructible]
         public BaseSwitch(int TurnOff, int TurnOn)
             : base(TurnOff)
         {

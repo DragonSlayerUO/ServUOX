@@ -81,7 +81,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public FermentationBarrel()
             : base(0x9E36)
         {
@@ -389,13 +389,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile Maker { get { return _Maker; } set { _Maker = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public BottleOfWine()
             : this(FruitType.Grape, null, null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BottleOfWine(FruitType type, string vintage, Mobile maker)
             : base(BeverageType.Wine)
         {

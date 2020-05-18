@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1156997;  // Automaton Actuator
 
-        [Constructable]
+        [Constructible]
         public AutomatonActuator()
             : base(0x9CE9)
         {

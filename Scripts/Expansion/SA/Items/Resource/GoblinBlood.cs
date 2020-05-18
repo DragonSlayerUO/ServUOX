@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class GoblinBlood : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public GoblinBlood()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GoblinBlood(int amount)
             : base(0x572C)
         {

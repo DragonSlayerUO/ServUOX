@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("an air elemental corpse")]
     public class SummonedAirElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SummonedAirElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -70,7 +70,7 @@ namespace Server.Mobiles
     [CorpseName("a daemon corpse")]
     public class SummonedDaemon : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SummonedDaemon()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -130,7 +130,7 @@ namespace Server.Mobiles
     [CorpseName("an earth elemental corpse")]
     public class SummonedEarthElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SummonedEarthElemental()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -186,7 +186,7 @@ namespace Server.Mobiles
     [CorpseName("a fire elemental corpse")]
     public class SummonedFireElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SummonedFireElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -245,7 +245,7 @@ namespace Server.Mobiles
     [CorpseName("a water elemental corpse")]
     public class SummonedWaterElemental : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SummonedWaterElemental()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

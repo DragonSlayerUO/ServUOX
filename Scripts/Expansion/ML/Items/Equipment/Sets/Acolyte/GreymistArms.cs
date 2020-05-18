@@ -5,7 +5,7 @@ namespace Server.Items
     public class GreymistArms : LeatherArms
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GreymistArms()
             : base()
         {

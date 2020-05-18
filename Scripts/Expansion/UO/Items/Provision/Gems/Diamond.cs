@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Diamond : Item, IGem
     {
-        [Constructable]
+        [Constructible]
         public Diamond()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Diamond(int amount)
             : base(0xF26)
         {

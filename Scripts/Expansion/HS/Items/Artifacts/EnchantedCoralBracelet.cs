@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116624;
 
-        [Constructable]
+        [Constructible]
         public EnchantedCoralBracelet()
         {
             Hue = 1548;

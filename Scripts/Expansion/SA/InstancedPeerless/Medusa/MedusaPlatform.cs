@@ -10,7 +10,7 @@ namespace Server.Engines.InstancedPeerless
         public override Type KeyType => typeof(RareSerpentEgg);
         public override Type BossType => typeof(Medusa);
 
-        [Constructable]
+        [Constructible]
         public MedusaPlatform()
         {
             ExitLocation = new Point3D(817, 756, 50);

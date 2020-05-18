@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154428;  // Wire Spool
 
-        [Constructable]
+        [Constructible]
         public WireSpool()
             : base(0x4CDB)
         {

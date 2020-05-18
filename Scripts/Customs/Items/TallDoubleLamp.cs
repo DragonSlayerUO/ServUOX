@@ -10,7 +10,7 @@ namespace Server.Items
         public int NorthID => Burning ? 0x4C57 : 0x4C56;
         public int WestID => Burning ? 0x4C59 : 0x4C58;
 
-        [Constructable]
+        [Constructible]
         public TallDoubleLamp()
             : base(0x4C56)
         {

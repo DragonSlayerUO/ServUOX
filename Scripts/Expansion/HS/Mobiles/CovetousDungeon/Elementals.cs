@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an earth elemental corpse")]
     public class CovetousEarthElemental : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public CovetousEarthElemental() : base(AIType.AI_Melee)
         {
             Name = "an earth elemental";
@@ -14,7 +14,7 @@ namespace Server.Mobiles
             BaseSoundID = 268;
         }
 
-        [Constructable]
+        [Constructible]
         public CovetousEarthElemental(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "an earth elemental";
@@ -42,7 +42,7 @@ namespace Server.Mobiles
     [CorpseName("a water elemental corpse")]
     public class CovetousWaterElemental : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public CovetousWaterElemental() : base(AIType.AI_Mage)
         {
             Name = "a water elemental";
@@ -50,7 +50,7 @@ namespace Server.Mobiles
             BaseSoundID = 278;
         }
 
-        [Constructable]
+        [Constructible]
         public CovetousWaterElemental(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "a water elemental";
@@ -78,7 +78,7 @@ namespace Server.Mobiles
     [CorpseName("a vortex elemental corpse")]
     public class VortexElemental : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public VortexElemental() : base(AIType.AI_Melee)
         {
             Name = "a vortex elemental";
@@ -87,7 +87,7 @@ namespace Server.Mobiles
             BaseSoundID = 655;
         }
 
-        [Constructable]
+        [Constructible]
         public VortexElemental(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "a vortex elemental";
@@ -116,7 +116,7 @@ namespace Server.Mobiles
     [CorpseName("a searing elemental corpse")]
     public class SearingElemental : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public SearingElemental() : base(AIType.AI_Mage)
         {
             Name = "a searing elemental";
@@ -124,7 +124,7 @@ namespace Server.Mobiles
             BaseSoundID = 838;
         }
 
-        [Constructable]
+        [Constructible]
         public SearingElemental(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a searing elemental";
@@ -152,7 +152,7 @@ namespace Server.Mobiles
     [CorpseName("a venom elemental corpse")]
     public class VenomElemental : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public VenomElemental() : base(AIType.AI_Mage)
         {
             Name = "a venom elemental";
@@ -160,7 +160,7 @@ namespace Server.Mobiles
             BaseSoundID = 263;
         }
 
-        [Constructable]
+        [Constructible]
         public VenomElemental(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a venom elemental";

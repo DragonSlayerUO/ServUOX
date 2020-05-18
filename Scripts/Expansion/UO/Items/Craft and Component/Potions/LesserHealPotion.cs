@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class LesserHealPotion : BaseHealPotion
     {
-        [Constructable]
+        [Constructible]
         public LesserHealPotion()
             : base(PotionEffect.HealLesser)
         {

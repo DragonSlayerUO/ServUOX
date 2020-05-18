@@ -48,7 +48,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1125284;
 
-        [Constructable]
+        [Constructible]
         public PersonalTelescope()
             : base(0xA12C)
         {

@@ -44,12 +44,12 @@ namespace Server.Items
             InvalidateProperties();
         }
 
-        [Constructable]
+        [Constructible]
         public HuntingDisplayTrophy() : this(HuntType.GrizzlyBear)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HuntingDisplayTrophy(HuntType type)
         {
             HuntType = type;

@@ -12,7 +12,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1123367;
 
-        [Constructable]
+        [Constructible]
         public HythlothBanner()
             : base(39343)
         {

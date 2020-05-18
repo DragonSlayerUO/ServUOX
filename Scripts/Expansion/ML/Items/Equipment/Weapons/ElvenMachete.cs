@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2D35, 0x2D29)]
     public class ElvenMachete : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public ElvenMachete()
             : base(0x2D35)
         {

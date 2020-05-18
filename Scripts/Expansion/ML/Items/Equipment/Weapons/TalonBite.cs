@@ -5,7 +5,7 @@ namespace Server.Items
     public class TalonBite : OrnateAxe
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TalonBite()
         {
             Hue = 0x47E;

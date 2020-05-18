@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1094945;  // Life Shield Lotion
 
-        [Constructable]
+        [Constructible]
         public LifeShieldLotion()
             : base(0xEFC)
         {

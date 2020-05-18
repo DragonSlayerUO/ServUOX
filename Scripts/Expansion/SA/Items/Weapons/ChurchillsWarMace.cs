@@ -5,7 +5,7 @@ namespace Server.Items
     public class ChurchillsWarMace : WarMace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ChurchillsWarMace()
         {
             LootType = LootType.Blessed;

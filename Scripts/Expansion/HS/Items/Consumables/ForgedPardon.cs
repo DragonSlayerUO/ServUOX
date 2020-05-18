@@ -13,7 +13,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1116234;
 
-        [Constructable]
+        [Constructible]
         public ForgedPardon()
             : base(10289)
         {

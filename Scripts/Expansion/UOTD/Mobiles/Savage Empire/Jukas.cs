@@ -9,7 +9,7 @@ namespace Server.Mobiles
     {
         public override double HealChance => 1.0;
 
-        [Constructable]
+        [Constructible]
         public JukaLord()
             : base(AIType.AI_Archer, FightMode.Closest, 10, 3, 0.2, 0.4)
         {
@@ -117,7 +117,7 @@ namespace Server.Mobiles
     {
         private DateTime m_NextAbilityTime;
 
-        [Constructable]
+        [Constructible]
         public JukaMage()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -311,7 +311,7 @@ namespace Server.Mobiles
     [CorpseName("a juka corpse")]
     public class JukaWarrior : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public JukaWarrior()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

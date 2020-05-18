@@ -72,13 +72,13 @@ namespace Server.Items
 
         public override int LabelNumber => (1113031 + (int)m_Type);
 
-        [Constructable]
+        [Constructible]
         public ModifiedClockworkAssembly()
             : this(ClockworkType.Wolf)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ModifiedClockworkAssembly(ClockworkType type)
             : base(0x1EA8)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CrystallineFragments : Item
     {
-        [Constructable]
+        [Constructible]
         public CrystallineFragments()
             : base(0x223B)
         {

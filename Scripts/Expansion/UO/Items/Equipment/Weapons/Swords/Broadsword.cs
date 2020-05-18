@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF5E, 0xF5F)]
     public class Broadsword : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Broadsword()
             : base(0xF5E)
         {

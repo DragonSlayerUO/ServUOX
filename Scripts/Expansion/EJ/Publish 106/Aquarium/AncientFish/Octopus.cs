@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Octopus : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Octopus()
             : base(0xA384)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class NoxRangersHeavyCrossbow : HeavyCrossbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public NoxRangersHeavyCrossbow()
         {
             Hue = 0x58C;

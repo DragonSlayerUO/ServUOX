@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SilverEarrings : BaseEarrings
     {
-        [Constructable]
+        [Constructible]
         public SilverEarrings()
             : base(0x1F07)
         {

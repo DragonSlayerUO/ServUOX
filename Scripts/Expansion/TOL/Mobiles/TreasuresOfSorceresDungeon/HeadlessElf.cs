@@ -8,7 +8,7 @@ namespace Server.Engines.SorcerersDungeon
     [CorpseName("the corpse of a headless elf")]
     public class HeadlessElf : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public HeadlessElf()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

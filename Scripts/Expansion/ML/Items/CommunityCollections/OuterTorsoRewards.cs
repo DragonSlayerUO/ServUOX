@@ -6,13 +6,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
-        [Constructable]
+        [Constructible]
         public ZooMemberSkirt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZooMemberSkirt(int hue)
             : base(hue)
         {
@@ -40,13 +40,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
-        [Constructable]
+        [Constructible]
         public ZooMemberBodySash()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZooMemberBodySash(int hue)
             : base(hue)
         {
@@ -74,13 +74,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
-        [Constructable]
+        [Constructible]
         public ZooMemberRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZooMemberRobe(int hue)
             : base(hue)
         {
@@ -108,13 +108,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073221; // Britannia Royal Zoo Member
 
-        [Constructable]
+        [Constructible]
         public ZooMemberCloak()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZooMemberCloak(int hue)
             : base(hue)
         {
@@ -142,13 +142,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073346; // Friends of the Library Sash
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendBodySash()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendBodySash(int hue)
             : base(hue)
         {
@@ -176,13 +176,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073351; // Friends of the Library Doublet
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendDoublet()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendDoublet(int hue)
             : base(hue)
         {
@@ -210,13 +210,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073348; // Friends of the Library Surcoat
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendSurcoat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendSurcoat(int hue)
             : base(hue)
         {
@@ -244,13 +244,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073350; // Friends of the Library Cloak
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendCloak()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LibraryFriendCloak(int hue)
             : base(hue)
         {
@@ -278,13 +278,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073253;// Adranath - Museum of Vesper Replica
 
-        [Constructable]
+        [Constructible]
         public Adranath()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Adranath(int hue)
             : base(hue)
         {
@@ -314,13 +314,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073250;// Odric's Robe - Museum of Vesper Replica
 
-        [Constructable]
+        [Constructible]
         public OdricsRobe()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public OdricsRobe(int hue)
             : base(hue)
         {
@@ -350,13 +350,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073252;// Baron Lenshire's Cloak - Museum of Vesper Replica
 
-        [Constructable]
+        [Constructible]
         public BaronLenshiresCloak()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BaronLenshiresCloak(int hue)
             : base(hue)
         {

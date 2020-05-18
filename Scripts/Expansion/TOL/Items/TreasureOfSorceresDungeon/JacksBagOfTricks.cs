@@ -18,7 +18,7 @@ namespace Server.Items
             set { _NextUse = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public JacksBagOfTricks()
             : base(0x9F85)
         {
@@ -95,7 +95,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157634;  // Rancid Reindeer Meat
 
-        [Constructable]
+        [Constructible]
         public RancidReindeerMeat()
             : base(0x1E90)
         {
@@ -133,7 +133,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157636;  // Glass Candy Cane
 
-        [Constructable]
+        [Constructible]
         public GlassyCandyCane()
             : base(0x9DC3)
         {
@@ -163,7 +163,7 @@ namespace Server.Items
     {
         private string _Name;
 
-        [Constructable]
+        [Constructible]
         public NamedSeveredElfEars()
             : base(0x312D)
         {
@@ -215,7 +215,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157639;  // Suspicious Gift Box
 
-        [Constructable]
+        [Constructible]
         public SuspiciousGiftBox()
             : base(0x232A)
         {
@@ -253,7 +253,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157641;  // Insulting Doll
 
-        [Constructable]
+        [Constructible]
         public InsultingDoll()
             : base(0x48E2)
         {
@@ -290,7 +290,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157647;  // Spiked Egg Nog
 
-        [Constructable]
+        [Constructible]
         public SpikedEggnog()
             : base(0x142A)
         {

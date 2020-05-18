@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class GypsyAnimalTrainer : AnimalTrainer
     {
-        [Constructable]
+        [Constructible]
         public GypsyAnimalTrainer()
         {
             SetSkill(SkillName.Begging, 64.0, 100.0);

@@ -5,13 +5,13 @@ namespace Server.Items
 {
     public class ToggleItem : Item
     {
-        [Constructable]
+        [Constructible]
         public ToggleItem(int inactiveItemID, int activeItemID)
             : this(inactiveItemID, activeItemID, false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ToggleItem(int inactiveItemID, int activeItemID, bool playersCanToggle)
             : base(inactiveItemID)
         {

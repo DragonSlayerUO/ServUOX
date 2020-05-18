@@ -11,7 +11,7 @@ namespace Server.Items
 
         public int MadeID { get; set; }
 
-        [Constructable]
+        [Constructible]
         public HolidayWreath()
             : base(0xA12E)
         {

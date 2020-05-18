@@ -5,7 +5,7 @@ namespace Server.Items
     public class ArtifactVase : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ArtifactVase()
             : base(0x0B48)
         {

@@ -24,13 +24,13 @@ namespace Server.Items
             set { }
         }
 
-        [Constructable]
+        [Constructible]
         public PoppiesDust()
             : this(8)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PoppiesDust(int charges)
             : base(0xC4D)
         {

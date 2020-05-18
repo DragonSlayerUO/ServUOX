@@ -5,7 +5,7 @@ namespace Server.Items
     public class CandelabraOfSouls : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CandelabraOfSouls()
             : base(0xB26)
         {

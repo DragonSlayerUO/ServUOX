@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a black order master corpse")]
     public class TigersClawMaster : TigersClawThief
     {
-        [Constructable]
+        [Constructible]
         public TigersClawMaster()
             : base()
         {

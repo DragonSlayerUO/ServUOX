@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125817;  // skull longsword
 
-        [Constructable]
+        [Constructible]
         public SkullLongsword()
         {
             ItemID = 41793;
@@ -42,7 +42,7 @@ namespace Server.Items
         public override Race RequiredRace => Race.Gargoyle;
         public override bool CanBeWornByGargoyles => true;
 
-        [Constructable]
+        [Constructible]
         public GargishSkullLongsword()
         {
             ItemID = 41797;

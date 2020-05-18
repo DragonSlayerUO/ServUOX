@@ -7,13 +7,13 @@ namespace Server.Items
     public class RewardPottedCactus : Item, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public RewardPottedCactus()
             : this(Utility.RandomMinMax(0x1E0F, 0x1E14))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RewardPottedCactus(int itemID)
             : base(itemID)
         {
@@ -63,7 +63,7 @@ namespace Server.Items
     public class PottedCactusDeed : Item, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public PottedCactusDeed()
             : base(0x14F0)
         {

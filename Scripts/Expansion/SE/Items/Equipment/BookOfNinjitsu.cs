@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class BookOfNinjitsu : Spellbook
     {
-        [Constructable]
+        [Constructible]
         public BookOfNinjitsu()
             : this((ulong)0xFF)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BookOfNinjitsu(ulong content)
             : base(content, 0x23A0)
         {

@@ -19,7 +19,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1094944;  // Stone Skin Lotion
 
-        [Constructable]
+        [Constructible]
         public StoneSkinLotion()
             : base(0xEFD)
         {

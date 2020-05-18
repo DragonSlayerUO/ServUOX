@@ -4,7 +4,7 @@ using Server.Items;
 
 public class WinnowingBasket : BaseContainer
 {
-    [Constructable]
+    [Constructible]
     public WinnowingBasket()
         : base(0x1882)
     {

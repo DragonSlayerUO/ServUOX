@@ -11,12 +11,12 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string Account { get; set; }
 
-        [Constructable]
+        [Constructible]
         public HABPromotionalToken()
            : this(null)
         { }
 
-        [Constructable]
+        [Constructible]
         public HABPromotionalToken(string account)
             : base(0x2AAA)
         {

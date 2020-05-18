@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a myrmidex corpse")]
     public class MyrmidexWarrior : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public MyrmidexWarrior()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, .2, .4)
         {

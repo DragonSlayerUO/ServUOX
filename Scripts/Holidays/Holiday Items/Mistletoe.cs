@@ -8,13 +8,13 @@ namespace Server.Items
 {
     public class MistletoeAddon : Item, IDyable, IAddon
     {
-        [Constructable]
+        [Constructible]
         public MistletoeAddon()
             : this(Utility.RandomDyedHue())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MistletoeAddon(int hue)
             : base(0x2375)
         {
@@ -172,13 +172,13 @@ namespace Server.Items
     [Flipable(0x14F0, 0x14EF)]
     public class MistletoeDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public MistletoeDeed()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MistletoeDeed(int hue)
             : base(0x14F0)
         {

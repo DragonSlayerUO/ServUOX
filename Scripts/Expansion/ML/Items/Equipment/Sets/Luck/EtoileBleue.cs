@@ -10,7 +10,7 @@ namespace Server.Items
         public override SetItem SetID => SetItem.Luck;
         public override int Pieces => 2;
 
-        [Constructable]
+        [Constructible]
         public EtoileBleue() : base()
         {
             Weight = 1.0;

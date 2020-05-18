@@ -20,7 +20,7 @@ namespace Server.Items
         public override bool Public => true;
         public override bool ForceShowProperties => true;
 
-        [Constructable]
+        [Constructible]
         public CityMessageBoard(City city, int id) : base(id)
         {
             Movable = false;

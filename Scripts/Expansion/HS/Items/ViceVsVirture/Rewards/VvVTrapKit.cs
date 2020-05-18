@@ -21,7 +21,7 @@ namespace Server.Engines.VvV
 
         private static Dictionary<Mobile, DateTime> _Cooldown = new Dictionary<Mobile, DateTime>();
 
-        [Constructable]
+        [Constructible]
         public VvVTrapKit(VvVTrapType type) : base(7866)
         {
             TrapType = type;

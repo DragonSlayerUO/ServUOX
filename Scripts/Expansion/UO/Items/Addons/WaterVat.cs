@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class WaterVatEast : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public WaterVatEast()
         {
             AddComponent(new AddonComponent(0x1558), 0, 0, 0);
@@ -42,7 +42,7 @@ namespace Server.Items
 
     public class WaterVatSouth : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public WaterVatSouth()
         {
             AddComponent(new AddonComponent(0x1558), 0, 0, 0);

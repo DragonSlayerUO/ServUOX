@@ -8,7 +8,7 @@ namespace Server.Items
             "Shrine of Singularity Mantra", "Naxatillor",
             new BookPageInfo(
                 "unorus"));
-        [Constructable]
+        [Constructible]
         public ShrineMantra()
             : base(false)
         {

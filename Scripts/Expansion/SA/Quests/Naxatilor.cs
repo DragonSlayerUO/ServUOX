@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Naxatilor : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Naxatilor()
             : base("Naxatilor", "the Seer")
         {

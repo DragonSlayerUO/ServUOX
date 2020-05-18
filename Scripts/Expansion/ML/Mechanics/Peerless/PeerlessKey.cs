@@ -20,7 +20,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public PeerlessKey(int itemID)
             : base(itemID)
         {

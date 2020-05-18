@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(BecomingOneWithTheShadowsQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Chiyo()
             : base("Chiyo", "the Hiding Instructor")
         {

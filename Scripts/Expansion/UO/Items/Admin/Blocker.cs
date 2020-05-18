@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Blocker : Item
     {
-        [Constructable]
+        [Constructible]
         public Blocker()
             : base(0x21A4)
         {

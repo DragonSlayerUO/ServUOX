@@ -12,7 +12,7 @@ namespace Server.Mobiles
         public override bool AttacksFocus => true;
         private DateTime _NextMastery;
 
-        [Constructable]
+        [Constructible]
         public Anchisaur()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .2, .4)
         {

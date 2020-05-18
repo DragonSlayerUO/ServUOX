@@ -22,7 +22,7 @@ namespace Server.Items
 
         public bool CanDecipher => false;
 
-        [Constructable]
+        [Constructible]
         public CircuitTrapTrainingKit()
             : base(41875)
         {

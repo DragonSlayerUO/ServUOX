@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("the remains of an enraged colossus")]
     public class EnragedColossus : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public EnragedColossus()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.4, 0.5)
         {

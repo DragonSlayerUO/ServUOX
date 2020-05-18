@@ -7,7 +7,7 @@ namespace Server.Mobiles
     {
         public override double HealChance => 1.0;
 
-        [Constructable]
+        [Constructible]
         public Troglodyte()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)// NEED TO CHECK
         {

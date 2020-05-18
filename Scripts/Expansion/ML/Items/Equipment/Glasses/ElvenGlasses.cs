@@ -10,7 +10,7 @@ namespace Server.Items
 
         public CraftSystem RepairSystem => DefTinkering.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public ElvenGlasses()
             : base(0x2FB8)
         {

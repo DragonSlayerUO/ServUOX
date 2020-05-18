@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159469;  // decorative wall hook
 
-        [Constructable]
+        [Constructible]
         public DecorativeWallHook()
             : base(0xA4E8)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         private FlameOfOrder m_Flame;
 
-        [Constructable]
+        [Constructible]
         public SBMessageTrigger(FlameOfOrder flame)
             : base(0x1BC3)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class ChargedAssassinSpike : AssassinSpike
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ChargedAssassinSpike()
         {
             WeaponAttributes.HitLightning = 10;

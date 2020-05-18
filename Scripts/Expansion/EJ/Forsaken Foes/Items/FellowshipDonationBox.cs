@@ -23,7 +23,7 @@ namespace Server.Items
         public static FellowshipDonationBox InstanceTram { get; set; }
         public static FellowshipDonationBox InstanceFel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public FellowshipDonationBox()
             : base(0x2DE9)
         {

@@ -40,7 +40,7 @@ namespace Server.Items
 
         public bool PlayerConstructed => false;
 
-        [Constructable]
+        [Constructible]
         public Scissors()
             : base(0xF9F)
         {

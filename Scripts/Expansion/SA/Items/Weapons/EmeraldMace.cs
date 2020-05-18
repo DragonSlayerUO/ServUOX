@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EmeraldMace : DiamondMace
     {
-        [Constructable]
+        [Constructible]
         public EmeraldMace()
         {
             WeaponAttributes.ResistPoisonBonus = 5;

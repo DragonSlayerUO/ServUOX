@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class LabyrinthIslandTele : Item
     {
-        [Constructable]
+        [Constructible]
         public LabyrinthIslandTele()
             : base(0x2FD4)
         {
@@ -40,7 +40,7 @@ namespace Server.Items
 
     public class LabyrinthTele : Item
     {
-        [Constructable]
+        [Constructible]
         public LabyrinthTele()
             : base(0x248B)
         {

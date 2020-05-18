@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Cailla : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Cailla()
             : base("Cailla", "the Guard")
         {

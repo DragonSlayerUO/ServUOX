@@ -5,7 +5,7 @@ namespace Server.Items
     public class MalekisHonor : MetalKiteShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MalekisHonor()
             : base()
         {

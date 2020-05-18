@@ -5,7 +5,7 @@ namespace Server.Items
     public class GwennosHarp : LapHarp
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GwennosHarp()
         {
             Hue = 0x47E;

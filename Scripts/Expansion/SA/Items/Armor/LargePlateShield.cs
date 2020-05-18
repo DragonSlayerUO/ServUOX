@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x4204, 0x4208)]
     public class LargePlateShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public LargePlateShield()
             : base(0x4204)
         {

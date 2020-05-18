@@ -6,7 +6,7 @@ namespace Server.Engines.Quests.Samurai
 {
     public class HaochisGuardsman : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public HaochisGuardsman()
             : base("the Guardsman of Daimyo Haochi")
         {

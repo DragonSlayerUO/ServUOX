@@ -10,13 +10,13 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public BlackPowder()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BlackPowder(int amount)
             : base(0x423A)
         {

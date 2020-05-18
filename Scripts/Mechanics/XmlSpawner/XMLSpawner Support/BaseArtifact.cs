@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public abstract class Artifact : Item, IArtifact
     {
-        [Constructable]
+        [Constructible]
         public Artifact(int itemID) : base(itemID)
         {
         }

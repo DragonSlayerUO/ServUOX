@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class YellowFinBluebelly : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public YellowFinBluebelly()
             : base(0x3B07)
         {

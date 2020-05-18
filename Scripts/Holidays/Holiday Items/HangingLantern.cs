@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HangingLantern : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public HangingLantern()
             : base(0xA1D)
         {

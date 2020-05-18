@@ -119,13 +119,13 @@ namespace Server.Items
     }
     public class Hides : BaseHides, IScissorable
     {
-        [Constructable]
+        [Constructible]
         public Hides()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Hides(int amount)
             : base(CraftResource.RegularLeather, amount)
         {

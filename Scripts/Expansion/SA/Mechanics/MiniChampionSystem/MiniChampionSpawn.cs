@@ -115,7 +115,7 @@ namespace Server.Engines.MiniChamps
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D BossSpawnPoint { get; set; }
 
-        [Constructable]
+        [Constructible]
         public MiniChamp()
             : base(0xBD2)
         {

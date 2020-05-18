@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealLlama : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealLlama()
             : base(0x20F6, 0x3EAB, 0x3EA6)
         { }

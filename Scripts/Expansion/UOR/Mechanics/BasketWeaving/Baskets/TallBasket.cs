@@ -4,7 +4,7 @@ using Server.Items;
 
 public class TallBasket : BaseContainer
 {
-    [Constructable]
+    [Constructible]
     public TallBasket()
         : base(0x24DB)
     {

@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0x0FBF, 0x0FC0)]
     public class MapmakersPen : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public MapmakersPen()
             : base(0x0FBF)
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public MapmakersPen(int uses)
             : base(uses, 0x0FBF)
         {

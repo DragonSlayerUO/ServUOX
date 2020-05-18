@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1071202;  // academic books
 
 
-        [Constructable]
+        [Constructible]
         public AcademicBooksArtifact()
             : base(0x1E25)
         {

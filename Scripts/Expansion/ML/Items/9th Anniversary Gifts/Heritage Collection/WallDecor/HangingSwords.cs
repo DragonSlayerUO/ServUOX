@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class HangingSwordsAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public HangingSwordsAddon(bool east)
             : base()
         {
@@ -45,7 +45,7 @@ namespace Server.Items
     public class HangingSwordsDeed : BaseAddonDeed
     {
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public HangingSwordsDeed()
             : base()
         {

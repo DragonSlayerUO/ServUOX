@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => new TextDefinition(1158798);  // Nice
 
-        [Constructable]
+        [Constructible]
         public NiceTitleDeed()
         {
         }

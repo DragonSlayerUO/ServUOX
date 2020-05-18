@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class PixieLeg : Item
     {
-        [Constructable]
+        [Constructible]
         public PixieLeg()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PixieLeg(int amount)
             : base(0x1608)
         {

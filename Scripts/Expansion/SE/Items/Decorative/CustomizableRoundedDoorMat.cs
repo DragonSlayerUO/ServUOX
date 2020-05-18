@@ -18,7 +18,7 @@ namespace Server.Items
     {
         public string[] Lines { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CustomizableRoundedDoorMat()
             : base(0x4790)
         {

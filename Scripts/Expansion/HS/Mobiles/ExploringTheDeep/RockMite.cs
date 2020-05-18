@@ -4,7 +4,7 @@ namespace Server.Mobiles
     [CorpseName("a rock mite corpse")]
     public class RockMite : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public RockMite()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

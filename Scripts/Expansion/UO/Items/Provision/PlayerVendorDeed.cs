@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ContractOfEmployment : Item
     {
-        [Constructable]
+        [Constructible]
         public ContractOfEmployment()
             : base(0x14F0)
         {

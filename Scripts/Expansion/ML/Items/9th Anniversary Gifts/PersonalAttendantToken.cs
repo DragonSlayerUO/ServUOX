@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class PersonalAttendantToken : Item
     {
-        [Constructable]
+        [Constructible]
         public PersonalAttendantToken()
             : base(0x2AAA)
         {

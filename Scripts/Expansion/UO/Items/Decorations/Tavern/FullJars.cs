@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class DecoFullJar : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoFullJar()
             : base(0x1006)
         {
@@ -30,7 +30,7 @@ namespace Server.Items
 
     public class DecoFullJars3 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoFullJars3()
             : base(0xE4a)
         {
@@ -58,7 +58,7 @@ namespace Server.Items
 
     public class DecoFullJars4 : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoFullJars4()
             : base(0xE4b)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class InfusedAlchemistsGem : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public InfusedAlchemistsGem()
             : base(0x1EA7)
         {

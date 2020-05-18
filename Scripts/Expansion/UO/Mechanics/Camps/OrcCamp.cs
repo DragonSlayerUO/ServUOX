@@ -6,7 +6,7 @@ namespace Server.Multis
 {
     public class OrcCamp : BaseCamp
     {
-        [Constructable]
+        [Constructible]
         public OrcCamp()
             : base(0x1F6D)
         {

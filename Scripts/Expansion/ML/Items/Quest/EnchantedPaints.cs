@@ -6,7 +6,7 @@ namespace Server.Engines.Quests.Collector
 {
     public class EnchantedPaints : QuestItem
     {
-        [Constructable]
+        [Constructible]
         public EnchantedPaints()
             : base(0xFC1)
         {

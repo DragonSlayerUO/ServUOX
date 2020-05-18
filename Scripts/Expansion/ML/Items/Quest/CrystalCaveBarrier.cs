@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Necro
 {
     public class CrystalCaveBarrier : Item
     {
-        [Constructable]
+        [Constructible]
         public CrystalCaveBarrier()
             : base(0x3967)
         {

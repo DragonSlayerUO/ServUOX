@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override string CreatureName => "lady of the snow";
 
-        [Constructable]
+        [Constructible]
         public LadyOfTheSnowCostume() : base()
         {
             CostumeBody = 252;

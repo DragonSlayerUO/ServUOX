@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class MagicArrowScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public MagicArrowScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MagicArrowScroll(int amount)
             : base(4, 0x1F32, amount)
         {

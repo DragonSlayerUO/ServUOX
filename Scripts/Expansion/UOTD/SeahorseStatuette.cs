@@ -5,7 +5,7 @@ namespace Server.Items
     public class SeahorseStatuette : MonsterStatuette
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SeahorseStatuette()
             : base(MonsterStatuetteType.Seahorse)
         {

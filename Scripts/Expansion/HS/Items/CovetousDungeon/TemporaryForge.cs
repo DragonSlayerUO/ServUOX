@@ -161,7 +161,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime Expires { get; set; }
 
-        [Constructable]
+        [Constructible]
         public TemporaryForgeDeed()
         {
             Expires = DateTime.UtcNow + TimeSpan.FromHours(DecayPeriod);

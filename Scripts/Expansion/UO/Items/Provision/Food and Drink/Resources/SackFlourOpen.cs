@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1024166;  // open sack of flour
 
-        [Constructable]
+        [Constructible]
         public SackFlourOpen() : base(0x103A)
         {
             Weight = 4.0;

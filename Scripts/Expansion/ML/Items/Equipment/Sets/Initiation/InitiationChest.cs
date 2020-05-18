@@ -19,7 +19,7 @@ namespace Server.Items
         public override int InitMinHits => 150;
         public override int InitMaxHits => 150;
 
-        [Constructable]
+        [Constructible]
         public InitiationChest() : base()
         {
 

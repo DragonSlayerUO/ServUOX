@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Enigma : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Enigma()
             : base("Enigma")
         {

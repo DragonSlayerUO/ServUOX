@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class MelisandesHairDye : Item
     {
-        [Constructable]
+        [Constructible]
         public MelisandesHairDye()
             : base(0xEFF)
         {

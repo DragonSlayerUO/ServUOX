@@ -6,7 +6,7 @@ namespace Server.Items
     public class HonestyGorget : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HonestyGorget()
             : base(0x2B0E)
         {

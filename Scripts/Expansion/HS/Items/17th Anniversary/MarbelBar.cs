@@ -5,7 +5,7 @@ namespace Server.Items
     [Furniture]
     public class MarbelBar : Item
     {
-        [Constructable]
+        [Constructible]
         public MarbelBar()
             : base(0x99C8)
         {

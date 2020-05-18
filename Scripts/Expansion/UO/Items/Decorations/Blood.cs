@@ -14,12 +14,12 @@ namespace Server.Items
 
         public override TimeSpan DecayTime => Decay;
 
-        [Constructable]
+        [Constructible]
         public Blood()
             : this(RandomID)
         { }
 
-        [Constructable]
+        [Constructible]
         public Blood(int itemID)
             : base(itemID)
         {

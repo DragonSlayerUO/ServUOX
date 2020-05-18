@@ -4,7 +4,7 @@ namespace Server.Mobiles
     public class ClanRS : BaseCreature
     {
         //public override InhumanSpeech SpeechType{ get{ return InhumanSpeech.Ratman; } }
-        [Constructable]
+        [Constructible]
         public ClanRS()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

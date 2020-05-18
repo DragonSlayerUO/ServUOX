@@ -44,14 +44,14 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Enhanced { get { return m_Enhanced; } set { m_Enhanced = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public Bait(int index) : base(2454)
         {
             Index = index;
             m_UsesRemaining = 1;
         }
 
-        [Constructable]
+        [Constructible]
         public Bait() : base(2454)
         {
             m_UsesRemaining = 1;

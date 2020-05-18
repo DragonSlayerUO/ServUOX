@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class FerretImprisonedInCrystal : BaseImprisonedMobile
     {
-        [Constructable]
+        [Constructible]
         public FerretImprisonedInCrystal()
             : base(0x1F19)
         {
@@ -39,7 +39,7 @@ namespace Server.Mobiles
 {
     public class ShimmeringFerret : Ferret
     {
-        [Constructable]
+        [Constructible]
         public ShimmeringFerret()
             : base()
         {

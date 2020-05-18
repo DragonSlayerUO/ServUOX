@@ -5,7 +5,7 @@ namespace Server.Items
     public class MyrmidonGorget : StuddedGorget
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MyrmidonGorget()
             : base()
         {

@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class DartBoard : AddonComponent
     {
-        [Constructable]
+        [Constructible]
         public DartBoard()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DartBoard(bool east)
             : base(east ? 0x1E2F : 0x1E2E)
         {
@@ -158,7 +158,7 @@ namespace Server.Items
 
     public class DartBoardEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public DartBoardEastDeed()
         {
         }
@@ -211,7 +211,7 @@ namespace Server.Items
 
     public class DartBoardSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public DartBoardSouthDeed()
         {
         }

@@ -8,7 +8,7 @@ namespace Server.Items
         {
             0xE5, 0xE6, 0xE7, 0xE8, 0xE9
         };
-        [Constructable]
+        [Constructible]
         public RedDeathStatuette()
             : base(0x2617)
         {

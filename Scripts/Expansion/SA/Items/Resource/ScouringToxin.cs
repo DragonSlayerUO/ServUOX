@@ -15,13 +15,13 @@ namespace Server.Items
 
         public bool ShowUsesRemaining { get { return false; } set { { } } }
 
-        [Constructable]
+        [Constructible]
         public ScouringToxin()
             : this(10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ScouringToxin(int amount)
             : base(0x1848)
         {

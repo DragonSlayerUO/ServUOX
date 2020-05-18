@@ -4,7 +4,7 @@ namespace Server.Items
     public class DaemonHelm : BaseArmor
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DaemonHelm()
             : base(0x1451)
         {

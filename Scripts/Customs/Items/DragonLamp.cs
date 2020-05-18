@@ -11,7 +11,7 @@ namespace Server.Items
         public int NorthID => Burning ? 0x4C4D : 0x4C4C;
         public int WestID => Burning ? 0x4C4F : 0x4C4E;
 
-        [Constructable]
+        [Constructible]
         public DragonLamp()
             : base(0x4C4C)
         {

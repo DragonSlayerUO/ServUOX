@@ -111,13 +111,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int UsesRemaining { get { return _UsesRemaining; } set { _UsesRemaining = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public BulkOrderBookCover(CoverType type)
             : this(type, 30)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BulkOrderBookCover(CoverType type, int uses)
             : base(0x2831)
         {

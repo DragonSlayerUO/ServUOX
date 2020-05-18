@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class AegisOfGrace : DragonHelm
     {
-        [Constructable]
+        [Constructible]
         public AegisOfGrace()
         {
             SkillBonuses.SetValues(0, SkillName.MagicResist, 10.0);

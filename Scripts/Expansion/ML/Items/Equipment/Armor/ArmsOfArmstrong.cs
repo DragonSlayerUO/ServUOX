@@ -5,7 +5,7 @@ namespace Server.Items
     public class ArmsOfArmstrong : LeatherArms
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ArmsOfArmstrong()
         {
             LootType = LootType.Blessed;

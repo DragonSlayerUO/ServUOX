@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Porcupinefish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Porcupinefish()
             : base(0xA370)
         {

@@ -18,7 +18,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime DateCaught { get => m_DateCaught; set { m_DateCaught = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public BigFish()
             : base(0x09CC)
         {

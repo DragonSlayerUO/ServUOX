@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1149955;
 
-        [Constructable]
+        [Constructible]
         public LargeFishingNet()
             : base(7845)
         {

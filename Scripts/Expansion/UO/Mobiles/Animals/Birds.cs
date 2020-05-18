@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a bird corpse")]
     public class Bird : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Bird()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -75,7 +75,7 @@ namespace Server.Mobiles
     [CorpseName("a bird corpse")]
     public class TropicalBird : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public TropicalBird()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -132,7 +132,7 @@ namespace Server.Mobiles
     [CorpseName("a chicken corpse")]
     public class Chicken : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Chicken()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -193,7 +193,7 @@ namespace Server.Mobiles
     [CorpseName("an eagle corpse")]
     public class Eagle : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Eagle()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

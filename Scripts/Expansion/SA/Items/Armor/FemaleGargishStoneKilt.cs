@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class FemaleGargishStoneKilt : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishStoneKilt()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishStoneKilt(int hue)
             : base(0x287)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     {
         private bool m_IsRewardItem;
 
-        [Constructable]
+        [Constructible]
         public MetallicLeatherDyeTub()
         {
             LootType = LootType.Blessed;

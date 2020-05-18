@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154257;  // Perfect Black Pearl
 
-        [Constructable]
+        [Constructible]
         public PerfectBlackPearlDecor()
             : base(0xF7A)
         {
@@ -69,7 +69,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154257;  // Perfect Black Pearl
 
-        [Constructable]
+        [Constructible]
         public PerfectBlackPearl()
             : base(0xF7A)
         {
@@ -111,7 +111,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154258;  // Bursting Brimstone
 
-        [Constructable]
+        [Constructible]
         public BurstingBrimstoneDecor()
             : base(0xF7F)
         {
@@ -171,7 +171,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154258;  // Bursting Brimstone
 
-        [Constructable]
+        [Constructible]
         public BurstingBrimstone()
             : base(0xF7F)
         {
@@ -213,7 +213,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154259;  // Bright Daemon Blood
 
-        [Constructable]
+        [Constructible]
         public BrightDaemonBloodDecor()
             : base(0xF7D)
         {
@@ -273,7 +273,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154259;  // Bright Daemon Blood
 
-        [Constructable]
+        [Constructible]
         public BrightDaemonBlood()
             : base(0xF7D)
         {
@@ -315,7 +315,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154260;  // Mighty Mandrake
 
-        [Constructable]
+        [Constructible]
         public MightyMandrakeDecor()
             : base(0xF86)
         {
@@ -375,7 +375,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154260;  // Mighty Mandrake
 
-        [Constructable]
+        [Constructible]
         public MightyMandrake()
             : base(0xF86)
         {
@@ -416,7 +416,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154261;  // Burly Bone
 
-        [Constructable]
+        [Constructible]
         public BurlyBoneDecor()
             : base(0xF7E)
         {
@@ -476,7 +476,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154261;  // Burly Bone
 
-        [Constructable]
+        [Constructible]
         public BurlyBone()
             : base(0xF7E)
         {

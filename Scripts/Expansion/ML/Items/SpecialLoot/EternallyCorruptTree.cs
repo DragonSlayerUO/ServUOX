@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EternallyCorruptTree : Item
     {
-        [Constructable]
+        [Constructible]
         public EternallyCorruptTree()
             : base(0x20FA)
         {

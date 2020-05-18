@@ -5,7 +5,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(GargishKiteShield))]
     public class MetalKiteShield : BaseShield, IDyable
     {
-        [Constructable]
+        [Constructible]
         public MetalKiteShield()
             : base(0x1B74)
         {

@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151750;  // Forged Artwork from King Blackthorn's Collection
 
-        [Constructable]
+        [Constructible]
         public ForgedArtwork() : base(Utility.Random(0x1224, 5))
         {
             Weight = 10;

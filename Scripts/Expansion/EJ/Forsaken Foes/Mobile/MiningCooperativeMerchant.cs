@@ -124,7 +124,7 @@ namespace Server.Engines.Quests
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MiningCooperativeMerchant()
             : base("the Mining Cooperative Merchant")
         {

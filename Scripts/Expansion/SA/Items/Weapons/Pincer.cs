@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154476;  // Pincer
 
-        [Constructable]
+        [Constructible]
         public Pincer()
         {
             Hue = 2500;
@@ -51,7 +51,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1154476;  // Pincer
 
-        [Constructable]
+        [Constructible]
         public GargishPincer()
         {
             Hue = 2500;

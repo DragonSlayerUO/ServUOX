@@ -5,7 +5,7 @@ namespace Server.Items
     public class EssenceOfBattle : GoldRing
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public EssenceOfBattle()
         {
             Hue = 0x550;

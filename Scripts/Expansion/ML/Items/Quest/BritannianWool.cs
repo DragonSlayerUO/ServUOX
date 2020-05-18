@@ -8,12 +8,12 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113242;  // Britannian wool
 
-        [Constructable]
+        [Constructible]
         public BritannianWool() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BritannianWool(int amount) : base(0x101F)
         {
             Stackable = true;

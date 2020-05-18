@@ -7,13 +7,13 @@ namespace Server.Items
     [Flipable(0x279A, 0x27E5)]
     public class Hakama : BaseOuterLegs
     {
-        [Constructable]
+        [Constructible]
         public Hakama()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Hakama(int hue)
             : base(0x279A, hue)
         {

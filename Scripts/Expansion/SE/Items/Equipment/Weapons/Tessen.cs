@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x27A3, 0x27EE)]
     public class Tessen : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public Tessen()
             : base(0x27A3)
         {

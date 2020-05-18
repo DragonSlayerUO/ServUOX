@@ -6,13 +6,13 @@ namespace Server.Mobiles
     [CorpseName("a blade spirit corpse")]
     public class BladeSpirits : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public BladeSpirits()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BladeSpirits(bool summoned)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.3, 0.6)
         {

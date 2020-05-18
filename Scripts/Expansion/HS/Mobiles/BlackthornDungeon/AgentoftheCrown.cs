@@ -18,7 +18,7 @@ namespace Server.Engines.Blackthorn
         public override int TurnInLocalization => 1154571;  // Turn In Minax Artifacts
         public override int ClaimLocalization => 1154572;  // Claim Blackthorn Artifacts
 
-        [Constructable]
+        [Constructible]
         public AgentOfTheCrown() : base("the Agent Of The Crown")
         {
         }

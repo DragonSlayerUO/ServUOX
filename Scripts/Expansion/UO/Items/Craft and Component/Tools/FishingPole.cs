@@ -174,7 +174,7 @@ namespace Server.Items
             set { m_LowerStatReq = value; InvalidateProperties(); }
         }
 
-        [Constructable]
+        [Constructible]
         public FishingPole()
             : base(0x0DC0)
         {

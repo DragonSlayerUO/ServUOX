@@ -118,7 +118,7 @@ namespace Server.Items
     [Flipable(0x9F4, 0x9F5, 0x9A3, 0x9A4)]
     public class Fork : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public Fork()
             : base(0x9F4)
         {
@@ -145,7 +145,7 @@ namespace Server.Items
 
     public class ForkLeft : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public ForkLeft()
             : base(0x9F4)
         {
@@ -172,7 +172,7 @@ namespace Server.Items
 
     public class ForkRight : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public ForkRight()
             : base(0x9F5)
         {
@@ -200,7 +200,7 @@ namespace Server.Items
     [Flipable(0x9F8, 0x9F9, 0x9C2, 0x9C3)]
     public class Spoon : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public Spoon()
             : base(0x9F8)
         {
@@ -227,7 +227,7 @@ namespace Server.Items
 
     public class SpoonLeft : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public SpoonLeft()
             : base(0x9F8)
         {
@@ -254,7 +254,7 @@ namespace Server.Items
 
     public class SpoonRight : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public SpoonRight()
             : base(0x9F9)
         {
@@ -282,7 +282,7 @@ namespace Server.Items
     [Flipable(0x9F6, 0x9F7, 0x9A5, 0x9A6)]
     public class Knife : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public Knife()
             : base(0x9F6)
         {
@@ -309,7 +309,7 @@ namespace Server.Items
 
     public class KnifeLeft : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public KnifeLeft()
             : base(0x9F6)
         {
@@ -336,7 +336,7 @@ namespace Server.Items
 
     public class KnifeRight : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public KnifeRight()
             : base(0x9F7)
         {
@@ -363,7 +363,7 @@ namespace Server.Items
 
     public class Plate : BaseUtensil
     {
-        [Constructable]
+        [Constructible]
         public Plate()
             : base(0x9D7)
         {

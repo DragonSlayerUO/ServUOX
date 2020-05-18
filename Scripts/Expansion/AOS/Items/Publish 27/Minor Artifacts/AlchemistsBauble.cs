@@ -5,7 +5,7 @@ namespace Server.Items
     public class AlchemistsBauble : GoldBracelet
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public AlchemistsBauble()
         {
             Hue = 0x290;

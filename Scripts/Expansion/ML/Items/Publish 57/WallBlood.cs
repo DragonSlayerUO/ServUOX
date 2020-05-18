@@ -5,7 +5,7 @@ namespace Server.Items
     public class WallBlood : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public WallBlood()
             : base(Utility.RandomBool() ? 0x1D95 : 0x1D94)
         {

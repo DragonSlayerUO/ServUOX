@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class GargishWanderingHealer : BaseHealer
     {
-        [Constructable]
+        [Constructible]
         public GargishWanderingHealer()
         {
             Title = "a Gargish wandering healer";

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("Wyvern [Renowned] corpse")]
     public class WyvernRenowned : BaseRenowned
     {
-        [Constructable]
+        [Constructible]
         public WyvernRenowned()
             : base(AIType.AI_Mage)
         {

@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class RaptorTeeth : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public RaptorTeeth()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RaptorTeeth(int amount)
             : base(0x5747)
         {

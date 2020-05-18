@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override CraftResource DefaultResource => CraftResource.RegularLeather;
 
-        [Constructable]
+        [Constructible]
         public Shoes()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Shoes(int hue)
             : base(0x170F, hue)
         {

@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Ninja
     {
         public override int LabelNumber => 1063186; // A Note for Zoel
 
-        [Constructable]
+        [Constructible]
         public NoteForZoel()
             : base(0x14EF)
         {

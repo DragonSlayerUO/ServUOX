@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HeatingStand : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public HeatingStand()
             : base(0x1849)
         {

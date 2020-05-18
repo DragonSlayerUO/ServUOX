@@ -16,13 +16,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public int ResourceCount { get { return m_ResourceCount; } set { m_ResourceCount = value; UpdateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public ShipPaintingAddon(DirectionType type)
            : this(type, 0, DateTime.UtcNow + TimeSpan.FromDays(7))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ShipPaintingAddon(DirectionType type, int resCount, DateTime nextuse)
         {
             NextResourceCount = nextuse;
@@ -140,7 +140,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public ShipPaintingDeed()
             : base()
         {

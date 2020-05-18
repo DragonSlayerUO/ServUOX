@@ -30,13 +30,13 @@ namespace Server.Mobiles
             return scalar;
         }
 
-        [Constructable]
+        [Constructible]
         public Golem()
             : this(false, 1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Golem(bool summoned, double scalar)
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.4, 0.8)
         {

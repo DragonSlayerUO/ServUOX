@@ -5,7 +5,7 @@ namespace Server.Items
     public class PendantOfTheMagi : GoldNecklace
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PendantOfTheMagi()
         {
             Hue = 0x48D;

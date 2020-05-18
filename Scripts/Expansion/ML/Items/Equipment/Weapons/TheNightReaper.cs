@@ -5,7 +5,7 @@ namespace Server.Items
     public class TheNightReaper : RepeatingCrossbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TheNightReaper()
         {
             Hue = 0x41C;

@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public FoldedSteelGlasses()
         {
             Attributes.BonusStr = 8;
@@ -50,7 +50,7 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishFoldedSteelGlasses()
         {
             Attributes.BonusStr = 8;

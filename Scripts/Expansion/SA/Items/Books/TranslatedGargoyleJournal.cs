@@ -96,7 +96,7 @@ namespace Server.Items
                 "Kai Hohiro, 12pm.",
                 "10.11.2001",
                 "first one to be here"));
-        [Constructable]
+        [Constructible]
         public TranslatedGargoyleJournal()
             : base(false)
         {

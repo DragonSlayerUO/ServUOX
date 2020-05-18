@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class BuffetTableAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BuffetTableAddon(DirectionType type)
         {
             switch (type)
@@ -65,7 +65,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public BuffetTableDeed()
             : base()
         {

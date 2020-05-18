@@ -5,7 +5,7 @@ namespace Server.Items
     public class TheDragonsTail : NoDachi
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TheDragonsTail()
         {
             LootType = LootType.Blessed;

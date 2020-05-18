@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class DetectiveBook : Item
     {
-        [Constructable]
+        [Constructible]
         public DetectiveBook() : base(4082)
         {
         }

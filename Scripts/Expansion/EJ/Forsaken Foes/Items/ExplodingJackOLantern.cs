@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159220;  // Exploding Jack o' Lantern
 
-        [Constructable]
+        [Constructible]
         public ExplodingJackOLantern()
             : base(0xA407)
         {

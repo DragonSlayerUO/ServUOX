@@ -27,7 +27,7 @@ namespace Server.Items
 
         public override bool IsDecoContainer => false;
 
-        [Constructable]
+        [Constructible]
         public ExodusChest()
             : base()
         {

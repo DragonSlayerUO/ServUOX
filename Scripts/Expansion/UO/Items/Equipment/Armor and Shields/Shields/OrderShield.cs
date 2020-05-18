@@ -6,7 +6,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(GargishOrderShield))]
     public class OrderShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public OrderShield()
             : base(0x1BC4)
         {

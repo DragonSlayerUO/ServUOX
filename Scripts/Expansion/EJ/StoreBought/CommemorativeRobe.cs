@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1157009;  // Commemorative Robe
 
-        [Constructable]
+        [Constructible]
         public CommemorativeRobe()
             : base(0x4B9D)
         {

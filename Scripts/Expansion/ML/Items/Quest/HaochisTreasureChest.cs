@@ -7,7 +7,7 @@ namespace Server.Engines.Quests.Samurai
 {
     public class HaochisTreasureChest : WoodenFootLocker
     {
-        [Constructable]
+        [Constructible]
         public HaochisTreasureChest()
         {
             Movable = false;

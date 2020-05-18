@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a hare corpse")]
     public class FireRabbit : VorpalBunny
     {
-        [Constructable]
+        [Constructible]
         public FireRabbit()
         {
             Name = "a fire rabbit";

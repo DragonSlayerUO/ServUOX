@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DryadsBlessing : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public DryadsBlessing()
             : base(0x21C)
         {

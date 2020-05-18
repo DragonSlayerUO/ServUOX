@@ -48,7 +48,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150418;  // a chest of sending
 
-        [Constructable]
+        [Constructible]
         public ChestOfSending() : base(0x4910)
         {
             m_Level = SecureLevel.CoOwners;

@@ -8,7 +8,7 @@ namespace Server.Mobiles
         public override VoidEvolution Evolution => VoidEvolution.Survival;
         public override int Stage => 3;
 
-        [Constructable]
+        [Constructible]
         public Vasanord() : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.6, 1.2)
         {
             Name = "vasanord";

@@ -6,13 +6,13 @@ namespace Server.Items
 {
     public class HolidayPottedPlant : Item
     {
-        [Constructable]
+        [Constructible]
         public HolidayPottedPlant()
             : this(Utility.RandomMinMax(0x11C8, 0x11CC))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HolidayPottedPlant(int itemID)
             : base(itemID)
         {
@@ -41,7 +41,7 @@ namespace Server.Items
 
     public class PottedPlantDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public PottedPlantDeed()
             : base(0x14F0)
         {

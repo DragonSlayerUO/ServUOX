@@ -7,13 +7,13 @@ namespace Server.Items
     [Flipable(0x46B4, 0x46B5)]
     public class GargishSash : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public GargishSash()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishSash(int hue)
             : base(0x46B4, Layer.MiddleTorso, hue)
         {

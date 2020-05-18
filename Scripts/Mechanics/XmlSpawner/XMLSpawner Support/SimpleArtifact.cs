@@ -15,7 +15,7 @@ namespace Server.Items
             set { m_ArtifactRarity = value; InvalidateProperties(); }
         }
 
-        [Constructable]
+        [Constructible]
         public SimpleArtifact(int itemID) : base(itemID)
         {
         }

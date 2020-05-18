@@ -5,7 +5,7 @@ namespace Server.Items
     [TypeAlias("Server.Items.EmptyLargePewterBowl")]
     public class EmptyPewterTub : Item
     {
-        [Constructable]
+        [Constructible]
         public EmptyPewterTub()
             : base(0x1603)
         {

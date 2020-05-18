@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [Server.Engines.Craft.Forge]
     public class FireBeetle : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public FireBeetle()
             : base("a fire beetle", 0xA9, 0x3E95, AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -7,13 +7,13 @@ namespace Server.Items
     public class ForTheLifeOfBritanniaSash : BaseMiddleTorso
     {
         public override int LabelNumber => 1075792;  // For the Life of Britannia Sash
-        [Constructable]
+        [Constructible]
         public ForTheLifeOfBritanniaSash()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ForTheLifeOfBritanniaSash(int hue)
             : base(0x1541, hue)
         {

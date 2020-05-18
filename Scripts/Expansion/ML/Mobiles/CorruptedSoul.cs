@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class CorruptedSoul : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public CorruptedSoul()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, .1, 5)
         {

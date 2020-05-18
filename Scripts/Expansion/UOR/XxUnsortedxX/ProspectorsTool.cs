@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1049065;  // prospector's tool
 
-        [Constructable]
+        [Constructible]
         public ProspectorsTool()
             : base(0xFB4)
         {

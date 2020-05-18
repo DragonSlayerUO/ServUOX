@@ -136,7 +136,7 @@ namespace Server.Items
 
     public class WindChimes : BaseWindChimes
     {
-        [Constructable]
+        [Constructible]
         public WindChimes()
             : base(0x2832)
         {
@@ -163,7 +163,7 @@ namespace Server.Items
 
     public class FancyWindChimes : BaseWindChimes
     {
-        [Constructable]
+        [Constructible]
         public FancyWindChimes()
             : base(0x2833)
         {

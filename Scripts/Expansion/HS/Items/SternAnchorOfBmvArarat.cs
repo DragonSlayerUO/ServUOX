@@ -8,7 +8,7 @@ namespace Server.Items
         public override int ArtifactRarity => 8;
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public SternAnchorOfBmvArarat()
             : base(0x14F7)
         {

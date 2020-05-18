@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class MetalTubAddon : BaseAddon, IWaterSource
     {
-        [Constructable]
+        [Constructible]
         public MetalTubAddon(DirectionType type)
         {
             switch (type)
@@ -53,7 +53,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public MetalTubDeed()
             : base()
         {

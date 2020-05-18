@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Guardian : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Guardian()
             : base(AIType.AI_Archer, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

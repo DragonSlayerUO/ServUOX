@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class Trades : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public Trades()
             : base("Bonnie", "the master of trades")
         {

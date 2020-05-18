@@ -22,7 +22,7 @@ namespace Server.Items
 			, {3811, 0, 0, 6}// 44	
 		};
 
-        [Constructable]
+        [Constructible]
         public BlackthornStep5()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

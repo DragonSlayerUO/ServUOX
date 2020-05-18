@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PileofInspectedVeriteIngots : Item
     {
-        [Constructable]
+        [Constructible]
         public PileofInspectedVeriteIngots()
             : base(0x1BEA)
         {

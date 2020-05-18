@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x42C9, 0x42CA)]
     public class UltimaBanner : Item
     {
-        [Constructable]
+        [Constructible]
         public UltimaBanner()
             : base(0x42C9)
         {

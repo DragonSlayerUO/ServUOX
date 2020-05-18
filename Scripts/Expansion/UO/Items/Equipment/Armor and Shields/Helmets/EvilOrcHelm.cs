@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EvilOrcHelm : OrcHelm
     {
-        [Constructable]
+        [Constructible]
         public EvilOrcHelm()
             : base()
         {

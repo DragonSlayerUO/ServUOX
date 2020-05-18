@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class KhaldunFirstAidBelt : FirstAidBelt
     {
-        [Constructable]
+        [Constructible]
         public KhaldunFirstAidBelt()
         {
             LootType = LootType.Blessed;

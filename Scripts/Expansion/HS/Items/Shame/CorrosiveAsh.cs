@@ -9,13 +9,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151809;  // Corrosive Ash
 
-        [Constructable]
+        [Constructible]
         public CorrosiveAsh()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CorrosiveAsh(int amount) : base(0x423A)
         {
             Hue = 1360;

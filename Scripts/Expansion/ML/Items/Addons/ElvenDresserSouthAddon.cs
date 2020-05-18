@@ -10,7 +10,7 @@ namespace Server.Items
         public override int DefaultDropSound => 0x42;
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public ElvenDresserAddonSouth()
             : base(0x30E6)
         {
@@ -42,7 +42,7 @@ namespace Server.Items
         public override BaseAddonContainer Addon => new ElvenDresserAddonSouth();
         public override int LabelNumber => 1072864;
 
-        [Constructable]
+        [Constructible]
         public ElvenDresserDeedSouth()
         {
         }
@@ -69,7 +69,7 @@ namespace Server.Items
 
     public class ElvenDresserSouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ElvenDresserSouthAddon()
         {
             AddComponent(new AddonComponent(0x30E5), 0, 0, 0);
@@ -119,7 +119,7 @@ namespace Server.Items
 
     public class ElvenDresserSouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public ElvenDresserSouthDeed()
         {
         }

@@ -6,7 +6,7 @@ namespace Server.Items
     [Alterable(typeof(DefTailoring), typeof(GargishLeatherLegs))]
     public class LeatherNinjaPants : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public LeatherNinjaPants()
             : base(0x2791)
         {

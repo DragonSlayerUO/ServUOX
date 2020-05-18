@@ -18,7 +18,7 @@ namespace Server.Mobiles
             m_SBInfos.Add(new SBHepler());
         }
 
-        [Constructable]
+        [Constructible]
         public HeplerPaulson()
             : base("The Salvage Master")
         {

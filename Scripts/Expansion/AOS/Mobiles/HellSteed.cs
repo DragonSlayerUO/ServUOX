@@ -7,13 +7,13 @@ namespace Server.Mobiles
     {
         public ElementType ElementType => ElementType.Chaos;
 
-        [Constructable]
+        [Constructible]
         public HellSteed()
             : this("a hellsteed")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HellSteed(string name)
             : base(name, 793, 0x3EBB, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

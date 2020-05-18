@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a dread horns corpse")]
     public class DreadHorn : BasePeerless
     {
-        [Constructable]
+        [Constructible]
         public DreadHorn() : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "a Dread Horn";

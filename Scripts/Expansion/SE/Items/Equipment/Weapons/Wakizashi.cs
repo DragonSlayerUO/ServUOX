@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x27A4, 0x27EF)]
     public class Wakizashi : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Wakizashi()
             : base(0x27A4)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class YellowKey1 : AbyssKey
     {
-        [Constructable]
+        [Constructible]
         public YellowKey1()
             : base(0x1012)
         {

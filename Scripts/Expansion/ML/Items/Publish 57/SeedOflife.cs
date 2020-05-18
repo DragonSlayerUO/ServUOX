@@ -18,7 +18,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1094937;  // seed of life
 
-        [Constructable]
+        [Constructible]
         public SeedOfLife()
             : base(0x1727)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1074402; // Special Hair Dye
 
-        [Constructable]
+        [Constructible]
         public SpecialHairDye()
             : base(0xE26)
         {

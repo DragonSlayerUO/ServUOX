@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class FishingGuideBook1 : BaseBook
     {
-        [Constructable]
+        [Constructible]
         public FishingGuideBook1() : base(Utility.Random(0xFF1, 2), false)
         {
             Name = "Volume 1 - Uncommon Shore Fish";

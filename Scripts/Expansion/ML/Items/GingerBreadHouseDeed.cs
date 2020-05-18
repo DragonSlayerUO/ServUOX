@@ -35,7 +35,7 @@ namespace Server.Items
 
     public class GingerBreadHouseDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public GingerBreadHouseDeed()
         {
             Weight = 1.0;

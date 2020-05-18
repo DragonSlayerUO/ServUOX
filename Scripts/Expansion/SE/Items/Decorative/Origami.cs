@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class OrigamiPaper : Item
     {
-        [Constructable]
+        [Constructible]
         public OrigamiPaper()
             : base(0x2830)
         {
@@ -65,7 +65,7 @@ namespace Server.Items
 
     public class OrigamiButterfly : Item
     {
-        [Constructable]
+        [Constructible]
         public OrigamiButterfly()
             : base(0x2838)
         {
@@ -95,7 +95,7 @@ namespace Server.Items
 
     public class OrigamiSwan : Item
     {
-        [Constructable]
+        [Constructible]
         public OrigamiSwan()
             : base(0x2839)
         {
@@ -125,7 +125,7 @@ namespace Server.Items
 
     public class OrigamiFrog : Item
     {
-        [Constructable]
+        [Constructible]
         public OrigamiFrog()
             : base(0x283A)
         {
@@ -155,7 +155,7 @@ namespace Server.Items
 
     public class OrigamiShape : Item
     {
-        [Constructable]
+        [Constructible]
         public OrigamiShape()
             : base(0x283B)
         {
@@ -185,7 +185,7 @@ namespace Server.Items
 
     public class OrigamiSongbird : Item
     {
-        [Constructable]
+        [Constructible]
         public OrigamiSongbird()
             : base(0x283C)
         {
@@ -215,7 +215,7 @@ namespace Server.Items
 
     public class OrigamiFish : Item
     {
-        [Constructable]
+        [Constructible]
         public OrigamiFish()
             : base(0x283D)
         {
@@ -247,7 +247,7 @@ namespace Server.Items
     {
         //public override int LabelNumber{ get{ return 1030296; } } // a delicate origami butterfly
 
-        [Constructable]
+        [Constructible]
         public OrigamiDragon()
             : base(0x4B1C)
         {
@@ -282,7 +282,7 @@ namespace Server.Items
     {
         //public override int LabelNumber{ get{ return 1030296; } } // a delicate origami butterfly
 
-        [Constructable]
+        [Constructible]
         public OrigamiBunny()
             : base(0x4B1F)
         {

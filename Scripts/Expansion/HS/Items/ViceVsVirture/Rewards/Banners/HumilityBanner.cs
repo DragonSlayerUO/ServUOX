@@ -12,7 +12,7 @@ namespace Server.Engines.VvV
     {
         public override int LabelNumber => 1123381;
 
-        [Constructable]
+        [Constructible]
         public HumilityBanner() : base(39357)
         {
         }

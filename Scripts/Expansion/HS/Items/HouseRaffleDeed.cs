@@ -9,7 +9,7 @@ namespace Server.Items
         private Point3D m_PlotLocation;
         private Map m_Facet;
         private Mobile m_AwardedTo;
-        [Constructable]
+        [Constructible]
         public HouseRaffleDeed()
             : this(null, null)
         {

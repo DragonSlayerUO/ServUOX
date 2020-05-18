@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ParrotWafer : Item
     {
-        [Constructable]
+        [Constructible]
         public ParrotWafer()
             : base(0x2FD6)
         {

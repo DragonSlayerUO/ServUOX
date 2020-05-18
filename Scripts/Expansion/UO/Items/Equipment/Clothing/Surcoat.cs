@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1ffd, 0x1ffe)]
     public class Surcoat : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public Surcoat()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Surcoat(int hue)
             : base(0x1FFD, hue)
         {

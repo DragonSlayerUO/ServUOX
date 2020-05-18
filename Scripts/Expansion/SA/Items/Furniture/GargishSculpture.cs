@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x403F, 0x4040)]
     public class GargishSculpture : Item
     {
-        [Constructable]
+        [Constructible]
         public GargishSculpture()
             : base(0x403F)
         {

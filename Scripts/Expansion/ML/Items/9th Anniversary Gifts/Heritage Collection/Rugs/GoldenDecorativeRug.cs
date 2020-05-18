@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class GoldenDecorativeRugAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GoldenDecorativeRugAddon()
             : base()
         {
@@ -40,7 +40,7 @@ namespace Server.Items
 
     public class GoldenDecorativeRugDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public GoldenDecorativeRugDeed()
             : base()
         {

@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         private DateTime m_NextBomb;
         private int m_Thrown;
-        [Constructable]
+        [Constructible]
         public OrcBomber()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -168,7 +168,7 @@ namespace Server.Mobiles
     [CorpseName("an orcish corpse")]
     public class OrcBrute : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OrcBrute()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -336,7 +336,7 @@ namespace Server.Mobiles
     [CorpseName("an orcish corpse")]
     public class OrcChopper : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public OrcChopper()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -475,7 +475,7 @@ namespace Server.Mobiles
     {
         public override double HealChance => 1.0;
 
-        [Constructable]
+        [Constructible]
         public OrcScout()
             : base(AIType.AI_OrcScout, FightMode.Closest, 10, 7, 0.2, 0.4)
         {

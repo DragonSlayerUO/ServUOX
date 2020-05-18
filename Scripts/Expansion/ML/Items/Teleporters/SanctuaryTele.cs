@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SanctuaryTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public SanctuaryTele()
             : base(new Point3D(6172, 22, 0), Map.Trammel)
         {

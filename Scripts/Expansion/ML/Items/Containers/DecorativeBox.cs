@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2DF3, 0x2DF4)]
     public class DecorativeBox : LockableContainer
     {
-        [Constructable]
+        [Constructible]
         public DecorativeBox()
             : base(0x2DF3)
         {

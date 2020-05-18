@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class Mephitis : BaseChampion
     {
-        [Constructable]
+        [Constructible]
         public Mephitis()
             : base(AIType.AI_Melee)
         {

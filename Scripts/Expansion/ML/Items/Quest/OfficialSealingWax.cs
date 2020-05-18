@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1072744; // Official Sealing Wax
 
-        [Constructable]
+        [Constructible]
         public OfficialSealingWax()
             : base(0x1426)
         {

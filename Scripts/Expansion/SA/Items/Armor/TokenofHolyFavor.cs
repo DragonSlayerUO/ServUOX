@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113652;  // Token of Holy Favor
 
-        [Constructable]
+        [Constructible]
         public TokenOfHolyFavor()
         {
             Hue = 96;

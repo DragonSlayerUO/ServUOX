@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class ElkhornCoral : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public ElkhornCoral()
             : base(0xA38E)
         {

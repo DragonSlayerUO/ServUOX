@@ -16,7 +16,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1113379;   // Puzzle Board
 
-        [Constructable]
+        [Constructible]
         public MastermindPuzzleItem(MagicKey key) : base(0x2AAA)
         {
             Hue = 914;

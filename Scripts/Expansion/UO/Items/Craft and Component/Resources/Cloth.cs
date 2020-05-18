@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x1766, 0x1768)]
     public class Cloth : Item, IScissorable, IDyable, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Cloth()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Cloth(int amount)
             : base(0x1766)
         {
@@ -75,7 +75,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1044458;  // cut-up cloth
 
-        [Constructable]
+        [Constructible]
         public CutUpCloth()
             : base(0x1767)
         {
@@ -116,7 +116,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1044459;  // combine cloth
 
-        [Constructable]
+        [Constructible]
         public CombineCloth()
             : base(0x1767)
         {

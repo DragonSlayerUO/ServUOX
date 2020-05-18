@@ -17,13 +17,13 @@ namespace Server.Items
             "Markas"
         };
         private string m_Dipper;
-        [Constructable]
+        [Constructible]
         public LightOfTheWinterSolstice()
             : this(m_StaffNames[Utility.Random(m_StaffNames.Length)])
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightOfTheWinterSolstice(string dipper)
             : base(0x236E)
         {

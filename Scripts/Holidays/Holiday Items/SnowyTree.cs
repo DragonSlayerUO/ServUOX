@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SnowyTree : Item
     {
-        [Constructable]
+        [Constructible]
         public SnowyTree()
             : base(0x2377)
         {

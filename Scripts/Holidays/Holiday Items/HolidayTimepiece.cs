@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HolidayTimepiece : Clock
     {
-        [Constructable]
+        [Constructible]
         public HolidayTimepiece()
             : base(0x1086)
         {

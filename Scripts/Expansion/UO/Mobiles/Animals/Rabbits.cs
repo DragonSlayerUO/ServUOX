@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a hare corpse")]
     public class Rabbit : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Rabbit()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -70,7 +70,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Jackrabbit")]
     public class JackRabbit : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public JackRabbit()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

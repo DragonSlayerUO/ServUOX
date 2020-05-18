@@ -5,7 +5,7 @@ namespace Server.Items
     public class CorruptedRuneBlade : RuneBlade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public CorruptedRuneBlade()
         {
             WeaponAttributes.ResistPhysicalBonus = -5;

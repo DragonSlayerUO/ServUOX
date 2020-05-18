@@ -5,7 +5,7 @@ namespace Server.Items
     public class TunicOfFire : ChainChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TunicOfFire()
         {
             Hue = 0x54F;

@@ -8,7 +8,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1112401;
 
-        [Constructable]
+        [Constructible]
         public CreepingVine()
             : base(Utility.Random(18322, 4))
         {

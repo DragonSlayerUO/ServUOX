@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DecoPumice : Item
     {
-        [Constructable]
+        [Constructible]
         public DecoPumice()
             : base(0xF8B)
         {

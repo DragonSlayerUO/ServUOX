@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1125659;  // butcher block
 
-        [Constructable]
+        [Constructible]
         public ButcherBlock()
             : base(0xA2A3)
         {

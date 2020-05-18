@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a lady melisande corpse")]
     public class LadyMelisande : BasePeerless
     {
-        [Constructable]
+        [Constructible]
         public LadyMelisande()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

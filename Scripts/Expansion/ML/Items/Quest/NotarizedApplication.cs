@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class NotarizedApplication : Item
     {
-        [Constructable]
+        [Constructible]
         public NotarizedApplication()
             : base(0x14EF)
         {

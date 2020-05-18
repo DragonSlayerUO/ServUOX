@@ -16,7 +16,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public BaseHouse House => BaseHouse.FindHouseAt(this);
 
-        [Constructable]
+        [Constructible]
         public HouseTeleporter(int itemID)
             : this(itemID, null)
         {

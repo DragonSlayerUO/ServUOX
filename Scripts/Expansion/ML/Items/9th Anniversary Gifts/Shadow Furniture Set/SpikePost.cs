@@ -5,7 +5,7 @@ namespace Server.Items
     [FlipableAddon(Direction.South, Direction.East)]
     public class SpikePostAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public SpikePostAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x364D, 1076676), 0, 0, 0);
@@ -50,7 +50,7 @@ namespace Server.Items
 
         public override bool ExcludeDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public SpikePostDeed()
         {
             LootType = LootType.Blessed;

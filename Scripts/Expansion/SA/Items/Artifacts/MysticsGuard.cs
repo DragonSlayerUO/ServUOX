@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1113536;
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public MysticsGuard()
             : base()
         {

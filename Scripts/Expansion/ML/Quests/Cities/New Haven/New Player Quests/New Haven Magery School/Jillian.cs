@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(ScribingArcaneKnowledgeQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Jillian()
             : base("Jillian", "the Inscription Instructor")
         {

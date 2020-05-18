@@ -27,13 +27,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public SecureLevel Level { get; set; }
 
-        [Constructable]
+        [Constructible]
         public SingingBall()
             : this(0xE2E)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SingingBall(int ItemId)
             : base(ItemId)
         {

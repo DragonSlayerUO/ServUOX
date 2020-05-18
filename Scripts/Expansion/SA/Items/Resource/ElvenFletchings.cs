@@ -5,13 +5,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.ElvenFletchings")]
     public class ElvenFletching : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public ElvenFletching()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ElvenFletching(int amount)
             : base(0x5737)
         {

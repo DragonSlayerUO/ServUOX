@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1fa1, 0x1fa2)]
     public class Tunic : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public Tunic()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Tunic(int hue)
             : base(0x1FA1, hue)
         {

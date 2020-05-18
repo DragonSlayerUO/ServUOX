@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Mandarinfish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public Mandarinfish()
             : base(0xA369)
         {

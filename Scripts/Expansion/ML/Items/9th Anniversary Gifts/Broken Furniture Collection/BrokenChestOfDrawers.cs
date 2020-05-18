@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class BrokenChestOfDrawersAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrokenChestOfDrawersAddon()
             : base()
         {
@@ -63,7 +63,7 @@ namespace Server.Items
 
     public class BrokenChestOfDrawersDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public BrokenChestOfDrawersDeed()
             : base()
         {

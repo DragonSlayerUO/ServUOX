@@ -15,7 +15,7 @@ namespace Server.Items
     public class MinotaurStatue : BaseAddon, IRewardItem
     {
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public MinotaurStatue(MinotaurStatueType type)
             : base()
         {
@@ -94,7 +94,7 @@ namespace Server.Items
     {
         private MinotaurStatueType m_StatueType;
         private bool m_IsRewardItem;
-        [Constructable]
+        [Constructible]
         public MinotaurStatueDeed()
             : base()
         {

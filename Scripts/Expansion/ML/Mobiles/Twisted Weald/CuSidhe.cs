@@ -8,13 +8,13 @@ namespace Server.Mobiles
     {
         public override double HealChance => 1.0;
 
-        [Constructable]
+        [Constructible]
         public CuSidhe()
             : this("a cu sidhe")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CuSidhe(string name)
             : base(name, 277, 0x3E91, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

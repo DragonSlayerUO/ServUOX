@@ -4,13 +4,13 @@ namespace Server.Items
     [Flipable(0xC6A, 0xC6B)]
     public class Pumpkin : Food
     {
-        [Constructable]
+        [Constructible]
         public Pumpkin()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Pumpkin(int amount)
             : base(amount, 0xC6A)
         {

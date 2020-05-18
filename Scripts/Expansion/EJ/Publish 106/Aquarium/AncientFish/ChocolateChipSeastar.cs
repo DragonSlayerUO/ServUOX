@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class ChocolateChipSeastar : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public ChocolateChipSeastar()
             : base(0xA395)
         {

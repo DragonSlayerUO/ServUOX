@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MantraEffervescenceStatuette : ShimmeringEffusionStatuette
     {
-        [Constructable]
+        [Constructible]
         public MantraEffervescenceStatuette()
             : base(0x2D94)
         {

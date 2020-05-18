@@ -16,7 +16,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBRanger());
         }
 
-        [Constructable]
+        [Constructible]
         public Robyn()
             : base("Robyn", "the Archer Instructor")
         {

@@ -10,7 +10,7 @@ namespace Server.Mobiles
         private bool m_BurstSac;
         private static bool m_Laid;
 
-        [Constructable]
+        [Constructible]
         public BlackSolenQueen()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -231,7 +231,7 @@ namespace Server.Mobiles
 
         public override string DefaultName => "egg sac";
 
-        [Constructable]
+        [Constructible]
         public BSQEggSac()
             : base(4316)
         {

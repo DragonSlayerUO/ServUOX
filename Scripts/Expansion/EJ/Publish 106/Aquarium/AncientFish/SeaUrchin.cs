@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class SeaUrchin : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public SeaUrchin()
             : base(0xA388)
         {

@@ -14,7 +14,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150253;  // Helm of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public HelmOfVillainousEpiphany()
         {
             Resource = CraftResource.None;
@@ -86,7 +86,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150254;  // Gorget of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GorgetOfVillainousEpiphany()
         {
             Hue = 1778;
@@ -156,7 +156,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150255;  // Breastplate of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public BreastplateOfVillainousEpiphany()
         {
             Resource = CraftResource.None;
@@ -228,7 +228,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150256;  // Arms of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public ArmsOfVillainousEpiphany()
         {
             Resource = CraftResource.None;
@@ -300,7 +300,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150257;  // Gauntlets of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GauntletsOfVillainousEpiphany()
         {
             Resource = CraftResource.None;
@@ -372,7 +372,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150258;  // Leggings of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public LegsOfVillainousEpiphany()
         {
             Resource = CraftResource.None;
@@ -444,7 +444,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150263;  // Kilt of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public KiltOfVillainousEpiphany()
         {
             Hue = 1778;
@@ -514,7 +514,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150260;  // Earrings of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public EarringsOfVillainousEpiphany()
         {
             Hue = 1778;
@@ -584,7 +584,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150255;  // Breastplate of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GargishBreastplateOfVillainousEpiphany()
         {
             Hue = 1778;
@@ -654,7 +654,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150256;  // Arms of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GargishArmsOfVillainousEpiphany()
         {
             Hue = 1778;
@@ -724,7 +724,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150264;  // Necklace of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public NecklaceOfVillainousEpiphany()
         {
             Hue = 1778;
@@ -794,7 +794,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1150258;  // Legs of Villainous Epiphany
 
-        [Constructable]
+        [Constructible]
         public GargishLegsOfVillainousEpiphany()
         {
             Hue = 1778;

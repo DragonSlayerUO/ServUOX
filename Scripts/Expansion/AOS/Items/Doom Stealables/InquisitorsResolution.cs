@@ -5,7 +5,7 @@ namespace Server.Items
     public class InquisitorsResolution : PlateGloves
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public InquisitorsResolution()
         {
             Hue = 0x4F2;

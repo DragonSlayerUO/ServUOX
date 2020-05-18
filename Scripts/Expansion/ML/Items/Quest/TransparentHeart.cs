@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TransparentHeart : GoldEarrings
     {
-        [Constructable]
+        [Constructible]
         public TransparentHeart()
             : base()
         {

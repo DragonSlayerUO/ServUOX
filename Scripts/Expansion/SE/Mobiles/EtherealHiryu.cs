@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealHiryu : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealHiryu()
             : base(0x276A, 0x3E94, 0x3E94, DefaultEtherealHue)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113517;  // Axes Of Fury
 
-        [Constructable]
+        [Constructible]
         public AxesOfFury()
         {
             Hue = 33;

@@ -5,7 +5,7 @@ namespace Server.Items
     public class GargishSignOfChaos : GargishChaosShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GargishSignOfChaos()
             : base()
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FountainAddon : StoneFountainAddon
     {
-        [Constructable]
+        [Constructible]
         public FountainAddon()
             : base()
         {
@@ -33,7 +33,7 @@ namespace Server.Items
 
     public class FountainDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public FountainDeed()
             : base()
         {

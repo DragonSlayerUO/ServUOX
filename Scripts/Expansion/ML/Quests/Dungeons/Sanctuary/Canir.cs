@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Canir : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Canir()
             : base("Canir", "the Thaumaturgist")
         {

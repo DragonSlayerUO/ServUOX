@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CodexOfVirtueAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public CodexOfVirtueAddon()
         {
             AddComponent(new AddonComponent(16637), 3, 3, 0);
@@ -69,7 +69,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113919; // a Codex of Virtue deed
 
-        [Constructable]
+        [Constructible]
         public CodexOfVirtueDeed()
         {
         }

@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override string DefaultName => "Garden Sculpture";
 
-        [Constructable]
+        [Constructible]
         public GardenSculpture()
             : base(0xA565)
         {

@@ -90,7 +90,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public TerMurQuestRewardBook()
             : this(RandomType())
         {

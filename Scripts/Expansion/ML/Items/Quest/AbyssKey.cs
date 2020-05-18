@@ -6,7 +6,7 @@ namespace Server.Items
     {
         private int m_Lifespan;
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public AbyssKey(int itemID)
             : base(itemID)
         {

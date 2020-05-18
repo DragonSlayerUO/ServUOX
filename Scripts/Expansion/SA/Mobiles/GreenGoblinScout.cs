@@ -8,7 +8,7 @@ namespace Server.Mobiles
     [CorpseName("a goblin corpse")]
     public class GreenGoblinScout : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GreenGoblinScout()
             : base(AIType.AI_OrcScout, FightMode.Closest, 10, 7, 0.2, 0.4)
         {

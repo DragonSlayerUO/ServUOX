@@ -13,7 +13,7 @@ namespace Server.Engines.ArenaSystem
         [CommandProperty(AccessLevel.GameMaster)]
         public ArenaDuel Duel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ArenaGate(ArenaDuel duel)
             : base(0xF6C)
         {

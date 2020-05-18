@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153424;  // putrid heart
 
-        [Constructable]
+        [Constructible]
         public PutridHeart()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PutridHeart(int amount)
             : base(0xF91)
         {

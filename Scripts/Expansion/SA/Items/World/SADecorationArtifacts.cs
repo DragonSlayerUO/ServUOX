@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1095947;// gargish bentas vase
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public GargishBentasVaseArtifact()
             : base(0x42B3)
         {
@@ -43,7 +43,7 @@ namespace Server.Items
         public override int LabelNumber => 1095950;// gargish portrait
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public GargishPortraitArtifact()
             : base(0x42B6)
         {
@@ -77,7 +77,7 @@ namespace Server.Items
         public override int LabelNumber => 1095954;// dying plant
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public DyingPlantArtifact()
             : base(0x42BA)
         {
@@ -111,7 +111,7 @@ namespace Server.Items
         public override int LabelNumber => 1095953;// large dying plant
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public LargeDyingPlantArtifact()
             : base(0x42B9)
         {
@@ -145,7 +145,7 @@ namespace Server.Items
         public override int LabelNumber => 1095960;// gargish luck totem
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public GargishLuckTotemArtifact()
             : base(0x42C0)
         {
@@ -179,7 +179,7 @@ namespace Server.Items
         public override int LabelNumber => 1095961;// gargish knowledge totem
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public GargishKnowledgeTotemArtifact()
             : base(0x42C1)
         {
@@ -213,7 +213,7 @@ namespace Server.Items
         public override int LabelNumber => 1095959;// Book of Truth
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public BookOfTruthArtifact()
             : base(0x42BF)
         {
@@ -247,7 +247,7 @@ namespace Server.Items
         public override int LabelNumber => 1095946;// gargish traditional vase
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public GargishTraditionalVaseArtifact()
             : base(0x42B2)
         {
@@ -281,7 +281,7 @@ namespace Server.Items
         public override int LabelNumber => 1095955;// gargish protective totem
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public GargishProtectiveTotemArtifact()
             : base(0x42BB)
         {
@@ -315,7 +315,7 @@ namespace Server.Items
         public override int LabelNumber => 1095445;// pushme pullyu
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public PushmePullyuArtifact()
             : base(0x40BD)
         {
@@ -349,7 +349,7 @@ namespace Server.Items
         public override int LabelNumber => 1095958;// large pewter bowl
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public LargePewterBowlArtifact()
             : base(0x42BE)
         {
@@ -383,7 +383,7 @@ namespace Server.Items
         public override int LabelNumber => 1095962;// gargish warrior statue
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public GargishMemorialStatueArtifact()
             : base(0x42C3)
         {
@@ -417,7 +417,7 @@ namespace Server.Items
         public override int LabelNumber => 1113667;// stolen bottles of liquor (2)
         public override int ArtifactRarity => 4;
 
-        [Constructable]
+        [Constructible]
         public StolenBottlesOfLiquor1Artifact()
             : base(0x099C)
         {
@@ -451,7 +451,7 @@ namespace Server.Items
         public override int LabelNumber => 1113667;// stolen bottles of liquor (2)
         public override int ArtifactRarity => 4;
 
-        [Constructable]
+        [Constructible]
         public StolenBottlesOfLiquor2Artifact()
             : base(0x09A0)
         {
@@ -485,7 +485,7 @@ namespace Server.Items
         public override int LabelNumber => 1113666;// stolen bottles of liquor (3)
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public StolenBottlesOfLiquor3Artifact()
             : base(0x099D)
         {
@@ -519,7 +519,7 @@ namespace Server.Items
         public override int LabelNumber => 1113668;// stolen bottles of liquor (4)
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public StolenBottlesOfLiquor4Artifact()
             : base(0x099E)
         {
@@ -553,7 +553,7 @@ namespace Server.Items
         public override int LabelNumber => 1113676;// bottles of spoiled wine (2)
         public override int ArtifactRarity => 4;
 
-        [Constructable]
+        [Constructible]
         public BottlesOfSpoiledWine1Artifact()
             : base(0x09C6)
         {
@@ -587,7 +587,7 @@ namespace Server.Items
         public override int LabelNumber => 1113677;// bottles of spoiled wine (3)
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public BottlesOfSpoiledWine2Artifact()
             : base(0x09C5)
         {
@@ -621,7 +621,7 @@ namespace Server.Items
         public override int LabelNumber => 1113678;// bottles of spoiled wine (4)
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public BottlesOfSpoiledWine3Artifact()
             : base(0x09C4)
         {
@@ -655,7 +655,7 @@ namespace Server.Items
         public override int LabelNumber => 1113671;// Navrey's web (1)
         public override int ArtifactRarity => 4;
 
-        [Constructable]
+        [Constructible]
         public NaverysWeb1Artifact()
             : base(0x0EE3)
         {
@@ -689,7 +689,7 @@ namespace Server.Items
         public override int LabelNumber => 1113672;// Navrey's web (2)
         public override int ArtifactRarity => 4;
 
-        [Constructable]
+        [Constructible]
         public NaverysWeb2Artifact()
             : base(0x0EE5)
         {
@@ -723,7 +723,7 @@ namespace Server.Items
         public override int LabelNumber => 1113673;// Navrey's web (3)
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public NaverysWeb3Artifact()
             : base(0x0EE4)
         {
@@ -757,7 +757,7 @@ namespace Server.Items
         public override int LabelNumber => 1113675;// Navrey's Web (4)
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public NaverysWeb4Artifact()
             : base(0x0EE6)
         {
@@ -791,7 +791,7 @@ namespace Server.Items
         public override int LabelNumber => 1113672;// Navrey's web (2)
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public NaverysWeb5Artifact()
             : base(0x10D2)
         {
@@ -825,7 +825,7 @@ namespace Server.Items
         public override int LabelNumber => 1113671;// Navrey's web (1)
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public NaverysWeb6Artifact()
             : base(0x10D3)
         {
@@ -859,7 +859,7 @@ namespace Server.Items
         public override int LabelNumber => 1113665;// rotted oars
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public RottedOarsArtifact()
             : base(0x1E2B)
         {
@@ -893,7 +893,7 @@ namespace Server.Items
         public override int LabelNumber => 1113664;// bloody spoon
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public BloodySpoonArtifact()
             : base(0x09C2)
         {
@@ -927,7 +927,7 @@ namespace Server.Items
         public override int LabelNumber => 1113663;// mysterious supper
         public override int ArtifactRarity => 3;
 
-        [Constructable]
+        [Constructible]
         public MysteriousSupperArtifact()
             : base(0x09DB)
         {
@@ -961,7 +961,7 @@ namespace Server.Items
         public override int LabelNumber => 1113662;// dried up ink well
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public DriedUpInkWellArtifact()
             : base(0x2D61)
         {
@@ -995,7 +995,7 @@ namespace Server.Items
         public override int LabelNumber => 1113659;// Tyball's flask stand
         public override int ArtifactRarity => 9;
 
-        [Constructable]
+        [Constructible]
         public TyballsFlaskStandArtifact()
             : base(0x1829)
         {
@@ -1029,7 +1029,7 @@ namespace Server.Items
         public override int LabelNumber => 1113660;// block and tackle
         public override int ArtifactRarity => 9;
 
-        [Constructable]
+        [Constructible]
         public BlockAndTackleArtifact()
             : base(0x1E9A)
         {
@@ -1063,7 +1063,7 @@ namespace Server.Items
         public override int LabelNumber => 1113661;// remnants of meat loaf
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public RemnantsOfMeatLoafArtifact()
             : base(0x09AE)
         {
@@ -1097,7 +1097,7 @@ namespace Server.Items
         public override int LabelNumber => 1113658;// half eaten supper
         public override int ArtifactRarity => 5;
 
-        [Constructable]
+        [Constructible]
         public HalfEatenSupperArtifact()
             : base(0x0A19)
         {
@@ -1131,7 +1131,7 @@ namespace Server.Items
         public override int LabelNumber => 1113680;// priceless treasure
         public override int ArtifactRarity => 8;
 
-        [Constructable]
+        [Constructible]
         public PricelessTreasureArtifact()
             : base(0x1B54)
         {
@@ -1165,7 +1165,7 @@ namespace Server.Items
         public override int LabelNumber => 1113679;// fake copper ingots
         public override int ArtifactRarity => 7;
 
-        [Constructable]
+        [Constructible]
         public FakeCopperIngotsArtifact()
             : base(0x1BE5)
         {
@@ -1199,7 +1199,7 @@ namespace Server.Items
         public override int LabelNumber => 1113681;// jugs of goblin rotgut
         public override int ArtifactRarity => 3;
 
-        [Constructable]
+        [Constructible]
         public JugsOfGoblinRotgutArtifact()
             : base(0x098E)
         {
@@ -1233,7 +1233,7 @@ namespace Server.Items
         public override int LabelNumber => 1113669;// battered pan
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public BatteredPanArtifact()
             : base(0x09DE)
         {
@@ -1267,7 +1267,7 @@ namespace Server.Items
         public override int LabelNumber => 1113670;// rusted pan
         public override int ArtifactRarity => 6;
 
-        [Constructable]
+        [Constructible]
         public RustedPanArtifact()
             : base(0x09E8)
         {

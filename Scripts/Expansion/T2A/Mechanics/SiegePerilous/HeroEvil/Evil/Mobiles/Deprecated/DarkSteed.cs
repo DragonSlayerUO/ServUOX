@@ -4,14 +4,14 @@ namespace Server.Mobiles
     [CorpseName("a dark steed corpse")]
     public class DarkSteed : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public DarkSteed()
             : this("a dark steed")
         {
 
         }
 
-        [Constructable]
+        [Constructible]
         public DarkSteed(string name)
             : base(name, 0x75, 0x3EA8, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

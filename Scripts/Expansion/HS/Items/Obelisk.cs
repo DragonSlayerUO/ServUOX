@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Obelisk : Item
     {
-        [Constructable]
+        [Constructible]
         public Obelisk()
             : base(0x1184)
         {

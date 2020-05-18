@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1114842;  // Mangler
 
-        [Constructable]
+        [Constructible]
         public Mangler()
             : base()
         {

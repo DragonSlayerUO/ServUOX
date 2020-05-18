@@ -26,7 +26,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.Counselor, AccessLevel.GameMaster)]
         public RecallRuneType Type { get; set; }
 
-        [Constructable]
+        [Constructible]
         public RecallRune()
             : base(0x1F14)
         {

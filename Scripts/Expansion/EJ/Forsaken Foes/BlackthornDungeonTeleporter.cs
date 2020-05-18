@@ -13,13 +13,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public FellowshipChain Chain { get; set; }
 
-        [Constructable]
+        [Constructible]
         public BlackthornDungeonTeleporter()
             : this(FellowshipChain.None)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BlackthornDungeonTeleporter(FellowshipChain chain)
             : base(0x1827)
         {

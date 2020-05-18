@@ -54,7 +54,7 @@ namespace Server.Items
             : base(serial)
         { }
 
-        [Constructable]
+        [Constructible]
         public BankCheck(int worth)
             : base(0x14F0)
         {

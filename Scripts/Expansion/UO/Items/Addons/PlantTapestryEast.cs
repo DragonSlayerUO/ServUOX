@@ -5,7 +5,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new PlantTapestryEastDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public PlantTapestryEastAddon()
         {
             AddComponent(new AddonComponent(0x4C9F), 0, 0, 0);
@@ -35,7 +35,7 @@ namespace Server.Items
         public override BaseAddon Addon => new PlantTapestryEastAddon();
         public override int LabelNumber => 1154147;  // Plant Tapestry (East)
 
-        [Constructable]
+        [Constructible]
         public PlantTapestryEastDeed()
         {
         }

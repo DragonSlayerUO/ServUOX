@@ -95,7 +95,7 @@ namespace Server.Engines.Shadowguard
 
     public class ShantyThePirate : ShadowguardPirate
     {
-        [Constructable]
+        [Constructible]
         public ShantyThePirate()
         {
             Name = "Shanty";
@@ -143,7 +143,7 @@ namespace Server.Engines.Shadowguard
     {
         public override bool CanMoveOverObstacles => false;
 
-        [Constructable]
+        [Constructible]
         public VileWaterElemental()
         {
             Name = "a vile water elemental";
@@ -188,7 +188,7 @@ namespace Server.Engines.Shadowguard
     {
         public override bool CanMoveOverObstacles => false;
 
-        [Constructable]
+        [Constructible]
         public HurricaneElemental()
         {
             Name = "a hurricane elemental";
@@ -240,7 +240,7 @@ namespace Server.Engines.Shadowguard
 
     public class VileTreefellow : FeralTreefellow
     {
-        [Constructable]
+        [Constructible]
         public VileTreefellow()
         {
             Name = "a vile treefellow";
@@ -311,12 +311,12 @@ namespace Server.Engines.Shadowguard
     {
         public ArmoryEncounter Encounter { get; set; }
 
-        [Constructable]
+        [Constructible]
         public EnsorcelledArmor() : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnsorcelledArmor(ArmoryEncounter encounter) : base(AIType.AI_Melee, FightMode.Weakest, 10, 1, 0.2, 0.4)
         {
             Encounter = encounter;

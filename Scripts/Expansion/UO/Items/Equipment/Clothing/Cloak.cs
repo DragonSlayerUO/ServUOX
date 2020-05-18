@@ -87,13 +87,13 @@ namespace Server.Items
 
         #endregion
 
-        [Constructable]
+        [Constructible]
         public Cloak()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Cloak(int hue)
             : base(0x1515, hue)
         {

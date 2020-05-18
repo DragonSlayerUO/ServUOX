@@ -5,7 +5,7 @@ namespace Server.Items
     public class ButchersWarCleaver : WarCleaver
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ButchersWarCleaver()
             : base()
         {

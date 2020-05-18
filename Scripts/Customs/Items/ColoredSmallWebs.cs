@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ColoredSmallWebs : Item
     {
-        [Constructable]
+        [Constructible]
         public ColoredSmallWebs()
             : base(Utility.RandomBool() ? 0x10d6 : 0x10d7)
         {

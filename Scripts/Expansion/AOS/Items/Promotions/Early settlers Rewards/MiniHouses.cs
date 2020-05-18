@@ -80,13 +80,13 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public MiniHouseAddon()
             : this(MiniHouseType.StoneAndPlaster)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MiniHouseAddon(MiniHouseType type)
         {
             m_Type = type;
@@ -182,13 +182,13 @@ namespace Server.Items
 
         public override BaseAddon Addon => new MiniHouseAddon(m_Type);
 
-        [Constructable]
+        [Constructible]
         public MiniHouseDeed()
             : this(MiniHouseType.StoneAndPlaster)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MiniHouseDeed(MiniHouseType type)
         {
             m_Type = type;

@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable]
     public class WallTorch : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public WallTorch()
             : base(0xA05)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AnimalPheromone : Item
     {
-        [Constructable]
+        [Constructible]
         public AnimalPheromone()
             : base(0x182F)
         {

@@ -25,7 +25,7 @@ namespace Server.Items
         public static readonly int MaxKeys = 20;
         private List<Key> m_Keys;
 
-        [Constructable]
+        [Constructible]
         public KeyRing()
             : base(0x1011)
         {

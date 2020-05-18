@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1073221;// Britannia Royal Zoo Member
 
-        [Constructable]
+        [Constructible]
         public ZooMemberThighBoots()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ZooMemberThighBoots(int hue)
             : base(hue)
         {

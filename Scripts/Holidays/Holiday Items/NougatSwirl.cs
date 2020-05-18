@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class NougatSwirl : CandyCane
     {
-        [Constructable]
+        [Constructible]
         public NougatSwirl()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public NougatSwirl(int amount)
             : base(0x4690)
         {

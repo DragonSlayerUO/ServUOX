@@ -10,7 +10,7 @@ namespace Server.Items
         private TimeSpan m_ResetDelay;
         private bool m_Broadcasting;
         private DateTime m_LastBroadcast;
-        [Constructable]
+        [Constructible]
         public WarningItem(int itemID, int range, int warning)
             : base(itemID)
         {
@@ -25,7 +25,7 @@ namespace Server.Items
             m_Range = range;
         }
 
-        [Constructable]
+        [Constructible]
         public WarningItem(int itemID, int range, string warning)
             : base(itemID)
         {
@@ -181,14 +181,14 @@ namespace Server.Items
 
     public class HintItem : WarningItem
     {
-        [Constructable]
+        [Constructible]
         public HintItem(int itemID, int range, int warning, int hint)
             : base(itemID, range, warning)
         {
             HintNumber = hint;
         }
 
-        [Constructable]
+        [Constructible]
         public HintItem(int itemID, int range, string warning, string hint)
             : base(itemID, range, warning)
         {

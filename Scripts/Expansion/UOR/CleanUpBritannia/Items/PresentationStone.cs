@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154745;  // Presentation Stone
 
-        [Constructable]
+        [Constructible]
         public PresentationStone()
             : base(0x32F2)
         {

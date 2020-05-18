@@ -6,13 +6,13 @@ namespace Server.Mobiles
 {
     public class PetParrot : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public PetParrot()
             : this(DateTime.MinValue, null, 0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PetParrot(DateTime birth, string name, int hue)
             : base(AIType.AI_Animal, FightMode.None, 10, 1, 0.2, 0.4)
         {

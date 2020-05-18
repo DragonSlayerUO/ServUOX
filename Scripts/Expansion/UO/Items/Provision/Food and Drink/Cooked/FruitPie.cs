@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041346;// baked fruit pie
 
-        [Constructable]
+        [Constructible]
         public FruitPie()
             : base(0x1041)
         {

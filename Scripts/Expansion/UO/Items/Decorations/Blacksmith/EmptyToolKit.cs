@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class EmptyToolKit : Item
     {
-        [Constructable]
+        [Constructible]
         public EmptyToolKit()
             : base(0x1EB6)
         {

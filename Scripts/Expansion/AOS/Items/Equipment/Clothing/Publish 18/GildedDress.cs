@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x230E, 0x230D)]
     public class GildedDress : BaseOuterTorso
     {
-        [Constructable]
+        [Constructible]
         public GildedDress()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GildedDress(int hue)
             : base(0x230E, hue)
         {

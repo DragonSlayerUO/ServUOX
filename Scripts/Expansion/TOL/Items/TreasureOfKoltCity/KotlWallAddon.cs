@@ -8,7 +8,7 @@ namespace Server.Engines.TreasuresOfKotlCity
     {
         public override BaseAddonDeed Deed => null;
 
-        [Constructable]
+        [Constructible]
         public KotlWallAddon()
         {
             AddComplexComponent(this, 6270, -1, 3, 0, 2591, -1, "", 1);// 7

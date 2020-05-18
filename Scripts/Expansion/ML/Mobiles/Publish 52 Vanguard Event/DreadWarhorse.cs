@@ -3,13 +3,13 @@ namespace Server.Mobiles
     [CorpseName("a dread warhorse corpse")]
     public class DreadWarhorse : BaseMount
     {
-        [Constructable]
+        [Constructible]
         public DreadWarhorse()
             : this("a dread warhorse")
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DreadWarhorse(string name)
             : base(name, 0x74, 0x3EA7, AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class EnhancedBandage : Bandage, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public EnhancedBandage()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnhancedBandage(int amount)
             : base(amount)
         {
@@ -59,13 +59,13 @@ namespace Server.Items
     {
         private int m_Charges;
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public FountainOfLife()
             : this(10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FountainOfLife(int charges)
             : base(0x2AC0)
         {
@@ -242,13 +242,13 @@ namespace Server.Items
     public class FountainOfLifeDeed : BaseAddonContainerDeed
     {
         private int m_Charges;
-        [Constructable]
+        [Constructible]
         public FountainOfLifeDeed()
             : this(10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FountainOfLifeDeed(int charges)
             : base()
         {

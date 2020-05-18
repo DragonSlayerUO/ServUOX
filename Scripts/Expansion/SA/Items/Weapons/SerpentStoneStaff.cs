@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x906, 0x406F)]
     public class SerpentStoneStaff : BaseStaff
     {
-        [Constructable]
+        [Constructible]
         public SerpentStoneStaff()
             : base(0x906)
         {

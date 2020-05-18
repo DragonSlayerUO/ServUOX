@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class VesperDonationBox : BaseCollectionItem
     {
-        [Constructable]
+        [Constructible]
         public VesperDonationBox()
             : base(0xE7D)
         {

@@ -95,7 +95,7 @@ namespace Server.Items
         public override Food Piece => new SliceOfPie();
         public override int Pieces => 6;
 
-        [Constructable]
+        [Constructible]
         public SweetPotatoPie()
             : base(19469)
         {
@@ -134,7 +134,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153519;  // slice of pie
 
-        [Constructable]
+        [Constructible]
         public SliceOfPie()
             : base(19459)
         {
@@ -167,7 +167,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153516;  // mashed sweet potatoes
 
-        [Constructable]
+        [Constructible]
         public MashedSweetPotatoes()
             : base(19461)
         {
@@ -204,7 +204,7 @@ namespace Server.Items
         public override Food Piece => new DinnerRoll();
         public override int Pieces => 13;
 
-        [Constructable]
+        [Constructible]
         public BasketOfRolls()
             : base(19371)
         {
@@ -236,7 +236,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153520;  // dinner roll
 
-        [Constructable]
+        [Constructible]
         public DinnerRoll()
             : base(2538)
         {
@@ -288,7 +288,7 @@ namespace Server.Items
 
         public override int Pieces => 8;
 
-        [Constructable]
+        [Constructible]
         public TurkeyPlatter()
             : base(18824)
         {
@@ -320,7 +320,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153532;  // Turkey Dinner
 
-        [Constructable]
+        [Constructible]
         public TurkeyDinner()
             : base(2479)
         {
@@ -353,7 +353,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153505;  // Roast Duck
 
-        [Constructable]
+        [Constructible]
         public RoastDuck()
             : base(2487)
         {
@@ -386,7 +386,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153507;  // Roast Turkey
 
-        [Constructable]
+        [Constructible]
         public RoastTurkey()
             : base(2487)
         {
@@ -419,7 +419,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153506;  // Roast Turkey
 
-        [Constructable]
+        [Constructible]
         public RoastChicken()
             : base(2487)
         {
@@ -451,7 +451,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153508;  // turkey leg
 
-        [Constructable]
+        [Constructible]
         public TurkeyLeg()
             : base(5640)
         {
@@ -483,7 +483,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153509;  // Giblet Gravey
 
-        [Constructable]
+        [Constructible]
         public GibletGravey()
             : base(5634)
         {

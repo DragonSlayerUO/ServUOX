@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an Irk corpse")]
     public class Irk : Changeling
     {
-        [Constructable]
+        [Constructible]
         public Irk()
         {
             Hue = DefaultHue;

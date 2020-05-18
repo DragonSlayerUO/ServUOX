@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class VoidOrb : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public VoidOrb()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public VoidOrb(int amount)
             : base(0x573E)
         {

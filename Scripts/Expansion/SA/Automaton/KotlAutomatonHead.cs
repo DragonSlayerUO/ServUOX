@@ -13,7 +13,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public CraftResource Resource { get { return _Resource; } set { _Resource = value; Hue = CraftResources.GetHue(_Resource); InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public KotlAutomatonHead()
             : base(0x9DB1)
         {

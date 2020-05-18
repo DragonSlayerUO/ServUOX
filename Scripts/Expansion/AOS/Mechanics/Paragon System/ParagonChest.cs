@@ -13,7 +13,7 @@ namespace Server.Items
             0x966, 0x96D, 0x972, 0x973, 0x979
         };
         private string m_Name;
-        [Constructable]
+        [Constructible]
         public ParagonChest(string name, int level)
             : base(Utility.RandomList(m_ItemIDs))
         {

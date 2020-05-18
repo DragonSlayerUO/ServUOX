@@ -8,7 +8,7 @@ namespace Server.Items
         public override int LabelNumber => 1075307;  // Bag of Jewels
         public override bool HiddenQuestItemHue => true;
 
-        [Constructable]
+        [Constructible]
         public BagOfJewels()
             : base(0xE76)
         {

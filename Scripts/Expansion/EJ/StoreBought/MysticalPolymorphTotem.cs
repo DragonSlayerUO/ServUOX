@@ -33,7 +33,7 @@ namespace Server.Items
             set { m_Hue = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public MysticalPolymorphTotem()
             : base(0xA276)
         {

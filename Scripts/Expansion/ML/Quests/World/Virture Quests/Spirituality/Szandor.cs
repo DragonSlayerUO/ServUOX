@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Szandor : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Szandor()
             : base("Skeleton of Szandor", "the Late Architect")
         {

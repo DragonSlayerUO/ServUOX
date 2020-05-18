@@ -6,13 +6,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1159162;  // ocean sapphire
 
-        [Constructable]
+        [Constructible]
         public OceanSapphire()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public OceanSapphire(int amount)
             : base(0xA414)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class WeaknessWand : BaseWand
     {
-        [Constructable]
+        [Constructible]
         public WeaknessWand()
             : base(WandEffect.Weakness, 5, 30)
         {

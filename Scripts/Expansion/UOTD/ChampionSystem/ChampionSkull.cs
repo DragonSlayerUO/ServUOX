@@ -17,12 +17,12 @@ namespace Server.Items
 
         private ChampionSkullType m_Type;
 
-        [Constructable]
+        [Constructible]
         public ChampionSkull()
             : this(RandomType)
         { }
 
-        [Constructable]
+        [Constructible]
         public ChampionSkull(ChampionSkullType type)
             : base(0x1AE1)
         {

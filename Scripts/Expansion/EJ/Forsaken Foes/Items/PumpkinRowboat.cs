@@ -32,7 +32,7 @@ namespace Server.Multis
         [CommandProperty(AccessLevel.GameMaster)]
         public Rudder Rudder { get; private set; }
 
-        [Constructable]
+        [Constructible]
         public PumpkinRowBoat(Direction d)
             : base(d, false)
         {
@@ -210,7 +210,7 @@ namespace Server.Multis
         public override int LabelNumber => 1159233;  // Pumpkin Rowboat
         public override BaseBoat Boat => new PumpkinRowBoat(BoatDirection);
 
-        [Constructable]
+        [Constructible]
         public PumpkinRowBoatDeed()
             : base(0x50, Point3D.Zero)
         {

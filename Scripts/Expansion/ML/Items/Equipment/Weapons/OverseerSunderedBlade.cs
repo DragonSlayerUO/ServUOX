@@ -5,7 +5,7 @@ namespace Server.Items
     public class OverseerSunderedBlade : RadiantScimitar
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public OverseerSunderedBlade()
         {
             Attributes.RegenStam = 2;

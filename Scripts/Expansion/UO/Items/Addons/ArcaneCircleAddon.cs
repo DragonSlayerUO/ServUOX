@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class ArcaneCircleAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ArcaneCircleAddon()
         {
             AddComponent(new AddonComponent(0x3083), -1, -1, 0);
@@ -56,7 +56,7 @@ namespace Server.Items
 
     public class ArcaneCircleDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public ArcaneCircleDeed()
         {
         }

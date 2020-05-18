@@ -5,7 +5,7 @@ namespace Server.Items
     public class ShadowDancerLeggings : LeatherLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public ShadowDancerLeggings()
         {
             Hue = 0x455;

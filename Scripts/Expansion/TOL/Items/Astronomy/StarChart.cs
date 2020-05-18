@@ -51,7 +51,7 @@ namespace Server.Items
 
         public override int LabelNumber => _Constellation == -1 ? 1158743 : 1158493;  // An Indecipherable Star Chart : Star Chart
 
-        [Constructable]
+        [Constructible]
         public StarChart()
             : base(0xA1E4)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class OblivionsNeedle : Dagger
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public OblivionsNeedle()
         {
             Attributes.BonusStam = 20;

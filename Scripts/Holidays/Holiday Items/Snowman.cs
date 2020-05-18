@@ -6,25 +6,25 @@ namespace Server.Items
     public class Snowman : Item, IDyable
     {
         private string m_Title;
-        [Constructable]
+        [Constructible]
         public Snowman()
             : this(Utility.RandomDyedHue(), GetRandomTitle())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Snowman(int hue)
             : this(hue, GetRandomTitle())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Snowman(string title)
             : this(Utility.RandomDyedHue(), title)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Snowman(int hue, string title)
             : base(Utility.Random(0x2328, 2))
         {

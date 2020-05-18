@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Synaeva : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Synaeva()
             : base("Synaeva", "the Arcanist")
         {

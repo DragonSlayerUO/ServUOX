@@ -16,7 +16,7 @@ namespace Server.Mobiles
         private DateTime m_NextSay;
         private DateTime m_NextAbilityTime;
 
-        [Constructable]
+        [Constructible]
         public KhalAnkur()
             : base(AIType.AI_Necro)
         {

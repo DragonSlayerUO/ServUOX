@@ -5,7 +5,7 @@ namespace Server.Items
     public class RuneBladeOfKnowledge : RuneBlade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RuneBladeOfKnowledge()
         {
             Attributes.SpellDamage = 5;

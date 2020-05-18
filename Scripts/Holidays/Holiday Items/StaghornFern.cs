@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154460;  // Staghorn Fern
 
-        [Constructable]
+        [Constructible]
         public StaghornFernAddon()
             : base(0x9965)
         {
@@ -85,7 +85,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154460;  // Staghorn Fern
 
-        [Constructable]
+        [Constructible]
         public StaghornFernDeed()
             : base(0x14F0)
         {

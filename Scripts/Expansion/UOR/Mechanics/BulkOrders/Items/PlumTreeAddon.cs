@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new PlumTreeAddonDeed();
 
-        [Constructable]
+        [Constructible]
         public PlumTreeAddon()
         {
             AddComponent(new LocalizedAddonComponent(0x9E38, 1029965), 0, 0, 0);
@@ -41,7 +41,7 @@ namespace Server.Items
         public override int LabelNumber => 1157312;  // Plum Tree
         public override BaseAddon Addon => new PlumTreeAddon();
 
-        [Constructable]
+        [Constructible]
         public PlumTreeAddonDeed()
         {
         }

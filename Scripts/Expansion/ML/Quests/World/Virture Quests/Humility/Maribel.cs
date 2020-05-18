@@ -9,7 +9,7 @@ namespace Server.Mobiles
 
         public override bool IsActiveVendor => true;
 
-        [Constructable]
+        [Constructible]
         public Maribel()
             : base("Maribel", "the Waitress")
         {

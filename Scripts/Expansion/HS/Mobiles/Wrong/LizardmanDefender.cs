@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a lizardman corpse")]
     public class LizardmanDefender : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public LizardmanDefender()
             : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

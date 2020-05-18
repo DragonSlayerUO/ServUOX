@@ -6,7 +6,7 @@ namespace Server.Items
     public class Guillotine : Item
     {
         private DateTime m_NextUse;
-        [Constructable]
+        [Constructible]
         public Guillotine()
             : base(4656)
         {

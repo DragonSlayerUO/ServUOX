@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CorporealBrumeStatuette : ShimmeringEffusionStatuette
     {
-        [Constructable]
+        [Constructible]
         public CorporealBrumeStatuette()
             : base(0x2D94)
         {

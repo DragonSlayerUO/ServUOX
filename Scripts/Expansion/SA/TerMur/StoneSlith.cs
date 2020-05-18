@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a slith corpse")]
     public class StoneSlith : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public StoneSlith()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

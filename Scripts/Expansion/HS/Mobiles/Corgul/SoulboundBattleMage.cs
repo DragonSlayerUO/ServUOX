@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class SoulboundBattleMage : EvilMageLord
     {
-        [Constructable]
+        [Constructible]
         public SoulboundBattleMage()
         {
             Title = "the soulbound battle mage";

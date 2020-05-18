@@ -5,7 +5,7 @@ namespace Server.Items
     public class MagekillerAssassinSpike : AssassinSpike
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MagekillerAssassinSpike()
         {
             WeaponAttributes.HitLeechMana = 16;

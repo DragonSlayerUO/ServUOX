@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class WaterWheelAddon : BaseAddon, IWaterSource
     {
-        [Constructable]
+        [Constructible]
         public WaterWheelAddon(DirectionType type)
         {
             switch (type)
@@ -95,7 +95,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public WaterWheelDeed()
             : base()
         {

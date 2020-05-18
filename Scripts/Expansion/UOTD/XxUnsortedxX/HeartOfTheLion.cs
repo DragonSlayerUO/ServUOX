@@ -5,7 +5,7 @@ namespace Server.Items
     public class HeartOfTheLion : PlateChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HeartOfTheLion()
         {
             Hue = 0x501;

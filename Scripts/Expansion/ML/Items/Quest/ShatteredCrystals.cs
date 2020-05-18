@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ShatteredCrystals : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public ShatteredCrystals()
             : base(0x223F)
         {

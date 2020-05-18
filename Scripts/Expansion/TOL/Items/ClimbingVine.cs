@@ -12,13 +12,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D ClimbLocation { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ClimbingVine()
             : this(Point3D.Zero)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ClimbingVine(Point3D p)
             : base(0x1AA1)
         {

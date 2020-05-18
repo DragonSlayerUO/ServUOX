@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HydraScale : Item
     {
-        [Constructable]
+        [Constructible]
         public HydraScale()
             : base(0x26B4)
         {

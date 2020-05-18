@@ -5,7 +5,7 @@ namespace Server.Items
     public class PolarBearStatue : Item
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public PolarBearStatue()
             : base(0x20E1)
         {

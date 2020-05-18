@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PrismOfLightTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public PrismOfLightTele()
             : base(new Point3D(6474, 188, 0), Map.Trammel)
         {
@@ -56,7 +56,7 @@ namespace Server.Items
 
     public class PrismOfLightTeleFel : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public PrismOfLightTeleFel()
             : base(new Point3D(6474, 188, 0), Map.Felucca)
         {
@@ -108,7 +108,7 @@ namespace Server.Items
 
     public class CrystalFieldTele : Item
     {
-        [Constructable]
+        [Constructible]
         public CrystalFieldTele()
             : base(0x3818)
         {

@@ -5,13 +5,13 @@ namespace Server.Items
     [Flipable(0x312F, 0x3130)]
     public class SeveredHumanEars : Item
     {
-        [Constructable]
+        [Constructible]
         public SeveredHumanEars()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SeveredHumanEars(int amount)
             : base(Utility.RandomList(0x312F, 0x3130))
         {

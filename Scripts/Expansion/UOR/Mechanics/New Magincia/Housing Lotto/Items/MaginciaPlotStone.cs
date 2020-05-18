@@ -19,7 +19,7 @@ namespace Server.Engines.NewMagincia
             set { m_Plot = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public MaginciaPlotStone() : base(3805)
         {
             Movable = false;

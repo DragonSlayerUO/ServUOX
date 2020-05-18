@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113721;  // Torc of the Guardians
 
-        [Constructable]
+        [Constructible]
         public TorcOfTheGuardians()
         {
             Hue = 1837;

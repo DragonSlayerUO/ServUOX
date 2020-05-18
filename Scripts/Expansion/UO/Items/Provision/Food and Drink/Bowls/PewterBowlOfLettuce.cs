@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PewterBowlOfLettuce : Food
     {
-        [Constructable]
+        [Constructible]
         public PewterBowlOfLettuce()
             : base(0x1600)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2DE3, 0x2DE4, 0x2DE5, 0x2DE6)]
     public class OrnateElvenChair : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public OrnateElvenChair()
             : base(0x2DE3)
         {
@@ -35,7 +35,7 @@ namespace Server.Items
     [Flipable(0x2DEB, 0x2DEC, 0x2DED, 0x2DEE)]
     public class BigElvenChair : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public BigElvenChair()
             : base(0x2DEB)
         {
@@ -64,7 +64,7 @@ namespace Server.Items
     [Flipable(0x2DF5, 0x2DF6)]
     public class ElvenReadingChair : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public ElvenReadingChair()
             : base(0x2DF5)
         {

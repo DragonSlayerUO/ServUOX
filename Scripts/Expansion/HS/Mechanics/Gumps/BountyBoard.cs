@@ -11,7 +11,7 @@ namespace Server.Items
 {
     public class ProfessionalBountyBoard : Item
     {
-        [Constructable]
+        [Constructible]
         public ProfessionalBountyBoard() : base(7774)
         {
             Movable = false;

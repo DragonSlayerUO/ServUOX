@@ -16,7 +16,7 @@ namespace Server.Items
 
         public override BasePeerless Boss => new LadyMelisande();
 
-        [Constructable]
+        [Constructible]
         public BlightedGroveAltar() : base(0x207B)
         {
             BossLocation = new Point3D(6483, 947, 23);

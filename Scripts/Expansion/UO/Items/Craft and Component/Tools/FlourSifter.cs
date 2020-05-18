@@ -4,14 +4,14 @@ namespace Server.Items
 {
     public class FlourSifter : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public FlourSifter()
             : base(0x103E)
         {
             Weight = 1.0;
         }
 
-        [Constructable]
+        [Constructible]
         public FlourSifter(int uses)
             : base(uses, 0x103E)
         {

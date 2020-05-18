@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Ahie : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Ahie()
             : base("Ahie", "the Cloth Weaver")
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class SalivasFeather : Item
     {
-        [Constructable]
+        [Constructible]
         public SalivasFeather()
             : base(0x1020)
         {

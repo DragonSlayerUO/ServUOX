@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AndrosGratitude : SmithHammer
     {
-        [Constructable]
+        [Constructible]
         public AndrosGratitude()
             : base(10)
         {

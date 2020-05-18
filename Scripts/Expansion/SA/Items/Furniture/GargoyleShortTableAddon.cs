@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool RetainDeedHue => true;
         #endregion
 
-        [Constructable]
+        [Constructible]
         public GargoyleShortTableAddon()
         {
             AddComponent(new AddonComponent(0x4033), 0, 0, 0);
@@ -44,7 +44,7 @@ namespace Server.Items
         public override BaseAddon Addon => new GargoyleShortTableAddon();
         public override int LabelNumber => 1095307;// large gargish bed (south)
 
-        [Constructable]
+        [Constructible]
         public GargoyleShortTableDeed()
         {
         }

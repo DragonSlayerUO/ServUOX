@@ -10,7 +10,7 @@ namespace Server.Mobiles
     {
         public override Type[] Quests => new Type[] { typeof(ProfessionalFisherQuest) };
 
-        [Constructable]
+        [Constructible]
         public FishMonger()
         {
             FishQuestHelper.AddMonger(this);

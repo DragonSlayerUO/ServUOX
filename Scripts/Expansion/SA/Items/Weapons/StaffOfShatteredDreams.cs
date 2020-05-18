@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1112771;  // Staff of Shattered Dreams
 
-        [Constructable]
+        [Constructible]
         public StaffOfShatteredDreams()
             : base()
         {

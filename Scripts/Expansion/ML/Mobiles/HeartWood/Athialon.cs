@@ -7,7 +7,7 @@ namespace Server.Mobiles
     public class Athialon : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Athialon()
             : base("the expeditionist")
         {

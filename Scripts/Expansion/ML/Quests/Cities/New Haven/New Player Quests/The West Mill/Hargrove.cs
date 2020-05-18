@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Hargrove : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Hargrove()
             : base("Hargrove", "the Lumberjack")
         {

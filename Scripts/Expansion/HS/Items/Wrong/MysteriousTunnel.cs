@@ -15,7 +15,7 @@ namespace Server.Items
             set { m_PointDest = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public MysteriousTunnel()
             : base(0x1B71)
         {

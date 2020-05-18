@@ -62,19 +62,19 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public SOS()
             : this(Map.Trammel)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SOS(Map map)
             : this(map, MessageInABottle.GetRandomLevel())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SOS(Map map, int level)
             : base(0x14EE)
         {

@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x13F6, 0x13F7)]
     public class ButcherKnife : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public ButcherKnife()
             : base(0x13F6)
         {

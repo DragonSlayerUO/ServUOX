@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GoldenBroadtail : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public GoldenBroadtail()
             : base(0x3B03)
         {

@@ -17,7 +17,7 @@ namespace Server.Items
         public override int PoisonResistance => 5;
         public override int EnergyResistance => 5;
 
-        [Constructable]
+        [Constructible]
         public WardedDemonboneBracers()
         {
             Hue = 0x2E2;

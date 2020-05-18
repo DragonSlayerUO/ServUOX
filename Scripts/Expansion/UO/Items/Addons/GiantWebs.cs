@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class GiantWeb1 : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GiantWeb1()
         {
             int itemID = 4280;
@@ -35,7 +35,7 @@ namespace Server.Items
 
     public class GiantWeb2 : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GiantWeb2()
         {
             int itemID = 4285;
@@ -68,7 +68,7 @@ namespace Server.Items
 
     public class GiantWeb3 : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GiantWeb3()
         {
             int itemID = 4290;
@@ -101,7 +101,7 @@ namespace Server.Items
 
     public class GiantWeb4 : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GiantWeb4()
         {
             int itemID = 4294;
@@ -134,7 +134,7 @@ namespace Server.Items
 
     public class GiantWeb5 : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GiantWeb5()
         {
             int itemID = 4298;
@@ -167,7 +167,7 @@ namespace Server.Items
 
     public class GiantWeb6 : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public GiantWeb6()
         {
             int itemID = 4302;

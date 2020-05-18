@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AcidProofRope : Item
     {
-        [Constructable]
+        [Constructible]
         public AcidProofRope()
             : base(0x20D)
         {

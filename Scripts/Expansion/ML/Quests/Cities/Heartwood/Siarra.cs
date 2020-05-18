@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Siarra : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Siarra()
             : base("Lorekeeper Siarra", "the Keeper of Tradition")
         {

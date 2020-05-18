@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StoutWhip : Item
     {
-        [Constructable]
+        [Constructible]
         public StoutWhip()
             : base(0x166F)
         {

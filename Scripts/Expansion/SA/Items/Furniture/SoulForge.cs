@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new SoulForgeDeed();
 
-        [Constructable]
+        [Constructible]
         public SoulForge()
         {
             AddComponent(new AddonComponent(0x4263), 0, 0, 0);
@@ -55,7 +55,7 @@ namespace Server.Items
         public override BaseAddon Addon => new SoulForge();
         public override int LabelNumber => 1031696;
 
-        [Constructable]
+        [Constructible]
         public SoulForgeDeed()
         {
         }

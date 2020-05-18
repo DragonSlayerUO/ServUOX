@@ -20,7 +20,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1113486;  // a puzzle box
 
-        [Constructable]
+        [Constructible]
         public PuzzleBox(PuzzleType type) : base(2472)
         {
             m_PuzzleType = type;

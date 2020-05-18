@@ -11,7 +11,7 @@ namespace Server.Items
         public override bool CanFortify => false;
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public AcidProofRobe()
         {
             Hue = 0x455;

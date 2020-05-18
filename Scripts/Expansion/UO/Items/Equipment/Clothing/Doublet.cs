@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0x1f7b, 0x1f7c)]
     public class Doublet : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public Doublet()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Doublet(int hue)
             : base(0x1F7B, hue)
         {

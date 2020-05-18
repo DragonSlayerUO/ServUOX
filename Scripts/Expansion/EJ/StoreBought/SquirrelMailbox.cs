@@ -14,7 +14,7 @@ namespace Server.Items
         public override int EastMailBoxID => 0xA206;
         public override int EastEmptyMailBoxID => 0xA207;
 
-        [Constructable]
+        [Constructible]
         public SquirrelMailbox()
             : base(0xA207)
         {

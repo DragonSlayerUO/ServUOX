@@ -15,7 +15,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1041279;  // a taxidermy kit
 
-        [Constructable]
+        [Constructible]
         public TaxidermyKit() : base(0x1EBA)
         {
             Weight = 1.0;
@@ -328,7 +328,7 @@ namespace Server.Items
 
         public override int LabelNumber => m_AddonNumber;
 
-        [Constructable]
+        [Constructible]
         public TrophyAddon(Mobile from, int itemID, int westID, int northID, int deedNumber, int addonNumber) : this(from, itemID, westID, northID, deedNumber, addonNumber, null, 0, DateTime.MinValue)
         {
         }
@@ -534,7 +534,7 @@ namespace Server.Items
 
         public override int LabelNumber => m_DeedNumber;
 
-        [Constructable]
+        [Constructible]
         public TrophyDeed(int westID, int northID, int deedNumber, int addonNumber)
             : this(westID, northID, deedNumber, addonNumber, null, 0, DateTime.MinValue)
         {

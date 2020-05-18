@@ -5,14 +5,14 @@ namespace Server.Items
     [Flipable(0xFB5, 0xFB4)]
     public class SledgeHammer : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public SledgeHammer()
             : base(0xFB5)
         {
             Layer = Layer.OneHanded;
         }
 
-        [Constructable]
+        [Constructible]
         public SledgeHammer(int uses)
             : base(uses, 0xFB5)
         {
@@ -40,7 +40,7 @@ namespace Server.Items
 
     public class SledgeHammerWeapon : BaseBashing, ITool
     {
-        [Constructable]
+        [Constructible]
         public SledgeHammerWeapon()
             : base(0xFB5)
         {

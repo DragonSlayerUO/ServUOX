@@ -6,7 +6,7 @@ namespace Server.Mobiles
     public class Abbein : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Abbein()
             : base("the wise")
         {

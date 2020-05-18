@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TreatForDrithen : Item
     {
-        [Constructable]
+        [Constructible]
         public TreatForDrithen()
             : base(0x21B)
         {

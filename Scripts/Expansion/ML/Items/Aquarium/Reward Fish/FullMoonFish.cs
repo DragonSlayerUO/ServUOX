@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class FullMoonFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public FullMoonFish()
             : base(0x3B15)
         {

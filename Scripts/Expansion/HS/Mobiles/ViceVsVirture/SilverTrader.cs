@@ -19,7 +19,7 @@ namespace Server.Engines.VvV
         protected override List<SBInfo> SBInfos => m_SBInfos;
         public override void InitSBInfo() { }
 
-        [Constructable]
+        [Constructible]
         public SilverTrader() : base("the Silver Trader")
         {
         }

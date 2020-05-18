@@ -5,7 +5,7 @@ namespace Server.Items
     public class TwilightJacket : LeatherNinjaJacket
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TwilightJacket()
         {
             LootType = LootType.Blessed;

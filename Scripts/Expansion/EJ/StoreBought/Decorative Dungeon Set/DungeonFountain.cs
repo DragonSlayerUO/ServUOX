@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new DungeonFountainDeed();
 
-        [Constructable]
+        [Constructible]
         public DungeonFountainAddon()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DungeonFountainAddon(bool east)
             : base()
         {
@@ -46,7 +46,7 @@ namespace Server.Items
         public override int LabelNumber => 1159474;  // Dungeon Fountain
         public override BaseAddon Addon => new DungeonFountainAddon();
 
-        [Constructable]
+        [Constructible]
         public DungeonFountainDeed()
             : base()
         {

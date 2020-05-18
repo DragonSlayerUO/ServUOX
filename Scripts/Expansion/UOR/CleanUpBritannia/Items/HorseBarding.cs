@@ -16,7 +16,7 @@ namespace Server.Items
 
         private HorseBardingType m_HorseBardingType;
 
-        [Constructable]
+        [Constructible]
         public HorseBardingAddon(HorseBardingType type)
         {
             m_HorseBardingType = type;
@@ -63,7 +63,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1080212;  // Horse Barding
 
-        [Constructable]
+        [Constructible]
         public HorseBardingDeed()
         {
             LootType = LootType.Blessed;

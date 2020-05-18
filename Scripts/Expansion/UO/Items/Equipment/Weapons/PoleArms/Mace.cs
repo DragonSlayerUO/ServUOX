@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF5C, 0xF5D)]
     public class Mace : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public Mace()
             : base(0xF5C)
         {

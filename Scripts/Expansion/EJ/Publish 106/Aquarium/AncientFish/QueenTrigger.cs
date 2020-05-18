@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class QueenTrigger : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public QueenTrigger()
             : base(0xA361)
         {

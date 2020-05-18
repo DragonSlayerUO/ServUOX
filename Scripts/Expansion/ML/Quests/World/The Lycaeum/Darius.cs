@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Darius : HeritageQuester
     {
-        [Constructable]
+        [Constructible]
         public Darius()
             : base("Darius", "the Wise")
         {

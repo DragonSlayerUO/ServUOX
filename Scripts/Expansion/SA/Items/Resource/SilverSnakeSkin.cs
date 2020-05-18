@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class SilverSnakeSkin : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SilverSnakeSkin()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SilverSnakeSkin(int amount)
             : base(0x5744)
         {

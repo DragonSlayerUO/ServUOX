@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an archmage corpse")]
     public class BrigandCannibalMage : EvilMage
     {
-        [Constructable]
+        [Constructible]
         public BrigandCannibalMage()
             : base()
         {

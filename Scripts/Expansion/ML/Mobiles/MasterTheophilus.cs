@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Master Theophilus corpse")]
     public class MasterTheophilus : EvilMageLord
     {
-        [Constructable]
+        [Constructible]
         public MasterTheophilus()
         {
             Name = "Master Theophilus";

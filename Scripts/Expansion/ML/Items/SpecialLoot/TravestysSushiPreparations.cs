@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TravestysSushiPreparations : Item
     {
-        [Constructable]
+        [Constructible]
         public TravestysSushiPreparations()
             : base(Utility.Random(0x1E15, 2))
         {

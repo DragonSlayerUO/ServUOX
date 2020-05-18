@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class PrimalLichDust : Item
     {
-        [Constructable]
+        [Constructible]
         public PrimalLichDust()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PrimalLichDust(int amount)
             : base(0x2DB5)
         {

@@ -2,19 +2,19 @@ namespace Server.Items
 {
     public class TanBook : BaseBook
     {
-        [Constructable]
+        [Constructible]
         public TanBook()
             : base(0xFF0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TanBook(int pageCount, bool writable)
             : base(0xFF0, pageCount, writable)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TanBook(string title, string author, int pageCount, bool writable)
             : base(0xFF0, title, author, pageCount, writable)
         {

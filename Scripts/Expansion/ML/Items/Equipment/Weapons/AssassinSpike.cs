@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x2D21, 0x2D2D)]
     public class AssassinSpike : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public AssassinSpike()
             : base(0x2D21)
         {

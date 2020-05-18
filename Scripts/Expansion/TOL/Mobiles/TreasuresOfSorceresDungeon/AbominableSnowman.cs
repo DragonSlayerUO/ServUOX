@@ -8,7 +8,7 @@ namespace Server.Engines.SorcerersDungeon
     [CorpseName("an abominable snowmans corpse")]
     public class AbominableSnowman : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public AbominableSnowman()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

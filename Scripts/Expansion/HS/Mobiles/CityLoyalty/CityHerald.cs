@@ -64,7 +64,7 @@ namespace Server.Engines.CityLoyalty
 
         public Timer Timer { get; set; }
 
-        [Constructable]
+        [Constructible]
         public CityHerald(City city) : base(AIType.AI_Vendor, FightMode.None, 10, 1, .4, .2)
         {
             City = city;

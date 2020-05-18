@@ -10,7 +10,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public CrookOfHumility()
         {
             Slayer3 = TalismanSlayerName.Wolf;

@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a gooey maggots corpse")]
     public class GooeyMaggots : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GooeyMaggots()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -101,13 +101,13 @@ namespace Server.Mobiles
     {
         public override int LabelNumber => 1015246;  // Slime
 
-        [Constructable]
+        [Constructible]
         public GooeyMaggotSlime()
             : this(Utility.RandomList(0x1645, 0x122A, 0x122B, 0x122C, 0x122D, 0x122E, 0x122F))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GooeyMaggotSlime(int itemID)
             : base(itemID)
         {

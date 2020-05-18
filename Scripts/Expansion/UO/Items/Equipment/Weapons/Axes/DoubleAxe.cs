@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xf4b, 0xf4c)]
     public class DoubleAxe : BaseAxe
     {
-        [Constructable]
+        [Constructible]
         public DoubleAxe()
             : base(0xF4B)
         {

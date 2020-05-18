@@ -18,7 +18,7 @@ namespace Server.Items
 
     public class RewardScrollDeed : Item
     {
-        [Constructable]
+        [Constructible]
         public RewardScrollDeed() : this(1)
         {
             ItemID = 5360;
@@ -34,7 +34,7 @@ namespace Server.Items
             Delete();
         }
 
-        [Constructable]
+        [Constructible]
         public RewardScrollDeed(int amount)
         {
         }
@@ -60,7 +60,7 @@ namespace Server.Items
 
     public class RewardScroll : BaseRewardScroll
     {
-        [Constructable]
+        [Constructible]
         public RewardScroll()
         {
             Stackable = true;

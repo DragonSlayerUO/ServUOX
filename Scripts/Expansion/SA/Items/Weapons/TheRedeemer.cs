@@ -12,7 +12,7 @@ namespace Server.Items
         public override int InitMinHits => 100;
         public override int InitMaxHits => 100;
 
-        [Constructable]
+        [Constructible]
         public TheRedeemer()
         {
             Hue = 2304;

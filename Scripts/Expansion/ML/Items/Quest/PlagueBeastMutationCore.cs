@@ -10,7 +10,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1153760;  // a plague beast mutation core
 
-        [Constructable]
+        [Constructible]
         public PlagueBeastMutationCore()
             : base(0x1CF0)
         {

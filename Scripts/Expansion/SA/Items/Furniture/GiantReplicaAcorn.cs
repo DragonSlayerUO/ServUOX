@@ -5,7 +5,7 @@ namespace Server.Items
     [Furniture]
     public class GiantReplicaAcorn : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public GiantReplicaAcorn()
             : base(0x2D4A)
         {

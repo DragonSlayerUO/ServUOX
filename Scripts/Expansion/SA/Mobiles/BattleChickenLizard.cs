@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a chicken lizard corpse")]
     public class BattleChickenLizard : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public BattleChickenLizard()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.05, 0.1)
         {

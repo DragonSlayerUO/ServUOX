@@ -9,7 +9,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155630;  // Antique Documents Kit
 
-        [Constructable]
+        [Constructible]
         public AntiqueDocumentsKit()
             : base(0x1EBB)
         {

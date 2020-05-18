@@ -5,7 +5,7 @@ namespace Server.Items
     public class SlayerLongbow : ElvenCompositeLongbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SlayerLongbow()
         {
             Slayer2 = BaseRunicTool.GetRandomSlayer();

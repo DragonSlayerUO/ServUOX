@@ -9,7 +9,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override string DefaultName => "Initiation Suit Bag";
 
-        [Constructable]
+        [Constructible]
         public InitiationSuitBag()
         {
             Hue = 0x30;

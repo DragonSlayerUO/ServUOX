@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x2D22, 0x2D2E)]
     public class Leafblade : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public Leafblade()
             : base(0x2D22)
         {

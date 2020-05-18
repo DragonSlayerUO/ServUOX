@@ -3,13 +3,13 @@ namespace Server.Items
     [Flipable(0xC7F, 0xC81)]
     public class EarOfCorn : Food
     {
-        [Constructable]
+        [Constructible]
         public EarOfCorn()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EarOfCorn(int amount)
             : base(amount, 0xC81)
         {

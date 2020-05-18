@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class BottleIchor : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public BottleIchor()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BottleIchor(int amount)
             : base(0x5748)
         {

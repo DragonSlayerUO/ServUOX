@@ -100,9 +100,9 @@ namespace Server.Commands
 
                 var t = item.GetType();
 
-                var a = t.GetCustomAttributes(typeof(ConstructableAttribute), false);
+                var a = t.GetCustomAttributes(typeof(ConstructibleAttribute), false);
 
-                if (a.OfType<ConstructableAttribute>().Any(ca => ca.AccessLevel > m.AccessLevel))
+                if (a.OfType<ConstructibleAttribute>().Any(ca => ca.AccessLevel > m.AccessLevel))
                 {
                     return;
                 }
@@ -204,9 +204,9 @@ namespace Server.Commands
 
                 if (m != null)
                 {
-                    var a = t.GetCustomAttributes(typeof(ConstructableAttribute), false);
+                    var a = t.GetCustomAttributes(typeof(ConstructibleAttribute), false);
 
-                    if (a.OfType<ConstructableAttribute>().Any(ca => ca.AccessLevel > m.AccessLevel))
+                    if (a.OfType<ConstructibleAttribute>().Any(ca => ca.AccessLevel > m.AccessLevel))
                     {
                         return null;
                     }
@@ -276,9 +276,9 @@ namespace Server.Commands
 
                     if (m != null)
                     {
-                        var a = t.GetCustomAttributes(typeof(ConstructableAttribute), false);
+                        var a = t.GetCustomAttributes(typeof(ConstructibleAttribute), false);
 
-                        if (a.OfType<ConstructableAttribute>().Any(ca => ca.AccessLevel > m.AccessLevel))
+                        if (a.OfType<ConstructibleAttribute>().Any(ca => ca.AccessLevel > m.AccessLevel))
                         {
                             continue;
                         }

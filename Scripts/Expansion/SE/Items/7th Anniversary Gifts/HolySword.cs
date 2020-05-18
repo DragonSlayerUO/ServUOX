@@ -5,7 +5,7 @@ namespace Server.Items
     public class HolySword : Longsword
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HolySword()
         {
             Hue = 0x482;

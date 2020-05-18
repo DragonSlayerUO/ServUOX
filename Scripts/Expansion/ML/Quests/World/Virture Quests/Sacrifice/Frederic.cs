@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Frederic : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Frederic()
             : base("The Ghost of Frederic Smithson")
         {

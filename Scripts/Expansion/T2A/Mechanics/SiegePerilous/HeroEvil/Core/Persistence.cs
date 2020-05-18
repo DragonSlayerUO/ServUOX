@@ -6,7 +6,7 @@ namespace Server.Ethics
     public class EthicsPersistence : Item
     {
         private static EthicsPersistence m_Instance;
-        [Constructable]
+        [Constructible]
         public EthicsPersistence()
             : base(1)
         {

@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1157346;  // glenda
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public Glenda()
         {
             ExtendedWeaponAttributes.BoneBreaker = 1;

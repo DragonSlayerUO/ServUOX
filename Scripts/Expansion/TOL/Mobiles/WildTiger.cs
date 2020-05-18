@@ -15,14 +15,14 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public virtual bool CanRide { get; set; }
 
-        [Constructable]
+        [Constructible]
         public WildTiger()
             : this("a wild tiger")
         {
             CanRide = false;
         }
 
-        [Constructable]
+        [Constructible]
         public WildTiger(string name)
             : base(name, Utility.RandomBool() ? 1254 : 1255, 16071, AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -152,7 +152,7 @@ namespace Server.Mobiles
     {
         public override Item GetPelt => new WhiteTigerPelt(4);
 
-        [Constructable]
+        [Constructible]
         public WildWhiteTiger()
             : base("a wild white tiger")
         {
@@ -184,7 +184,7 @@ namespace Server.Mobiles
     {
         public override Item GetPelt => new BlackTigerPelt(4);
 
-        [Constructable]
+        [Constructible]
         public WildBlackTiger()
             : base("a wild black tiger")
         {

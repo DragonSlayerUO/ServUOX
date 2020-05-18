@@ -5,7 +5,7 @@ namespace Server.Items
     public class LeafbladeOfEase : Leafblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public LeafbladeOfEase()
         {
             WeaponAttributes.UseBestSkill = 1;

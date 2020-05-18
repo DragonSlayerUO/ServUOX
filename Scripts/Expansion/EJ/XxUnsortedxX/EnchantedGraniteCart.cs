@@ -99,13 +99,13 @@ namespace Server.Engines.VeteranRewards
             Components.ForEach(x => x.InvalidateProperties());
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedGraniteCartAddon(DirectionType type)
            : this(type, DateTime.Now + TimeSpan.FromDays(1.0))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedGraniteCartAddon(DirectionType type, DateTime nexuse)
         {
             NextUse = nexuse;
@@ -301,7 +301,7 @@ namespace Server.Engines.VeteranRewards
             }
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedGraniteCartAddonDeed()
             : base()
         {

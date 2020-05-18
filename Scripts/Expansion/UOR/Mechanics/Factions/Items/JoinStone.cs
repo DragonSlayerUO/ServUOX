@@ -7,13 +7,13 @@ namespace Server.Factions
     public class JoinStone : BaseSystemController
     {
         private Faction m_Faction;
-        [Constructable]
+        [Constructible]
         public JoinStone()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public JoinStone(Faction faction)
             : base(0xEDC)
         {

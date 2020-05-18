@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         private static readonly TimeSpan ResurrectDelay = TimeSpan.FromSeconds(2.0);
         private DateTime m_NextResurrect;
-        [Constructable]
+        [Constructible]
         public NewHavenHealer()
             : base()
         {

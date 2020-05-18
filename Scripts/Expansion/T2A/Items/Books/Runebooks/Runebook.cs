@@ -70,7 +70,7 @@ namespace Server.Items
 
         public virtual int MaxEntries => 16;
 
-        [Constructable]
+        [Constructible]
         public Runebook(int maxCharges, int id = 0x22C5)
             : base(Core.AOS ? id : 0xEFA)
         {
@@ -89,7 +89,7 @@ namespace Server.Items
             Level = SecureLevel.CoOwners;
         }
 
-        [Constructable]
+        [Constructible]
         public Runebook()
             : this(Core.SE ? 12 : 6)
         {

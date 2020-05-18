@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an abyssal abomination corpse")]
     public class AbyssalAbomination : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public AbyssalAbomination()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

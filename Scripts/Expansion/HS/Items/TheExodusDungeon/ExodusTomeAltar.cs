@@ -30,7 +30,7 @@ namespace Server.Items
             set { m_Owner = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public ExodusTomeAltar(Mobile from)
             : base(0x1C11)
         {

@@ -10,7 +10,7 @@ namespace Server.Mobiles
     [CorpseName("an iron beetle corpse")]
     public class IronBeetle : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public IronBeetle()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.25, 0.5)
         {

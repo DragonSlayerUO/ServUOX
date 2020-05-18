@@ -11,7 +11,7 @@ namespace Server.Items
     public class TapestryOfSosaria : Item, ISecurable
     {
         private SecureLevel m_Level;
-        [Constructable]
+        [Constructible]
         public TapestryOfSosaria()
             : base(0x234E)
         {

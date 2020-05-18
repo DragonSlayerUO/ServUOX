@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2D33, 0x2D27)]
     public class RadiantScimitar : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public RadiantScimitar()
             : base(0x2D33)
         {

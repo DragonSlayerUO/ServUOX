@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CandleShort : BaseLight
     {
-        [Constructable]
+        [Constructible]
         public CandleShort()
             : base(0x142F)
         {

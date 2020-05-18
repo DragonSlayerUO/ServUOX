@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StuddedHiroSode : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public StuddedHiroSode()
             : base(0x277F)
         {

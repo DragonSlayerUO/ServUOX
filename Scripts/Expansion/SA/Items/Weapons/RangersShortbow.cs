@@ -5,7 +5,7 @@ namespace Server.Items
     public class RangersShortbow : MagicalShortbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RangersShortbow()
         {
             Attributes.WeaponSpeed = 5;

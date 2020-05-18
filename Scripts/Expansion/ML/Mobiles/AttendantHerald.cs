@@ -551,7 +551,7 @@ namespace Server.Mobiles
 
     public class AttendantMaleHerald : AttendantHerald
     {
-        [Constructable]
+        [Constructible]
         public AttendantMaleHerald()
             : base()
         {
@@ -602,7 +602,7 @@ namespace Server.Mobiles
 
     public class AttendantFemaleHerald : AttendantHerald
     {
-        [Constructable]
+        [Constructible]
         public AttendantFemaleHerald()
             : base()
         {

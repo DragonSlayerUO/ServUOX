@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class FireColumnAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public FireColumnAddon()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FireColumnAddon(bool bloody)
         {
             AddComponent(new AddonComponent(0x3A5), 0, 0, 0);

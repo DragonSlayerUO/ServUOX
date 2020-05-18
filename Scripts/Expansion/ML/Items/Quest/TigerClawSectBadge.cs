@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class TigerClawSectBadge : Item
     {
-        [Constructable]
+        [Constructible]
         public TigerClawSectBadge()
             : base(0x23D)
         {

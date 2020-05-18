@@ -8,7 +8,7 @@ namespace Server.Items
         {
             0x27B, 0x27C, 0x27D, 0x27E, 0x27F
         };
-        [Constructable]
+        [Constructible]
         public OphidianKnightStatuette()
             : base(0x25AA)
         {

@@ -10,12 +10,12 @@ namespace Server.Items
 
         public override int LabelNumber => 1154170;  // workable glass
 
-        [Constructable]
+        [Constructible]
         public WorkableGlass() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WorkableGlass(int amount) : base(19328)
         {
             Stackable = true;

@@ -10,7 +10,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new AlchemyStationDeed(Tools.Count > 0 ? Tools[0].UsesRemaining : 0);
         public override CraftSystem CraftSystem => DefAlchemy.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public AlchemyStation(bool south, int uses)
         {
             if (south)
@@ -52,12 +52,12 @@ namespace Server.Items
 
         private bool _South;
 
-        [Constructable]
+        [Constructible]
         public AlchemyStationDeed() : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AlchemyStationDeed(int uses) : base(uses)
         {
         }

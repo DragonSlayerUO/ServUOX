@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override TextDefinition Title => 1157594;  // Ethologist
 
-        [Constructable]
+        [Constructible]
         public EthologistTitleDeed()
         {
         }

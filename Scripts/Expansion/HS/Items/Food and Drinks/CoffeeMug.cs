@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class CoffeeMug : CeramicMug
     {
-        [Constructable]
+        [Constructible]
         public CoffeeMug()
             : base(BeverageType.Coffee)
         {

@@ -11,7 +11,7 @@ namespace Server.Items
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
 
-        [Constructable]
+        [Constructible]
         public RunedDriftwoodBow()
         {
             Hue = 2955;

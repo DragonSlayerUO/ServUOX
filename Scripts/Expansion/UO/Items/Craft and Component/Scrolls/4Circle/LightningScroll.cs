@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class LightningScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public LightningScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightningScroll(int amount)
             : base(29, 0x1F4A, amount)
         {

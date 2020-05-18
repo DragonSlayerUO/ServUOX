@@ -15,7 +15,7 @@ namespace Server.Items
         private DateTime m_NextSpawnTime;
         private SpawnTimer m_SpawnTimer;
         private SecureLevel m_Level;
-        [Constructable]
+        [Constructible]
         public RoseOfTrinsic()
             : base(0x234D)
         {
@@ -170,13 +170,13 @@ namespace Server.Items
 
     public class RoseOfTrinsicPetal : Item
     {
-        [Constructable]
+        [Constructible]
         public RoseOfTrinsicPetal()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RoseOfTrinsicPetal(int amount)
             : base(0x1021)
         {

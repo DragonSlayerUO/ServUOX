@@ -9,7 +9,7 @@ namespace Server.Items
         public override int LabelNumber => 1115516;  // Frostguard Talisman
         public override int ColdResistance => 3;
 
-        [Constructable]
+        [Constructible]
         public FrostguardTalisman()
             : base(0x2F5B)
         {

@@ -12,13 +12,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new WoodworkersBenchDeed();
 
-        [Constructable]
+        [Constructible]
         public WoodworkersBench()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WoodworkersBench(bool east)
             : base()
         {
@@ -181,7 +181,7 @@ namespace Server.Items
 
         private bool m_East;
 
-        [Constructable]
+        [Constructible]
         public WoodworkersBenchDeed()
             : base()
         {

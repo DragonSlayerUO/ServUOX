@@ -13,17 +13,17 @@ namespace Server.Items
 
         public virtual AmmunitionType AmmoType => AmmunitionType.Cannonball;
 
-        [Constructable]
+        [Constructible]
         public Cannonball() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Cannonball(int amount) : this(amount, 16932)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Cannonball(int amount, int itemid)
             : base(itemid)
         {
@@ -55,17 +55,17 @@ namespace Server.Items
 
         public override AmmunitionType AmmoType => AmmunitionType.FrostCannonball;
 
-        [Constructable]
+        [Constructible]
         public FrostCannonball() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FrostCannonball(int amount) : this(amount, 16939)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FrostCannonball(int amount, int itemid)
             : base(itemid)
         {
@@ -97,17 +97,17 @@ namespace Server.Items
 
         public override AmmunitionType AmmoType => AmmunitionType.FlameCannonball;
 
-        [Constructable]
+        [Constructible]
         public FlameCannonball() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FlameCannonball(int amount) : this(amount, 17601)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FlameCannonball(int amount, int itemid)
             : base(itemid)
         {
@@ -140,17 +140,17 @@ namespace Server.Items
 
         public virtual AmmunitionType AmmoType => AmmunitionType.Cannonball;
 
-        [Constructable]
+        [Constructible]
         public LightCannonball() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightCannonball(int amount) : this(amount, 16932)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightCannonball(int amount, int itemid)
             : base(itemid)
         {
@@ -188,12 +188,12 @@ namespace Server.Items
 
         public virtual AmmunitionType AmmoType => AmmunitionType.Cannonball;
 
-        [Constructable]
+        [Constructible]
         public HeavyCannonball() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyCannonball(int amount) : this(amount, 16932)
         {
         }
@@ -233,12 +233,12 @@ namespace Server.Items
 
         public override AmmunitionType AmmoType => AmmunitionType.FlameCannonball;
 
-        [Constructable]
+        [Constructible]
         public LightFlameCannonball() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightFlameCannonball(int amount) : base(amount, 17601)
         {
         }
@@ -272,13 +272,13 @@ namespace Server.Items
 
         public override AmmunitionType AmmoType => AmmunitionType.FlameCannonball;
 
-        [Constructable]
+        [Constructible]
         public HeavyFlameCannonball()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyFlameCannonball(int amount)
             : base(amount, 17601)
         {
@@ -313,13 +313,13 @@ namespace Server.Items
 
         public override AmmunitionType AmmoType => AmmunitionType.FrostCannonball;
 
-        [Constructable]
+        [Constructible]
         public LightFrostCannonball()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightFrostCannonball(int amount)
             : base(amount, 16939)
         {
@@ -354,13 +354,13 @@ namespace Server.Items
 
         public override AmmunitionType AmmoType => AmmunitionType.FrostCannonball;
 
-        [Constructable]
+        [Constructible]
         public HeavyFrostCannonball()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyFrostCannonball(int amount)
             : base(amount, 16939)
         {

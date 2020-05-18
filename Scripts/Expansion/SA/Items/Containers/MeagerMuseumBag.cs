@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class MeagerMuseumBag : BaseRewardBag
     {
-        [Constructable]
+        [Constructible]
         public MeagerMuseumBag()
         {
             DropItem(new Gold(3000));

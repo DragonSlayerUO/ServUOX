@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class EnergyFieldScroll : SpellScroll
     {
-        [Constructable]
+        [Constructible]
         public EnergyFieldScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnergyFieldScroll(int amount)
             : base(49, 0x1F5E, amount)
         {

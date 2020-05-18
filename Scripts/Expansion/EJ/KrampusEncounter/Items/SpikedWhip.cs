@@ -8,7 +8,7 @@ namespace Server.Items
         public Server.Engines.Craft.CraftSystem RepairSystem => Server.Engines.Craft.DefTinkering.CraftSystem;
         public override int LabelNumber => 1125634;  // Spiked Whip
 
-        [Constructable]
+        [Constructible]
         public SpikedWhip()
             : base(0xA292)
         {

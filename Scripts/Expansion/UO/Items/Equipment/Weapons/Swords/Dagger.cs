@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF52, 0xF51)]
     public class Dagger : BaseKnife
     {
-        [Constructable]
+        [Constructible]
         public Dagger()
             : base(0xF52)
         {

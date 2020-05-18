@@ -67,13 +67,13 @@ namespace Server.Engines.Blackthorn
 
         public bool SpellCaster => AI != AIType.AI_Melee && AI != AIType.AI_Ninja && AI != AIType.AI_Samurai && AI != AIType.AI_Paladin;
 
-        [Constructable]
+        [Constructible]
         public Invader(InvasionType type)
             : this(RandomSpecialty(), type)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Invader(SkillName specialty, InvasionType type)
             : base(GetAI(specialty), FightMode.Closest, 10, 1, .2, .1)
         {
@@ -535,7 +535,7 @@ namespace Server.Engines.Blackthorn
         public override int MinResist => 20;
         public override int MaxResist => 30;
 
-        [Constructable]
+        [Constructible]
         public InvaderCaptain(InvasionType type) : base(type)
         {
             SetStr(250);

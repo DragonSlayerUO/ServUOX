@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealKirin : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealKirin()
             : base(0x25A0, 0x3E9C, 0x3EAD, DefaultEtherealHue)
         { }

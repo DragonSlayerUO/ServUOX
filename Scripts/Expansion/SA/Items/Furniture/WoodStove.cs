@@ -7,7 +7,7 @@ namespace Server.Items
 {
     public class WoodStoveAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public WoodStoveAddon(DirectionType type)
         {
             switch (type)
@@ -81,7 +81,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public WoodStoveDeed()
             : base()
         {

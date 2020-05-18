@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class TailorGuildmaster : BaseGuildmaster
     {
-        [Constructable]
+        [Constructible]
         public TailorGuildmaster()
             : base("tailor")
         {

@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ParoxysmusSwampDragonStatuette : BaseImprisonedMobile
     {
-        [Constructable]
+        [Constructible]
         public ParoxysmusSwampDragonStatuette()
             : base(0x2619)
         {

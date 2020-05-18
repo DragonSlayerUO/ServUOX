@@ -9,7 +9,7 @@ namespace Server.Items
         private Timer m_Timer;
         public override int LabelNumber => 1154236;  // Willem Harte's Hat
 
-        [Constructable]
+        [Constructible]
         public WillemHartesHat()
             : base(0x171A)
         {

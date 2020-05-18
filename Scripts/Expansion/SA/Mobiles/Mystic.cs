@@ -6,7 +6,7 @@ namespace Server.Mobiles
     public class Mystic : BaseVendor
     {
         private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
-        [Constructable]
+        [Constructible]
         public Mystic()
             : base("the mystic")
         {

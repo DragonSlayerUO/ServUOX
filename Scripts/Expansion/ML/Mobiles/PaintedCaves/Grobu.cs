@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a Grobu corpse")]
     public class Grobu : BlackBear
     {
-        [Constructable]
+        [Constructible]
         public Grobu()
         {
             Name = "Grobu";

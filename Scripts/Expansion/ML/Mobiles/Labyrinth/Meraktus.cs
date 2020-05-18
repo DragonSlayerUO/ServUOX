@@ -29,7 +29,7 @@ namespace Server.Mobiles
                     MonsterStatuetteType.Minotaur
                 };
 
-        [Constructable]
+        [Constructible]
         public Meraktus()
             : base(AIType.AI_Melee)
         {

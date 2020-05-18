@@ -5,7 +5,7 @@ namespace Server.Items
     public class DreadPirateHat : TricorneHat
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DreadPirateHat()
         {
             Hue = 0x497;

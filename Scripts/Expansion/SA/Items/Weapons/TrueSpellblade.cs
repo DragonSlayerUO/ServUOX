@@ -5,7 +5,7 @@ namespace Server.Items
     public class TrueSpellblade : ElvenSpellblade
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TrueSpellblade()
         {
             Attributes.SpellChanneling = 1;

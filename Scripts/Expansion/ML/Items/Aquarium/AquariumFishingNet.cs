@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class AquariumFishNet : SpecialFishingNet
     {
-        [Constructable]
+        [Constructible]
         public AquariumFishNet()
         {
             ItemID = 0xDC8;

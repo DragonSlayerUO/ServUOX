@@ -13,13 +13,13 @@ namespace Server.Items
 
         public AmmoType AmmoType { get { return AmmoType.Grapeshot; } }
 
-        [Constructable]
+        [Constructible]
         public LightScatterShot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightScatterShot(int amount)
             : base(16869)
         {
@@ -53,13 +53,13 @@ namespace Server.Items
 
         public AmmoType AmmoType { get { return AmmoType.Grapeshot; } }
 
-        [Constructable]
+        [Constructible]
         public HeavyScatterShot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyScatterShot(int amount)
             : base(16869)
         {
@@ -93,13 +93,13 @@ namespace Server.Items
 
         public AmmoType AmmoType { get { return AmmoType.Grapeshot; } }
 
-        [Constructable]
+        [Constructible]
         public LightFragShot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightFragShot(int amount)
             : base(16869)
         {
@@ -133,13 +133,13 @@ namespace Server.Items
 
         public AmmoType AmmoType { get { return AmmoType.Grapeshot; } }
 
-        [Constructable]
+        [Constructible]
         public HeavyFragShot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyFragShot(int amount)
             : base(16869)
         {
@@ -173,13 +173,13 @@ namespace Server.Items
 
         public AmmoType AmmoType { get { return AmmoType.Cannonball; } }
 
-        [Constructable]
+        [Constructible]
         public LightHotShot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LightHotShot(int amount)
             : base(16932)
         {
@@ -213,13 +213,13 @@ namespace Server.Items
 
         public AmmoType AmmoType { get { return AmmoType.Cannonball; } }
 
-        [Constructable]
+        [Constructible]
         public HeavyHotShot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HeavyHotShot(int amount)
             : base(16932)
         {

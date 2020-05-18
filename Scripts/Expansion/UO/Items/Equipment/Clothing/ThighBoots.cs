@@ -90,13 +90,13 @@ namespace Server.Items
 
         public override CraftResource DefaultResource => CraftResource.RegularLeather;
 
-        [Constructable]
+        [Constructible]
         public ThighBoots()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ThighBoots(int hue)
             : base(0x1711, hue)
         {

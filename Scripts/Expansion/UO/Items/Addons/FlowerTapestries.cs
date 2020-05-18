@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class LightFlowerTapestryEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public LightFlowerTapestryEastAddon()
         {
             AddComponent(new AddonComponent(0xFDC), 0, 0, 0);
@@ -30,7 +30,7 @@ namespace Server.Items
 
     public class LightFlowerTapestryEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public LightFlowerTapestryEastDeed()
         {
         }
@@ -57,7 +57,7 @@ namespace Server.Items
 
     public class LightFlowerTapestrySouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public LightFlowerTapestrySouthAddon()
         {
             AddComponent(new AddonComponent(0xFD9), 0, 0, 0);
@@ -85,7 +85,7 @@ namespace Server.Items
 
     public class LightFlowerTapestrySouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public LightFlowerTapestrySouthDeed()
         {
         }
@@ -112,7 +112,7 @@ namespace Server.Items
 
     public class DarkFlowerTapestryEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public DarkFlowerTapestryEastAddon()
         {
             AddComponent(new AddonComponent(0xFE0), 0, 0, 0);
@@ -140,7 +140,7 @@ namespace Server.Items
 
     public class DarkFlowerTapestryEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public DarkFlowerTapestryEastDeed()
         {
         }
@@ -167,7 +167,7 @@ namespace Server.Items
 
     public class DarkFlowerTapestrySouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public DarkFlowerTapestrySouthAddon()
         {
             AddComponent(new AddonComponent(0xFDD), 0, 0, 0);
@@ -195,7 +195,7 @@ namespace Server.Items
 
     public class DarkFlowerTapestrySouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public DarkFlowerTapestrySouthDeed()
         {
         }

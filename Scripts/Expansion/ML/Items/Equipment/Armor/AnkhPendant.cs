@@ -27,7 +27,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1079525;  // Ankh Pendant
 
-        [Constructable]
+        [Constructible]
         public AnkhPendant()
             : base(0x3BB5)
         {

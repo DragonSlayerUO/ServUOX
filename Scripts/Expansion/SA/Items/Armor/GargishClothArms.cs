@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class GargishClothArms : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public GargishClothArms()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GargishClothArms(int hue)
             : base(0x0404, Layer.Arms, hue)
         {
@@ -53,13 +53,13 @@ namespace Server.Items
 
     public class FemaleGargishClothArms : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothArms()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FemaleGargishClothArms(int hue)
             : base(0x0403, Layer.Arms, hue)
         {
@@ -89,13 +89,13 @@ namespace Server.Items
 
     public class MaleGargishClothArms : BaseClothing
     {
-        [Constructable]
+        [Constructible]
         public MaleGargishClothArms()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaleGargishClothArms(int hue)
             : base(0x0404, Layer.Arms, hue)
         {

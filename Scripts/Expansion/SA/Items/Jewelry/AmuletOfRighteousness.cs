@@ -7,13 +7,13 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
         private int m_UsesRemaining;
-        [Constructable]
+        [Constructible]
         public AmuletOfRighteousness()
             : this(100)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AmuletOfRighteousness(int uses)
             : base()
         {

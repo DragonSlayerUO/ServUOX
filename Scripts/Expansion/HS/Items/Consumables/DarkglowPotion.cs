@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DarkglowPotion : BasePoisonPotion
     {
-        [Constructable]
+        [Constructible]
         public DarkglowPotion()
             : base(PotionEffect.Darkglow)
         {

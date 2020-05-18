@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0x1f81, 0x1f82, 0x1f83, 0x1f84)]
     public class Glass : Item
     {
-        [Constructable]
+        [Constructible]
         public Glass()
             : base(0x1f81)
         {

@@ -5,13 +5,13 @@ namespace Server.Items
 {
     public class SturdyPickaxe : BaseAxe, IUsesRemaining
     {
-        [Constructable]
+        [Constructible]
         public SturdyPickaxe()
             : this(180)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SturdyPickaxe(int uses)
             : base(0xE86)
         {

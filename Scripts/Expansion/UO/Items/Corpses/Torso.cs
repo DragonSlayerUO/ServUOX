@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class Torso : Item
     {
-        [Constructable]
+        [Constructible]
         public Torso()
             : base(0x1D9F)
         {

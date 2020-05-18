@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(12287, 12288)]
     public class TwoStoryBanner : Item
     {
-        [Constructable]
+        [Constructible]
         public TwoStoryBanner() : base(12287)
         {
         }
@@ -31,7 +31,7 @@ namespace Server.Items
 
     public class Stalagmite : Item
     {
-        [Constructable]
+        [Constructible]
         public Stalagmite() : base(Utility.RandomList(2272, 2273, 2276, 2277, 2279, 2281, 2282))
         {
         }
@@ -55,7 +55,7 @@ namespace Server.Items
 
     public class Flowstone : Item
     {
-        [Constructable]
+        [Constructible]
         public Flowstone() : base(Utility.RandomList(2274, 2275, 2278, 2280))
         {
         }
@@ -80,7 +80,7 @@ namespace Server.Items
 
     public class HangingChainmailLegs : Item
     {
-        [Constructable]
+        [Constructible]
         public HangingChainmailLegs() : base(5052)
         {
         }
@@ -105,7 +105,7 @@ namespace Server.Items
 
     public class HangingRingmailTunic : Item
     {
-        [Constructable]
+        [Constructible]
         public HangingRingmailTunic() : base(5095)
         {
         }
@@ -130,7 +130,7 @@ namespace Server.Items
 
     public class PluckedChicken : Item
     {
-        [Constructable]
+        [Constructible]
         public PluckedChicken() : base(7819)
         {
         }
@@ -155,7 +155,7 @@ namespace Server.Items
 
     public class ColorfulTapestry : Item
     {
-        [Constructable]
+        [Constructible]
         public ColorfulTapestry() : base(17092)
         {
         }
@@ -182,7 +182,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 123467;
 
-        [Constructable]
+        [Constructible]
         public CanvaslessEasel() : base(Utility.RandomBool() ? 3943 : 3945)
         {
         }

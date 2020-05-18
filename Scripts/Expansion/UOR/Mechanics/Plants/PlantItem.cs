@@ -190,22 +190,22 @@ namespace Server.Engines.Plants
 
         public static ArrayList Plants => m_Instances;
 
-        [Constructable]
+        [Constructible]
         public PlantItem() : this(0x1602, false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlantItem(int itemID) : this(itemID, false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlantItem(bool fertileDirt) : this(0x1602, fertileDirt)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PlantItem(int itemID, bool fertileDirt) : base(itemID)
         {
             Weight = 1.0;

@@ -14,7 +14,7 @@ namespace Server.Engines.NewMagincia
     {
         public override bool IsInvulnerable => true;
 
-        [Constructable]
+        [Constructible]
         public WarehouseSuperintendent() : base(AIType.AI_Vendor, FightMode.None, 2, 1, 0.5, 2)
         {
             Race = Race.Human;

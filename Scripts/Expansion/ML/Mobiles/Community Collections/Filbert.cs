@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class WizardsCompendium : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public WizardsCompendium()
             : base("Filbert", "the mage")
         {

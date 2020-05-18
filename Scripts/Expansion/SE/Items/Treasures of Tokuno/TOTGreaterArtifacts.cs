@@ -29,7 +29,7 @@ namespace Server.Items
     public class DarkenedSky : Kama
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public DarkenedSky()
             : base()
         {
@@ -70,7 +70,7 @@ namespace Server.Items
     public class KasaOfTheRajin : Kasa
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public KasaOfTheRajin()
             : base()
         {
@@ -117,7 +117,7 @@ namespace Server.Items
     public class RuneBeetleCarapace : PlateDo
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RuneBeetleCarapace()
             : base()
         {
@@ -156,7 +156,7 @@ namespace Server.Items
     public class Stormgrip : LeatherNinjaMitts
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public Stormgrip()
             : base()
         {
@@ -194,7 +194,7 @@ namespace Server.Items
     public class SwordOfTheStampede : NoDachi
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SwordOfTheStampede()
             : base()
         {
@@ -235,7 +235,7 @@ namespace Server.Items
     public class SwordsOfProsperity : Daisho
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SwordsOfProsperity()
             : base()
         {
@@ -277,7 +277,7 @@ namespace Server.Items
     public class TheHorselord : Yumi
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TheHorselord()
             : base()
         {
@@ -316,7 +316,7 @@ namespace Server.Items
     public class TomeOfLostKnowledge : Spellbook
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public TomeOfLostKnowledge()
             : base()
         {
@@ -355,7 +355,7 @@ namespace Server.Items
     public class WindsEdge : Tessen
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public WindsEdge()
             : base()
         {
@@ -425,19 +425,19 @@ namespace Server.Items
             new int[] { /*PigmentType.DeepRose,*/ 0x97E, 1079587 }
         };
         private PigmentType m_Type;
-        [Constructable]
+        [Constructible]
         public PigmentsOfTokuno()
             : this(PigmentType.None, 10)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PigmentsOfTokuno(PigmentType type)
             : this(type, (type == PigmentType.None || type >= PigmentType.FadedCoal) ? 10 : 50)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PigmentsOfTokuno(PigmentType type, int uses)
             : base(uses)
         {

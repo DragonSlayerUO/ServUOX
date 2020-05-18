@@ -12,7 +12,7 @@ namespace Server.Items
 
         public override bool RequireFreeHand => false;
 
-        [Constructable]
+        [Constructible]
         public ShatterPotion()
             : base(0xF0D, PotionEffect.Shatter)
         {

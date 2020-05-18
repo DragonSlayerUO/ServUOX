@@ -4,13 +4,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.SpinedLeather;
 
-        [Constructable]
+        [Constructible]
         public SpinedLeather()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpinedLeather(int amount)
             : base(CraftResource.SpinedLeather, amount)
         {
@@ -37,13 +37,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.HornedLeather;
 
-        [Constructable]
+        [Constructible]
         public HornedLeather()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public HornedLeather(int amount)
             : base(CraftResource.HornedLeather, amount)
         {
@@ -70,13 +70,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.BarbedLeather;
 
-        [Constructable]
+        [Constructible]
         public BarbedLeather()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BarbedLeather(int amount)
             : base(CraftResource.BarbedLeather, amount)
         {

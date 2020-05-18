@@ -2,7 +2,7 @@ namespace Server.Mobiles
 {
     public class CapturedHordeMinion : HordeMinion
     {
-        [Constructable]
+        [Constructible]
         public CapturedHordeMinion()
         {
             FightMode = FightMode.None;

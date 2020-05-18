@@ -9,13 +9,13 @@ namespace Server.Items
     {
         private PlantPigmentHue m_Hue;
         private int m_UsesRemaining;
-        [Constructable]
+        [Constructible]
         public NaturalDye()
             : this(PlantPigmentHue.None)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public NaturalDye(PlantPigmentHue hue)
             : base(0x182B)
         {

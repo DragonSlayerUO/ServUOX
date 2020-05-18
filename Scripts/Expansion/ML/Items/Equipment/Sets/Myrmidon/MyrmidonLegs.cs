@@ -5,7 +5,7 @@ namespace Server.Items
     public class MyrmidonLegs : StuddedLegs
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MyrmidonLegs()
             : base()
         {

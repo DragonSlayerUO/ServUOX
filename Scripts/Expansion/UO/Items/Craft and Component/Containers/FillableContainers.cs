@@ -445,7 +445,7 @@ namespace Server.Items
     [Flipable(0xA97, 0xA99, 0xA98, 0xA9A, 0xA9B, 0xA9C)]
     public class LibraryBookcase : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public LibraryBookcase()
             : base(0xA97)
         {
@@ -508,7 +508,7 @@ namespace Server.Items
     [Flipable(0xE3D, 0xE3C)]
     public class FillableLargeCrate : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public FillableLargeCrate()
             : base(0xE3D)
         {
@@ -536,7 +536,7 @@ namespace Server.Items
     [Flipable(0x9A9, 0xE7E)]
     public class FillableSmallCrate : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public FillableSmallCrate()
             : base(0x9A9)
         {
@@ -564,7 +564,7 @@ namespace Server.Items
     [Flipable(0x9AA, 0xE7D)]
     public class FillableWoodenBox : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public FillableWoodenBox()
             : base(0x9AA)
         {
@@ -592,7 +592,7 @@ namespace Server.Items
     [Flipable(0x9A8, 0xE80)]
     public class FillableMetalBox : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public FillableMetalBox()
             : base(0x9A8)
         {
@@ -633,7 +633,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextReturn { get; set; }
 
-        [Constructable]
+        [Constructible]
         public FillableBarrel()
             : base(0xE77)
         {
@@ -741,7 +741,7 @@ namespace Server.Items
     [Flipable(0x9AB, 0xE7C)]
     public class FillableMetalChest : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public FillableMetalChest()
             : base(0x9AB)
         {
@@ -773,7 +773,7 @@ namespace Server.Items
     [Flipable(0xE41, 0xE40)]
     public class FillableMetalGoldenChest : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public FillableMetalGoldenChest()
             : base(0xE41)
         {
@@ -805,7 +805,7 @@ namespace Server.Items
     [Flipable(0xE43, 0xE42)]
     public class FillableWoodenChest : FillableContainer
     {
-        [Constructable]
+        [Constructible]
         public FillableWoodenChest()
             : base(0xE43)
         {

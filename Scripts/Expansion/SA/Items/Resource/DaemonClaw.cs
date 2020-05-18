@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class DaemonClaw : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public DaemonClaw()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DaemonClaw(int amount)
             : base(0x5721)
         {

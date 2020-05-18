@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PartiallyDigestedTorso : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public PartiallyDigestedTorso()
             : base(0x1D9F)
         {

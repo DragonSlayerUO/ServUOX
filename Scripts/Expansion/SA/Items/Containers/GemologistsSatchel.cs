@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113378;  // Gemologist's Satchel
 
-        [Constructable]
+        [Constructible]
         public GemologistsSatchel()
         {
             Hue = 1177;

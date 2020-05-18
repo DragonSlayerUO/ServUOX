@@ -4,13 +4,13 @@ namespace Server.Items
 {
     public class Lodestone : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Lodestone()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Lodestone(int amount)
             : base(0x5739)
         {

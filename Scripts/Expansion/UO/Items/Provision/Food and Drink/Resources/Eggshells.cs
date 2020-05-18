@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class Eggshells : Item
     {
-        [Constructable]
+        [Constructible]
         public Eggshells()
             : base(0x9b4)
         {

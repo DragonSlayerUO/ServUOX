@@ -36,7 +36,7 @@ namespace Server.Items
 
         public List<string> History { get; set; }
 
-        [Constructable]
+        [Constructible]
         public WallSafe(Mobile m) : base(0x8B8F)
         {
             Owner = m;
@@ -163,7 +163,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1155857;  // Currency Wall Safe
 
-        [Constructable]
+        [Constructible]
         public WallSafeDeed() : base(0x14F0)
         {
         }

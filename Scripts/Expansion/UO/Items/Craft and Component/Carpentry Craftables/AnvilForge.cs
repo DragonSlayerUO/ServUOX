@@ -4,7 +4,7 @@ namespace Server.Items
     [Engines.Craft.Anvil]
     public class Anvil : Item
     {
-        [Constructable]
+        [Constructible]
         public Anvil()
             : base(0xFAF)
         {
@@ -32,7 +32,7 @@ namespace Server.Items
     [Engines.Craft.Forge]
     public class Forge : Item
     {
-        [Constructable]
+        [Constructible]
         public Forge()
             : base(0xFB1)
         {

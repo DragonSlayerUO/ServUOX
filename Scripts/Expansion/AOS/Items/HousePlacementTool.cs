@@ -14,7 +14,7 @@ namespace Server.Items
     {
         public virtual bool UseCustomHousePlots => Misc.TestCenter.Enabled;
 
-        [Constructable]
+        [Constructible]
         public HousePlacementTool()
             : base(0x14F6)
         {

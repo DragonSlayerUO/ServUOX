@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class HeritageToken : Item
     {
-        [Constructable]
+        [Constructible]
         public HeritageToken()
             : base(0x367A)
         {

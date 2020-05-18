@@ -9,7 +9,7 @@ namespace Server.Mobiles
 {
     public class EtherealHorse : EtherealMount
     {
-        [Constructable]
+        [Constructible]
         public EtherealHorse()
             : base(0x20DD, 0x3EAA, 0x3EA0)
         { }

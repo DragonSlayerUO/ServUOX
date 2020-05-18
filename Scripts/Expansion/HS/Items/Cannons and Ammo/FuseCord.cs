@@ -11,13 +11,13 @@ namespace Server.Items
         TextDefinition ICommodity.Description => LabelNumber;
         bool ICommodity.IsDeedable => true;
 
-        [Constructable]
+        [Constructible]
         public FuseCord()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FuseCord(int amount)
             : base(0x1420)
         {

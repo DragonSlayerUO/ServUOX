@@ -24,7 +24,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public LockerKey(Parts type)
             : base(0x410B)
         {

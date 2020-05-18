@@ -16,7 +16,7 @@ namespace Server.Mobiles
             "Nujel'm"
         };
 
-        [Constructable]
+        [Constructible]
         public SeekerOfAdventure()
         {
             Title = "the seeker of adventure";

@@ -8,13 +8,13 @@ namespace Server.Mobiles
     {
         private DateTime m_NextWaterBall;
 
-        [Constructable]
+        [Constructible]
         public Leviathan()
             : this(null)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Leviathan(Mobile fisher)
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

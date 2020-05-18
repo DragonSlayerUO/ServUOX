@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x2B71, 0x3168)]
     public class RavenHelm : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public RavenHelm()
             : base(0x2B71)
         {

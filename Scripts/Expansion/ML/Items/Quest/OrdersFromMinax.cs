@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class OrdersFromMinax : Item
     {
-        [Constructable]
+        [Constructible]
         public OrdersFromMinax()
             : base(0x2279)
         {

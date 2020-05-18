@@ -15,7 +15,7 @@ namespace Server.Mobiles
         private List<SBInfo> m_SBInfos = new List<SBInfo>();
         protected override List<SBInfo> SBInfos => m_SBInfos;
 
-        [Constructable]
+        [Constructible]
         public Veterinarian()
             : base("the vet")
         {

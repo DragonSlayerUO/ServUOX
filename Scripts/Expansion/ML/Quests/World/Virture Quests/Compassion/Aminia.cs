@@ -5,7 +5,7 @@ namespace Server.Mobiles
 {
     public class Aminia : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Aminia()
             : base(AIType.AI_Melee, FightMode.None, 2, 1, 0.5, 2)
         {

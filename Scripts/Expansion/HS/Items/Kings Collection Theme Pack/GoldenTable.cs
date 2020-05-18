@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class GoldenTableAddon : BaseAddon, IDyable
     {
-        [Constructable]
+        [Constructible]
         public GoldenTableAddon(DirectionType type)
         {
             switch (type)
@@ -60,7 +60,7 @@ namespace Server.Items
 
         private DirectionType _Direction;
 
-        [Constructable]
+        [Constructible]
         public GoldenTableDeed()
             : base()
         {

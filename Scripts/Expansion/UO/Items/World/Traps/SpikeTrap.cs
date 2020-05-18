@@ -13,13 +13,13 @@ namespace Server.Items
 
     public class SpikeTrap : BaseTrap
     {
-        [Constructable]
+        [Constructible]
         public SpikeTrap()
             : this(SpikeTrapType.WestFloor)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SpikeTrap(SpikeTrapType type)
             : base(GetBaseID(type))
         {

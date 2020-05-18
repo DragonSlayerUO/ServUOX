@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1112694;  // Abyss Reaver
 
-        [Constructable]
+        [Constructible]
         public AbyssReaver()
         {
             SkillBonuses.SetValues(0, SkillName.Throwing, Utility.RandomMinMax(5, 10));

@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Items.SkeletonKey")]
     public class Enrico : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public Enrico()
             : base("Enrico", "the thief")
         {

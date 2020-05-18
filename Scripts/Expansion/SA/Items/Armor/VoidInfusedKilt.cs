@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113868;  // Void Infused Kilt
 
-        [Constructable]
+        [Constructible]
         public VoidInfusedKilt()
             : base()
         {

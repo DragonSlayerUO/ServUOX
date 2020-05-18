@@ -8,13 +8,13 @@ namespace Server.Items
 {
     public class RedVelvetGiftBox : BaseContainer
     {
-        [Constructable]
+        [Constructible]
         public RedVelvetGiftBox()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RedVelvetGiftBox(bool fill)
             : base(0xE7A)
         {

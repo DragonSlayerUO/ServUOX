@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a dragon corpse")]
     public class AncientWyrm : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public AncientWyrm()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -88,7 +88,7 @@ namespace Server.Mobiles
     [CorpseName("a dragon corpse")]
     public class Dragon : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Dragon()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -170,7 +170,7 @@ namespace Server.Mobiles
     [CorpseName("a drake corpse")]
     public class Drake : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Drake()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

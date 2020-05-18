@@ -7,13 +7,13 @@ namespace Server.Items
     [Flipable(0x27A1, 0x27EC)]
     public class JinBaori : BaseMiddleTorso
     {
-        [Constructable]
+        [Constructible]
         public JinBaori()
             : this(0)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public JinBaori(int hue)
             : base(0x27A1, hue)
         {

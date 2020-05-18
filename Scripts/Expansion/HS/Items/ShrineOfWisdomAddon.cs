@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ShrineOfWisdomAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public ShrineOfWisdomAddon()
         {
             AddComponent(new ShrineOfWisdomComponent(0x14C3), 0, 0, 0);
@@ -37,7 +37,7 @@ namespace Server.Items
     [Server.Engines.Craft.Forge]
     public class ShrineOfWisdomComponent : AddonComponent
     {
-        [Constructable]
+        [Constructible]
         public ShrineOfWisdomComponent(int itemID)
             : base(itemID)
         {

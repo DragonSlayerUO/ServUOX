@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("a human corpse")]
     public class DupresSquire : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DupresSquire() : base(AIType.AI_Melee, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
             Name = NameList.RandomName("male");

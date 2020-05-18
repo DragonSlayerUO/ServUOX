@@ -33,7 +33,7 @@ namespace Server.Items
             return 0;
         }
 
-        [Constructable]
+        [Constructible]
         public BeverageBottle(BeverageType type)
             : base(type)
         {

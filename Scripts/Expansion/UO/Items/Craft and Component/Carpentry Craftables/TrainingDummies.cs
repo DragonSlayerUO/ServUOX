@@ -6,13 +6,13 @@ namespace Server.Items
     public class TrainingDummy : AddonComponent
     {
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public TrainingDummy()
             : this(0x1074)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TrainingDummy(int itemID) : base(itemID)
         {
             MinSkill = -25.0;
@@ -168,7 +168,7 @@ namespace Server.Items
 
     public class TrainingDummyEastAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public TrainingDummyEastAddon()
         {
             AddComponent(new TrainingDummy(0x1074), 0, 0, 0);
@@ -194,7 +194,7 @@ namespace Server.Items
 
     public class TrainingDummyEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public TrainingDummyEastDeed()
         {
         }
@@ -220,7 +220,7 @@ namespace Server.Items
 
     public class TrainingDummySouthAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public TrainingDummySouthAddon()
         {
             AddComponent(new TrainingDummy(0x1070), 0, 0, 0);
@@ -246,7 +246,7 @@ namespace Server.Items
 
     public class TrainingDummySouthDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public TrainingDummySouthDeed()
         {
         }

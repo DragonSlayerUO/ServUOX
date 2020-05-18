@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ProtectorsEssence : Item
     {
-        [Constructable]
+        [Constructible]
         public ProtectorsEssence()
             : base(0x23F)
         {

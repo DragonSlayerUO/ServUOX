@@ -8,13 +8,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1151811;  // Whetstone of Enervation
 
-        [Constructable]
+        [Constructible]
         public WhetstoneOfEnervation()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public WhetstoneOfEnervation(int amount) : base(0x1368)
         {
             Hue = 1458;

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class IDWand : BaseWand
     {
-        [Constructable]
+        [Constructible]
         public IDWand()
             : base(WandEffect.Identification, 25, 175)
         {

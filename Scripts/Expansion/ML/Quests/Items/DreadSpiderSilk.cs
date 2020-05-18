@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class DreadSpiderSilk : Item
     {
-        [Constructable]
+        [Constructible]
         public DreadSpiderSilk()
             : base(0xDF8)
         {

@@ -105,7 +105,7 @@ namespace Server.Items
             set { m_IsBattleChicken = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public ChickenLizardEgg() : base(0x41BD)
         {
             m_Incubating = false;

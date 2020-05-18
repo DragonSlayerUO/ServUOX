@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class Serado : BaseChampion
     {
-        [Constructable]
+        [Constructible]
         public Serado()
             : base(AIType.AI_Melee)
         {

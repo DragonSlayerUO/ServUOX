@@ -20,13 +20,13 @@ namespace Server.Items
         public virtual bool IsSkeletonKey => false;
         public virtual int SkillBonus => 0;
 
-        [Constructable]
+        [Constructible]
         public Lockpick()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Lockpick(int amount)
             : base(0x14FC)
         {

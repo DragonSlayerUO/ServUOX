@@ -8,7 +8,7 @@ namespace Server.Mobiles
 {
     public class Sphynx : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Sphynx()
             : base(AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

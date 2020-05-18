@@ -141,19 +141,19 @@ namespace Server.Items
             return (CompassionPigmentType)values.GetValue(Utility.Random(values.Length));
         }
 
-        [Constructable]
+        [Constructible]
         public CompassionPigment()
             : this(GetRandomType())
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CompassionPigment(CompassionPigmentType type)
             : this(type, 5)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CompassionPigment(CompassionPigmentType type, int uses)
             : base(0xEFF)
         {

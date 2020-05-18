@@ -7,7 +7,7 @@ namespace Server.Mobiles
     [CorpseName("a drake corpse")]
     public class FrostDrake : ColdDrake
     {
-        [Constructable]
+        [Constructible]
         public FrostDrake()
         {
             Name = "a cold drake";

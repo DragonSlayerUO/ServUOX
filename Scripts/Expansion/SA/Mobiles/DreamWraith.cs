@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a dream wraith corpse")]
     public class DreamWraith : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public DreamWraith()
             : base(AIType.AI_NecroMage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

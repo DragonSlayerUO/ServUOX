@@ -7,7 +7,7 @@ namespace Server.Mobiles
     {
         public override double AverageThreshold => 0.25;
 
-        [Constructable]
+        [Constructible]
         public WhiteWyrm()
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

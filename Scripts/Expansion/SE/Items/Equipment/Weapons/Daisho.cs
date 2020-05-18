@@ -7,7 +7,7 @@ namespace Server.Items
     [Flipable(0x27A9, 0x27F4)]
     public class Daisho : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public Daisho()
             : base(0x27A9)
         {

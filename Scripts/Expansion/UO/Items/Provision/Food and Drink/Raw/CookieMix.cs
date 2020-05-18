@@ -3,7 +3,7 @@ namespace Server.Items
     public class CookieMix : CookableFood
     {
 
-        [Constructable]
+        [Constructible]
         public CookieMix()
             : base(0x103F, 20)
         {

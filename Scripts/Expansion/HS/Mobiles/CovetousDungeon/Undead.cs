@@ -6,7 +6,7 @@ namespace Server.Mobiles
     [CorpseName("an angered spirit corpse")]
     public class AngeredSpirit : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public AngeredSpirit() : base(AIType.AI_Mage)
         {
             Name = "an angered spirit";
@@ -14,7 +14,7 @@ namespace Server.Mobiles
             BaseSoundID = 471;
         }
 
-        [Constructable]
+        [Constructible]
         public AngeredSpirit(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "an angered spirit";
@@ -42,7 +42,7 @@ namespace Server.Mobiles
     [CorpseName("a bone swordslinger corpse")]
     public class BoneSwordSlinger : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public BoneSwordSlinger() : base(AIType.AI_Melee)
         {
             Name = "a bone swordslinger";
@@ -50,7 +50,7 @@ namespace Server.Mobiles
             BaseSoundID = 451;
         }
 
-        [Constructable]
+        [Constructible]
         public BoneSwordSlinger(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "a bone sword slinger";
@@ -78,7 +78,7 @@ namespace Server.Mobiles
     [CorpseName("a vile cadaver")]
     public class VileCadaver : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public VileCadaver() : base(AIType.AI_Melee)
         {
             Name = "a vile cadaver";
@@ -86,7 +86,7 @@ namespace Server.Mobiles
             BaseSoundID = 471;
         }
 
-        [Constructable]
+        [Constructible]
         public VileCadaver(int level, bool voidSpawn) : base(AIType.AI_Melee, level, voidSpawn)
         {
             Name = "a vile cadaver";
@@ -114,7 +114,7 @@ namespace Server.Mobiles
     [CorpseName("a liche's corpse")]
     public class DiseasedLich : CovetousCreature
     {
-        [Constructable]
+        [Constructible]
         public DiseasedLich() : base(AIType.AI_Mage)
         {
             Name = "a diseased lich";
@@ -122,7 +122,7 @@ namespace Server.Mobiles
             BaseSoundID = 0x3E9;
         }
 
-        [Constructable]
+        [Constructible]
         public DiseasedLich(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a diseased lich";
@@ -152,7 +152,7 @@ namespace Server.Mobiles
     {
         public override bool AlwaysMurderer => true;
 
-        [Constructable]
+        [Constructible]
         public CovetousRevenant() : base(AIType.AI_Mage)
         {
             Name = "a covetous revenant";
@@ -171,7 +171,7 @@ namespace Server.Mobiles
             SetWearable(boots);
         }
 
-        [Constructable]
+        [Constructible]
         public CovetousRevenant(int level, bool voidSpawn) : base(AIType.AI_Mage, level, voidSpawn)
         {
             Name = "a covetous revenant";

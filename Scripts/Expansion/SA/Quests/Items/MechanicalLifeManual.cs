@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112874;  // Mechanical Life Manual
 
-        [Constructable]
+        [Constructible]
         public MechanicalLifeManual()
             : base(0xFF4)
         {

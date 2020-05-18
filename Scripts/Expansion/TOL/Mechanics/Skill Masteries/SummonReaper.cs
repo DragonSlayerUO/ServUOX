@@ -91,7 +91,7 @@ namespace Server.Spells.SkillMasteries
 
         private long _NextAura;
 
-        [Constructable]
+        [Constructible]
         public SummonedReaper(Mobile caster, SummonReaperSpell spell)
             : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -5,7 +5,7 @@ namespace Server.Items
     public class RaedsGlory : WarCleaver
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RaedsGlory()
         {
             Hue = 0x1E6;

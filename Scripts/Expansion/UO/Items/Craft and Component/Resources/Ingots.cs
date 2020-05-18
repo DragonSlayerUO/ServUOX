@@ -146,13 +146,13 @@ namespace Server.Items
     [Flipable(0x1BF2, 0x1BEF)]
     public class IronIngot : BaseIngot
     {
-        [Constructable]
+        [Constructible]
         public IronIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public IronIngot(int amount)
             : base(CraftResource.Iron, amount)
         {
@@ -181,13 +181,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.DullCopper;
 
-        [Constructable]
+        [Constructible]
         public DullCopperIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DullCopperIngot(int amount)
             : base(CraftResource.DullCopper, amount)
         {
@@ -216,13 +216,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.ShadowIron;
 
-        [Constructable]
+        [Constructible]
         public ShadowIronIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ShadowIronIngot(int amount)
             : base(CraftResource.ShadowIron, amount)
         {
@@ -251,13 +251,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.Copper;
 
-        [Constructable]
+        [Constructible]
         public CopperIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CopperIngot(int amount)
             : base(CraftResource.Copper, amount)
         {
@@ -286,13 +286,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.Bronze;
 
-        [Constructable]
+        [Constructible]
         public BronzeIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BronzeIngot(int amount)
             : base(CraftResource.Bronze, amount)
         {
@@ -321,13 +321,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.Gold;
 
-        [Constructable]
+        [Constructible]
         public GoldIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public GoldIngot(int amount)
             : base(CraftResource.Gold, amount)
         {
@@ -356,13 +356,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.Agapite;
 
-        [Constructable]
+        [Constructible]
         public AgapiteIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public AgapiteIngot(int amount)
             : base(CraftResource.Agapite, amount)
         {
@@ -391,13 +391,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.Verite;
 
-        [Constructable]
+        [Constructible]
         public VeriteIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public VeriteIngot(int amount)
             : base(CraftResource.Verite, amount)
         {
@@ -426,13 +426,13 @@ namespace Server.Items
     {
         protected override CraftResource DefaultResource => CraftResource.Valorite;
 
-        [Constructable]
+        [Constructible]
         public ValoriteIngot()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ValoriteIngot(int amount)
             : base(CraftResource.Valorite, amount)
         {

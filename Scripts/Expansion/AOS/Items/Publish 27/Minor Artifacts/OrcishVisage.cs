@@ -5,7 +5,7 @@ namespace Server.Items
     public class OrcishVisage : OrcHelm
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public OrcishVisage()
         {
             Hue = 0x592;

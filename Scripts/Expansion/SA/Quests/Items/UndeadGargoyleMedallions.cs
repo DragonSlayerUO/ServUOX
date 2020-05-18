@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class UndeadGargoyleMedallions : Item
     {
-        [Constructable]
+        [Constructible]
         public UndeadGargoyleMedallions()
             : base(0x1088)
         {

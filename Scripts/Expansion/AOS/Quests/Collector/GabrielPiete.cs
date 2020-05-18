@@ -7,7 +7,7 @@ namespace Server.Mobiles
 {
     public class GabrielPiete : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public GabrielPiete()
             : base("the renowned minstrel")
         {

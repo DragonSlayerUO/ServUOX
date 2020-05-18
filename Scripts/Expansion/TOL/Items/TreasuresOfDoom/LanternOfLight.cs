@@ -10,7 +10,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string OwnerName { get { return _OwnerName; } set { _OwnerName = value; InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public LanternOfLight()
         {
         }

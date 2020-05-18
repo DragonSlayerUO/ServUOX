@@ -4,14 +4,14 @@ namespace Server.Items
 {
     public class SewingKit : BaseTool
     {
-        [Constructable]
+        [Constructible]
         public SewingKit()
             : base(0xF9D)
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public SewingKit(int uses)
             : base(uses, 0xF9D)
         {

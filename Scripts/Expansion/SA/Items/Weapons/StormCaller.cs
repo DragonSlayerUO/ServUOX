@@ -7,7 +7,7 @@ namespace Server.Items
         public override bool IsArtifact => true;
         public override int LabelNumber => 1113530;  // Storm Caller
 
-        [Constructable]
+        [Constructible]
         public StormCaller()
             : base()
         {

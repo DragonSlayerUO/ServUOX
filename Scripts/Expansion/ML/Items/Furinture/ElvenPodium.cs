@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x2DDD, 0x2DDE)]
     public class ElvenPodium : CraftableFurniture
     {
-        [Constructable]
+        [Constructible]
         public ElvenPodium()
             : base(0x2DDD)
         {

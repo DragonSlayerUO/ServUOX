@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new FirePitDeed();
 
-        [Constructable]
+        [Constructible]
         public FirePitAddon()
         {
             AddComponent(new AddonComponent(10749), 0, 0, 0);
@@ -38,7 +38,7 @@ namespace Server.Items
         public override BaseAddon Addon => new FirePitAddon();
         public override int LabelNumber => 1080206;  // Fire Pit
 
-        [Constructable]
+        [Constructible]
         public FirePitDeed()
         {
             LootType = LootType.Blessed;

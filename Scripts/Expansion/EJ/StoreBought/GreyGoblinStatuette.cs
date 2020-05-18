@@ -8,7 +8,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile User { get; set; }
 
-        [Constructable]
+        [Constructible]
         public GreyGoblinStatuette()
             : base(MonsterStatuetteType.GreyGoblin)
         {

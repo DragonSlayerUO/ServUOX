@@ -7,7 +7,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1095117;  // Britain Crown Fish
 
-        [Constructable]
+        [Constructible]
         public MudPuppy()
         {
             Hue = 643;

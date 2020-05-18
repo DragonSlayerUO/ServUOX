@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class AcidSac : Item
     {
-        [Constructable]
+        [Constructible]
         public AcidSac()
             : base(0x0C67)
         {
@@ -111,7 +111,7 @@ namespace Server.Items
 
     public class AncientPotteryFragments : Item
     {
-        [Constructable]
+        [Constructible]
         public AncientPotteryFragments()
             : base(0x2243)
         {
@@ -139,13 +139,13 @@ namespace Server.Items
 
     public class BouraPelt : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public BouraPelt()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public BouraPelt(int amount)
             : base(0x5742)
         {
@@ -177,13 +177,13 @@ namespace Server.Items
 
     public class ClawSlasherVeils : Item
     {
-        [Constructable]
+        [Constructible]
         public ClawSlasherVeils()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ClawSlasherVeils(int amount)
             : base(0x2DB8)
         {
@@ -212,13 +212,13 @@ namespace Server.Items
 
     public class CongealedSlugAcid : Item
     {
-        [Constructable]
+        [Constructible]
         public CongealedSlugAcid()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CongealedSlugAcid(int amount)
             : base(0x5742)
         {
@@ -248,13 +248,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.EnchantEssence")]
     public class EnchantedEssence : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public EnchantedEssence()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public EnchantedEssence(int amount)
             : base(0x2DB2)
         {
@@ -285,13 +285,13 @@ namespace Server.Items
 
     public class FairyDragonWing : Item
     {
-        [Constructable]
+        [Constructible]
         public FairyDragonWing()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FairyDragonWing(int amount)
             : base(0x1084)
         {
@@ -321,13 +321,13 @@ namespace Server.Items
 
     public class LeatherWolfSkin : Item
     {
-        [Constructable]
+        [Constructible]
         public LeatherWolfSkin()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LeatherWolfSkin(int amount)
             : base(0xDF8)
         {
@@ -364,13 +364,13 @@ namespace Server.Items
 
     public class LuckyCoin : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public LuckyCoin()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public LuckyCoin(int amount)
             : base(0xF87)
         {
@@ -437,13 +437,13 @@ namespace Server.Items
 
     public class MagicalResidue : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public MagicalResidue()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MagicalResidue(int amount)
             : base(0x2DB1)
         {
@@ -475,13 +475,13 @@ namespace Server.Items
 
     public class PileInspectedIngots : Item
     {
-        [Constructable]
+        [Constructible]
         public PileInspectedIngots()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public PileInspectedIngots(int amount)
             : base(0x1BEA)
         {
@@ -512,13 +512,13 @@ namespace Server.Items
 
     public class RelicFragment : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public RelicFragment()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public RelicFragment(int amount)
             : base(0x2DB3)
         {
@@ -550,13 +550,13 @@ namespace Server.Items
 
     public class SearedFireAntGoo : Item
     {
-        [Constructable]
+        [Constructible]
         public SearedFireAntGoo()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SearedFireAntGoo(int amount)
             : base(0x122E)
         {
@@ -590,13 +590,13 @@ namespace Server.Items
 
     public class StygianDragonHead : Item
     {
-        [Constructable]
+        [Constructible]
         public StygianDragonHead()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public StygianDragonHead(int amount)
             : base(0x2DB4)
         {
@@ -626,13 +626,13 @@ namespace Server.Items
 
     public class TatteredAncientScroll : Item
     {
-        [Constructable]
+        [Constructible]
         public TatteredAncientScroll()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public TatteredAncientScroll(int amount)
             : base(0x1700)
         {
@@ -670,13 +670,13 @@ namespace Server.Items
 
     public class UndamagedIronBeetleScale : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public UndamagedIronBeetleScale()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public UndamagedIronBeetleScale(int amount)
             : base(0x26B3)
         {
@@ -712,13 +712,13 @@ namespace Server.Items
 
     public class UndeadGargHorn : Item
     {
-        [Constructable]
+        [Constructible]
         public UndeadGargHorn()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public UndeadGargHorn(int amount)
             : base(0x315C)
         {
@@ -751,13 +751,13 @@ namespace Server.Items
 
     public class UndeadGargMedallion : Item
     {
-        [Constructable]
+        [Constructible]
         public UndeadGargMedallion()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public UndeadGargMedallion(int amount)
             : base(0x1088)
         {
@@ -794,13 +794,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.UntransTome")]
     public class UntranslatedAncientTome : Item
     {
-        [Constructable]
+        [Constructible]
         public UntranslatedAncientTome()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public UntranslatedAncientTome(int amount)
             : base(0x0FF2)
         {
@@ -837,13 +837,13 @@ namespace Server.Items
     {
         public override int LabelNumber => 1112328;  // crystal dust
 
-        [Constructable]
+        [Constructible]
         public CrystalDust()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public CrystalDust(int amount)
             : base(16393)
         {
@@ -876,7 +876,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1094999;  // Barrel of Barley
 
-        [Constructable]
+        [Constructible]
         public BarrelOfBarley()
             : base(4014)
         {
@@ -905,7 +905,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1095000;  // Flint's Logbook
 
-        [Constructable]
+        [Constructible]
         public FlintsLogbook()
             : base(7185)
         {
@@ -933,7 +933,7 @@ namespace Server.Items
     {
         public override int LabelNumber => IsEmpty ? 1113607 : 1094967; // a bottle of Flint's Pungent Brew
 
-        [Constructable]
+        [Constructible]
         public BottleOfFlintsPungnentBrew()
             : base(BeverageType.Ale)
         {
@@ -969,7 +969,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1113608;  // a keg of Flint's Pungent Brew
 
-        [Constructable]
+        [Constructible]
         public KegOfFlintsPungnentBrew()
             : base(6870)
         {
@@ -998,7 +998,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1095001;  // Floor Trap Components
 
-        [Constructable]
+        [Constructible]
         public FloorTrapComponent()
             : base(Utility.RandomMinMax(3117, 3120))
         {
@@ -1026,7 +1026,7 @@ namespace Server.Items
     {
         public override Type QuestType => typeof(Server.Engines.Quests.Missing);
 
-        [Constructable]
+        [Constructible]
         public DuganMissingQuestCorpse()
             : base(1094954) // You observe the remains of four humans here.  As you observe the tragic scene, you are reminded that you promised to bring evidence to Elder Dugan of their fate.
         {
@@ -1056,7 +1056,7 @@ namespace Server.Items
         public override Type QuestItemType => typeof(BarrelOfBarley);
         public override int DefaultRange => 5;
 
-        [Constructable]
+        [Constructible]
         public FlintLostBarrelHint()
             : base(1094963) // The smug smell of Barley fills this chamber.
         {
@@ -1086,7 +1086,7 @@ namespace Server.Items
         public override Type QuestItemType => typeof(FlintsLogbook);
         public override int DefaultRange => 5;
 
-        [Constructable]
+        [Constructible]
         public FlintLostLogbookHint()
             : base(1094974) // This appears to be Flint's logbook.  It is not clear why the goblins were using it in a ritual.  Perhaps they were summoning a nefarious intention?
         {

@@ -35,7 +35,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public bool ForceRestock { get => false; set { if (value) { DoRestock(); } } }
 
-        [Constructable]
+        [Constructible]
         public MysteriousWisp()
             : base(AIType.AI_Mage, FightMode.None, 10, 1, 0.2, 0.4)
         {

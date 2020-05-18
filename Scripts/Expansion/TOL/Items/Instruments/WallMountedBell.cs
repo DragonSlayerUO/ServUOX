@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154162;  // Wall Mounted Bell (South)
 
-        [Constructable]
+        [Constructible]
         public WallMountedBellSouthDeed()
         {
         }
@@ -36,7 +36,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new WallMountedBellSouthDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public WallMountedBellSouthAddon()
         {
             AddComponent(new InstrumentedAddonComponent(0x4C5C, 0x66C), 0, 0, 10);
@@ -64,7 +64,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1154163;  // Wall Mounted Bell (East)
 
-        [Constructable]
+        [Constructible]
         public WallMountedBellEastDeed()
         {
         }
@@ -94,7 +94,7 @@ namespace Server.Items
         public override BaseAddonDeed Deed => new WallMountedBellEastDeed();
         public override bool RetainDeedHue => true;
 
-        [Constructable]
+        [Constructible]
         public WallMountedBellEastAddon()
         {
             AddComponent(new InstrumentedAddonComponent(0x4C5D, 0x66C), 0, 0, 10);

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ParoxysmusTele : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public ParoxysmusTele()
             : base(new Point3D(6222, 335, 60), Map.Trammel)
         {
@@ -71,7 +71,7 @@ namespace Server.Items
 
     public class ParoxysmusTeleFel : Teleporter
     {
-        [Constructable]
+        [Constructible]
         public ParoxysmusTeleFel()
             : base(new Point3D(6222, 335, 60), Map.Felucca)
         {

@@ -27,7 +27,7 @@ namespace Server.Engines.CityLoyalty
 
         private Dictionary<PlayerMobile, DateTime> _BannerCooldown;
 
-        [Constructable]
+        [Constructible]
         public GuardCaptain(City city) : base(AIType.AI_Vendor, FightMode.None, 10, 1, 0.2, 0.4)
         {
             City = city;

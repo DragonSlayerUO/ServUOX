@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Haven
 {
     public class QuestFertileDirt : QuestItem
     {
-        [Constructable]
+        [Constructible]
         public QuestFertileDirt()
             : base(0xF81)
         {

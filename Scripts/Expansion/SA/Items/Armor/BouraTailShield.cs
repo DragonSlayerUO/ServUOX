@@ -5,7 +5,7 @@ namespace Server.Items
     public class BouraTailShield : WoodenKiteShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public BouraTailShield()
         {
             Hue = 554;

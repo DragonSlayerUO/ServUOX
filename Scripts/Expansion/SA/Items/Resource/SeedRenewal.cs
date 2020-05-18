@@ -5,13 +5,13 @@ namespace Server.Items
     [TypeAlias("Server.Items.SeedRenewal")]
     public class SeedOfRenewal : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public SeedOfRenewal()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SeedOfRenewal(int amount)
             : base(0x5736)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GargishBracelet : BaseBracelet
     {
-        [Constructable]
+        [Constructible]
         public GargishBracelet()
             : base(0x4211)
         {

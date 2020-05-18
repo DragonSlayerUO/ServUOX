@@ -5,7 +5,7 @@ namespace Server.Items
     public class RoyalGuardInvestigatorsCloak : Cloak
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public RoyalGuardInvestigatorsCloak()
             : base()
         {

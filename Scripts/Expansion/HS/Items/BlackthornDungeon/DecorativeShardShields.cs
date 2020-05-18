@@ -10,13 +10,13 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public DecorativeShardShield()
             : this(0x6380)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DecorativeShardShield(int itemID)
             : base(itemID)
         {
@@ -93,7 +93,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153729;  // Deed for a Decorative Shard Shield
 
-        [Constructable]
+        [Constructible]
         public DecorativeShardShieldDeed()
             : base(0x14F0)
         {

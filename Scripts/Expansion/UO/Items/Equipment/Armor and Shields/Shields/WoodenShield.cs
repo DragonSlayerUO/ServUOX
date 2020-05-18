@@ -5,7 +5,7 @@ namespace Server.Items
     [Alterable(typeof(DefBlacksmithy), typeof(GargishWoodenShield))]
     public class WoodenShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public WoodenShield()
             : base(0x1B7A)
         {

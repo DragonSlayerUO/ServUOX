@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class MoorishIdol : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public MoorishIdol()
             : base(0xA35F)
         {

@@ -118,7 +118,7 @@ namespace Server.Items
 
         public override Type[] HoldTypes => new Type[] { typeof(BaseOre), typeof(BaseIngot), typeof(BaseGranite), typeof(Saltpeter) };
 
-        [Constructable]
+        [Constructible]
         public MinersSatchel()
             : base(0xA272)
         {
@@ -149,7 +149,7 @@ namespace Server.Items
 
         public override Type[] HoldTypes => new Type[] { typeof(BaseLog), typeof(Board) };
 
-        [Constructable]
+        [Constructible]
         public LumbjacksSatchel()
             : base(0xA274)
         {

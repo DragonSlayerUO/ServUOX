@@ -28,13 +28,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Active => Hue == 0;
 
-        [Constructable]
+        [Constructible]
         public ExodusNexus()
             : this(Utility.RandomMinMax(3, 6))
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ExodusNexus(int sideLength)
         {
             Hue = 1987;

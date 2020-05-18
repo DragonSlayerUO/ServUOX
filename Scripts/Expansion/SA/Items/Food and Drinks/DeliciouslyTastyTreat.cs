@@ -10,12 +10,12 @@ namespace Server.Items
         public override TimeSpan Duration => TimeSpan.FromMinutes(10);
         public override TimeSpan CoolDown => TimeSpan.FromMinutes(60);
 
-        [Constructable]
+        [Constructible]
         public DeliciouslyTastyTreat() : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DeliciouslyTastyTreat(int amount)
         {
             Stackable = true;

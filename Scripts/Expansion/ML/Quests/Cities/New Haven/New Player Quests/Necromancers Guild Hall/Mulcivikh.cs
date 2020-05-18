@@ -16,7 +16,7 @@ namespace Server.Mobiles
             SBInfos.Add(new SBMage());
         }
 
-        [Constructable]
+        [Constructible]
         public Mulcivikh()
             : base("Mulcivikh", "the Necromancy Instructor")
         {

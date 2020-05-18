@@ -4,7 +4,7 @@ namespace Server.Mobiles
     [CorpseName("a ship rat corpse")]
     public class ShipRat : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public ShipRat()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

@@ -28,7 +28,7 @@ namespace Server.Items
 
         private int m_Flour;
         private Timer m_Timer;
-        [Constructable]
+        [Constructible]
         public FlourMillEastAddon()
         {
             AddComponent(new AddonComponent(0x1920), -1, 0, 0);
@@ -196,7 +196,7 @@ namespace Server.Items
 
     public class FlourMillEastDeed : BaseAddonDeed
     {
-        [Constructable]
+        [Constructible]
         public FlourMillEastDeed()
         {
         }

@@ -15,7 +15,7 @@ namespace Server.Engines.Shadowguard
 
         public BarEncounter Encounter { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ShadowguardBottleOfLiquor(BarEncounter encounter) : base(0x99B)
         {
             Encounter = encounter;
@@ -467,7 +467,7 @@ namespace Server.Engines.Shadowguard
             }
         }
 
-        [Constructable]
+        [Constructible]
         public Phylactery() : base(17076)
         {
             Hue = 2075;
@@ -617,7 +617,7 @@ namespace Server.Engines.Shadowguard
     {
         public override int LabelNumber => 1156217;  // Purifying Flames
 
-        [Constructable]
+        [Constructible]
         public PurifyingFlames() : base(0x19AB)
         {
             Movable = false;
@@ -660,14 +660,14 @@ namespace Server.Engines.Shadowguard
         [CommandProperty(AccessLevel.GameMaster)]
         public Flow Flow { get { return _Flow; } set { _Flow = value; InvalideIDfromFlow(); } }
 
-        [Constructable]
+        [Constructible]
         public ShadowguardCanal() : base(Utility.RandomList(39911, 39915, 39919, 39924, 39928, 39932))
         {
             InvalidateID();
             Hue = 2500;
         }
 
-        [Constructable]
+        [Constructible]
         public ShadowguardCanal(Flow flow) : base(0)
         {
             Flow = flow;
@@ -862,7 +862,7 @@ namespace Server.Engines.Shadowguard
         public override int Lifespan => 90;
         public override int LabelNumber => 1156233;  // Magic Drake Wing
 
-        [Constructable]
+        [Constructible]
         public MagicDrakeWing() : base(0x1E85)
         {
         }
@@ -901,7 +901,7 @@ namespace Server.Engines.Shadowguard
     {
         public override int LabelNumber => 1156232;   // Feeding Bell
 
-        [Constructable]
+        [Constructible]
         public FeedingBell()
         {
             AddComponent(new AddonComponent(38955), 0, 0, 0);
@@ -955,7 +955,7 @@ namespace Server.Engines.Shadowguard
         public override int LabelNumber => 1156214;  // The Withered Bones of an Adventurer
         public override bool IsDecoContainer => false;
 
-        [Constructable]
+        [Constructible]
         public WitheringBones()
             : base(0xECF)
         {

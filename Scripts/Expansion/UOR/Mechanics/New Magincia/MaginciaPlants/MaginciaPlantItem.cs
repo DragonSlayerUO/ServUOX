@@ -61,13 +61,13 @@ namespace Server.Engines.Plants
         [CommandProperty(AccessLevel.GameMaster)]
         public override bool ValidGrowthLocation => RootParent == null && !Movable;
 
-        [Constructable]
+        [Constructible]
         public MaginciaPlantItem()
             : this(false)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public MaginciaPlantItem(bool fertile)
             : base(2323, fertile)
         {

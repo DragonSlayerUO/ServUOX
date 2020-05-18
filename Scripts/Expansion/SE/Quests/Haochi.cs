@@ -6,7 +6,7 @@ namespace Server.Engines.Quests.Samurai
 {
     public class Haochi : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public Haochi()
             : base("the Honorable Samurai Legend")
         {

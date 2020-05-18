@@ -25,7 +25,7 @@ namespace Server.Items
         private Item m_TargetItem1 = null;
         private string m_TargetProperty1 = null;
 
-        [Constructable]
+        [Constructible]
         public SimpleTileTrap() : base(7107)
         {
             Name = "A tile trap";

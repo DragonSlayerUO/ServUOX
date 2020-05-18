@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0x48BA, 0x48BB)]
     public class GargishKatana : BaseSword
     {
-        [Constructable]
+        [Constructible]
         public GargishKatana()
             : base(0x48BA)
         {

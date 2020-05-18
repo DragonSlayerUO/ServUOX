@@ -6,7 +6,7 @@ namespace Server.Items
     public class SacrificeSollerets : BaseClothing
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public SacrificeSollerets()
             : base(0x2B13, Layer.Shoes)
         {

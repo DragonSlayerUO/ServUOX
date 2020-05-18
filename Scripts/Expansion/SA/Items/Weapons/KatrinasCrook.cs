@@ -5,7 +5,7 @@ namespace Server.Items
     public class KatrinasCrook : ShepherdsCrook
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public KatrinasCrook()
             : base()
         {

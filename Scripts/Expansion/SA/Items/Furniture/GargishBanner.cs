@@ -5,7 +5,7 @@ namespace Server.Items
     [Flipable(0x4037, 0x4038)]
     public class GargishBanner : Item
     {
-        [Constructable]
+        [Constructible]
         public GargishBanner()
             : base(0x4037)
         {

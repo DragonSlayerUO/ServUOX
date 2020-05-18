@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Cillitha : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Cillitha()
             : base("Cillitha", "the Bowcrafter")
         {

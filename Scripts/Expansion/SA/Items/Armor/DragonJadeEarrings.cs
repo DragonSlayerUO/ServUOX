@@ -13,7 +13,7 @@ namespace Server.Items
         public override int BasePoisonResistance => 13;
         public override int BaseEnergyResistance => 3;
 
-        [Constructable]
+        [Constructible]
         public DragonJadeEarrings()
         {
             Hue = 2129;

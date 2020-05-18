@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class CoagulatedLegs : PeerlessKey
     {
-        [Constructable]
+        [Constructible]
         public CoagulatedLegs()
             : base(0x1CDF)
         {

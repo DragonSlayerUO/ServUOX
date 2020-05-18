@@ -5,7 +5,7 @@ namespace Server.Engines.Quests.Ninja
 {
     public class EminosKatana : QuestItem
     {
-        [Constructable]
+        [Constructible]
         public EminosKatana()
             : base(0x13FF)
         {

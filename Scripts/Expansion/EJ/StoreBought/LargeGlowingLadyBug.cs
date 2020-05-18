@@ -12,7 +12,7 @@ namespace Server.Items
 
         public bool SouthFacing => ItemID == 0x2CFD || ItemID == 0x2CFE;
 
-        [Constructable]
+        [Constructible]
         public LargeGlowingLadyBug()
             : base(0x2CFD)
         {

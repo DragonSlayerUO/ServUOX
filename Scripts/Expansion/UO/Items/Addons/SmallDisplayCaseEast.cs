@@ -4,7 +4,7 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new SmallDisplayCaseEastDeed();
 
-        [Constructable]
+        [Constructible]
         public SmallDisplayCaseEastAddon()
         {
             AddComponent(new AddonComponent(0x0B09), 0, 0, 0);
@@ -34,7 +34,7 @@ namespace Server.Items
         public override BaseAddon Addon => new SmallDisplayCaseEastAddon();
         public override int LabelNumber => 1155843;  // Small Display Case (East)
 
-        [Constructable]
+        [Constructible]
         public SmallDisplayCaseEastDeed()
         {
         }

@@ -18,13 +18,13 @@ namespace Server.Items
 
         public AddonFacing Facing { get; set; }
 
-        [Constructable]
+        [Constructible]
         public DragonHeadAddon()
             : this(AddonFacing.South)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DragonHeadAddon(AddonFacing facing)
         {
             Facing = facing;
@@ -110,7 +110,7 @@ namespace Server.Items
 
         public override int LabelNumber => 1080209;  // Dragon Head
 
-        [Constructable]
+        [Constructible]
         public DragonHeadAddonDeed()
         {
             LootType = LootType.Blessed;
@@ -168,13 +168,13 @@ namespace Server.Items
     {
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public DragonHeadOld()
             : this(0x2234)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public DragonHeadOld(int itemID)
             : base(itemID)
         {
@@ -244,7 +244,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1028756;  // dragon head
 
-        [Constructable]
+        [Constructible]
         public DragonHeadDeedOld()
             : base(0x14F0)
         {

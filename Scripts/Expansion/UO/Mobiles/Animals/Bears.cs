@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Bear")]
     public class BlackBear : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public BlackBear()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -67,7 +67,7 @@ namespace Server.Mobiles
     [CorpseName("a bear corpse")]
     public class BrownBear : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public BrownBear()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -130,7 +130,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Grizzlybear")]
     public class GrizzlyBear : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public GrizzlyBear()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {
@@ -194,7 +194,7 @@ namespace Server.Mobiles
     [TypeAlias("Server.Mobiles.Polarbear")]
     public class PolarBear : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public PolarBear()
             : base(AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
         {

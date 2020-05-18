@@ -20,7 +20,7 @@ namespace Server.Items
 
         public override BasePeerless Boss => new ShimmeringEffusion();
 
-        [Constructable]
+        [Constructible]
         public PrismOfLightAltar() : base(0x2206)
         {
             Visible = false;

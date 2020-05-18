@@ -3,7 +3,7 @@ namespace Server.Mobiles
     [CorpseName("a rotting corpse")]
     public class RottingCorpse : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public RottingCorpse()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

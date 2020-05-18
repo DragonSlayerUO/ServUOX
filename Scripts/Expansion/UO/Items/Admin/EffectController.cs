@@ -27,7 +27,7 @@ namespace Server.Items
         private TimeSpan m_TriggerDelay;
         private TimeSpan m_SoundDelay;
 
-        [Constructable]
+        [Constructible]
         public EffectController()
             : base(0x1B72)
         {

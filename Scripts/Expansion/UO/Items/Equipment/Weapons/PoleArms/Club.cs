@@ -3,7 +3,7 @@ namespace Server.Items
     [Flipable(0x13b4, 0x13b3)]
     public class Club : BaseBashing
     {
-        [Constructable]
+        [Constructible]
         public Club()
             : base(0x13B4)
         {

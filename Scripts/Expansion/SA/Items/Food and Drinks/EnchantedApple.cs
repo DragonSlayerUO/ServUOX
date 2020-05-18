@@ -8,7 +8,7 @@ namespace Server.Items
 {
     public class EnchantedApple : BaseMagicalFood
     {
-        [Constructable]
+        [Constructible]
         public EnchantedApple()
             : base(0x2FD8)
         {

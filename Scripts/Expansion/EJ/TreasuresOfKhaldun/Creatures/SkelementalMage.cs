@@ -6,13 +6,13 @@ namespace Server.Mobiles
     [CorpseName("a skeletal corpse")]
     public class SkelementalMage : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public SkelementalMage()
             : this(Utility.RandomBool() ? SkelementalKnight.SkeletalType.Cold : SkelementalKnight.SkeletalType.Fire)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public SkelementalMage(SkelementalKnight.SkeletalType type)
             : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

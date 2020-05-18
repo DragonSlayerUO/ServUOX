@@ -10,7 +10,7 @@ namespace Server.Items
         public override bool RetainDeedHue => true;
         #endregion
 
-        [Constructable]
+        [Constructible]
         public GargishLongTableSouthAddon()
         {
             AddComponent(new AddonComponent(0x402F), -1, 0, 0);
@@ -42,7 +42,7 @@ namespace Server.Items
         public override BaseAddon Addon => new GargishLongTableSouthAddon();
         public override int LabelNumber => 1111781;// long table
 
-        [Constructable]
+        [Constructible]
         public GargishLongTableSouthDeed()
         {
         }

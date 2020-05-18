@@ -11,7 +11,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string Owner { get; set; }
 
-        [Constructable]
+        [Constructible]
         public ScrollofValiantCommendation() : base(0x46AE)
         {
             Weight = 1;

@@ -13,7 +13,7 @@ namespace Server.Items
         public virtual TimeSpan Duration => TimeSpan.FromMinutes(10);
         public virtual TimeSpan CoolDown => TimeSpan.FromMinutes(120);
 
-        [Constructable]
+        [Constructible]
         public VialofArmorEssence()
             : base(0x5722)
         {

@@ -14,7 +14,7 @@ namespace Server.Items
         public static EtherealSoulcleanser InstanceTram { get; set; }
         public static EtherealSoulcleanser InstanceFel { get; set; }
 
-        [Constructable]
+        [Constructible]
         public EtherealSoulcleanser()
             : base(0x2DF4)
         {

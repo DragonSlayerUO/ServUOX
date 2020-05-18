@@ -14,7 +14,7 @@ namespace Server.Items
     {
         private static Hashtable m_Table;
         private static Hashtable m_Cooldown;
-        [Constructable]
+        [Constructible]
         public BaseMagicalFood(int itemID)
             : base(itemID)
         {

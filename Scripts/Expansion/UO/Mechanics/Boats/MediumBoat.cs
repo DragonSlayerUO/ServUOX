@@ -17,7 +17,7 @@ namespace Server.Multis
 
         public override BaseDockedBoat DockedBoat => new MediumDockedBoat(this);
 
-        [Constructable]
+        [Constructible]
         public MediumBoat(Direction d) : base(d, true)
         {
         }

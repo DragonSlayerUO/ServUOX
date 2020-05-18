@@ -17,7 +17,7 @@ namespace Server.Items
             new CureLevelInfo(Poison.Deadly, 0.25),
             new CureLevelInfo(Poison.Lethal, 0.15)
         };
-        [Constructable]
+        [Constructible]
         public CurePotion()
             : base(PotionEffect.Cure)
         {

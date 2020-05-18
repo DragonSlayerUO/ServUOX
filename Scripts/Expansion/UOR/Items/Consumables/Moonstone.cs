@@ -14,7 +14,7 @@ namespace Server.Items
     public class Moonstone : Item
     {
         private MoonstoneType m_Type;
-        [Constructable]
+        [Constructible]
         public Moonstone(MoonstoneType type)
             : base(0xF8B)
         {

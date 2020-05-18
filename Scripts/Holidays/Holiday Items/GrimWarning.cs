@@ -8,7 +8,7 @@ namespace Server.Items
     */
     public class GrimWarning : Item
     {
-        [Constructable]
+        [Constructible]
         public GrimWarning()
             : base(0x42BD)
         {

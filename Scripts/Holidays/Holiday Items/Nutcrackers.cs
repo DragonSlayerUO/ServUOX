@@ -39,13 +39,13 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Wrapped { get { return _Wrapped; } set { _Wrapped = value; InvalidateID(); InvalidateProperties(); } }
 
-        [Constructable]
+        [Constructible]
         public ChocolateNutcracker()
             : this(ChocolateType.Dark)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public ChocolateNutcracker(ChocolateType type)
             : base(39952)
         {

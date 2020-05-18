@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public CraftSystem RepairSystem => DefTailoring.CraftSystem;
 
-        [Constructable]
+        [Constructible]
         public OrcHelm()
             : base(0x1F0B)
         {

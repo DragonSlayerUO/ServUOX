@@ -23,7 +23,7 @@ namespace Server.Items
             set { m_Level = value; }
         }
 
-        [Constructable]
+        [Constructible]
         public MapOfTheKnownWorld() : base(0x3BB6)
         {
             Name = "a map of the known world";

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BlackthornBaseAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BlackthornBaseAddon()
         {
         }
@@ -123,7 +123,7 @@ namespace Server.Items
 			, {4954, -11, 7, 0}// 217	
 		};
 
-        [Constructable]
+        [Constructible]
         public BlackthornEntry()
         {
             for (int i = 0; i < m_AddOnSimpleComponents.Length / 4; i++)

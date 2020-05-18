@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PewterBowlOfPeas : Food
     {
-        [Constructable]
+        [Constructible]
         public PewterBowlOfPeas()
             : base(0x1601)
         {

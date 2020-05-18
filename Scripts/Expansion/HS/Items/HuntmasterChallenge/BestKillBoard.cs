@@ -11,7 +11,7 @@ namespace Server.Items
     {
         public override string DefaultName => "Top 10 Kill Board";
 
-        [Constructable]
+        [Constructible]
         public BestKillBoard() : base(7775)
         {
             Movable = false;

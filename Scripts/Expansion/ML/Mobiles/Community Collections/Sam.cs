@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class BritanniaWaters : BaseCollectionMobile
     {
-        [Constructable]
+        [Constructible]
         public BritanniaWaters()
             : base("Sam", "the fisher")
         {

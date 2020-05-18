@@ -5,7 +5,7 @@ namespace Server.Items
     public class FrozenLongbow : ElvenCompositeLongbow
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public FrozenLongbow()
         {
             Attributes.WeaponSpeed = -5;

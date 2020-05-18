@@ -11,7 +11,7 @@ namespace Server.Items
 
         public override bool DisplayLootType => false;
 
-        [Constructable]
+        [Constructible]
         public DeathRobe()
         {
             LootType = LootType.Newbied;

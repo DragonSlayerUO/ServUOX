@@ -8,7 +8,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116299;
 
-        [Constructable]
+        [Constructible]
         public MentoSeasoning()
             : base(2454)
         {
@@ -36,7 +36,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116338;
 
-        [Constructable]
+        [Constructible]
         public SamuelsSecretSauce() : base(2463)
         {
             Hue = 1461;
@@ -63,7 +63,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1116300;
 
-        [Constructable]
+        [Constructible]
         public DarkTruffle()
             : base(3352)
         {
@@ -92,7 +92,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1031235;
 
-        [Constructable]
+        [Constructible]
         public FreshGinger()
             : base(11235)
         {
@@ -120,7 +120,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1150863;
 
-        [Constructable]
+        [Constructible]
         public FishOilFlask()
             : base(7192)
         {

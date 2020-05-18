@@ -6,7 +6,7 @@ namespace Server.Items
     [Flipable(0xF47, 0xF48)]
     public class BattleAxe : BaseAxe
     {
-        [Constructable]
+        [Constructible]
         public BattleAxe()
             : base(0xF47)
         {

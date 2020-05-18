@@ -5,7 +5,7 @@ namespace Server.Items
     public class MinaxsArmor : FemaleStuddedChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public MinaxsArmor()
             : base()
         {
@@ -45,7 +45,7 @@ namespace Server.Items
     public class KeeoneansChainMail : ChainChest
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public KeeoneansChainMail()
             : base()
         {
@@ -86,7 +86,7 @@ namespace Server.Items
     public class VesperOrderShield : OrderShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public VesperOrderShield()
             : base()
         {
@@ -125,7 +125,7 @@ namespace Server.Items
     public class VesperChaosShield : ChaosShield
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public VesperChaosShield()
             : base()
         {

@@ -2,13 +2,13 @@ namespace Server.Items
 {
     public class Shaft : Item, ICommodity
     {
-        [Constructable]
+        [Constructible]
         public Shaft()
             : this(1)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public Shaft(int amount)
             : base(0x1BD4)
         {

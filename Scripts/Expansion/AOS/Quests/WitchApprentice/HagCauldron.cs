@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class HagCauldron : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public HagCauldron()
         {
             AddonComponent pot;

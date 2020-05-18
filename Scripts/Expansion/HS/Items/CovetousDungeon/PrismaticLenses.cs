@@ -21,7 +21,7 @@ namespace Server.Items
 
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public PrismaticLenses()
         {
             Hue = 2068;
@@ -64,7 +64,7 @@ namespace Server.Items
 
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public GargishPrismaticLenses()
         {
             Hue = 2068;

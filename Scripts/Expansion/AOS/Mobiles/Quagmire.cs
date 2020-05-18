@@ -5,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a quagmire corpse")]
     public class Quagmire : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Quagmire()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.4, 0.8)
         {

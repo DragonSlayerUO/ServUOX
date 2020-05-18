@@ -252,7 +252,7 @@ namespace Server.Items
         public override object Author => "Queen Zhah";
         public override int[] Contents => m_Contents;
 
-        [Constructable]
+        [Constructible]
         public ChronicleOfTheGargoyleQueen2()
         {
             Hue = 573;

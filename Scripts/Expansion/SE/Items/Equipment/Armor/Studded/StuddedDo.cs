@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class StuddedDo : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public StuddedDo()
             : base(0x27C7)
         {

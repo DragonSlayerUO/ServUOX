@@ -17,7 +17,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool PlayerConstructed => _Resource != CraftResource.None;
 
-        [Constructable]
+        [Constructible]
         public BarrelLid()
             : base(0x1DB8)
         {
@@ -98,7 +98,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool PlayerConstructed => _Resource != CraftResource.None;
 
-        [Constructable]
+        [Constructible]
         public BarrelStaves()
             : base(0x1EB1)
         {
@@ -178,7 +178,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool PlayerConstructed => _Resource != CraftResource.None;
 
-        [Constructable]
+        [Constructible]
         public BarrelHoops()
             : base(0x1DB7)
         {
@@ -263,7 +263,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool PlayerConstructed => _Resource != CraftResource.None;
 
-        [Constructable]
+        [Constructible]
         public BarrelTap()
             : base(0x1004)
         {

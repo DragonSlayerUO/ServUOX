@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class RunicDovetailSaw : BaseRunicTool
     {
-        [Constructable]
+        [Constructible]
         public RunicDovetailSaw(CraftResource resource)
             : base(resource, 0x1028)
         {
@@ -13,7 +13,7 @@ namespace Server.Items
             Hue = CraftResources.GetHue(resource);
         }
 
-        [Constructable]
+        [Constructible]
         public RunicDovetailSaw(CraftResource resource, int uses)
             : base(resource, uses, 0x1028)
         {

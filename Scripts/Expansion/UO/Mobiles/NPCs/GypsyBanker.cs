@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class GypsyBanker : Banker
     {
-        [Constructable]
+        [Constructible]
         public GypsyBanker()
         {
             Title = "the gypsy banker";

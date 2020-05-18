@@ -6,7 +6,7 @@ namespace Server.Items
     {
         public override int LabelNumber => 1153776;  // Creepy Cake
 
-        [Constructable]
+        [Constructible]
         public CreepyCake()
             : base(0x9e9)
         {

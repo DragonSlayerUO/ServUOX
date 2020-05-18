@@ -11,7 +11,7 @@ namespace Server.Mobiles
                     typeof(EyesOfRangerQuest)
                 };
 
-        [Constructable]
+        [Constructible]
         public Walker()
             : base("Walker", "the Tracking Instructor")
         {

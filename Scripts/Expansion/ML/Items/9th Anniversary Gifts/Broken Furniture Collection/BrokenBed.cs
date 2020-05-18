@@ -6,7 +6,7 @@ namespace Server.Items
 {
     public class BrokenBedAddon : BaseAddon
     {
-        [Constructable]
+        [Constructible]
         public BrokenBedAddon(bool east)
             : base()
         {
@@ -50,7 +50,7 @@ namespace Server.Items
     public class BrokenBedDeed : BaseAddonDeed
     {
         private bool m_East;
-        [Constructable]
+        [Constructible]
         public BrokenBedDeed()
             : base()
         {

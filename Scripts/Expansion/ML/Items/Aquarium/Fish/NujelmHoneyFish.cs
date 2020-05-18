@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class NujelmHoneyFish : BaseFish
     {
-        [Constructable]
+        [Constructible]
         public NujelmHoneyFish()
             : base(0x3B06)
         {

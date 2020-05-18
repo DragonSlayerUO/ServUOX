@@ -6,7 +6,7 @@ namespace Server.Multis
 {
     public class RatCamp : BaseCamp
     {
-        [Constructable]
+        [Constructible]
         public RatCamp()
             : base(0x1F6D)// dummy garbage at center
         {

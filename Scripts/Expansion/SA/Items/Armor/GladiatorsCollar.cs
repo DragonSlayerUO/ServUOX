@@ -5,7 +5,7 @@ namespace Server.Items
     public class GladiatorsCollar : PlateGorget
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public GladiatorsCollar()
         {
             Hue = 0x26d;

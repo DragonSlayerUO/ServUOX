@@ -10,7 +10,7 @@ namespace Server.Mobiles
         public override bool InitialInnocent => true;
         public override OppositionGroup OppositionGroup => OppositionGroup.FeyAndUndead;
 
-        [Constructable]
+        [Constructible]
         public MLDryad()
             : base(AIType.AI_Mage, FightMode.Evil, 10, 1, 0.2, 0.4)
         {
@@ -171,7 +171,7 @@ namespace Server.Mobiles
     {
         public override bool InitialInnocent => false;
 
-        [Constructable]
+        [Constructible]
         public InsaneDryad()
             : base()
         {

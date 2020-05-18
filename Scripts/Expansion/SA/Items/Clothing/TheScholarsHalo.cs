@@ -7,7 +7,7 @@ namespace Server.Items
         public override int LabelNumber => 1157354;  // the scholar's halo
         public override bool IsArtifact => true;
 
-        [Constructable]
+        [Constructible]
         public TheScholarsHalo()
         {
             Attributes.BonusMana = 15;

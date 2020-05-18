@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class RoseInAVase : Item
     {
-        [Constructable]
+        [Constructible]
         public RoseInAVase()
             : base(0x0EB0)
         {

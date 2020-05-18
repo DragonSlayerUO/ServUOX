@@ -5,7 +5,7 @@ namespace Server.Items
 {
     public class ExoticToolkit : BaseDecayingItem
     {
-        [Constructable]
+        [Constructible]
         public ExoticToolkit()
             : base(0x1EB9)
         {

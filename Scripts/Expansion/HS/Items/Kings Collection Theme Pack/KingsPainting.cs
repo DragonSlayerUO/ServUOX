@@ -11,7 +11,7 @@ namespace Server.Items
         public override double DefaultWeight => 10.0;
         public override string DefaultName => "A Painting From The Personal Collection Of The King";
 
-        [Constructable]
+        [Constructible]
         public KingsPainting1()
             : base(19552)
         {
@@ -46,7 +46,7 @@ namespace Server.Items
         public override double DefaultWeight => 10.0;
         public override string DefaultName => "A Painting From The Personal Collection Of The King";
 
-        [Constructable]
+        [Constructible]
         public KingsPainting2()
             : base(19558)
         {

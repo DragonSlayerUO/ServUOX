@@ -47,7 +47,7 @@ namespace Server.Mobiles
         private List<HarrowerTentacles> m_Tentacles;
 
         Dictionary<Mobile, int> m_DamageEntries;
-        [Constructable]
+        [Constructible]
         public Harrower()
             : base(AIType.AI_NecroMage, FightMode.Closest, 18, 1, 0.2, 0.4)
         {

@@ -24,7 +24,7 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public bool HasMetalChest { get; private set; } = false;
 
-        [Constructable]
+        [Constructible]
         public PlagueBeast()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -238,7 +238,7 @@ namespace Server.Mobiles
     public class PlagueBeastLord : BaseCreature, ICarvable, IScissorable
     {
         private DecayTimer m_Timer;
-        [Constructable]
+        [Constructible]
         public PlagueBeastLord()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -571,7 +571,7 @@ namespace Server.Mobiles
     [CorpseName("a plague rat corpse")]
     public class PlagueRat : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public PlagueRat()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
@@ -636,7 +636,7 @@ namespace Server.Mobiles
     [CorpseName("a plague spawn corpse")]
     public class PlagueSpawn : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public PlagueSpawn()
             : this(null)
         {

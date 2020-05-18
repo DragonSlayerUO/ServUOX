@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class ResolvesBridle : Item
     {
-        [Constructable]
+        [Constructible]
         public ResolvesBridle()
             : base(0x1374)
         {

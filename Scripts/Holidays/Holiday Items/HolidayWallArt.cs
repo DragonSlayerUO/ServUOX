@@ -17,7 +17,7 @@ namespace Server.Items
         public virtual int NorthID { get; }
         public virtual int WestID { get; }
 
-        [Constructable]
+        [Constructible]
         public BaseHolidayWallArt(int ItemID)
             : base(ItemID)
         {
@@ -81,7 +81,7 @@ namespace Server.Items
         public override int NorthID => Burning ? 0xA4B4 : 0xA4B3;
         public override int WestID => Burning ? 0xA4B6 : 0xA4B5;
 
-        [Constructable]
+        [Constructible]
         public HolidayWallArt1()
             : base(0xA4B3)
         {
@@ -113,7 +113,7 @@ namespace Server.Items
         public override int NorthID => Burning ? 0xA4B8 : 0xA4B7;
         public override int WestID => Burning ? 0xA4BA : 0xA4B9;
 
-        [Constructable]
+        [Constructible]
         public HolidayWallArt2()
             : base(0xA4B7)
         {
@@ -145,7 +145,7 @@ namespace Server.Items
         public override int NorthID => Burning ? 0xA4AE : 0xA4AD;
         public override int WestID => Burning ? 0xA4B0 : 0xA4AF;
 
-        [Constructable]
+        [Constructible]
         public HolidayWallArt3()
             : base(0xA4AD)
         {

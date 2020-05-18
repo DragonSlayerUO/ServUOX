@@ -6,7 +6,7 @@ namespace Server.Items
     public class HumilityCloak : BaseClothing
     {
         public override bool IsArtifact => true;
-        [Constructable]
+        [Constructible]
         public HumilityCloak()
             : base(0x2B04, Layer.Cloak)
         {

@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class GoldShield : BaseShield
     {
-        [Constructable]
+        [Constructible]
         public GoldShield()
             : base(0x1BC4)
         {

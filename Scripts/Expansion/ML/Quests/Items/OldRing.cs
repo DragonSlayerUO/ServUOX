@@ -2,7 +2,7 @@ namespace Server.Items
 {
     public class OldRing : BaseRing
     {
-        [Constructable]
+        [Constructible]
         public OldRing()
             : base(0x108a)
         {

@@ -17,12 +17,12 @@ namespace Server.Items
 
         public HolidayGift2018 Gift { get; set; }
 
-        [Constructable]
+        [Constructible]
         public HolidayGiftToken2018()
            : this(HolidayGift2018.None)
         { }
 
-        [Constructable]
+        [Constructible]
         public HolidayGiftToken2018(HolidayGift2018 gift)
             : base(0xA094)
         {

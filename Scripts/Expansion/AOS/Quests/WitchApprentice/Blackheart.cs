@@ -6,7 +6,7 @@ namespace Server.Engines.Quests.Hag
 {
     public class Blackheart : BaseQuester
     {
-        [Constructable]
+        [Constructible]
         public Blackheart()
             : base("the Drunken Pirate")
         {

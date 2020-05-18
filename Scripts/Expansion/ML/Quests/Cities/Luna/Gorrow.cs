@@ -6,7 +6,7 @@ namespace Server.Mobiles
 {
     public class Gorrow : MondainQuester
     {
-        [Constructable]
+        [Constructible]
         public Gorrow()
             : base("Gorrow", "the Mayor")
         {

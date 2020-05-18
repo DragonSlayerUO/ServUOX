@@ -83,13 +83,13 @@ namespace Server.Items
             return 0;
         }
 
-        [Constructable]
+        [Constructible]
         public Pitcher()
         {
             Weight = 2.0;
         }
 
-        [Constructable]
+        [Constructible]
         public Pitcher(BeverageType type)
             : base(type)
         {

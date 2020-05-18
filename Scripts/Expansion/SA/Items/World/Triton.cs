@@ -10,7 +10,7 @@ namespace Server.Mobiles
 
         public Type CreatureType => typeof(Triton);
 
-        [Constructable]
+        [Constructible]
         public TritonStatue()
             : base(0xA2D8)
         {
@@ -64,7 +64,7 @@ namespace Server.Mobiles
     [CorpseName("a triton corpse")]
     public class Triton : BaseCreature
     {
-        [Constructable]
+        [Constructible]
         public Triton()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {

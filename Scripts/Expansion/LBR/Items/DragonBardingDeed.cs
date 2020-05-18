@@ -48,7 +48,7 @@ namespace Server.Items
             }
         }
 
-        [Constructable]
+        [Constructible]
         public DragonBardingDeed()
             : base(0x14F0)
         {

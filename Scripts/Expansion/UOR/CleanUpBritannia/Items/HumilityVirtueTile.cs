@@ -18,7 +18,7 @@ namespace Server.Items
 
         private int offset;
 
-        [Constructable]
+        [Constructible]
         public HumilityVirtueTileAddon(HumilityTileType type)
         {
             m_HumilityTileType = type;
@@ -63,7 +63,7 @@ namespace Server.Items
 
         private HumilityTileType m_HumilityTileType;
 
-        [Constructable]
+        [Constructible]
         public HumilityVirtueTileDeed()
         {
             LootType = LootType.Blessed;

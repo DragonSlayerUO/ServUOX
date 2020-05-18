@@ -10,13 +10,13 @@ namespace Server.Items
     {
         public override BaseAddonDeed Deed => new FallenLogDeed();
 
-        [Constructable]
+        [Constructible]
         public FallenLogAddon()
             : this(true)
         {
         }
 
-        [Constructable]
+        [Constructible]
         public FallenLogAddon(bool east)
             : base()
         {
@@ -60,7 +60,7 @@ namespace Server.Items
 
         private bool m_East;
 
-        [Constructable]
+        [Constructible]
         public FallenLogDeed()
             : base()
         {

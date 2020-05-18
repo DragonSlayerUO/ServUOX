@@ -4,7 +4,7 @@ namespace Server.Items
 {
     public class PlateGorget : BaseArmor
     {
-        [Constructable]
+        [Constructible]
         public PlateGorget()
             : base(0x1413)
         {

@@ -29,7 +29,7 @@ namespace Server.Items
         }
 
 
-        [Constructable]
+        [Constructible]
         public XmlQuestMaker() : base(0xED4)
         {
             Name = "XmlQuestMaker";

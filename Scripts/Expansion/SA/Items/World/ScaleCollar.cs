@@ -11,7 +11,7 @@ namespace Server.Items
 
         private Timer m_Timer;
 
-        [Constructable]
+        [Constructible]
         public ScaleCollar() : base(4235)
         {
             Hue = 2125;
