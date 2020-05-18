@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-using Server;
-
 namespace Server.Items
 {
     [Flipable(0xA35D, 0xA35E)]
@@ -11,7 +6,7 @@ namespace Server.Items
         private string _DisplayName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
+        public string DisplayName { get => _DisplayName; set { _DisplayName = value; InvalidateProperties(); } }
 
         public override int LabelNumber => 1159149;  // Copper Sunflower
 
@@ -32,7 +27,9 @@ namespace Server.Items
             }
 
             if (Hue == 2951)
+            {
                 list.Add(1076187); // Antique
+            }
         }
 
         public CopperSunflower(Serial serial)
@@ -51,7 +48,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             _DisplayName = reader.ReadString();
         }

@@ -1,11 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Server;
+using Server.Engines.SeasonalEvents;
 using Server.Items;
 using Server.Mobiles;
-using Server.Engines.SeasonalEvents;
+using System;
+using System.Linq;
 
 namespace Server.Engines.Points
 {
@@ -114,8 +111,7 @@ namespace Server.Engines.Points
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             Enabled = reader.ReadBool();
 

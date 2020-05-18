@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Server.ContextMenus;
 using Server.Engines.CannedEvil;
 using Server.Engines.Harvest;
@@ -8,8 +5,11 @@ using Server.Mobiles;
 using Server.Multis;
 using Server.Network;
 using Server.Regions;
-using Server.Targeting;
 using Server.Spells;
+using Server.Targeting;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Server.Items
 {
@@ -367,7 +367,9 @@ namespace Server.Items
             }
 
             if ((!newSystem && level == 7) || map == Map.Internal)
+            {
                 map = GetRandomMap();
+            }
 
             Facet = map;
 
@@ -389,11 +391,14 @@ namespace Server.Items
             int y1 = ChestLocation.Y - Utility.RandomMinMax(height / 4, (height / 4) * 3);
 
             if (x1 < 0)
+            {
                 x1 = 0;
+            }
 
             if (y1 < 0)
+            {
                 y1 = 0;
-
+            }
 
             AdjustMap(map, out int x2, out int y2, x1, y1, width, height, eodon);
 
@@ -432,35 +437,46 @@ namespace Server.Items
         public static Point2D GetRandomLocation(Map map, bool eodon)
         {
             if (!NewChestLocations)
+            {
                 return GetRandomClassicLocation();
+            }
 
             Rectangle2D[] recs;
-
-            int x = 0;
-            int y = 0;
-
             if (map == Map.Trammel || map == Map.Felucca)
+            {
                 recs = m_FelTramWrap;
+            }
             else if (map == Map.Tokuno)
+            {
                 recs = m_TokunoWrap;
+            }
             else if (map == Map.Malas)
+            {
                 recs = m_MalasWrap;
+            }
             else if (map == Map.Ilshenar)
+            {
                 recs = m_IlshenarWrap;
+            }
             else if (eodon)
+            {
                 recs = m_EodonWrap;
+            }
             else
+            {
                 recs = m_TerMurWrap;
+            }
 
             while (true)
             {
                 Rectangle2D rec = recs[Utility.Random(recs.Length)];
 
-                x = Utility.Random(rec.X, rec.Width);
-                y = Utility.Random(rec.Y, rec.Height);
-
+                int x = Utility.Random(rec.X, rec.Width);
+                int y = Utility.Random(rec.Y, rec.Height);
                 if (ValidateLocation(x, y, map))
+                {
                     return new Point2D(x, y);
+                }
             }
         }
 
@@ -568,82 +584,126 @@ namespace Server.Items
             if (map == Map.Trammel || map == Map.Felucca)
             {
                 if (x2 >= 5120)
+                {
                     x2 = 5119;
+                }
 
                 if (y2 >= 4096)
+                {
                     y2 = 4095;
+                }
             }
             else if (map == Map.Ilshenar)
             {
                 if (x2 >= 1890)
+                {
                     x2 = 1889;
+                }
 
                 if (x2 <= 120)
+                {
                     x2 = 121;
+                }
 
                 if (y2 >= 1465)
+                {
                     y2 = 1464;
+                }
 
                 if (y2 <= 105)
+                {
                     y2 = 106;
+                }
             }
             else if (map == Map.Malas)
             {
                 if (x2 >= 2522)
+                {
                     x2 = 2521;
+                }
 
                 if (x2 <= 515)
+                {
                     x2 = 516;
+                }
 
                 if (y2 >= 1990)
+                {
                     y2 = 1989;
+                }
 
                 if (y2 <= 0)
+                {
                     y2 = 1;
+                }
             }
             else if (map == Map.Tokuno)
             {
                 if (x2 >= 1428)
+                {
                     x2 = 1427;
+                }
 
                 if (x2 <= 0)
+                {
                     x2 = 1;
+                }
 
                 if (y2 >= 1420)
+                {
                     y2 = 1419;
+                }
 
                 if (y2 <= 0)
+                {
                     y2 = 1;
+                }
             }
             else if (map == Map.TerMur)
             {
                 if (eodon)
                 {
                     if (x2 <= 62)
+                    {
                         x2 = 63;
+                    }
 
                     if (x2 >= 960)
+                    {
                         x2 = 959;
+                    }
 
                     if (y2 <= 1343)
+                    {
                         y2 = 1344;
+                    }
 
                     if (y2 >= 2240)
+                    {
                         y2 = 2239;
+                    }
                 }
                 else
                 {
                     if (x2 >= 1271)
+                    {
                         x2 = 1270;
+                    }
 
                     if (x2 <= 260)
+                    {
                         x2 = 261;
+                    }
 
                     if (y2 >= 4094)
+                    {
                         y2 = 4083;
+                    }
 
                     if (y2 <= 2760)
+                    {
                         y2 = 2761;
+                    }
                 }
             }
         }
@@ -700,13 +760,21 @@ namespace Server.Items
             Type[][] spawns;
 
             if (map == Map.Trammel || map == Map.Felucca)
+            {
                 spawns = m_SpawnTypes;
+            }
             else if (map == Map.Tokuno)
+            {
                 spawns = m_TokunoSpawnTypes;
+            }
             else if (map == Map.Ilshenar)
+            {
                 spawns = m_IlshenarSpawnTypes;
+            }
             else if (map == Map.Malas)
+            {
                 spawns = m_MalasSpawnTypes;
+            }
             else
             {
                 if (SpellHelper.IsEodon(map, p))
@@ -1122,7 +1190,9 @@ namespace Server.Items
             writer.Write(ChestLocation);
 
             if (!Completed && NextReset != DateTime.MinValue && NextReset < DateTime.UtcNow)
+            {
                 Timer.DelayCall(TimeSpan.FromSeconds(30), new TimerCallback(ResetLocation));
+            }
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1156,7 +1226,9 @@ namespace Server.Items
                         m_Decoder = reader.ReadMobile();
 
                         if (version == 1)
+                        {
                             Facet = reader.ReadMap();
+                        }
 
                         ChestLocation = reader.ReadPoint2D();
 

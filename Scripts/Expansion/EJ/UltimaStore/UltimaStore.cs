@@ -1,16 +1,15 @@
+using Server.Commands;
+using Server.Engines.Points;
+using Server.Engines.VendorSearching;
+using Server.Gumps;
+using Server.Items;
+using Server.Mobiles;
+using Server.Multis;
+using Server.Network;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
-using Server.Commands;
-using Server.Mobiles;
-using Server.Items;
-using Server.Engines.VendorSearching;
-using Server.Gumps;
-using Server.Network;
-using Server.Engines.Points;
-using Server.Multis;
 
 namespace Server.Engines.UOStore
 {
@@ -39,7 +38,7 @@ namespace Server.Engines.UOStore
     {
         public static readonly string FilePath = Path.Combine("Saves/Misc", "UltimaStore.bin");
 
-        public static bool Enabled { get { return Configuration.Enabled; } set { Configuration.Enabled = value; } }
+        public static bool Enabled { get => Configuration.Enabled; set => Configuration.Enabled = value; }
 
         public static List<StoreEntry> Entries { get; private set; }
         public static Dictionary<Mobile, List<Item>> PendingItems { get; private set; }
@@ -883,9 +882,8 @@ namespace Server.Engines.UOStore
 
         public static PlayerProfile GetProfile(Mobile m, bool create = true)
         {
-            PlayerProfile profile;
 
-            if ((!PlayerProfiles.TryGetValue(m, out profile) || profile == null) && create)
+            if ((!PlayerProfiles.TryGetValue(m, out PlayerProfile profile) || profile == null) && create)
             {
                 PlayerProfiles[m] = profile = new PlayerProfile(m);
             }

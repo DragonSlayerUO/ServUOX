@@ -1,10 +1,5 @@
-using System;
-using System.Linq;
-using System.Collections.Generic;
-
-using Server;
 using Server.Items;
-using Server.Engines.PartySystem;
+using System.Collections.Generic;
 
 namespace Server.Multis
 {
@@ -67,10 +62,14 @@ namespace Server.Multis
         public override void Delete()
         {
             if (Line != null)
+            {
                 Line.Delete();
+            }
 
             if (Rudder != null && Rudder.Handle != null)
+            {
                 Rudder.Handle.Delete();
+            }
 
             base.Delete();
         }
@@ -78,7 +77,9 @@ namespace Server.Multis
         public override void SetFacingComponents(Direction facing, Direction old, bool ignore)
         {
             if (Rudder == null || Rudder.Handle == null)
+            {
                 return;
+            }
 
             switch (facing)
             {
@@ -104,10 +105,14 @@ namespace Server.Multis
             base.OnLocationChange(old);
 
             if (Line != null)
+            {
                 Line.Location = new Point3D(X + (Line.X - old.X), Y + (Line.Y - old.Y), Z + (Line.Z - old.Z));
+            }
 
             if (Rudder != null && Rudder.Handle != null)
+            {
                 Rudder.Handle.Location = new Point3D(X + (Rudder.Handle.X - old.X), Y + (Rudder.Handle.Y - old.Y), Z + (Rudder.Handle.Z - old.Z));
+            }
         }
 
         /// <summary>
@@ -119,7 +124,9 @@ namespace Server.Multis
             Map map = Map;
 
             if (map == null || map == Map.Internal)
+            {
                 yield break;
+            }
 
             MultiComponentList mcl = Components;
             IPooledEnumerable eable = map.GetObjectsInBounds(new Rectangle2D(X + mcl.Min.X, Y + mcl.Min.Y, mcl.Width, mcl.Height));
@@ -141,7 +148,9 @@ namespace Server.Multis
             base.OnMapChange();
 
             if (Line != null)
+            {
                 Line.Map = Map;
+            }
         }
 
         public override void OnPlacement(Mobile from)
@@ -149,7 +158,9 @@ namespace Server.Multis
             base.OnPlacement(from);
 
             if (Line == null)
+            {
                 return;
+            }
 
             switch (Facing)
             {
@@ -196,7 +207,7 @@ namespace Server.Multis
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             Rudder = reader.ReadItem() as PumpkinRudder;
             Line = reader.ReadItem() as MooringBlock;
@@ -221,16 +232,16 @@ namespace Server.Multis
         {
         }
 
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-            int version = reader.ReadInt();
-        }
-
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
             writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            _ = reader.ReadInt();
         }
     }
 
@@ -271,7 +282,7 @@ namespace Server.Multis
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -318,7 +329,7 @@ namespace Server.Multis
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             if (ItemID == 42030)
             {
@@ -343,7 +354,9 @@ namespace Server.Multis
         public override void SetFacing(Direction dir)
         {
             if (Rudder == null)
+            {
                 Delete();
+            }
             else
             {
                 switch (dir)
@@ -383,7 +396,7 @@ namespace Server.Multis
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -401,16 +414,16 @@ namespace Server.Multis
         {
         }
 
-        public override void Deserialize(GenericReader reader)
-        {
-            base.Deserialize(reader);
-            int version = reader.ReadInt();
-        }
-
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
             writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            _ = reader.ReadInt();
         }
     }
 }

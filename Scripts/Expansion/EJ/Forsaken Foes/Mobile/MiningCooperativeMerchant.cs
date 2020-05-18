@@ -1,9 +1,8 @@
-using System;
-using Server.Items;
-using System.Collections.Generic;
-using Server.Mobiles;
 using Server.Gumps;
+using Server.Items;
+using Server.Mobiles;
 using Server.Network;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -152,13 +151,13 @@ namespace Server.Engines.Quests
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             if (Map == Map.Trammel)
             {

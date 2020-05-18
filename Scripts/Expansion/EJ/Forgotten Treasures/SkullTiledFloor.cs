@@ -80,7 +80,9 @@ namespace Server.Items
                 from.SendGump(new RewardOptionGump(this));
             }
             else
+            {
                 from.SendLocalizedMessage(1062334); // This item must be in your backpack to be used.   
+            }
         }
 
         public override void Serialize(GenericWriter writer)
@@ -114,7 +116,9 @@ namespace Server.Items
             }
 
             if (!Deleted)
+            {
                 base.OnDoubleClick(from);
+            }
         }
     }
 }

@@ -1,5 +1,3 @@
-using System;
-using Server;
 using Server.Gumps;
 
 namespace Server.Items
@@ -40,8 +38,10 @@ namespace Server.Items
 
         public void OnOptionSelected(Mobile from, int choice)
         {
-            var bag = new Bag();
-            bag.Hue = 1286;
+            var bag = new Bag
+            {
+                Hue = 1286
+            };
 
             bool chance = Utility.RandomDouble() < .1;
 
@@ -130,13 +130,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

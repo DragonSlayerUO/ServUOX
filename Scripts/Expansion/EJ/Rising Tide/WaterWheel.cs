@@ -1,4 +1,3 @@
-using System;
 using Server.Engines.VeteranRewards;
 using Server.Gumps;
 
@@ -22,7 +21,7 @@ namespace Server.Items
 
         public int Quantity
         {
-            get { return 500; }
+            get => 500;
             set { }
         }
 
@@ -38,8 +37,10 @@ namespace Server.Items
         {
             get
             {
-                WaterWheelDeed deed = new WaterWheelDeed();
-                deed.IsRewardItem = IsRewardItem;
+                WaterWheelDeed deed = new WaterWheelDeed
+                {
+                    IsRewardItem = IsRewardItem
+                };
 
                 return deed;
             }
@@ -56,7 +57,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             IsRewardItem = reader.ReadBool();
         }
@@ -70,8 +71,10 @@ namespace Server.Items
         {
             get
             {
-                WaterWheelAddon addon = new WaterWheelAddon(_Direction);
-                addon.IsRewardItem = m_IsRewardItem;
+                WaterWheelAddon addon = new WaterWheelAddon(_Direction)
+                {
+                    IsRewardItem = m_IsRewardItem
+                };
 
                 return addon;
             }
@@ -84,10 +87,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsRewardItem
         {
-            get
-            {
-                return m_IsRewardItem;
-            }
+            get => m_IsRewardItem;
             set
             {
                 m_IsRewardItem = value;
@@ -112,7 +112,9 @@ namespace Server.Items
             base.GetProperties(list);
 
             if (m_IsRewardItem)
+            {
                 list.Add(1080457); // 10th Year Veteran Reward
+            }
         }
 
         public void GetOptions(RewardOptionList list)
@@ -126,7 +128,9 @@ namespace Server.Items
             _Direction = (DirectionType)choice;
 
             if (!Deleted)
+            {
                 base.OnDoubleClick(from);
+            }
         }
 
         public override void OnDoubleClick(Mobile from)
@@ -153,7 +157,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             m_IsRewardItem = reader.ReadBool();
         }

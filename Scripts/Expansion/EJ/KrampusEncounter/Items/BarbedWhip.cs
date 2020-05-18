@@ -1,11 +1,10 @@
-using System;
 using Server.Engines.Craft;
 
 namespace Server.Items
 {
-    public class BarbedWhip : BaseBashing, Server.Engines.Craft.IRepairable
+    public class BarbedWhip : BaseBashing, IRepairable
     {
-        public Server.Engines.Craft.CraftSystem RepairSystem => Server.Engines.Craft.DefTinkering.CraftSystem;
+        public CraftSystem RepairSystem => DefTinkering.CraftSystem;
         public override int LabelNumber => 1125641;  // Barbed Whip		
 
         [Constructable]
@@ -35,13 +34,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 }

@@ -77,7 +77,7 @@ namespace Server.Engines.Fellowship
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             if (Map == Map.Trammel)
             {

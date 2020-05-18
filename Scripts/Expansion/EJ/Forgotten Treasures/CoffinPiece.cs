@@ -1,6 +1,3 @@
-﻿using Server;
-using System;
-
 namespace Server.Items
 {
     public class CoffinPiece : Item
@@ -27,7 +24,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 

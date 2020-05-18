@@ -1,10 +1,8 @@
-using Server;
-using System;
-using Server.Mobiles;
+using Server.Engines.Craft;
+using Server.Engines.Points;
 using Server.Gumps;
 using Server.Items;
-using Server.Engines.Points;
-using Server.Engines.Craft;
+using Server.Mobiles;
 
 namespace Server.Engines.Fellowship
 {
@@ -21,7 +19,9 @@ namespace Server.Engines.Fellowship
         public override int GetYOffset(int id)
         {
             if (Index > 3)
+            {
                 return 20;
+            }
 
             return base.GetYOffset(id);
         }

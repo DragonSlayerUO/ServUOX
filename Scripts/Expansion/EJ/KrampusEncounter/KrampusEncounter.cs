@@ -1,15 +1,13 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-
-using Server;
+using Server.Commands;
+using Server.Engines.CityLoyalty;
+using Server.Gumps;
 using Server.Items;
 using Server.Mobiles;
-using Server.Engines.CityLoyalty;
-using Server.Spells;
 using Server.Network;
-using Server.Commands;
-using Server.Gumps;
+using Server.Spells;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Server.Engines.SeasonalEvents
 {
@@ -192,8 +190,8 @@ namespace Server.Engines.SeasonalEvents
 
             for (int i = 0; i < 25; i++)
             {
-                int x = p.X + (Utility.RandomMinMax(-3, 3));
-                int y = p.Y + (Utility.RandomMinMax(-3, 3));
+                int x = p.X + Utility.RandomMinMax(-3, 3);
+                int y = p.Y + Utility.RandomMinMax(-3, 3);
                 int z = m.Map.GetAverageZ(x, y);
 
                 if (SpawnMap.CanSpawnMobile(x, y, z))
@@ -211,7 +209,7 @@ namespace Server.Engines.SeasonalEvents
 
                 if (mob != null && CityTradeSystem.HasTrade(mob))
                 {
-                    mob.LocalOverheadMessage(MessageType.Regular, 1150, 1158832, string.Format("{0}\t{1}", WorldLocationInfo.GetLocationString(SpawnLocation, SpawnMap), Sextant.GetCoords(SpawnLocation, SpawnMap))); // *You sense Krampus has been spotted near ~2_where~ at ~1_coords~!*
+                    mob.LocalOverheadMessage(MessageType.Regular, 1150, 1158832, $"{WorldLocationInfo.GetLocationString(SpawnLocation, SpawnMap)}\t{Sextant.GetCoords(SpawnLocation, SpawnMap)}"); // *You sense Krampus has been spotted near ~2_where~ at ~1_coords~!*
                 }
             }
 
@@ -223,10 +221,12 @@ namespace Server.Engines.SeasonalEvents
 
         private void SpawnKrampus()
         {
-            Krampus = new Krampus();
-            Krampus.SpawnLocation = SpawnLocation;
-            Krampus.Home = SpawnLocation;
-            Krampus.RangeHome = 5;
+            Krampus = new Krampus
+            {
+                SpawnLocation = SpawnLocation,
+                Home = SpawnLocation,
+                RangeHome = 5
+            };
 
             Krampus.MoveToWorld(SpawnLocation, SpawnMap);
             Krampus.Summon(Krampus, true);
@@ -319,12 +319,10 @@ namespace Server.Engines.SeasonalEvents
 
             for (int i = 0; i < count; i++)
             {
-                var m = reader.ReadMobile() as PlayerMobile;
-                var c = reader.ReadInt();
 
-                if (m != null)
+                if (reader.ReadMobile() is PlayerMobile m)
                 {
-                    CompleteTable[m] = c;
+                    CompleteTable[m] = reader.ReadInt();
                 }
             }
 

@@ -1,8 +1,5 @@
-using System;
-using System.Linq;
-
-using Server;
 using Server.Mobiles;
+using System.Linq;
 
 namespace Server.Items
 {
@@ -17,16 +14,17 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public double SoulPoint
         {
-            get
-            {
-                return m_SoulPoint;
-            }
+            get => m_SoulPoint;
             set
             {
                 if (value < 0)
+                {
                     value = 0;
+                }
                 else if (value > MaxSoulPoint)
+                {
                     value = MaxSoulPoint;
+                }
 
                 m_SoulPoint += value;
 
@@ -38,33 +36,57 @@ namespace Server.Items
         private void SetHue()
         {
             if (SoulPoint <= 0)
+            {
                 Hue = 0;
+            }
             else if (SoulPoint <= 1)
+            {
                 Hue = 1910; // Meager
+            }
             else if (SoulPoint <= 25)
+            {
                 Hue = 1916; // Grand
+            }
             else if (SoulPoint <= 50)
+            {
                 Hue = 1914; // Exalted
+            }
             else if (SoulPoint <= 90)
+            {
                 Hue = 1922; // Legendary
+            }
             else
+            {
                 Hue = 1919; // Mythical
+            }
         }
 
         private int GetDescription()
         {
             if (SoulPoint <= 0)
+            {
                 return 1159177; // An Empty Soulbinder
+            }
             else if (SoulPoint <= 1)
+            {
                 return 1159176; // Meager
+            }
             else if (SoulPoint <= 25)
+            {
                 return 1159175; // Grand
+            }
             else if (SoulPoint <= 50)
+            {
                 return 1159174; // Exalted
+            }
             else if (SoulPoint <= 90)
+            {
                 return 1159173; // Legendary
+            }
             else
+            {
                 return 1159172; // Mythical
+            }
         }
 
         [Constructable]
@@ -97,7 +119,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0); // version
+            writer.Write(0);
 
             writer.Write(m_SoulPoint);
         }
@@ -105,7 +127,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             m_SoulPoint = reader.ReadDouble();
         }

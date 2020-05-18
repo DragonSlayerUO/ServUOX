@@ -20,9 +20,13 @@ namespace Server.Items
         public void OnFlip(Mobile from)
         {
             if (ItemID == NorthID)
+            {
                 ItemID = WestID;
+            }
             else if (ItemID == WestID)
+            {
                 ItemID = NorthID;
+            }
         }
 
         public LanternBrokenShield(Serial serial)

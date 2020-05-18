@@ -18,15 +18,21 @@ namespace Server.Items
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
             if (!Validate(attacker) || !CheckMana(attacker, true))
+            {
                 return;
+            }
 
             if (attacker.Map == null || attacker.Map == Map.Internal)
+            {
                 return;
+            }
 
             ExpireTimer timer = null;
 
             if (m_Table.ContainsKey(defender))
+            {
                 timer = m_Table[defender];
+            }
 
             if (timer != null)
             {
@@ -34,7 +40,9 @@ namespace Server.Items
                 defender.SendLocalizedMessage(1070831); // The freezing wind continues to blow!
             }
             else
+            {
                 defender.SendLocalizedMessage(1070832); // An icy wind surrounds you, freezing your lungs as you breathe!
+            }
 
             timer = new ExpireTimer(defender, attacker);
             timer.Start();

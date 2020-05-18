@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Server.ContextMenus;
 using Server.Engines.PartySystem;
 using Server.Gumps;
-using Server.Network;
 using Server.Mobiles;
+using Server.Network;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Items
 {
@@ -152,7 +152,9 @@ namespace Server.Items
                 cont.DropItem(new Gold(Utility.RandomMinMax(50, 100)));
 
                 if (Utility.RandomDouble() < 0.75)
+                {
                     cont.DropItem(new TreasureMap(0, Map.Trammel));
+                }
             }
             else
             {
@@ -209,7 +211,9 @@ namespace Server.Items
                 }
 
                 for (int i = 0; i < count; ++i)
+                {
                     cont.DropItem(Loot.RandomScroll(0, 63, SpellbookType.Regular));
+                }
                 #endregion
 
                 #region Magical Items
@@ -249,36 +253,37 @@ namespace Server.Items
                     }
                 }
                 else
+                {
                     count = level * 6;
+                }
 
                 for (int i = 0; i < count; ++i)
                 {
                     Item item;
 
                     if (Core.AOS)
+                    {
                         item = Loot.RandomArmorOrShieldOrWeaponOrJewelry();
+                    }
                     else
+                    {
                         item = Loot.RandomArmorOrShieldOrWeapon();
+                    }
 
                     if (item != null && Core.HS && RandomItemGenerator.Enabled)
                     {
-                        int min, max;
-                        GetRandomItemStat(out min, out max, propsScale);
+                        GetRandomItemStat(out int min, out int max, propsScale);
 
                         RunicReforging.GenerateRandomItem(item, luck, min, max, map);
 
                         cont.DropItem(item);
                     }
-                    else if (item is BaseWeapon)
+                    else if (item is BaseWeapon weapon)
                     {
-                        BaseWeapon weapon = (BaseWeapon)item;
-
                         if (Core.AOS)
                         {
-                            int attributeCount;
-                            int min, max;
 
-                            GetRandomAOSStats(out attributeCount, out min, out max);
+                            GetRandomAOSStats(out int attributeCount, out int min, out int max);
 
                             BaseRunicTool.ApplyAttributesTo(weapon, attributeCount, min, max);
                         }
@@ -291,16 +296,12 @@ namespace Server.Items
 
                         cont.DropItem(item);
                     }
-                    else if (item is BaseArmor)
+                    else if (item is BaseArmor armor)
                     {
-                        BaseArmor armor = (BaseArmor)item;
-
                         if (Core.AOS)
                         {
-                            int attributeCount;
-                            int min, max;
 
-                            GetRandomAOSStats(out attributeCount, out min, out max);
+                            GetRandomAOSStats(out int attributeCount, out int min, out int max);
 
                             BaseRunicTool.ApplyAttributesTo(armor, attributeCount, min, max);
                         }
@@ -312,16 +313,12 @@ namespace Server.Items
 
                         cont.DropItem(item);
                     }
-                    else if (item is BaseHat)
+                    else if (item is BaseHat hat)
                     {
-                        BaseHat hat = (BaseHat)item;
-
                         if (Core.AOS)
                         {
-                            int attributeCount;
-                            int min, max;
 
-                            GetRandomAOSStats(out attributeCount, out min, out max);
+                            GetRandomAOSStats(out int attributeCount, out int min, out int max);
 
                             BaseRunicTool.ApplyAttributesTo(hat, attributeCount, min, max);
                         }
@@ -330,10 +327,8 @@ namespace Server.Items
                     }
                     else if (item is BaseJewel)
                     {
-                        int attributeCount;
-                        int min, max;
 
-                        GetRandomAOSStats(out attributeCount, out min, out max);
+                        GetRandomAOSStats(out int attributeCount, out int min, out int max);
 
                         BaseRunicTool.ApplyAttributesTo((BaseJewel)item, attributeCount, min, max);
 
@@ -367,9 +362,13 @@ namespace Server.Items
 
             #region Gems
             if (level == 0)
+            {
                 count = 2;
+            }
             else
+            {
                 count = (level * 3) + 1;
+            }
 
             for (int i = 0; i < count; i++)
             {
@@ -394,11 +393,18 @@ namespace Server.Items
             if (isSos)
             {
                 if (0.004 * level > Utility.RandomDouble())
+                {
                     arty = Loot.Construct(SOSArtifacts);
+                }
+
                 if (0.006 * level > Utility.RandomDouble())
+                {
                     special = Loot.Construct(SOSDecor);
+                }
                 else if (0.009 * level > Utility.RandomDouble())
+                {
                     special = new TreasureMap(Utility.RandomMinMax(level, Math.Min(7, level + 1)), cont.Map);
+                }
 
                 if (level >= 4)
                 {
@@ -416,29 +422,43 @@ namespace Server.Items
                 if (level >= 7)
                 {
                     if (0.025 > Utility.RandomDouble())
+                    {
                         special = Loot.Construct(ArtifactsLevelSeven);
+                    }
                     else if (0.10 > Utility.RandomDouble())
+                    {
                         special = Loot.Construct(ArtifactsLevelFiveToSeven);
+                    }
                     else if (0.25 > Utility.RandomDouble())
+                    {
                         special = GetRandomSpecial(level, cont.Map);
+                    }
 
                     arty = Loot.Construct(Artifacts);
                 }
                 else if (level >= 6)
                 {
                     if (0.025 > Utility.RandomDouble())
+                    {
                         special = Loot.Construct(ArtifactsLevelFiveToSeven);
+                    }
                     else if (0.20 > Utility.RandomDouble())
+                    {
                         special = GetRandomSpecial(level, cont.Map);
+                    }
 
                     arty = Loot.Construct(Artifacts);
                 }
                 else if (level >= 5)
                 {
                     if (0.005 > Utility.RandomDouble())
+                    {
                         special = Loot.Construct(ArtifactsLevelFiveToSeven);
+                    }
                     else if (0.15 > Utility.RandomDouble())
+                    {
                         special = GetRandomSpecial(level, cont.Map);
+                    }
                 }
                 else if (.10 > Utility.RandomDouble())
                 {
@@ -448,25 +468,33 @@ namespace Server.Items
 
             if (arty != null)
             {
-                Container pack = new Backpack();
-                pack.Hue = 1278;
+                Container pack = new Backpack
+                {
+                    Hue = 1278
+                };
 
                 pack.DropItem(arty);
                 cont.DropItem(pack);
             }
 
             if (special != null)
+            {
                 cont.DropItem(special);
+            }
 
             if (newSpecial != null)
+            {
                 cont.DropItem(newSpecial);
+            }
 
             if (Core.SA)
             {
                 int rolls = 2;
 
                 if (level >= 5)
+                {
                     rolls += level - 2;
+                }
 
                 RefinementComponent.Roll(cont, rolls, 0.10);
             }
@@ -618,7 +646,9 @@ namespace Server.Items
                 spawn.Tamable = false;
 
                 if (spawn.HitsMaxSeed >= 0)
+                {
                     spawn.HitsMaxSeed = (int)(spawn.HitsMaxSeed * Paragon.HitsBuff);
+                }
 
                 spawn.RawStr = (int)(spawn.RawStr * Paragon.StrBuff);
                 spawn.RawInt = (int)(spawn.RawInt * Paragon.IntBuff);
@@ -635,7 +665,9 @@ namespace Server.Items
                     Skill skill = spawn.Skills[i];
 
                     if (skill.Base > 0.0)
+                    {
                         skill.Base *= Paragon.SkillsBuff;
+                    }
                 }
 
                 AncientGuardians.Add(spawn);
@@ -713,7 +745,9 @@ namespace Server.Items
                         m_Lifted = reader.ReadStrongItemList();
 
                         if (version < 2)
+                        {
                             Guardians = new List<Mobile>();
+                        }
 
                         break;
                     }
@@ -733,7 +767,9 @@ namespace Server.Items
         public override void OnAfterDelete()
         {
             if (Timer != null)
+            {
                 Timer.Stop();
+            }
 
             Timer = null;
 
@@ -745,7 +781,9 @@ namespace Server.Items
             base.GetContextMenuEntries(from, list);
 
             if (from.Alive)
+            {
                 list.Add(new RemoveEntry(from, this));
+            }
         }
 
         public override void LockPick(Mobile from)
@@ -799,9 +837,13 @@ namespace Server.Items
                 int damage;
 
                 if (TrapLevel > 0)
+                {
                     damage = Utility.RandomMinMax(10, 30) * TrapLevel;
+                }
                 else
+                {
                     damage = TrapPower;
+                }
 
                 AOS.Damage(from, damage, 0, 100, 0, 0, 0);
 
@@ -822,7 +864,9 @@ namespace Server.Items
         public void BeginRemove(Mobile from)
         {
             if (!from.Alive)
+            {
                 return;
+            }
 
             from.CloseGump(typeof(RemoveGump));
             from.SendGump(new RemoveGump(from, this));
@@ -831,7 +875,9 @@ namespace Server.Items
         public void EndRemove(Mobile from)
         {
             if (Deleted || from != Owner || !from.InRange(GetWorldLocation(), 3))
+            {
                 return;
+            }
 
             from.SendLocalizedMessage(1048124, "", 0x8A5); // The old, rusted chest crumbles when you hit it.
             Delete();
@@ -912,24 +958,34 @@ namespace Server.Items
         private bool CheckLoot(Mobile m, bool criminalAction)
         {
             if (Temporary)
+            {
                 return false;
+            }
 
             if (m.AccessLevel >= AccessLevel.GameMaster || Owner == null || m == Owner)
+            {
                 return true;
+            }
 
             Party p = Party.Get(Owner);
 
             if (p != null && p.Contains(m))
+            {
                 return true;
+            }
 
             Map map = Map;
 
             if (map != null && (map.Rules & MapRules.HarmfulRestrictions) == 0)
             {
                 if (criminalAction)
+                {
                     m.CriminalAction(true);
+                }
                 else
+                {
                     m.SendLocalizedMessage(1010630); // Taking someone else's treasure is a criminal offense!
+                }
 
                 return true;
             }
@@ -968,7 +1024,9 @@ namespace Server.Items
             public override void OnResponse(NetState sender, RelayInfo info)
             {
                 if (info.ButtonID == 1)
+                {
                     m_Chest.EndRemove(m_From);
+                }
             }
         }
 
@@ -988,7 +1046,9 @@ namespace Server.Items
             public override void OnClick()
             {
                 if (m_Chest.Deleted || m_From != m_Chest.Owner || !m_From.CheckAlive())
+                {
                     return;
+                }
 
                 m_Chest.BeginRemove(m_From);
             }
