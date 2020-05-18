@@ -1595,6 +1595,7 @@ namespace Server.Mobiles
                 if (m is BaseCreature)
                 {
                     ((BaseCreature)m).SetControlMaster(buyer);
+                    ((BaseCreature)m).ControlOrder = OrderType.Stop;
                 }
 
                 for (int i = 1; i < amount; ++i)
@@ -1609,6 +1610,7 @@ namespace Server.Mobiles
                         if (m is BaseCreature)
                         {
                             ((BaseCreature)m).SetControlMaster(buyer);
+                            ((BaseCreature)m).ControlOrder = OrderType.Stop;
                         }
                     }
                 }
@@ -1915,57 +1917,20 @@ namespace Server.Mobiles
             if (fullPurchase)
             {
                 if (buyer.AccessLevel >= AccessLevel.GameMaster)
-                {
-                    SayTo(
-                        buyer,
-                        0x3B2,
-                        "I would not presume to charge thee anything.  Here are the goods you requested.",
-                        null,
-                        !Core.AOS);
-                }
+                    SayTo(buyer, true, "I would not presume to charge thee anything.  Here are the goods you requested.");
                 else if (fromBank)
-                {
-                    SayTo(
-                        buyer,
-                        0x3B2,
-                        "The total of thy purchase is {0} gold, which has been withdrawn from your bank account.  My thanks for the patronage.",
-                        totalCost.ToString(),
-                        !Core.AOS);
-                }
+                    SayTo(buyer, 1151638, totalCost.ToString());//The total of your purchase is ~1_val~ gold, which has been drawn from your bank account.  My thanks for the patronage.
                 else
-                {
-                    SayTo(buyer, string.Format("The total of thy purchase is {0} gold.  My thanks for the patronage.", totalCost), 0x3B2, true);
-                }
+                    SayTo(buyer, 1151639, totalCost.ToString());//The total of your purchase is ~1_val~ gold.  My thanks for the patronage.
             }
             else
             {
                 if (buyer.AccessLevel >= AccessLevel.GameMaster)
-                {
-                    SayTo(
-                        buyer,
-                        0x3B2,
-                        "I would not presume to charge thee anything.  Unfortunately, I could not sell you all the goods you requested.",
-                        null,
-                        !Core.AOS);
-                }
+                    SayTo(buyer, true, "I would not presume to charge thee anything.  Unfortunately, I could not sell you all the goods you requested.");
                 else if (fromBank)
-                {
-                    SayTo(
-                        buyer,
-                        0x3B2,
-                        "The total of thy purchase is {0} gold, which has been withdrawn from your bank account.  My thanks for the patronage.  Unfortunately, I could not sell you all the goods you requested.",
-                        totalCost.ToString(),
-                        !Core.AOS);
-                }
+                    SayTo(buyer, true, "The total of thy purchase is {0} gold, which has been withdrawn from your bank account.  My thanks for the patronage.  Unfortunately, I could not sell you all the goods you requested.", totalCost);
                 else
-                {
-                    SayTo(
-                        buyer,
-                        0x3B2,
-                        "The total of thy purchase is {0} gold.  My thanks for the patronage.  Unfortunately, I could not sell you all the goods you requested.",
-                        totalCost.ToString(),
-                        !Core.AOS);
-                }
+                    SayTo(buyer, true, "The total of thy purchase is {0} gold.  My thanks for the patronage.  Unfortunately, I could not sell you all the goods you requested.", totalCost);
             }
 
             return true;
