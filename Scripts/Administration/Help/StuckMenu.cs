@@ -1,5 +1,6 @@
 using System;
 using Server.Gumps;
+using Server.Mobiles;
 using Server.Network;
 using System.Linq;
 using Server.Mobiles;
@@ -9,16 +10,14 @@ namespace Server.Menus.Questions
 {
     public class StuckMenuEntry
     {
-        private readonly int m_Name;
-        private readonly Point3D[] m_Locations;
         public StuckMenuEntry(int name, Point3D[] locations)
         {
-            m_Name = name;
-            m_Locations = locations;
+            Name = name;
+            Locations = locations;
         }
 
-        public int Name => m_Name;
-        public Point3D[] Locations => m_Locations;
+        public int Name { get; }
+        public Point3D[] Locations { get; }
     }
 
     public class StuckMenu : Gump
@@ -232,7 +231,9 @@ namespace Server.Menus.Questions
 
                 new TeleportTimer(m_Mobile, entry, TimeSpan.FromSeconds(10.0 + (Utility.RandomDouble() * 110.0))).Start();
 
-                m_Mobile.UsedStuckMenu();
+                // m_Mobile.UsedStuckMenu();
+                if (m_Mobile is PlayerMobile)
+                    ((PlayerMobile)m_Mobile).UsedStuckMenu();
             }
             else
             {

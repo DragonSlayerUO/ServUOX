@@ -689,28 +689,24 @@ namespace Server
         private Target m_Target;
         private Prompt m_Prompt;
         private ContextMenu m_ContextMenu;
-        private List<AggressorInfo> m_Aggressed;
         private IDamageable m_Combatant;
         private bool m_CanHearGhosts;
-        private bool m_CantWalk;
         private int m_TithingPoints;
         private bool m_DisplayGuildTitle;
         private bool m_DisplayGuildAbbr;
-        private DateTime[] m_StuckMenuUses;
+        //private DateTime[] m_StuckMenuUses;
         private Timer m_ExpireCombatant;
         private Timer m_ExpireCriminal;
         private Timer m_ExpireAggrTimer;
         private Timer m_LogoutTimer;
         private Timer m_CombatTimer;
         private Timer m_ManaTimer, m_HitsTimer, m_StamTimer;
-        private long m_NextActionMessage;
         private bool m_Paralyzed;
         private ParalyzedTimer m_ParaTimer;
         private bool m_Frozen;
         private FrozenTimer m_FrozenTimer;
         private int m_Hunger;
         private Region m_Region;
-        private bool m_StunReady;
         private int m_VirtualArmor;
         private int m_Followers, m_FollowersMax;
         private List<object> _actions; // prefer List<object> over ArrayList for more specific profiling information
@@ -718,11 +714,9 @@ namespace Server
         private int m_WarmodeChanges;
         private DateTime m_NextWarmodeChange;
         private WarmodeTimer m_WarmodeTimer;
-        private int m_BAC;
         private int m_VirtualArmorMod;
         private VirtueInfo m_Virtues;
         private Body m_BodyMod;
-        private DateTime m_LastDexGain;
         private Race m_Race;
         #endregion
 
@@ -1087,7 +1081,7 @@ namespace Server
 
         public void UpdateAggrExpire()
         {
-            if (Deleted || (Aggressors.Count == 0 && m_Aggressed.Count == 0))
+            if (Deleted || (Aggressors.Count == 0 && Aggressed.Count == 0))
             {
                 StopAggrExpire();
             }
@@ -1134,21 +1128,21 @@ namespace Server
                 }
             }
 
-            for (int i = m_Aggressed.Count - 1; i >= 0; --i)
+            for (int i = Aggressed.Count - 1; i >= 0; --i)
             {
-                if (i >= m_Aggressed.Count)
+                if (i >= Aggressed.Count)
                 {
                     continue;
                 }
 
-                AggressorInfo info = m_Aggressed[i];
+                AggressorInfo info = Aggressed[i];
 
                 if (info.Expired)
                 {
                     Mobile defender = info.Defender;
                     defender.RemoveAggressor(this);
 
-                    m_Aggressed.RemoveAt(i);
+                    Aggressed.RemoveAt(i);
                     info.Free();
 
                     if (m_NetState != null && Utility.InUpdateRange(this, defender) && CanSee(defender))
@@ -1483,7 +1477,7 @@ namespace Server
         public int Thirst { get; set; }
 
         [CommandProperty(AccessLevel.Decorator)]
-        public int BAC { get => m_BAC; set => m_BAC = value; }
+        public int BAC { get; set; }
 
         public virtual int DefaultBloodHue => 0;
 
@@ -1602,11 +1596,7 @@ namespace Server
         public bool DisarmReady { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool StunReady
-        {
-            get => m_StunReady;
-            set => m_StunReady = value;//SendLocalizedMessage( value ? 1019011 : 1019012 );
-        }
+        public bool StunReady { get; set; }
 
         [CommandProperty(AccessLevel.Decorator)]
         public bool Frozen
@@ -1720,30 +1710,30 @@ namespace Server
 
         public long NextActionTime { get; set; }
 
-        public long NextActionMessage { get => m_NextActionMessage; set => m_NextActionMessage = value; }
+        public long NextActionMessage { get; set; }
 
         public static int ActionMessageDelay { get; set; } = 125;
 
         public virtual void SendSkillMessage()
         {
-            if (m_NextActionMessage - Core.TickCount >= 0)
+            if (NextActionMessage - Core.TickCount >= 0)
             {
                 return;
             }
 
-            m_NextActionMessage = Core.TickCount + ActionMessageDelay;
+            NextActionMessage = Core.TickCount + ActionMessageDelay;
 
             SendLocalizedMessage(500118); // You must wait a few moments to use another skill.
         }
 
         public virtual void SendActionMessage()
         {
-            if (m_NextActionMessage - Core.TickCount >= 0)
+            if (NextActionMessage - Core.TickCount >= 0)
             {
                 return;
             }
 
-            m_NextActionMessage = Core.TickCount + ActionMessageDelay;
+            NextActionMessage = Core.TickCount + ActionMessageDelay;
 
             SendLocalizedMessage(500119); // You must wait to perform another action.
         }
@@ -2021,7 +2011,7 @@ namespace Server
 
         public List<AggressorInfo> Aggressors { get; private set; }
 
-        public List<AggressorInfo> Aggressed => m_Aggressed;
+        public List<AggressorInfo> Aggressed { get; private set; }
 
         private int m_ChangingCombatant;
 
@@ -2221,7 +2211,7 @@ namespace Server
 
             bool addAggressed = true;
 
-            list = m_Aggressed;
+            list = Aggressed;
 
             for (int i = 0; i < list.Count; ++i)
             {
@@ -2235,7 +2225,7 @@ namespace Server
                 }
             }
 
-            list = aggressor.m_Aggressed;
+            list = aggressor.Aggressed;
 
             for (int i = 0; i < list.Count; ++i)
             {
@@ -2270,7 +2260,7 @@ namespace Server
 
             if (addAggressed)
             {
-                aggressor.m_Aggressed.Add(AggressorInfo.Create(aggressor, this, criminal));
+                aggressor.Aggressed.Add(AggressorInfo.Create(aggressor, this, criminal));
 
                 if (CanSee(aggressor) && m_NetState != null)
                 {
@@ -2296,7 +2286,7 @@ namespace Server
                 return;
             }
 
-            var list = m_Aggressed;
+            var list = Aggressed;
 
             for (int i = 0; i < list.Count; ++i)
             {
@@ -2304,7 +2294,7 @@ namespace Server
 
                 if (info.Defender == aggressed)
                 {
-                    m_Aggressed.RemoveAt(i);
+                    Aggressed.RemoveAt(i);
                     info.Free();
 
                     if (m_NetState != null && CanSee(aggressed))
@@ -3436,7 +3426,7 @@ namespace Server
 
             Region.OnCriminalAction(this, message);
         }
-
+        /*
         public virtual bool CanUseStuckMenu()
         {
             if (m_StuckMenuUses == null)
@@ -3456,7 +3446,7 @@ namespace Server
                 return false;
             }
         }
-
+        */
         public virtual bool IsPlayer()
         {
             return Utilities.IsPlayer(this);
@@ -5629,7 +5619,7 @@ namespace Server
 
         public virtual void OnHeal(ref int amount, Mobile from)
         { }
-
+        /*
         public void UsedStuckMenu()
         {
             if (m_StuckMenuUses == null)
@@ -5646,7 +5636,7 @@ namespace Server
                 }
             }
         }
-
+        */
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Squelched { get; set; }
 
@@ -5656,10 +5646,14 @@ namespace Server
 
             switch (version)
             {
+                case 38:
+                    {
+                        // Removed StuckMenu
+                        goto case 37;
+                    }
                 case 37:
                     {
                         m_DisplayGuildAbbr = reader.ReadBool();
-
                         goto case 36;
                     }
                 case 36:
@@ -5713,7 +5707,7 @@ namespace Server
                     {
                         LastStrGain = reader.ReadDeltaTime();
                         LastIntGain = reader.ReadDeltaTime();
-                        m_LastDexGain = reader.ReadDeltaTime();
+                        LastDexGain = reader.ReadDeltaTime();
 
                         goto case 30;
                     }
@@ -5781,7 +5775,7 @@ namespace Server
                     }
                 case 20:
                     {
-                        m_CantWalk = reader.ReadBool();
+                        CantWalk = reader.ReadBool();
 
                         goto case 19;
                     }
@@ -5795,7 +5789,7 @@ namespace Server
                 case 17:
                     {
                         Thirst = reader.ReadInt();
-                        m_BAC = reader.ReadInt();
+                        BAC = reader.ReadInt();
 
                         goto case 16;
                     }
@@ -5879,7 +5873,7 @@ namespace Server
                 case 5:
                     {
                         DisarmReady = reader.ReadBool();
-                        m_StunReady = reader.ReadBool();
+                        StunReady = reader.ReadBool();
 
                         goto case 4;
                     }
@@ -6009,19 +6003,26 @@ namespace Server
                         StatMods = new List<StatMod>();
                         SkillMods = new List<SkillMod>();
 
-                        if (reader.ReadBool())
+                        //if (reader.ReadBool())
+                        if (version < 38)
                         {
-                            m_StuckMenuUses = new DateTime[reader.ReadInt()];
+                            //m_StuckMenuUses = new DateTime[reader.ReadInt()];
 
-                            for (int i = 0; i < m_StuckMenuUses.Length; ++i)
+                            //for (int i = 0; i < m_StuckMenuUses.Length; ++i)
+                            if (reader.ReadBool())
                             {
-                                m_StuckMenuUses[i] = reader.ReadDateTime();
+                                //m_StuckMenuUses[i] = reader.ReadDateTime();
+                                int count = reader.ReadInt();
+                                for (int i = 0; i < count; ++i)
+                                {
+                                    reader.ReadDateTime();
+                                }
                             }
                         }
-                        else
-                        {
-                            m_StuckMenuUses = null;
-                        }
+                        //else
+                        //{
+                        //    m_StuckMenuUses = null;
+                        //}
 
                         if (m_Player && m_Map != Map.Internal)
                         {
@@ -6213,7 +6214,7 @@ namespace Server
 
         public virtual void Serialize(GenericWriter writer)
         {
-            writer.Write(37); // version
+            writer.Write(38); // version
 
             // 37
             writer.Write(m_DisplayGuildAbbr);
@@ -6255,7 +6256,7 @@ namespace Server
 
             writer.WriteDeltaTime(LastStrGain);
             writer.WriteDeltaTime(LastIntGain);
-            writer.WriteDeltaTime(m_LastDexGain);
+            writer.WriteDeltaTime(LastDexGain);
 
             byte hairflag = 0x00;
 
@@ -6304,12 +6305,12 @@ namespace Server
 
             writer.Write(Stabled, true);
 
-            writer.Write(m_CantWalk);
+            writer.Write(CantWalk);
 
             VirtueInfo.Serialize(writer, m_Virtues);
 
             writer.Write(Thirst);
-            writer.Write(m_BAC);
+            writer.Write(BAC);
 
             writer.Write(m_ShortTermMurders);
             //writer.Write( m_ShortTermElapse );
@@ -6337,7 +6338,7 @@ namespace Server
             writer.Write(BaseSoundID);
 
             writer.Write(DisarmReady);
-            writer.Write(m_StunReady);
+            writer.Write(StunReady);
 
             //Poison.Serialize( m_Poison, writer );
 
@@ -6392,7 +6393,7 @@ namespace Server
             writer.Write((byte)m_StrLock);
             writer.Write((byte)m_DexLock);
             writer.Write((byte)m_IntLock);
-
+            /*
             if (m_StuckMenuUses != null)
             {
                 writer.Write(true);
@@ -6403,11 +6404,11 @@ namespace Server
                 {
                     writer.Write(m_StuckMenuUses[i]);
                 }
-            }
-            else
-            {
-                writer.Write(false);
-            }
+            }*/
+            //else
+            //{
+            //    writer.Write(false);
+            //}
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -9223,7 +9224,7 @@ namespace Server
         public DateTime LastIntGain { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime LastDexGain { get => m_LastDexGain; set => m_LastDexGain = value; }
+        public DateTime LastDexGain { get; set; }
 
         public DateTime LastStatGain
         {
@@ -9236,9 +9237,9 @@ namespace Server
                     d = LastIntGain;
                 }
 
-                if (m_LastDexGain > d)
+                if (LastDexGain > d)
                 {
-                    d = m_LastDexGain;
+                    d = LastDexGain;
                 }
 
                 return d;
@@ -9247,7 +9248,7 @@ namespace Server
             {
                 LastStrGain = value;
                 LastIntGain = value;
-                m_LastDexGain = value;
+                LastDexGain = value;
             }
         }
 
@@ -10919,7 +10920,7 @@ namespace Server
             m_Region = Map.Internal.DefaultRegion;
             Serial = serial;
             Aggressors = new List<AggressorInfo>();
-            m_Aggressed = new List<AggressorInfo>();
+            Aggressed = new List<AggressorInfo>();
             NextSkillTime = Core.TickCount;
             DamageEntries = new List<DamageEntry>();
 
@@ -10971,7 +10972,7 @@ namespace Server
             Map = Map.Internal;
             AutoPageNotify = true;
             Aggressors = new List<AggressorInfo>();
-            m_Aggressed = new List<AggressorInfo>();
+            Aggressed = new List<AggressorInfo>();
             m_Virtues = new VirtueInfo();
             Stabled = new List<Mobile>();
             DamageEntries = new List<DamageEntry>();
@@ -12590,7 +12591,7 @@ namespace Server
         public bool CanSwim { get; set; }
 
         [CommandProperty(AccessLevel.Decorator)]
-        public bool CantWalk { get => m_CantWalk; set => m_CantWalk = value; }
+        public bool CantWalk { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool CanHearGhosts { get => m_CanHearGhosts || IsStaff(); set => m_CanHearGhosts = value; }

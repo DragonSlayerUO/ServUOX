@@ -4062,6 +4062,47 @@ namespace Server.Mobiles
             #endregion
         }
 
+        #region Stuck Menu
+        private DateTime[] m_StuckMenuUses;
+
+        public bool CanUseStuckMenu()
+        {
+            if (m_StuckMenuUses == null)
+            {
+                return true;
+            }
+            else
+            {
+                for (int i = 0; i < m_StuckMenuUses.Length; ++i)
+                {
+                    if ((DateTime.UtcNow - m_StuckMenuUses[i]) > TimeSpan.FromDays(1.0))
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+        }
+
+        public void UsedStuckMenu()
+        {
+            if (m_StuckMenuUses == null)
+            {
+                m_StuckMenuUses = new DateTime[2];
+            }
+
+            for (int i = 0; i < m_StuckMenuUses.Length; ++i)
+            {
+                if ((DateTime.UtcNow - m_StuckMenuUses[i]) > TimeSpan.FromDays(1.0))
+                {
+                    m_StuckMenuUses[i] = DateTime.UtcNow;
+                    return;
+                }
+            }
+        }
+        #endregion
+
         private readonly Hashtable m_AntiMacroTable;
         private TimeSpan m_GameTime;
         private TimeSpan m_ShortTermElapse;
@@ -4465,6 +4506,24 @@ namespace Server.Mobiles
 
             switch (version)
             {
+                case 41:
+                    {
+                        if (reader.ReadBool())
+                        {
+                            m_StuckMenuUses = new DateTime[reader.ReadInt()];
+
+                            for (int i = 0; i < m_StuckMenuUses.Length; ++i)
+                            {
+                                m_StuckMenuUses[i] = reader.ReadDateTime();
+                            }
+                        }
+                        else
+                        {
+                            m_StuckMenuUses = null;
+                        }
+
+                        goto case 40;
+                    }
                 case 40: // Version 40, moved gauntlet points, virtua artys and TOT turn ins to PointsSystem
                 case 39: // Version 39, removed ML quest save/load
                 case 38:
@@ -4931,7 +4990,23 @@ namespace Server.Mobiles
 
             base.Serialize(writer);
 
-            writer.Write(40); // version
+            writer.Write(41); // version
+
+            if (m_StuckMenuUses != null)
+            {
+                writer.Write(true);
+
+                writer.Write(m_StuckMenuUses.Length);
+
+                for (int i = 0; i < m_StuckMenuUses.Length; ++i)
+                {
+                    writer.Write(m_StuckMenuUses[i]);
+                }
+            }
+            else
+            {
+                writer.Write(false);
+            }
 
             writer.Write(NextGemOfSalvationUse);
 
