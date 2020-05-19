@@ -1,13 +1,15 @@
 using Server.Items;
 using Server.Targeting;
 using System;
-using System.Collections;
+//using System.Collections;
+using System.Collections.Generic;
 
 namespace Server.SkillHandlers
 {
     public class Inscribe
     {
-        private static readonly Hashtable m_UseTable = new Hashtable();
+        //private static readonly Hashtable m_UseTable = new Hashtable();
+        private static Dictionary<BaseBook, Mobile> m_UseTable = new Dictionary<BaseBook, Mobile>();
         public static void Initialize()
         {
             SkillInfo.Table[(int)SkillName.Inscribe].Callback = new SkillUseCallback(OnUse);
@@ -25,7 +27,10 @@ namespace Server.SkillHandlers
 
         public static Mobile GetUser(BaseBook book)
         {
-            return (Mobile)m_UseTable[book];
+            //return (Mobile)m_UseTable[book];
+            Mobile m = null;
+            m_UseTable.TryGetValue(book, out m);
+            return m;
         }
 
         public static bool IsEmpty(BaseBook book)

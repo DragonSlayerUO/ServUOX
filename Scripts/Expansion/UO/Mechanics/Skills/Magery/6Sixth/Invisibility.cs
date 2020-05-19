@@ -1,7 +1,8 @@
 using Server.Items;
 using Server.Targeting;
 using System;
-using System.Collections;
+//using System.Collections;
+using System.Collections.Generic;
 
 namespace Server.Spells.Sixth
 {
@@ -13,7 +14,8 @@ namespace Server.Spells.Sixth
             9002,
             Reagent.Bloodmoss,
             Reagent.Nightshade);
-        private static readonly Hashtable m_Table = new Hashtable();
+        //private static readonly Hashtable m_Table = new Hashtable();
+        private static Dictionary<Mobile, Timer> m_Table = new Dictionary<Mobile, Timer>();
         public InvisibilitySpell(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
         {
@@ -22,12 +24,15 @@ namespace Server.Spells.Sixth
         public override SpellCircle Circle => SpellCircle.Sixth;
         public static bool HasTimer(Mobile m)
         {
-            return m_Table[m] != null;
+            //return m_Table[m] != null;
+            return m_Table.ContainsKey(m);
         }
 
         public static void RemoveTimer(Mobile m)
         {
-            Timer t = (Timer)m_Table[m];
+            //Timer t = (Timer)m_Table[m];
+            Timer t = null;
+            m_Table.TryGetValue(m, out t);
 
             if (t != null)
             {
