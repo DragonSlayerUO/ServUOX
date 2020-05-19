@@ -14,6 +14,24 @@ using Server.Network;
 
 namespace Server.Accounting
 {
+    public class YoungTimer : Timer
+    {
+        private Account m_Account;
+
+        public YoungTimer(Account account)
+            : base(TimeSpan.FromMinutes(1.0), TimeSpan.FromMinutes(1.0))
+        {
+            m_Account = account;
+
+            Priority = TimerPriority.FiveSeconds;
+        }
+
+        protected override void OnTick()
+        {
+            m_Account.CheckYoung();
+        }
+    }
+
     [PropertyObject]
     public class Account : IAccount, IComparable, IComparable<Account>
     {
@@ -162,7 +180,8 @@ namespace Server.Accounting
         private List<AccountComment> m_Comments;
         private List<AccountTag> m_Tags;
         private TimeSpan m_TotalGameTime;
-        private Timer m_YoungTimer;
+
+        public Timer YoungTimer { get; set; }
 
         public Account(string username, string password)
         {
@@ -464,13 +483,13 @@ namespace Server.Accounting
             {
                 SetFlag(1, !value);
 
-                if (m_YoungTimer == null)
+                if (YoungTimer == null)
                 {
                     return;
                 }
 
-                m_YoungTimer.Stop();
-                m_YoungTimer = null;
+                YoungTimer.Stop();
+                YoungTimer = null;
             }
         }
 
@@ -524,6 +543,10 @@ namespace Server.Accounting
                 }
 
                 return m_TotalGameTime;
+            }
+            set
+            {
+                m_TotalGameTime = value;
             }
         }
 
@@ -819,12 +842,12 @@ namespace Server.Accounting
             return BitConverter.ToString(hashed);
         }
 
-        public static void Initialize()
-        {
-            EventSink.Connected += EventSink_Connected;
-            EventSink.Disconnected += EventSink_Disconnected;
+        //public static void Initialize()
+        //{
+            //EventSink.Connected += EventSink_Connected;
+            //EventSink.Disconnected += EventSink_Disconnected;
             //EventSink.Login += EventSink_Login;
-        }
+        //}
 
         /// <summary>
         ///     Deserializes a list of string values from an xml element. Null values are not added to the list.
@@ -1140,7 +1163,6 @@ namespace Server.Accounting
 
             return banTime != DateTime.MinValue && banDuration != TimeSpan.Zero;
         }
-
         public void RemoveYoungStatus(int message)
         {
             Young = false;
@@ -1474,7 +1496,7 @@ namespace Server.Accounting
         {
             return Username;
         }
-
+        /*
         private static void EventSink_Connected(ConnectedEventArgs e)
         {
             var acc = e.Mobile.Account as Account;
@@ -1515,7 +1537,7 @@ namespace Server.Accounting
                 acc.m_TotalGameTime += DateTime.UtcNow - m.SessionStart;
             }
         }
-        /*
+        
         private static void EventSink_Login(LoginEventArgs e)
         {
             var m = e.Mobile as PlayerMobile;
@@ -1544,7 +1566,7 @@ namespace Server.Accounting
                 "You will enjoy the benefits and relatively safe status of a young player for {0} more hour{1}.",
                 hours,
                 hours != 1 ? "s" : "");
-        }*/
+        }
 
         private class YoungTimer : Timer
         {
@@ -1562,7 +1584,7 @@ namespace Server.Accounting
             {
                 _Account.CheckYoung();
             }
-        }
+        }*/
 
         #region Gold Account
         /// <summary>
