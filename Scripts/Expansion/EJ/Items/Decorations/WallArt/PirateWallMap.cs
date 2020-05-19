@@ -1,3 +1,5 @@
+using Server.Gumps;
+
 namespace Server.Items
 {
     [Flipable(0xA2C8, 0xA2C9)]

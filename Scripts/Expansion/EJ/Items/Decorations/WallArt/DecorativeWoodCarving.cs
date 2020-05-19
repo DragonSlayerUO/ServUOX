@@ -1,3 +1,5 @@
+using Server.Multis;
+
 namespace Server.Items
 {
     [Flipable(0x4C26, 0x4C27)]
