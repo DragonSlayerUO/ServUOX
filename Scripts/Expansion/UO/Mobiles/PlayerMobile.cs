@@ -1213,24 +1213,19 @@ namespace Server.Mobiles
                 from.SendGump(new NoticeGump(1060637, 30720, notice, 0xFFC000, 300, 140, null, null));
                 return;
             }
-
-            if (!(from is PlayerMobile pm))
-                return;
-
-            pm.ClaimAutoStabledPets();
-            pm.ValidateEquipment();
-            ReportMurdererGump.CheckMurderer(from);
-
-            if (Siege.SiegeShard && from.Map == Map.Trammel && from.AccessLevel == AccessLevel.Player)
+            PlayerMobile pm = from as PlayerMobile;
+            if (pm != null)
+            {
+                pm.ClaimAutoStabledPets();
+                pm.ValidateEquipment();
+                ReportMurdererGump.CheckMurderer(from);
+            }
+            else if (Siege.SiegeShard && from.Map == Map.Trammel && from.AccessLevel == AccessLevel.Player)
             {
                 from.Map = Map.Felucca;
             }
 
-
-            if (!(from.Account is Account acc))
-                return;
-
-            if (pm.Young && acc.Young)
+            if (pm != null && pm.Young && from.Account is Account acc && acc.Young)
             {
                 TimeSpan ts = Accounting.Account.YoungDuration - acc.TotalGameTime;
                 int hours = Math.Max((int)ts.TotalHours, 0);
@@ -1362,10 +1357,8 @@ namespace Server.Mobiles
 
                     bool morph = from.FindItemOnLayer(Layer.Earrings) is MorphEarrings;
 
-                    if (item is BaseWeapon)
+                    if (item is BaseWeapon weapon)
                     {
-                        BaseWeapon weapon = (BaseWeapon)item;
-
                         bool drop = false;
 
                         if (dex < weapon.DexRequirement)
@@ -1399,10 +1392,8 @@ namespace Server.Mobiles
                             moved = true;
                         }
                     }
-                    else if (item is BaseArmor)
+                    else if (item is BaseArmor armor)
                     {
-                        BaseArmor armor = (BaseArmor)item;
-
                         bool drop = false;
 
                         if (!armor.AllowMaleWearer && !from.Female && from.AccessLevel < AccessLevel.GameMaster)
@@ -1459,10 +1450,8 @@ namespace Server.Mobiles
                             moved = true;
                         }
                     }
-                    else if (item is BaseClothing)
+                    else if (item is BaseClothing clothing)
                     {
-                        BaseClothing clothing = (BaseClothing)item;
-
                         bool drop = false;
 
                         if (!clothing.AllowMaleWearer && !from.Female && from.AccessLevel < AccessLevel.GameMaster)
@@ -1596,9 +1585,7 @@ namespace Server.Mobiles
 
         private static void OnLogout(LogoutEventArgs e)
         {
-            PlayerMobile pm = e.Mobile as PlayerMobile;
-
-            if (pm == null)
+            if (!(e.Mobile is PlayerMobile pm))
                 return;
 
             #region Scroll of Alacrity
@@ -1616,9 +1603,7 @@ namespace Server.Mobiles
 
         private static void EventSink_Connected(ConnectedEventArgs e)
         {
-            PlayerMobile pm = e.Mobile as PlayerMobile;
-
-            if (pm != null)
+            if (e.Mobile is PlayerMobile pm)
             {
                 pm.SessionStart = DateTime.UtcNow;
 
@@ -1639,6 +1624,12 @@ namespace Server.Mobiles
             DisguiseTimers.StartTimer(e.Mobile);
 
             Timer.DelayCall(TimeSpan.Zero, new TimerStateCallback(ClearSpecialMovesCallback), e.Mobile);
+
+            if (e.Mobile.Account is Account acc && acc.Young && acc.YoungTimer == null)
+            {
+                acc.YoungTimer = new YoungTimer(acc);
+                acc.YoungTimer.Start();
+            }
         }
 
         private static void ClearSpecialMovesCallback(object state)
@@ -1702,6 +1693,18 @@ namespace Server.Mobiles
             }
 
             DisguiseTimers.StopTimer(from);
+            Account acc = e.Mobile.Account as Account;
+
+			if (acc != null && acc.YoungTimer != null)
+			{
+				acc.YoungTimer.Stop();
+				acc.YoungTimer = null;
+			}
+
+			if (acc != null && pm != null)
+			{
+				acc.TotalGameTime += DateTime.UtcNow - pm.SessionStart;
+			}
         }
 
         public override void RevealingAction()
