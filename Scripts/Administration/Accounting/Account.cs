@@ -823,7 +823,7 @@ namespace Server.Accounting
         {
             EventSink.Connected += EventSink_Connected;
             EventSink.Disconnected += EventSink_Disconnected;
-            EventSink.Login += EventSink_Login;
+            //EventSink.Login += EventSink_Login;
         }
 
         /// <summary>
@@ -1515,7 +1515,7 @@ namespace Server.Accounting
                 acc.m_TotalGameTime += DateTime.UtcNow - m.SessionStart;
             }
         }
-
+        /*
         private static void EventSink_Login(LoginEventArgs e)
         {
             var m = e.Mobile as PlayerMobile;
@@ -1544,7 +1544,7 @@ namespace Server.Accounting
                 "You will enjoy the benefits and relatively safe status of a young player for {0} more hour{1}.",
                 hours,
                 hours != 1 ? "s" : "");
-        }
+        }*/
 
         private class YoungTimer : Timer
         {

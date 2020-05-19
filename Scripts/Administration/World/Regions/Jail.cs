@@ -36,6 +36,11 @@ namespace Server.Regions
             return false;
         }
 
+        public override bool BlockCharacterDeletion
+        {
+            get { return true; }
+        }
+
         public override void AlterLightLevel(Mobile m, ref int global, ref int personal)
         {
             global = LightCycle.JailLevel;

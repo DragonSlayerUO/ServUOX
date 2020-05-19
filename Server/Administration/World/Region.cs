@@ -841,6 +841,17 @@ namespace Server
             return true;
         }
 
+        public virtual bool BlockCharacterDeletion
+        {
+            get
+            {
+                if (Parent != null)
+                    return Parent.BlockCharacterDeletion;
+
+                return false;
+            }
+        }
+
         public virtual bool SendInaccessibleMessage(Item item, Mobile from)
         {
             if (Parent != null)

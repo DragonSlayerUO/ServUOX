@@ -7,7 +7,6 @@ using Server.Accounting;
 using Server.Commands;
 using Server.Engines.Help;
 using Server.Network;
-using Server.Regions;
 
 namespace Server.Misc
 {
@@ -27,8 +26,11 @@ namespace Server.Misc
 
         private static readonly int MaxAccountsPerIP = Config.Get("Accounts.AccountsPerIp", 1);
         private static readonly bool AutoAccountCreation = Config.Get("Accounts.AutoCreateAccounts", true);
-        private static readonly bool RestrictDeletion = Config.Get("Accounts.RestrictDeletion", !TestCenter.Enabled);
+        //private static readonly bool RestrictDeletion = Config.Get("Accounts.RestrictDeletion", !TestCenter.Enabled);
+        public static bool RestrictCharacterDeletion { get; set; } = Config.Get("Accounts.RestrictDeletion", true);
         private static readonly TimeSpan DeleteDelay = Config.Get("Accounts.DeleteDelay", TimeSpan.FromDays(7.0));
+
+
 
         private static readonly CityInfo[] StartingCitiesT2A = new CityInfo[]
         {
@@ -446,12 +448,12 @@ namespace Server.Misc
                     state.Send(new DeleteResult(DeleteResultType.CharBeingPlayed));
                     state.Send(new CharacterListUpdate(acct));
                 }
-                else if (RestrictDeletion && DateTime.UtcNow < (m.CreationTime + DeleteDelay))
+                else if (RestrictCharacterDeletion && DateTime.UtcNow < (m.CreationTime + DeleteDelay))
                 {
                     state.Send(new DeleteResult(DeleteResultType.CharTooYoung));
                     state.Send(new CharacterListUpdate(acct));
                 }
-                else if (m.IsPlayer() && Region.Find(m.LogoutLocation, m.LogoutMap).GetRegion(typeof(Jail)) != null)	//Don't need to check current location, if netstate is null, they're logged out
+                else if (m.IsPlayer() && Region.Find(m.LogoutLocation, m.LogoutMap).BlockCharacterDeletion)	//Don't need to check current location, if netstate is null, they're logged out
                 {
                     state.Send(new DeleteResult(DeleteResultType.BadRequest));
                     state.Send(new CharacterListUpdate(acct));
