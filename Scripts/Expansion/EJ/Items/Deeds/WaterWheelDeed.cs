@@ -1,3 +1,6 @@
+using Server.Engines.VeteranRewards;
+using Server.Gumps;
+
 namespace Server.Items
 {
     public class WaterWheelDeed : BaseAddonDeed, IRewardItem, IRewardOption

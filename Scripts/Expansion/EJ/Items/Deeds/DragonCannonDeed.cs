@@ -1,3 +1,5 @@
+using Server.Gumps;
+
 namespace Server.Items
 {
     public class DragonCannonDeed : BaseAddonDeed, IRewardOption

@@ -1,17 +1,19 @@
+using System;
+
 namespace Server.Items
 {
     [Flipable(0xA2CA, 0xA2CB)]
     public class ShoulderParrot : BaseOuterTorso
     {
-        private DateTime _NextFly;
-        private DateTime _FlyEnd;
-        private Timer _Timer;
-        private Mobile _LastShoulder;
+        private DateTime INextFly;
+        private DateTime IFlyEnd;
+        private Timer ITimer;
+        private Mobile ILastShoulder;
 
-        private string _MasterName;
+        private string IMasterName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string MasterName { get => _MasterName; set { _MasterName = value; InvalidateProperties(); } }
+        public string MasterName { get => IMasterName; set { IMasterName = value; InvalidateProperties(); } }
 
         [Constructible]
         public ShoulderParrot()
@@ -22,9 +24,9 @@ namespace Server.Items
 
         public override void AddNameProperty(ObjectPropertyList list)
         {
-            if (_MasterName != null)
+            if (IMasterName != null)
             {
-                list.Add(1158958, $"{_MasterName}{(_MasterName.ToLower().EndsWith("s") || _MasterName.ToLower().EndsWith("z") ? "'" : "'s")}");
+                list.Add(1158958, $"{IMasterName}{(IMasterName.ToLower().EndsWith("s") || IMasterName.ToLower().EndsWith("z") ? "'" : "'s")}");
             }
             else
             {
@@ -36,21 +38,21 @@ namespace Server.Items
         {
             if (m.FindItemOnLayer(Layer.OuterTorso) == this)
             {
-                if (_NextFly > DateTime.UtcNow)
+                if (INextFly > DateTime.UtcNow)
                 {
                     m.SendLocalizedMessage(1158956); // Your parrot is too tired to fly right now.
                 }
                 else
                 {
-                    _Timer = Timer.DelayCall(TimeSpan.FromMilliseconds(500), TimeSpan.FromMilliseconds(500), FlyOnTick);
-                    _Timer.Start();
+                    ITimer = Timer.DelayCall(TimeSpan.FromMilliseconds(500), TimeSpan.FromMilliseconds(500), FlyOnTick);
+                    ITimer.Start();
 
                     Movable = false;
-                    _LastShoulder = m;
+                    ILastShoulder = m;
                     MoveToWorld(new Point3D(m.X, m.Y, m.Z + 15), m.Map);
                     ItemID = 0xA2CC;
 
-                    _FlyEnd = DateTime.UtcNow + TimeSpan.FromSeconds(Utility.RandomMinMax(3, 5));
+                    IFlyEnd = DateTime.UtcNow + TimeSpan.FromSeconds(Utility.RandomMinMax(3, 5));
                 }
             }
             else
@@ -61,23 +63,23 @@ namespace Server.Items
 
         private void FlyOnTick()
         {
-            if (_FlyEnd < DateTime.UtcNow)
+            if (IFlyEnd < DateTime.UtcNow)
             {
                 Movable = true;
                 ItemID = 0xA2CA;
 
-                if (_LastShoulder.FindItemOnLayer(Layer.OuterTorso) != null)
+                if (ILastShoulder.FindItemOnLayer(Layer.OuterTorso) != null)
                 {
-                    _LastShoulder.Backpack.DropItem(this);
+                    ILastShoulder.Backpack.DropItem(this);
                 }
                 else
                 {
-                    _LastShoulder.AddItem(this);
+                    ILastShoulder.AddItem(this);
                 }
 
-                _LastShoulder = null;
-                _Timer.Stop();
-                _NextFly = DateTime.UtcNow + TimeSpan.FromMinutes(2);
+                ILastShoulder = null;
+                ITimer.Stop();
+                INextFly = DateTime.UtcNow + TimeSpan.FromMinutes(2);
             }
         }
 
@@ -90,8 +92,8 @@ namespace Server.Items
             base.Serialize(writer);
             writer.Write(0);
 
-            writer.Write(_MasterName);
-            writer.Write(_LastShoulder);
+            writer.Write(IMasterName);
+            writer.Write(ILastShoulder);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -99,7 +101,7 @@ namespace Server.Items
             base.Deserialize(reader);
             reader.ReadInt();
 
-            _MasterName = reader.ReadString();
+            IMasterName = reader.ReadString();
             Mobile m = reader.ReadMobile();
 
             if (m != null)
