@@ -5,13 +5,15 @@ using Server.Spells;
 using Server.Spells.Spellweaving;
 using Server.Targeting;
 using System;
-using System.Collections;
+//using System.Collections;
+using System.Collections.Generic;
 
 namespace Server.SkillHandlers
 {
     public class AnimalTaming
     {
-        private static readonly Hashtable m_BeingTamed = new Hashtable();
+        //private static readonly Hashtable m_BeingTamed = new Hashtable();
+        private static Dictionary<Mobile, Mobile> m_BeingTamed = new Dictionary<Mobile, Mobile>();
 
         public static bool DisableMessage { get; set; }
         public static bool DeferredTarget { get; set; }
@@ -189,7 +191,7 @@ namespace Server.SkillHandlers
                                 }
                             }
 
-                            if (m_BeingTamed.Contains(targeted))
+                            if (m_BeingTamed.ContainsKey(creature))
                             {
                                 creature.PrivateOverheadMessage(MessageType.Regular, 0x3B2, 502802, from.NetState);
                                 // Someone else is already taming this.
@@ -231,7 +233,7 @@ namespace Server.SkillHandlers
                             {
                                 m_SetSkillTime = false;
 
-                                m_BeingTamed[targeted] = from;
+                                m_BeingTamed[creature] = from;
 
                                 from.LocalOverheadMessage(MessageType.Emote, 0x59, 1010597); // You start to tame the creature.
                                 from.NonlocalOverheadMessage(MessageType.Emote, 0x59, 1010598); // *begins taming a creature.*
