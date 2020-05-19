@@ -1214,17 +1214,41 @@ namespace Server.Mobiles
                 return;
             }
 
-            if (from is PlayerMobile)
-            {
-                ((PlayerMobile)from).ClaimAutoStabledPets();
-                ((PlayerMobile)from).ValidateEquipment();
+            if (!(from is PlayerMobile pm))
+                return;
 
-                ReportMurdererGump.CheckMurderer(from);
-            }
-            else if (Siege.SiegeShard && from.Map == Map.Trammel && from.AccessLevel == AccessLevel.Player)
+            pm.ClaimAutoStabledPets();
+            pm.ValidateEquipment();
+            ReportMurdererGump.CheckMurderer(from);
+
+            if (Siege.SiegeShard && from.Map == Map.Trammel && from.AccessLevel == AccessLevel.Player)
             {
                 from.Map = Map.Felucca;
             }
+
+
+            if (!(from.Account is Account acc))
+                return;
+
+            if (pm.Young && acc.Young)
+            {
+                TimeSpan ts = Accounting.Account.YoungDuration - acc.TotalGameTime;
+                int hours = Math.Max((int)ts.TotalHours, 0);
+
+                pm.SendAsciiMessage("You will enjoy the benefits and relatively safe status of a young player for {0} more hour{1}.", hours, hours != 1 ? "s" : "");
+            }
+
+            //if (from is PlayerMobile)
+            //{
+            //   ((PlayerMobile)from).ClaimAutoStabledPets();
+            //    ((PlayerMobile)from).ValidateEquipment();
+
+            //    ReportMurdererGump.CheckMurderer(from);
+            //}
+            //else if (Siege.SiegeShard && from.Map == Map.Trammel && from.AccessLevel == AccessLevel.Player)
+            //{
+            //    from.Map = Map.Felucca;
+            //}
 
             if (((from.Map == Map.Trammel && from.Region.IsPartOf("Blackthorn Castle")) || PointsSystem.FellowshipData.Enabled && from.Region.IsPartOf("BlackthornDungeon") || from.Region.IsPartOf("Ver Lor Reg")) && from.Player && from.AccessLevel == AccessLevel.Player && from.CharacterOut)
             {
