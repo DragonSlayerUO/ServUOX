@@ -505,6 +505,10 @@
     <Compile Include="Expansion\UOR\Items\Vetrewards\RewardRobe.cs" />
     <Compile Include="Expansion\UOTD\FlowerGarland.cs" />
     <Compile Include="Expansion\UOR\Items\Vetrewards\RewardCloak.cs" />
+    <Compile Include="Expansion\UO\Items\Craft and Component\Resources\FoldedCloth4.cs" />
+    <Compile Include="Expansion\UO\Items\Craft and Component\Resources\FoldedCloth3.cs" />
+    <Compile Include="Expansion\UO\Items\Craft and Component\Resources\FoldedCloth2.cs" />
+    <Compile Include="Expansion\UO\Items\Craft and Component\Resources\FoldedCloth1.cs" />
     <Compile Include="Expansion\UO\Items\Deeds\Boats\SmallDragonBoatDeed.cs" />
     <Compile Include="Expansion\UO\Items\Deeds\Boats\SmallBoatDeed.cs" />
     <Compile Include="Expansion\UO\Items\Deeds\Boats\MediumDragonBoatDeed.cs" />
