@@ -22,10 +22,10 @@ namespace Server.Mobiles
                 Add(new GenericBuyInfo(typeof(Dyes), 8, 20, 0xFA9, 0));
                 Add(new GenericBuyInfo(typeof(DyeTub), 8, 20, 0xFAB, 0));
 
-                Add(new GenericBuyInfo(typeof(UncutCloth), 3, 20, 0x1761, 0, true));
-                Add(new GenericBuyInfo(typeof(UncutCloth), 3, 20, 0x1762, 0, true));
-                Add(new GenericBuyInfo(typeof(UncutCloth), 3, 20, 0x1763, 0, true));
-                Add(new GenericBuyInfo(typeof(UncutCloth), 3, 20, 0x1764, 0, true));
+                Add(new GenericBuyInfo(typeof(FoldedCloth1), 3, 20, 0x1761, 0, true));
+                Add(new GenericBuyInfo(typeof(FoldedCloth2), 3, 20, 0x1762, 0, true));
+                Add(new GenericBuyInfo(typeof(FoldedCloth3), 3, 20, 0x1763, 0, true));
+                Add(new GenericBuyInfo(typeof(FoldedCloth4), 3, 20, 0x1764, 0, true));
 
                 Add(new GenericBuyInfo(typeof(BoltOfCloth), 100, 20, 0xf9B, 0, true));
                 Add(new GenericBuyInfo(typeof(BoltOfCloth), 100, 20, 0xf9C, 0, true));
