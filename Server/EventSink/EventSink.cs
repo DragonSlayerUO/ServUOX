@@ -192,6 +192,8 @@ namespace Server
 
     public delegate void MultiDesignQueryHandler(MultiDesignQueryEventArgs e);
 
+    public delegate void AccountDeleteHandler(AccountDeleteEventArgs e);
+
     public class OnItemObtainedEventArgs : EventArgs
     {
         private readonly Mobile m_Mobile;
@@ -1362,103 +1364,81 @@ namespace Server
 
     public class TargetedSpellEventArgs : EventArgs
     {
-        private Mobile m_Mobile;
-        private IEntity m_Target;
-        private short m_SpellID;
-
-        public Mobile Mobile => m_Mobile;
-        public IEntity Target => m_Target;
-        public short SpellID => m_SpellID;
+        public Mobile Mobile { get; }
+        public IEntity Target { get; }
+        public short SpellID { get; }
 
         public TargetedSpellEventArgs(Mobile m, IEntity target, short spellID)
         {
-            m_Mobile = m;
-            m_Target = target;
-            m_SpellID = spellID;
+            Mobile = m;
+            Target = target;
+            SpellID = spellID;
         }
     }
 
     public class TargetedSkillEventArgs : EventArgs
     {
-        private Mobile m_Mobile;
-        private IEntity m_Target;
-        private short m_SkillID;
-
-        public Mobile Mobile => m_Mobile;
-        public IEntity Target => m_Target;
-        public short SkillID => m_SkillID;
+        public Mobile Mobile { get; }
+        public IEntity Target { get; }
+        public short SkillID { get; }
 
         public TargetedSkillEventArgs(Mobile m, IEntity target, short skillID)
         {
-            m_Mobile = m;
-            m_Target = target;
-            m_SkillID = skillID;
+            Mobile = m;
+            Target = target;
+            SkillID = skillID;
         }
     }
 
     public class TargetedItemUseEventArgs : EventArgs
     {
-        private Mobile m_Mobile;
-        private IEntity m_Source;
-        private IEntity m_Target;
-
-        public Mobile Mobile => m_Mobile;
-        public IEntity Source => m_Source;
-        public IEntity Target => m_Target;
+        public Mobile Mobile { get; }
+        public IEntity Source { get; }
+        public IEntity Target { get; }
 
         public TargetedItemUseEventArgs(Mobile mobile, IEntity src, IEntity target)
         {
-            m_Mobile = mobile;
-            m_Source = src;
-            m_Target = target;
+            Mobile = mobile;
+            Source = src;
+            Target = target;
         }
     }
 
     public class TargetByResourceMacroEventArgs : EventArgs
     {
-        private Mobile m_Mobile;
-        private Item m_Tool;
-        private int m_ResourceType;
-
-        public Mobile Mobile => m_Mobile;
-        public Item Tool => m_Tool;
-        public int ResourceType => m_ResourceType;
+        public Mobile Mobile { get; }
+        public Item Tool { get; }
+        public int ResourceType { get; }
 
         public TargetByResourceMacroEventArgs(Mobile mobile, Item tool, int type)
         {
-            m_Mobile = mobile;
-            m_Tool = tool;
-            m_ResourceType = type;
+            Mobile = mobile;
+            Tool = tool;
+            ResourceType = type;
         }
     }
 
     public class EquipMacroEventArgs : EventArgs
     {
-        private Mobile m_Mobile;
-        private List<int> m_List;
-
-        public Mobile Mobile => m_Mobile;
-        public List<int> List => m_List;
+        public Mobile Mobile { get; }
+        public List<int> List { get; }
 
         public EquipMacroEventArgs(Mobile mobile, List<int> list)
         {
-            m_Mobile = mobile;
-            m_List = list;
+            Mobile = mobile;
+            List = list;
         }
     }
 
     public class UnequipMacroEventArgs : EventArgs
     {
-        private Mobile m_Mobile;
-        private List<int> m_List;
-
-        public Mobile Mobile => m_Mobile;
-        public List<int> List => m_List;
+        public Mobile Mobile { get; }
+        public List<int> List { get; }
 
         public UnequipMacroEventArgs(Mobile mobile, List<int> list)
         {
-            m_Mobile = mobile;
-            m_List = list;
+            Mobile = mobile;
+            List = list;
         }
     }
 
@@ -1684,6 +1664,16 @@ namespace Server
         }
     }
 
+    public class AccountDeleteEventArgs : EventArgs
+    {
+        public IAccount Account { get; set; }
+
+        public AccountDeleteEventArgs(IAccount a)
+        {
+            Account = a;
+        }
+    }
+
     public static class EventSink
     {
         public static event OnItemObtainedEventHandler OnItemObtained;
@@ -1780,6 +1770,7 @@ namespace Server
         public static event ContainerDroppedToEventHandler ContainerDroppedTo;
         public static event TeleportMovementEventHandler TeleportMovement;
         public static event MultiDesignQueryHandler MultiDesign;
+        public static event AccountDeleteHandler AccountDelete;
 
         public static void InvokeOnItemObtained(OnItemObtainedEventArgs e)
         {
@@ -2509,6 +2500,11 @@ namespace Server
             }
         }
 
+        public static void InvokeAccountDelete(AccountDeleteEventArgs e)
+        {
+            AccountDelete?.Invoke(e);
+        }
+
         public static void Reset()
         {
             OnItemObtained = null;
@@ -2593,6 +2589,7 @@ namespace Server
             TeleportMovement = null;
 
             MultiDesign = null;
+            AccountDelete = null;
         }
     }
 }

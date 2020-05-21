@@ -368,9 +368,8 @@ namespace Server
         }
 
         private static readonly Queue<Timer> m_Queue = new Queue<Timer>();
-        private static int m_BreakCount = 20000;
 
-        public static int BreakCount { get => m_BreakCount; set => m_BreakCount = value; }
+        public static int BreakCount { get; set; } = 20000;
 
         private static int m_QueueCountAtSlice;
 
@@ -384,7 +383,7 @@ namespace Server
 
                 var index = 0;
 
-                while (index < m_BreakCount && m_Queue.Count != 0)
+                while (index < BreakCount && m_Queue.Count != 0)
                 {
                     var t = m_Queue.Dequeue();
                     var prof = t.GetProfile();

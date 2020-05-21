@@ -510,10 +510,12 @@ namespace Server.Engines.Harvest
                             if (Utility.RandomBool())
                             {
                                 chest = new MetalGoldenChest();
+                                chest.Name = "metal chest";
                             }
                             else
                             {
                                 chest = new WoodenChest();
+                                chest.Name = "wooden chest";
                             }
                         }
 
