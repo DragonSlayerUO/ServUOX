@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -7,18 +6,14 @@ namespace Server.Engines.BulkOrders
 {
     public class SmallBulkEntry
     {
-        private static Hashtable m_Cache;
-        private Type m_Type;
-        private int m_Number;
-        private int m_Graphic;
-        private int m_Hue;
+        private static Dictionary<string, Dictionary<string, SmallBulkEntry[]>> m_Cache;
 
         public SmallBulkEntry(Type type, int number, int graphic, int hue)
         {
-            m_Type = type;
-            m_Number = number;
-            m_Graphic = graphic;
-            m_Hue = hue;
+            Type = type;
+            Number = number;
+            Graphic = graphic;
+            Hue = hue;
         }
 
         public static SmallBulkEntry[] BlacksmithWeapons => GetEntries("Blacksmith", "weapons");
@@ -36,34 +31,26 @@ namespace Server.Engines.BulkOrders
         public static SmallBulkEntry[] FletchingSmallsRegular => GetEntries("Fletching", "smallsregular");
         public static SmallBulkEntry[] AlchemySmalls => GetEntries("Alchemy", "smalls");
         #endregion
-        public Type Type => m_Type;
-        public int Number
-        {
-            get
-            {
-                return m_Number;
-            }
-            set
-            {
-                m_Number = value;
-            }
-        }
-        public int Graphic => m_Graphic;
-        public int Hue => m_Hue;
+        public Type Type { get; }
+        public int Number { get; set; }
+        public int Graphic { get; }
+        public int Hue { get; }
         public static SmallBulkEntry[] GetEntries(string type, string name)
         {
             if (m_Cache == null)
-                m_Cache = new Hashtable();
+            {
+                m_Cache = new Dictionary<string, Dictionary<string, SmallBulkEntry[]>>();
+            }
 
-            Hashtable table = (Hashtable)m_Cache[type];
+            if (!m_Cache.TryGetValue(type, out Dictionary<string, SmallBulkEntry[]> table))
+            {
+                m_Cache[type] = table = new Dictionary<string, SmallBulkEntry[]>();
+            }
 
-            if (table == null)
-                m_Cache[type] = table = new Hashtable();
-
-            SmallBulkEntry[] entries = (SmallBulkEntry[])table[name];
-
-            if (entries == null)
+            if (!table.TryGetValue(name, out SmallBulkEntry[] entries))
+            {
                 table[name] = entries = LoadEntries(type, name);
+            }
 
             return entries;
         }
@@ -94,7 +81,9 @@ namespace Server.Engines.BulkOrders
                          */
 
                         if (line.Length == 0 || line.StartsWith("#"))
+                        {
                             continue;
+                        }
 
                         try
                         {

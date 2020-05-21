@@ -1,22 +1,15 @@
-using System;
-using Server;
-using Server.Items;
 using Server.Mobiles;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Engines.NewMagincia
 {
     public class StorageEntry
     {
-        private int m_Funds;
-        private DateTime m_Expires;
-        private Dictionary<Type, int> m_CommodityTypes = new Dictionary<Type, int>();
-        private List<BaseCreature> m_Creatures = new List<BaseCreature>();
-
-        public int Funds { get { return m_Funds; } set { m_Funds = value; } }
-        public DateTime Expires => m_Expires;
-        public Dictionary<Type, int> CommodityTypes => m_CommodityTypes;
-        public List<BaseCreature> Creatures => m_Creatures;
+        public int Funds { get; set; }
+        public DateTime Expires { get; private set; }
+        public Dictionary<Type, int> CommodityTypes { get; } = new Dictionary<Type, int>();
+        public List<BaseCreature> Creatures { get; } = new List<BaseCreature>();
 
         public StorageEntry(Mobile m, BaseBazaarBroker broker)
         {
@@ -25,8 +18,8 @@ namespace Server.Engines.NewMagincia
 
         public void AddInventory(Mobile m, BaseBazaarBroker broker)
         {
-            m_Funds += broker.BankBalance;
-            m_Expires = DateTime.UtcNow + TimeSpan.FromDays(7);
+            Funds += broker.BankBalance;
+            Expires = DateTime.UtcNow + TimeSpan.FromDays(7);
 
             if (broker is CommodityBroker)
             {
@@ -34,7 +27,7 @@ namespace Server.Engines.NewMagincia
                 {
                     if (entry.Stock > 0)
                     {
-                        m_CommodityTypes[entry.CommodityType] = entry.Stock;
+                        CommodityTypes[entry.CommodityType] = entry.Stock;
                     }
                 }
             }
@@ -47,26 +40,30 @@ namespace Server.Engines.NewMagincia
                         entry.Internalize();
                     }
 
-                    m_Creatures.Add(entry.Pet);
+                    Creatures.Add(entry.Pet);
                 }
             }
         }
 
         public void RemoveCommodity(Type type, int amount)
         {
-            if (m_CommodityTypes.ContainsKey(type))
+            if (CommodityTypes.ContainsKey(type))
             {
-                m_CommodityTypes[type] -= amount;
+                CommodityTypes[type] -= amount;
 
-                if (m_CommodityTypes[type] <= 0)
-                    m_CommodityTypes.Remove(type);
+                if (CommodityTypes[type] <= 0)
+                {
+                    CommodityTypes.Remove(type);
+                }
             }
         }
 
         public void RemovePet(BaseCreature pet)
         {
-            if (m_Creatures.Contains(pet))
-                m_Creatures.Remove(pet);
+            if (Creatures.Contains(pet))
+            {
+                Creatures.Remove(pet);
+            }
         }
 
         public StorageEntry(GenericReader reader)
@@ -76,8 +73,8 @@ namespace Server.Engines.NewMagincia
             switch (version)
             {
                 case 1:
-                    m_Funds = reader.ReadInt();
-                    m_Expires = reader.ReadDateTime();
+                    Funds = reader.ReadInt();
+                    Expires = reader.ReadDateTime();
 
                     int count = reader.ReadInt();
                     for (int i = 0; i < count; i++)
@@ -86,22 +83,24 @@ namespace Server.Engines.NewMagincia
                         int amount = reader.ReadInt();
 
                         if (cType != null)
-                            m_CommodityTypes[cType] = amount;
+                        {
+                            CommodityTypes[cType] = amount;
+                        }
                     }
 
                     count = reader.ReadInt();
                     for (int i = 0; i < count; i++)
                     {
-                        BaseCreature bc = reader.ReadMobile() as BaseCreature;
-
-                        if (bc != null)
-                            m_Creatures.Add(bc);
+                        if (reader.ReadMobile() is BaseCreature bc)
+                        {
+                            Creatures.Add(bc);
+                        }
                     }
                     break;
                 case 0:
                     int type = reader.ReadInt();
-                    m_Funds = reader.ReadInt();
-                    m_Expires = reader.ReadDateTime();
+                    Funds = reader.ReadInt();
+                    Expires = reader.ReadDateTime();
 
                     switch (type)
                     {
@@ -115,7 +114,9 @@ namespace Server.Engines.NewMagincia
                                     int amount = reader.ReadInt();
 
                                     if (cType != null)
-                                        m_CommodityTypes[cType] = amount;
+                                    {
+                                        CommodityTypes[cType] = amount;
+                                    }
                                 }
                                 break;
                             }
@@ -124,11 +125,9 @@ namespace Server.Engines.NewMagincia
                                 int c2 = reader.ReadInt();
                                 for (int i = 0; i < c2; i++)
                                 {
-                                    BaseCreature bc = reader.ReadMobile() as BaseCreature;
-
-                                    if (bc != null)
+                                    if (reader.ReadMobile() is BaseCreature bc)
                                     {
-                                        m_Creatures.Add(bc);
+                                        Creatures.Add(bc);
                                     }
                                 }
                                 break;
@@ -142,18 +141,18 @@ namespace Server.Engines.NewMagincia
         {
             writer.Write(1);
 
-            writer.Write(m_Funds);
-            writer.Write(m_Expires);
+            writer.Write(Funds);
+            writer.Write(Expires);
 
-            writer.Write(m_CommodityTypes.Count);
-            foreach (KeyValuePair<Type, int> kvp in m_CommodityTypes)
+            writer.Write(CommodityTypes.Count);
+            foreach (KeyValuePair<Type, int> kvp in CommodityTypes)
             {
                 writer.Write(kvp.Key.Name);
                 writer.Write(kvp.Value);
             }
 
-            writer.Write(m_Creatures.Count);
-            foreach (BaseCreature bc in m_Creatures)
+            writer.Write(Creatures.Count);
+            foreach (BaseCreature bc in Creatures)
             {
                 writer.Write(bc);
             }

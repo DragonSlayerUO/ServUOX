@@ -1,8 +1,5 @@
-using Server;
-using System;
-using Server.Items;
-using Server.Mobiles;
 using Server.Accounting;
+using System;
 
 namespace Server.Engines.NewMagincia
 {
@@ -10,26 +7,22 @@ namespace Server.Engines.NewMagincia
     public class MaginciaBazaarPlot
     {
         private PlotDef m_Definition;
-        private Mobile m_Owner;
-        private string m_ShopName;
         private BaseBazaarMulti m_PlotMulti;
         private BaseBazaarBroker m_Merchant;
-        private PlotSign m_Sign;
-        private MaginciaPlotAuction m_Auction;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public PlotDef PlotDef { get { return m_Definition; } set { } }
+        public PlotDef PlotDef { get => m_Definition; set { } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile Owner { get { return m_Owner; } set { m_Owner = value; } }
+        public Mobile Owner { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string ShopName { get { return m_ShopName; } set { m_ShopName = value; } }
+        public string ShopName { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public BaseBazaarMulti PlotMulti
         {
-            get { return m_PlotMulti; }
+            get => m_PlotMulti;
             set
             {
                 if (m_PlotMulti != null && m_PlotMulti != value && value != null)
@@ -41,14 +34,16 @@ namespace Server.Engines.NewMagincia
                 m_PlotMulti = value;
 
                 if (m_PlotMulti != null)
+                {
                     m_PlotMulti.MoveToWorld(m_Definition.MultiLocation, m_Definition.Map);
+                }
             }
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public BaseBazaarBroker Merchant
         {
-            get { return m_Merchant; }
+            get => m_Merchant;
             set
             {
                 m_Merchant = value;
@@ -74,28 +69,10 @@ namespace Server.Engines.NewMagincia
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public PlotSign Sign { get { return m_Sign; } set { m_Sign = value; } }
+        public PlotSign Sign { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MaginciaPlotAuction Auction
-        {
-            get
-            {
-                /*if(m_Auction == null)
-				{
-					TimeSpan ts;
-					if(m_Owner == null)
-						ts = MaginciaBazaar.GetLongAuctionTime;
-					else
-						ts = MaginciaBazaar.GetShortAuctionTime;
-						
-					m_Auction = new MaginciaPlotAuction(this, ts);
-				}*/
-
-                return m_Auction;
-            }
-            set { m_Auction = value; }
-        }
+        public MaginciaPlotAuction Auction { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Active => MaginciaBazaar.IsActivePlot(this);
@@ -106,7 +83,10 @@ namespace Server.Engines.NewMagincia
             get
             {
                 if (Auction == null)
+                {
                     return DateTime.MinValue;
+                }
+
                 return Auction.AuctionEnd;
             }
 
@@ -115,74 +95,90 @@ namespace Server.Engines.NewMagincia
         public MaginciaBazaarPlot(PlotDef definition)
         {
             m_Definition = definition;
-            m_Owner = null;
+            Owner = null;
             m_PlotMulti = null;
             m_Merchant = null;
-            m_ShopName = null;
+            ShopName = null;
         }
 
         public bool IsOwner(Mobile from)
         {
-            if (from == null || m_Owner == null)
+            if (from == null || Owner == null)
+            {
                 return false;
+            }
 
-            if (from == m_Owner)
+            if (from == Owner)
+            {
                 return true;
+            }
 
-            Account acct1 = from.Account as Account;
-            Account acct2 = m_Owner.Account as Account;
 
-            return acct1 != null && acct2 != null && acct1 == acct2;
+            return from.Account is Account acct1 && Owner.Account is Account acct2 && acct1 == acct2;
         }
 
         public void AddPlotSign()
         {
-            m_Sign = new PlotSign(this);
-            m_Sign.MoveToWorld(m_Definition.SignLoc, m_Definition.Map);
+            Sign = new PlotSign(this);
+            Sign.MoveToWorld(m_Definition.SignLoc, m_Definition.Map);
         }
 
         public void Reset()
         {
             if (m_PlotMulti != null)
+            {
                 Timer.DelayCall(TimeSpan.FromMinutes(2), new TimerCallback(DeleteMulti_Callback));
+            }
 
             EndTempMultiTimer();
 
             if (m_Merchant != null)
+            {
                 m_Merchant.Dismiss();
+            }
 
-            m_Owner = null;
-            m_ShopName = null;
+            Owner = null;
+            ShopName = null;
             m_Merchant = null;
-            m_ShopName = null;
+            ShopName = null;
         }
 
         public void NewAuction(TimeSpan time)
         {
-            m_Auction = new MaginciaPlotAuction(this, time);
+            Auction = new MaginciaPlotAuction(this, time);
 
-            if (m_Sign != null)
-                m_Sign.InvalidateProperties();
+            if (Sign != null)
+            {
+                Sign.InvalidateProperties();
+            }
         }
 
         private void DeleteMulti_Callback()
         {
             if (m_PlotMulti != null)
+            {
                 m_PlotMulti.Delete();
+            }
 
             m_PlotMulti = null;
         }
 
         public void OnTick()
         {
-            if (m_Auction != null)
-                m_Auction.OnTick();
+            if (Auction != null)
+            {
+                Auction.OnTick();
+            }
 
             if (m_Merchant != null)
+            {
                 m_Merchant.OnTick();
+            }
 
-            if (m_Sign != null)
-                m_Sign.InvalidateProperties();
+            if (Sign != null)
+            {
+                Sign.InvalidateProperties();
+            }
         }
 
         #region Stall Style Multis
@@ -229,9 +225,13 @@ namespace Server.Engines.NewMagincia
             EndTempMultiTimer();
 
             if (commodity)
+            {
                 Merchant = new CommodityBroker(this);
+            }
             else
+            {
                 Merchant = new PetBroker(this);
+            }
         }
 
         public void RemoveTempPlot()
@@ -283,7 +283,9 @@ namespace Server.Engines.NewMagincia
             protected override void OnTick()
             {
                 if (m_Plot != null)
+                {
                     m_Plot.RemoveTempPlot();
+                }
             }
         }
 
@@ -297,15 +299,21 @@ namespace Server.Engines.NewMagincia
         public bool TrySetShopName(Mobile from, string text)
         {
             if (text == null || !Server.Guilds.BaseGuildGump.CheckProfanity(text) || text.Length == 0 || text.Length > 40)
+            {
                 return false;
+            }
 
-            m_ShopName = text;
+            ShopName = text;
 
             if (m_Merchant != null)
+            {
                 m_Merchant.InvalidateProperties();
+            }
 
-            if (m_Sign != null)
-                m_Sign.InvalidateProperties();
+            if (Sign != null)
+            {
+                Sign.InvalidateProperties();
+            }
 
             from.SendLocalizedMessage(1150333); // Your shop has been renamed.
 
@@ -331,14 +339,19 @@ namespace Server.Engines.NewMagincia
         {
             Reset();
 
-            if (m_Auction != null)
-                m_Auction.ChangeAuctionTime(MaginciaBazaar.GetShortAuctionTime);
+            if (Auction != null)
+            {
+                Auction.ChangeAuctionTime(MaginciaBazaar.GetShortAuctionTime);
+            }
         }
 
         public int GetBid(Mobile from)
         {
-            if (m_Auction != null && m_Auction.Auctioners.ContainsKey(from))
-                return m_Auction.Auctioners[from].Amount;
+            if (Auction != null && Auction.Auctioners.ContainsKey(from))
+            {
+                return Auction.Auctioners[from].Amount;
+            }
+
             return 0;
         }
 
@@ -348,59 +361,65 @@ namespace Server.Engines.NewMagincia
 
             m_Definition.Serialize(writer);
 
-            writer.Write(m_Owner);
-            writer.Write(m_ShopName);
+            writer.Write(Owner);
+            writer.Write(ShopName);
             writer.Write(m_Merchant);
-            writer.Write(m_Sign);
+            writer.Write(Sign);
             writer.Write(m_PlotMulti);
 
-            if (m_Auction != null)
+            if (Auction != null)
             {
                 writer.Write(true);
-                m_Auction.Serialize(writer);
+                Auction.Serialize(writer);
             }
             else
+            {
                 writer.Write(false);
+            }
         }
 
         public MaginciaBazaarPlot(GenericReader reader)
         {
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             m_Definition = new PlotDef(reader);
 
-            m_Owner = reader.ReadMobile();
-            m_ShopName = reader.ReadString();
+            Owner = reader.ReadMobile();
+            ShopName = reader.ReadString();
             m_Merchant = reader.ReadMobile() as BaseBazaarBroker;
-            m_Sign = reader.ReadItem() as PlotSign;
+            Sign = reader.ReadItem() as PlotSign;
             m_PlotMulti = reader.ReadItem() as BaseBazaarMulti;
 
             if (reader.ReadBool())
-                m_Auction = new MaginciaPlotAuction(reader, this);
+            {
+                Auction = new MaginciaPlotAuction(reader, this);
+            }
 
             if (m_Merchant != null)
+            {
                 m_Merchant.Plot = this;
+            }
 
-            if (m_Sign != null)
-                m_Sign.Plot = this;
+            if (Sign != null)
+            {
+                Sign.Plot = this;
+            }
         }
     }
 
     [PropertyObject]
     public class PlotDef
     {
-        private string m_ID;
         private Point3D m_Location;
-        private Map m_Map;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public string ID { get { return m_ID; } set { m_ID = value; } }
+        public string ID { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Point3D Location { get { return m_Location; } set { m_Location = value; } }
+        public Point3D Location { get => m_Location; set => m_Location = value; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Map Map => m_Map;
+        public Map Map { get; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Point3D SignLoc => new Point3D(m_Location.X + 1, m_Location.Y - 2, m_Location.Z);
@@ -410,9 +429,9 @@ namespace Server.Engines.NewMagincia
 
         public PlotDef(string id, Point3D pnt, int mapID)
         {
-            m_ID = id;
+            ID = id;
             m_Location = pnt;
-            m_Map = Server.Map.Maps[mapID];
+            Map = Server.Map.Maps[mapID];
         }
 
         public override string ToString()
@@ -422,20 +441,20 @@ namespace Server.Engines.NewMagincia
 
         public PlotDef(GenericReader reader)
         {
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
-            m_ID = reader.ReadString();
+            ID = reader.ReadString();
             m_Location = reader.ReadPoint3D();
-            m_Map = reader.ReadMap();
+            Map = reader.ReadMap();
         }
 
         public void Serialize(GenericWriter writer)
         {
             writer.Write(0);
 
-            writer.Write(m_ID);
+            writer.Write(ID);
             writer.Write(m_Location);
-            writer.Write(m_Map);
+            writer.Write(Map);
         }
     }
 }

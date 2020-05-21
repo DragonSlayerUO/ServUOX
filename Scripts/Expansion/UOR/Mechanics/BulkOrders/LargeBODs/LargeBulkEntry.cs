@@ -1,19 +1,18 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Server.Engines.BulkOrders
 {
     public class LargeBulkEntry
     {
-        private static Hashtable m_Cache;
-        private readonly SmallBulkEntry m_Details;
-        private LargeBOD m_Owner;
+        private static Dictionary<string, Dictionary<string, SmallBulkEntry[]>> m_Cache;
         private int m_Amount;
 
         public LargeBulkEntry(LargeBOD owner, SmallBulkEntry details)
         {
-            m_Owner = owner;
-            m_Details = details;
+            Owner = owner;
+            Details = details;
         }
 
         public static SmallBulkEntry[] LargeRing => GetEntries("Blacksmith", "largering");
@@ -81,17 +80,7 @@ namespace Server.Engines.BulkOrders
         public static SmallBulkEntry[] LargeSweets => GetEntries("Cooking", "LargeSweets");
         public static SmallBulkEntry[] LargeUnbakedPies => GetEntries("Cooking", "LargeUnbakedPies");
         #endregion
-        public LargeBOD Owner
-        {
-            get
-            {
-                return m_Owner;
-            }
-            set
-            {
-                m_Owner = value;
-            }
-        }
+        public LargeBOD Owner { get; set; }
         public int Amount
         {
             get
@@ -101,24 +90,20 @@ namespace Server.Engines.BulkOrders
             set
             {
                 m_Amount = value;
-                if (m_Owner != null)
-                    m_Owner.InvalidateProperties();
+                if (Owner != null)
+                    Owner.InvalidateProperties();
             }
         }
-        public SmallBulkEntry Details => m_Details;
+        public SmallBulkEntry Details { get; }
         public static SmallBulkEntry[] GetEntries(string type, string name)
         {
             if (m_Cache == null)
-                m_Cache = new Hashtable();
+                m_Cache = new Dictionary<string, Dictionary<string, SmallBulkEntry[]>>();
 
-            Hashtable table = (Hashtable)m_Cache[type];
+            if (!m_Cache.TryGetValue(type, out Dictionary<string, SmallBulkEntry[]> table))
+                m_Cache[type] = table = new Dictionary<string, SmallBulkEntry[]>();
 
-            if (table == null)
-                m_Cache[type] = table = new Hashtable();
-
-            SmallBulkEntry[] entries = (SmallBulkEntry[])table[name];
-
-            if (entries == null)
+            if (!table.TryGetValue(name, out SmallBulkEntry[] entries))
                 table[name] = entries = SmallBulkEntry.LoadEntries(type, name);
 
             return entries;
@@ -136,7 +121,7 @@ namespace Server.Engines.BulkOrders
 
         public LargeBulkEntry(LargeBOD owner, GenericReader reader, int version)
         {
-            m_Owner = owner;
+            Owner = owner;
             m_Amount = reader.ReadInt();
 
             Type realType = null;
@@ -146,16 +131,16 @@ namespace Server.Engines.BulkOrders
             if (type != null)
                 realType = ScriptCompiler.FindTypeByFullName(type);
 
-            m_Details = new SmallBulkEntry(realType, reader.ReadInt(), reader.ReadInt(), version == 0 ? 0 : reader.ReadInt());
+            Details = new SmallBulkEntry(realType, reader.ReadInt(), reader.ReadInt(), version == 0 ? 0 : reader.ReadInt());
         }
 
         public void Serialize(GenericWriter writer)
         {
             writer.Write(m_Amount);
-            writer.Write(m_Details.Type == null ? null : m_Details.Type.FullName);
-            writer.Write(m_Details.Number);
-            writer.Write(m_Details.Graphic);
-            writer.Write(m_Details.Hue);
+            writer.Write(Details.Type == null ? null : Details.Type.FullName);
+            writer.Write(Details.Number);
+            writer.Write(Details.Graphic);
+            writer.Write(Details.Hue);
         }
     }
 }

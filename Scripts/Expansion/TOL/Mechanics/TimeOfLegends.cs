@@ -118,14 +118,14 @@ namespace Server
                 {
                     if (0.33 > Utility.RandomDouble())
                     {
-                        Item item = Server.Loot.Construct(_ArmorDropTypes[Utility.Random(_ArmorDropTypes.Length)]);
+                        Item item = Server.Loot.Construct(ArmorDropTypes[Utility.Random(ArmorDropTypes.Length)]);
 
                         if (item != null)
                             c.DropItem(item);
                     }
                     else
                     {
-                        Item scroll = new RecipeScroll(_RecipeTypes[Utility.Random(_RecipeTypes.Length)]);
+                        Item scroll = new RecipeScroll(RecipeTypes[Utility.Random(RecipeTypes.Length)]);
 
                         if (scroll != null)
                             c.DropItem(scroll);
@@ -134,16 +134,13 @@ namespace Server
             }
         }
 
-        public static Type[] ArmorDropTypes => _ArmorDropTypes;
-        private static Type[] _ArmorDropTypes =
+        public static Type[] ArmorDropTypes { get; } =
         {
-            typeof(AloronsBustier), typeof(AloronsGorget), typeof(AloronsHelm), typeof(AloronsLegs), typeof(AloronsLongSkirt), typeof(AloronsSkirt), typeof(AloronsTunic),
+             typeof(AloronsBustier), typeof(AloronsGorget), typeof(AloronsHelm), typeof(AloronsLegs), typeof(AloronsLongSkirt), typeof(AloronsSkirt), typeof(AloronsTunic), typeof(AloronsShorts),
             typeof(DardensBustier), typeof(DardensHelm), typeof(DardensLegs), typeof(DardensSleeves), typeof(DardensTunic)
         };
 
-        public static int[] RecipeTypes => _RecipeTypes;
-        private static int[] _RecipeTypes =
-        {
+        public static int[] RecipeTypes { get; } = {
             560, 561, 562, 563, 564, 565, 566,
             570, 571, 572, 573, 574, 575, 576, 577,
             580, 581, 582, 583, 584

@@ -1,9 +1,8 @@
-using Server;
+using Server.Accounting;
+using Server.Items;
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
-using Server.Mobiles;
-using Server.Items;
-using Server.Accounting;
 
 namespace Server.Engines.NewMagincia
 {
@@ -13,34 +12,32 @@ namespace Server.Engines.NewMagincia
         public static TimeSpan GetShortAuctionTime => TimeSpan.FromMinutes(Utility.RandomMinMax(690, 750));
         public static TimeSpan GetLongAuctionTime => TimeSpan.FromHours(Utility.RandomMinMax(168, 180));
 
-        private static MaginciaBazaar m_Instance;
-        public static MaginciaBazaar Instance { get { return m_Instance; } set { m_Instance = value; } }
+        public static MaginciaBazaar Instance { get; set; }
 
         private Timer m_Timer;
 
-        private static List<MaginciaBazaarPlot> m_Plots = new List<MaginciaBazaarPlot>();
-        public static List<MaginciaBazaarPlot> Plots => m_Plots;
-
-        private static Dictionary<Mobile, BidEntry> m_NextAvailable = new Dictionary<Mobile, BidEntry>();
-        public static Dictionary<Mobile, BidEntry> NextAvailable => m_NextAvailable;
-
-        private static Dictionary<Mobile, int> m_Reserve = new Dictionary<Mobile, int>();
-        public static Dictionary<Mobile, int> Reserve => m_Reserve;
+        public static List<MaginciaBazaarPlot> Plots { get; } = new List<MaginciaBazaarPlot>();
+        public static Dictionary<Mobile, BidEntry> NextAvailable { get; } = new Dictionary<Mobile, BidEntry>();
+        public static Dictionary<Mobile, int> Reserve { get; } = new Dictionary<Mobile, int>();
 
         private bool m_Enabled;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Enabled
         {
-            get { return m_Enabled; }
+            get => m_Enabled;
             set
             {
                 if (m_Enabled != value)
                 {
                     if (value)
+                    {
                         StartTimer();
+                    }
                     else
+                    {
                         EndTimer();
+                    }
                 }
 
                 m_Enabled = value;
@@ -64,7 +61,7 @@ namespace Server.Engines.NewMagincia
         [CommandProperty(AccessLevel.GameMaster)]
         public Phase PlotPhase
         {
-            get { return m_Phase; }
+            get => m_Phase;
             set
             {
 
@@ -95,7 +92,9 @@ namespace Server.Engines.NewMagincia
             AddPlotSigns();
 
             if (m_Enabled)
+            {
                 StartTimer();
+            }
 
             m_Phase = Phase.Phase1;
             ActivatePlots();
@@ -103,14 +102,16 @@ namespace Server.Engines.NewMagincia
 
         public static bool IsActivePlot(MaginciaBazaarPlot plot)
         {
-            if (m_Instance != null)
+            if (Instance != null)
             {
-                int index = m_Plots.IndexOf(plot);
+                int index = Plots.IndexOf(plot);
 
                 if (index == -1)
+                {
                     return false;
+                }
 
-                switch ((int)m_Instance.m_Phase)
+                switch ((int)Instance.m_Phase)
                 {
                     case 1: return index < 40;
                     case 2: return index < 70;
@@ -123,9 +124,9 @@ namespace Server.Engines.NewMagincia
 
         public void ActivatePlots()
         {
-            for (int i = 0; i < m_Plots.Count; i++)
+            for (int i = 0; i < Plots.Count; i++)
             {
-                MaginciaBazaarPlot plot = m_Plots[i];
+                MaginciaBazaarPlot plot = Plots[i];
 
                 switch ((int)m_Phase)
                 {
@@ -150,14 +151,18 @@ namespace Server.Engines.NewMagincia
                 }
 
                 if (plot.Sign != null)
+                {
                     plot.Sign.InvalidateProperties();
+                }
             }
         }
 
         public void StartTimer()
         {
             if (m_Timer != null)
+            {
                 m_Timer.Stop();
+            }
 
             m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1), new TimerCallback(OnTick));
             m_Timer.Priority = TimerPriority.OneMinute;
@@ -167,17 +172,21 @@ namespace Server.Engines.NewMagincia
         public void EndTimer()
         {
             if (m_Timer != null)
+            {
                 m_Timer.Stop();
+            }
 
             m_Timer = null;
         }
 
         public void OnTick()
         {
-            foreach (MaginciaBazaarPlot plot in m_Plots)
+            foreach (MaginciaBazaarPlot plot in Plots)
             {
                 if (plot.Active)
+                {
                     plot.OnTick();
+                }
             }
 
             List<Mobile> toRemove = new List<Mobile>();
@@ -255,7 +264,9 @@ namespace Server.Engines.NewMagincia
             foreach (Mobile m in toRemove)
             {
                 if (m_WarehouseStorage.ContainsKey(m))
+                {
                     m_WarehouseStorage.Remove(m);
+                }
             }
 
             ColUtility.Free(toRemove);
@@ -263,7 +274,7 @@ namespace Server.Engines.NewMagincia
 
         public void AddPlotSigns()
         {
-            foreach (MaginciaBazaarPlot plot in m_Plots)
+            foreach (MaginciaBazaarPlot plot in Plots)
             {
                 Point3D loc = new Point3D(plot.PlotDef.SignLoc.X - 1, plot.PlotDef.SignLoc.Y, plot.PlotDef.SignLoc.Z);
 
@@ -284,10 +295,12 @@ namespace Server.Engines.NewMagincia
 
         public static MaginciaBazaarPlot GetPlot(Mobile from)
         {
-            foreach (MaginciaBazaarPlot plot in m_Plots)
+            foreach (MaginciaBazaarPlot plot in Plots)
             {
                 if (plot.IsOwner(from))
+                {
                     return plot;
+                }
             }
 
             return null;
@@ -295,10 +308,12 @@ namespace Server.Engines.NewMagincia
 
         public static bool HasPlot(Mobile from)
         {
-            foreach (MaginciaBazaarPlot plot in m_Plots)
+            foreach (MaginciaBazaarPlot plot in Plots)
             {
                 if (plot.IsOwner(from))
+                {
                     return true;
+                }
             }
 
             return false;
@@ -306,22 +321,26 @@ namespace Server.Engines.NewMagincia
 
         public static MaginciaBazaarPlot GetBiddingPlot(Mobile from)
         {
-            Account acct = from.Account as Account;
-
-            if (acct == null)
+            if (!(from.Account is Account acct))
+            {
                 return null;
+            }
 
             for (int i = 0; i < acct.Length; i++)
             {
                 Mobile m = acct[i];
 
                 if (m == null)
+                {
                     continue;
+                }
 
                 MaginciaBazaarPlot plot = GetBiddingPlotForAccount(m);
 
                 if (plot != null)
+                {
                     return plot;
+                }
             }
 
             return null;
@@ -329,10 +348,12 @@ namespace Server.Engines.NewMagincia
 
         public static MaginciaBazaarPlot GetBiddingPlotForAccount(Mobile from)
         {
-            foreach (MaginciaBazaarPlot plot in m_Plots)
+            foreach (MaginciaBazaarPlot plot in Plots)
             {
                 if (plot.Auction != null && plot.Auction.Auctioners.ContainsKey(from))
+                {
                     return plot;
+                }
             }
 
             return null;
@@ -340,7 +361,7 @@ namespace Server.Engines.NewMagincia
 
         public bool HasActiveBid(Mobile from)
         {
-            return GetBiddingPlot(from) != null || m_NextAvailable.ContainsKey(from);
+            return GetBiddingPlot(from) != null || NextAvailable.ContainsKey(from);
         }
 
         public static bool TryRetractBid(Mobile from)
@@ -348,7 +369,9 @@ namespace Server.Engines.NewMagincia
             MaginciaBazaarPlot plot = GetBiddingPlot(from);
 
             if (plot != null)
+            {
                 return plot.Auction.RetractBid(from);
+            }
 
             return RetractBid(from);
         }
@@ -362,15 +385,17 @@ namespace Server.Engines.NewMagincia
                 Mobile m = acct[i];
 
                 if (m == null)
-                    continue;
-
-                if (m_NextAvailable.ContainsKey(m))
                 {
-                    BidEntry entry = m_NextAvailable[m];
+                    continue;
+                }
+
+                if (NextAvailable.ContainsKey(m))
+                {
+                    BidEntry entry = NextAvailable[m];
 
                     if (entry != null && Banker.Deposit(m, entry.Amount))
                     {
-                        m_NextAvailable.Remove(m);
+                        NextAvailable.Remove(m);
                         return true;
                     }
                 }
@@ -381,33 +406,40 @@ namespace Server.Engines.NewMagincia
 
         public static bool IsBiddingNextAvailable(Mobile from)
         {
-            return m_NextAvailable.ContainsKey(from);
+            return NextAvailable.ContainsKey(from);
         }
 
         public static int GetNextAvailableBid(Mobile from)
         {
-            if (m_NextAvailable.ContainsKey(from))
-                return m_NextAvailable[from].Amount;
+            if (NextAvailable.ContainsKey(from))
+            {
+                return NextAvailable[from].Amount;
+            }
+
             return 0;
         }
 
         public static void MakeBidNextAvailable(Mobile from, int amount)
         {
-            m_NextAvailable[from] = new BidEntry(from, amount, BidType.NextAvailable);
+            NextAvailable[from] = new BidEntry(from, amount, BidType.NextAvailable);
         }
 
         public static void RemoveBidNextAvailable(Mobile from)
         {
-            if (m_NextAvailable.ContainsKey(from))
-                m_NextAvailable.Remove(from);
+            if (NextAvailable.ContainsKey(from))
+            {
+                NextAvailable.Remove(from);
+            }
         }
 
         public static void AwardPlot(MaginciaPlotAuction auction, Mobile winner, int highest)
         {
             MaginciaBazaarPlot plot = auction.Plot;
 
-            if (m_NextAvailable.ContainsKey(winner))
-                m_NextAvailable.Remove(winner);
+            if (NextAvailable.ContainsKey(winner))
+            {
+                NextAvailable.Remove(winner);
+            }
 
             if (plot != null && plot.Owner != winner)
             {
@@ -442,7 +474,9 @@ namespace Server.Engines.NewMagincia
                     current.Owner = null;
 
                     if (current.Auction != null)
+                    {
                         current.Auction.EndAuction();
+                    }
                 }
 
                 plot.Owner = winner;
@@ -451,7 +485,9 @@ namespace Server.Engines.NewMagincia
             else if (plot != null)
             {
                 if (plot.Owner != null)
+                {
                     plot.NewAuction(GetLongAuctionTime);
+                }
                 else
                 {
                     plot.Reset();
@@ -462,7 +498,7 @@ namespace Server.Engines.NewMagincia
 
         public static void RegisterPlot(PlotDef plotDef)
         {
-            m_Plots.Add(new MaginciaBazaarPlot(plotDef));
+            Plots.Add(new MaginciaBazaarPlot(plotDef));
         }
 
         public static bool IsSameAccount(Mobile check, Mobile checkAgainst)
@@ -473,13 +509,16 @@ namespace Server.Engines.NewMagincia
         public static bool IsSameAccount(Mobile check, Mobile checkAgainst, bool checkLink)
         {
             if (check == null || checkAgainst == null)
+            {
                 return false;
+            }
 
-            Account acct1 = checkAgainst.Account as Account;
             Account acct2 = check.Account as Account;
 
-            if (acct1 != null && acct1 == acct2)
+            if (checkAgainst.Account is Account acct1 && acct1 == acct2)
+            {
                 return true;
+            }
 
             return false;
         }
@@ -524,7 +563,10 @@ namespace Server.Engines.NewMagincia
         public static StorageEntry GetStorageEntry(Mobile from)
         {
             if (m_WarehouseStorage.ContainsKey(from))
+            {
                 return m_WarehouseStorage[from];
+            }
+
             return null;
         }
 
@@ -538,28 +580,30 @@ namespace Server.Engines.NewMagincia
 
         public static void AddToReserve(Mobile from, int amount)
         {
-            foreach (Mobile m in m_Reserve.Keys)
+            foreach (Mobile m in Reserve.Keys)
             {
                 if (from == m || IsSameAccount(from, m))
                 {
-                    m_Reserve[m] += amount;
+                    Reserve[m] += amount;
                     return;
                 }
             }
 
-            m_Reserve[from] = amount;
+            Reserve[from] = amount;
         }
 
         public static void DeductReserve(Mobile from, int amount)
         {
-            foreach (Mobile m in m_Reserve.Keys)
+            foreach (Mobile m in Reserve.Keys)
             {
                 if (from == m || IsSameAccount(from, m))
                 {
-                    m_Reserve[m] -= amount;
+                    Reserve[m] -= amount;
 
-                    if (m_Reserve[m] <= 0)
-                        m_Reserve.Remove(m);
+                    if (Reserve[m] <= 0)
+                    {
+                        Reserve.Remove(m);
+                    }
 
                     return;
                 }
@@ -568,10 +612,12 @@ namespace Server.Engines.NewMagincia
 
         public static int GetBidMatching(Mobile from)
         {
-            foreach (Mobile m in m_Reserve.Keys)
+            foreach (Mobile m in Reserve.Keys)
             {
                 if (from == m || IsSameAccount(m, from))
-                    return m_Reserve[m];
+                {
+                    return Reserve[m];
+                }
             }
 
             return 0;
@@ -590,14 +636,14 @@ namespace Server.Engines.NewMagincia
             writer.Write(m_Enabled);
             writer.Write((int)m_Phase);
 
-            writer.Write(m_Plots.Count);
-            for (int i = 0; i < m_Plots.Count; i++)
+            writer.Write(Plots.Count);
+            for (int i = 0; i < Plots.Count; i++)
             {
-                m_Plots[i].Serialize(writer);
+                Plots[i].Serialize(writer);
             }
 
-            writer.Write(m_NextAvailable.Count);
-            foreach (KeyValuePair<Mobile, BidEntry> kvp in m_NextAvailable)
+            writer.Write(NextAvailable.Count);
+            foreach (KeyValuePair<Mobile, BidEntry> kvp in NextAvailable)
             {
                 writer.Write(kvp.Key);
                 kvp.Value.Serialize(writer);
@@ -610,8 +656,8 @@ namespace Server.Engines.NewMagincia
                 kvp.Value.Serialize(writer);
             }
 
-            writer.Write(m_Reserve.Count);
-            foreach (KeyValuePair<Mobile, int> kvp in m_Reserve)
+            writer.Write(Reserve.Count);
+            foreach (KeyValuePair<Mobile, int> kvp in Reserve)
             {
                 writer.Write(kvp.Key);
                 writer.Write(kvp.Value);
@@ -621,7 +667,7 @@ namespace Server.Engines.NewMagincia
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             m_Enabled = reader.ReadBool();
             m_Phase = (Phase)reader.ReadInt();
@@ -629,7 +675,7 @@ namespace Server.Engines.NewMagincia
             int count = reader.ReadInt();
             for (int i = 0; i < count; i++)
             {
-                m_Plots.Add(new MaginciaBazaarPlot(reader));
+                Plots.Add(new MaginciaBazaarPlot(reader));
             }
 
             count = reader.ReadInt();
@@ -639,7 +685,9 @@ namespace Server.Engines.NewMagincia
                 BidEntry entry = new BidEntry(reader);
 
                 if (m != null)
-                    m_NextAvailable[m] = entry;
+                {
+                    NextAvailable[m] = entry;
+                }
             }
 
             count = reader.ReadInt();
@@ -650,7 +698,9 @@ namespace Server.Engines.NewMagincia
                 StorageEntry entry = new StorageEntry(reader);
 
                 if (m != null)
+                {
                     m_WarehouseStorage[m] = entry;
+                }
             }
 
             count = reader.ReadInt();
@@ -660,13 +710,17 @@ namespace Server.Engines.NewMagincia
                 int amt = reader.ReadInt();
 
                 if (m != null && amt > 0)
-                    m_Reserve[m] = amt;
+                {
+                    Reserve[m] = amt;
+                }
             }
 
-            m_Instance = this;
+            Instance = this;
 
             if (m_Enabled)
+            {
                 StartTimer();
+            }
         }
 
         public static void LoadPlots()

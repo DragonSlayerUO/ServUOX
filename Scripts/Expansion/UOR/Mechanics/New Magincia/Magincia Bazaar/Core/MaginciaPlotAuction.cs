@@ -1,35 +1,27 @@
-using Server;
-using System;
-using System.Collections.Generic;
+using Server.Accounting;
 using Server.Items;
 using Server.Mobiles;
-using Server.Accounting;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Engines.NewMagincia
 {
     [PropertyObject]
     public class MaginciaPlotAuction
     {
-        private Dictionary<Mobile, BidEntry> m_Auctioners = new Dictionary<Mobile, BidEntry>();
-        public Dictionary<Mobile, BidEntry> Auctioners => m_Auctioners;
-
-        private MaginciaBazaarPlot m_Plot;
-        private DateTime m_AuctionEnd;
+        public Dictionary<Mobile, BidEntry> Auctioners { get; } = new Dictionary<Mobile, BidEntry>();
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MaginciaBazaarPlot Plot => m_Plot;
+        public MaginciaBazaarPlot Plot { get; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime AuctionEnd => m_AuctionEnd;
+        public DateTime AuctionEnd { get; private set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool EndCurrentAuction
         {
-            get { return false; }
-            set
-            {
-                EndAuction();
-            }
+            get => false;
+            set => EndAuction();
         }
 
         public MaginciaPlotAuction(MaginciaBazaarPlot plot) : this(plot, MaginciaBazaar.GetShortAuctionTime)
@@ -38,8 +30,8 @@ namespace Server.Engines.NewMagincia
 
         public MaginciaPlotAuction(MaginciaBazaarPlot plot, TimeSpan auctionDuration)
         {
-            m_Plot = plot;
-            m_AuctionEnd = DateTime.UtcNow + auctionDuration;
+            Plot = plot;
+            AuctionEnd = DateTime.UtcNow + auctionDuration;
         }
 
         public override string ToString()
@@ -49,7 +41,7 @@ namespace Server.Engines.NewMagincia
 
         public void MakeBid(Mobile bidder, int amount)
         {
-            m_Auctioners[bidder] = new BidEntry(bidder, amount, BidType.Specific);
+            Auctioners[bidder] = new BidEntry(bidder, amount, BidType.Specific);
         }
 
         public bool RetractBid(Mobile from)
@@ -61,15 +53,17 @@ namespace Server.Engines.NewMagincia
                 Mobile m = acct[i];
 
                 if (m == null)
-                    continue;
-
-                if (m_Auctioners.ContainsKey(m))
                 {
-                    BidEntry entry = m_Auctioners[m];
+                    continue;
+                }
+
+                if (Auctioners.ContainsKey(m))
+                {
+                    BidEntry entry = Auctioners[m];
 
                     if (entry != null && Banker.Deposit(m, entry.Amount))
                     {
-                        m_Auctioners.Remove(m);
+                        Auctioners.Remove(m);
                         return true;
                     }
                 }
@@ -80,68 +74,82 @@ namespace Server.Engines.NewMagincia
 
         public void RemoveBid(Mobile from)
         {
-            if (m_Auctioners.ContainsKey(from))
-                m_Auctioners.Remove(from);
+            if (Auctioners.ContainsKey(from))
+            {
+                Auctioners.Remove(from);
+            }
         }
 
         public int GetHighestBid()
         {
             int highest = -1;
-            foreach (BidEntry entry in m_Auctioners.Values)
+            foreach (BidEntry entry in Auctioners.Values)
             {
                 if (entry.Amount >= highest)
+                {
                     highest = entry.Amount;
+                }
             }
             return highest;
         }
 
         public void OnTick()
         {
-            if (m_AuctionEnd < DateTime.UtcNow)
+            if (AuctionEnd < DateTime.UtcNow)
+            {
                 EndAuction();
+            }
         }
 
         public void EndAuction()
         {
-            if (m_Plot == null)
+            if (Plot == null)
+            {
                 return;
+            }
 
-            if (m_Plot.HasTempMulti())
-                m_Plot.RemoveTempPlot();
+            if (Plot.HasTempMulti())
+            {
+                Plot.RemoveTempPlot();
+            }
 
             Mobile winner = null;
             int highest = 0;
 
-            Dictionary<Mobile, BidEntry> combined = new Dictionary<Mobile, BidEntry>(m_Auctioners);
+            Dictionary<Mobile, BidEntry> combined = new Dictionary<Mobile, BidEntry>(Auctioners);
 
             //Combine auction bids with the bids for next available plot
             foreach (KeyValuePair<Mobile, BidEntry> kvp in MaginciaBazaar.NextAvailable)
+            {
                 combined.Add(kvp.Key, kvp.Value);
+            }
 
             //Get highest bid
             foreach (BidEntry entry in combined.Values)
             {
                 if (entry.Amount > highest)
+                {
                     highest = entry.Amount;
+                }
             }
 
             // Check for owner, and if the owner has a match bad AND hasn't bidded on another plot!
-            if (m_Plot.Owner != null && MaginciaBazaar.Reserve.ContainsKey(m_Plot.Owner) && MaginciaBazaar.Instance != null && !MaginciaBazaar.Instance.HasActiveBid(m_Plot.Owner))
+            if (Plot.Owner != null && MaginciaBazaar.Reserve.ContainsKey(Plot.Owner) && MaginciaBazaar.Instance != null && !MaginciaBazaar.Instance.HasActiveBid(Plot.Owner))
             {
-                int matching = MaginciaBazaar.GetBidMatching(m_Plot.Owner);
+                int matching = MaginciaBazaar.GetBidMatching(Plot.Owner);
 
                 if (matching >= highest)
                 {
-                    MaginciaBazaar.DeductReserve(m_Plot.Owner, highest);
-                    int newreserve = MaginciaBazaar.GetBidMatching(m_Plot.Owner);
-                    winner = m_Plot.Owner;
+                    MaginciaBazaar.DeductReserve(Plot.Owner, highest);
+                    int newreserve = MaginciaBazaar.GetBidMatching(Plot.Owner);
+                    winner = Plot.Owner;
 
                     /*You extended your lease on Stall ~1_STALLNAME~ at the ~2_FACET~ New Magincia 
 					 *Bazaar. You matched the top bid of ~3_BIDAMT~gp. That amount has been deducted 
 					 *from your Match Bid of ~4_MATCHAMT~gp. Your Match Bid balance is now 
 					 *~5_NEWMATCH~gp. You may reclaim any additional match bid funds or adjust 
 					 *your match bid for next week at the bazaar.*/
-                    MaginciaLottoSystem.SendMessageTo(m_Plot.Owner, new NewMaginciaMessage(null, new TextDefinition(1150427), string.Format("@{0}@{1}@{2}@{3}@{4}", m_Plot.PlotDef.ID, m_Plot.PlotDef.Map.ToString(), highest.ToString("N0"), matching.ToString("N0"), newreserve.ToString("N0"))));
+                    MaginciaLottoSystem.SendMessageTo(Plot.Owner, new NewMaginciaMessage(null, new TextDefinition(1150427), string.Format("@{0}@{1}@{2}@{3}@{4}", Plot.PlotDef.ID, Plot.PlotDef.Map.ToString(), highest.ToString("N0"), matching.ToString("N0"), newreserve.ToString("N0"))));
                 }
                 else
                 {
@@ -151,13 +159,13 @@ namespace Server.Engines.NewMagincia
 					 *merchant, if any, has deposited your proceeds and remaining inventory at the 
 					 *Warehouse in New Magincia. You must retrieve these within one week or they 
 					 *will be destroyed.*/
-                    MaginciaLottoSystem.SendMessageTo(m_Plot.Owner, new NewMaginciaMessage(null, new TextDefinition(1150528), string.Format("@{0}@{1}@{2}", m_Plot.PlotDef.ID, m_Plot.PlotDef.Map.ToString(), matching.ToString("N0"))));
+                    MaginciaLottoSystem.SendMessageTo(Plot.Owner, new NewMaginciaMessage(null, new TextDefinition(1150528), string.Format("@{0}@{1}@{2}", Plot.PlotDef.ID, Plot.PlotDef.Map.ToString(), matching.ToString("N0"))));
                 }
             }
-            else if (m_Plot.Owner != null)
+            else if (Plot.Owner != null)
             {
                 /*Your lease has expired on Stall ~1_STALLNAME~ at the ~2_FACET~ New Magincia Bazaar.*/
-                MaginciaLottoSystem.SendMessageTo(m_Plot.Owner, new NewMaginciaMessage(null, new TextDefinition(1150430), string.Format("@{0}@{1}", m_Plot.PlotDef.ID, m_Plot.PlotDef.Map.ToString())));
+                MaginciaLottoSystem.SendMessageTo(Plot.Owner, new NewMaginciaMessage(null, new TextDefinition(1150430), string.Format("@{0}@{1}", Plot.PlotDef.ID, Plot.PlotDef.Map.ToString())));
             }
 
             if (winner == null)
@@ -167,12 +175,16 @@ namespace Server.Engines.NewMagincia
                 foreach (KeyValuePair<Mobile, BidEntry> kvp in combined)
                 {
                     if (kvp.Value.Amount >= highest)
+                    {
                         winners.Add(kvp.Value);
+                    }
                 }
 
                 // One winner!
                 if (winners.Count == 1)
+                {
                     winner = winners[0].Bidder;
+                }
                 else
                 {
                     // get a list of specific type (as opposed to next available)
@@ -180,12 +192,16 @@ namespace Server.Engines.NewMagincia
                     foreach (BidEntry bid in winners)
                     {
                         if (bid.BidType == BidType.Specific)
+                        {
                             specifics.Add(bid);
+                        }
                     }
 
                     // one 1 specific!
                     if (specifics.Count == 1)
+                    {
                         winner = specifics[0].Bidder;
+                    }
                     else if (specifics.Count > 1)
                     {
                         //gets oldest specific
@@ -193,7 +209,9 @@ namespace Server.Engines.NewMagincia
                         foreach (BidEntry entry in specifics)
                         {
                             if (oldest == null || entry.DatePlaced < oldest.DatePlaced)
+                            {
                                 oldest = entry;
+                            }
                         }
 
                         winner = oldest.Bidder;
@@ -205,17 +223,21 @@ namespace Server.Engines.NewMagincia
                         foreach (BidEntry entry in winners)
                         {
                             if (oldest == null || entry.DatePlaced < oldest.DatePlaced)
+                            {
                                 oldest = entry;
+                            }
                         }
 
                         if (oldest != null)
+                        {
                             winner = oldest.Bidder;
+                        }
                     }
                 }
             }
 
             //Give back gold
-            foreach (KeyValuePair<Mobile, BidEntry> kvp in m_Auctioners)
+            foreach (KeyValuePair<Mobile, BidEntry> kvp in Auctioners)
             {
                 Mobile m = kvp.Key;
 
@@ -232,42 +254,50 @@ namespace Server.Engines.NewMagincia
                         }
 
                         if (total > 0)
+                        {
                             m.Backpack.DropItem(new BankCheck(total));
+                        }
                     }
                 }
             }
             //Does actual changes to plots
             if (winner != null)
+            {
                 MaginciaBazaar.AwardPlot(this, winner, highest);
+            }
             else
             {
-                m_Plot.Reset(); // lease expires
-                m_Plot.NewAuction(MaginciaBazaar.GetShortAuctionTime);
+                Plot.Reset(); // lease expires
+                Plot.NewAuction(MaginciaBazaar.GetShortAuctionTime);
             }
         }
 
         public int GetBidAmount(Mobile from)
         {
-            if (!m_Auctioners.ContainsKey(from))
+            if (!Auctioners.ContainsKey(from))
+            {
                 return 0;
+            }
 
-            return m_Auctioners[from].Amount;
+            return Auctioners[from].Amount;
         }
 
         public void ChangeAuctionTime(TimeSpan ts)
         {
-            m_AuctionEnd = DateTime.UtcNow + ts;
+            AuctionEnd = DateTime.UtcNow + ts;
 
-            if (m_Plot != null && m_Plot.Sign != null)
-                m_Plot.Sign.InvalidateProperties();
+            if (Plot != null && Plot.Sign != null)
+            {
+                Plot.Sign.InvalidateProperties();
+            }
         }
 
         public MaginciaPlotAuction(GenericReader reader, MaginciaBazaarPlot plot)
         {
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
-            m_Plot = plot;
-            m_AuctionEnd = reader.ReadDateTime();
+            Plot = plot;
+            AuctionEnd = reader.ReadDateTime();
 
             int c = reader.ReadInt();
             for (int i = 0; i < c; i++)
@@ -276,7 +306,9 @@ namespace Server.Engines.NewMagincia
                 BidEntry entry = new BidEntry(reader);
 
                 if (m != null)
-                    m_Auctioners[m] = entry;
+                {
+                    Auctioners[m] = entry;
+                }
             }
         }
 
@@ -284,10 +316,10 @@ namespace Server.Engines.NewMagincia
         {
             writer.Write(0);
 
-            writer.Write(m_AuctionEnd);
+            writer.Write(AuctionEnd);
 
-            writer.Write(m_Auctioners.Count);
-            foreach (KeyValuePair<Mobile, BidEntry> kvp in m_Auctioners)
+            writer.Write(Auctioners.Count);
+            foreach (KeyValuePair<Mobile, BidEntry> kvp in Auctioners)
             {
                 writer.Write(kvp.Key);
                 kvp.Value.Serialize(writer);
@@ -303,45 +335,40 @@ namespace Server.Engines.NewMagincia
 
     public class BidEntry : IComparable
     {
-        private Mobile m_Bidder;
-        private int m_Amount;
-        private BidType m_BidType;
-        private DateTime m_DatePlaced;
-
-        public Mobile Bidder => m_Bidder;
-        public int Amount => m_Amount;
-        public BidType BidType => m_BidType;
-        public DateTime DatePlaced => m_DatePlaced;
+        public Mobile Bidder { get; }
+        public int Amount { get; }
+        public BidType BidType { get; }
+        public DateTime DatePlaced { get; }
 
         public BidEntry(Mobile bidder, int amount, BidType type)
         {
-            m_Bidder = bidder;
-            m_Amount = amount;
-            m_BidType = type;
-            m_DatePlaced = DateTime.UtcNow;
+            Bidder = bidder;
+            Amount = amount;
+            BidType = type;
+            DatePlaced = DateTime.UtcNow;
         }
 
         public int CompareTo(object obj)
         {
-            return ((BidEntry)obj).m_Amount - m_Amount;
+            return ((BidEntry)obj).Amount - Amount;
         }
 
         public BidEntry(GenericReader reader)
         {
-            int version = reader.ReadInt();
-            m_Bidder = reader.ReadMobile();
-            m_Amount = reader.ReadInt();
-            m_BidType = (BidType)reader.ReadInt();
-            m_DatePlaced = reader.ReadDateTime();
+            _ = reader.ReadInt();
+            Bidder = reader.ReadMobile();
+            Amount = reader.ReadInt();
+            BidType = (BidType)reader.ReadInt();
+            DatePlaced = reader.ReadDateTime();
         }
 
         public void Serialize(GenericWriter writer)
         {
             writer.Write(0);
-            writer.Write(m_Bidder);
-            writer.Write(m_Amount);
-            writer.Write((int)m_BidType);
-            writer.Write(m_DatePlaced);
+            writer.Write(Bidder);
+            writer.Write(Amount);
+            writer.Write((int)BidType);
+            writer.Write(DatePlaced);
         }
     }
 }

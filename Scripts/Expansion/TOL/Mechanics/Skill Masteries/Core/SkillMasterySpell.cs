@@ -292,7 +292,7 @@ namespace Server.Spells.SkillMasteries
             Server.Timer.DelayCall(RemoveFromTable);
             RemoveStatMods();
             EndEffects();
-
+            /*
             Caster.Delta(MobileDelta.WeaponDamage);
 
             if (Target != null)
@@ -304,7 +304,7 @@ namespace Server.Spells.SkillMasteries
                     m.Delta(MobileDelta.WeaponDamage);
 
                 ColUtility.Free(PartyList);
-            }
+            }*/
 
             OnExpire();
         }
@@ -780,6 +780,19 @@ namespace Server.Spells.SkillMasteries
                         m_Table.Remove(Caster);
                     }
                 }
+            }
+
+            Caster.Delta(MobileDelta.WeaponDamage);
+
+            if (Target != null)
+                Target.Delta(MobileDelta.WeaponDamage);
+
+            if (PartyList != null)
+            {
+                foreach (Mobile m in PartyList)
+                    m.Delta(MobileDelta.WeaponDamage);
+
+                ColUtility.Free(PartyList);
             }
         }
 

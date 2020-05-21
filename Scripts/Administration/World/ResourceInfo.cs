@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -625,7 +626,8 @@ namespace Server.Items
             return (resource == CraftResource.None || resource == CraftResource.Iron || resource == CraftResource.RegularLeather || resource == CraftResource.RegularWood);
         }
 
-        private static Hashtable m_TypeTable;
+        //private static Hashtable m_TypeTable;
+        private static Dictionary<Type, CraftResource> m_TypeTable;
 
         /// <summary>
         /// Registers that '<paramref name="resourceType"/>' uses '<paramref name="resource"/>' so that it can later be queried by <see cref="CraftResources.GetFromType"/>
@@ -633,7 +635,8 @@ namespace Server.Items
         public static void RegisterType(Type resourceType, CraftResource resource)
         {
             if (m_TypeTable == null)
-                m_TypeTable = new Hashtable();
+                m_TypeTable = new Dictionary<Type, CraftResource>();
+            // m_TypeTable = new Hashtable();
 
             m_TypeTable[resourceType] = resource;
         }
@@ -646,12 +649,15 @@ namespace Server.Items
             if (m_TypeTable == null)
                 return CraftResource.None;
 
-            object obj = m_TypeTable[resourceType];
+            //object obj = m_TypeTable[resourceType];
 
-            if (!(obj is CraftResource))
+            //if (!(obj is CraftResource))
+
+            if (!m_TypeTable.TryGetValue(resourceType, out CraftResource res))
                 return CraftResource.None;
 
-            return (CraftResource)obj;
+            //return (CraftResource)obj;
+            return res;
         }
 
         /// <summary>

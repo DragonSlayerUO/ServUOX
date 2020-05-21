@@ -677,20 +677,19 @@ namespace Server.Engines.Quests
 
                 RefinementComponent.Roll(hold, 3, 0.25);
 
-                if (Server.Engines.Points.PointsSystem.RisingTide.Enabled)
+                if (Points.PointsSystem.RisingTide.Enabled)
                 {
-                    if (0.25 > Utility.RandomDouble())
+                    hold.DropItem(new MaritimeCargo());
+                    hold.DropItem(new MaritimeCargo());
+
+                    if (galleon is OrcishGalleon)
                     {
                         hold.DropItem(new MaritimeCargo());
 
-                        if (0.1 > Utility.RandomDouble())
+                        if (Utility.RandomBool())
                         {
                             hold.DropItem(new MaritimeCargo());
                         }
-                    }
-                    else if (0.25 > Utility.RandomDouble())
-                    {
-                        hold.DropItem(new MaritimeCargo());
                     }
                 }
             }

@@ -649,10 +649,11 @@ namespace Server.Accounting
         }
 
         /// <summary>
-        ///     Deletes the account, all characters of the account, and all houses of those characters
+ 		/// Invokes the AccountDelete delegate, deletes all of the characters on the account, and removes the account from the account collection.
         /// </summary>
         public void Delete()
         {
+            EventSink.InvokeAccountDelete(new AccountDeleteEventArgs(this));
             for (var i = 0; i < Length; ++i)
             {
                 var m = this[i];
@@ -662,14 +663,14 @@ namespace Server.Accounting
                     continue;
                 }
 
-                var list = BaseHouse.GetHouses(m);
+                /*var list = BaseHouse.GetHouses(m);
 
                 foreach (BaseHouse h in list)
                 {
                     h.Delete();
-                }
+                }*/
 
-                ColUtility.Free(list);
+                //ColUtility.Free(list);
 
                 m.Delete();
 
