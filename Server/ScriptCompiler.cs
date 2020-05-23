@@ -301,7 +301,7 @@ namespace Server
                         continue;
                     }
 
-                    var table = (e.IsWarning ? warnings : errors);
+                    var table = e.IsWarning ? warnings : errors;
 
                     List<CompilerError> list = null;
                     table.TryGetValue(file, out list);
