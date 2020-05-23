@@ -71,7 +71,8 @@ namespace Server.Mobiles
         Eggs = 0x0010,
         Gold = 0x0020,
         Metal = 0x0040,
-        BlackrockStew = 0x0080
+        BlackrockStew = 0x0080,
+        Leather = 0x0100
     }
 
     [Flags]
@@ -2943,15 +2944,13 @@ namespace Server.Mobiles
             typeof(Squash), typeof(Cantaloupe), typeof(Carrot), typeof(Cabbage), typeof(Onion), typeof(Lettuce), typeof(Pumpkin)
         };
 
-        private static Type[] m_Gold = new[]
+        private static readonly Type[] m_Gold = new[]
         {
-			// white wyrms eat gold..
 			typeof(Gold)
         };
 
         private static readonly Type[] m_Metal = new[]
         {
-			// Some Stygian Abyss Monsters eat Metal..
 			typeof(IronIngot), typeof(DullCopperIngot), typeof(ShadowIronIngot), typeof(CopperIngot), typeof(BronzeIngot),
             typeof(GoldIngot), typeof(AgapiteIngot), typeof(VeriteIngot), typeof(ValoriteIngot)
         };
@@ -2961,8 +2960,18 @@ namespace Server.Mobiles
             typeof(BowlOfBlackrockStew)
         };
 
+        private static readonly Type[] m_Leather = new[]
+        {
+			typeof(Backpack),typeof(BaseShoes),typeof(Bag)
+        };
+
         public virtual bool CheckFoodPreference(Item f)
         {
+            if (FavoriteFood == FoodType.None)
+            {
+                return false;
+            }
+
             if (CheckFoodPreference(f, FoodType.Eggs, m_Eggs))
             {
                 return true;
@@ -2993,9 +3002,26 @@ namespace Server.Mobiles
                 return true;
             }
 
+            if (CheckFoodPreference(f, FoodType.Gold, m_Gold))
+            {
+                return true;
+            }
+
             if (CheckFoodPreference(f, FoodType.BlackrockStew, m_BlackrockStew))
             {
                 return true;
+            }
+
+            if (CheckFoodPreference(f, FoodType.Leather, m_Leather))
+            {
+                if (((BaseArmor)f).MaterialType == ArmorMaterialType.Leather || ((BaseArmor)f).MaterialType == ArmorMaterialType.Studded)
+                {
+                    return true;
+                }
+                else
+                {
+                    return true;
+                }
             }
 
             return false;
@@ -3008,12 +3034,11 @@ namespace Server.Mobiles
                 return false;
             }
 
-            Type fedType = fed.GetType();
             bool contains = false;
 
             for (int i = 0; !contains && i < types.Length; ++i)
             {
-                contains = (fedType == types[i]);
+                contains = fed.GetType() == types[i];
             }
 
             return contains;
@@ -3021,12 +3046,7 @@ namespace Server.Mobiles
 
         public virtual bool CheckFeed(Mobile from, Item dropped)
         {
-            if (!IsDeadPet && Controlled && (ControlMaster == from || IsPetFriend(from))) /*&&
-                (dropped is Food || dropped is Gold || dropped is CookableFood || dropped is Head || dropped is LeftArm ||
-                 dropped is LeftLeg || dropped is Torso || dropped is RightArm || dropped is RightLeg || dropped is IronIngot ||
-                 dropped is DullCopperIngot || dropped is ShadowIronIngot || dropped is CopperIngot || dropped is BronzeIngot ||
-                 dropped is GoldIngot || dropped is AgapiteIngot || dropped is VeriteIngot || dropped is ValoriteIngot))*/
-            // Why do we need all this crap, when its checked in CheckFootPreference?
+            if (!IsDeadPet && Controlled && (ControlMaster == from || IsPetFriend(from)))
             {
                 Item f = dropped;
 
@@ -3119,6 +3139,10 @@ namespace Server.Mobiles
                         dropped.Delete();
                         return true;
                     }
+                }
+                else
+                {
+                    PrivateOverheadMessage(MessageType.Regular, 0x3B2, 1043257, from.NetState); // The animal shies away.
                 }
             }
 

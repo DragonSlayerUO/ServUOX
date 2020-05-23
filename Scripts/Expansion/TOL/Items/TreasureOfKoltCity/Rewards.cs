@@ -1,8 +1,5 @@
-using System;
-using Server;
-using Server.Mobiles;
 using Server.Gumps;
-using Server.Network;
+using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -78,7 +75,7 @@ namespace Server.Items
             public override void Deserialize(GenericReader reader)
             {
                 base.Deserialize(reader);
-                int version = reader.ReadInt();
+                _ = reader.ReadInt();
             }
         }
 
@@ -98,7 +95,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             _Clicker = reader.ReadMobile();
         }
@@ -137,7 +134,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -188,7 +185,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -216,7 +213,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -226,6 +223,7 @@ namespace Server.Items
 
         public override TextDefinition Title => _Title;
 
+        [Constructible]
         public TreasuresOfKotlRewardDeed(int localization)
         {
             _Title = localization;
@@ -247,7 +245,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             _Title = TextDefinition.Deserialize(reader);
         }
@@ -317,14 +315,14 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
     public class BootsOfEscaping : ThighBoots
     {
         public override int LabelNumber => 1155607;  // Boots of Escaping
-
+        [Constructible]
         public BootsOfEscaping()
         {
             Attributes.BonusDex = 4;
@@ -345,14 +343,14 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
     public class TalonsOfEscaping : LeatherTalons
     {
         public override int LabelNumber => 1155682;  // Talons of Escaping
-
+        [Constructible]
         public TalonsOfEscaping()
         {
             Attributes.BonusDex = 4;
@@ -373,7 +371,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
         }
     }
 
@@ -390,7 +388,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public EodonTribe Tribe
         {
-            get { return _Tribe; }
+            get => _Tribe;
             set
             {
                 _Tribe = value;
@@ -398,7 +396,9 @@ namespace Server.Items
                 int id = GetTribeID(_Tribe);
 
                 if (ItemID != id)
+                {
                     ItemID = id;
+                }
 
                 InvalidateProperties();
             }
@@ -435,9 +435,13 @@ namespace Server.Items
             }
 
             if (id == WestID)
+            {
                 ItemID = NorthID;
+            }
             else
+            {
                 ItemID = WestID;
+            }
         }
 
         public TribalBanner(Serial serial)
@@ -456,7 +460,7 @@ namespace Server.Items
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            int version = reader.ReadInt();
+            _ = reader.ReadInt();
 
             _Tribe = (EodonTribe)reader.ReadInt();
         }

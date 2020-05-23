@@ -1,14 +1,11 @@
-using System;
-using Server.Mobiles;
-
 namespace Server.Items
 {
     public class MasterChefsApron : FullApron
     {
-        private int _Bonus;
+        private int IBonus;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Bonus { get { return _Bonus; } set { _Bonus = value; InvalidateProperties(); } }
+        public int Bonus { get => IBonus; set { IBonus = value; InvalidateProperties(); } }
 
         public override int LabelNumber => 1157228;  // Master Chef's Apron
 
@@ -17,15 +14,17 @@ namespace Server.Items
         {
             Hue = 1990;
 
-            while (_Bonus == 0)
-                _Bonus = BaseTalisman.GetRandomExceptional();
+            while (IBonus == 0)
+            {
+                IBonus = Utility.RandomMinMax(20, 30);
+            }
         }
 
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
 
-            list.Add(1072395, "#{0}\t{1}", AosSkillBonuses.GetLabel(SkillName.Cooking), _Bonus); // ~1_NAME~ Exceptional Bonus: ~2_val~%
+            list.Add(1072395, "#{0}\t{1}", AosSkillBonuses.GetLabel(SkillName.Cooking), IBonus); // ~1_NAME~ Exceptional Bonus: ~2_val~%
         }
 
         public MasterChefsApron(Serial serial)
@@ -36,19 +35,15 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write(0); // version
-
-            writer.Write(_Bonus);
+            writer.Write(0);
+            writer.Write(IBonus);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
-            int version = reader.ReadInt();
-
-            _Bonus = reader.ReadInt();
+            _ = reader.ReadInt();
+            IBonus = reader.ReadInt();
         }
     }
 }
