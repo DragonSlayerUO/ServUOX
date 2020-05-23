@@ -91,6 +91,11 @@
     <Compile Include="Expansion\EJ\Items\Decorations\Statues\WindrunnerStatue.cs" />
     <Compile Include="Expansion\EJ\Items\Decorations\WallArt\PirateWallMap.cs" />
     <Compile Include="Expansion\EJ\Items\Decorations\WallArt\DecorativeWoodCarving.cs" />
+    <Compile Include="Expansion\EJ\Items\Deeds\TreeStumpDeed.cs" />
+    <Compile Include="Expansion\EJ\Items\Deeds\SheepStatueDeed.cs" />
+    <Compile Include="Expansion\EJ\Items\Deeds\RepairBenchDeed.cs" />
+    <Compile Include="Expansion\EJ\Items\Deeds\MiningCartDeed.cs" />
+    <Compile Include="Expansion\EJ\Items\Deeds\EnchantedGraniteCartAddonDeed.cs" />
     <Compile Include="Expansion\EJ\Items\Deeds\WaterWheelDeed.cs" />
     <Compile Include="Expansion\EJ\Items\Deeds\DragonCannonDeed.cs" />
     <Compile Include="Expansion\EJ\Items\Deeds\QuartermasterRewardDeed.cs" />
@@ -159,11 +164,12 @@
     <Compile Include="Expansion\EJ\Items\Provisions\AncientFish\TreeCoral.cs" />
     <Compile Include="Expansion\EJ\Items\Provisions\AncientFish\YellowBoxfish.cs" />
     <Compile Include="Expansion\EJ\Items\Resource\SaltedSerpentSteaks.cs" />
+    <Compile Include="Expansion\EJ\Items\Spwners\ChestSpawner.cs" />
     <Compile Include="Expansion\EJ\Items\Teleporters\TeleporterComponent.cs" />
     <Compile Include="Expansion\EJ\Mechanics\Gumps\KhaldunRewardGump.cs" />
     <Compile Include="Expansion\EJ\Items\Decorations\Decorative Dungeon Set\DecorativeDungeonSet.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\DecorativeStableFencing.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\DecorativeStableSet.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\DecorativeStableFencing.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\DecorativeStableSet.cs" />
     <Compile Include="Expansion\EJ\Items\Deeds\MetalLadderDeed2.cs" />
     <Compile Include="Expansion\EJ\Items\Provisions\KhaldunRareRelics.cs" />
     <Compile Include="Expansion\EJ\Items\Deeds\LargeWorldTreeRugAddonDeed.cs" />
@@ -210,6 +216,7 @@
     <Compile Include="Expansion\ML\Items\CommunityCollections\OuterTorsoRewards.cs" />
     <Content Include="Expansion\ML\Missing Events.txt" />
     <Compile Include="Expansion\SA\Items\Clothing\GargishEpaulette.cs" />
+    <Compile Include="Expansion\SE\Items\Addons\SquareGozaMatAddon .cs" />
     <Compile Include="Expansion\SE\Items\Equipment\ClohingOuter.cs" />
     <Compile Include="Expansion\ML\Items\Equipment\MonkRobe.cs" />
     <Compile Include="Expansion\ML\Items\Furinture\MLChairs.cs" />
@@ -1259,7 +1266,7 @@
     </Compile>
     <Compile Include="Expansion\HS\Items\Gothic Theme Pack\AdvancedTrainingDummy.cs" />
     <Compile Include="Expansion\HS\Items\Craft Addons\EnchantedSculptingTool.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\EnchantedGraniteCart.cs" />
+    <Compile Include="Expansion\EJ\Items\Addons\EnchantedGraniteCart.cs" />
     <Compile Include="Holidays\Holiday Items\JollyHolidayTree.cs" />
     <Compile Include="Expansion\EJ\Items\Addons\SkullTiledFloorAddon.cs" />
     <Compile Include="Expansion\HS\Items\Kings Collection Theme Pack\AlchemistsBookshelf.cs" />
@@ -1300,7 +1307,7 @@
     <Compile Include="Expansion\SA\Items\Weapons\TheRedeemer.cs" />
     <Compile Include="Holidays\Holiday Items\2019HolidayGiftToken.cs" />
     <Compile Include="Expansion\ML\Items\9th Anniversary Gifts\AnniversaryPromotionalToken.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\CommissionPlayerVendorDeed.cs" />
+    <Compile Include="Expansion\EJ\Items\Deeds\CommissionPlayerVendorDeed.cs" />
     <Compile Include="Expansion\HS\Items\Consumables\FearEssence.cs" />
     <Compile Include="Expansion\HS\Items\Consumables\ShatterPotion.cs" />
     <Compile Include="Customs\Items\BoxOfCrystalItems.cs" />
@@ -1317,7 +1324,7 @@
     <Compile Include="Expansion\UO\Items\Addons\WashBasin.cs" />
     <Compile Include="Expansion\SA\Items\Furniture\WoodStove.cs" />
     <Compile Include="Expansion\TOL\Items\TinkerBench.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\RepairBench.cs" />
+    <Compile Include="Expansion\EJ\Items\Addons\RepairBench.cs" />
     <Compile Include="Expansion\EJ\Items\Addons\WaterWheelAddon.cs" />
     <Compile Include="Expansion\SA\Items\12th Anniversary Gifts\CodexOfVirtue.cs" />
     <Compile Include="Expansion\ML\Items\9th Anniversary Gifts\Heritage Collection\BuffetTable.cs" />
@@ -1327,7 +1334,7 @@
     <Compile Include="Expansion\HS\Items\Consumables\EmbroideryTool.cs" />
     <Compile Include="Expansion\TOL\Items\Damageable\Beacon.cs" />
     <Compile Include="Expansion\TOL\Items\Damageable\DamageableItem.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\AncientWeapons.cs" />
+    <Compile Include="Expansion\EJ\Items\Artifacts\Decorative\AncientWeapons.cs" />
     <Compile Include="Expansion\EJ\Items\Artisan Festival\LanternBrokenShield.cs" />
     <Compile Include="Expansion\EJ\Items\Artisan Festival\LanternHand.cs" />
     <Compile Include="Expansion\EJ\Items\Artisan Festival\LanternHeart.cs" />
@@ -1345,15 +1352,15 @@
     <Compile Include="Expansion\EJ\Items\Artisan Festival\SculptureWoodEven.cs" />
     <Compile Include="Expansion\EJ\Items\Artisan Festival\SculptureWoodScept.cs" />
     <Compile Include="Expansion\UO\Items\Decorations\DecorativeHourglass.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\ChickenStatue.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\CowPie.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\CowStatue.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\Feedbag.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\HorseStatue.cs" />
-    <Compile Include="Expansion\EJ\Items\Decorations\DecorativeStableSet\MetalTub.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\DoveCage.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\ChickenStatue.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\CowPie.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\CowStatue.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\Feedbag.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\HorseStatue.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\Decorative Stable Set\MetalTub.cs" />
+    <Compile Include="Expansion\EJ\Items\Provisions\DoveCage.cs" />
     <Compile Include="Expansion\UO\Items\Decorations\Furinture\Countertop.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\ButcherBlock.cs" />
+    <Compile Include="Expansion\EJ\Items\Decorations\ButcherBlock.cs" />
     <Compile Include="Holidays\Holiday Items\CupidStatue.cs" />
     <Compile Include="Holidays\Holiday Items\ValentineChocolate.cs" />
     <Compile Include="Holidays\Holiday Items\HeartShapedBox.cs" />
@@ -1366,23 +1373,23 @@
     <Compile Include="Holidays\Holiday Items\FlamingScarecrow.cs" />
     <Compile Include="Expansion\SA\Items\12th Anniversary Gifts\SilverSaplingReplica.cs" />
     <Compile Include="Holidays\Holiday Items\ValentineBear.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\MagesHoodOfScholarlyInsight.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\CowlOfTheMaceAndShield.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\MagesHood.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\ElegantCollarOfFortune.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\CrimsonDaggerBelt.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\CrimsonSwordBelt.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\CrimsonMaceBelt.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\ElegantCollar.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\AssassinsCowl.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\DaggerBelt.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\MaceBelt.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\SwordBelt.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\MagesHoodOfScholarlyInsight.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\CowlOfTheMaceAndShield.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\MagesHood.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Armor\ElegantCollarOfFortune.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\CrimsonDaggerBelt.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\CrimsonSwordBelt.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\CrimsonMaceBelt.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Armor\ElegantCollar.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\AssassinsCowl.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\DaggerBelt.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\MaceBelt.cs" />
+    <Compile Include="Expansion\EJ\Items\Equipment\Clothing\SwordBelt.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\SkullGnarledStaff.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\SkullLongsword.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\CircuitTrapTrainingKit.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\CylinderTrapTrainingKit.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\SliderTrapTrainingKit.cs" />
+    <Compile Include="Expansion\EJ\Items\Provisions\CircuitTrapTrainingKit.cs" />
+    <Compile Include="Expansion\EJ\Items\Provisions\CylinderTrapTrainingKit.cs" />
+    <Compile Include="Expansion\EJ\Items\Provisions\SliderTrapTrainingKit.cs" />
     <Compile Include="Expansion\LBR\Items\StrangeContraption.cs" />
     <Compile Include="Expansion\SA\ItemSockets\SearingWeapon.cs" />
     <Compile Include="Expansion\ML\Items\Quest\RewardBooks.cs" />
@@ -1425,7 +1432,7 @@
     <Compile Include="Expansion\UO\Items\Addons\BlueMarbleFireplace.cs" />
     <Compile Include="Expansion\HS\Items\PicnicBlanket.cs" />
     <Compile Include="Expansion\HS\Items\RoastingPigOnASpit.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\SheepStatue.cs" />
+    <Compile Include="Expansion\EJ\Items\Addons\SheepStatue.cs" />
     <Compile Include="Expansion\SA\Items\Weapons\Harpsichord.cs" />
     <Compile Include="Customs\Items\VendorMallAddon.cs" />
     <Compile Include="Expansion\SA\Items\Furniture\WeatheredBronzeFairySculpture.cs" />
@@ -1533,7 +1540,7 @@
     <Compile Include="Holidays\Holiday Items\StaghornFern.cs" />
     <Compile Include="Holidays\Holiday Items\CustomizableSquaredDoorMat.cs" />
     <Compile Include="Holidays\Holiday Items\Wreath.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\FirstAidBelt.cs" />
+    <Compile Include="Expansion\EJ\Items\Containers\FirstAidBelt.cs" />
     <Compile Include="Holidays\Holiday Items\Suits\DragonWolfCostume.cs" />
     <Compile Include="Holidays\Holiday Items\Suits\SabertoothedTigerCostume.cs" />
     <Compile Include="Expansion\SA\Items\World\Grinder.cs" />
@@ -1836,7 +1843,7 @@
     <Compile Include="Expansion\TOL\Items\Equipment\DragonTurtleEgg.cs" />
     <Compile Include="Expansion\HS\Items\VetRewards\EtherealRetouchingTool.cs" />
     <Compile Include="Expansion\SA\Items\World\GoblinFloorTrap.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\HouseCraftables.cs" />
+    <Compile Include="Expansion\EJ\Items\Provisions\HouseCraftables.cs" />
     <Compile Include="Expansion\SA\Items\World\Incubator.cs" />
     <Compile Include="Expansion\SA\Items\World\ScaleCollar.cs" />
     <Compile Include="Expansion\TOL\Items\SeedBox\SeedBox.cs" />
@@ -2912,7 +2919,7 @@
     <Compile Include="Expansion\TOL\Mobiles\Publish 97\FrostDrake.cs" />
     <Compile Include="Expansion\EJ\Mobiles\Mounts\Lasher.cs" />
     <Compile Include="Expansion\SA\Mobiles\Publish 62.2\GiantTurkey.cs" />
-    <Compile Include="Expansion\EJ\XxUnsortedxX\Viscera.cs" />
+    <Compile Include="Expansion\EJ\Mobiles\Monsters\Viscera.cs" />
     <Compile Include="Expansion\EJ\Mobiles\Mounts\Windrunner.cs" />
     <Compile Include="Expansion\SA\Underworld\StygianDrake.cs" />
     <Compile Include="Expansion\TOL\Mobiles\Publish 97\CrimsonDrake.cs" />
@@ -7633,7 +7640,7 @@
     <Compile Include="Administration\World\Regions\HouseRaffleRegion.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\EJ\XxUnsortedxX\HouseRaffleStone.cs">
+    <Compile Include="Expansion\EJ\Items\Provisions\HouseRaffleStone.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\AOS\Items\Promotions\Early settlers Rewards\MiniHouses.cs">
@@ -8062,7 +8069,7 @@
     <Compile Include="Expansion\UO\Items\Addons\HangingSkeleton.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\EJ\XxUnsortedxX\MiningCart.cs">
+    <Compile Include="Expansion\EJ\Items\Addons\MiningCart.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Furniture\MinotaurStatue.cs">
@@ -8074,7 +8081,7 @@
     <Compile Include="Expansion\ML\Items\StoneAnkh.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Expansion\EJ\XxUnsortedxX\TreeStump.cs">
+    <Compile Include="Expansion\EJ\Items\Addons\TreeStump.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Expansion\SA\Items\Furniture\WallBanner.cs">

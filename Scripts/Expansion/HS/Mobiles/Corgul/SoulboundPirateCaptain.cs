@@ -1,4 +1,4 @@
-﻿using Server;
+using Server;
 using System;
 using Server.Items;
 
@@ -51,10 +51,19 @@ namespace Server.Mobiles
 
         }
 
-
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 3);
+        }
+
+        public override bool OnBeforeDeath()
+        {
+            if (Region.IsPartOf<Server.Regions.CorgulRegion>())
+            {
+                CorgulTheSoulBinder.CheckDropSOT(this);
+            }
+
+            return base.OnBeforeDeath();
         }
 
         public SoulboundPirateCaptain(Serial serial)

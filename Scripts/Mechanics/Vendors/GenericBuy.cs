@@ -1,6 +1,6 @@
+using Server.Items;
 using System;
 using System.Collections.Generic;
-using Server.Items;
 using System.Linq;
 
 namespace Server.Mobiles
@@ -8,18 +8,10 @@ namespace Server.Mobiles
     public class GenericBuyInfo : IBuyItemInfo
     {
         public static Dictionary<Type, int> BuyPrices = new Dictionary<Type, int>();
-        private Type m_Type;
-        private string m_Name;
         private int m_Price;
         private int m_MaxAmount, m_Amount;
-        private int m_ItemID;
-        private int m_Hue;
-        private object[] m_Args;
         private IEntity m_DisplayEntity;
-        private int m_PriceScalar;
         private bool m_Stackable;
-        private int m_TotalBought;
-        private int m_TotalSold;
 
         public GenericBuyInfo(Type type, int price, int amount, int itemID, int hue, bool stacks = false)
             : this(null, type, price, amount, itemID, hue, null, stacks)
@@ -39,13 +31,15 @@ namespace Server.Mobiles
         public GenericBuyInfo(string name, Type type, int price, int amount, int itemID, int hue, object[] args, bool stacks = false)
         {
             if (type != null)
+            {
                 BuyPrices[type] = price;
+            }
 
-            m_Type = type;
+            Type = type;
             m_Price = price;
-            m_ItemID = itemID;
-            m_Hue = hue;
-            m_Args = args;
+            ItemID = itemID;
+            Hue = hue;
+            Args = args;
             m_Stackable = stacks;
 
             if (type != null && EconomyItem)
@@ -63,64 +57,34 @@ namespace Server.Mobiles
             }
 
             if (name == null)
-                m_Name = itemID < 0x4000 ? (1020000 + itemID).ToString() : (1078872 + itemID).ToString();
+            {
+                Name = itemID < 0x4000 ? (1020000 + itemID).ToString() : (1078872 + itemID).ToString();
+            }
             else
-                m_Name = name;
+            {
+                Name = name;
+            }
         }
 
         public virtual int ControlSlots => 0;
         public virtual bool CanCacheDisplay => false;//return ( m_Args == null || m_Args.Length == 0 ); } 
-        public Type Type
-        {
-            get
-            {
-                return m_Type;
-            }
-            set
-            {
-                m_Type = value;
-            }
-        }
-        public string Name
-        {
-            get
-            {
-                return m_Name;
-            }
-            set
-            {
-                m_Name = value;
-            }
-        }
-        public int DefaultPrice => m_PriceScalar;
+        public Type Type { get; set; }
+        public string Name { get; set; }
+        public int DefaultPrice { get; private set; }
         public int PriceScalar
         {
-            get
-            {
-                return m_PriceScalar;
-            }
-            set
-            {
-                m_PriceScalar = value;
-            }
+            get => DefaultPrice;
+            set => DefaultPrice = value;
         }
 
-        public int TotalBought
-        {
-            get { return m_TotalBought; }
-            set { m_TotalBought = value; }
-        }
+        public int TotalBought { get; set; }
 
-        public int TotalSold
-        {
-            get { return m_TotalSold; }
-            set { m_TotalSold = value; }
-        }
+        public int TotalSold { get; set; }
 
         public virtual bool Stackable
         {
-            get { return m_Stackable; }
-            set { m_Stackable = value; }
+            get => m_Stackable;
+            set => m_Stackable = value;
         }
 
         public bool EconomyItem => BaseVendor.UseVendorEconomy && m_Stackable;
@@ -133,29 +97,31 @@ namespace Server.Mobiles
 
                 if (EconomyItem)
                 {
-                    if (m_TotalBought >= BaseVendor.BuyItemChange)
+                    if (TotalBought >= BaseVendor.BuyItemChange)
                     {
-                        ecoInc += m_TotalBought / BaseVendor.BuyItemChange;
+                        ecoInc += TotalBought / BaseVendor.BuyItemChange;
                     }
 
-                    if (m_TotalSold >= BaseVendor.SellItemChange)
+                    if (TotalSold >= BaseVendor.SellItemChange)
                     {
-                        ecoInc -= m_TotalSold / BaseVendor.SellItemChange;
+                        ecoInc -= TotalSold / BaseVendor.SellItemChange;
                     }
                 }
 
-                if (m_PriceScalar != 0)
+                if (DefaultPrice != 0)
                 {
                     if (m_Price > 5000000)
                     {
                         long price = m_Price;
 
-                        price *= m_PriceScalar;
+                        price *= DefaultPrice;
                         price += 50;
                         price /= 100;
 
                         if (price > int.MaxValue)
+                        {
                             price = int.MaxValue;
+                        }
 
                         if (EconomyItem && (int)price + ecoInc < 2)
                         {
@@ -165,12 +131,12 @@ namespace Server.Mobiles
                         return (int)price + ecoInc;
                     }
 
-                    if (EconomyItem && (((m_Price * m_PriceScalar) + 50) / 100) + ecoInc < 2)
+                    if (EconomyItem && (((m_Price * DefaultPrice) + 50) / 100) + ecoInc < 2)
                     {
                         return 2;
                     }
 
-                    return (((m_Price * m_PriceScalar) + 50) / 100) + ecoInc;
+                    return (((m_Price * DefaultPrice) + 50) / 100) + ecoInc;
                 }
 
                 if (EconomyItem && m_Price + ecoInc < 2)
@@ -180,39 +146,13 @@ namespace Server.Mobiles
 
                 return m_Price + ecoInc;
             }
-            set
-            {
-                m_Price = value;
-            }
+            set => m_Price = value;
         }
-        public int ItemID
-        {
-            get
-            {
-                return m_ItemID;
-            }
-            set
-            {
-                m_ItemID = value;
-            }
-        }
-        public int Hue
-        {
-            get
-            {
-                return m_Hue;
-            }
-            set
-            {
-                m_Hue = value;
-            }
-        }
+        public int ItemID { get; set; }
+        public int Hue { get; set; }
         public int Amount
         {
-            get
-            {
-                return m_Amount;
-            }
+            get => m_Amount;
             set
             {
                 // Amount is ALWAYS 500
@@ -223,7 +163,9 @@ namespace Server.Mobiles
                 else
                 {
                     if (value < 0)
+                    {
                         value = 0;
+                    }
 
                     m_Amount = value;
                 }
@@ -241,26 +183,15 @@ namespace Server.Mobiles
 
                 return m_MaxAmount;
             }
-            set
-            {
-                m_MaxAmount = value;
-            }
+            set => m_MaxAmount = value;
         }
-        public object[] Args
-        {
-            get
-            {
-                return m_Args;
-            }
-            set
-            {
-                m_Args = value;
-            }
-        }
+        public object[] Args { get; set; }
         public void DeleteDisplayEntity()
         {
             if (m_DisplayEntity == null)
+            {
                 return;
+            }
 
             m_DisplayEntity.Delete();
             m_DisplayEntity = null;
@@ -269,17 +200,23 @@ namespace Server.Mobiles
         public IEntity GetDisplayEntity()
         {
             if (m_DisplayEntity != null && !IsDeleted(m_DisplayEntity))
+            {
                 return m_DisplayEntity;
+            }
 
             bool canCache = CanCacheDisplay;
 
             if (canCache)
-                m_DisplayEntity = DisplayCache.Cache.Lookup(m_Type);
+            {
+                m_DisplayEntity = DisplayCache.Cache.Lookup(Type);
+            }
 
             if (m_DisplayEntity == null || IsDeleted(m_DisplayEntity))
+            {
                 m_DisplayEntity = GetEntity();
+            }
 
-            DisplayCache.Cache.Store(m_Type, m_DisplayEntity, canCache);
+            DisplayCache.Cache.Store(Type, m_DisplayEntity, canCache);
 
             return m_DisplayEntity;
         }
@@ -287,17 +224,19 @@ namespace Server.Mobiles
         //get a new instance of an object (we just bought it)
         public virtual IEntity GetEntity()
         {
-            if (m_Args == null || m_Args.Length == 0)
-                return (IEntity)Activator.CreateInstance(m_Type);
+            if (Args == null || Args.Length == 0)
+            {
+                return (IEntity)Activator.CreateInstance(Type);
+            }
 
-            return (IEntity)Activator.CreateInstance(m_Type, m_Args);
+            return (IEntity)Activator.CreateInstance(Type, Args);
             //return (Item)Activator.CreateInstance( m_Type );
         }
 
         //Attempt to restock with item, (return true if restock sucessful)
         public virtual bool Restock(Item item, int amount)
         {
-            if (item == null || item.GetType() != m_Type)
+            if (item == null || item.GetType() != Type)
             {
                 return false;
             }
@@ -312,7 +251,9 @@ namespace Server.Mobiles
                 m_MaxAmount *= 2;
 
                 if (m_MaxAmount >= 999)
+                {
                     m_MaxAmount = 999;
+                }
             }
             else
             {
@@ -324,12 +265,18 @@ namespace Server.Mobiles
                 int halfQuantity = m_MaxAmount;
 
                 if (halfQuantity >= 999)
+                {
                     halfQuantity = 640;
+                }
                 else if (halfQuantity > 20)
+                {
                     halfQuantity /= 2;
+                }
 
                 if (m_Amount >= halfQuantity)
+                {
                     m_MaxAmount = halfQuantity;
+                }
             }
 
             m_Amount = m_MaxAmount;
@@ -338,9 +285,13 @@ namespace Server.Mobiles
         private bool IsDeleted(IEntity obj)
         {
             if (obj is Item)
+            {
                 return ((Item)obj).Deleted;
+            }
             else if (obj is Mobile)
+            {
                 return ((Mobile)obj).Deleted;
+            }
 
             return false;
         }
@@ -351,7 +302,7 @@ namespace Server.Mobiles
             {
                 foreach (var bii in vendor.GetBuyInfo().OfType<GenericBuyInfo>())
                 {
-                    if (bii.Type == m_Type || (m_Type == typeof(UncutCloth) && bii.Type == typeof(Cloth)) || (m_Type == typeof(Cloth) && bii.Type == typeof(UncutCloth)))
+                    if (bii.Type == Type || (Type == typeof(UncutCloth) && bii.Type == typeof(Cloth)) || (Type == typeof(Cloth) && bii.Type == typeof(UncutCloth)))
                     {
                         bii.TotalBought += amount;
                     }
@@ -367,7 +318,7 @@ namespace Server.Mobiles
             {
                 foreach (var bii in vendor.GetBuyInfo().OfType<GenericBuyInfo>())
                 {
-                    if (bii.Type == m_Type || (m_Type == typeof(UncutCloth) && bii.Type == typeof(Cloth)) || (m_Type == typeof(Cloth) && bii.Type == typeof(UncutCloth)))
+                    if (bii.Type == Type || (Type == typeof(UncutCloth) && bii.Type == typeof(Cloth)) || (Type == typeof(Cloth) && bii.Type == typeof(UncutCloth)))
                     {
                         bii.TotalSold += amount;
                     }
@@ -388,17 +339,15 @@ namespace Server.Mobiles
         private class DisplayCache : Container
         {
             private static DisplayCache m_Cache;
-            private Dictionary<Type, IEntity> m_Table;
-            private List<Mobile> m_Mobiles;
 
-            public List<Mobile> Mobiles => m_Mobiles;
-            public Dictionary<Type, IEntity> Table => m_Table;
+            public List<Mobile> Mobiles { get; private set; }
+            public Dictionary<Type, IEntity> Table { get; private set; }
 
             public DisplayCache()
                 : base(0)
             {
-                m_Table = new Dictionary<Type, IEntity>();
-                m_Mobiles = new List<Mobile>();
+                Table = new Dictionary<Type, IEntity>();
+                Mobiles = new List<Mobile>();
             }
 
             public DisplayCache(Serial serial)
@@ -411,79 +360,137 @@ namespace Server.Mobiles
                 get
                 {
                     if (m_Cache == null || m_Cache.Deleted)
+                    {
                         m_Cache = new DisplayCache();
+                    }
 
                     return m_Cache;
                 }
             }
             public IEntity Lookup(Type key)
             {
-                IEntity e = null;
-                m_Table.TryGetValue(key, out e);
+                Table.TryGetValue(key, out IEntity e);
                 return e;
             }
 
             public void Store(Type key, IEntity obj, bool cache)
             {
                 if (cache)
-                    m_Table[key] = obj;
+                {
+                    Table[key] = obj;
+                }
 
                 if (obj is Item)
+                {
                     AddItem((Item)obj);
+                }
                 else if (obj is Mobile)
-                    m_Mobiles.Add((Mobile)obj);
+                {
+                    Mobiles.Add((Mobile)obj);
+                }
             }
 
             public override void OnAfterDelete()
             {
                 base.OnAfterDelete();
 
-                for (int i = 0; i < m_Mobiles.Count; ++i)
-                    m_Mobiles[i].Delete();
+                for (int i = 0; i < Mobiles.Count; ++i)
+                {
+                    Mobiles[i].Delete();
+                }
 
-                m_Mobiles.Clear();
+                Mobiles.Clear();
 
                 for (int i = Items.Count - 1; i >= 0; --i)
+                {
                     if (i < Items.Count)
+                    {
                         Items[i].Delete();
+                    }
+                }
 
                 if (m_Cache == this)
+                {
                     m_Cache = null;
+                }
             }
 
             public override void Serialize(GenericWriter writer)
             {
                 base.Serialize(writer);
 
-                writer.Write(0); // version
+                writer.Write(0);
 
-                writer.Write(m_Mobiles);
+                writer.Write(Mobiles);
             }
 
             public override void Deserialize(GenericReader reader)
             {
                 base.Deserialize(reader);
+                _ = reader.ReadInt();
 
-                int version = reader.ReadInt();
+                Mobiles = reader.ReadStrongMobileList();
 
-                m_Mobiles = reader.ReadStrongMobileList();
+                for (int i = 0; i < Mobiles.Count; ++i)
+                {
+                    Mobiles[i].Delete();
+                }
 
-                for (int i = 0; i < m_Mobiles.Count; ++i)
-                    m_Mobiles[i].Delete();
-
-                m_Mobiles.Clear();
+                Mobiles.Clear();
 
                 for (int i = Items.Count - 1; i >= 0; --i)
+                {
                     if (i < Items.Count)
+                    {
                         Items[i].Delete();
+                    }
+                }
 
                 if (m_Cache == null)
+                {
                     m_Cache = this;
+                }
                 else
+                {
                     Delete();
+                }
 
-                m_Table = new Dictionary<Type, IEntity>();
+                Table = new Dictionary<Type, IEntity>();
             }
+        }
+    }
+    public class GenericBuyInfo<T> : GenericBuyInfo
+    {
+        public Action<T, GenericBuyInfo> CreateCallback { get; set; }
+
+        public GenericBuyInfo(int price, int amount, int itemID, int hue, bool stacks = false, Action<T, GenericBuyInfo> callback = null)
+            : this(null, price, amount, itemID, hue, null, stacks, callback)
+        {
+        }
+
+        public GenericBuyInfo(string name, int price, int amount, int itemID, int hue, bool stacks = false, Action<T, GenericBuyInfo> callback = null)
+            : this(name, price, amount, itemID, hue, null, stacks, callback)
+        {
+        }
+
+        public GenericBuyInfo(int price, int amount, int itemID, int hue, object[] args, bool stacks = false, Action<T, GenericBuyInfo> callback = null)
+            : this(null, price, amount, itemID, hue, args, stacks, callback)
+        {
+        }
+
+        public GenericBuyInfo(string name, int price, int amount, int itemID, int hue, object[] args, bool stacks = false, Action<T, GenericBuyInfo> callback = null)
+            : base(name, typeof(T), price, amount, itemID, hue, args, stacks)
+        {
+            CreateCallback = callback;
+        }
+
+        public override IEntity GetEntity()
+        {
+            var entity = base.GetEntity();
+
+            CreateCallback?.Invoke((T)entity, this);
+
+            return entity;
         }
     }
 }

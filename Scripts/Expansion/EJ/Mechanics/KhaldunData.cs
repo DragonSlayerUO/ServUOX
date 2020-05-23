@@ -35,7 +35,7 @@ namespace Server.Engines.Points
         {
             var bc = victim as BaseCreature;
 
-            if (!InSeason || bc == null || bc.Controlled || bc.Summoned || !damager.Alive || damager.Deleted || !bc.IsChampionSpawn)
+            if (!InSeason || bc == null || bc.Controlled || bc.Summoned || !damager.Alive || damager.Deleted || bc.IsChampionSpawn)
             {
                 return;
             }
@@ -52,7 +52,7 @@ namespace Server.Engines.Points
                 int fame = bc.Fame / 4;
                 int luck = Math.Max(0, ((PlayerMobile)damager).RealLuck);
 
-                DungeonPoints[damager] += (int)(fame * (1 + Math.Sqrt(luck) / 100)) * PotionOfGloriousFortune.GetBonus(damager);
+                DungeonPoints[damager] += (int)Math.Max(0, (bc.Fame * (1 + Math.Sqrt(luck) / 100)) * PotionOfGloriousFortune.GetBonus(damager));
 
                 int x = DungeonPoints[damager];
                 const double A = 0.000863316841;

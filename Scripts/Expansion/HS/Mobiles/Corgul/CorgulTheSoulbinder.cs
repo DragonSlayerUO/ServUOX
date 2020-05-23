@@ -1,9 +1,9 @@
-using Server;
-using System;
-using System.Collections.Generic;
+using Server.Engines.CannedEvil;
 using Server.Items;
 using Server.Misc;
 using Server.Regions;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Mobiles
@@ -34,7 +34,7 @@ namespace Server.Mobiles
         public override Type[] DecorativeList => new Type[] { typeof(EnchantedBladeDeed), typeof(EnchantedVortexDeed) };
 
         public override bool NoGoodies => true;
-        public override bool CanGivePowerscrolls => false;
+        public override bool RestrictedToFelucca => false;
 
         private readonly int _SpawnPerLoc = 15;
 
@@ -101,11 +101,18 @@ namespace Server.Mobiles
             m_NextReturn = DateTime.UtcNow + TimeSpan.FromSeconds(Utility.RandomMinMax(120, 180));
 
             if (IsSoulboundEnemies)
+            {
                 IsSoulbound = true;
+            }
         }
 
         public double SharedChance => Map != null && Map.Rules == MapRules.FeluccaRules ? .12 : .08;
         public double DecorativeChance => Map != null && Map.Rules == MapRules.FeluccaRules ? .40 : .25;
+
+        public override Item CreateRandomPowerScroll()
+        {
+            return ChampionSpawn.CreateRandomSoT(Map != null && Map.Rules == MapRules.FeluccaRules);
+        }
 
         public override bool OnBeforeDeath()
         {
@@ -118,18 +125,28 @@ namespace Server.Mobiles
                 rights.Sort();
 
                 if (rights.Count >= 5)
+                {
                     winner = rights[Utility.Random(5)].m_Mobile;
+                }
                 else if (rights.Count > 1)
+                {
                     winner = rights[Utility.Random(rights.Count)].m_Mobile;
+                }
                 else
+                {
                     winner = rights[0].m_Mobile;
+                }
             }
 
             if (winner != null)
+            {
                 GiveArtifact(winner, CreateArtifact(UniqueList));
+            }
 
             if (IsSoulboundEnemies)
+            {
                 EtherealSandShower.Do(Location, Map, 50, 100, 500);
+            }
 
             return base.OnBeforeDeath();
         }
@@ -139,9 +156,14 @@ namespace Server.Mobiles
             double random = Utility.RandomDouble();
 
             if (SharedChance >= random)
+            {
                 return CreateArtifact(SharedList);
+            }
             else if (DecorativeChance >= random)
+            {
                 return CreateArtifact(DecorativeList);
+            }
+
             return null;
         }
 
@@ -176,7 +198,10 @@ namespace Server.Mobiles
             if (Map == null || bc == null)
             {
                 if (bc != null)
+                {
                     bc.Delete();
+                }
+
                 return;
             }
 
@@ -224,13 +249,18 @@ namespace Server.Mobiles
             }
 
             if (Combatant == null)
+            {
                 return;
+            }
 
             if (DateTime.UtcNow > m_NextDismount && 0.1 > Utility.RandomDouble())
+            {
                 DoDismount();
-
+            }
             else if (DateTime.UtcNow > m_NextArea && 0.1 > Utility.RandomDouble())
+            {
                 DoAreaAttack();
+            }
 
             if (!m_HasDone2ndSpawn && m_Helpers.Count > 0)
             {
@@ -250,11 +280,18 @@ namespace Server.Mobiles
             foreach (Mobile mob in eable)
             {
                 if (!CanBeHarmful(mob) || mob == this)
+                {
                     continue;
+                }
+
                 if (mob is BaseCreature && (((BaseCreature)mob).Controlled || ((BaseCreature)mob).Summoned || ((BaseCreature)mob).Team != Team))
+                {
                     targets.Add(mob);
+                }
                 else if (mob is PlayerMobile && mob.Alive)
+                {
                     targets.Add(mob);
+                }
             }
             eable.Free();
 
@@ -275,13 +312,20 @@ namespace Server.Mobiles
 
                 double damage = m.Hits * 0.6;
                 if (damage < 10.0)
+                {
                     damage = 10.0;
+                }
                 else if (damage > 75.0)
+                {
                     damage = 75.0;
+                }
+
                 DoHarmful(m);
                 AOS.Damage(m, this, (int)damage, 100, 0, 0, 0, 0);
                 if (m.Alive && m.Body.IsHuman && !m.Mounted)
+                {
                     m.Animate(20, 7, 1, true, false, 0);
+                }
             }
 
 
@@ -292,13 +336,15 @@ namespace Server.Mobiles
         {
             int range = 18;
 
-            new InternalTimer(this, range);
+            new CorgulTheSoulBinderTimer(this, range);
 
             IPooledEnumerable eable = GetMobilesInRange(range);
             foreach (Mobile m in eable)
             {
                 if ((m is PlayerMobile || (m is BaseCreature && ((BaseCreature)m).GetMaster() is PlayerMobile)) && CanBeHarmful(m))
+                {
                     Timer.DelayCall(TimeSpan.FromSeconds(1), new TimerStateCallback(DoDamage_Callback), m);
+                }
             }
             eable.Free();
 
@@ -329,12 +375,12 @@ namespace Server.Mobiles
             Effects.SendLocationEffect(p, map, Utility.RandomBool() ? 14000 : 14013, 20);
         }
 
-        private class InternalTimer : Timer
+        private class CorgulTheSoulBinderTimer : Timer
         {
             private CorgulTheSoulBinder m_Mobile;
             private int m_Tick;
 
-            public InternalTimer(CorgulTheSoulBinder mob, int range)
+            public CorgulTheSoulBinderTimer(CorgulTheSoulBinder mob, int range)
                 : base(TimeSpan.FromMilliseconds(100), TimeSpan.FromMilliseconds(100), range)
             {
                 m_Tick = 1;
@@ -361,7 +407,9 @@ namespace Server.Mobiles
             base.OnDeath(c);
 
             if (m_Altar != null)
+            {
                 m_Altar.OnBossKilled();
+            }
 
             c.DropItem(new MessageInABottle(c.Map));
             c.DropItem(new SpecialFishingNet());
@@ -374,7 +422,33 @@ namespace Server.Mobiles
                     RegisterDamageTo(bc);
 
                     if (bc != null && bc.Alive)
+                    {
                         bc.Kill();
+                    }
+                }
+            }
+        }
+        public static void CheckDropSOT(BaseCreature bc)
+        {
+            if (bc == null)
+            {
+                return;
+            }
+
+            var killer = bc.FindMostRecentDamager(false);
+
+            if (killer is BaseCreature creature)
+            {
+                killer = creature.GetMaster();
+            }
+
+            if (killer is PlayerMobile && Utility.RandomDouble() < ChampionSystem.ScrollChance * 10)
+            {
+                PlayerMobile pm = (PlayerMobile)killer;
+
+                if (Utility.RandomDouble() < ChampionSystem.TranscendenceChance)
+                {
+                    ChampionSpawn.GiveScrollTo(pm, ChampionSpawn.CreateRandomSoT(bc.Map != null && bc.Map.Rules == MapRules.FeluccaRules));
                 }
             }
         }
@@ -392,7 +466,9 @@ namespace Server.Mobiles
             writer.Write(m_Altar);
             writer.Write(m_Helpers.Count);
             foreach (BaseCreature bc in m_Helpers)
+            {
                 writer.Write(bc);
+            }
         }
 
         public override void Deserialize(GenericReader reader)
@@ -411,9 +487,10 @@ namespace Server.Mobiles
                     int cnt = reader.ReadInt();
                     for (int i = 0; i < cnt; i++)
                     {
-                        BaseCreature bc = reader.ReadMobile() as BaseCreature;
-                        if (bc != null)
+                        if (reader.ReadMobile() is BaseCreature bc)
+                        {
                             m_Helpers.Add(bc);
+                        }
                     }
                     break;
             }
@@ -488,11 +565,15 @@ namespace Server.Mobiles
                     int x = cx + Utility.Random(range * 2) - range;
                     int y = cy + Utility.Random(range * 2) - range;
                     if ((cx - x) * (cx - x) + (cy - y) * (cy - y) > range * range)
+                    {
                         continue;
+                    }
 
                     int z = map.GetAverageZ(x, y);
                     if (!map.CanFit(x, y, z, 6, false, false))
+                    {
                         continue;
+                    }
 
                     int topZ = z;
                     foreach (Item item in map.GetItemsInRange(new Point3D(x, y, z), 0))
