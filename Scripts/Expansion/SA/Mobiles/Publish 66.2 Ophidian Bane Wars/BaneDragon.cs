@@ -141,7 +141,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write(1); // version
+            writer.Write(1);
             writer.Write(PowerLevel);
             writer.Write(PowerDecay);
         }

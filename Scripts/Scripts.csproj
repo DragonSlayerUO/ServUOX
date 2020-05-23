@@ -184,6 +184,7 @@
     <Compile Include="Expansion\HS\Items\Publish 68.3 Items\13th Anniversary Gifts\WhiteGrandfatherClock.cs" />
     <Compile Include="Expansion\HS\Items\Publish 68.3 Items\13th Anniversary Gifts\SmallGrandfatherClock.cs" />
     <Compile Include="Expansion\HS\Items\Gothic Theme Pack\GargoyleStatues.cs" />
+    <Compile Include="Expansion\HS\Mobiles\PurifyingBloodElemental.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quest\BaseQuest.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quest\Items\DynamicTeleporter.cs" />
     <Compile Include="Expansion\LBR\Mechanics\Quest\Items\HornOfRetreat.cs" />
