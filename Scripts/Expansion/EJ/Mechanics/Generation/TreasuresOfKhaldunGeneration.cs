@@ -21,6 +21,48 @@ namespace Server.Engines.Khaldun
                 }
 
                 KhaldunCampRegion.InstanceFel = new KhaldunCampRegion(Map.Felucca);
+
+                if (PointsSystem.Khaldun.Enabled)
+                {
+                    if (ChestSpawner.InstanceFel == null)
+                    {
+                        ChestSpawner.InstanceFel = new ChestSpawner();
+                    }
+
+                    ChestSpawner.InstanceFel.CheckChests();
+
+                    if (!Siege.SiegeShard)
+                    {
+                        if (ChestSpawner.InstanceTram == null)
+                        {
+                            ChestSpawner.InstanceTram = new ChestSpawner();
+                        }
+
+                        ChestSpawner.InstanceTram.CheckChests();
+                    }
+                }
+                else
+                {
+                    if (ChestSpawner.InstanceFel != null)
+                    {
+                        if (ChestSpawner.InstanceFel.Chests != null)
+                        {
+                            ColUtility.SafeDelete(ChestSpawner.InstanceFel.Chests);
+                        }
+
+                        ChestSpawner.InstanceFel = null;
+                    }
+
+                    if (ChestSpawner.InstanceTram != null)
+                    {
+                        if (ChestSpawner.InstanceTram.Chests != null)
+                        {
+                            ColUtility.SafeDelete(ChestSpawner.InstanceTram.Chests);
+                        }
+
+                        ChestSpawner.InstanceTram = null;
+                    }
+                }
             }
         }
 
@@ -137,6 +179,23 @@ namespace Server.Engines.Khaldun
             };
             champ.MoveToWorld(new Point3D(5469, 1461, 20), Map.Felucca);
             ChampionSystem.AllSpawns.Add(champ);
+
+            if (ChestSpawner.InstanceFel == null)
+            {
+                ChestSpawner.InstanceFel = new ChestSpawner();
+            }
+
+            ChestSpawner.InstanceFel.CheckChests();
+
+            if (!Siege.SiegeShard)
+            {
+                if (ChestSpawner.InstanceTram == null)
+                {
+                    ChestSpawner.InstanceTram = new ChestSpawner();
+                }
+
+                ChestSpawner.InstanceTram.CheckChests();
+            }
         }
 
         public static void Remove()
@@ -145,6 +204,26 @@ namespace Server.Engines.Khaldun
             {
                 s.Delete();
             });
+
+            if (ChestSpawner.InstanceFel != null)
+            {
+                if (ChestSpawner.InstanceFel.Chests != null)
+                {
+                    ColUtility.SafeDelete(ChestSpawner.InstanceFel.Chests);
+                }
+
+                ChestSpawner.InstanceFel = null;
+            }
+
+            if (ChestSpawner.InstanceTram != null)
+            {
+                if (ChestSpawner.InstanceTram.Chests != null)
+                {
+                    ColUtility.SafeDelete(ChestSpawner.InstanceTram.Chests);
+                }
+
+                ChestSpawner.InstanceTram = null;
+            }
         }
 
         public static void GenerateQuestContent()

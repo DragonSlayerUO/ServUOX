@@ -1,4 +1,4 @@
-﻿using Server;
+using Server;
 using System;
 
 namespace Server.Mobiles
@@ -44,6 +44,16 @@ namespace Server.Mobiles
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich, 1);
+        }
+
+        public override bool OnBeforeDeath()
+        {
+            if (Region.IsPartOf<Server.Regions.CorgulRegion>())
+            {
+                CorgulTheSoulBinder.CheckDropSOT(this);
+            }
+
+            return base.OnBeforeDeath();
         }
 
         public SoulboundSpellSlinger(Serial serial)

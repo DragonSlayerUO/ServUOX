@@ -1,7 +1,7 @@
-using System;
-using System.Linq;
 using Server.Items;
 using Server.Targeting;
+using System;
+using System.Linq;
 
 namespace Server.Commands
 {

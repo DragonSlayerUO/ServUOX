@@ -7,12 +7,11 @@ namespace Server.Items
     {
         private Timer m_Timer;
 
-        public override int DefaultGumpID => 0x49;
         public bool CheckWhenHidden => true;
 
         [Constructible]
         public KhaldunChest()
-            : base(Utility.RandomList(0xE3C, 0xE3E, 0x9a9))
+            : base(Utility.RandomList(0xE3C, 0xE3D, 0xE3E, 0xE3F, 0xE40, 0xE41, 0xE42, 0xE43))
         {
             Movable = false;
             Locked = true;
@@ -28,7 +27,6 @@ namespace Server.Items
 
             TrapType = TrapType.PoisonTrap;
             TrapPower = 100;
-            Timer.DelayCall(TimeSpan.FromSeconds(1), Fill);
         }
 
         public virtual void Fill()
@@ -37,7 +35,7 @@ namespace Server.Items
 
             List<Item> contains = new List<Item>(Items);
 
-            foreach (var i in contains)
+            foreach (Item i in contains)
             {
                 i.Delete();
             }
@@ -45,9 +43,7 @@ namespace Server.Items
             ColUtility.Free(contains);
 
             for (int i = 0; i < Utility.RandomMinMax(6, 12); i++)
-            {
                 DropItem(Loot.RandomGem());
-            }
 
             DropItem(new Gold(Utility.RandomMinMax(800, 1100)));
 
@@ -60,16 +56,12 @@ namespace Server.Items
                     case 0:
                         item = new Bandage(Utility.Random(10, 30)); break;
                     case 1:
-                        item = new SmokeBomb
-                        {
-                            Amount = Utility.Random(3, 6)
-                        };
+                        item = new SmokeBomb();
+                        item.Amount = Utility.Random(3, 6);
                         break;
                     case 2:
-                        item = new InvisibilityPotion
-                        {
-                            Amount = Utility.Random(1, 3)
-                        };
+                        item = new InvisibilityPotion();
+                        item.Amount = Utility.Random(1, 3);
                         break;
                     case 3:
                         item = new Lockpick(Utility.Random(1, 10)); break;
@@ -99,14 +91,6 @@ namespace Server.Items
                         item = new SkeletonPortrait(); break;
                     case 2:
                         item = new LichPainting(); break;
-                    case 3:
-                        item = new RelicOfHydros(); break;
-                    case 4:
-                        item = new RelicOfLithos(); break;
-                    case 5:
-                        item = new RelicOfPyros(); break;
-                    case 6:
-                        item = new RelicOfStratos(); break;
                 }
 
                 DropItem(item);
@@ -118,12 +102,31 @@ namespace Server.Items
 
                 if (item != null)
                 {
-                    TreasureMapChest.GetRandomItemStat(out int min, out int max, 1.0);
+                    int min, max;
+
+                    TreasureMapChest.GetRandomItemStat(out min, out max, 1.0);
 
                     RunicReforging.GenerateRandomItem(item, null, Utility.RandomMinMax(min, max), 0, ReforgedPrefix.None, ReforgedSuffix.Khaldun, Map);
 
                     DropItem(item);
                 }
+            }
+
+            if (0.01 > Utility.RandomDouble())
+            {
+                switch (Utility.Random(4))
+                {
+                    case 0:
+                        item = new RelicOfHydros(); break;
+                    case 1:
+                        item = new RelicOfLithos(); break;
+                    case 2:
+                        item = new RelicOfPyros(); break;
+                    case 3:
+                        item = new RelicOfStratos(); break;
+                }
+
+                DropItem(item);
             }
         }
 
@@ -159,9 +162,7 @@ namespace Server.Items
                 int skill = (int)m.Skills[SkillName.DetectHidden].Value;
 
                 if (skill >= 80 && Utility.Random(300) < skill)
-                {
                     return true;
-                }
             }
 
             return false;
@@ -169,25 +170,25 @@ namespace Server.Items
 
         public override void LockPick(Mobile from)
         {
-            TryDelayedLock();
+            Fill();
 
             base.LockPick(from);
+
+            DelayedDelete();
         }
 
         public KhaldunChest(Serial serial) : base(serial)
         {
         }
 
-        public void TryDelayedLock()
+        public void DelayedDelete()
         {
             if (Locked || (m_Timer != null && m_Timer.Running))
-            {
                 return;
-            }
 
             EndTimer();
 
-            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(Utility.RandomMinMax(10, 15)), Fill);
+            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(5), Delete);
         }
 
         public void EndTimer()
@@ -199,20 +200,32 @@ namespace Server.Items
             }
         }
 
+        public override void Delete()
+        {
+            if (Spawner != null)
+            {
+                Spawner.Remove(this);
+            }
+
+            base.Delete();
+        }
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write(0); // version
 
-            TryDelayedLock();
+            //DelayedDelete();
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            _ = reader.ReadInt();
+            reader.ReadInt();
 
-            TryDelayedLock();
+            //DelayedDelete();
+            Delete();
         }
     }
 }
+
