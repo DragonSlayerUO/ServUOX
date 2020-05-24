@@ -12640,7 +12640,6 @@
     <Compile Include="Mechanics\Vendors\GenericBuy.cs" />
     <Compile Include="Mechanics\Vendors\GenericSell.cs" />
     <Compile Include="Mechanics\Vendors\PresetMapBuy.cs" />
-    <Compile Include="Administration\World\VendorInfo\SBAlchemist.cs" />
     <Compile Include="Administration\World\VendorInfo\SBAnimalTrainer.cs" />
     <Compile Include="Administration\World\VendorInfo\SBArchitect.cs" />
     <Compile Include="Administration\World\VendorInfo\SBAxeWeapon.cs" />

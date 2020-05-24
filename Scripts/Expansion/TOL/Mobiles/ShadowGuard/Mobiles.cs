@@ -264,7 +264,7 @@ namespace Server.Engines.Shadowguard
             SetWeaponAbility(WeaponAbility.Dismount);
             SetWeaponAbility(WeaponAbility.ForceOfNature);
         }
-
+        public override bool CanFlee => false;
         public override void OnGaveMeleeAttack(Mobile defender)
         {
             base.OnGaveMeleeAttack(defender);
